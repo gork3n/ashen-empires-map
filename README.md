@@ -15,15 +15,12 @@ To add this map to your own website, follow these steps:
 2. **Add dependencies to your HTML**:
    ```html
    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="anonymous">
-   <link rel="stylesheet" href="https://unpkg.com/leaflet-mouse-position/src/L.Control.MousePosition.css">
    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="anonymous"></script>
-   <script src="https://unpkg.com/leaflet-mouse-position/src/L.Control.MousePosition.js"></script>
    ```
 
 3. **Add HTML container**:
    ```html
    <div id="map" style="width: 800px; height: 600px;"></div>
-   <input id="slider" type="range" min="0" max="1" step="0.1" value="1">
    ```
 
 4. **Add JavaScript initialization code**:
@@ -58,14 +55,14 @@ To add this map to your own website, follow these steps:
        minZoom: mapMinZoom,
        crs: crs,
        maxBounds: bounds,
-       maxBoundsViscosity: 1.0
+       maxBoundsViscosity: 1.0 // Makes the bounds completely rigid
      });
      
      // Add tile layer
      const layer = L.tileLayer('tiles/{z}/{x}/{y}.png', {
        minZoom: mapMinZoom,
        maxZoom: mapMaxZoom,
-       attribution: 'Created by Sir Chris. Tiled by QGIS Shell',
+       attribution: 'Created by Sir Chris. Tiled with QGIS Shell',
        noWrap: true,
        tms: false,
        bounds: bounds
@@ -73,15 +70,6 @@ To add this map to your own website, follow these steps:
      
      // Fit map to bounds
      map.fitBounds(bounds);
-     
-     // Add mouse position control
-     L.control.mousePosition().addTo(map);
-     
-     // Opacity slider
-     const slider = document.getElementById('slider');
-     slider.addEventListener('input', function() {
-       layer.setOpacity(this.value);
-     });
    });
    ```
 
@@ -122,21 +110,17 @@ Adjust the width and height of the `#map` element to fit your page layout:
 }
 ```
 
-#### Slider Position
+#### Custom Cursor
 
-Position the opacity slider as needed:
+To change the cursor to a custom green pointer when hovering over the map:
 
 ```css
-#slider {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  z-index: 999;
-  background: rgba(255, 255, 255, 0.7);
-  padding: 5px;
-  border-radius: 4px;
+#map {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="%2300FF00" d="M3,2 L12,9 L8.5,9 L10,14 L7,14 L5.5,9 L3,9 z"/></svg>') 3 2, auto;
 }
 ```
+
+You can replace the SVG with your own cursor design or use a cursor image file.
 
 ## Advanced Configuration
 
@@ -153,6 +137,20 @@ const layer = L.tileLayer('your/custom/path/to/tiles/{z}/{x}/{y}.png', {
 ### Adjusting Zoom Levels
 
 Modify `mapMinZoom` and `mapMaxZoom` to change the available zoom levels.
+
+### Map Bounds Restriction
+
+The map includes bounds restriction to prevent users from panning outside the map area:
+
+```javascript
+const map = new L.Map('map', {
+  // other options
+  maxBounds: bounds,
+  maxBoundsViscosity: 1.0 // Makes the bounds completely rigid
+});
+```
+
+The `maxBoundsViscosity` value of 1.0 makes the bounds completely rigid, preventing the user from dragging the map outside its boundaries.
 
 ## Browser Compatibility
 
