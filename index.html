@@ -65,10 +65,12 @@
         const northEast = crs.unproject(L.point(mapExtent[2], mapExtent[3]));
         const bounds = L.latLngBounds(southWest, northEast);
         
-        // Initialize map
+        // Initialize map with max zoom level
         const map = new L.Map('map', {
           maxZoom: mapMaxZoom,
           minZoom: mapMinZoom,
+          zoom: mapMaxZoom, // Set initial zoom to max zoom
+          center: bounds.getCenter(), // Center the map on the bounds
           crs: crs,
           maxBounds: bounds,
           maxBoundsViscosity: 1.0 // Makes the bounds completely rigid
@@ -84,13 +86,8 @@
           bounds: bounds
         }).addTo(map);
         
-        // Fit map to bounds
-        map.fitBounds(bounds);
-        
-        // Commenting out mouse position control
-        // L.control.mousePosition().addTo(map);
-        
-        
+        // Remove or comment out fitBounds since we're setting zoom directly
+        // map.fitBounds(bounds);
       });
     </script>
   </body>
