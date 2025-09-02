@@ -1,6 +1,50 @@
-# Ashen Empires Map
+# Ashen Empires Interactive Map
 
-A Leaflet-based interactive map for Ashen Empires using tiled images.
+An interactive map for Ashen Empires with pixel-perfect coordinates and custom styling.
+
+## Features
+
+- **Full Map Exploration**: Navigate the entire Ashen Empires world with smooth panning and zooming
+- **Precise Coordinates**: Real-time coordinate display showing exact X,Y positions
+- **Custom Cursor**: Green pointer for better visibility against the map background
+- **Mobile-Friendly**: Responsive design that works on desktop and mobile devices
+
+## Technical Implementation
+
+This interactive map uses Leaflet.js with custom configurations:
+
+- **Custom CRS**: Simple coordinate reference system with transformation for game coordinates
+- **Pixel-Perfect Mapping**: Each point on the map corresponds to exact game coordinates
+- **Zoom Levels**: Multiple zoom levels (0-4) for both overview and detailed exploration
+- **Bounded Navigation**: Prevents users from scrolling outside the map boundaries
+
+## Development
+
+The project is structured as follows:
+
+- `index.html` - Main HTML file
+- `styles.css` - All styling for the map and UI elements
+- `main.js` - Core map functionality and coordinate handling
+- `tiles/` - Directory containing all map tile images
+
+### Map Coordinates
+
+The map uses a coordinate system where:
+- (0,0) is at the top-left corner
+- (4096,4096) is at the bottom-right corner
+
+This matches the coordinate system used in-game.
+
+## Planned Features
+
+- Layer toggling for displaying different map information
+- Points of interest markers
+- Search functionality for locations
+- Mobile-optimized controls
+
+## Credits
+
+Created by Sir Chris. Map tiles generated with QGIS Shell.
 
 ## Implementation Guide
 
