@@ -2,6 +2,11 @@
 
 An interactive map for Ashen Empires with pixel-perfect coordinates and multiple viewing options.
 
+## Live Demos
+
+- **[OpenLayers Map](https://gork3n.github.io/ashen-empires-map/openlayers.html)** (Recommended)
+- **[Leaflet Map](https://gork3n.github.io/ashen-empires-map/leaflet.html)** (Deprecated)
+
 ## Features
 
 - **Full Map Exploration**: Navigate the entire Ashen Empires world with smooth panning and zooming
