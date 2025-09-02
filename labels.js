@@ -1,66 +1,160 @@
 /* filepath: d:\GitHub\ashen-empires-map\labels.js */
 // This file contains the map labels for Ashen Empires
 
-// Global variable to store all labels
-let mapLabels = [];
-let labelsVisible = true;
+// Object to store labels by category
+let labelsByCategory = {
+  cities: [],
+  islands: [],
+  mines: [],
+  palaces: []
+};
+
+// Track visibility state
+let labelVisibility = {
+  cities: true,
+  islands: true,
+  mines: true,
+  palaces: true
+};
 
 // Define all map labels here
 function addMapLabels(map) {
-  // Function to add a label to the map
-  function addLabel(x, y, text, anchor = [15, 0]) {
-    const point = L.point(x, y);
+  // Function to add a label to the map with inline styles
+  function addLabel(x, y, text, category) {
+    const point = L.point(x, y); // Use the coordinates directly
     const latlng = map.unproject(point, map.getMaxZoom());
+    
+    // Define styles based on category
+    let styleString = 'color: white; font-family: \'Segoe UI\', Arial, sans-serif; white-space: nowrap; text-align: center;';
+    
+    // Set font size based on category
+    let fontSize;
+    switch(category) {
+      case 'cities':
+        fontSize = 16;
+        styleString += 'font-size: 16px; font-weight: bold;';
+        break;
+      case 'islands':
+        fontSize = 24;
+        styleString += 'font-size: 24px; font-style: italic;';
+        break;
+      case 'mines':
+        fontSize = 13;
+        styleString += 'font-size: 13px;';
+        break;
+      case 'palaces':
+        fontSize = 15;
+        styleString += 'font-size: 15px; font-weight: bold;';
+        break;
+      default:
+        fontSize = 14;
+        styleString += 'font-size: 14px;';
+    }
     
     const marker = L.marker(latlng, {
       icon: L.divIcon({
-        className: 'map-label',
-        html: text,
-        iconSize: null, // Let the size be determined by the content
-        iconAnchor: anchor // Position the label properly
+        className: `map-label label-${category}`,
+        html: `<div style="${styleString}">${text}</div>`,
+        iconSize: [100, fontSize], // Set a fixed width but height based on font size
+        iconAnchor: [50, 0], // Center-bottom anchor point
       })
     }).addTo(map);
     
-    // Add the marker to our labels array
-    mapLabels.push(marker);
+    // Add the marker to our category-specific array
+    if (labelsByCategory[category]) {
+      labelsByCategory[category].push(marker);
+    }
     
     return marker;
   }
   
-  // Add all your labels here
-  addLabel(800, 700, 'LSP');
+  // Add palace labels
+  addLabel(768, 544, "Lotor's Summer Palace", 'palaces');
   
-  // Examples of more labels (uncomment to add)
-  // addLabel(1500, 1200, 'Frostbane');
-  // addLabel(2300, 800, 'Barloque');
+  // Add city/town labels
+  addLabel(2413, 2311, "New Royale", 'cities');
+  addLabel(1345, 2393, "Josody", 'cities');
+  addLabel(3132, 3842, "Krog", 'cities');
   
-  // Set up the toggle button functionality
-  setupLabelToggle(map);
+  // Add island labels
+  addLabel(3867, 1954, "PvP Island", 'islands');
+  addLabel(673, 1910, "Scorch Island", 'islands');
+  
+  // Add mine/cave labels
+  addLabel(1427, 1374, "Dalvon Mine", 'mines');
+  
+  // Set up the toggle buttons functionality
+  setupLabelToggles(map);
 }
 
-// Function to toggle labels visibility
-function toggleLabels(map) {
-  const button = document.getElementById('toggleLabels');
+// Function to toggle visibility for a specific category
+function toggleCategoryLabels(map, category) {
+  const button = document.getElementById(`toggle${category.charAt(0).toUpperCase() + category.slice(1)}`);
   
-  if (labelsVisible) {
-    // Hide all labels
-    mapLabels.forEach(label => {
+  if (labelVisibility[category]) {
+    // Hide category labels
+    labelsByCategory[category].forEach(label => {
       map.removeLayer(label);
     });
-    button.textContent = 'Show Labels';
-    labelsVisible = false;
+    button.textContent = `Show ${category.charAt(0).toUpperCase() + category.slice(1)}`;
+    labelVisibility[category] = false;
   } else {
-    // Show all labels
-    mapLabels.forEach(label => {
+    // Show category labels
+    labelsByCategory[category].forEach(label => {
       map.addLayer(label);
     });
-    button.textContent = 'Hide Labels';
-    labelsVisible = true;
+    button.textContent = `Hide ${category.charAt(0).toUpperCase() + category.slice(1)}`;
+    labelVisibility[category] = true;
   }
+  
+  // Update the "all" button text
+  updateAllLabelsButtonText();
 }
 
-// Setup the toggle button event listener
-function setupLabelToggle(map) {
-  const button = document.getElementById('toggleLabels');
-  button.addEventListener('click', () => toggleLabels(map));
+// Function to toggle all labels
+function toggleAllLabels(map) {
+  const button = document.getElementById('toggleAllLabels');
+  const allVisible = Object.values(labelVisibility).some(v => v);
+  
+  // Toggle all categories
+  Object.keys(labelsByCategory).forEach(category => {
+    if (allVisible) {
+      // Hide all
+      labelsByCategory[category].forEach(label => {
+        map.removeLayer(label);
+      });
+      document.getElementById(`toggle${category.charAt(0).toUpperCase() + category.slice(1)}`).textContent = 
+        `Show ${category.charAt(0).toUpperCase() + category.slice(1)}`;
+      labelVisibility[category] = false;
+    } else {
+      // Show all
+      labelsByCategory[category].forEach(label => {
+        map.addLayer(label);
+      });
+      document.getElementById(`toggle${category.charAt(0).toUpperCase() + category.slice(1)}`).textContent = 
+        `Hide ${category.charAt(0).toUpperCase() + category.slice(1)}`;
+      labelVisibility[category] = true;
+    }
+  });
+  
+  button.textContent = allVisible ? "Show All Labels" : "Hide All Labels";
+}
+
+// Update the All Labels button text based on current visibility state
+function updateAllLabelsButtonText() {
+  const button = document.getElementById('toggleAllLabels');
+  const allVisible = Object.values(labelVisibility).some(v => v);
+  button.textContent = allVisible ? "Hide All Labels" : "Show All Labels";
+}
+
+// Setup the toggle buttons event listeners
+function setupLabelToggles(map) {
+  // Category-specific toggles
+  document.getElementById('toggleCities').addEventListener('click', () => toggleCategoryLabels(map, 'cities'));
+  document.getElementById('toggleIslands').addEventListener('click', () => toggleCategoryLabels(map, 'islands'));
+  document.getElementById('toggleMines').addEventListener('click', () => toggleCategoryLabels(map, 'mines'));
+  document.getElementById('togglePalaces').addEventListener('click', () => toggleCategoryLabels(map, 'palaces'));
+  
+  // Toggle all labels
+  document.getElementById('toggleAllLabels').addEventListener('click', () => toggleAllLabels(map));
 }

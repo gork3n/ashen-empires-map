@@ -3,6 +3,7 @@ html, body {
   height: 100%; 
   margin: 0; 
   padding: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
 }
 
 #map { 
@@ -51,20 +52,84 @@ html, body {
   bottom: 10px;
   left: 10px;
   z-index: 999;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
   padding: 5px 10px;
   border-radius: 4px;
-  font-family: Arial, sans-serif;
+  font-family: 'Consolas', 'Courier New', monospace;
   font-size: 14px;
-  pointer-events: none; /* So it doesn't interfere with map clicks */
+  pointer-events: none;
 }
 
-/* Custom styling for map labels */
+/* Clean up map label styling completely */
 .map-label {
-  background: rgba(255, 255, 255, 0.7);
-  border: 1px solid #000;
-  border-radius: 4px;
-  padding: 2px 6px;
-  font-weight: bold;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  color: white !important;
+  font-family: 'Segoe UI', Arial, sans-serif;
   white-space: nowrap;
+}
+
+/* City labels */
+.label-city {
+  font-size: 16px !important;
+  font-weight: bold !important;
+}
+
+/* Island labels */
+.label-island {
+  font-size: 24px !important;
+  font-style: italic !important;
+}
+
+/* Mine/Cave labels */
+.label-mine {
+  font-size: 13px !important;
+}
+
+/* Palace/Special location labels */
+.label-palace {
+  font-size: 15px !important;
+  font-weight: bold !important;
+}
+
+/* Category toggle buttons */
+.toggle-button {
+  padding: 5px 10px;
+  margin-bottom: 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.toggle-cities {
+  background-color: #FFD700;
+  color: #000;
+}
+
+.toggle-islands {
+  background-color: #90EE90;
+  color: #006400;
+}
+
+.toggle-mines {
+  background-color: #8B4513;
+  color: #fff;
+}
+
+.toggle-palace {
+  background-color: #DDA0DD;
+  color: #4B0082;
+}
+
+/* Category header */
+.category-header {
+  font-weight: bold;
+  margin: 5px 0;
+  font-size: 12px;
+  font-family: 'Segoe UI', Arial, sans-serif;
 }
