@@ -34,8 +34,8 @@ document.addEventListener('DOMContentLoaded', () => {
     maxBoundsViscosity: 1.0 // Makes the bounds completely rigid
   });
   
-  // Add tile layer
-  const layer = L.tileLayer('tiles/{z}/{x}/{y}.png', {
+  // Add base map tile layer
+  const baseLayer = L.tileLayer('tiles/{z}/{x}/{y}.png', {
     minZoom: mapMinZoom,
     maxZoom: mapMaxZoom,
     attribution: 'Created by Sir Chris. Tiled with QGIS Shell',
@@ -59,9 +59,6 @@ document.addEventListener('DOMContentLoaded', () => {
     return { x: pixelX, y: pixelY };
   }
   
-  // Add the map labels
-  addMapLabels(map);
-  
   // Update coordinates on mouse move
   map.on('mousemove', function(e) {
     const coords = convertToPixelCoordinates(e.latlng);
@@ -71,11 +68,5 @@ document.addEventListener('DOMContentLoaded', () => {
   // Hide coordinates when mouse leaves the map
   map.on('mouseout', function() {
     coordsDisplay.textContent = 'X: 0, Y: 0';
-  });
-  
-  // Opacity slider
-  const slider = document.getElementById('slider');
-  slider.addEventListener('input', function() {
-    layer.setOpacity(this.value);
   });
 });
