@@ -25,7 +25,7 @@ function addMapLabels(map) {
     const latlng = map.unproject(point, map.getMaxZoom());
     
     // Define styles based on category
-    let styleString = 'color: white; font-family: \'Segoe UI\', Arial, sans-serif; white-space: nowrap; text-align: center;';
+    let styleString = 'color: white; font-family: \'Segoe UI\', Arial, sans-serif; white-space: nowrap; text-align: center; display: inline-block; width: max-content; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;';
     
     // Set font size based on category
     let fontSize;
@@ -51,12 +51,16 @@ function addMapLabels(map) {
         styleString += 'font-size: 14px;';
     }
     
+    // Calculate estimated text width for better centering (more accurate now)
+    const estimatedWidth = text.length * (fontSize * 0.6); 
+    
     const marker = L.marker(latlng, {
       icon: L.divIcon({
         className: `map-label label-${category}`,
         html: `<div style="${styleString}">${text}</div>`,
-        iconSize: [100, fontSize], // Set a fixed width but height based on font size
-        iconAnchor: [50, 0], // Center-bottom anchor point
+        iconSize: [estimatedWidth, fontSize],
+        iconAnchor: [estimatedWidth/2, fontSize], // Center at bottom of text
+        popupAnchor: [0, -fontSize] // Popup appears above the text
       })
     }).addTo(map);
     
@@ -69,43 +73,85 @@ function addMapLabels(map) {
   }
   
   // Add palace labels
-  addLabel(768, 544, "Lotor's Summer Palace", 'palaces');
+  addLabel(767, 568, "Lotor's Summer Palace", 'palaces');
   
   // Add city/town labels
   addLabel(2413, 2311, "New Royale", 'cities');
   addLabel(1345, 2393, "Josody", 'cities');
-  addLabel(3132, 3842, "Krog", 'cities');
+  addLabel(3116, 3715, "Krog", 'cities');
   
   // Add island labels
   addLabel(3867, 1954, "PvP Island", 'islands');
-  addLabel(673, 1910, "Scorch Island", 'islands');
+  addLabel(704, 1923, "Scorch Island", 'islands');
   
   // Add mine/cave labels
   addLabel(1427, 1374, "Dalvon Mine", 'mines');
   
+  // Initial check to show/hide labels based on current zoom
+  updateLabelVisibilityByZoom(map.getZoom());
+  
+  // Set up zoom event handler to show/hide labels based on zoom level
+  map.on('zoomend', function() {
+    updateLabelVisibilityByZoom(map.getZoom());
+  });
+  
   // Set up the toggle buttons functionality
   setupLabelToggles(map);
+}
+
+// Function to show/hide labels based on zoom level
+function updateLabelVisibilityByZoom(zoomLevel) {
+  // Get all labels from all categories
+  const allLabels = [].concat(
+    labelsByCategory.cities,
+    labelsByCategory.islands,
+    labelsByCategory.mines,
+    labelsByCategory.palaces
+  );
+  
+  // Hide labels at zoom levels 0 and 1, show at 2+
+  if (zoomLevel < 3) {
+    // Hide all labels at low zoom levels
+    allLabels.forEach(label => {
+      const icon = label.getElement();
+      if (icon) {
+        icon.style.display = 'none';
+      }
+    });
+  } else {
+    // Show labels if their category is currently visible
+    Object.keys(labelsByCategory).forEach(category => {
+      if (labelVisibility[category]) {
+        labelsByCategory[category].forEach(label => {
+          const icon = label.getElement();
+          if (icon) {
+            icon.style.display = '';
+          }
+        });
+      }
+    });
+  }
 }
 
 // Function to toggle visibility for a specific category
 function toggleCategoryLabels(map, category) {
   const button = document.getElementById(`toggle${category.charAt(0).toUpperCase() + category.slice(1)}`);
   
-  if (labelVisibility[category]) {
-    // Hide category labels
+  labelVisibility[category] = !labelVisibility[category];
+  
+  // Only update visibility if we're at zoom level 2+
+  if (map.getZoom() >= 2) {
     labelsByCategory[category].forEach(label => {
-      map.removeLayer(label);
+      const icon = label.getElement();
+      if (icon) {
+        icon.style.display = labelVisibility[category] ? '' : 'none';
+      }
     });
-    button.textContent = `Show ${category.charAt(0).toUpperCase() + category.slice(1)}`;
-    labelVisibility[category] = false;
-  } else {
-    // Show category labels
-    labelsByCategory[category].forEach(label => {
-      map.addLayer(label);
-    });
-    button.textContent = `Hide ${category.charAt(0).toUpperCase() + category.slice(1)}`;
-    labelVisibility[category] = true;
   }
+  
+  button.textContent = labelVisibility[category] ? 
+    `Hide ${category.charAt(0).toUpperCase() + category.slice(1)}` : 
+    `Show ${category.charAt(0).toUpperCase() + category.slice(1)}`;
   
   // Update the "all" button text
   updateAllLabelsButtonText();
@@ -118,22 +164,22 @@ function toggleAllLabels(map) {
   
   // Toggle all categories
   Object.keys(labelsByCategory).forEach(category => {
-    if (allVisible) {
-      // Hide all
-      labelsByCategory[category].forEach(label => {
-        map.removeLayer(label);
-      });
-      document.getElementById(`toggle${category.charAt(0).toUpperCase() + category.slice(1)}`).textContent = 
+    labelVisibility[category] = !allVisible;
+    
+    // Update button text
+    document.getElementById(`toggle${category.charAt(0).toUpperCase() + category.slice(1)}`).textContent = 
+      labelVisibility[category] ? 
+        `Hide ${category.charAt(0).toUpperCase() + category.slice(1)}` : 
         `Show ${category.charAt(0).toUpperCase() + category.slice(1)}`;
-      labelVisibility[category] = false;
-    } else {
-      // Show all
+    
+    // Only update visibility if we're at zoom level 2+
+    if (map.getZoom() >= 2) {
       labelsByCategory[category].forEach(label => {
-        map.addLayer(label);
+        const icon = label.getElement();
+        if (icon) {
+          icon.style.display = labelVisibility[category] ? '' : 'none';
+        }
       });
-      document.getElementById(`toggle${category.charAt(0).toUpperCase() + category.slice(1)}`).textContent = 
-        `Hide ${category.charAt(0).toUpperCase() + category.slice(1)}`;
-      labelVisibility[category] = true;
     }
   });
   

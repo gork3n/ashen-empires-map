@@ -61,15 +61,21 @@ html, body {
   pointer-events: none;
 }
 
-/* Clean up map label styling completely */
+/* Update the base map-label style */
+
 .map-label {
   background: none !important;
   border: none !important;
   box-shadow: none !important;
-  text-shadow: none !important;
   color: white !important;
   font-family: 'Segoe UI', Arial, sans-serif;
   white-space: nowrap;
+  /* Add text-shadow to create the appearance of a 1px border */
+  text-shadow: 
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000 !important;
 }
 
 /* City labels */
