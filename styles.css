@@ -1,0 +1,48 @@
+html, body { 
+  width: 100%; 
+  height: 100%; 
+  margin: 0; 
+  padding: 0;
+}
+
+#map { 
+  width: 100%; 
+  height: 100%; 
+  z-index: 1; 
+  background: #002131; 
+  background-image: url('images/bg.png');
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><path fill="%2300FF00" stroke="%23000000" stroke-width="1" stroke-linejoin="round" d="M18 14.88 8.16 3.15c-.26-.31-.76-.12-.76.28v15.31c0 .36.42.56.7.33l3.1-2.6 1.55 4.25c.08.22.33.34.55.26l1.61-.59a.43.43 0 0 0 .26-.55l-1.55-4.25h4.05c.36 0 .56-.42.33-.7Z"></path></svg>') 8 3, auto;
+}
+
+#slider { 
+  position: absolute; 
+  top: 10px; 
+  right: 10px; 
+  z-index: 999; 
+  background: rgba(255, 255, 255, 0.7);
+  padding: 5px;
+  border-radius: 4px;
+}
+
+#coordinates {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  z-index: 999;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  pointer-events: none; /* So it doesn't interfere with map clicks */
+}
+
+/* Custom styling for map labels */
+.map-label {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid #000;
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-weight: bold;
+  white-space: nowrap;
+}
