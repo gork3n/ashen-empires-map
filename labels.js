@@ -1,4 +1,4 @@
-/* filepath: d:\GitHub\ashen-empires-map\labels.js */
+/* filepath: \labels.js */
 // This file contains the map labels for Ashen Empires
 
 // Object to store labels by category
