@@ -24,6 +24,21 @@ An interactive map for Ashen Empires with pixel-perfect coordinates and multiple
 - More customization options for developers
 - Cleaner code structure and better maintainability
 
+## Current Development Status
+
+The OpenLayers implementation is currently in active development:
+
+- Basic map functionality is working with proper coordinate display
+- Custom styled labels with Google Fonts integration (currently testing with "Fredericka the Great")
+- Map bounds constraints to prevent scrolling outside the map area
+- Proper styling for controls and UI elements
+
+### In Progress:
+
+- Separating code into dedicated JS, CSS, and HTML files for better organization
+- Adding more location labels and points of interest
+- Implementing additional map features and interactive elements
+
 ## Technical Implementation
 
 This project offers two different map implementations:
@@ -38,10 +53,12 @@ This project offers two different map implementations:
 ### OpenLayers Implementation (`openlayers.html`) - Recommended
 
 - Full-featured map with OpenLayers library
-- Customized coordinate display showing game coordinates
+- Customized coordinate display showing game coordinates (0,0 at top-left)
 - Consistent styling with the game's theme
 - Separate backgrounds for page and map container
 - Precise coordinate mapping that maintains accuracy at all zoom levels
+- Custom styled labels using Google Fonts
+- Map bounds constraints to prevent viewing outside the map area
 
 ## Map Coordinates
 
@@ -184,6 +201,9 @@ To integrate the map into your existing fansite:
        view: new ol.View({
          center: [2048.000000, 2048.000000],
          resolution: 16.000000,
+         extent: [0, 0, 4096, 4096],
+         constrainOnlyCenter: false,
+         showFullExtent: true
        })
      });
    </script>
@@ -197,21 +217,6 @@ To integrate the map into your existing fansite:
    - Update the background image path in CSS: `background: #002131 url('YOUR_PATH/bg.png')`
    - Update the tile URL path: `'./YOUR_PATH/tiles/{z}/{x}/{y}.png'`
 
-### Customization Options
-
-You can customize the map further:
-
-- **Change map size**: Modify the width and height in the CSS for `#ae-map`
-- **Change initial zoom level**: Adjust the `resolution` value (lower = more zoomed in)
-- **Change initial center point**: Modify the `center` array values `[x, y]`
-- **Add layer switching**: Implement multiple tile layers for different map views
-
-### Troubleshooting
-
-- If the coordinates aren't displaying correctly, make sure the coordinate format function is properly inverting the Y-axis
-- If tiles aren't loading, check the network tab in your browser's developer tools to see if the paths are correct
-- If the background isn't showing, verify the path to the background image
-
 ## Issues
 
 Leaflet has some weird quirks that I'm having trouble finding workarounds for pixel coordinates not exact, Labels not showing up in different zoom levels where expected or showing up at wrong place entirely on initial and reloads. *I'm switching to OpenLayers.*
@@ -223,9 +228,12 @@ The map tiles are generated from the game map using QGIS Shell. The website itse
 ## Planned Features
 
 - Layer toggling for displaying different map information
-- Points of interest markers
+- Points of interest markers for key locations
 - Search functionality for locations
 - Mobile-optimized controls
+- Complete labeling system for all important locations
+- Separation of code into dedicated files for better maintainability
+- Interactive elements for more detailed location information
 
 ## Credits
 
