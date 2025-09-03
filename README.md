@@ -243,3 +243,22 @@ The map tiles are generated from the game map using QGIS Shell. The website itse
 ## Credits
 
 Created by Sir Chris. Map tiles generated with QGIS Shell.
+
+## Implementation Options
+
+### OpenLayers Implementation (Recommended)
+
+This is the current recommended implementation with improved coordinate accuracy, custom styling, and better performance.
+
+### Leaflet Implementation (Alternative)
+
+The Leaflet implementation is provided as an alternative option but is no longer actively maintained.
+
+To use the Leaflet version:
+
+1. Navigate to the `leaflet-files` folder
+2. Copy `leaflet.html` to your root directory
+3. Ensure the `/tiles/` folder is accessible from your root
+4. Open `leaflet.html` in your browser
+
+The Leaflet implementation has some known issues with coordinate accuracy and label positioning at different zoom levels.
