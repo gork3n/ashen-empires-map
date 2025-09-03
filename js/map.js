@@ -199,8 +199,25 @@ function addMapLabels(map) {
     map.addLayer(labelLayer);
     
     // Add individual labels
-    addLabelFeature(labelSource, 775, 566, "Lotor's Summer Palace", 24);
+    // Cities
+    addLabelFeature(labelSource, 775, 581, "Lotor's Summer Palace", 24);
+    addLabelFeature(labelSource, 295, 809, "Jeel", 24);
     
+    // Islands 
+    addLabelFeature(labelSource, 981, 72, "Valinor Island", 30);
+    addLabelFeature(labelSource, 421, 69, "Party Island", 30);
+
+
+    // Dungeons
+
+    // Caves
+
+    // Ruins
+
+    // Water Bodies
+
+    // Mountains
+
     // You can add more labels here as needed
 }
 
