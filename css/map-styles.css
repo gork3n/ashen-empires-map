@@ -89,3 +89,21 @@ h1 {
   font-weight: 400;
   font-style: normal;
 }
+
+/* Add to your map-styles.css */
+@font-face {
+  font-family: 'UnifrakturCook';
+  font-display: block; /* Forces a short block period and then uses the font */
+  src: url(https://fonts.gstatic.com/s/unifrakturcook/v19/IurA6Yli8YOdcoky-0PTTdkm56n05Uw13ILXs-h6.woff2) format('woff2');
+}
+
+/* Preload with a hidden element */
+body::before {
+  content: '';
+  font-family: 'UnifrakturCook';
+  opacity: 0;
+  height: 0;
+  width: 0;
+  display: block;
+  visibility: hidden;
+}

@@ -1,4 +1,55 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Preload the font before rendering labels
+    preloadFont("UnifrakturCook", function() {
+        initializeMap();
+    });
+});
+
+/**
+ * Preload font to ensure it's available before rendering labels
+ * @param {string} fontFamily - Font family name
+ * @param {Function} callback - Function to call when font is loaded
+ */
+function preloadFont(fontFamily, callback) {
+    // Create a promise that resolves when the font loads
+    const fontPromise = document.fonts.ready.then(function() {
+        // Create a test element to check if the font is loaded
+        const testEl = document.createElement('span');
+        testEl.style.fontFamily = fontFamily + ', sans-serif';
+        testEl.style.fontSize = '0px';
+        testEl.innerHTML = 'A';
+        document.body.appendChild(testEl);
+        
+        // Force font to load explicitly with FontFaceObserver if available
+        if (typeof FontFaceObserver !== 'undefined') {
+            const observer = new FontFaceObserver(fontFamily);
+            return observer.load().then(function() {
+                document.body.removeChild(testEl);
+                return true;
+            }).catch(function() {
+                document.body.removeChild(testEl);
+                console.warn('Font ' + fontFamily + ' failed to load, using fallback');
+                return false;
+            });
+        } else {
+            // Fallback to a timeout approach if FontFaceObserver isn't available
+            return new Promise(function(resolve) {
+                setTimeout(function() {
+                    document.body.removeChild(testEl);
+                    resolve(true);
+                }, 300); // Wait a short time to give the font a chance to load
+            });
+        }
+    });
+    
+    // Execute the callback when the font is ready
+    fontPromise.then(callback);
+}
+
+/**
+ * Initialize the map and controls
+ */
+function initializeMap() {
     // Custom coordinate format function to display whole numbers and adjust Y axis
     function customCoordFormat(coord) {
         if (!coord) return '';
@@ -59,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Add labels to the map
     addMapLabels(map);
-});
+}
 
 /**
  * Function to create a text-to-image label with refined gold gradient
@@ -77,7 +128,7 @@ function createGoldGradientImageStyle(text, fontSize) {
     
     // Set canvas context
     var ctx = canvas.getContext('2d');
-    ctx.font = fontSize + 'px "UnifrakturCook", sans-serif'; // Changed back to UnifrakturCook
+    ctx.font = fontSize + 'px "UnifrakturCook", sans-serif';
     
     // Measure text to set canvas dimensions
     var metrics = ctx.measureText(text);
@@ -90,7 +141,7 @@ function createGoldGradientImageStyle(text, fontSize) {
     
     // Clear canvas and set font again (necessary after resizing)
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.font = fontSize + 'px "UnifrakturCook", sans-serif'; // Changed back to UnifrakturCook
+    ctx.font = fontSize + 'px "UnifrakturCook", sans-serif';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
     
