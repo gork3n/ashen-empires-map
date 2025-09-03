@@ -198,27 +198,28 @@ function addMapLabels(map) {
     // Add the label layer to the map
     map.addLayer(labelLayer);
     
-    // Add individual labels
-    // Cities
-    addLabelFeature(labelSource, 775, 581, "Lotor's Summer Palace", 24);
-    addLabelFeature(labelSource, 295, 809, "Jeel", 24);
+    // Add labels from each category
+    Object.keys(mapLabels).forEach(function(category) {
+        addLabelCategory(labelSource, category, mapLabels[category]);
+    });
+}
+
+/**
+ * Add a category of labels to the map
+ * @param {ol.source.Vector} source - Vector source to add labels to
+ * @param {string} category - Category name
+ * @param {Array} labels - Array of label objects
+ */
+function addLabelCategory(source, category, labels) {
+    // Skip empty categories
+    if (!labels || !labels.length) return;
     
-    // Islands 
-    addLabelFeature(labelSource, 981, 72, "Valinor Island", 30);
-    addLabelFeature(labelSource, 421, 69, "Party Island", 30);
-
-
-    // Dungeons
-
-    // Caves
-
-    // Ruins
-
-    // Water Bodies
-
-    // Mountains
-
-    // You can add more labels here as needed
+    console.log(`Adding ${labels.length} ${category} labels`);
+    
+    // Add each label in the category
+    labels.forEach(function(label) {
+        addLabelFeature(source, label.x, label.y, label.name, label.fontSize);
+    });
 }
 
 /**
