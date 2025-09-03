@@ -30,36 +30,30 @@ document.addEventListener('DOMContentLoaded', function() {
         controls: ol.control.defaults.defaults().extend([mousePositionControl]),
         target: 'map',
         layers: [
-            new ol.layer.Group({
-                title: 'Overlay',
-                layers: [
-                    new ol.layer.Tile({
-                        title: 'Overlay',
-                        source: new ol.source.TileImage({
-                            attributions: 'Map tiles created by Sir Chris',
-                            tileGrid: new ol.tilegrid.TileGrid({
-                                extent: [0,0,4096,4096],
-                                origin: [0,4096],
-                                resolutions: [16,8,4,2,1],
-                                tileSize: [256, 256]
-                            }),
-                            tileUrlFunction: function(tileCoord) {
-                                return ('./tiles/{z}/{x}/{y}.png'
-                                    .replace('{z}', String(tileCoord[0]))
-                                    .replace('{x}', String(tileCoord[1]))
-                                    .replace('{y}', String(tileCoord[2])));
-                            },
-                        })
+            new ol.layer.Tile({
+                source: new ol.source.TileImage({
+                    attributions: 'Map tiles created by Sir Chris',
+                    tileGrid: new ol.tilegrid.TileGrid({
+                        extent: [0,0,4096,4096],
+                        origin: [0,4096],
+                        resolutions: [16,8,4,2,1],
+                        tileSize: [256, 256]
                     }),
-                ]
-            }),
+                    tileUrlFunction: function(tileCoord) {
+                        return ('./tiles/{z}/{x}/{y}.png'
+                            .replace('{z}', String(tileCoord[0]))
+                            .replace('{x}', String(tileCoord[1]))
+                            .replace('{y}', String(tileCoord[2])));
+                    },
+                })
+            })
         ],
         view: new ol.View({
-            center: [1270.000000, 3490.000000], // Center the view on the map
-            resolution: 1.000000, // Start at original resolution zoom level
-            extent: [0, 0, 4096, 4096], // Set bounds to match the map extent
-            constrainOnlyCenter: false, // Constrain both center and extent
-            showFullExtent: true // Allow viewing the full extent
+            center: [1270.000000, 3490.000000],
+            resolution: 1.000000,
+            extent: [0, 0, 4096, 4096],
+            constrainOnlyCenter: false,
+            showFullExtent: true
         })
     });
     
@@ -74,21 +68,21 @@ document.addEventListener('DOMContentLoaded', function() {
  * @returns {ol.style.Style} The style object for the label
  */
 function createGoldGradientImageStyle(text, fontSize) {
-    fontSize = fontSize || 24; // Default font size
+    fontSize = fontSize || 24;
     
     // Create an offscreen canvas to render the text
     var canvas = document.createElement('canvas');
-    var paddingX = 20; // Extra space on sides
-    var paddingY = 10; // Extra space on top/bottom
+    var paddingX = 20;
+    var paddingY = 10;
     
     // Set canvas context
     var ctx = canvas.getContext('2d');
-    ctx.font = fontSize + 'px "UnifrakturMaguntia", cursive';
+    ctx.font = fontSize + 'px "UnifrakturCook", sans-serif'; // Changed back to UnifrakturCook
     
     // Measure text to set canvas dimensions
     var metrics = ctx.measureText(text);
     var textWidth = metrics.width;
-    var textHeight = fontSize * 1.2; // Approximate height based on font size
+    var textHeight = fontSize * 1.2;
     
     // Set canvas dimensions with padding
     canvas.width = textWidth + paddingX * 2;
@@ -96,21 +90,21 @@ function createGoldGradientImageStyle(text, fontSize) {
     
     // Clear canvas and set font again (necessary after resizing)
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.font = fontSize + 'px "UnifrakturMaguntia", cursive';
+    ctx.font = fontSize + 'px "UnifrakturCook", sans-serif'; // Changed back to UnifrakturCook
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
     
     // Create a more refined gold gradient
     var gradient = ctx.createLinearGradient(0, 0, canvas.width, 0);
-    gradient.addColorStop(0, '#8B7034');      // Dark gold at edges
-    gradient.addColorStop(0.1, '#A7893C');    // Medium-dark gold
-    gradient.addColorStop(0.3, '#D4AF37');    // Classic gold
-    gradient.addColorStop(0.42, '#F8E597');   // Light gold
-    gradient.addColorStop(0.5, '#FFFFFF');    // White highlight (narrower)
-    gradient.addColorStop(0.58, '#F8E597');   // Light gold
-    gradient.addColorStop(0.7, '#D4AF37');    // Classic gold
-    gradient.addColorStop(0.9, '#A7893C');    // Medium-dark gold
-    gradient.addColorStop(1, '#8B7034');      // Dark gold at edges
+    gradient.addColorStop(0, '#8B7034');
+    gradient.addColorStop(0.1, '#A7893C');
+    gradient.addColorStop(0.3, '#D4AF37');
+    gradient.addColorStop(0.42, '#F8E597');
+    gradient.addColorStop(0.5, '#FFFFFF');
+    gradient.addColorStop(0.58, '#F8E597');
+    gradient.addColorStop(0.7, '#D4AF37');
+    gradient.addColorStop(0.9, '#A7893C');
+    gradient.addColorStop(1, '#8B7034');
     
     // Add black outline to text
     ctx.lineWidth = 2;
@@ -128,38 +122,10 @@ function createGoldGradientImageStyle(text, fontSize) {
     return new ol.style.Style({
         image: new ol.style.Icon({
             src: imageUrl,
-            // Position icon so that the bottom center is at the feature's coordinates
             anchor: [0.5, 1],
             anchorXUnits: 'fraction',
             anchorYUnits: 'fraction',
             scale: 1
-        })
-    });
-}
-
-/**
- * Function to create a simple gold label style (fallback)
- * @param {string} text - The label text
- * @param {number} fontSize - Font size in pixels
- * @returns {ol.style.Style} The style object for the label
- */
-function createGoldLabelStyle(text, fontSize) {
-    fontSize = fontSize || 24; // Default font size
-    
-    return new ol.style.Style({
-        text: new ol.style.Text({
-            text: text,
-            font: fontSize + 'px "UnifrakturMaguntia", cursive',
-            fill: new ol.style.Fill({
-                color: '#F5D76E' // Gold color
-            }),
-            stroke: new ol.style.Stroke({
-                color: '#000000',
-                width: 2
-            }),
-            textAlign: 'center',
-            textBaseline: 'bottom',
-            offsetY: -5
         })
     });
 }
@@ -184,10 +150,7 @@ function addMapLabels(map) {
     // Add individual labels
     addLabelFeature(labelSource, 775, 566, "Lotor's Summer Palace", 24);
     
-    // You can add more labels here, like:
-    // addLabelFeature(labelSource, 2413, 2311, "New Royale", 22);
-    // addLabelFeature(labelSource, 1345, 2393, "Josody", 22);
-    // etc.
+    // You can add more labels here as needed
 }
 
 /**
@@ -208,13 +171,8 @@ function addLabelFeature(source, x, y, text, fontSize) {
         name: text
     });
     
-    // Try to use the pre-rendered image with gradient
-    try {
-        feature.setStyle(createGoldGradientImageStyle(text, fontSize));
-    } catch (e) {
-        console.warn("Gradient label image rendering failed, falling back to solid color", e);
-        feature.setStyle(createGoldLabelStyle(text, fontSize));
-    }
+    // Apply the gold gradient style
+    feature.setStyle(createGoldGradientImageStyle(text, fontSize));
     
     // Add the feature to the provided source
     source.addFeature(feature);
