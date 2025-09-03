@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
         layers: [
             new ol.layer.Tile({
                 source: new ol.source.TileImage({
-                    attributions: 'Map tiles created by Sir Chris',
+                    attributions: '<span style="color: white;">Map tiles created by Sir Chris using GDAL2Tiles</span>',
                     tileGrid: new ol.tilegrid.TileGrid({
                         extent: [0,0,4096,4096],
                         origin: [0,4096],
