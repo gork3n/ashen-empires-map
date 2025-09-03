@@ -12,6 +12,7 @@
     <!-- CSS files -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@main/dist/en/v7.0.0/legacy/ol.css">
     <link rel="stylesheet" href="https://unpkg.com/ol-layerswitcher@4.1.1/src/ol-layerswitcher.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/map-styles.css">
     
     <!-- JavaScript libraries -->
@@ -20,6 +21,67 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fontfaceobserver/2.3.0/fontfaceobserver.min.js"></script>
 </head>
 <body>
+    <!-- Sidebar -->
+    <div id="sidebar" class="sidebar">
+        <div class="sidebar-header">
+            <h2 class="sidebar-title">Map Controls</h2>
+            <button class="sidebar-toggle" id="sidebar-toggle">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+        </div>
+        
+        <div class="sidebar-content">
+            <!-- Labels Section -->
+            <div class="sidebar-section">
+                <h3>Labels</h3>
+                <div class="control-item">
+                    <label class="switch">
+                        <input type="checkbox" id="toggle-all-labels" checked>
+                        <span class="slider"></span>
+                    </label>
+                    <label for="toggle-all-labels">Show All Labels</label>
+                </div>
+                <div id="label-toggles">
+                    <!-- Label toggles will be dynamically inserted here -->
+                </div>
+            </div>
+            
+            <!-- Monsters Section (placeholder for future implementation) -->
+            <div class="sidebar-section">
+                <h3>Monsters</h3>
+                <div class="control-item">
+                    <label class="switch">
+                        <input type="checkbox" id="toggle-all-monsters" checked>
+                        <span class="slider"></span>
+                    </label>
+                    <label for="toggle-all-monsters">Show All Monsters</label>
+                </div>
+                <div id="monster-toggles">
+                    <!-- Will be populated when monsters are implemented -->
+                    <div class="control-item">
+                        <label class="switch">
+                            <input type="checkbox" disabled>
+                            <span class="slider"></span>
+                        </label>
+                        <label>Coming soon...</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Icons for collapsed sidebar -->
+        <div class="sidebar-icons">
+            <div class="sidebar-icon" id="icon-labels">
+                <i class="fas fa-tags"></i>
+                <span class="icon-tooltip">Labels</span>
+            </div>
+            <div class="sidebar-icon" id="icon-monsters">
+                <i class="fas fa-dragon"></i>
+                <span class="icon-tooltip">Monsters</span>
+            </div>
+        </div>
+    </div>
+
     <div id="container">
         <div id="header">
             <h1>Ashen Empires Map</h1>
@@ -31,6 +93,7 @@
     
     <!-- Load our custom JavaScript -->
     <script src="js/labels.js"></script>
+    <script src="js/sidebar.js"></script>
     <script src="js/map.js"></script>
 </body>
 </html>

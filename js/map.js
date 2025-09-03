@@ -1,3 +1,6 @@
+let labelLayers = {};
+let map;
+
 document.addEventListener('DOMContentLoaded', function() {
     // Preload the font before rendering labels
     preloadFont("UnifrakturCook", function() {
@@ -77,7 +80,7 @@ function initializeMap() {
     });
     
     // Initialize the map
-    var map = new ol.Map({
+    map = new ol.Map({
         controls: ol.control.defaults.defaults().extend([mousePositionControl]),
         target: 'map',
         layers: [
@@ -110,6 +113,13 @@ function initializeMap() {
     
     // Add labels to the map
     addMapLabels(map);
+    
+    // Listen for toggle events from the sidebar
+    document.addEventListener('toggle-label-category', function(e) {
+        if (e.detail && e.detail.category && labelLayers[e.detail.category]) {
+            labelLayers[e.detail.category].setVisible(e.detail.visible);
+        }
+    });
 }
 
 /**
@@ -186,22 +196,41 @@ function createGoldGradientImageStyle(text, fontSize) {
  * @param {ol.Map} map - The OpenLayers map object
  */
 function addMapLabels(map) {
-    // Create a vector source for all labels
-    var labelSource = new ol.source.Vector();
+    // Get all category names from mapLabels object
+    const categories = Object.keys(mapLabels);
     
-    // Create a vector layer for all labels
-    var labelLayer = new ol.layer.Vector({
-        source: labelSource,
-        title: 'Labels'
+    // Create a label layer for each category
+    categories.forEach(category => {
+        // Create vector source for this category
+        const labelSource = new ol.source.Vector();
+        
+        // Create vector layer for this category
+        const labelLayer = new ol.layer.Vector({
+            source: labelSource,
+            title: category + ' Labels',
+            visible: true
+        });
+        
+        // Store the layer reference
+        labelLayers[category] = labelLayer;
+        
+        // Add the layer to the map
+        map.addLayer(labelLayer);
+        
+        // Add all labels in this category
+        if (mapLabels[category] && mapLabels[category].length) {
+            mapLabels[category].forEach(label => {
+                addLabelFeature(labelSource, label.x, label.y, label.name, label.fontSize);
+            });
+        }
     });
     
-    // Add the label layer to the map
-    map.addLayer(labelLayer);
-    
-    // Add labels from each category
-    Object.keys(mapLabels).forEach(function(category) {
-        addLabelCategory(labelSource, category, mapLabels[category]);
-    });
+    // Notify the sidebar that labels are loaded with available categories
+    document.dispatchEvent(new CustomEvent('labels-loaded', {
+        detail: {
+            categories: categories
+        }
+    }));
 }
 
 /**
