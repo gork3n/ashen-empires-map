@@ -1,0 +1,92 @@
+/* Base styles */
+v\:* {behavior:url(#default#VML);}
+
+html, body { 
+    overflow: hidden; 
+    padding: 0; 
+    height: 100%; 
+    width: 100%; 
+    font-family: 'Segoe UI', Geneva, Arial, Verdana, sans-serif;
+    margin: 0;
+    background: #002131 url('../images/bg.png'); /* Background for the entire page */
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Header styles */
+h1 { 
+    margin: 0; 
+    padding: 6px; 
+    border: 0; 
+    font-size: 20pt; 
+    color: white;
+}
+
+#header { 
+    padding: 5px 10px; 
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+#subheader { 
+    text-align: right; 
+    font-size: 10px; 
+    color: #ccc;
+}
+
+/* Map container */
+#map { 
+    flex: 1;
+    border-radius: 4px;
+    background: #002131 url('../images/bg.png'); /* Separate background for map */
+    overflow: hidden;
+}
+
+/* Coordinates display */
+#mouse-position {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* OpenLayers overrides */
+.ol-layer canvas {
+    background-color: transparent; /* Make sure the OpenLayers canvas doesn't block the background */
+}
+
+.ol-attribution {
+    background: rgba(0, 0, 0, 0.6) !important;
+    color: white !important;
+}
+
+.ol-attribution a {
+    color: #9cf !important;
+}
+
+/* Font definitions */
+.unifrakturcook-bold {
+    font-family: "UnifrakturCook", cursive;
+    font-weight: 700;
+    border: 2px solid black;
+    font-style: normal;
+}
+
+.unifrakturmaguntia-regular {
+  font-family: "UnifrakturMaguntia", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
