@@ -308,3 +308,75 @@ input:checked + .slider:before {
 #map.sidebar-collapsed {
     margin-left: 50px;
 }
+
+/* Define custom styles for different label categories */
+const labelStyles = {
+    islands: {
+        // Gold gradient for islands
+        useGradient: true,
+        fontFamily: '"UnifrakturCook", serif',
+        strokeWidth: 2,
+        strokeColor: '#000000',
+        fontSize: 30
+    },
+    cities: {
+        // White with blue border for cities
+        useGradient: false,
+        fillColor: '#FFFFFF',
+        strokeColor: '#1E3F66',
+        strokeWidth: 2.5,
+        fontFamily: '"UnifrakturCook", serif',
+        fontSize: 24
+    },
+    dungeons: {
+        // Red with black border for dungeons
+        useGradient: false,
+        fillColor: '#CC3333',
+        strokeColor: '#000000',
+        strokeWidth: 2,
+        fontFamily: 'Arial, sans-serif',
+        fontSize: 20
+    },
+    caves: {
+        // Brown for caves
+        useGradient: false,
+        fillColor: '#A0522D',
+        strokeColor: '#000000',
+        strokeWidth: 2,
+        fontFamily: 'Arial, sans-serif',
+        fontSize: 18
+    },
+    ruins: {
+        // Gray for ruins
+        useGradient: false,
+        fillColor: '#AAAAAA',
+        strokeColor: '#333333',
+        strokeWidth: 2,
+        fontFamily: '"Times New Roman", serif',
+        fontSize: 22
+    },
+    waterBodies: {
+        // Light blue for water bodies
+        useGradient: true,
+        gradientColors: [
+            { pos: 0, color: '#1E5F74' },
+            { pos: 0.3, color: '#4BA3C3' },
+            { pos: 0.5, color: '#FFFFFF' },
+            { pos: 0.7, color: '#4BA3C3' },
+            { pos: 1, color: '#1E5F74' }
+        ],
+        strokeColor: '#133B5C',
+        strokeWidth: 1.5,
+        fontFamily: '"UnifrakturCook", serif',
+        fontSize: 26
+    }
+};
+
+// Default style for any category not specifically defined
+const defaultLabelStyle = {
+    useGradient: false,
+    fillColor: '#FFFFFF',
+    strokeColor: '#000000',
+    strokeWidth: 2,
+    fontFamily: '"UnifrakturCook", serif'
+};

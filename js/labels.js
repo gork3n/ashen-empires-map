@@ -9,6 +9,10 @@ const mapLabels = {
     islands: [
         { x: 981, y: 72, name: "Valinor Island", fontSize: 30 },
         { x: 421, y: 69, name: "Party Island", fontSize: 30 },
+        { x: 1545, y: 546, name: "Prison Island", fontSize: 30 },
+        { x: 137, y: 230, name: "Minotaur Island", fontSize: 30 },
+        { x: 92, y: 942, name: "Guild Arena Island", fontSize: 24 },
+        { x: 820, y: 2122, name: "Scorched Island", fontSize: 24 },
         // Add more islands here
     ],
     
@@ -37,3 +41,87 @@ const mapLabels = {
         // Add mountain labels here
     ]
 };
+
+/**
+ * Add a single label to the map
+ * @param {ol.source.Vector} source - Vector source to add the label to
+ * @param {number} x - X coordinate
+ * @param {number} y - Y coordinate
+ * @param {string} text - Label text
+ * @param {number} fontSize - Font size in pixels
+ * @param {string} category - Label category name
+ */
+function addLabelFeature(source, x, y, text, fontSize, category) {
+    // Convert to OpenLayers coordinate system (y is inverted)
+    var olY = 4096 - y;
+    
+    // Create a point feature at this location
+    var feature = new ol.Feature({
+        geometry: new ol.geom.Point([x, olY]),
+        name: text,
+        category: category
+    });
+    
+    // Get style options for this category
+    const styleOptions = labelStyles[category] || defaultLabelStyle;
+    
+    // Override font size if provided
+    if (fontSize) {
+        styleOptions.fontSize = fontSize;
+    }
+    
+    // Apply the style
+    feature.setStyle(createLabelImageStyle(text, styleOptions.fontSize, styleOptions));
+    
+    // Add the feature to the provided source
+    source.addFeature(feature);
+}
+
+/**
+ * Add all map labels
+ * @param {ol.Map} map - The OpenLayers map object
+ */
+function addMapLabels(map) {
+    // Get all category names from mapLabels object
+    const categories = Object.keys(mapLabels);
+    
+    // Create a label layer for each category
+    categories.forEach(category => {
+        // Create vector source for this category
+        const labelSource = new ol.source.Vector();
+        
+        // Create vector layer for this category
+        const labelLayer = new ol.layer.Vector({
+            source: labelSource,
+            title: category + ' Labels',
+            visible: true
+        });
+        
+        // Store the layer reference
+        labelLayers[category] = labelLayer;
+        
+        // Add the layer to the map
+        map.addLayer(labelLayer);
+        
+        // Add all labels in this category
+        if (mapLabels[category] && mapLabels[category].length) {
+            mapLabels[category].forEach(label => {
+                addLabelFeature(
+                    labelSource, 
+                    label.x, 
+                    label.y, 
+                    label.name, 
+                    label.fontSize, 
+                    category
+                );
+            });
+        }
+    });
+    
+    // Notify the sidebar that labels are loaded with available categories
+    document.dispatchEvent(new CustomEvent('labels-loaded', {
+        detail: {
+            categories: categories
+        }
+    }));
+}

@@ -2,6 +2,78 @@
 let labelLayers = {};
 let map;
 
+// Define custom styles for different label categories
+const labelStyles = {
+    islands: {
+        // Gold gradient for islands
+        useGradient: true,
+        fontFamily: '"UnifrakturCook", serif',
+        strokeWidth: 2,
+        strokeColor: '#000000',
+        fontSize: 30
+    },
+    cities: {
+        // White with blue border for cities
+        useGradient: false,
+        fillColor: '#FFFFFF',
+        strokeColor: '#000000',
+        strokeWidth: 2.5,
+        fontFamily: '"UnifrakturCook", serif',
+        fontSize: 24
+    },
+    dungeons: {
+        // Red with black border for dungeons
+        useGradient: false,
+        fillColor: '#CC3333',
+        strokeColor: '#000000',
+        strokeWidth: 2,
+        fontFamily: 'Arial, sans-serif',
+        fontSize: 20
+    },
+    caves: {
+        // Brown for caves
+        useGradient: false,
+        fillColor: '#A0522D',
+        strokeColor: '#000000',
+        strokeWidth: 2,
+        fontFamily: 'Arial, sans-serif',
+        fontSize: 18
+    },
+    ruins: {
+        // Gray for ruins
+        useGradient: false,
+        fillColor: '#AAAAAA',
+        strokeColor: '#333333',
+        strokeWidth: 2,
+        fontFamily: '"Times New Roman", serif',
+        fontSize: 22
+    },
+    waterBodies: {
+        // Light blue for water bodies
+        useGradient: true,
+        gradientColors: [
+            { pos: 0, color: '#1E5F74' },
+            { pos: 0.3, color: '#4BA3C3' },
+            { pos: 0.5, color: '#FFFFFF' },
+            { pos: 0.7, color: '#4BA3C3' },
+            { pos: 1, color: '#1E5F74' }
+        ],
+        strokeColor: '#133B5C',
+        strokeWidth: 1.5,
+        fontFamily: '"UnifrakturCook", serif',
+        fontSize: 26
+    }
+};
+
+// Default style for any category not specifically defined
+const defaultLabelStyle = {
+    useGradient: false,
+    fillColor: '#FFFFFF',
+    strokeColor: '#000000',
+    strokeWidth: 2,
+    fontFamily: '"UnifrakturCook", serif'
+};
+
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize the map directly without font preloading
     initializeMap();
@@ -61,7 +133,7 @@ function initializeMap() {
             })
         ],
         view: new ol.View({
-            center: [1270.000000, 3490.000000],
+            center: [1105.000000, 3490.000000],
             resolution: 1.000000,
             extent: [0, 0, 4096, 4096],
             constrainOnlyCenter: false,
@@ -81,13 +153,36 @@ function initializeMap() {
 }
 
 /**
- * Function to create a text-to-image label with refined gold gradient
+ * Function to create a text-to-image label with customizable styling
  * @param {string} text - The label text
  * @param {number} fontSize - Font size in pixels
+ * @param {Object} styleOptions - Custom styling options
  * @returns {ol.style.Style} The style object for the label
  */
-function createGoldGradientImageStyle(text, fontSize) {
+function createLabelImageStyle(text, fontSize, styleOptions = {}) {
     fontSize = fontSize || 24;
+    
+    // Default style options
+    const options = {
+        fontFamily: '"UnifrakturCook", "Times New Roman", serif',
+        useGradient: true,
+        fillColor: '#FFFFFF',
+        strokeColor: '#000000',
+        strokeWidth: 2,
+        // Gold gradient options
+        gradientColors: [
+            { pos: 0, color: '#8B7034' },
+            { pos: 0.1, color: '#A7893C' },
+            { pos: 0.3, color: '#D4AF37' },
+            { pos: 0.42, color: '#F8E597' },
+            { pos: 0.5, color: '#FFFFFF' },
+            { pos: 0.58, color: '#F8E597' },
+            { pos: 0.7, color: '#D4AF37' },
+            { pos: 0.9, color: '#A7893C' },
+            { pos: 1, color: '#8B7034' }
+        ],
+        ...styleOptions // Override defaults with provided options
+    };
     
     // Create an offscreen canvas to render the text
     var canvas = document.createElement('canvas');
@@ -98,7 +193,7 @@ function createGoldGradientImageStyle(text, fontSize) {
     var ctx = canvas.getContext('2d');
     
     // Set font with a fallback
-    ctx.font = fontSize + 'px "UnifrakturCook", "Times New Roman", serif';
+    ctx.font = fontSize + 'px ' + options.fontFamily;
     
     // Measure text to set canvas dimensions
     var metrics = ctx.measureText(text);
@@ -111,29 +206,32 @@ function createGoldGradientImageStyle(text, fontSize) {
     
     // Clear canvas and set font again (necessary after resizing)
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.font = fontSize + 'px "UnifrakturCook", "Times New Roman", serif';
+    ctx.font = fontSize + 'px ' + options.fontFamily;
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
     
-    // Create a more refined gold gradient
-    var gradient = ctx.createLinearGradient(0, 0, canvas.width, 0);
-    gradient.addColorStop(0, '#8B7034');
-    gradient.addColorStop(0.1, '#A7893C');
-    gradient.addColorStop(0.3, '#D4AF37');
-    gradient.addColorStop(0.42, '#F8E597');
-    gradient.addColorStop(0.5, '#FFFFFF');
-    gradient.addColorStop(0.58, '#F8E597');
-    gradient.addColorStop(0.7, '#D4AF37');
-    gradient.addColorStop(0.9, '#A7893C');
-    gradient.addColorStop(1, '#8B7034');
-    
-    // Add black outline to text
-    ctx.lineWidth = 2;
-    ctx.strokeStyle = 'black';
+    // Add outline to text
+    ctx.lineWidth = options.strokeWidth;
+    ctx.strokeStyle = options.strokeColor;
     ctx.strokeText(text, canvas.width / 2, canvas.height / 2);
     
-    // Fill text with gradient
-    ctx.fillStyle = gradient;
+    // Fill text with gradient or solid color
+    if (options.useGradient) {
+        // Create gradient
+        var gradient = ctx.createLinearGradient(0, 0, canvas.width, 0);
+        
+        // Add color stops from options
+        options.gradientColors.forEach(stop => {
+            gradient.addColorStop(stop.pos, stop.color);
+        });
+        
+        ctx.fillStyle = gradient;
+    } else {
+        // Use solid fill color
+        ctx.fillStyle = options.fillColor;
+    }
+    
+    // Fill the text
     ctx.fillText(text, canvas.width / 2, canvas.height / 2);
     
     // Convert canvas to image URL
@@ -180,7 +278,14 @@ function addMapLabels(map) {
         // Add all labels in this category
         if (mapLabels[category] && mapLabels[category].length) {
             mapLabels[category].forEach(label => {
-                addLabelFeature(labelSource, label.x, label.y, label.name, label.fontSize);
+                addLabelFeature(
+                    labelSource, 
+                    label.x, 
+                    label.y, 
+                    label.name, 
+                    label.fontSize, 
+                    category
+                );
             });
         }
     });
@@ -194,43 +299,35 @@ function addMapLabels(map) {
 }
 
 /**
- * Add a category of labels to the map
- * @param {ol.source.Vector} source - Vector source to add labels to
- * @param {string} category - Category name
- * @param {Array} labels - Array of label objects
- */
-function addLabelCategory(source, category, labels) {
-    // Skip empty categories
-    if (!labels || !labels.length) return;
-    
-    console.log(`Adding ${labels.length} ${category} labels`);
-    
-    // Add each label in the category
-    labels.forEach(function(label) {
-        addLabelFeature(source, label.x, label.y, label.name, label.fontSize);
-    });
-}
-
-/**
  * Add a single label to the map
  * @param {ol.source.Vector} source - Vector source to add the label to
  * @param {number} x - X coordinate
  * @param {number} y - Y coordinate
  * @param {string} text - Label text
  * @param {number} fontSize - Font size in pixels
+ * @param {string} category - Label category name
  */
-function addLabelFeature(source, x, y, text, fontSize) {
+function addLabelFeature(source, x, y, text, fontSize, category) {
     // Convert to OpenLayers coordinate system (y is inverted)
     var olY = 4096 - y;
     
     // Create a point feature at this location
     var feature = new ol.Feature({
         geometry: new ol.geom.Point([x, olY]),
-        name: text
+        name: text,
+        category: category
     });
     
-    // Apply the gold gradient style
-    feature.setStyle(createGoldGradientImageStyle(text, fontSize));
+    // Get style options for this category
+    const styleOptions = labelStyles[category] || defaultLabelStyle;
+    
+    // Override font size if provided
+    if (fontSize) {
+        styleOptions.fontSize = fontSize;
+    }
+    
+    // Apply the style
+    feature.setStyle(createLabelImageStyle(text, styleOptions.fontSize, styleOptions));
     
     // Add the feature to the provided source
     source.addFeature(feature);
