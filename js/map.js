@@ -7,7 +7,8 @@ const labelStyles = {
     islands: {
         // Gold gradient for islands
         useGradient: true,
-        fontFamily: '"UnifrakturCook", serif',
+        fontFamily: '"Alegreya Sans", sans-serif',
+        fontWeight: 800, // extrabold for islands
         strokeWidth: 2,
         strokeColor: '#000000',
         fontSize: 30
@@ -16,9 +17,10 @@ const labelStyles = {
         // White with blue border for cities
         useGradient: false,
         fillColor: '#FFFFFF',
-        strokeColor: '#000000',
+        strokeColor: '#1E3F66',
         strokeWidth: 2.5,
-        fontFamily: '"UnifrakturCook", serif',
+        fontFamily: '"Alegreya Sans", sans-serif',
+        fontWeight: 700, // bold for cities
         fontSize: 24
     },
     dungeons: {
@@ -27,7 +29,8 @@ const labelStyles = {
         fillColor: '#CC3333',
         strokeColor: '#000000',
         strokeWidth: 2,
-        fontFamily: 'Arial, sans-serif',
+        fontFamily: '"Alegreya Sans", sans-serif',
+        fontWeight: 700, // bold for dungeons
         fontSize: 20
     },
     caves: {
@@ -36,7 +39,8 @@ const labelStyles = {
         fillColor: '#A0522D',
         strokeColor: '#000000',
         strokeWidth: 2,
-        fontFamily: 'Arial, sans-serif',
+        fontFamily: '"Alegreya Sans", sans-serif',
+        fontWeight: 500, // medium for caves
         fontSize: 18
     },
     ruins: {
@@ -45,22 +49,19 @@ const labelStyles = {
         fillColor: '#AAAAAA',
         strokeColor: '#333333',
         strokeWidth: 2,
-        fontFamily: '"Times New Roman", serif',
+        fontFamily: '"Alegreya Sans", sans-serif',
+        fontWeight: 500, // medium for ruins
         fontSize: 22
     },
     waterBodies: {
         // Light blue for water bodies
-        useGradient: true,
-        gradientColors: [
-            { pos: 0, color: '#1E5F74' },
-            { pos: 0.3, color: '#4BA3C3' },
-            { pos: 0.5, color: '#FFFFFF' },
-            { pos: 0.7, color: '#4BA3C3' },
-            { pos: 1, color: '#1E5F74' }
-        ],
+        useGradient: false,
+        fillColor: '#FFFFFF',
         strokeColor: '#133B5C',
         strokeWidth: 1.5,
-        fontFamily: '"UnifrakturCook", serif',
+        fontFamily: '"Alegreya Sans", sans-serif',
+        fontWeight: 800, // extrabold for water bodies
+        fontStyle: 'italic', // italic for water bodies
         fontSize: 26
     }
 };
@@ -71,7 +72,9 @@ const defaultLabelStyle = {
     fillColor: '#FFFFFF',
     strokeColor: '#000000',
     strokeWidth: 2,
-    fontFamily: '"UnifrakturCook", serif'
+    fontFamily: '"Alegreya Sans", sans-serif',
+    fontWeight: 700, // bold as default
+    fontSize: 24
 };
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -164,7 +167,9 @@ function createLabelImageStyle(text, fontSize, styleOptions = {}) {
     
     // Default style options
     const options = {
-        fontFamily: '"UnifrakturCook", "Times New Roman", serif',
+        fontFamily: '"Alegreya Sans", sans-serif',
+        fontWeight: 700,
+        fontStyle: 'normal',
         useGradient: true,
         fillColor: '#FFFFFF',
         strokeColor: '#000000',
@@ -192,8 +197,9 @@ function createLabelImageStyle(text, fontSize, styleOptions = {}) {
     // Set canvas context
     var ctx = canvas.getContext('2d');
     
-    // Set font with a fallback
-    ctx.font = fontSize + 'px ' + options.fontFamily;
+    // Construct the complete font string with weight and style
+    const fontString = `${options.fontStyle} ${options.fontWeight} ${fontSize}px ${options.fontFamily}`;
+    ctx.font = fontString;
     
     // Measure text to set canvas dimensions
     var metrics = ctx.measureText(text);
@@ -206,7 +212,7 @@ function createLabelImageStyle(text, fontSize, styleOptions = {}) {
     
     // Clear canvas and set font again (necessary after resizing)
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.font = fontSize + 'px ' + options.fontFamily;
+    ctx.font = fontString;
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
     

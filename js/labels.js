@@ -1,18 +1,23 @@
 // Define all map labels organized by category
 const mapLabels = {
     cities: [
-        { x: 775, y: 581, name: "Lotor's Summer Palace", fontSize: 24 },
+        
         { x: 295, y: 809, name: "Jeel", fontSize: 24 },
+        { x: 2793, y: 849, name: "Hammerfist", fontSize: 24 },
+        { x: 3649, y: 935, name: "Duremar", fontSize: 24 },
+        { x: 2822, y: 1254, name: "Farstead Keep", fontSize: 24 },
         // Add more cities here
     ],
     
     islands: [
+        { x: 775, y: 581, name: "Lotor's Summer Palace", fontSize: 24 },
         { x: 981, y: 72, name: "Valinor Island", fontSize: 30 },
         { x: 421, y: 69, name: "Party Island", fontSize: 30 },
         { x: 1545, y: 546, name: "Prison Island", fontSize: 30 },
         { x: 137, y: 230, name: "Minotaur Island", fontSize: 30 },
         { x: 92, y: 942, name: "Guild Arena Island", fontSize: 24 },
         { x: 820, y: 2122, name: "Scorched Island", fontSize: 24 },
+        { x: 1130, y: 3210, name: "Hell Island", fontSize: 30 },
         // Add more islands here
     ],
     
@@ -32,7 +37,8 @@ const mapLabels = {
     ],
     
     waterBodies: [
-        // { x: 456, y: 789, name: "Crystal Lake", fontSize: 26 },
+        { x: 1267, y: 1231, name: "Lake Silvest", fontSize: 13 },
+        { x: 390, y: 1090, name: "Queen's Lake", fontSize: 14 },
         // Add water body labels here
     ],
     

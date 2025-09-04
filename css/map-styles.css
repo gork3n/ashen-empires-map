@@ -6,7 +6,8 @@ html, body {
     padding: 0; 
     height: 100%; 
     width: 100%; 
-    font-family: 'Segoe UI', Geneva, Arial, Verdana, sans-serif;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight: 400;
     margin: 0;
     background: #002131 url('../images/bg.png'); /* Background for the entire page */
 }
@@ -25,7 +26,8 @@ h1 {
     margin: 0; 
     padding: 6px; 
     border: 0; 
-    font-size: 20pt; 
+    font-size: 20pt;
+    font-weight: 700; 
     color: white;
 }
 
@@ -39,6 +41,7 @@ h1 {
 #subheader { 
     text-align: right; 
     font-size: 10px; 
+    font-weight: 300;
     color: #ccc;
 }
 
@@ -60,7 +63,8 @@ h1 {
     color: white;
     padding: 5px 10px;
     border-radius: 4px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Alegreya Sans', monospace;
+    font-weight: 500;
 }
 
 /* OpenLayers overrides */
@@ -71,6 +75,8 @@ h1 {
 .ol-attribution {
     background: rgba(0, 0, 0, 0.6) !important;
     color: white !important;
+    font-family: 'Alegreya Sans', sans-serif !important;
+    font-weight: 400;
 }
 
 .ol-attribution a {
@@ -78,50 +84,88 @@ h1 {
 }
 
 /* Font definitions */
-.unifrakturcook-bold {
-  font-family: "UnifrakturCook", sans-serif;
-  font-weight: 700;
+.alegreya-sans-thin {
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 100;
   font-style: normal;
 }
 
-.unifrakturmaguntia-regular {
-  font-family: "UnifrakturMaguntia", cursive;
+.alegreya-sans-light {
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.alegreya-sans-regular {
+  font-family: "Alegreya Sans", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
-/* Add to your map-styles.css */
-@font-face {
-  font-family: 'UnifrakturCook';
+.alegreya-sans-medium {
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 500;
   font-style: normal;
+}
+
+.alegreya-sans-bold {
+  font-family: "Alegreya Sans", sans-serif;
   font-weight: 700;
-  font-display: block;
-  src: url(https://fonts.gstatic.com/s/unifrakturcook/v19/IurA6Yli8YOdcoky-0PTTdkm56n05Uw13ILXs-h6.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  font-style: normal;
 }
 
-/* Preload with a hidden element */
-body::before {
-  content: '';
-  font-family: 'UnifrakturCook';
-  opacity: 0;
-  height: 0;
-  width: 0;
-  display: block;
-  visibility: hidden;
+.alegreya-sans-extrabold {
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 800;
+  font-style: normal;
 }
 
-/* Force font preloading */
-body::after {
-  content: 'Font preloader';
-  font-family: 'UnifrakturCook', serif;
-  position: absolute;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  height: 0;
-  width: 0;
-  overflow: hidden;
+.alegreya-sans-black {
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.alegreya-sans-thin-italic {
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.alegreya-sans-light-italic {
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.alegreya-sans-regular-italic {
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.alegreya-sans-medium-italic {
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.alegreya-sans-bold-italic {
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.alegreya-sans-extrabold-italic {
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.alegreya-sans-black-italic {
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 900;
+  font-style: italic;
 }
 
 /* Sidebar styles */
@@ -138,6 +182,8 @@ body::after {
     overflow-y: auto;
     overflow-x: hidden;
     border-right: 1px solid #444;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight: 400;
 }
 
 .sidebar.collapsed {
@@ -155,6 +201,7 @@ body::after {
 
 .sidebar-title {
     font-size: 1.2em;
+    font-weight: 700;
     margin: 0;
     white-space: nowrap;
 }
@@ -180,6 +227,7 @@ body::after {
     margin-top: 0;
     margin-bottom: 10px;
     font-size: 1.1em;
+    font-weight: 700;
     color: #F5D76E;
     border-bottom: 1px solid #444;
     padding-bottom: 5px;
@@ -242,6 +290,7 @@ body::after {
     padding: 5px 10px;
     border-radius: 4px;
     font-size: 12px;
+    font-weight: 400;
     white-space: nowrap;
     visibility: hidden;
     opacity: 0;
@@ -325,7 +374,7 @@ const labelStyles = {
         fillColor: '#FFFFFF',
         strokeColor: '#1E3F66',
         strokeWidth: 2.5,
-        fontFamily: '"UnifrakturCook", serif',
+        fontFamily: 'Verdana, Arial, "Times New Roman"',
         fontSize: 24
     },
     dungeons: {
@@ -334,7 +383,7 @@ const labelStyles = {
         fillColor: '#CC3333',
         strokeColor: '#000000',
         strokeWidth: 2,
-        fontFamily: 'Arial, sans-serif',
+        fontFamily: 'Verdana, Arial, "Times New Roman"',
         fontSize: 20
     },
     caves: {
@@ -343,7 +392,7 @@ const labelStyles = {
         fillColor: '#A0522D',
         strokeColor: '#000000',
         strokeWidth: 2,
-        fontFamily: 'Arial, sans-serif',
+        fontFamily: 'Verdana, Arial, "Times New Roman"',
         fontSize: 18
     },
     ruins: {
@@ -357,14 +406,8 @@ const labelStyles = {
     },
     waterBodies: {
         // Light blue for water bodies
-        useGradient: true,
-        gradientColors: [
-            { pos: 0, color: '#1E5F74' },
-            { pos: 0.3, color: '#4BA3C3' },
-            { pos: 0.5, color: '#FFFFFF' },
-            { pos: 0.7, color: '#4BA3C3' },
-            { pos: 1, color: '#1E5F74' }
-        ],
+        useGradient: false,
+        fillColor: '#FFFFFF',
         strokeColor: '#133B5C',
         strokeWidth: 1.5,
         fontFamily: '"UnifrakturCook", serif',
