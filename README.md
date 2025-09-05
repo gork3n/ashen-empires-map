@@ -11,6 +11,14 @@ An interactive map for Ashen Empires with pixel-perfect coordinates and multiple
 
 - **Full Map Exploration**: Navigate the entire Ashen Empires world with smooth panning and zooming
 - **Precise Coordinates**: Real-time coordinate display showing exact X,Y positions (0,0 at top-left)
+- **Map Markers**: Interactive markers for important locations including:
+  - Portals between major cities
+  - Docks for sea travel
+  - Quest locations
+  - Shops and vendors
+  - Skill trainers
+  - Banks and storage
+- **Custom Icons**: Stylized markers using Font Awesome with category-specific colors
 - **Multiple Map Implementations**: 
   - Leaflet-based viewer with custom styling and controls (deprecated)
   - OpenLayers-based viewer with additional features (recommended)
@@ -76,11 +84,18 @@ This matches the coordinate system used in-game.
 ## Project Structure
 
 - `openlayers.html` - Main OpenLayers implementation (recommended)
-- `leaflet.html` - Main Leaflet page (deprecated)
-- `/leaflet/` - Directory containing the Leaflet implementation
+- `/js/` - JavaScript files for the OpenLayers implementation
+  - `map.js` - Core map functionality
+  - `labels.js` - Label definitions and rendering
+  - `sidebar.js` - Sidebar controls and interactions
+  - `markers.js` - Map marker definitions and styling
+- `/css/` - Stylesheets
+  - `map-styles.css` - Styling for the map and UI elements
+- `/leaflet-files/` - Directory containing the Leaflet implementation
+  - `leaflet.html` - Main Leaflet page (deprecated)
   - `styles.css` - Styling for Leaflet map
   - `main.js` - Core Leaflet functionality
-  - `labels.js` - Functionality for labeling (NOT IN USE)
+  - `labels.js` - Functionality for labeling
 - `/tiles/` - Directory containing all map tile images
 - `/images/` - Directory containing background images and assets
 
@@ -232,12 +247,12 @@ The map tiles are generated from the game map using QGIS Shell. The website itse
 
 ## Planned Features
 
-- Layer toggling for displaying different map information
-- Points of interest markers for key locations
+- ✅ Layer toggling for displaying different map information
+- ✅ Points of interest markers for key locations
 - Search functionality for locations
 - Mobile-optimized controls
 - Complete labeling system for all important locations
-- Separation of code into dedicated files for better maintainability
+- ✅ Separation of code into dedicated files for better maintainability
 - Interactive elements for more detailed location information
 
 ## Credits

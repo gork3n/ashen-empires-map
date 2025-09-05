@@ -10,31 +10,29 @@ const mapMarkers = {
     docks: [
         { x: 264, y: 823, type: "dock", tooltip: "Jeel Dock" },
         { x: 780, y: 590, type: "dock", tooltip: "Palace Dock" },
-        { x: 2790, y: 860, type: "dock", tooltip: "Hammerfist Port" },
         // Add more docks
     ],
     
     quests: [
-        { x: 330, y: 815, type: "quest", tooltip: "The Mayor's Request" },
-        { x: 445, y: 765, type: "quest", tooltip: "Mirthik's Puzzle" },
+        // { x: 330, y: 815, type: "quest", tooltip: "The Mayor's Request" },
         // Add more quests
     ],
     
     shops: [
-        { x: 305, y: 820, type: "shop", tooltip: "General Store" },
-        { x: 313, y: 828, type: "shop", tooltip: "Weapons & Armor" },
+        // { x: 305, y: 820, type: "shop", tooltip: "General Store" },
+        
         // Add more shops
     ],
     
     trainers: [
-        { x: 300, y: 818, type: "trainer", tooltip: "Blacksmithing Trainer" },
-        { x: 308, y: 825, type: "trainer", tooltip: "Spell Trainer" },
+        // { x: 300, y: 818, type: "trainer", tooltip: "Blacksmithing Trainer" },
+        
         // Add more trainers
     ],
     
     banks: [
-        { x: 318, y: 826, type: "bank", tooltip: "Jeel Bank" },
-        { x: 2795, y: 852, type: "bank", tooltip: "Hammerfist Bank" },
+        // { x: 318, y: 826, type: "bank", tooltip: "Jeel Bank" },
+        
         // Add more banks
     ]
 };
