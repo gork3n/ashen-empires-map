@@ -88,6 +88,26 @@ function initSidebar() {
         //     toggle.dispatchEvent(new Event('change'));
         // });
     });
+    
+    // Initialize the marker toggle controls
+    document.addEventListener('markers-loaded', function(e) {
+        if (e.detail && e.detail.categories) {
+            initMarkerControls(e.detail.categories);
+        }
+    });
+    
+    // Set up master toggle for all markers
+    document.getElementById('toggle-all-markers').addEventListener('change', function() {
+        const isChecked = this.checked;
+        const allToggles = document.querySelectorAll('#marker-toggles input[type="checkbox"]');
+        
+        // Update all category toggles
+        allToggles.forEach(toggle => {
+            toggle.checked = isChecked;
+            // Trigger the change event to update the map
+            toggle.dispatchEvent(new Event('change'));
+        });
+    });
 }
 
 /**
@@ -163,6 +183,126 @@ function initLabelControls(categories) {
 function updateAllLabelsToggleState() {
     const allToggles = document.querySelectorAll('#label-toggles input[type="checkbox"]');
     const masterToggle = document.getElementById('toggle-all-labels');
+    
+    // Check if all individual toggles are checked
+    let allChecked = true;
+    allToggles.forEach(toggle => {
+        if (!toggle.checked) {
+            allChecked = false;
+        }
+    });
+    
+    // Update master toggle without triggering its change event
+    masterToggle.checked = allChecked;
+}
+
+/**
+ * Initialize marker control toggles based on available categories
+ * @param {Array} categories - Array of marker category names
+ */
+function initMarkerControls(categories) {
+    const container = document.getElementById('marker-toggles');
+    
+    // Clear any existing toggles
+    container.innerHTML = '';
+    
+    // Create toggle for each marker category
+    categories.forEach(category => {
+        // Format category name for display (capitalize first letter)
+        const displayName = category.charAt(0).toUpperCase() + category.slice(1);
+        
+        // Create the control item
+        const controlItem = document.createElement('div');
+        controlItem.className = 'control-item';
+        
+        // Create the switch
+        const label = document.createElement('label');
+        label.className = 'switch';
+        
+        const input = document.createElement('input');
+        input.type = 'checkbox';
+        input.id = `toggle-marker-${category}`;
+        input.checked = true; // Default to showing all markers
+        input.dataset.category = category;
+        
+        // Add change event listener
+        input.addEventListener('change', function() {
+            const categoryToToggle = this.dataset.category;
+            const isVisible = this.checked;
+            
+            // Dispatch custom event
+            document.dispatchEvent(new CustomEvent('toggle-marker-category', {
+                detail: {
+                    category: categoryToToggle,
+                    visible: isVisible
+                }
+            }));
+        });
+        
+        const slider = document.createElement('span');
+        slider.className = 'slider';
+        
+        // Assemble the switch
+        label.appendChild(input);
+        label.appendChild(slider);
+        
+        // Create the icon (Font Awesome)
+        const icon = document.createElement('i');
+        let iconClass = '';
+        
+        // Assign icon based on category
+        switch(category) {
+            case 'portals':
+                iconClass = 'fa-door-open';
+                break;
+            case 'docks':
+                iconClass = 'fa-anchor';
+                break;
+            case 'quests':
+                iconClass = 'fa-scroll';
+                break;
+            case 'shops':
+                iconClass = 'fa-store';
+                break;
+            case 'trainers':
+                iconClass = 'fa-graduation-cap';
+                break;
+            case 'banks':
+                iconClass = 'fa-vault';
+                break;
+            default:
+                iconClass = 'fa-map-marker';
+        }
+        
+        icon.className = `fas ${iconClass} marker-icon`;
+        icon.style.marginRight = '5px';
+        
+        // Create the label text
+        const textLabel = document.createElement('label');
+        textLabel.setAttribute('for', `toggle-marker-${category}`);
+        textLabel.appendChild(icon);
+        textLabel.appendChild(document.createTextNode(' ' + displayName));
+        
+        // Assemble the control item
+        controlItem.appendChild(label);
+        controlItem.appendChild(textLabel);
+        
+        // Add to container
+        container.appendChild(controlItem);
+    });
+    
+    // Update the "all markers" toggle initial state
+    updateAllMarkersToggleState();
+}
+
+/**
+ * Update the state of the "all markers" toggle based on individual toggles
+ */
+function updateAllMarkersToggleState() {
+    const allToggles = document.querySelectorAll('#marker-toggles input[type="checkbox"]');
+    const masterToggle = document.getElementById('toggle-all-markers');
+    
+    if (!masterToggle) return;
     
     // Check if all individual toggles are checked
     let allChecked = true;

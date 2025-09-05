@@ -69,7 +69,7 @@ h1 {
 
 /* OpenLayers overrides */
 .ol-layer canvas {
-    background-color: transparent; /* Make sure the OpenLayers canvas doesn't block the background */
+    background: transparent !important;
 }
 
 .ol-attribution {
@@ -358,68 +358,51 @@ input:checked + .slider:before {
     margin-left: 50px;
 }
 
-/* Define custom styles for different label categories */
-const labelStyles = {
-    islands: {
-        // Gold gradient for islands
-        useGradient: true,
-        fontFamily: '"UnifrakturCook", serif',
-        strokeWidth: 2,
-        strokeColor: '#000000',
-        fontSize: 30
-    },
-    cities: {
-        // White with blue border for cities
-        useGradient: false,
-        fillColor: '#FFFFFF',
-        strokeColor: '#1E3F66',
-        strokeWidth: 2.5,
-        fontFamily: 'Verdana, Arial, "Times New Roman"',
-        fontSize: 24
-    },
-    dungeons: {
-        // Red with black border for dungeons
-        useGradient: false,
-        fillColor: '#CC3333',
-        strokeColor: '#000000',
-        strokeWidth: 2,
-        fontFamily: 'Verdana, Arial, "Times New Roman"',
-        fontSize: 20
-    },
-    caves: {
-        // Brown for caves
-        useGradient: false,
-        fillColor: '#A0522D',
-        strokeColor: '#000000',
-        strokeWidth: 2,
-        fontFamily: 'Verdana, Arial, "Times New Roman"',
-        fontSize: 18
-    },
-    ruins: {
-        // Gray for ruins
-        useGradient: false,
-        fillColor: '#AAAAAA',
-        strokeColor: '#333333',
-        strokeWidth: 2,
-        fontFamily: '"Times New Roman", serif',
-        fontSize: 22
-    },
-    waterBodies: {
-        // Light blue for water bodies
-        useGradient: false,
-        fillColor: '#FFFFFF',
-        strokeColor: '#133B5C',
-        strokeWidth: 1.5,
-        fontFamily: '"UnifrakturCook", serif',
-        fontSize: 26
-    }
-};
+/* Add to your map-styles.css file */
+/* Marker styles */
+.map-marker {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    z-index: 1000;
+    /* Add white background if needed */
+    background: white;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
 
-// Default style for any category not specifically defined
-const defaultLabelStyle = {
-    useGradient: false,
-    fillColor: '#FFFFFF',
-    strokeColor: '#000000',
-    strokeWidth: 2,
-    fontFamily: '"UnifrakturCook", serif'
-};
+/* Tooltip styles */
+.marker-tooltip {
+    position: absolute;
+    background-color: white;
+    border: 2px solid #333;
+    border-radius: 4px;
+    padding: 6px 10px;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    pointer-events: none;
+    z-index: 1000;
+    max-width: 200px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    color: #333;
+}
+
+.tooltip-icon {
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tooltip-text {
+    flex: 1;
+}

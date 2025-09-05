@@ -13,8 +13,10 @@
     <!-- CSS files -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@main/dist/en/v7.0.0/legacy/ol.css">
     <link rel="stylesheet" href="https://unpkg.com/ol-layerswitcher@4.1.1/src/ol-layerswitcher.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/map-styles.css">
+    
+    <!-- Font Awesome Kit -->
+    <script src="https://kit.fontawesome.com/945d3fb79b.js" crossorigin="anonymous"></script>
     
     <!-- JavaScript libraries -->
     <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@main/dist/en/v7.0.0/legacy/ol.js"></script>
@@ -33,7 +35,7 @@
         <div class="sidebar-content">
             <!-- Labels Section -->
             <div class="sidebar-section">
-                <h3>Labels</h3>
+                <h3><i class="fas fa-tags"></i> Labels</h3>
                 <div class="control-item">
                     <label class="switch">
                         <input type="checkbox" id="toggle-all-labels" checked>
@@ -48,7 +50,7 @@
             
             <!-- Monsters Section (placeholder for future implementation) -->
             <div class="sidebar-section">
-                <h3>Monsters</h3>
+                <h3><i class="fas fa-dragon"></i> Monsters</h3>
                 <div class="control-item">
                     <label class="switch">
                         <input type="checkbox" id="toggle-all-monsters" checked>
@@ -67,6 +69,21 @@
                     </div>
                 </div>
             </div>
+            
+            <!-- Markers Section -->
+            <div class="sidebar-section">
+                <h3><i class="fas fa-map-marker-alt"></i> Markers</h3>
+                <div class="control-item">
+                    <label class="switch">
+                        <input type="checkbox" id="toggle-all-markers" checked>
+                        <span class="slider"></span>
+                    </label>
+                    <label for="toggle-all-markers">Show All Markers</label>
+                </div>
+                <div id="marker-toggles">
+                    <!-- Marker toggles will be dynamically inserted here -->
+                </div>
+            </div>
         </div>
         
         <!-- Icons for collapsed sidebar -->
@@ -78,6 +95,10 @@
             <div class="sidebar-icon" id="icon-monsters">
                 <i class="fas fa-dragon"></i>
                 <span class="icon-tooltip">Monsters</span>
+            </div>
+            <div class="sidebar-icon" id="icon-markers">
+                <i class="fas fa-map-marker-alt"></i>
+                <span class="icon-tooltip">Markers</span>
             </div>
         </div>
     </div>
@@ -91,9 +112,23 @@
         <div id="mouse-position"></div>
     </div>
     
-    <!-- Load our custom JavaScript -->
+    <!-- Temporary Icon Test Section - Remove once icons are working -->
+    <div style="padding: 20px; background: white; position: absolute; top: 10px; right: 10px; z-index: 1000;">
+        <h3>Icon Test</h3>
+        <i class="fa-solid fa-door-open" style="color: #8A2BE2; font-size: 16px; margin: 5px;"></i> Portal<br>
+        <i class="fa-solid fa-anchor" style="color: #1E90FF; font-size: 16px; margin: 5px;"></i> Dock<br>
+        <i class="fa-solid fa-ship" style="color: #1E90FF; font-size: 16px; margin: 5px;"></i> Dock (alt)<br>
+        <i class="fa-solid fa-scroll" style="color: #FFD700; font-size: 16px; margin: 5px;"></i> Quest<br>
+        <i class="fa-solid fa-book" style="color: #FFD700; font-size: 16px; margin: 5px;"></i> Quest (alt)<br>
+        <i class="fa-solid fa-store" style="color: #32CD32; font-size: 16px; margin: 5px;"></i> Shop<br>
+        <i class="fa-solid fa-graduation-cap" style="color: #FF8C00; font-size: 16px; margin: 5px;"></i> Trainer<br>
+        <i class="fa-solid fa-landmark" style="color: #A0522D; font-size: 16px; margin: 5px;"></i> Bank<br>
+    </div>
+    
+    <!-- Load your custom JavaScript -->
     <script src="js/labels.js"></script>
-    <script src="js/sidebar.js"></script>
+    <script src="js/markers.js"></script>
     <script src="js/map.js"></script>
+    <script src="js/sidebar.js"></script>
 </body>
 </html>
