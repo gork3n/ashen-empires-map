@@ -315,3 +315,272 @@ function updateAllMarkersToggleState() {
     // Update master toggle without triggering its change event
     masterToggle.checked = allChecked;
 }
+
+// Add this function to create toggle elements
+function createMarkerToggles() {
+    const toggleContainer = document.getElementById('marker-toggles');
+    
+    // Clear existing toggles if any
+    toggleContainer.innerHTML = '';
+    
+    // Create a toggle for each marker category
+    for (const category in mapMarkers) {
+        // Skip empty categories
+        if (mapMarkers[category].length === 0) continue;
+        
+        const toggleDiv = document.createElement('div');
+        toggleDiv.className = 'marker-toggle';
+        
+        const input = document.createElement('input');
+        input.type = 'checkbox';
+        input.id = `toggle-${category}`;
+        input.checked = true; // Default to checked
+        input.dataset.category = category;
+        input.addEventListener('change', toggleMarkerCategory);
+        
+        const label = document.createElement('label');
+        label.htmlFor = `toggle-${category}`;
+        // Capitalize first letter of category
+        label.textContent = category.charAt(0).toUpperCase() + category.slice(1);
+        
+        // Add icon if available
+        const markerType = mapMarkers[category][0]?.type;
+        if (markerType && markerStyles[markerType]) {
+            const icon = document.createElement('i');
+            icon.className = markerStyles[markerType].icon;
+            icon.style.color = markerStyles[markerType].color;
+            icon.style.marginRight = '5px';
+            label.prepend(icon);
+        }
+        
+        toggleDiv.appendChild(input);
+        toggleDiv.appendChild(label);
+        toggleContainer.appendChild(toggleDiv);
+    }
+}
+
+// Add this function to handle toggle changes
+function toggleMarkerCategory(event) {
+    const category = event.target.dataset.category;
+    const visible = event.target.checked;
+    
+    // Find all markers for this category
+    const elements = document.querySelectorAll(`.marker-${category}`);
+    
+    // Update visibility
+    elements.forEach(element => {
+        element.style.display = visible ? 'block' : 'none';
+    });
+}
+
+// Initialize the sidebar functionality
+document.addEventListener('DOMContentLoaded', function() {
+    initSidebar();
+});
+
+// Main sidebar initialization function
+function initSidebar() {
+    // Toggle sidebar expand/collapse
+    const sidebarToggle = document.getElementById('sidebar-toggle');
+    const sidebar = document.getElementById('sidebar');
+    const map = document.getElementById('map');
+    
+    if (sidebarToggle) {
+        sidebarToggle.addEventListener('click', function() {
+            sidebar.classList.toggle('collapsed');
+            map.classList.toggle('sidebar-collapsed');
+        });
+    }
+    
+    // Handle "Show All" toggle switches
+    setupMasterToggles();
+    
+    // Create individual category toggles
+    createLabelToggles();
+    createMarkerToggles();
+}
+
+// Set up the master toggle switches ("Show All X")
+function setupMasterToggles() {
+    // Labels master toggle
+    const allLabelsToggle = document.getElementById('toggle-all-labels');
+    if (allLabelsToggle) {
+        allLabelsToggle.addEventListener('change', function() {
+            const isChecked = this.checked;
+            
+            // Update all individual label toggles
+            const labelToggles = document.querySelectorAll('#label-toggles input[type="checkbox"]');
+            labelToggles.forEach(toggle => {
+                toggle.checked = isChecked;
+                toggle.dispatchEvent(new Event('change'));
+            });
+            
+            // Also update visibility for all label layers
+            const labelCategories = ['cities', 'islands', 'dungeons', 'caves', 'interests', 'waterBodies', 'mountains'];
+            labelCategories.forEach(category => {
+                document.dispatchEvent(new CustomEvent('toggle-label-category', {
+                    detail: { category: category, visible: isChecked }
+                }));
+            });
+        });
+    }
+    
+    // Markers master toggle
+    const allMarkersToggle = document.getElementById('toggle-all-markers');
+    if (allMarkersToggle) {
+        allMarkersToggle.addEventListener('change', function() {
+            const isChecked = this.checked;
+            
+            // Update all individual marker toggles
+            const markerToggles = document.querySelectorAll('#marker-toggles input[type="checkbox"]');
+            markerToggles.forEach(toggle => {
+                toggle.checked = isChecked;
+                toggle.dispatchEvent(new Event('change'));
+            });
+            
+            // Also update visibility for all marker categories
+            Object.keys(mapMarkers).forEach(category => {
+                document.dispatchEvent(new CustomEvent('toggle-marker-category', {
+                    detail: { category: category, visible: isChecked }
+                }));
+            });
+        });
+    }
+}
+
+// Create individual label category toggle switches
+function createLabelToggles() {
+    const container = document.getElementById('label-toggles');
+    if (!container) return;
+    
+    // Clear existing content
+    container.innerHTML = '';
+    
+    // Create toggle for each label category
+    const labelCategories = [
+        { id: 'cities', name: 'Cities', icon: 'fa-city' },
+        { id: 'islands', name: 'Islands', icon: 'fa-island-tropical' },
+        { id: 'dungeons', name: 'Dungeons', icon: 'fa-dungeon' },
+        { id: 'caves', name: 'Caves', icon: 'fa-mountain-city' },
+        { id: 'interests', name: 'Places of Interest', icon: 'fa-location-dot' },
+        { id: 'waterBodies', name: 'Bodies of Water', icon: 'fa-water' },
+        { id: 'mountains', name: 'Mountains', icon: 'fa-mountain' }
+    ];
+    
+    labelCategories.forEach(category => {
+        const toggleDiv = document.createElement('div');
+        toggleDiv.className = 'control-item';
+        
+        const label = document.createElement('label');
+        label.className = 'switch';
+        
+        const input = document.createElement('input');
+        input.type = 'checkbox';
+        input.id = `toggle-label-${category.id}`;
+        input.checked = true; // Default to checked
+        input.dataset.category = category.id;
+        
+        // Add change event listener
+        input.addEventListener('change', function() {
+            const isChecked = this.checked;
+            const categoryId = this.dataset.category;
+            
+            // Dispatch event to toggle label visibility
+            document.dispatchEvent(new CustomEvent('toggle-label-category', {
+                detail: { category: categoryId, visible: isChecked }
+            }));
+        });
+        
+        const slider = document.createElement('span');
+        slider.className = 'slider';
+        
+        label.appendChild(input);
+        label.appendChild(slider);
+        
+        const textLabel = document.createElement('label');
+        textLabel.setAttribute('for', `toggle-label-${category.id}`);
+        
+        // Add icon if available
+        if (category.icon) {
+            const icon = document.createElement('i');
+            icon.className = `fas ${category.icon}`;
+            icon.style.marginRight = '5px';
+            textLabel.appendChild(icon);
+        }
+        
+        const text = document.createTextNode(category.name);
+        textLabel.appendChild(text);
+        
+        toggleDiv.appendChild(label);
+        toggleDiv.appendChild(textLabel);
+        container.appendChild(toggleDiv);
+    });
+}
+
+// Create individual marker category toggle switches
+function createMarkerToggles() {
+    const container = document.getElementById('marker-toggles');
+    if (!container) return;
+    
+    // Clear existing content
+    container.innerHTML = '';
+    
+    // Create toggle for each marker category
+    for (const category in mapMarkers) {
+        // Skip empty categories
+        if (mapMarkers[category].length === 0) continue;
+        
+        const toggleDiv = document.createElement('div');
+        toggleDiv.className = 'control-item';
+        
+        const label = document.createElement('label');
+        label.className = 'switch';
+        
+        const input = document.createElement('input');
+        input.type = 'checkbox';
+        input.id = `toggle-marker-${category}`;
+        input.checked = true; // Default to checked
+        input.dataset.category = category;
+        
+        // Add change event listener
+        input.addEventListener('change', function() {
+            const isChecked = this.checked;
+            const categoryId = this.dataset.category;
+            
+            // Dispatch event to toggle marker visibility
+            document.dispatchEvent(new CustomEvent('toggle-marker-category', {
+                detail: { category: categoryId, visible: isChecked }
+            }));
+        });
+        
+        const slider = document.createElement('span');
+        slider.className = 'slider';
+        
+        label.appendChild(input);
+        label.appendChild(slider);
+        
+        const textLabel = document.createElement('label');
+        textLabel.setAttribute('for', `toggle-marker-${category}`);
+        
+        // Get the marker type to determine icon
+        const markerType = mapMarkers[category][0]?.type;
+        
+        // Add icon if available
+        if (markerType && markerStyles[markerType]) {
+            const icon = document.createElement('i');
+            icon.className = markerStyles[markerType].icon;
+            icon.style.color = markerStyles[markerType].color;
+            icon.style.marginRight = '5px';
+            textLabel.appendChild(icon);
+        }
+        
+        // Capitalize first letter of category
+        const categoryName = category.charAt(0).toUpperCase() + category.slice(1);
+        const text = document.createTextNode(categoryName);
+        textLabel.appendChild(text);
+        
+        toggleDiv.appendChild(label);
+        toggleDiv.appendChild(textLabel);
+        container.appendChild(toggleDiv);
+    }
+}

@@ -277,3 +277,10 @@ To use the Leaflet version:
 4. Open `leaflet.html` in your browser
 
 The Leaflet implementation has some known issues with coordinate accuracy and label positioning at different zoom levels.
+
+## Implementing Map Marker Toggles
+
+We need to add two components:
+
+1. Toggle UI in the sidebar
+2. JavaScript to handle toggle functionality
