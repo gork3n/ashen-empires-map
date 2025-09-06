@@ -41,33 +41,33 @@ const mapMarkers = {
 // Make sure there are NO background properties here
 const markerStyles = {
     portal: {
-        icon: "fa-solid fa-door-open",
-        color: "#8A2BE2", // BlueViolet
-        size: 16
+        icon: "fa-solid fa-archway",
+        color: "#F5D76E", // BlueViolet
+        size: 12
     },
     dock: {
         icon: "fa-solid fa-anchor",
-        color: "#1E90FF", // DodgerBlue
-        size: 16
+        color: "#F5D76E", // DodgerBlue
+        size: 12
     },
     quest: {
         icon: "fa-solid fa-scroll",
-        color: "#FFD700", // Gold
-        size: 16
+        color: "#F5D76E", // Gold
+        size: 12
     },
     shop: {
         icon: "fa-solid fa-store",
-        color: "#32CD32", // LimeGreen
-        size: 16
+        color: "#F5D76E", // LimeGreen
+        size: 12
     },
     trainer: {
         icon: "fa-solid fa-graduation-cap",
-        color: "#FF8C00", // DarkOrange
-        size: 16
+        color: "#F5D76E", // DarkOrange
+        size: 12
     },
     bank: {
         icon: "fa-solid fa-landmark",
-        color: "#A0522D", // Sienna
-        size: 16
+        color: "#F5D76E", // Sienna
+        size: 12
     }
 };
