@@ -33,55 +33,39 @@
         </div>
         
         <div class="sidebar-content">
-            <!-- Labels Section -->
+            <!-- Labels section -->
             <div class="sidebar-section">
-                <h3><i class="fas fa-tags"></i> Labels</h3>
-                <div class="control-item">
-                    <label class="switch">
-                        <input type="checkbox" id="toggle-all-labels" checked>
-                        <span class="slider"></span>
-                    </label>
-                    <label for="toggle-all-labels">Show All Labels</label>
-                </div>
+                <h3>Labels</h3>
+                <button id="show-all-labels" class="toggle-btn active">
+                    <i class="fas fa-tags"></i>
+                    <span>Show All Labels</span>
+                </button>
                 <div id="label-toggles">
-                    <!-- Label toggles will be dynamically inserted here -->
+                    <!-- Individual label toggle buttons will be created here by JS -->
                 </div>
             </div>
             
-            <!-- Monsters Section (placeholder for future implementation) -->
+            <!-- Monsters section (for future use) -->
             <div class="sidebar-section">
-                <h3><i class="fas fa-dragon"></i> Monsters</h3>
-                <div class="control-item">
-                    <label class="switch">
-                        <input type="checkbox" id="toggle-all-monsters" checked>
-                        <span class="slider"></span>
-                    </label>
-                    <label for="toggle-all-monsters">Show All Monsters</label>
-                </div>
+                <h3>Monsters</h3>
+                <button id="show-all-monsters" class="toggle-btn active">
+                    <i class="fas fa-dragon"></i>
+                    <span>Show All Monsters</span>
+                </button>
                 <div id="monster-toggles">
-                    <!-- Will be populated when monsters are implemented -->
-                    <div class="control-item">
-                        <label class="switch">
-                            <input type="checkbox" disabled>
-                            <span class="slider"></span>
-                        </label>
-                        <label>Coming soon...</label>
-                    </div>
+                    <div class="coming-soon">Coming soon...</div>
                 </div>
             </div>
             
-            <!-- Markers Section -->
+            <!-- Markers section -->
             <div class="sidebar-section">
-                <h3><i class="fas fa-map-marker-alt"></i> Markers</h3>
-                <div class="control-item">
-                    <label class="switch">
-                        <input type="checkbox" id="toggle-all-markers" checked>
-                        <span class="slider"></span>
-                    </label>
-                    <label for="toggle-all-markers">Show All Markers</label>
-                </div>
+                <h3>Markers</h3>
+                <button id="show-all-markers" class="toggle-btn active">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Show All Markers</span>
+                </button>
                 <div id="marker-toggles">
-                    <!-- Marker toggles will be dynamically inserted here -->
+                    <!-- Individual marker toggle buttons will be created here by JS -->
                 </div>
             </div>
         </div>

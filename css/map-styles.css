@@ -80,7 +80,7 @@ h1 {
 }
 
 .ol-attribution a {
-    color: #9cf !important;
+    color: rgba(153, 204, 255, 0) !important;
 }
 
 /* Font definitions */
@@ -404,5 +404,46 @@ input:checked + .slider:before {
 }
 
 .tooltip-text {
+    flex: 1;
+}
+
+/* Toggle Buttons */
+.toggle-btn {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 8px 10px;
+    margin-bottom: 5px;
+    border: none;
+    border-left: 3px solid transparent;
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.2s ease;
+}
+
+.toggle-btn.active {
+    border-left-color: #F5D76E;
+    color: white;
+}
+
+.toggle-btn.inactive {
+    border-left-color: transparent;
+    color: #888;
+}
+
+.toggle-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.toggle-btn i {
+    margin-right: 8px;
+    width: 20px;
+    text-align: center;
+}
+
+.toggle-btn span {
     flex: 1;
 }
