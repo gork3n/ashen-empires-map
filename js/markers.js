@@ -5,7 +5,9 @@ const mapMarkers = {
         { x: 584, y: 1493, type: "portal", tooltip: "Portal to Parian" },
         { x: 2800, y: 849, type: "portal", tooltip: "Portal to Jeel" },
         { x: 3649, y: 950, type: "portal", tooltip: "Portal to Farstead" },
-        // Add more portals
+        
+        // Island Portals
+        
     ],
     
     docks: [
@@ -21,7 +23,10 @@ const mapMarkers = {
     ],
     
     shops: [
-        // { x: 305, y: 820, type: "shop", tooltip: "General Store" },
+        //Krythan Island Shops
+
+        //Varg Shops
+        { x: 780, y: 1193, type: "shop", tooltip: "Magic Shop" },
         
         // Add more shops
     ],
