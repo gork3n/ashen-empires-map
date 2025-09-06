@@ -11,12 +11,23 @@ const mapLabels = {
         { x: 342, y: 1442, name: "New Korelth", fontSize: 18 },
         { x: 670, y: 1680, name: "Vrethpool", fontSize: 18 },
 
+
+        //Scarab Island Cities
+
+
+        // Werewolf Island Cities
+
+
+        // Sand of Creation Cities
+
+
+        // Mainland Cities
+
+        
         //Tundra
         { x: 2793, y: 849, name: "Hammerfist", fontSize: 24 },
         { x: 3649, y: 935, name: "Duremar", fontSize: 24 },
         { x: 2822, y: 1254, name: "Farstead Keep", fontSize: 24 },
-
-        //Scarab Island Cities
         
     
     ],
@@ -39,8 +50,13 @@ const mapLabels = {
     ],
     
     dungeons: [
-        // { x: 123, y: 456, name: "Forgotten Crypt", fontSize: 20 },
-        // Add dungeon labels here
+        // Dungeons and Lairs Here
+
+        // Krythan Island Dungeons
+
+        // Valinar Island Dungeons
+
+
     ],
     
     caves: [
