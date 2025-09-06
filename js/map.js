@@ -160,8 +160,9 @@ function initializeMap() {
         view: new ol.View({
             center: [1105.000000, 3490.000000],
             resolution: 1.000000,
-            extent: [0, 0, 4096, 4096],
-            constrainOnlyCenter: false,
+            minResolution: 0.5,  // Add a minimum resolution
+            maxResolution: 16,   // Add a maximum resolution
+            constrainOnlyCenter: true,  // Constrain just the center, not the whole view
             showFullExtent: true
         })
     });
