@@ -128,17 +128,15 @@ function initializeMap() {
         return 'X: ' + x + ', Y: ' + y;
     }
     
-    // Create a custom mouse position control
-    var mousePositionControl = new ol.control.MousePosition({
-        className: 'custom-mouse-position',
-        target: document.getElementById('mouse-position'),
-        coordinateFormat: customCoordFormat,
-        undefinedHTML: 'X: 0, Y: 0'
-    });
+    // Remove any existing content in the mouse-position div
+    const mousePositionDiv = document.getElementById('mouse-position');
+    if (mousePositionDiv) {
+        mousePositionDiv.innerHTML = '';
+    }
     
     // Initialize the map
     map = new ol.Map({
-        controls: ol.control.defaults.defaults().extend([mousePositionControl]),
+        controls: ol.control.defaults.defaults(),
         target: 'map',
         layers: [
             new ol.layer.Tile({
@@ -205,6 +203,9 @@ function initializeMap() {
     
     // Set up tooltip interaction for markers
     setupMarkerTooltips(map);
+    
+    // Custom mouse position control
+    initializeCoordinateDisplay();
 }
 
 /**
@@ -645,3 +646,56 @@ function setupMarkerTooltips(map) {
         markerTooltipElement.style.display = 'none';
     });
 }
+
+// Replace the MousePosition control code with this custom implementation
+
+// Remove this section:
+// const mousePositionControl = new ol.control.MousePosition({
+//     coordinateFormat: function(coord) {
+//         // Your formatting code here
+//         return 'X: ' + Math.round(coord[0]) + ' | Y: ' + Math.round(4096 - coord[1]); // Adjust Y if needed
+//     },
+//     projection: 'EPSG:3857', // Or whatever projection you're using
+//     className: 'custom-mouse-position', // Custom class instead of using the element ID
+//     target: document.getElementById('mouse-position'), // Keep using the sidebar's mouse-position div
+//     undefinedHTML: 'X: --- | Y: ---'
+// });
+//
+// // Add the control to the map
+// map.addControl(mousePositionControl);
+
+// And replace with this custom coordinate tracking:
+function initializeCoordinateDisplay() {
+    const mousePositionDiv = document.getElementById('mouse-position');
+    
+    // Set default text
+    if (mousePositionDiv) {
+        mousePositionDiv.textContent = 'X: --- | Y: ---';
+        
+        // Track pointer movement on the map
+        map.on('pointermove', function(evt) {
+            if (evt.dragging) return; // Skip during drag operations
+            
+            // Get map coordinates
+            const coord = evt.coordinate;
+            
+            if (coord) {
+                // Format coordinates - round to whole numbers and invert Y
+                const x = Math.round(coord[0]);
+                const y = Math.round(4096 - coord[1]); // Invert Y coordinate
+                
+                // Update the display
+                mousePositionDiv.textContent = 'X: ' + x + ' | Y: ' + y;
+            }
+        });
+        
+        // Reset when pointer leaves the map
+        map.getViewport().addEventListener('mouseout', function() {
+            mousePositionDiv.textContent = 'X: --- | Y: ---';
+        });
+    }
+}
+
+// Make sure to call this function after map initialization
+// Add at the end of your initializeMap() function
+initializeCoordinateDisplay();

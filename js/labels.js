@@ -1,16 +1,29 @@
 // Define all map labels organized by category
 const mapLabels = {
     cities: [
+        // Valinor Island Cities
+        { x: 759, y: 80, name: "Valinor", fontSize: 24 },
+
+        // Krythan Island Cities
         { x: 310, y: 825, name: "Jeel", fontSize: 24 },
+        { x: 525, y: 1058, name: "Hothbra", fontSize: 24 },
+        { x: 788, y: 1171, name: "Varg", fontSize: 24 },
+        { x: 342, y: 1442, name: "New Korelth", fontSize: 18 },
+        { x: 670, y: 1680, name: "Vrethpool", fontSize: 18 },
+
+        //Tundra
         { x: 2793, y: 849, name: "Hammerfist", fontSize: 24 },
         { x: 3649, y: 935, name: "Duremar", fontSize: 24 },
         { x: 2822, y: 1254, name: "Farstead Keep", fontSize: 24 },
-        { x: 525, y: 1058, name: "Hothbra", fontSize: 24 },
-        { x: 788, y: 1171, name: "Varg", fontSize: 24 },
-        // Add more cities here
+
+        //Scarab Island Cities
+        
+    
     ],
     
     islands: [
+        //All Islands
+        { x: 150, y: 70, name: "GM Island", fontSize: 30 },
         { x: 775, y: 581, name: "Lotor's Summer Palace", fontSize: 20 },
         { x: 981, y: 72, name: "Valinor Island", fontSize: 30 },
         { x: 421, y: 69, name: "Party Island", fontSize: 30 },
@@ -21,7 +34,8 @@ const mapLabels = {
         { x: 1130, y: 3210, name: "Hell Island", fontSize: 30 },
         { x: 515, y: 640, name: "Mirthik's Island", fontSize: 14 },
         { x: 223, y: 425, name: "Deserted Island", fontSize: 14 },
-        // Add more islands here
+        { x: 404, y: 1996, name: "Scarab Island", fontSize: 25 },
+        
     ],
     
     dungeons: [
@@ -30,11 +44,15 @@ const mapLabels = {
     ],
     
     caves: [
+        // Caves and Mines Here
+
+        // Krythan Island Caves
         { x: 440, y: 761, name: "Mirthik's Cave", fontSize: 16 },
         // Add cave labels here
     ],
     
     interests: [
+        // Krythan Island Places of Interest
         { x: 327, y: 742, name: "Jeel Snake Pit", fontSize: 14 },
         { x: 436, y: 857, name: "Cypt of Kargoth", fontSize: 14 },
         // Add interest labels here
@@ -43,7 +61,7 @@ const mapLabels = {
     waterBodies: [
         { x: 1267, y: 1231, name: "Lake Silvest", fontSize: 13 },
         { x: 390, y: 1090, name: "Queen's Lake", fontSize: 14 },
-        { x: 845, y: 1170, name: "Crow Lake", fontSize: 12 },
+        { x: 845, y: 1185, name: "Crow Lake", fontSize: 12 },
         // Add water body labels here
     ],
     
