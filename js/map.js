@@ -249,7 +249,7 @@ function createLabelImageStyle(text, fontSize, styleOptions = {}) {
     var paddingY = 10;
     
     // Set canvas context
-    var ctx = canvas.getContext('2d');
+    var ctx = canvas.getContext('2d', { willReadFrequently: true });
     
     // Construct the complete font string with weight and style
     const fontString = `${options.fontStyle} ${options.fontWeight} ${fontSize}px ${options.fontFamily}`;
@@ -354,7 +354,7 @@ function createMarkerStyle(markerType) {
     const size = style.size * 3; // Larger canvas for better quality
     canvas.width = size;
     canvas.height = size;
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext('2d', { willReadFrequently: true });
     
     // Draw opaque white circular background (no transparency)
     ctx.beginPath();
