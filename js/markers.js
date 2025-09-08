@@ -6,15 +6,45 @@ const mapMarkers = {
         { x: 2800, y: 849, type: "portal", tooltip: "Portal to Jeel" },
         { x: 3649, y: 950, type: "portal", tooltip: "Portal to Farstead" },
         
-        // Island Portals
+        // Lotor's Summer Palace Portals
+
+        // Valinor Island Portals
+
+        // Minotaur Island Portals
+
+        // Party Island Portals
+
+        //
         
     ],
     
     docks: [
+        // Krythan Island Docks
         { x: 266, y: 823, type: "dock", tooltip: "Jeel Dock" },
+
+        // Lotor's Summer Palace Docks
         { x: 792, y: 580, type: "dock", tooltip: "Palace Dock" },
         { x: 858, y: 728, type: "dock", tooltip: "LSP Dock" },
-        // Add more docks
+
+        // Valinor Island Docks
+
+        // Minotaur Island Docks
+
+        // Party Island Docks
+
+        /* Mainland Docks */
+
+        // Western Docks
+
+        // Eastern Docks
+
+        // Tundra Docks
+
+        // New Royale Docks
+
+        // New Town Docks
+
+        // Roycroft Docks
     ],
     
     quests: [

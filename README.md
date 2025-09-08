@@ -11,19 +11,13 @@ An interactive map for Ashen Empires with pixel-perfect coordinates and multiple
 
 - **Full Map Exploration**: Navigate the entire Ashen Empires world with smooth panning and zooming
 - **Precise Coordinates**: Real-time coordinate display showing exact X,Y positions (0,0 at top-left)
-- **Map Markers**: Interactive markers for important locations including:
-  - Portals between major cities
-  - Docks for sea travel
-  - Quest locations
-  - Shops and vendors
-  - Skill trainers
-  - Banks and storage
-- **Custom Icons**: Stylized markers using Font Awesome with category-specific colors
-- **Multiple Map Implementations**: 
-  - Leaflet-based viewer with custom styling and controls (deprecated)
-  - OpenLayers-based viewer with additional features (recommended)
-- **Custom Background**: Themed background to match the game's aesthetic
-- **Mobile-Friendly**: Responsive design that works on desktop and mobile devices
+- **Interactive Sidebar**: Collapsible sidebar with controls to toggle visibility for different categories of labels and markers.
+- **Dynamic Markers & Labels**:
+  - Markers for portals, docks, shops, trainers, and banks.
+  - Labels for islands, cities, dungeons, and other points of interest.
+  - Custom, canvas-rendered icons and text labels with shadows and gradients.
+- **Informative Tooltips**: Hover over a marker to see its name and type.
+- **Responsive Design**: The interface adapts to different screen sizes, making it mobile-friendly.
 
 ## Moving Forward with OpenLayers
 
@@ -31,47 +25,29 @@ An interactive map for Ashen Empires with pixel-perfect coordinates and multiple
 
 ### Why OpenLayers?
 
-- More precise coordinate mapping with game coordinates
-- Better handling of zoom levels and tile rendering
-- Easier integration with external websites
-- More customization options for developers
-- Cleaner code structure and better maintainability
-
-## Current Development Status
-
-The OpenLayers implementation is currently in active development:
-
-- Basic map functionality is working with proper coordinate display
-- Custom styled labels with Google Fonts integration (currently testing with "Fredericka the Great")
-- Map bounds constraints to prevent scrolling outside the map area
-- Proper styling for controls and UI elements
-
-### In Progress:
-
-- Separating code into dedicated JS, CSS, and HTML files for better organization
-- Adding more location labels and points of interest
-- Implementing additional map features and interactive elements
+- **Coordinate Accuracy**: More precise mapping between game coordinates and the map display.
+- **Performance**: Better handling of zoom levels and tile rendering.
+- **Customization**: Greater flexibility for creating custom markers, labels, and controls.
+- **Maintainability**: A cleaner, more modular code structure.
 
 ## Technical Implementation
 
 This project offers two different map implementations:
 
-### Leaflet Implementation (`/leaflet/`) - Deprecated
+### OpenLayers Implementation (`openlayers.html`) - Recommended
+
+- Full-featured map built with the OpenLayers library.
+- Modular JavaScript files for map logic (`map.js`), sidebar controls (`sidebar.js`), marker data (`markers.js`), and label data (`labels.js`).
+- Custom canvas-rendered markers and labels for high-quality visuals and performance.
+- Interactive sidebar with dynamically generated toggle controls.
+- Precise coordinate mapping that maintains accuracy at all zoom levels.
+
+### Leaflet Implementation (`/leaflet-files/`) - Deprecated
 
 - Custom CRS (Coordinate Reference System) for game coordinates
 - Pixel-perfect mapping where each point corresponds to exact game coordinates
 - Bounded navigation that prevents scrolling outside map boundaries
 - Custom cursor for better visibility
-
-### OpenLayers Implementation (`openlayers.html`) - Recommended
-
-- Full-featured map with OpenLayers library
-- Customized coordinate display showing game coordinates (0,0 at top-left)
-- Consistent styling with the game's theme
-- Separate backgrounds for page and map container
-- Precise coordinate mapping that maintains accuracy at all zoom levels
-- Custom styled labels using Google Fonts
-- Map bounds constraints to prevent viewing outside the map area
 
 ## Map Coordinates
 
@@ -84,7 +60,7 @@ The map automatically scales these coordinates to the larger map size. This matc
 ## Project Structure
 
 - `openlayers.html` - Main OpenLayers implementation (recommended)
-- `/js/` - JavaScript files for the OpenLayers implementation
+- `/js/` - JavaScript files for the OpenLayers map
   - `map.js` - Core map functionality
   - `labels.js` - Label definitions and rendering
   - `sidebar.js` - Sidebar controls and interactions
@@ -101,163 +77,140 @@ The map automatically scales these coordinates to the larger map size. This matc
 
 ## Integration Guide
 
-### Using as a Standalone Page
+This guide explains how to use the map, either as a complete standalone page or by embedding it into an existing website.
 
-To use the OpenLayers map as a standalone page:
+### Method 1: Using as a Standalone Page
 
-1. Copy `openlayers.html` to your website
-2. Copy the `/tiles/` folder with all map tiles
-3. Copy any background images from `/images/` that you need
-4. The map is ready to use!
+This is the simplest method. It gives you the full experience with the interactive sidebar, header, and all features.
 
-### Embedding in an Existing Website
+1.  Clone or download the repository.
+2.  Ensure you have the following files and folders in your project:
+    *   `openlayers.html`
+    *   `/js/` (containing `map.js`, `markers.js`, `labels.js`, `sidebar.js`)
+    *   `/css/` (containing `map-styles.css`)
+    *   `/tiles/` (containing all map tile images)
+    *   `/images/` (containing background images)
+3.  Open `openlayers.html` in your browser. The map is ready to use.
 
-To integrate the map into your existing fansite:
+### Method 2: Embedding in an Existing Website
 
-1. **Include the OpenLayers library in your page**:
+To integrate the full-featured map (including the interactive sidebar) into an existing website, follow these steps.
+
+1.  **Copy Project Files**:
+    Copy the following folders from this project into your website's directory:
+    *   `/js/`
+    *   `/css/`
+    *   `/tiles/`
+    *   `/images/`
+
+2.  **Add HTML Structure**:
+    In your HTML file, add the structure for the sidebar, the main content container, the map itself, and the footer. You can copy this structure directly from `openlayers.html`.
+
    ```html
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@main/dist/en/v7.0.0/legacy/ol.css" type="text/css">
-   <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@main/dist/en/v7.0.0/legacy/ol.js"></script>
+    <!-- Add this inside your <body> tag -->
+
+    <!-- Sidebar -->
+    <div id="sidebar" class="sidebar">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header">
+            <h2 class="sidebar-title">Ashen Empires Map</h2>
+            <button id="sidebar-toggle" class="sidebar-toggle"><i class="fa-solid fa-chevron-left"></i></button>
+        </div>
+        <!-- Collapsed Icons -->
+        <div class="sidebar-icons">
+            <div id="icon-labels" class="sidebar-icon"><i class="fa-solid fa-tags"></i><span class="icon-tooltip">Labels</span></div>
+            <div id="icon-markers" class="sidebar-icon"><i class="fa-solid fa-location-dot"></i><span class="icon-tooltip">Markers</span></div>
+            <div id="icon-monsters" class="sidebar-icon"><i class="fa-solid fa-skull-crossbones"></i><span class="icon-tooltip">Monsters</span></div>
+        </div>
+        <!-- Sidebar Content -->
+        <div class="sidebar-content">
+            <div class="sidebar-section">
+                <h3><i class="fa-solid fa-tags"></i> Labels</h3>
+                <button id="show-all-labels" class="toggle-btn active"><i class="fa-solid fa-eye"></i><span>Show All</span></button>
+                <div id="label-toggles"></div>
+            </div>
+            <div class="sidebar-section">
+                <h3><i class="fa-solid fa-location-dot"></i> Markers</h3>
+                <button id="show-all-markers" class="toggle-btn active"><i class="fa-solid fa-map-marker-alt"></i><span>Show All</span></button>
+                <div id="marker-toggles"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content Container (adjust for your layout) -->
+    <div id="container">
+        <div id="header">
+            <h1>Ashen Empires Interactive Map</h1>
+        </div>
+        <div id="map"></div>
+    </div>
+
+    <!-- Footer for Coordinates -->
+    <div class="page-footer">
+        <div id="mouse-position">X: --- | Y: ---</div>
+    </div>
    ```
 
-2. **Add necessary CSS for the map and coordinate display**:
+3.  **Include CSS and Fonts**:
+    In the `<head>` of your HTML, link to the required stylesheets. Make sure the paths are correct for your project structure.
+
    ```html
-   <style>
-     #ae-map {
-       width: 800px;
-       height: 600px;
-       border-radius: 4px;
-       background: #002131 url('images/bg.png');
-       overflow: hidden;
-     }
-     
-     #ae-coordinates {
-       position: absolute;
-       bottom: 20px;
-       left: 20px;
-       z-index: 1000;
-       background: rgba(0, 0, 0, 0.6);
-       color: white;
-       padding: 5px 10px;
-       border-radius: 4px;
-       font-family: 'Courier New', Courier, monospace;
-     }
-     
-     /* Make sure the OpenLayers canvas doesn't block the background */
-     .ol-layer canvas {
-       background-color: transparent;
-     }
-     
-     /* Style the attribution control */
-     .ol-attribution {
-       background: rgba(0, 0, 0, 0.6) !important;
-       color: white !important;
-     }
-     
-     .ol-attribution a {
-       color: #9cf !important;
-     }
-   </style>
+    <!-- OpenLayers CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v9.1.0/ol.css" type="text/css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts for Labels -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800&display=swap" rel="stylesheet">
+    <!-- Project-specific Styles -->
+    <link rel="stylesheet" href="css/map-styles.css">
    ```
 
-3. **Add containers for the map and coordinate display**:
+4.  **Include JavaScript**:
+    At the end of your `<body>` tag, include the required JavaScript files in the correct order.
+
    ```html
-   <div id="ae-map"></div>
-   <div id="ae-coordinates"></div>
+    <!-- OpenLayers Library -->
+    <script src="https://cdn.jsdelivr.net/npm/ol@v9.1.0/dist/ol.js"></script>
+    <!-- Project-specific Scripts (order matters) -->
+    <script src="js/markers.js"></script>
+    <script src="js/labels.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/sidebar.js"></script>
    ```
 
-4. **Add the complete JavaScript for map initialization**:
-   ```html
-   <script>
-     // Custom coordinate format function to display whole numbers and adjust Y axis
-     function customCoordFormat(coord) {
-       if (!coord) return '';
-       
-       // Round to whole numbers
-       var x = Math.round(coord[0] / 4);
-       
-       // For Y, we need to invert the coordinate since OpenLayers has origin at bottom-left
-       // and we want origin at top-left
-       var y = Math.round((16384 - coord[1]) / 4);
-       
-       // Make sure y is within bounds
-       y = Math.max(0, Math.min(4096, y));
-       
-       // Return formatted string
-       return 'X: ' + x + ', Y: ' + y;
-     }
-     
-     // Create a custom mouse position control
-     var mousePositionControl = new ol.control.MousePosition({
-       className: 'custom-mouse-position',
-       target: document.getElementById('ae-coordinates'),
-       coordinateFormat: customCoordFormat,
-       undefinedHTML: 'X: 0, Y: 0'
-     });
-     
-     // Initialize the map
-     var map = new ol.Map({
-       controls: ol.control.defaults.defaults().extend([mousePositionControl]),
-       target: 'ae-map',
-       layers: [
-         new ol.layer.Tile({
-           source: new ol.source.TileImage({
-             attributions: 'Map tiles created by Sir Chris',
-             tileGrid: new ol.tilegrid.TileGrid({
-               extent: [0,0,16384,16384],
-               origin: [0,16384],
-               resolutions: [64, 32, 16, 8, 4],
-               tileSize: [256, 256]
-             }),
-             tileUrlFunction: function(tileCoord) {
-               return ('./tiles/{z}/{x}/{y}.png'
-                 .replace('{z}', String(tileCoord[0]))
-                 .replace('{x}', String(tileCoord[1]))
-                 .replace('{y}', String(tileCoord[2])));
-             },
-           })
-         }),
-       ],
-       view: new ol.View({
-         center: [8192, 8192],
-         resolution: 64,
-         extent: [0, 0, 16384, 16384],
-         constrainOnlyCenter: false,
-         showFullExtent: true
-       })
-     });
-   </script>
-   ```
+5.  **Adjust Paths**:
+    If you placed the `js`, `css`, `tiles`, or `images` folders in different locations, you will need to update the paths in:
+    *   Your HTML file for the `<link>` and `<script>` tags.
+    *   `css/map-styles.css` for any `url()` paths (e.g., background images).
+    *   `js/map.js` for the `tileUrlFunction` if you moved the `/tiles` folder.
 
-5. **Copy the `/tiles/` folder** to your website in the same relative path as referenced in the code
-   
-6. **Copy any background images** from `/images/` that you need
-
-7. **Adjust paths in the code** to match your website's structure:
-   - Update the background image path in CSS: `background: #002131 url('YOUR_PATH/bg.png')`
-   - Update the tile URL path: `'./YOUR_PATH/tiles/{z}/{x}/{y}.png'`
+Once these steps are complete, the map should render and function within your page just as it does on the standalone `openlayers.html` page.
 
 ## Issues
 
-Leaflet has some weird quirks that I'm having trouble finding workarounds for pixel coordinates not exact, Labels not showing up in different zoom levels where expected or showing up at wrong place entirely on initial and reloads. *I'm switching to OpenLayers.*
+The original Leaflet implementation had issues with coordinate accuracy and label positioning at different zoom levels, which prompted the switch to OpenLayers.
 
 ## Development
 
-The map tiles are generated from the game map using QGIS Shell. The website itself is built with HTML, CSS, and JavaScript, using OpenLayers for the interactive map functionality.
+The map tiles were generated from the in-game map using GDAL2Tiles. The website itself is built with HTML, CSS, and JavaScript, using OpenLayers for the interactive map functionality.
 
 ## Planned Features
 
 - ✅ Layer toggling for displaying different map information
 - ✅ Points of interest markers for key locations
-- Search functionality for locations
-- Mobile-optimized controls
-- Complete labeling system for all important locations
 - ✅ Separation of code into dedicated files for better maintainability
-- Interactive elements for more detailed location information
+- ✅ Interactive sidebar with dynamic controls
+- ✅ Custom markers and tooltips
+- ⬜ Search functionality for locations
+- ⬜ Mobile-optimized controls (sidebar behavior)
+- ⬜ Complete labeling system for all important locations
+- ⬜ Interactive elements for more detailed location information
 
 ## Credits
 
-Created by Sir Chris. Map tiles generated with QGIS Shell.
+Created by Sir Chris. Map tiles generated with GDAL2Tiles.
 
 ## Implementation Options
 
@@ -277,10 +230,3 @@ To use the Leaflet version:
 4. Open `leaflet.html` in your browser
 
 The Leaflet implementation has some known issues with coordinate accuracy and label positioning at different zoom levels.
-
-## Implementing Map Marker Toggles
-
-We need to add two components:
-
-1. Toggle UI in the sidebar
-2. JavaScript to handle toggle functionality

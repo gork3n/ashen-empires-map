@@ -8,8 +8,12 @@ const mapLabels = {
         { x: 310, y: 825, name: "Jeel", fontSize: 24 },
         { x: 525, y: 1058, name: "Hothbra", fontSize: 24 },
         { x: 788, y: 1171, name: "Varg", fontSize: 24 },
-        { x: 342, y: 1442, name: "New Korelth", fontSize: 18 },
-        { x: 670, y: 1680, name: "Vrethpool", fontSize: 18 },
+        { x: 342, y: 1440, name: "New Korelth", fontSize: 18 },
+        { x: 670, y: 1675, name: "Vrethpool", fontSize: 18 },
+        { x: 247, y: 1116, name: "Lotor's Castle", fontSize: 18 },
+        { x: 1066, y: 1151, name: "Cliffside", fontSize: 20 },
+        { x: 1086, y: 1355, name: "Silvest", fontSize: 22 },
+        { x: 1333, y: 1282, name: "Fort Eastwatch", fontSize: 20 },
 
 
         //Scarab Island Cities
@@ -35,12 +39,14 @@ const mapLabels = {
     islands: [
         //All Islands
         { x: 150, y: 70, name: "GM Island", fontSize: 30 },
-        { x: 775, y: 581, name: "Lotor's Summer Palace", fontSize: 20 },
+        { x: 775, y: 571, name: "Lotor's Summer Palace", fontSize: 30 },
+        { x: 663, y: 630, name: "Real Estate Island", fontSize: 20 },
+
         { x: 981, y: 72, name: "Valinor Island", fontSize: 30 },
         { x: 421, y: 69, name: "Party Island", fontSize: 30 },
         { x: 1545, y: 556, name: "Prison Island", fontSize: 20 },
         { x: 137, y: 230, name: "Minotaur Island", fontSize: 30 },
-        { x: 92, y: 942, name: "Guild Arena Island", fontSize: 18 },
+        { x: 92, y: 942, name: "Guild Arena Island", fontSize: 25 },
         { x: 820, y: 2122, name: "Scorched Island", fontSize: 24 },
         { x: 1130, y: 3210, name: "Hell Island", fontSize: 30 },
         { x: 515, y: 640, name: "Mirthik's Island", fontSize: 14 },
@@ -75,9 +81,10 @@ const mapLabels = {
     ],
     
     waterBodies: [
-        { x: 1267, y: 1231, name: "Lake Silvest", fontSize: 13 },
-        { x: 390, y: 1090, name: "Queen's Lake", fontSize: 14 },
-        { x: 845, y: 1163, name: "Crow Lake", fontSize: 12 },
+        { x: 1267, y: 1220, name: "Lake Silvest", fontSize: 15 },
+        { x: 390, y: 1090, name: "Queen's Lake", fontSize: 18 },
+        { x: 845, y: 1163, name: "Crow Lake", fontSize: 14 },
+        { x: 1040, y: 1226, name: "Chokecherry Pond", fontSize: 12 },
         // Add water body labels here
     ],
     
