@@ -10,9 +10,9 @@
     </Style>
     <Region>
       <LatLonAltBox>
-        <north>1024.00000000000000</north>
-        <south>0.00000000000000</south>
-        <east>1024.00000000000000</east>
+        <north>10240.00000000000000</north>
+        <south>8192.00000000000000</south>
+        <east>2048.00000000000000</east>
         <west>0.00000000000000</west>
       </LatLonAltBox>
       <Lod>
@@ -26,9 +26,9 @@
         <href>3.png</href>
       </Icon>
       <LatLonBox>
-        <north>1024.00000000000000</north>
-        <south>0.00000000000000</south>
-        <east>1024.00000000000000</east>
+        <north>10240.00000000000000</north>
+        <south>8192.00000000000000</south>
+        <east>2048.00000000000000</east>
         <west>0.00000000000000</west>
       </LatLonBox>
     </GroundOverlay>
@@ -37,9 +37,9 @@
       <name>3/0/7.png</name>
       <Region>
         <LatLonAltBox>
-          <north>512.00000000000000</north>
-          <south>0.00000000000000</south>
-          <east>512.00000000000000</east>
+          <north>9216.00000000000000</north>
+          <south>8192.00000000000000</south>
+          <east>1024.00000000000000</east>
           <west>0.00000000000000</west>
         </LatLonAltBox>
         <Lod>
@@ -58,10 +58,10 @@
       <name>3/1/7.png</name>
       <Region>
         <LatLonAltBox>
-          <north>512.00000000000000</north>
-          <south>0.00000000000000</south>
-          <east>1024.00000000000000</east>
-          <west>512.00000000000000</west>
+          <north>9216.00000000000000</north>
+          <south>8192.00000000000000</south>
+          <east>2048.00000000000000</east>
+          <west>1024.00000000000000</west>
         </LatLonAltBox>
         <Lod>
           <minLodPixels>128</minLodPixels>
@@ -79,9 +79,9 @@
       <name>3/0/6.png</name>
       <Region>
         <LatLonAltBox>
-          <north>1024.00000000000000</north>
-          <south>512.00000000000000</south>
-          <east>512.00000000000000</east>
+          <north>10240.00000000000000</north>
+          <south>9216.00000000000000</south>
+          <east>1024.00000000000000</east>
           <west>0.00000000000000</west>
         </LatLonAltBox>
         <Lod>
@@ -100,10 +100,10 @@
       <name>3/1/6.png</name>
       <Region>
         <LatLonAltBox>
-          <north>1024.00000000000000</north>
-          <south>512.00000000000000</south>
-          <east>1024.00000000000000</east>
-          <west>512.00000000000000</west>
+          <north>10240.00000000000000</north>
+          <south>9216.00000000000000</south>
+          <east>2048.00000000000000</east>
+          <west>1024.00000000000000</west>
         </LatLonAltBox>
         <Lod>
           <minLodPixels>128</minLodPixels>

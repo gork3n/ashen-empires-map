@@ -1,12 +1,12 @@
 /* filepath: d:\GitHub\ashen-empires-map\main.js */
 document.addEventListener('DOMContentLoaded', () => {
   // Map configuration
-  const mapExtent = [0.00000000, -4096.00000000, 4096.00000000, 0.00000000];
+  const mapExtent = [0.0, -16384.0, 16384.0, 0.0];
   const mapMinZoom = 0;
-  const mapMaxZoom = 4;
+  const mapMaxZoom = 5;
   const mapMaxResolution = 1.00000000;
   const mapMinResolution = Math.pow(2, mapMaxZoom) * mapMaxResolution;
-  const tileExtent = [0.00000000, -4096.00000000, 4096.00000000, 0.00000000];
+  const tileExtent = [0.0, -16384.0, 16384.0, 0.0];
   
   // Create custom CRS
   const crs = L.CRS.Simple;
@@ -53,8 +53,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const point = map.project(latlng, map.getMaxZoom());
     
     // Adjust coordinates to match our 0,0 at top-left system
-    const pixelX = Math.round(point.x);
-    const pixelY = Math.round(Math.abs(point.y)); // Use absolute value to make Y positive
+    const pixelX = Math.round(point.x / 4);
+    const pixelY = Math.round(Math.abs(point.y) / 4); // Use absolute value, make Y positive, and scale down
     
     return { x: pixelX, y: pixelY };
   }

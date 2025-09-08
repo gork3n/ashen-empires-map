@@ -75,11 +75,11 @@ This project offers two different map implementations:
 
 ## Map Coordinates
 
-Both implementations use a coordinate system where:
+The map itself is 16384x16384 pixels. However, the coordinate display and all location data are based on the original in-game coordinate system where:
 - (0,0) is at the top-left corner
 - (4096,4096) is at the bottom-right corner
 
-This matches the coordinate system used in-game.
+The map automatically scales these coordinates to the larger map size. This matches the coordinate system used in-game for player location.
 
 ## Project Structure
 
@@ -174,11 +174,11 @@ To integrate the map into your existing fansite:
        if (!coord) return '';
        
        // Round to whole numbers
-       var x = Math.round(coord[0]);
+       var x = Math.round(coord[0] / 4);
        
        // For Y, we need to invert the coordinate since OpenLayers has origin at bottom-left
        // and we want origin at top-left
-       var y = Math.round(4096 - coord[1]);
+       var y = Math.round((16384 - coord[1]) / 4);
        
        // Make sure y is within bounds
        y = Math.max(0, Math.min(4096, y));
@@ -204,9 +204,9 @@ To integrate the map into your existing fansite:
            source: new ol.source.TileImage({
              attributions: 'Map tiles created by Sir Chris',
              tileGrid: new ol.tilegrid.TileGrid({
-               extent: [0,0,4096,4096],
-               origin: [0,4096],
-               resolutions: [16,8,4,2,1],
+               extent: [0,0,16384,16384],
+               origin: [0,16384],
+               resolutions: [64, 32, 16, 8, 4],
                tileSize: [256, 256]
              }),
              tileUrlFunction: function(tileCoord) {
@@ -219,9 +219,9 @@ To integrate the map into your existing fansite:
          }),
        ],
        view: new ol.View({
-         center: [2048.000000, 2048.000000],
-         resolution: 16.000000,
-         extent: [0, 0, 4096, 4096],
+         center: [8192, 8192],
+         resolution: 64,
+         extent: [0, 0, 16384, 16384],
          constrainOnlyCenter: false,
          showFullExtent: true
        })

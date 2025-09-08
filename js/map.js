@@ -143,9 +143,9 @@ function initializeMap() {
                 source: new ol.source.TileImage({
                     attributions: '<span style="color: white;">Map tiles created by Sir Chris using GDAL2Tiles</span>',
                     tileGrid: new ol.tilegrid.TileGrid({
-                        extent: [0,0,4096,4096],
-                        origin: [0,4096],
-                        resolutions: [16,8,4,2,1],
+                        extent: [0,0,16384,16384],
+                        origin: [0,16384],
+                        resolutions: [64, 32, 16, 8, 4],
                         tileSize: [256, 256]
                     }),
                     tileUrlFunction: function(tileCoord) {
@@ -158,10 +158,10 @@ function initializeMap() {
             })
         ],
         view: new ol.View({
-            center: [1105.000000, 3490.000000],
-            resolution: 1.000000,
-            minResolution: 0.5,  // Add a minimum resolution
-            maxResolution: 16,   // Add a maximum resolution
+            center: [4420, 13960],
+            resolution: 4,
+            minResolution: 1,
+            maxResolution: 64,
             constrainOnlyCenter: true,  // Constrain just the center, not the whole view
             showFullExtent: true
         })
@@ -407,9 +407,11 @@ function createMarkerStyle(markerType) {
  * @param {string} tooltip - Tooltip text
  */
 function addMarkerFeature(source, x, y, type, tooltip) {
-    // Convert to OpenLayers coordinate system (y is inverted)
-    var olY = 4096 - y;
-    var coordinates = [x, olY];
+    // Scale coordinates for 16384x16384 map and convert to OpenLayers coordinate system (y is inverted)
+    const scaledX = x * 4;
+    const scaledY = y * 4;
+    var olY = 16384 - scaledY;
+    var coordinates = [scaledX, olY];
     
     // Create the HTML element for the marker
     const element = createMarkerIconElement(type);
@@ -553,12 +555,14 @@ function addMapLabels(map) {
  * @param {string} category - Label category name
  */
 function addLabelFeature(source, x, y, text, fontSize, category) {
-    // Convert to OpenLayers coordinate system (y is inverted)
-    var olY = 4096 - y;
+    // Scale coordinates for 16384x16384 map and convert to OpenLayers coordinate system (y is inverted)
+    const scaledX = x * 4;
+    const scaledY = y * 4;
+    var olY = 16384 - scaledY;
     
     // Create a point feature at this location
     var feature = new ol.Feature({
-        geometry: new ol.geom.Point([x, olY]),
+        geometry: new ol.geom.Point([scaledX, olY]),
         name: text,
         category: category
     });
@@ -681,9 +685,9 @@ function initializeCoordinateDisplay() {
             const coord = evt.coordinate;
             
             if (coord) {
-                // Format coordinates - round to whole numbers and invert Y
-                const x = Math.round(coord[0]);
-                const y = Math.round(4096 - coord[1]); // Invert Y coordinate
+                // Format coordinates - scale down, round to whole numbers and invert Y
+                const x = Math.round(coord[0] / 4);
+                const y = Math.round((16384 - coord[1]) / 4); // Invert Y coordinate and scale down
                 
                 // Update the display
                 mousePositionDiv.textContent = 'X: ' + x + ' | Y: ' + y;

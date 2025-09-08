@@ -21,7 +21,7 @@ let labelVisibility = {
 function addMapLabels(map) {
   // Function to add a label to the map with inline styles
   function addLabel(x, y, text, category) {
-    const point = L.point(x, y); // Use the coordinates directly
+    const point = L.point(x * 4, y * 4); // Scale coordinates for the 16384x16384 map
     const latlng = map.unproject(point, map.getMaxZoom());
     
     // Define styles based on category

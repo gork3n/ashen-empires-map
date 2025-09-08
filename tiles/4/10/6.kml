@@ -10,14 +10,14 @@
     </Style>
     <Region>
       <LatLonAltBox>
-        <north>2560.00000000000000</north>
-        <south>2304.00000000000000</south>
-        <east>2816.00000000000000</east>
-        <west>2560.00000000000000</west>
+        <north>13312.00000000000000</north>
+        <south>12800.00000000000000</south>
+        <east>5632.00000000000000</east>
+        <west>5120.00000000000000</west>
       </LatLonAltBox>
       <Lod>
         <minLodPixels>128</minLodPixels>
-        <maxLodPixels>-1</maxLodPixels>
+        <maxLodPixels>2048</maxLodPixels>
       </Lod>
     </Region>
     <GroundOverlay>
@@ -26,12 +26,96 @@
         <href>6.png</href>
       </Icon>
       <LatLonBox>
-        <north>2560.00000000000000</north>
-        <south>2304.00000000000000</south>
-        <east>2816.00000000000000</east>
-        <west>2560.00000000000000</west>
+        <north>13312.00000000000000</north>
+        <south>12800.00000000000000</south>
+        <east>5632.00000000000000</east>
+        <west>5120.00000000000000</west>
       </LatLonBox>
     </GroundOverlay>
-      </Document>
+
+    <NetworkLink>
+      <name>5/20/13.png</name>
+      <Region>
+        <LatLonAltBox>
+          <north>13056.00000000000000</north>
+          <south>12800.00000000000000</south>
+          <east>5376.00000000000000</east>
+          <west>5120.00000000000000</west>
+        </LatLonAltBox>
+        <Lod>
+          <minLodPixels>128</minLodPixels>
+          <maxLodPixels>-1</maxLodPixels>
+        </Lod>
+      </Region>
+      <Link>
+        <href>../../5/20/13.kml</href>
+        <viewRefreshMode>onRegion</viewRefreshMode>
+        <viewFormat/>
+      </Link>
+    </NetworkLink>
+        
+    <NetworkLink>
+      <name>5/21/13.png</name>
+      <Region>
+        <LatLonAltBox>
+          <north>13056.00000000000000</north>
+          <south>12800.00000000000000</south>
+          <east>5632.00000000000000</east>
+          <west>5376.00000000000000</west>
+        </LatLonAltBox>
+        <Lod>
+          <minLodPixels>128</minLodPixels>
+          <maxLodPixels>-1</maxLodPixels>
+        </Lod>
+      </Region>
+      <Link>
+        <href>../../5/21/13.kml</href>
+        <viewRefreshMode>onRegion</viewRefreshMode>
+        <viewFormat/>
+      </Link>
+    </NetworkLink>
+        
+    <NetworkLink>
+      <name>5/20/12.png</name>
+      <Region>
+        <LatLonAltBox>
+          <north>13312.00000000000000</north>
+          <south>13056.00000000000000</south>
+          <east>5376.00000000000000</east>
+          <west>5120.00000000000000</west>
+        </LatLonAltBox>
+        <Lod>
+          <minLodPixels>128</minLodPixels>
+          <maxLodPixels>-1</maxLodPixels>
+        </Lod>
+      </Region>
+      <Link>
+        <href>../../5/20/12.kml</href>
+        <viewRefreshMode>onRegion</viewRefreshMode>
+        <viewFormat/>
+      </Link>
+    </NetworkLink>
+        
+    <NetworkLink>
+      <name>5/21/12.png</name>
+      <Region>
+        <LatLonAltBox>
+          <north>13312.00000000000000</north>
+          <south>13056.00000000000000</south>
+          <east>5632.00000000000000</east>
+          <west>5376.00000000000000</west>
+        </LatLonAltBox>
+        <Lod>
+          <minLodPixels>128</minLodPixels>
+          <maxLodPixels>-1</maxLodPixels>
+        </Lod>
+      </Region>
+      <Link>
+        <href>../../5/21/12.kml</href>
+        <viewRefreshMode>onRegion</viewRefreshMode>
+        <viewFormat/>
+      </Link>
+    </NetworkLink>
+              </Document>
 </kml>
     
