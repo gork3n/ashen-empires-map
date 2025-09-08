@@ -2,7 +2,7 @@
 const mapMarkers = {
     portals: [
         // Krythan Island Portals
-        { x: 584, y: 1493, type: "portal", tooltip: "Portal to Parian" },
+        { x: 585, y: 1497, type: "portal", tooltip: "Portal to Parian" },
         { x: 2800, y: 849, type: "portal", tooltip: "Portal to Jeel" },
         { x: 3649, y: 950, type: "portal", tooltip: "Portal to Farstead" },
         
@@ -11,9 +11,9 @@ const mapMarkers = {
     ],
     
     docks: [
-        { x: 264, y: 823, type: "dock", tooltip: "Jeel Dock" },
-        { x: 794, y: 580, type: "dock", tooltip: "Palace Dock" },
-        { x: 854, y: 730, type: "dock", tooltip: "LSP Dock" },
+        { x: 266, y: 823, type: "dock", tooltip: "Jeel Dock" },
+        { x: 792, y: 580, type: "dock", tooltip: "Palace Dock" },
+        { x: 858, y: 728, type: "dock", tooltip: "LSP Dock" },
         // Add more docks
     ],
     

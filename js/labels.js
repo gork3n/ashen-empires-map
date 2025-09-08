@@ -77,7 +77,7 @@ const mapLabels = {
     waterBodies: [
         { x: 1267, y: 1231, name: "Lake Silvest", fontSize: 13 },
         { x: 390, y: 1090, name: "Queen's Lake", fontSize: 14 },
-        { x: 845, y: 1185, name: "Crow Lake", fontSize: 12 },
+        { x: 845, y: 1163, name: "Crow Lake", fontSize: 12 },
         // Add water body labels here
     ],
     
