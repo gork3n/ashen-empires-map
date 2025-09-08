@@ -49,32 +49,32 @@ const mapMarkers = {
 const markerStyles = {
     portal: {
         icon: "fa-solid fa-archway",
-        color: "#F5D76E", // BlueViolet
+        color: "#8A2BE2", // BlueViolet
         size: 12
     },
     dock: {
         icon: "fa-solid fa-anchor",
-        color: "#F5D76E", // DodgerBlue
+        color: "#1E90FF", // DodgerBlue
         size: 12
     },
     quest: {
         icon: "fa-solid fa-scroll",
-        color: "#F5D76E", // Gold
+        color: "#FFD700", // Gold
         size: 12
     },
     shop: {
         icon: "fa-solid fa-store",
-        color: "#F5D76E", // LimeGreen
+        color: "#32CD32", // LimeGreen
         size: 12
     },
     trainer: {
         icon: "fa-solid fa-graduation-cap",
-        color: "#F5D76E", // DarkOrange
+        color: "#FF8C00", // DarkOrange
         size: 12
     },
     bank: {
         icon: "fa-solid fa-landmark",
-        color: "#F5D76E", // Sienna
+        color: "#A0522D", // Sienna
         size: 12
     }
 };

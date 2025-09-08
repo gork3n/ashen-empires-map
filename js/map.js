@@ -4,6 +4,7 @@ let map;
 let markerLayers = {};
 let markerTooltipElement;
 let markerTooltipOverlay;
+const styleCache = {};
 
 // Define custom styles for different label categories
 const labelStyles = {
@@ -102,8 +103,12 @@ const defaultLabelStyle = {
 };
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize the map directly without font preloading
-    initializeMap();
+    // The `document.fonts.ready` promise resolves when all fonts are loaded.
+    // This is crucial to ensure Font Awesome is available before we try to
+    // render icons on the canvas.
+    document.fonts.ready.then(function() {
+        initializeMap();
+    });
 });
 
 /**
@@ -136,7 +141,7 @@ function initializeMap() {
     
     // Initialize the map
     map = new ol.Map({
-        controls: ol.control.defaults.defaults(),
+        controls: ol.control.defaults.defaults(), pixelRatio: 1, // Improves performance on low-end devices
         target: 'map',
         layers: [
             new ol.layer.Tile({
@@ -183,21 +188,6 @@ function initializeMap() {
     // Listen for toggle events for markers
     document.addEventListener('toggle-marker-category', function(e) {
         if (e.detail && e.detail.category && markerLayers[e.detail.category]) {
-            // Get all features in this layer
-            const features = markerLayers[e.detail.category].getSource().getFeatures();
-            
-            // Show/hide the overlays for this category
-            features.forEach(feature => {
-                const overlay = feature.get('overlay');
-                if (overlay) {
-                    const element = overlay.getElement();
-                    if (element) {
-                        element.style.display = e.detail.visible ? '' : 'none';
-                    }
-                }
-            });
-            
-            // Also toggle the vector layer (for consistency)
             markerLayers[e.detail.category].setVisible(e.detail.visible);
         }
     });
@@ -217,6 +207,12 @@ function initializeMap() {
  * @returns {ol.style.Style} The style object for the label
  */
 function createLabelImageStyle(text, fontSize, styleOptions = {}) {
+    // Create a cache key to avoid re-creating the same style
+    const cacheKey = `label-${text}-${fontSize}-${JSON.stringify(styleOptions)}`;
+    if (styleCache[cacheKey]) {
+        return styleCache[cacheKey];
+    }
+
     fontSize = fontSize || 24;
     
     // Default style options
@@ -298,7 +294,7 @@ function createLabelImageStyle(text, fontSize, styleOptions = {}) {
     var imageUrl = canvas.toDataURL();
     
     // Create style with icon
-    return new ol.style.Style({
+    const style = new ol.style.Style({
         image: new ol.style.Icon({
             src: imageUrl,
             anchor: [0.5, 1],
@@ -307,34 +303,10 @@ function createLabelImageStyle(text, fontSize, styleOptions = {}) {
             scale: 1
         })
     });
-}
 
-/**
- * Creates an HTML element with Font Awesome icon
- * @param {string} markerType - Type of marker
- * @returns {Element} HTML element with icon
- */
-function createMarkerIconElement(markerType) {
-    const style = markerStyles[markerType] || {
-        icon: "fa-solid fa-map-marker-alt",
-        color: "#FF0000",
-        size: 16
-    };
-    
-    // Create container element
-    const element = document.createElement('div');
-    element.className = 'map-marker';
-    
-    // Create icon element
-    const icon = document.createElement('i');
-    icon.className = style.icon;
-    icon.style.color = style.color;
-    icon.style.fontSize = style.size + 'px';
-    
-    // Add icon to container
-    element.appendChild(icon);
-    
-    return element;
+    // Cache and return the style
+    styleCache[cacheKey] = style;
+    return style;
 }
 
 /**
@@ -343,6 +315,12 @@ function createMarkerIconElement(markerType) {
  * @returns {ol.style.Style} OpenLayers style object
  */
 function createMarkerStyle(markerType) {
+    // Use cache to avoid re-creating the same style
+    const cacheKey = `marker-${markerType}`;
+    if (styleCache[cacheKey]) {
+        return styleCache[cacheKey];
+    }
+
     const style = markerStyles[markerType] || {
         icon: "fa-solid fa-map-marker-alt",
         color: "#FF0000",
@@ -356,21 +334,27 @@ function createMarkerStyle(markerType) {
     canvas.height = size;
     const ctx = canvas.getContext('2d', { willReadFrequently: true });
     
-    // Draw opaque white circular background (no transparency)
+    // Draw the marker background
+    // Add a shadow for depth
+    ctx.shadowColor = 'rgba(0, 0, 0, 0.6)';
+    ctx.shadowBlur = 3;
+    ctx.shadowOffsetY = 1;
+
+    // Draw dark circular background
+    // Y-center is moved up slightly to make room for the shadow
+    const yCenter = (size / 2) - 1;
     ctx.beginPath();
-    ctx.arc(size/2, size/2, size/2.5, 0, 2 * Math.PI);
-    ctx.fillStyle = 'rgb(255, 255, 255)'; // Solid white with no alpha
+    ctx.arc(size / 2, yCenter, size / 3, 0, 2 * Math.PI); // radius = 12px
+    ctx.fillStyle = 'rgba(0, 0, 0, 0.75)';
     ctx.fill();
-    
-    // Add border for better definition
-    ctx.strokeStyle = style.color;
-    ctx.lineWidth = 1.5;
-    ctx.stroke();
+
+    // Reset shadow for the icon itself
+    ctx.shadowColor = 'transparent';
     
     // Draw the icon in the center using Font Awesome Unicode
     let iconUnicode;
     switch(markerType) {
-        case 'portal': iconUnicode = '\uf52b'; break; // fa-door-open
+        case 'portal': iconUnicode = '\uf557'; break; // fa-archway
         case 'dock': iconUnicode = '\uf13d'; break;   // fa-anchor  
         case 'quest': iconUnicode = '\uf70e'; break;  // fa-scroll
         case 'shop': iconUnicode = '\uf54e'; break;   // fa-store
@@ -380,22 +364,27 @@ function createMarkerStyle(markerType) {
     }
     
     // Set up font for the icon
-    ctx.font = `900 ${size/2}px "Font Awesome 6 Free"`;
+    const iconSize = size / 2.2; // ~16px
+    ctx.font = `900 ${iconSize}px "Font Awesome 6 Free"`;
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
-    ctx.fillStyle = style.color; // Use marker's color for the icon
+    ctx.fillStyle = style.color;
     
-    // Draw the icon
-    ctx.fillText(iconUnicode, size/2, size/2);
+    // Draw the icon, also offset
+    ctx.fillText(iconUnicode, size / 2, yCenter);
     
     // Return the style with our custom icon
-    return new ol.style.Style({
+    const newStyle = new ol.style.Style({
         image: new ol.style.Icon({
             img: canvas,
             imgSize: [size, size],
-            scale: 0.5
+            scale: 0.65 // Final size will be ~23px
         })
     });
+
+    // Cache and return the style
+    styleCache[cacheKey] = newStyle;
+    return newStyle;
 }
 
 /**
@@ -413,36 +402,18 @@ function addMarkerFeature(source, x, y, type, tooltip) {
     var olY = 16384 - scaledY;
     var coordinates = [scaledX, olY];
     
-    // Create the HTML element for the marker
-    const element = createMarkerIconElement(type);
-    element.setAttribute('data-tooltip', tooltip);
-    element.setAttribute('data-type', type);
-    
-    // Create overlay for this marker
-    const markerOverlay = new ol.Overlay({
-        element: element,
-        position: coordinates,
-        positioning: 'center-center',
-        stopEvent: false
-    });
-    
-    // Add the overlay to the map
-    map.addOverlay(markerOverlay);
-    
-    // Create a feature for category toggling
+    // Create a feature for the marker
     var feature = new ol.Feature({
         geometry: new ol.geom.Point(coordinates),
         type: type,
-        tooltip: tooltip,
-        element: element,
-        overlay: markerOverlay
+        tooltip: tooltip
     });
+
+    // Set the style for the feature
+    feature.setStyle(createMarkerStyle(type));
     
     // Add the feature to the source
     source.addFeature(feature);
-    
-    // Store reference to the overlay in the feature
-    feature.set('overlay', markerOverlay);
 }
 
 /**
@@ -491,9 +462,6 @@ function addMapMarkers(map) {
             categories: categories
         }
     }));
-    
-    // Set up tooltip interaction
-    setupMarkerTooltips(map);
 }
 
 /**
