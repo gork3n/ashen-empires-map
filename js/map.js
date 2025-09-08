@@ -145,7 +145,7 @@ function initializeMap() {
                     tileGrid: new ol.tilegrid.TileGrid({
                         extent: [0,0,16384,16384],
                         origin: [0,16384],
-                        resolutions: [64, 32, 16, 8, 4],
+                        resolutions: [64, 32, 16, 8, 4, 2],
                         tileSize: [256, 256]
                     }),
                     tileUrlFunction: function(tileCoord) {
@@ -159,8 +159,8 @@ function initializeMap() {
         ],
         view: new ol.View({
             center: [4420, 13960],
-            resolution: 4,
-            minResolution: 1,
+            resolution: 2,
+            minResolution: 2,
             maxResolution: 64,
             constrainOnlyCenter: true,  // Constrain just the center, not the whole view
             showFullExtent: true
@@ -700,7 +700,3 @@ function initializeCoordinateDisplay() {
         });
     }
 }
-
-// Make sure to call this function after map initialization
-// Add at the end of your initializeMap() function
-initializeCoordinateDisplay();

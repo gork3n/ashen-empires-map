@@ -9,13 +9,13 @@ document.addEventListener('DOMContentLoaded', function() {
 function initSidebar() {
     const sidebar = document.getElementById('sidebar');
     const sidebarToggle = document.getElementById('sidebar-toggle');
-    const mapContainer = document.getElementById('map');
+    const container = document.getElementById('container');
     
     // Toggle sidebar collapsed state
-    if (sidebarToggle && sidebar && mapContainer) {
+    if (sidebarToggle && sidebar && container) {
         sidebarToggle.addEventListener('click', function() {
             sidebar.classList.toggle('collapsed');
-            mapContainer.classList.toggle('sidebar-collapsed');
+            container.classList.toggle('sidebar-collapsed');
             
             // Trigger map resize to handle new container dimensions
             setTimeout(() => {
@@ -33,7 +33,7 @@ function initSidebar() {
         iconLabels.addEventListener('click', function() {
             if (sidebar.classList.contains('collapsed')) {
                 sidebar.classList.remove('collapsed');
-                mapContainer.classList.remove('sidebar-collapsed');
+                container.classList.remove('sidebar-collapsed');
                 
                 setTimeout(() => {
                     window.dispatchEvent(new Event('resize'));
@@ -46,7 +46,7 @@ function initSidebar() {
         iconMonsters.addEventListener('click', function() {
             if (sidebar.classList.contains('collapsed')) {
                 sidebar.classList.remove('collapsed');
-                mapContainer.classList.remove('sidebar-collapsed');
+                container.classList.remove('sidebar-collapsed');
                 
                 setTimeout(() => {
                     window.dispatchEvent(new Event('resize'));
@@ -59,7 +59,7 @@ function initSidebar() {
         iconMarkers.addEventListener('click', function() {
             if (sidebar.classList.contains('collapsed')) {
                 sidebar.classList.remove('collapsed');
-                mapContainer.classList.remove('sidebar-collapsed');
+                container.classList.remove('sidebar-collapsed');
                 
                 setTimeout(() => {
                     window.dispatchEvent(new Event('resize'));
