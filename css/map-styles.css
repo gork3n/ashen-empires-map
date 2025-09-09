@@ -300,20 +300,22 @@ input:checked + .slider:before {
 /* Tooltip styles */
 .marker-tooltip {
     position: absolute;
-    background-color: white;
+    background-color: rgb(0, 0, 0);
     border: 2px solid #333;
-    border-radius: 4px;
+    border-radius: 6px;
     padding: 6px 10px;
     font-family: 'Alegreya Sans', sans-serif;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 500;
     pointer-events: none;
     z-index: 1000;
-    max-width: 200px;
     box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+    width: 200px;
+    text-align: center;
+    box-sizing: border-box;
     display: flex;
     align-items: center;
-    color: #333;
+    color: #ffffff;
 }
 
 .tooltip-icon {

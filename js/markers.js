@@ -7,12 +7,20 @@ const mapMarkers = {
         { x: 3649, y: 950, type: "portal", tooltip: "Portal to Farstead" },
         
         // Lotor's Summer Palace Portals
+        { x: 762, y: 593, type: "portal", tooltip: "Portal to Party Island" },
+        { x: 763, y: 646, type: "portal", tooltip: "Portal to PvP Island" },
+
+        // Real Estate Island Portals
+        { x: 663, y: 735, type: "portal", tooltip: "Portal to Lotor's Summer Palace" },
 
         // Valinor Island Portals
 
+
         // Minotaur Island Portals
 
+
         // Party Island Portals
+
 
         //
         
@@ -80,31 +88,31 @@ const markerStyles = {
     portal: {
         icon: "fa-solid fa-archway",
         color: "#8A2BE2", // BlueViolet
-        size: 12
+        size: 13
     },
     dock: {
         icon: "fa-solid fa-anchor",
         color: "#1E90FF", // DodgerBlue
-        size: 12
+        size: 13
     },
     quest: {
         icon: "fa-solid fa-scroll",
         color: "#FFD700", // Gold
-        size: 12
+        size: 13
     },
     shop: {
         icon: "fa-solid fa-store",
         color: "#32CD32", // LimeGreen
-        size: 12
+        size: 13
     },
     trainer: {
         icon: "fa-solid fa-graduation-cap",
         color: "#FF8C00", // DarkOrange
-        size: 12
+        size: 13
     },
     bank: {
         icon: "fa-solid fa-landmark",
         color: "#A0522D", // Sienna
-        size: 12
+        size: 13
     }
 };
