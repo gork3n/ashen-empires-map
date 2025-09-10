@@ -39,6 +39,16 @@ The map itself is rendered from a 16384x16384 pixel tileset. However, the coordi
 
 The map automatically scales these coordinates to the larger map size. This matches the coordinate system used in-game for player location.
 
+## A Heads-Up About Map Accuracy
+
+Just a quick note about the map coordinates. You might notice that some spots are off by a few pixels. This is because of how the map was built.
+
+I created this map by taking hundreds of screenshots and manually piecing them together in image editing software. The problem is that the in-game camera doesn't always move a perfect pixel at a time. Sometimes, it shifts by a "half-pixel," which is a tiny amount you can't even see.
+
+My editing software can only move images by whole pixels, so I couldn't perfectly match up those tiny "half-pixel" shifts. I did my best to line everything up, but this resulted in some very small alignment errors. The map is still very accurate and not everywhere is off.
+
+So, if a coordinate seems slightly off, this is why! It shouldn't affect usage, but I wanted to let you know.
+
 ## Project Structure
 
 - `openlayers.html` - Main HTML file for the map.
