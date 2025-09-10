@@ -96,10 +96,6 @@ const mapMarkers = {
 
     undergrounds: [
         { x: 764, y: 754, type: "underground", tooltip: "Sewer Entrance" },
-    ],
-
-    monsters: [
-        // Add monster markers here
     ]
 };
 
@@ -142,5 +138,3 @@ const markerStyles = {
         size: 18
     }
 };
-
-
