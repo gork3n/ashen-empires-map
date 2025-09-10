@@ -6,6 +6,23 @@ An interactive map for Ashen Empires with pixel-perfect coordinates and multiple
 
 - **[OpenLayers Map](https://gork3n.github.io/ashen-empires-map/openlayers.html)** (Recommended)
 
+## Table of Contents
+
+- [Ashen Empires Interactive Map](#ashen-empires-interactive-map)
+  - [Live Demo](#live-demo)
+  - [Table of Contents](#table-of-contents)
+  - [Features](#features)
+  - [Technical Implementation](#technical-implementation)
+  - [Map Coordinates](#map-coordinates)
+  - [A Heads-Up About Map Accuracy](#a-heads-up-about-map-accuracy)
+  - [Project Structure](#project-structure)
+  - [Integration Guide](#integration-guide)
+    - [Method 1: Using as a Standalone Page](#method-1-using-as-a-standalone-page)
+    - [Method 2: Embedding in an Existing Website](#method-2-embedding-in-an-existing-website)
+  - [Development](#development)
+  - [Planned Features](#planned-features)
+  - [Credits](#credits)
+
 ## Features
 
 - **Full Map Exploration**: Navigate the entire Ashen Empires world with smooth panning and zooming.
@@ -45,7 +62,7 @@ Just a quick note about the map coordinates. You might notice that some spots ar
 
 I created this map by taking hundreds of screenshots and manually piecing them together in image editing software. The problem is that the in-game camera doesn't always move a perfect pixel at a time. Sometimes, it shifts by a "half-pixel," which is a tiny amount you can't even see.
 
-My editing software can only move images by whole pixels, so I couldn't perfectly match up those tiny "half-pixel" shifts. I did my best to line everything up, but this resulted in some very small alignment errors. The map is still very accurate and not everywhere is off.
+My editing software can only move images by whole pixels, so I couldn't perfectly match up those tiny "half-pixel" shifts. I did my best to line everything up, but this resulted in some very small alignment errors. Think of it like a tiny texture seam you might see in a game world.
 
 So, if a coordinate seems slightly off, this is why! It shouldn't affect usage, but I wanted to let you know.
 
