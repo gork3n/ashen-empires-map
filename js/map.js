@@ -5,6 +5,7 @@ let markerLayers = {};
 let markerTooltipElement;
 let markerTooltipOverlay;
 const styleCache = {};
+let detailMap;
 const customMarkerImages = {};
 
 // Define custom styles for different label categories
@@ -198,6 +199,28 @@ function initializeMap() {
     
     // Custom mouse position control
     initializeCoordinateDisplay();
+
+    // --- Add click listener for features ---
+    map.on('click', function(evt) {
+        // Set cursor to default first
+        map.getTargetElement().style.cursor = '';
+        const feature = map.forEachFeatureAtPixel(evt.pixel, function(f) {
+            map.getTargetElement().style.cursor = 'pointer'; // Set pointer if a feature is found
+            return f;
+        });
+
+        if (feature && feature.get('name')) {
+            const locationName = feature.get('name');
+            // Check if this location has detail data defined in detail-maps.js
+            if (typeof detailMapData !== 'undefined' && detailMapData[locationName]) {
+                showDetailModal(locationName);
+            }
+        }
+    });
+
+    // Add event listener for the modal close button
+    const modalCloseBtn = document.getElementById('modal-close-btn');
+    modalCloseBtn.addEventListener('click', closeDetailModal);
 }
 
 /**
@@ -621,6 +644,119 @@ function setupMarkerTooltips(map) {
     map.on('movestart', function() {
         markerTooltipElement.style.display = 'none';
     });
+}
+
+/**
+ * Displays the detail modal for a specific location.
+ * @param {string} locationName - The name of the location, matching a key in detailMapData.
+ */
+function showDetailModal(locationName) {
+    const locationData = detailMapData[locationName];
+    if (!locationData) {
+        console.error("No detail data found for location:", locationName);
+        return;
+    }
+
+    const modal = document.getElementById('detail-modal');
+    const modalTitle = document.getElementById('modal-title');
+    const modalInfo = document.getElementById('modal-info');
+    const modalMapContainer = document.getElementById('modal-map');
+
+    if (!modal || !modalTitle || !modalInfo || !modalMapContainer) return;
+
+    // --- 1. Populate Modal Content ---
+    modalTitle.textContent = locationData.title;
+    modalInfo.innerHTML = locationData.info;
+
+    // --- 2. Show the Modal ---
+    modal.style.display = 'flex';
+
+    // --- 3. Initialize the Detail Map ---
+    // Use a timeout to ensure the modal is rendered and has dimensions before creating the map.
+    setTimeout(() => {
+        if (detailMap) {
+            detailMap.setTarget(null); // Clean up previous instance
+        }
+        
+        const imageConfig = locationData.image;
+        const imageUrl = imageConfig.url;
+        const imageWidth = imageConfig.width;
+        const imageHeight = imageConfig.height;
+        const extent = [0, 0, imageWidth, imageHeight];
+
+        const projection = new ol.proj.Projection({
+            code: 'static-image',
+            units: 'pixels',
+            extent: extent,
+        });
+
+        const detailMarkerSource = new ol.source.Vector();
+
+        detailMap = new ol.Map({
+            target: 'modal-map',
+            layers: [
+                new ol.layer.Image({
+                    source: new ol.source.ImageStatic({
+                        url: imageUrl,
+                        projection: projection,
+                        imageExtent: extent,
+                    }),
+                }),
+                new ol.layer.Vector({ source: detailMarkerSource }),
+            ],
+            view: new ol.View({
+                projection: projection,
+                center: ol.extent.getCenter(extent),
+                zoom: 2,
+                maxZoom: 5,
+                minZoom: 1,
+            }),
+        });
+
+        // Add the hard-coded markers for this location to the detail map
+        addDetailMapMarkers(detailMarkerSource, locationData.markers, imageHeight);
+        
+    }, 10); // A small delay ensures the modal container is ready
+}
+
+/**
+ * Adds a set of markers to a vector source for a detail map.
+ * @param {ol.source.Vector} source - The vector source to add markers to.
+ * @param {Array} markers - An array of marker objects to add.
+ * @param {number} imageHeight - The height of the detail map image for coordinate conversion.
+ */
+function addDetailMapMarkers(source, markers, imageHeight) {
+    if (!markers || !markers.length) return;
+
+    markers.forEach(marker => {
+        // Convert top-left coordinates (from detail-maps.js) to the bottom-left
+        // system that OpenLayers uses for static images.
+        const olY = imageHeight - marker.y;
+        const coordinates = [marker.x, olY];
+
+        const feature = new ol.Feature({
+            geometry: new ol.geom.Point(coordinates),
+            type: marker.type,
+            tooltip: marker.tooltip,
+        });
+
+        // Reuse the same styling function as the main map for consistency
+        feature.setStyle(createMarkerStyle(marker.type));
+        source.addFeature(feature);
+    });
+}
+
+/**
+ * Closes the detail modal and cleans up the map instance.
+ */
+function closeDetailModal() {
+    const modal = document.getElementById('detail-modal');
+    if (modal) modal.style.display = 'none';
+
+    if (detailMap) {
+        detailMap.setTarget(null);
+        detailMap = null;
+    }
 }
 
 // Replace the MousePosition control code with this custom implementation

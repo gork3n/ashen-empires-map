@@ -116,7 +116,20 @@
     <!-- Load your custom JavaScript -->
     <script src="js/labels.js"></script>
     <script src="js/markers.js"></script>
+    <script src="js/detail-maps.js"></script>
     <script src="js/map.js"></script>
     <script src="js/sidebar.js"></script>
+
+    <!-- Detail Modal for specific locations -->
+    <div id="detail-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <button id="modal-close-btn" class="modal-close">&times;</button>
+            <h2 id="modal-title"></h2>
+            <div class="modal-body">
+                <div id="modal-map" class="modal-map-container"></div>
+                <div id="modal-info" class="modal-info-container"></div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

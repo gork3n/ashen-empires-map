@@ -56,33 +56,46 @@ const mapMarkers = {
     ],
     
     quests: [
-        // { x: 330, y: 815, type: "quest", tooltip: "The Mayor's Request" },
+        // Krythan Island Quests
+
+        // Lotor's Summer Palace Quests
+        { x: 857, y: 718, type: "quest", tooltip: "Carpentry Taskmaster" },
+        { x: 863, y: 706, type: "quest", tooltip: "Farming Taskmaster" },
         // Add more quests
     ],
     
     shops: [
-        //Krythan Island Shops
-
+        /*Krythan Island Shops*/
         //Varg Shops
         { x: 780, y: 1193, type: "shop", tooltip: "Magic Shop" },
         
+        /*Lotor's Summer Palace Shops*/
+        { x: 812, y: 676, type: "shop", tooltip: "O'riles Weapon Shop" },
+        { x: 811, y: 683, type: "shop", tooltip: "Colleen Franks' Armor Shop" },
+        { x: 863, y: 715, type: "shop", tooltip: "Garius Farming Shop" },
+        { x: 854, y: 712, type: "shop", tooltip: "Tom Uslak Carpentry Shop" },
+
         // Add more shops
     ],
     
     trainers: [
-        // { x: 300, y: 818, type: "trainer", tooltip: "Blacksmithing Trainer" },
+        // Krythan Island Trainers
+        
+        // Lotor's Summer Palace Trainers
+        
+        { x: 839, y: 708, type: "trainer", tooltip: "Henchman Trainer" },
         
         // Add more trainers
     ],
     
     banks: [
-        { x: 841, y: 681, type: "bank", tooltip: "Lotor's Summer Palace Bank" },
+        { x: 841, y: 681, type: "bank", tooltip: "Bank" },
         
         // Add more banks
     ],
 
     undergrounds: [
-        { x: 764, y: 755, type: "underground", tooltip: "Sewer Entrance" },
+        { x: 764, y: 760, type: "underground", tooltip: "Sewer Entrance" },
     ],
 
     monsters: [
@@ -96,36 +109,38 @@ const markerStyles = {
     portal: {
         icon: "sprint",
         color: "#FFD700", // Gold
-        size: 18
+        size: 14
     },
     dock: {
         icon: "anchor",
         color: "#1E90FF", // DodgerBlue
-        size: 18
+        size: 14
     },
     quest: {
-        icon: "history_edu",
+        icon: "stars",
         color: "#FFD700", // Gold
-        size: 18
+        size: 14
     },
     shop: {
         icon: "store",
         color: "#32CD32", // LimeGreen
-        size: 18
+        size: 14
     },
     trainer: {
-        icon: "school",
+        icon: "book_2",
         color: "#FF8C00", // DarkOrange
-        size: 18
+        size: 14
     },
     bank: {
         icon: "account_balance",
         color: "#DBC12F", // Gold
-        size: 18
+        size: 14
     },
     underground: {
         icon: "tools_ladder",
         color: "#d36517ff", // SaddleBrown
-        size: 18
+        size: 14
     }
 };
+
+
