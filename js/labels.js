@@ -60,7 +60,7 @@ const mapLabels = {
 
         // Krythan Island Dungeons
 
-        // Valinar Island Dungeons
+        // Valinor Island Dungeons
 
 
     ],
@@ -76,7 +76,7 @@ const mapLabels = {
     interests: [
         // Krythan Island Places of Interest
         { x: 327, y: 742, name: "Jeel Snake Pit", fontSize: 14 },
-        { x: 436, y: 855, name: "Cypt of Kargoth", fontSize: 14 },
+        { x: 436, y: 855, name: "Crypt of Kargoth", fontSize: 14 },
         // Add interest labels here
     ],
     

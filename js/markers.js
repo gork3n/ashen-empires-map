@@ -2,9 +2,10 @@
 const mapMarkers = {
     portals: [
         // Krythan Island Portals
-        { x: 585, y: 1497, type: "portal", tooltip: "Portal to Parian" },
+        { x: 585, y: 1497, type: "portal", tooltip: "Portal to East Mainlands West of Parian" },
         { x: 2800, y: 849, type: "portal", tooltip: "Portal to Jeel" },
         { x: 3649, y: 950, type: "portal", tooltip: "Portal to Farstead" },
+        { x: 185, y: 1466, type: "portal", tooltip: "Portal to Northeastern Mainlands North of Josody" },
         
         // Lotor's Summer Palace Portals
         { x: 762, y: 593, type: "portal", tooltip: "Portal to Party Island" },
@@ -72,7 +73,7 @@ const mapMarkers = {
         /*Lotor's Summer Palace Shops*/
         { x: 812, y: 676, type: "shop", tooltip: "O'riles Weapon Shop" },
         { x: 811, y: 683, type: "shop", tooltip: "Colleen Franks' Armor Shop" },
-        { x: 863, y: 715, type: "shop", tooltip: "Garius Farming Shop" },
+        { x: 863, y: 715, type: "shop", tooltip: "Garius' Farming Shop" },
         { x: 854, y: 712, type: "shop", tooltip: "Tom Uslak Carpentry Shop" },
 
         // Add more shops
