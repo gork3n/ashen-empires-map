@@ -5,6 +5,7 @@ let markerLayers = {};
 let markerTooltipElement;
 let markerTooltipOverlay;
 const styleCache = {};
+const customMarkerImages = {};
 
 // Define custom styles for different label categories
 const labelStyles = {
@@ -106,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // The `document.fonts.ready` promise resolves when all fonts are loaded.
     // This is crucial to ensure Font Awesome is available before we try to
     // render icons on the canvas.
-    document.fonts.ready.then(function() {
+    document.fonts.ready.then(function () {
         initializeMap();
     });
 });
@@ -344,34 +345,34 @@ function createMarkerStyle(markerType) {
     // Y-center is moved up slightly to make room for the shadow
     const yCenter = (size / 2) - 1;
     ctx.beginPath();
-    ctx.arc(size / 2, yCenter, size / 3, 0, 2 * Math.PI); // radius = 12px
-    ctx.fillStyle = 'rgba(0, 0, 0, 0.75)';
+    ctx.arc(size / 2, yCenter, size / 3, 0, 2 * Math.PI);
+
+    // Set the background color to match the sidebar toggle buttons
+    ctx.fillStyle = 'rgba(0, 0, 0, 0.67)';
     ctx.fill();
+
+    // Add a white border around the circle
+    ctx.strokeStyle = '#50505098';
+    ctx.lineWidth = 1.5;
+    ctx.stroke();
 
     // Reset shadow for the icon itself
     ctx.shadowColor = 'transparent';
     
-    // Draw the icon in the center using Font Awesome Unicode
-    let iconUnicode;
-    switch(markerType) {
-        case 'portal': iconUnicode = '\uf557'; break; // fa-archway
-        case 'dock': iconUnicode = '\uf13d'; break;   // fa-anchor  
-        case 'quest': iconUnicode = '\uf70e'; break;  // fa-scroll
-        case 'shop': iconUnicode = '\uf54e'; break;   // fa-store
-        case 'trainer': iconUnicode = '\uf19d'; break; // fa-graduation-cap
-        case 'bank': iconUnicode = '\uf66f'; break;   // fa-landmark
-        default: iconUnicode = '\uf3c5'; // fa-map-marker-alt
-    }
+    const iconSize = size / 2.2; // ~16px
+
+    // Draw the icon in the center using Google Material Symbols
+    const iconName = style.icon || 'place';
     
     // Set up font for the icon
-    const iconSize = size / 2.2; // ~16px
-    ctx.font = `900 ${iconSize}px "Font Awesome 6 Free"`;
+    // Note: Google Material Symbols are not bolded via font-weight, but through font settings.
+    ctx.font = `${iconSize}px "Material Symbols Outlined"`;
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
     ctx.fillStyle = style.color;
     
     // Draw the icon, also offset
-    ctx.fillText(iconUnicode, size / 2, yCenter);
+    ctx.fillText(iconName, size / 2, yCenter);
     
     // Return the style with our custom icon
     const newStyle = new ol.style.Style({
@@ -590,10 +591,12 @@ function setupMarkerTooltips(map) {
                 color: "#FF0000"
             };
             
+            const animationClass = style.animation === 'beat' ? 'g-icon-beat' : '';
+
             // Update tooltip content
             markerTooltipElement.innerHTML = `
-                <div class="tooltip-icon" style="color: ${style.color}">
-                    <i class="${style.icon}"></i>
+                <div class="tooltip-icon" style="color: ${style.color};">
+                    <span class="material-symbols-outlined ${animationClass}">${style.icon}</span>
                 </div>
                 <div class="tooltip-text">${feature.get('tooltip')}</div>
             `;

@@ -76,9 +76,17 @@ const mapMarkers = {
     ],
     
     banks: [
-        // { x: 318, y: 826, type: "bank", tooltip: "Jeel Bank" },
+        { x: 841, y: 681, type: "bank", tooltip: "Lotor's Summer Palace Bank" },
         
         // Add more banks
+    ],
+
+    undergrounds: [
+        { x: 764, y: 755, type: "underground", tooltip: "Sewer Entrance" },
+    ],
+
+    monsters: [
+        // Add monster markers here
     ]
 };
 
@@ -86,33 +94,38 @@ const mapMarkers = {
 // Make sure there are NO background properties here
 const markerStyles = {
     portal: {
-        icon: "fa-solid fa-archway",
-        color: "#8A2BE2", // BlueViolet
-        size: 13
+        icon: "sprint",
+        color: "#FFD700", // Gold
+        size: 18
     },
     dock: {
-        icon: "fa-solid fa-anchor",
+        icon: "anchor",
         color: "#1E90FF", // DodgerBlue
-        size: 13
+        size: 18
     },
     quest: {
-        icon: "fa-solid fa-scroll",
+        icon: "history_edu",
         color: "#FFD700", // Gold
-        size: 13
+        size: 18
     },
     shop: {
-        icon: "fa-solid fa-store",
+        icon: "store",
         color: "#32CD32", // LimeGreen
-        size: 13
+        size: 18
     },
     trainer: {
-        icon: "fa-solid fa-graduation-cap",
+        icon: "school",
         color: "#FF8C00", // DarkOrange
-        size: 13
+        size: 18
     },
     bank: {
-        icon: "fa-solid fa-landmark",
-        color: "#A0522D", // Sienna
-        size: 13
+        icon: "account_balance",
+        color: "#DBC12F", // Gold
+        size: 18
+    },
+    underground: {
+        icon: "tools_ladder",
+        color: "#d36517ff", // SaddleBrown
+        size: 18
     }
 };

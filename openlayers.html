@@ -14,10 +14,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@main/dist/en/v7.0.0/legacy/ol.css">
     <link rel="stylesheet" href="https://unpkg.com/ol-layerswitcher@4.1.1/src/ol-layerswitcher.css">
     <link rel="stylesheet" href="css/map-styles.css">
-    
-    <!-- Font Awesome CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+
+    <!-- Google Material Symbols -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
     <!-- JavaScript libraries -->
     <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@main/dist/en/v7.0.0/legacy/ol.js"></script>
     <script src="https://unpkg.com/ol-layerswitcher@4.1.1"></script>
@@ -28,16 +28,16 @@
         <div class="sidebar-header">
             <h2 class="sidebar-title">Map Controls</h2>
             <button class="sidebar-toggle" id="sidebar-toggle">
-                <i class="fas fa-chevron-left"></i>
+                <span class="material-symbols-outlined">chevron_left</span>
             </button>
         </div>
-        
+
         <div class="sidebar-content">
             <!-- Labels section -->
             <div class="sidebar-section">
                 <h3>Labels</h3>
                 <button id="show-all-labels" class="toggle-btn active">
-                    <i class="fas fa-tags"></i>
+                    <span class="material-symbols-outlined">label</span>
                     <span>Show All Labels</span>
                 </button>
                 <div id="label-toggles">
@@ -49,7 +49,7 @@
             <div class="sidebar-section">
                 <h3>Monsters</h3>
                 <button id="show-all-monsters" class="toggle-btn active">
-                    <i class="fas fa-dragon"></i>
+                    <span class="material-symbols-outlined">pets</span>
                     <span>Show All Monsters</span>
                 </button>
                 <div id="monster-toggles">
@@ -61,7 +61,7 @@
             <div class="sidebar-section">
                 <h3>Markers</h3>
                 <button id="show-all-markers" class="toggle-btn active">
-                    <i class="fas fa-map-marker-alt"></i>
+                    <span class="material-symbols-outlined">place</span>
                     <span>Show All Markers</span>
                 </button>
                 <div id="marker-toggles">
@@ -69,19 +69,19 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- Icons for collapsed sidebar -->
         <div class="sidebar-icons">
             <div class="sidebar-icon" id="icon-labels">
-                <i class="fas fa-tags"></i>
+                <span class="material-symbols-outlined">label</span>
                 <span class="icon-tooltip">Labels</span>
             </div>
             <div class="sidebar-icon" id="icon-monsters">
-                <i class="fas fa-dragon"></i>
+                <span class="material-symbols-outlined">pets</span>
                 <span class="icon-tooltip">Monsters</span>
             </div>
             <div class="sidebar-icon" id="icon-markers">
-                <i class="fas fa-map-marker-alt"></i>
+                <span class="material-symbols-outlined">place</span>
                 <span class="icon-tooltip">Markers</span>
             </div>
         </div>

@@ -151,13 +151,13 @@ function createLabelToggleButtons() {
     
     // Create toggle button for each label category
     const labelCategories = [
-        { id: 'cities', name: 'Cities', icon: 'fa-solid fa-city' },
-        { id: 'islands', name: 'Islands', icon: 'fa-solid fa-leaf' },
-        { id: 'dungeons', name: 'Dungeons', icon: 'fa-solid fa-dungeon' },
-        { id: 'caves', name: 'Caves', icon: 'fa-solid fa-mountain-city' },
-        { id: 'interests', name: 'Places of Interest', icon: 'fa-solid fa-location-dot' },
-        { id: 'waterBodies', name: 'Bodies of Water', icon: 'fa-solid fa-water' },
-        { id: 'mountains', name: 'Mountains', icon: 'fa-solid fa-mountain' }
+        { id: 'cities', name: 'Cities', icon: 'location_city' },
+        { id: 'islands', name: 'Islands', icon: 'park' },
+        { id: 'dungeons', name: 'Dungeons', icon: 'fort' },
+        { id: 'caves', name: 'Caves', icon: 'landscape' },
+        { id: 'interests', name: 'Places of Interest', icon: 'pin_drop' },
+        { id: 'waterBodies', name: 'Bodies of Water', icon: 'water' },
+        { id: 'mountains', name: 'Mountains', icon: 'terrain' }
     ];
     
     labelCategories.forEach(category => {
@@ -167,9 +167,10 @@ function createLabelToggleButtons() {
         button.dataset.category = category.id;
         
         // Add icon
-        const icon = document.createElement('i');
-        icon.className = category.icon;
-        button.appendChild(icon);
+        const iconSpan = document.createElement('span');
+        iconSpan.className = 'material-symbols-outlined';
+        iconSpan.textContent = category.icon;
+        button.appendChild(iconSpan);
         
         // Add text
         const textSpan = document.createElement('span');
@@ -219,9 +220,10 @@ function createMarkerToggleButtons() {
     // Create toggle button for each marker category
     for (const category in mapMarkers) {
         // Skip empty categories
-        if (mapMarkers[category].length === 0) continue;
+        // if (mapMarkers[category].length === 0) continue; // We want to create toggles even for empty categories
         
         // Get marker style for this category
+        // Note: This relies on at least one marker being in the category to determine the type.
         const markerType = mapMarkers[category][0]?.type;
         const style = markerStyles[markerType];
         
@@ -230,21 +232,30 @@ function createMarkerToggleButtons() {
         button.className = 'toggle-btn active';
         button.dataset.category = category;
         
+        const animationClass = style && style.animation === 'beat' ? 'g-icon-beat' : '';
+
         // Add icon
-        const icon = document.createElement('i');
-        if (style) {
-            icon.className = style.icon;
-            icon.style.color = style.color;
+        const iconSpan = document.createElement('span');
+        if (style && style.icon) {
+            iconSpan.className = `material-symbols-outlined ${animationClass}`;
+            iconSpan.textContent = style.icon;
+            iconSpan.style.color = style.color;
         } else {
-            icon.className = 'fa-solid fa-map-marker';
+            iconSpan.className = 'material-symbols-outlined';
+            iconSpan.textContent = 'place';
         }
-        button.appendChild(icon);
+        button.appendChild(iconSpan);
         
         // Add text
         const textSpan = document.createElement('span');
         textSpan.textContent = category.charAt(0).toUpperCase() + category.slice(1);
         button.appendChild(textSpan);
         
+        // If the category is empty, disable the button and mark it inactive
+        if (mapMarkers[category].length === 0) {
+            button.disabled = true;
+            button.classList.replace('active', 'inactive');
+        }
         // Add click event listener
         button.addEventListener('click', function() {
             const isActive = button.classList.contains('active');
