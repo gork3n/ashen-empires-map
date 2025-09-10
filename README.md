@@ -51,6 +51,7 @@ This project is built using **OpenLayers**, chosen for its superior handling of 
 ## Map Coordinates
 
 The map itself is rendered from a 16384x16384 pixel tileset. However, the coordinate display and all location data are based on the original in-game coordinate system where:
+
 - (0,0) is at the top-left corner
 - (4096,4096) is at the bottom-right corner
 
@@ -82,29 +83,29 @@ This guide explains how to use the map, either as a complete standalone page or 
 
 This is the simplest method. It gives you the full experience with the interactive sidebar, header, and all features.
 
-1.  Clone or download the repository.
-2.  Ensure you have the following files and folders in your project:
-    *   `openlayers.html`
-    *   `/js/` (containing `map.js`, `markers.js`, `labels.js`, `sidebar.js`, `detail-maps.js`)
-    *   `/css/` (containing `map-styles.css`)
-    *   `/tiles/` (containing all map tile images)
-    *   `/images/` (containing background images)
-3.  Open `openlayers.html` in your browser. The map is ready to use.
+1. Clone or download the repository.
+2. Ensure you have the following files and folders in your project:
+    - `openlayers.html`
+    - `/js/` (containing `map.js`, `markers.js`, `labels.js`, `sidebar.js`, `detail-maps.js`)
+    - `/css/` (containing `map-styles.css`)
+    - `/tiles/` (containing all map tile images)
+    - `/images/` (containing background images)
+3. Open `openlayers.html` in your browser. The map is ready to use.
 
 ### Method 2: Embedding in an Existing Website
 
 To integrate the full-featured map (including the interactive sidebar) into an existing website, follow these steps.
 
-1.  **Copy Project Files**:
+1. **Copy Project Files**:
     Copy the following folders from this project into your website's directory:
-    *   `/js/`
-    *   `/css/`
-    *   `/tiles/`
-    *   `/images/`
+    - `/js/`
+    - `/css/`
+    - `/tiles/`
+    - `/images/`
 
-2.  **Add HTML Structure**: In your HTML file, add the structure for the sidebar, the main content container, the map itself, and the footer. You can copy this structure directly from `openlayers.html`.
+2. **Add HTML Structure**: In your HTML file, add the structure for the sidebar, the main content container, the map itself, and the footer. You can copy this structure directly from `openlayers.html`.
 
-3.  **Include CSS and Fonts**:
+3. **Include CSS and Fonts**:
     In the `<head>` of your HTML, link to the required stylesheets. Make sure the paths are correct for your project structure.
 
    ```html
@@ -120,7 +121,7 @@ To integrate the full-featured map (including the interactive sidebar) into an e
     <link rel="stylesheet" href="css/map-styles.css">
    ```
 
-4.  **Include JavaScript**:
+4. **Include JavaScript**:
     At the end of your `<body>` tag, include the required JavaScript files in the correct order.
 
    ```html
@@ -134,11 +135,11 @@ To integrate the full-featured map (including the interactive sidebar) into an e
     <script src="js/sidebar.js"></script>
    ```
 
-5.  **Adjust Paths**:
+5. **Adjust Paths**:
     If you placed the `js`, `css`, `tiles`, or `images` folders in different locations, you will need to update the paths in:
-    *   Your HTML file for the `<link>` and `<script>` tags.
-    *   `css/map-styles.css` for any `url()` paths (e.g., background images).
-    *   `js/map.js` for the `tileUrlFunction` if you moved the `/tiles` folder.
+    - Your HTML file for the `<link>` and `<script>` tags.
+    - `css/map-styles.css` for any `url()` paths (e.g., background images).
+    - `js/map.js` for the `tileUrlFunction` if you moved the `/tiles` folder.
 
 Once these steps are complete, the map should render and function within your page just as it does on the standalone `openlayers.html` page.
 
