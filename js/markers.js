@@ -95,7 +95,7 @@ const mapMarkers = {
     ],
 
     undergrounds: [
-        { x: 764, y: 760, type: "underground", tooltip: "Sewer Entrance" },
+        { x: 764, y: 754, type: "underground", tooltip: "Sewer Entrance" },
     ],
 
     monsters: [
@@ -109,37 +109,37 @@ const markerStyles = {
     portal: {
         icon: "sprint",
         color: "#FFD700", // Gold
-        size: 14
+        size: 18
     },
     dock: {
         icon: "anchor",
         color: "#1E90FF", // DodgerBlue
-        size: 14
+        size: 18
     },
     quest: {
         icon: "stars",
         color: "#FFD700", // Gold
-        size: 14
+        size: 18
     },
     shop: {
         icon: "store",
         color: "#32CD32", // LimeGreen
-        size: 14
+        size: 18
     },
     trainer: {
         icon: "book_2",
         color: "#FF8C00", // DarkOrange
-        size: 14
+        size: 18
     },
     bank: {
         icon: "account_balance",
         color: "#DBC12F", // Gold
-        size: 14
+        size: 18
     },
     underground: {
         icon: "tools_ladder",
         color: "#d36517ff", // SaddleBrown
-        size: 14
+        size: 18
     }
 };
 

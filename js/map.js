@@ -200,6 +200,9 @@ function initializeMap() {
     // Custom mouse position control
     initializeCoordinateDisplay();
 
+    // Add crosshair for testing
+    initializeCrosshair(map);
+
     // --- Add click listener for features ---
     map.on('click', function(evt) {
         // Set cursor to default first
@@ -714,7 +717,91 @@ function showDetailModal(locationName) {
         });
 
         // Add the hard-coded markers for this location to the detail map
-        addDetailMapMarkers(detailMarkerSource, locationData.markers, imageHeight);
+        // --- Combine markers from detail-maps.js and markers.js ---
+
+        // 1. Start with markers defined specifically for this detail map.
+        const detailMarkers = [...(locationData.markers || [])];
+        const existingTooltips = new Set(detailMarkers.map(m => m.tooltip));
+
+        // 2. Calculate the sub-map's bounding box on the main 4096x4096 map.
+        const originX = locationData.origin?.x || 0;
+        const originY = locationData.origin?.y || 0;
+        const scale = locationData.scale || 1;
+        const offsetX = locationData.offset?.x || 0;
+        const offsetY = locationData.offset?.y || 0;
+
+        const mainMapAreaWidth = imageWidth / scale;
+        const mainMapAreaHeight = imageHeight / scale;
+        const mainMapBbox = {
+            minX: originX,
+            minY: originY,
+            maxX: originX + mainMapAreaWidth,
+            maxY: originY + mainMapAreaHeight,
+        };
+
+        // 3. Iterate through main map markers and pull in any that are within the bounds.
+        for (const category in mapMarkers) {
+            mapMarkers[category].forEach(mainMarker => {
+                // Check if the marker is within the bounding box and not already added.
+                if (
+                    mainMarker.x >= mainMapBbox.minX && mainMarker.x <= mainMapBbox.maxX &&
+                    mainMarker.y >= mainMapBbox.minY && mainMarker.y <= mainMapBbox.maxY &&
+                    !existingTooltips.has(mainMarker.tooltip)
+                ) {
+                    // Convert main map coordinates to sub-map pixel coordinates.
+                    const subX = ((mainMarker.x - originX) * scale) + offsetX;
+                    const subY = ((mainMarker.y - originY) * scale) + offsetY;
+
+                    detailMarkers.push({ x: Math.round(subX), y: Math.round(subY), type: mainMarker.type, tooltip: mainMarker.tooltip });
+                }
+            });
+        }
+
+        addDetailMapMarkers(detailMarkerSource, detailMarkers, imageHeight);
+
+        // Add crosshair for testing
+        initializeCrosshair(detailMap);
+
+        // Add coordinate display for the detail map
+        const modalMousePositionDiv = document.getElementById('modal-mouse-position');
+        if (modalMousePositionDiv) {
+            modalMousePositionDiv.textContent = 'X: --- | Y: ---';
+
+            const offsetX = locationData.offset?.x || 0;
+            const offsetY = locationData.offset?.y || 0;
+            const originX = locationData.origin?.x || 0;
+            const originY = locationData.origin?.y || 0;
+            const scale = locationData.scale || 1;
+
+            detailMap.on('pointermove', function(evt) {
+                if (evt.dragging) return;
+
+                const coord = evt.coordinate;
+                if (coord) {
+                    // Raw pixel coordinates from top-left of the image.
+                    const rawX = Math.round(coord[0]);
+                    const rawY = Math.round(imageHeight - coord[1]); // Invert Y
+
+                    // 1. Subtract the image padding offset to get the coordinate relative to the map content.
+                    const contentX = rawX - offsetX;
+                    const contentY = rawY - offsetY;
+
+                    // 2. Scale the content coordinate down to the main map's scale.
+                    const scaledX = contentX / scale;
+                    const scaledY = contentY / scale;
+
+                    // 3. Add the origin to get the final main map coordinate.
+                    const displayX = Math.round(originX + scaledX);
+                    const displayY = Math.round(originY + scaledY);
+
+                    modalMousePositionDiv.textContent = 'X: ' + displayX + ' | Y: ' + displayY;
+                }
+            });
+
+            detailMap.getViewport().addEventListener('mouseout', function() {
+                modalMousePositionDiv.textContent = 'X: --- | Y: ---';
+            });
+        }
         
     }, 10); // A small delay ensures the modal container is ready
 }
@@ -757,6 +844,46 @@ function closeDetailModal() {
         detailMap.setTarget(null);
         detailMap = null;
     }
+}
+
+/**
+ * Initializes a crosshair overlay on a map instance for coordinate testing.
+ * @param {ol.Map} mapInstance The OpenLayers map to attach the crosshair to.
+ */
+function initializeCrosshair(mapInstance) {
+    const mapElement = mapInstance.getTargetElement();
+    if (!mapElement) return;
+
+    // Create crosshair elements
+    const vLine = document.createElement('div');
+    vLine.className = 'crosshair-line crosshair-line-v';
+    const hLine = document.createElement('div');
+    hLine.className = 'crosshair-line crosshair-line-h';
+
+    // Append to the map container
+    mapElement.appendChild(vLine);
+    mapElement.appendChild(hLine);
+
+    // Show and move crosshair on pointer move
+    mapInstance.on('pointermove', function(evt) {
+        if (evt.dragging) return;
+
+        const mapRect = mapElement.getBoundingClientRect();
+        const x = evt.originalEvent.clientX - mapRect.left;
+        const y = evt.originalEvent.clientY - mapRect.top;
+
+        vLine.style.left = `${x}px`;
+        hLine.style.top = `${y}px`;
+
+        vLine.style.display = 'block';
+        hLine.style.display = 'block';
+    });
+
+    // Hide crosshair when pointer leaves the map
+    mapInstance.getViewport().addEventListener('mouseout', function() {
+        vLine.style.display = 'none';
+        hLine.style.display = 'none';
+    });
 }
 
 // Replace the MousePosition control code with this custom implementation

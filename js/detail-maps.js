@@ -13,9 +13,26 @@ const detailMapData = {
         title: "Lotor's Summer Palace",
         image: {
             url: 'images/Lotors_Summer_Palace.png',
-            width: 1341,
-            height: 1212
+            width: 1272,
+            height: 1116
         },
+        // --- COORDINATE MAPPING CONFIGURATION ---
+        origin: {
+            // The coordinate on the main 4096x4096 map that corresponds to the
+            // top-left corner of this sub-map's content (after accounting for offset).
+            // Use the calculation method provided in the documentation to find this value.
+            x: 701,
+            y: 583
+        },
+        scale: 6, // The zoom factor of this sub-map image. (e.g., 6 means it's 600% of the original size).
+        offset: {
+            // The pixel padding inside the image file itself.
+            // If the map content in your PNG doesn't start at the very top-left
+            // pixel, use this to specify the size of the border/padding.
+            x: 0,
+            y: 0
+        },
+        // --- END COORDINATE MAPPING ---
         info: `
             <h4>Welcome to the Palace!</h4>
             <p>This is a special area where you can find various shops, trainers, and quests.</p>
@@ -31,7 +48,7 @@ const detailMapData = {
         markers: [
             // NOTE: X and Y coordinates are relative to the top-left of the Lotors_Summer_Palace.png image.
             // You can adjust these values to precisely position the markers on the sub-map.
-            { x: 560, y: 610, type: "shop", tooltip: "O'riles Weapon Shop" },
+            /* { x: 560, y: 610, type: "shop", tooltip: "O'riles Weapon Shop" },
             { x: 555, y: 650, type: "shop", tooltip: "Colleen Franks' Armor Shop" },
             { x: 920, y: 820, type: "shop", tooltip: "Garius Farming Shop" },
             { x: 880, y: 800, type: "shop", tooltip: "Tom Uslak Carpentry Shop" },
@@ -43,7 +60,7 @@ const detailMapData = {
             { x: 900, y: 900, type: "dock", tooltip: "LSP Dock" },
             { x: 895, y: 840, type: "quest", tooltip: "Carpentry Taskmaster" },
             { x: 925, y: 770, type: "quest", tooltip: "Farming Taskmaster" },
-            { x: 300, y: 1000, type: "underground", tooltip: "Sewer Entrance" },
+            { x: 300, y: 1000, type: "underground", tooltip: "Sewer Entrance" }, */
         ]
     }
 };
