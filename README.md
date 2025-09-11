@@ -30,10 +30,13 @@ An interactive map for Ashen Empires with pixel-perfect coordinates and multiple
 - **Interactive Sidebar**: Collapsible sidebar with controls to toggle visibility for different categories of labels and markers.
 - **Dynamic Markers & Labels**:
   - Markers for portals, docks, shops, trainers, and banks.
+  - Markers for portals, docks, shops, trainers, banks, and **spawn gates**.
   - Labels for islands, cities, dungeons, and other points of interest.
   - Custom, canvas-rendered icons and text labels with shadows and gradients.
 - **Informative Tooltips**: Hover over a marker to see its name and type.
-- **Detail Views**: Click on major location labels (like Lotor's Summer Palace) to open a modal with a high-resolution sub-map, complete with its own markers and coordinate system.
+- **Informative Tooltips**: Hover over any marker on the main map **or in a detail view** to see its name and type.
+- **Detail Views**: Click on major location labels (like Lotor's Summer Palace) to open a modal with a high-resolution sub-map. These detail maps now **automatically include relevant markers from the main map** and have their own working tooltips and coordinate systems.
+- **Quick Tips**: A helpful, cycling tip bar at the bottom of the map to help users discover features. Click it to open a modal with a full list of game and map tips.
 - **Responsive Design**: The interface adapts to different screen sizes, making it mobile-friendly.
 
 ## Technical Implementation
@@ -43,8 +46,8 @@ This project is built using **OpenLayers**, chosen for its superior handling of 
 - **Modular JavaScript**: The code is organized into logical files:
   - `map.js`: Core map functionality, event handling, and modal logic.
   - `sidebar.js`: Manages the interactive sidebar controls.
-  - `labels.js` & `markers.js`: Data files defining all labels and markers on the main map.
-  - `detail-maps.js`: Data file containing configurations for high-resolution sub-maps.
+  - `tips.js`: Powers the quick tips bar and modal.
+  - `labels.js`, `markers.js`, `detail-maps.js`: Data files defining all labels, markers, and sub-map configurations.
 - **Custom Rendering**: Markers and labels are rendered on-the-fly to an HTML canvas for high-quality visuals and performance.
 - **Coordinate System**: The map accurately translates between the 16384x16384 tile-based map and the 4096x4096 in-game coordinate system, ensuring all displayed coordinates are correct.
 
@@ -86,7 +89,7 @@ This is the simplest method. It gives you the full experience with the interacti
 1. Clone or download the repository.
 2. Ensure you have the following files and folders in your project:
     - `openlayers.html`
-    - `/js/` (containing `map.js`, `markers.js`, `labels.js`, `sidebar.js`, `detail-maps.js`)
+    - `/js/` (containing `map.js`, `markers.js`, `labels.js`, `sidebar.js`, `detail-maps.js`, `tips.js`)
     - `/css/` (containing `map-styles.css`)
     - `/tiles/` (containing all map tile images)
     - `/images/` (containing background images)
@@ -132,6 +135,7 @@ To integrate the full-featured map (including the interactive sidebar) into an e
     <script src="js/markers.js"></script>
     <script src="js/detail-maps.js"></script>
     <script src="js/map.js"></script>
+    <script src="js/tips.js"></script>
     <script src="js/sidebar.js"></script>
    ```
 
