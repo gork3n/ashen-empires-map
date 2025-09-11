@@ -92,7 +92,12 @@
             <h1>Ashen Empires Map</h1>
             <div id="subheader">Created by Sir Chris</div>
         </div> -->
-        <div id="map" class="map"></div>
+        <div id="map" class="map">
+            <div id="quick-tips-container" class="quick-tips-container">
+                <span class="material-symbols-outlined">help</span>
+                <span id="quick-tips-text"></span>
+            </div>
+        </div>
     </div>
 
     <!-- Page Footer -->
@@ -118,6 +123,7 @@
     <script src="js/markers.js"></script>
     <script src="js/detail-maps.js"></script>
     <script src="js/map.js"></script>
+    <script src="js/tips.js"></script>
     <script src="js/sidebar.js"></script>
 
     <!-- Detail Modal for specific locations -->
@@ -131,6 +137,17 @@
             </div>
             <div class="modal-footer">
                 <div id="modal-mouse-position"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tips Modal -->
+    <div id="tips-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <button id="tips-modal-close-btn" class="modal-close">&times;</button>
+            <h2 id="tips-modal-title">Ashen Empires Tips</h2>
+            <div id="tips-modal-body" class="modal-body">
+                <!-- Tips will be populated here by JavaScript -->
             </div>
         </div>
     </div>
