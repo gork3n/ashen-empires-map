@@ -2,7 +2,8 @@
 const mapMarkers = {
     portals: [
         // Valinor Island Portals
-        { x: 777, y: 100, type: "portal", tooltip: "Portal to Leave Valinor" },
+        { x: 776, y: 100, type: "portal", tooltip: "Portal to Leave Valinor" },
+        { x: 776, y: 168, type: "portal", tooltip: "Portal to Arena Viewing Area" },
 
         // Krythan Island Portals
         { x: 585, y: 1497, type: "portal", tooltip: "Portal to East Mainlands West of Parian" },
@@ -69,6 +70,17 @@ const mapMarkers = {
         { x: 734, y: 137, type: "quest", tooltip: "Timothy Jager (Wanders)" },
         { x: 750, y: 106, type: "quest", tooltip: "Sandre (Wanders)" },
         { x: 766, y: 145, type: "quest", tooltip: "Hereward (Wanders)" },
+        { x: 772, y: 110, type: "quest", tooltip: "Topacia (Wanders)" },
+        { x: 782, y: 116, type: "quest", tooltip: "Alchemist Baki" },
+        { x: 783, y: 121, type: "quest", tooltip: "Sarah Bent" },
+        { x: 783, y: 123, type: "quest", tooltip: "Serina Wilcut" },
+        { x: 781, y: 125, type: "quest", tooltip: "Knight Bastrop" },
+        { x: 787, y: 127, type: "quest", tooltip: "Eustacius (Wanders)" },
+        { x: 788, y: 97, type: "quest", tooltip: "Curtis Leabu (Wanders)" },
+        { x: 784, y: 95, type: "quest", tooltip: "Hasculf (Wanders)" },
+        { x: 796, y: 158, type: "quest", tooltip: "A Young Maid (Wanders)" },
+        { x: 887, y: 138, type: "quest", tooltip: "Eastern Gate Lieutenant" },
+
 
         // Krythan Island Quests
 
@@ -79,9 +91,15 @@ const mapMarkers = {
     
     shops: [
         //Valinor Shops
-        { x: 747, y: 115, type: "shop", tooltip: "Larodeth Lywelyn's Pub and Grub" },
+        { x: 749, y: 116, type: "shop", tooltip: "Larodeth Lywelyn's Pub and Grub Tavern" },
         { x: 738, y: 120, type: "shop", tooltip: "Micheal Vonda's Weapon Shop" },
         { x: 733, y: 125, type: "shop", tooltip: "Thomas Blackstone's Armor Shop" },
+        { x: 735, y: 116, type: "shop", tooltip: "Whiliam Rosen's Provisioner Shop" },
+        { x: 772, y: 120, type: "shop", tooltip: "Leon Elias's Provisioner Shop" },
+        { x: 784, y: 115, type: "shop", tooltip: "Cladius Zamilus's Alchemist Shop" },
+        { x: 752, y: 152, type: "shop", tooltip: "Linus Houson's Carpentry Store" },
+        { x: 752, y: 153, type: "shop", tooltip: "Kerry Thomas' Blacksmith Shop " },
+        { x: 752, y: 154, type: "shop", tooltip: "Tina Florence's Leather Shop" },
 
 
         //Krythan Shops
@@ -105,8 +123,14 @@ const mapMarkers = {
         { x: 756, y: 113, type: "trainer", tooltip: "Tradeskill Trainers" },
         { x: 765, y: 113, type: "trainer", tooltip: "Weapon Trainers" },
         { x: 764, y: 122, type: "trainer", tooltip: "Leadership Trainers" },
-        { x: 857, y: 718, type: "quest", tooltip: "Carpentry Taskmaster" },
-        { x: 863, y: 706, type: "quest", tooltip: "Farming Taskmaster" },
+        { x: 857, y: 718, type: "trainer", tooltip: "Carpentry Taskmaster" },
+        { x: 863, y: 706, type: "trainer", tooltip: "Farming Taskmaster" },
+        { x: 737, y: 109, type: "trainer", tooltip: "Tailoring Trainer" },
+        { x: 773, y: 115, type: "trainer", tooltip: "Farming Trainer" },
+        { x: 770, y: 115, type: "trainer", tooltip: "Ralnaka (Farming Information)" },
+        { x: 718, y: 100, type: "trainer", tooltip: "Valinor Orb Reset" },
+        { x: 778, y: 103, type: "trainer", tooltip: "Island Steward" },
+        { x: 780, y: 175, type: "trainer", tooltip: "Osalka Farming Expert (Wanders)" },
 
         // Krythan Island Trainers
         
