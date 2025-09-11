@@ -37,7 +37,7 @@ An interactive map for Ashen Empires with pixel-perfect coordinates and multiple
 - **Informative Tooltips**: Hover over any marker on the main map **or in a detail view** to see its name and type.
 - **Detail Views**: Click on major location labels (like Lotor's Summer Palace) to open a modal with a high-resolution sub-map. These detail maps now **automatically include relevant markers from the main map** and have their own working tooltips and coordinate systems.
 - **Quick Tips**: A helpful, cycling tip bar at the bottom of the map to help users discover features. Click it to open a modal with a full list of game and map tips.
-- **Responsive Design**: The interface adapts to different screen sizes, making it mobile-friendly.
+- **Responsive Design**: The interface adapts to different screen sizes, making it mobile-friendly. However, some of the features are buggy on smaller screens. Desktop browsers recommended.
 
 ## Technical Implementation
 
