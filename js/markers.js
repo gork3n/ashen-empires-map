@@ -80,6 +80,20 @@ const mapMarkers = {
     ],
     
     trainers: [
+        // Trainers category encompasses various trainer and quest NPCs
+
+        // Valinor Island Trainers
+        { x: 770, y: 139, type: "trainer", tooltip: "Sandre (Wonders)" },
+        { x: 762, y: 150, type: "trainer", tooltip: "Captain of the Guard" },
+        { x: 759, y: 137, type: "trainer", tooltip: "Kumba Northern (Wonders)" },
+        { x: 774, y: 146, type: "trainer", tooltip: "Mary Locksley (Wonders)" },
+        { x: 747, y: 145, type: "trainer", tooltip: "Davey Logan (Wonders)" },
+        { x: 744, y: 137, type: "trainer", tooltip: "Imica (Wonders)" },
+        { x: 734, y: 137, type: "trainer", tooltip: "Timothy Jager (Wonders)" },
+        { x: 756, y: 113, type: "trainer", tooltip: "Tradeskill Trainers" },
+        { x: 765, y: 113, type: "trainer", tooltip: "Weapon Trainers" },
+        { x: 764, y: 122, type: "trainer", tooltip: "Leadership Trainers" },
+
         // Krythan Island Trainers
         
         // Lotor's Summer Palace Trainers
@@ -89,6 +103,18 @@ const mapMarkers = {
         // Add more trainers
     ],
     
+    spawns: [
+        // Add good and evil spawn gates here
+        //Valinor Island Spawns
+        { x: 779, y: 141, type: "spawn_good", tooltip: "Spawn Gate" },
+        
+        //Krythan Island Spawns
+
+        
+        // Example: { x: 123, y: 456, type: "spawn_good", tooltip: "Good Spawn Gate" }
+        // Example: { x: 789, y: 101, type: "spawn_evil", tooltip: "Evil Spawn Gate" }
+    ],
+
     banks: [
         { x: 841, y: 681, type: "bank", tooltip: "Bank" },
         
@@ -96,7 +122,17 @@ const mapMarkers = {
     ],
 
     undergrounds: [
+        //Valinor Island Undergrounds
+        { x: 609, y: 359, type: "underground", tooltip: "Frump's Lair" },
+        { x: 875, y: 311, type: "underground", tooltip: "Bonesnarl's Lair" }, //I need to verify this location
+        { x: 763, y: 118, type: "underground", tooltip: "Stairs to Mage Trainers" },
+        
+        //Krythan Island Undergrounds
+
+        //Lotor's Summer Palace Undergrounds
         { x: 764, y: 754, type: "underground", tooltip: "Sewer Entrance" },
+
+        
     ]
 };
 
@@ -126,6 +162,16 @@ const markerStyles = {
     trainer: {
         icon: "book_2",
         color: "#FF8C00", // DarkOrange
+        size: 18
+    },
+    spawn_good: {
+        icon: "skull",
+        color: "#FFFFFF", // White
+        size: 18
+    },
+    spawn_evil: {
+        icon: "skull",
+        color: "#8B0000", // DarkRed (Blood Red)
         size: 18
     },
     bank: {

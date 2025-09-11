@@ -74,13 +74,26 @@ const mapLabels = {
     ],
     
     interests: [
+        // Valinor Island Places of Interest
+        { x: 651, y: 186, name: "Duncan's Cottage", fontSize: 16 },
+        { x: 570, y: 313, name: "Ruined Temple", fontSize: 16 },
+        { x: 641, y: 362, name: "Lanore", fontSize: 16 },
+        { x: 1083, y: 475, name: "Ecclain's Caravan", fontSize: 16 },
+        { x: 1043, y: 282, name: "Valinor Ant Hill", fontSize: 16 },   
+        { x: 965, y: 123, name: "Hermit's Hut", fontSize: 16 },
+
         // Krythan Island Places of Interest
         { x: 327, y: 742, name: "Jeel Snake Pit", fontSize: 14 },
         { x: 436, y: 855, name: "Crypt of Kargoth", fontSize: 14 },
-        // Add interest labels here
+        
+        
     ],
     
     waterBodies: [
+        //Valinor Island Water Bodies
+        { x: 1177, y: 413, name: "Gut Rot Swamp", fontSize: 20 },
+
+        // Krythan Island Water Bodies
         { x: 1267, y: 1220, name: "Lake Silvest", fontSize: 15 },
         { x: 390, y: 1090, name: "Queen's Lake", fontSize: 18 },
         { x: 845, y: 1163, name: "Crow Lake", fontSize: 14 },

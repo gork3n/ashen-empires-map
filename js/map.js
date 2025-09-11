@@ -165,7 +165,7 @@ function initializeMap() {
             })
         ],
         view: new ol.View({
-            center: [4420, 13960],
+            center: [3520, 15000],
             resolution: 2,
             minResolution: 2,
             maxResolution: 64,
