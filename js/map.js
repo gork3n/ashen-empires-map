@@ -104,6 +104,47 @@ const defaultLabelStyle = {
     fontSize: 24
 };
 
+/**
+ * Generic handler for pointer move events to show/hide tooltips.
+ * @param {ol.MapBrowserEvent} evt The event object.
+ */
+const tooltipPointerMoveHandler = function(evt) {
+    const currentMap = evt.map;
+    if (evt.dragging) {
+        markerTooltipElement.style.display = 'none';
+        return;
+    }
+    const feature = currentMap.forEachFeatureAtPixel(evt.pixel, f => f);
+    if (feature && feature.get('tooltip')) {
+        const markerType = feature.get('type');
+        const style = markerStyles[markerType] || { icon: 'place', color: '#FF0000' };
+        const animationClass = style.animation === 'beat' ? 'g-icon-beat' : '';
+        markerTooltipElement.innerHTML = `
+            <div class="tooltip-icon" style="color: ${style.color};">
+                <span class="material-symbols-outlined ${animationClass}">${style.icon}</span>
+            </div>
+            <div class="tooltip-text">${feature.get('tooltip')}</div>
+        `;
+        markerTooltipOverlay.setPosition(feature.getGeometry().getCoordinates());
+        markerTooltipElement.style.display = 'flex';
+        currentMap.getTargetElement().style.cursor = 'pointer';
+    } else {
+        markerTooltipElement.style.display = 'none';
+        const hasFeature = currentMap.hasFeatureAtPixel(evt.pixel);
+        currentMap.getTargetElement().style.cursor = hasFeature ? 'pointer' : '';
+    }
+};
+
+/**
+ * Generic handler for map move start events to hide tooltips.
+ */
+const tooltipMoveStartHandler = function() {
+    if (markerTooltipElement) {
+        markerTooltipElement.style.display = 'none';
+    }
+};
+
+
 document.addEventListener('DOMContentLoaded', function() {
     // The `document.fonts.ready` promise resolves when all fonts are loaded.
     // This is crucial to ensure Font Awesome is available before we try to
@@ -599,54 +640,11 @@ function setupMarkerTooltips(map) {
         map.addOverlay(markerTooltipOverlay);
     }
     
-    // Add pointer move handler for tooltips
-    map.on('pointermove', function(evt) {
-        if (evt.dragging) {
-            markerTooltipElement.style.display = 'none';
-            return;
-        }
-        
-        const feature = map.forEachFeatureAtPixel(evt.pixel, function(feature) {
-            return feature;
-        });
-        
-        if (feature && feature.get('tooltip')) {
-            const markerType = feature.get('type');
-            const style = markerStyles[markerType] || {
-                icon: "fa-solid fa-map-marker-alt",
-                color: "#FF0000"
-            };
-            
-            const animationClass = style.animation === 'beat' ? 'g-icon-beat' : '';
-
-            // Update tooltip content
-            markerTooltipElement.innerHTML = `
-                <div class="tooltip-icon" style="color: ${style.color};">
-                    <span class="material-symbols-outlined ${animationClass}">${style.icon}</span>
-                </div>
-                <div class="tooltip-text">${feature.get('tooltip')}</div>
-            `;
-            
-            // Position tooltip at feature location
-            const coordinate = feature.getGeometry().getCoordinates();
-            markerTooltipOverlay.setPosition(coordinate);
-            markerTooltipElement.style.display = 'flex';
-            
-            // Change cursor to pointer
-            map.getTargetElement().style.cursor = 'pointer';
-        } else {
-            markerTooltipElement.style.display = 'none';
-            
-            // Only change cursor if not over any feature
-            const hasFeature = map.hasFeatureAtPixel(evt.pixel);
-            map.getTargetElement().style.cursor = hasFeature ? 'pointer' : '';
-        }
-    });
+    // Attach the generic handlers to the map instance
+    map.on('pointermove', tooltipPointerMoveHandler);
     
     // Hide tooltip when map is moved
-    map.on('movestart', function() {
-        markerTooltipElement.style.display = 'none';
-    });
+    map.on('movestart', tooltipMoveStartHandler);
 }
 
 /**
@@ -759,6 +757,13 @@ function showDetailModal(locationName) {
 
         addDetailMapMarkers(detailMarkerSource, detailMarkers, imageHeight);
 
+        // --- 4. Set up Tooltips for Detail Map ---
+        if (markerTooltipOverlay) {
+            map.removeOverlay(markerTooltipOverlay); // Remove from main map
+            detailMap.addOverlay(markerTooltipOverlay); // Add to detail map
+            setupMarkerTooltips(detailMap); // Attach event listeners
+        }
+
         // Add crosshair for testing
         initializeCrosshair(detailMap);
 
@@ -841,6 +846,13 @@ function closeDetailModal() {
     if (modal) modal.style.display = 'none';
 
     if (detailMap) {
+        // Move the tooltip overlay back to the main map before destroying the detail map
+        if (markerTooltipOverlay) {
+            detailMap.removeOverlay(markerTooltipOverlay);
+            map.addOverlay(markerTooltipOverlay);
+        }
+
+        // Clean up the map instance
         detailMap.setTarget(null);
         detailMap = null;
     }

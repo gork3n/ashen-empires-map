@@ -76,7 +76,7 @@ const detailMapData = {
             // top-left corner of this sub-map's content (after accounting for offset).
             // Use the calculation method provided in the documentation to find this value.
             x: 644,
-            y: 33
+            y: 34
         },
         scale: 6, // The zoom factor of this sub-map image. (e.g., 6 means it's 600% of the original size).
         offset: {

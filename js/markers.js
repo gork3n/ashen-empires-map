@@ -60,14 +60,15 @@ const mapMarkers = {
     
     quests: [
         // Valinor Island Quests
-        { x: 770, y: 139, type: "quest", tooltip: "Sandre (Wonders)" },
-        { x: 762, y: 150, type: "quest", tooltip: "Captain of the Guard" },
-        { x: 759, y: 137, type: "quest", tooltip: "Kumba Northern (Wonders)" },
-        { x: 774, y: 146, type: "quest", tooltip: "Mary Locksley (Wonders)" },
-        { x: 747, y: 145, type: "quest", tooltip: "Davey Logan (Wonders)" },
-        { x: 744, y: 137, type: "quest", tooltip: "Imica (Wonders)" },
-        { x: 734, y: 137, type: "quest", tooltip: "Timothy Jager (Wonders)" },
-        { x: 750, y: 106, type: "quest", tooltip: "Sandre (Wonders)" },
+        { x: 770, y: 139, type: "quest", tooltip: "Sandre (Wanders)" },
+        { x: 762, y: 149, type: "quest", tooltip: "Captain of the Guard" },
+        { x: 759, y: 137, type: "quest", tooltip: "Kumba Northern (Wanders)" },
+        { x: 774, y: 146, type: "quest", tooltip: "Mary Locksley (Wanders)" },
+        { x: 747, y: 145, type: "quest", tooltip: "Davey Logan (Wanders)" },
+        { x: 744, y: 137, type: "quest", tooltip: "Imica (Wanders)" },
+        { x: 734, y: 137, type: "quest", tooltip: "Timothy Jager (Wanders)" },
+        { x: 750, y: 106, type: "quest", tooltip: "Sandre (Wanders)" },
+        { x: 766, y: 145, type: "quest", tooltip: "Hereward (Wanders)" },
 
         // Krythan Island Quests
 
@@ -77,7 +78,13 @@ const mapMarkers = {
     ],
     
     shops: [
-        /*Krythan Island Shops*/
+        //Valinor Shops
+        { x: 747, y: 115, type: "shop", tooltip: "Larodeth Lywelyn's Pub and Grub" },
+        { x: 738, y: 120, type: "shop", tooltip: "Micheal Vonda's Weapon Shop" },
+        { x: 733, y: 125, type: "shop", tooltip: "Thomas Blackstone's Armor Shop" },
+
+
+        //Krythan Shops
         //Varg Shops
         { x: 780, y: 1193, type: "shop", tooltip: "Magic Shop" },
         
