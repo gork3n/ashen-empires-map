@@ -1,6 +1,9 @@
 // Define markers by category
 const mapMarkers = {
     portals: [
+        // Valinor Island Portals
+        { x: 777, y: 100, type: "portal", tooltip: "Portal to Leave Valinor" },
+
         // Krythan Island Portals
         { x: 585, y: 1497, type: "portal", tooltip: "Portal to East Mainlands West of Parian" },
         { x: 2800, y: 849, type: "portal", tooltip: "Portal to Jeel" },
@@ -14,8 +17,6 @@ const mapMarkers = {
         // Real Estate Island Portals
         { x: 663, y: 735, type: "portal", tooltip: "Portal to Lotor's Summer Palace" },
 
-        // Valinor Island Portals
-
 
         // Minotaur Island Portals
 
@@ -28,14 +29,15 @@ const mapMarkers = {
     ],
     
     docks: [
+        // Valinor Island Docks
+
+
         // Krythan Island Docks
         { x: 266, y: 823, type: "dock", tooltip: "Jeel Dock" },
 
         // Lotor's Summer Palace Docks
         { x: 792, y: 580, type: "dock", tooltip: "Palace Dock" },
         { x: 858, y: 728, type: "dock", tooltip: "LSP Dock" },
-
-        // Valinor Island Docks
 
         // Minotaur Island Docks
 
@@ -57,11 +59,20 @@ const mapMarkers = {
     ],
     
     quests: [
+        // Valinor Island Quests
+        { x: 770, y: 139, type: "quest", tooltip: "Sandre (Wonders)" },
+        { x: 762, y: 150, type: "quest", tooltip: "Captain of the Guard" },
+        { x: 759, y: 137, type: "quest", tooltip: "Kumba Northern (Wonders)" },
+        { x: 774, y: 146, type: "quest", tooltip: "Mary Locksley (Wonders)" },
+        { x: 747, y: 145, type: "quest", tooltip: "Davey Logan (Wonders)" },
+        { x: 744, y: 137, type: "quest", tooltip: "Imica (Wonders)" },
+        { x: 734, y: 137, type: "quest", tooltip: "Timothy Jager (Wonders)" },
+        { x: 750, y: 106, type: "quest", tooltip: "Sandre (Wonders)" },
+
         // Krythan Island Quests
 
         // Lotor's Summer Palace Quests
-        { x: 857, y: 718, type: "quest", tooltip: "Carpentry Taskmaster" },
-        { x: 863, y: 706, type: "quest", tooltip: "Farming Taskmaster" },
+        
         // Add more quests
     ],
     
@@ -83,16 +94,12 @@ const mapMarkers = {
         // Trainers category encompasses various trainer and quest NPCs
 
         // Valinor Island Trainers
-        { x: 770, y: 139, type: "trainer", tooltip: "Sandre (Wonders)" },
-        { x: 762, y: 150, type: "trainer", tooltip: "Captain of the Guard" },
-        { x: 759, y: 137, type: "trainer", tooltip: "Kumba Northern (Wonders)" },
-        { x: 774, y: 146, type: "trainer", tooltip: "Mary Locksley (Wonders)" },
-        { x: 747, y: 145, type: "trainer", tooltip: "Davey Logan (Wonders)" },
-        { x: 744, y: 137, type: "trainer", tooltip: "Imica (Wonders)" },
-        { x: 734, y: 137, type: "trainer", tooltip: "Timothy Jager (Wonders)" },
+        
         { x: 756, y: 113, type: "trainer", tooltip: "Tradeskill Trainers" },
         { x: 765, y: 113, type: "trainer", tooltip: "Weapon Trainers" },
         { x: 764, y: 122, type: "trainer", tooltip: "Leadership Trainers" },
+        { x: 857, y: 718, type: "quest", tooltip: "Carpentry Taskmaster" },
+        { x: 863, y: 706, type: "quest", tooltip: "Farming Taskmaster" },
 
         // Krythan Island Trainers
         
@@ -116,8 +123,27 @@ const mapMarkers = {
     ],
 
     banks: [
+        //Valinor Island Banks
+
+        { x: 744, y: 100, type: "bank", tooltip: "Bank" },
+        //Lotor's Summer Palace Banks
         { x: 841, y: 681, type: "bank", tooltip: "Bank" },
-        
+
+        // Krythan Island Banks
+
+        //Jeel Banks
+
+        //Hothbra Banks
+
+        //Varg Banks
+
+        //Silvest Banks
+
+
+        //Mainland Banks
+        //Western Mainland Banks
+
+        //Eastern Mainland Banks
         // Add more banks
     ],
 

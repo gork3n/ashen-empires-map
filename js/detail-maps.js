@@ -62,5 +62,44 @@ const detailMapData = {
             { x: 925, y: 770, type: "quest", tooltip: "Farming Taskmaster" },
             { x: 300, y: 1000, type: "underground", tooltip: "Sewer Entrance" }, */
         ]
+    },
+    "Valinor": {
+        title: "Valinor",
+        image: {
+            url: 'images/Valinor.png',
+            width: 1525,
+            height: 1150
+        },
+        // --- COORDINATE MAPPING CONFIGURATION ---
+        origin: {
+            // The coordinate on the main 4096x4096 map that corresponds to the
+            // top-left corner of this sub-map's content (after accounting for offset).
+            // Use the calculation method provided in the documentation to find this value.
+            x: 644,
+            y: 33
+        },
+        scale: 6, // The zoom factor of this sub-map image. (e.g., 6 means it's 600% of the original size).
+        offset: {
+            // The pixel padding inside the image file itself.
+            // If the map content in your PNG doesn't start at the very top-left
+            // pixel, use this to specify the size of the border/padding.
+            x: 0,
+            y: 0
+        },
+        // --- END COORDINATE MAPPING ---
+        info: `
+            <h4>Welcome to Valinor!</h4>
+            <p>This is a special area where you can find various shops, trainers, and quests.</p>
+            <hr>
+            <h5>Key Locations:</h5>
+            <ul>
+                <li>Weapon and Armor Shops</li>
+                <li>Bank</li>
+                <li>...and more!</li>
+            </ul>
+        `,
+        markers: [
+            // Extra markers can be added here for Valinor
+        ]
     }
 };
