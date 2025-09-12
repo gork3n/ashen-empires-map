@@ -215,11 +215,11 @@ function initializeMap() {
         })
     });
     
-    // Add labels to the map
-    addMapLabels(map);
-    
     // Add markers to the map
     addMapMarkers(map);
+    
+    // Add labels to the map after markers so they appear on top
+    addMapLabels(map);
     
     // Listen for toggle events from the sidebar
     document.addEventListener('toggle-label-category', function(e) {

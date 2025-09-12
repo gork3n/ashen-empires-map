@@ -305,7 +305,7 @@ input:checked + .slider:before {
     position: absolute;
     transform: translate(-50%, -50%);
     cursor: pointer;
-    z-index: 1000;
+    z-index: 500;
     background: rgba(0, 0, 0, 0.76);
     border-radius: 50%;
     width: 14px;

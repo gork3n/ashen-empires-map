@@ -80,6 +80,9 @@ const mapMarkers = {
         { x: 784, y: 95, type: "quest", tooltip: "Hasculf (Wanders)" },
         { x: 796, y: 158, type: "quest", tooltip: "A Young Maid (Wanders)" },
         { x: 887, y: 138, type: "quest", tooltip: "Eastern Gate Lieutenant" },
+        { x: 648, y: 181, type: "quest", tooltip: "Roger Duncan" },
+        { x: 648, y: 189, type: "quest", tooltip: "Paula Duncan" },
+
 
 
         // Krythan Island Quests
