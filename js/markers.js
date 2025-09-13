@@ -30,7 +30,7 @@ const mapMarkers = {
     ],
     
     docks: [
-        // Valinor Island Docks
+        /* Valinor Island Docks */
         // No active docks on Valinor Island as of now
 
         // Krythan Island Docks
@@ -44,10 +44,12 @@ const mapMarkers = {
         { x: 1353, y: 1289, type: "dock", tooltip: "Fort Eastwatch Dock" },
         { x: 1134, y: 1473, type: "dock", tooltip: "Silvest Dock" },
         { x: 1098, y: 1516, type: "dock", tooltip: "Silvest Island Dock" },
+        //Done
 
         // Lotor's Summer Palace Docks
         { x: 792, y: 580, type: "dock", tooltip: "Palace Dock" },
         { x: 858, y: 728, type: "dock", tooltip: "LSP Dock" },
+        //Done
 
         // Minotaur Island Docks
         // No active docks on Minotaur Island as of now
@@ -99,7 +101,7 @@ const mapMarkers = {
 
         // Lotor's Summer Palace Quests
         
-        // Add more quests
+        // Add more quests NPCs as needed
     ],
     
     shops: [
