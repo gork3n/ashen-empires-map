@@ -151,6 +151,7 @@ function createLabelToggleButtons() {
     
     // Create toggle button for each label category
     const labelCategories = [
+        { id: 'landmarks', name: 'Landmarks', icon: 'tour' },
         { id: 'cities', name: 'Cities', icon: 'location_city' },
         { id: 'islands', name: 'Islands', icon: 'park' },
         { id: 'dungeons', name: 'Dungeons', icon: 'fort' },

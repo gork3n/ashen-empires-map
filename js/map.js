@@ -10,6 +10,26 @@ const customMarkerImages = {};
 
 // Define custom styles for different label categories
 const labelStyles = {
+    landmarks: {
+        // Gold gradient for landmarks
+        useGradient: true,
+        fontFamily: '"Alegreya Sans", sans-serif',
+        fontWeight: 900,
+        strokeColor: '#000000',
+        strokeWidth: 2,
+        fontSize: 22,
+        gradientColors: [
+            { pos: 0, color: '#8B7034' },
+            { pos: 0.1, color: '#A7893C' },
+            { pos: 0.3, color: '#D4AF37' },
+            { pos: 0.42, color: '#F8E597' },
+            { pos: 0.5, color: '#FFFFFF' },
+            { pos: 0.58, color: '#F8E597' },
+            { pos: 0.7, color: '#D4AF37' },
+            { pos: 0.9, color: '#A7893C' },
+            { pos: 1, color: '#8B7034' }
+        ]
+    },
     islands: {
         // Gold gradient for islands only
         useGradient: true,
@@ -307,7 +327,7 @@ function createLabelImageStyle(text, fontSize, styleOptions = {}) {
     // Create an offscreen canvas to render the text
     var canvas = document.createElement('canvas');
     var paddingX = 20;
-    var paddingY = 10;
+    var paddingY = 2; // This controls the vertical space between the text and the anchor point.
     
     // Set canvas context
     var ctx = canvas.getContext('2d', { willReadFrequently: true });

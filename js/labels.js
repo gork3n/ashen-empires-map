@@ -1,19 +1,27 @@
 // Define all map labels organized by category
 const mapLabels = {
+    landmarks: [
+        // Add landmark labels here
+        // Valinor Island Landmarks
+
+        // Krythan Island Landmarks
+        { x: 1374, y: 1435, name: "Valley of the Dead", fontSize: 30 },
+
+    ],
     cities: [
         // Valinor Island Cities
         { x: 759, y: 80, name: "Valinor", fontSize: 24 },
 
         // Krythan Island Cities
-        { x: 310, y: 825, name: "Jeel", fontSize: 24 },
-        { x: 525, y: 1058, name: "Hothbra", fontSize: 24 },
-        { x: 788, y: 1171, name: "Varg", fontSize: 24 },
-        { x: 342, y: 1440, name: "New Korelth", fontSize: 18 },
-        { x: 670, y: 1675, name: "Vrethpool", fontSize: 18 },
-        { x: 247, y: 1116, name: "Lotor's Castle", fontSize: 18 },
-        { x: 1066, y: 1151, name: "Cliffside", fontSize: 20 },
-        { x: 1086, y: 1355, name: "Silvest", fontSize: 22 },
-        { x: 1333, y: 1282, name: "Fort Eastwatch", fontSize: 20 },
+        { x: 290, y: 807, name: "Jeel", fontSize: 30 },
+        { x: 525, y: 1058, name: "Hothbra", fontSize: 30 },
+        { x: 788, y: 1171, name: "Varg", fontSize: 30 },
+        { x: 342, y: 1440, name: "New Korelth", fontSize: 30 },
+        { x: 670, y: 1670, name: "Vrethpool", fontSize: 30 },
+        { x: 247, y: 1116, name: "Lotor's Castle", fontSize: 30 },
+        { x: 1066, y: 1151, name: "Cliffside", fontSize: 30 },
+        { x: 1086, y: 1355, name: "Silvest", fontSize: 30 },
+        { x: 1344, y: 1282, name: "Fort Eastwatch", fontSize: 30 },
 
 
         //Scarab Island Cities
@@ -46,7 +54,7 @@ const mapLabels = {
         { x: 421, y: 69, name: "Party Island", fontSize: 30 },
         { x: 1545, y: 556, name: "Prison Island", fontSize: 20 },
         { x: 137, y: 230, name: "Minotaur Island", fontSize: 30 },
-        { x: 92, y: 942, name: "Guild Arena Island", fontSize: 25 },
+        { x: 88, y: 942, name: "Guild Arena Island", fontSize: 30 },
         { x: 820, y: 2122, name: "Scorched Island", fontSize: 24 },
         { x: 1130, y: 3210, name: "Hell Island", fontSize: 30 },
         { x: 515, y: 640, name: "Mirthik's Island", fontSize: 14 },
@@ -59,8 +67,10 @@ const mapLabels = {
         // Dungeons and Lairs Here
 
         // Krythan Island Dungeons
+        { x: 874, y: 1377, name: "Cultist Lair", fontSize: 15 },
 
         // Valinor Island Dungeons
+        { x: 866, y: 302, name: "Bonesnarl's Lair", fontSize: 16 },
 
 
     ],
@@ -70,6 +80,11 @@ const mapLabels = {
 
         // Krythan Island Caves
         { x: 440, y: 761, name: "Mirthik's Cave", fontSize: 16 },
+        { x: 1017, y: 1109, name: "Silvest Mines", fontSize: 15 },
+        { x: 1098, y: 1184, name: "Cliffside Mines", fontSize: 15 },
+        { x: 1433, y: 1379, name: "Dalvon Mines", fontSize: 15 },
+        { x: 1181, y: 1301, name: "Orc Cave", fontSize: 15 },
+        { x: 391, y: 1318, name: "Flataga Mines", fontSize: 15 },
         // Add cave labels here
     ],
     
@@ -87,6 +102,14 @@ const mapLabels = {
         { x: 436, y: 855, name: "Crypt of Kargoth", fontSize: 14 },
         { x: 832, y: 1035, name: "Holendar's Mansion", fontSize: 15 },
         { x: 895, y: 1020, name: "Krythan Crypt", fontSize: 15 },
+        { x: 836, y: 1279, name: "Scalo's Den", fontSize: 15 },
+        { x: 1279, y: 1123, name: "Kobold Castle", fontSize: 18 },
+        { x: 1376, y: 1077, name: "Karzak Cove", fontSize: 15 },
+        { x: 88, y: 1503, name: "Tallem'im house", fontSize: 14 },
+        { x: 516, y: 1302, name: "Wasp Hive", fontSize: 14 },
+        { x: 782, y: 1532, name: "Orc Fort", fontSize: 18 },
+        
+        
         
         
     ],

@@ -31,16 +31,26 @@ const mapMarkers = {
     
     docks: [
         // Valinor Island Docks
-
+        // No active docks on Valinor Island as of now
 
         // Krythan Island Docks
+        { x: 449, y: 602, type: "dock", tooltip: "Silvest Northern Island Dock" },
         { x: 266, y: 823, type: "dock", tooltip: "Jeel Dock" },
+        { x: 212, y: 1129, type: "dock", tooltip: "Lotor's Castle Dock" },
+        { x: 431, y: 1465, type: "dock", tooltip: "New Korelth Dock" },
+        { x: 71, y: 1516, type: "dock", tooltip: "Tallem'im House Dock" },
+        { x: 843, y: 1330, type: "dock", tooltip: "Scalo's Den Dock" },
+        { x: 1409, y: 1098, type: "dock", tooltip: "Karzak Cove Dock" },
+        { x: 1353, y: 1289, type: "dock", tooltip: "Fort Eastwatch Dock" },
+        { x: 1134, y: 1473, type: "dock", tooltip: "Silvest Dock" },
+        { x: 1098, y: 1516, type: "dock", tooltip: "Silvest Island Dock" },
 
         // Lotor's Summer Palace Docks
         { x: 792, y: 580, type: "dock", tooltip: "Palace Dock" },
         { x: 858, y: 728, type: "dock", tooltip: "LSP Dock" },
 
         // Minotaur Island Docks
+        // No active docks on Minotaur Island as of now
 
         // Party Island Docks
 
@@ -119,7 +129,7 @@ const mapMarkers = {
     ],
     
     trainers: [
-        // Trainers category encompasses various trainer and quest NPCs
+        // Trainers category encompasses various trainer and taskmaster NPCs
 
         // Valinor Island Trainers
         
@@ -178,6 +188,10 @@ const mapMarkers = {
         //Western Mainland Banks
 
         //Eastern Mainland Banks
+        
+        //Tundra Banks
+
+
         // Add more banks
     ],
 
@@ -188,6 +202,7 @@ const mapMarkers = {
         { x: 763, y: 118, type: "underground", tooltip: "Stairs to Mage Trainers" },
         
         //Krythan Island Undergrounds
+        { x: 967, y: 1318, type: "underground", tooltip: "Snake Pit" },
 
         //Lotor's Summer Palace Undergrounds
         { x: 764, y: 754, type: "underground", tooltip: "Sewer Entrance" },
