@@ -85,6 +85,8 @@ const mapLabels = {
         // Krythan Island Places of Interest
         { x: 327, y: 742, name: "Jeel Snake Pit", fontSize: 14 },
         { x: 436, y: 855, name: "Crypt of Kargoth", fontSize: 14 },
+        { x: 832, y: 1035, name: "Holendar's Mansion", fontSize: 15 },
+        { x: 895, y: 1020, name: "Krythan Crypt", fontSize: 15 },
         
         
     ],

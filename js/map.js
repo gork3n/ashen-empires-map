@@ -158,30 +158,27 @@ document.addEventListener('DOMContentLoaded', function() {
  * Initialize the map and controls
  */
 function initializeMap() {
-    // Custom coordinate format function to display whole numbers and adjust Y axis
-    function customCoordFormat(coord) {
-        if (!coord) return '';
-        
-        // Round to whole numbers
-        var x = Math.round(coord[0]);
-        
-        // For Y, we need to invert the coordinate since OpenLayers has origin at bottom-left
-        // and we want origin at top-left
-        var y = Math.round(4096 - coord[1]);
-        
-        // Make sure y is within bounds
-        y = Math.max(0, Math.min(4096, y));
-        
-        // Return formatted string
-        return 'X: ' + x + ', Y: ' + y;
-    }
-    
     // Remove any existing content in the mouse-position div
     const mousePositionDiv = document.getElementById('mouse-position');
     if (mousePositionDiv) {
         mousePositionDiv.innerHTML = '';
     }
     
+    // --- Set Initial Map View ---
+    // Define the center of the map using in-game (4096x4096) coordinates.
+    // This makes it easy to change the starting location.
+    const initialCenterGameCoords = { x: 1102, y: 1178 }; // Example: Valinor City
+
+    // Convert the in-game coordinates to OpenLayers view coordinates.
+    // The map is 16384x16384, which is 4x the in-game coordinates.
+    // X coordinate is scaled by 4.
+    // Y coordinate is scaled by 4 and then inverted (16384 - Y) because OpenLayers
+    // has its origin at the bottom-left, while the game and our tiles have it at the top-left.
+    const initialCenterOlCoords = [
+        initialCenterGameCoords.x * 4,
+        16384 - (initialCenterGameCoords.y * 4)
+    ];
+
     // Initialize the map
     map = new ol.Map({
         controls: ol.control.defaults.defaults(), pixelRatio: 1, // Improves performance on low-end devices
@@ -206,7 +203,7 @@ function initializeMap() {
             })
         ],
         view: new ol.View({
-            center: [3520, 15000],
+            center: initialCenterOlCoords,
             resolution: 2,
             minResolution: 2,
             maxResolution: 64,
