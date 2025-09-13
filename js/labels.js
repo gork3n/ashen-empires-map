@@ -10,7 +10,7 @@ const mapLabels = {
     ],
     cities: [
         // Valinor Island Cities
-        { x: 759, y: 80, name: "Valinor", fontSize: 24 },
+        { x: 759, y: 65, name: "Valinor", fontSize: 24 },
 
         // Krythan Island Cities
         { x: 290, y: 807, name: "Jeel", fontSize: 30 },
@@ -50,7 +50,7 @@ const mapLabels = {
         { x: 775, y: 571, name: "Lotor's Summer Palace", fontSize: 30 },
         { x: 663, y: 630, name: "Real Estate Island", fontSize: 20 },
 
-        { x: 981, y: 72, name: "Valinor Island", fontSize: 30 },
+        { x: 920, y: 60, name: "Valinor Island", fontSize: 35 },
         { x: 421, y: 69, name: "Party Island", fontSize: 30 },
         { x: 1545, y: 556, name: "Prison Island", fontSize: 20 },
         { x: 137, y: 230, name: "Minotaur Island", fontSize: 30 },
@@ -89,7 +89,7 @@ const mapLabels = {
     
     interests: [
         // Valinor Island Places of Interest
-        { x: 651, y: 186, name: "Duncan's Cottage", fontSize: 16 },
+        { x: 651, y: 174, name: "Duncan's Cottage", fontSize: 16 },
         { x: 570, y: 313, name: "Ruined Temple", fontSize: 16 },
         { x: 641, y: 362, name: "Lanore", fontSize: 16 },
         { x: 1083, y: 475, name: "Ecclain's Caravan", fontSize: 16 },

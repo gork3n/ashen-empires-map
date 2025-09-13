@@ -187,7 +187,7 @@ function initializeMap() {
     // --- Set Initial Map View ---
     // Define the center of the map using in-game (4096x4096) coordinates.
     // This makes it easy to change the starting location.
-    const initialCenterGameCoords = { x: 1102, y: 1178 }; // Example: Valinor City
+    const initialCenterGameCoords = { x: 876, y: 236 }; // Example: Valinor City
 
     // Convert the in-game coordinates to OpenLayers view coordinates.
     // The map is 16384x16384, which is 4x the in-game coordinates.
@@ -210,7 +210,7 @@ function initializeMap() {
                     tileGrid: new ol.tilegrid.TileGrid({
                         extent: [0,0,16384,16384],
                         origin: [0,16384],
-                        resolutions: [64, 32, 16, 8, 4, 2, 1],
+                        resolutions: [64, 32, 16, 8, 4, 2],
                         tileSize: [256, 256]
                     }),
                     tileUrlFunction: function(tileCoord) {
@@ -519,8 +519,7 @@ function addMapMarkers(map) {
             source: markerSource,
             title: category + ' Markers',
             visible: true,
-            minResolution: 2, // Hides layer when zoomed in past level 5 (resolution < 2)
-            maxResolution: 4  // Hides layer when zoomed out to level 4 (resolution >= 4)
+            maxResolution: 4  // Hides layer when zoomed out to level 4 or below (resolution >= 4)
         });
         
         // Store the layer reference
@@ -570,10 +569,9 @@ function addMapLabels(map) {
             visible: true
         };
 
-        // Hide all labels except cities and islands when zoomed out (resolution >= 4)
+        // Hide all labels except cities and islands when zoomed out to level 4 or below (resolution >= 4)
         if (category !== 'cities' && category !== 'islands') {
-            layerOptions.minResolution = 2;
-            layerOptions.maxResolution = 4;
+            layerOptions.maxResolution = 4; // Hides layer when zoomed out to level 4 or below (resolution >= 4)
         }
 
         // Create vector layer for this category
@@ -631,7 +629,7 @@ function addLabelFeature(source, x, y, text, fontSize, category) {
     });
     
     // Get style options for this category
-    const styleOptions = labelStyles[category] || defaultLabelStyle;
+    const styleOptions = { ... (labelStyles[category] || defaultLabelStyle) };
     
     // Override font size if provided
     if (fontSize) {
@@ -695,6 +693,9 @@ function showDetailModal(locationName) {
     // --- 1. Populate Modal Content ---
     modalTitle.textContent = locationData.title;
     modalInfo.innerHTML = locationData.info;
+    // Apply a background to the map container for styling
+    modalMapContainer.style.backgroundImage = "url('images/bg.png')";
+    modalMapContainer.style.backgroundRepeat = 'repeat';
 
     // --- 2. Show the Modal ---
     modal.style.display = 'flex';
@@ -719,6 +720,31 @@ function showDetailModal(locationName) {
         });
 
         const detailMarkerSource = new ol.source.Vector();
+        const detailLabelSource = new ol.source.Vector();
+
+        // --- View Configuration ---
+        const viewOptions = {
+            projection: projection,
+            center: ol.extent.getCenter(extent), // Default: center of the image
+            zoom: 2,                             // Default: initial zoom
+            minZoom: 1,
+        };
+
+        // Override defaults with settings from detail-maps.js if they exist
+        if (locationData.initialView) {
+            if (locationData.initialView.center) {
+                // Convert top-left pixel coords to OL's bottom-left based coords
+                const centerX = locationData.initialView.center[0];
+                const centerY = locationData.initialView.center[1];
+                viewOptions.center = [centerX, imageHeight - centerY];
+            }
+            if (locationData.initialView.zoom !== undefined) {
+                viewOptions.zoom = locationData.initialView.zoom;
+            }
+            if (locationData.initialView.maxZoom !== undefined) {
+                viewOptions.maxZoom = locationData.initialView.maxZoom;
+            }
+        }
 
         detailMap = new ol.Map({
             target: 'modal-map',
@@ -731,14 +757,9 @@ function showDetailModal(locationName) {
                     }),
                 }),
                 new ol.layer.Vector({ source: detailMarkerSource }),
+                new ol.layer.Vector({ source: detailLabelSource }),
             ],
-            view: new ol.View({
-                projection: projection,
-                center: ol.extent.getCenter(extent),
-                zoom: 2,
-                maxZoom: 5,
-                minZoom: 1,
-            }),
+            view: new ol.View(viewOptions),
         });
 
         // Add the hard-coded markers for this location to the detail map
@@ -757,20 +778,25 @@ function showDetailModal(locationName) {
 
         const mainMapAreaWidth = imageWidth / scale;
         const mainMapAreaHeight = imageHeight / scale;
-        const mainMapBbox = {
+        const calculatedBbox = {
             minX: originX,
             minY: originY,
             maxX: originX + mainMapAreaWidth,
             maxY: originY + mainMapAreaHeight,
         };
 
+        // Define the bounding box for fetching features. Start with the calculated box and
+        // override with a specific filterBbox if provided. This prevents pulling in
+        // markers from nearby areas if the detail map image is very large.
+        const featureBbox = { ...calculatedBbox, ...locationData.filterBbox };
+
         // 3. Iterate through main map markers and pull in any that are within the bounds.
         for (const category in mapMarkers) {
             mapMarkers[category].forEach(mainMarker => {
                 // Check if the marker is within the bounding box and not already added.
                 if (
-                    mainMarker.x >= mainMapBbox.minX && mainMarker.x <= mainMapBbox.maxX &&
-                    mainMarker.y >= mainMapBbox.minY && mainMarker.y <= mainMapBbox.maxY &&
+                    mainMarker.x >= featureBbox.minX && mainMarker.x <= featureBbox.maxX &&
+                    mainMarker.y >= featureBbox.minY && mainMarker.y <= featureBbox.maxY &&
                     !existingTooltips.has(mainMarker.tooltip)
                 ) {
                     // Convert main map coordinates to sub-map pixel coordinates.
@@ -783,6 +809,37 @@ function showDetailModal(locationName) {
         }
 
         addDetailMapMarkers(detailMarkerSource, detailMarkers, imageHeight);
+
+        // --- Combine labels from labels.js ---
+        const detailLabels = [];
+        // In the future, we might have manually defined labels in detail-maps.js, so prepare for that.
+        const existingLabelNames = new Set((locationData.labels || []).map(l => l.name));
+
+        // Iterate through main map labels and pull in any that are within the bounds.
+        for (const category in mapLabels) {
+            mapLabels[category].forEach(mainLabel => {
+                // Check if the label is within the bounding box and not already added.
+                if (
+                    mainLabel.x >= featureBbox.minX && mainLabel.x <= featureBbox.maxX &&
+                    mainLabel.y >= featureBbox.minY && mainLabel.y <= featureBbox.maxY &&
+                    !existingLabelNames.has(mainLabel.name)
+                ) {
+                    // Convert main map coordinates to sub-map pixel coordinates.
+                    const subX = ((mainLabel.x - originX) * scale) + offsetX;
+                    const subY = ((mainLabel.y - originY) * scale) + offsetY;
+
+                    detailLabels.push({
+                        x: Math.round(subX),
+                        y: Math.round(subY),
+                        name: mainLabel.name,
+                        fontSize: mainLabel.fontSize,
+                        category: category
+                    });
+                }
+            });
+        }
+
+        addDetailMapLabels(detailLabelSource, detailLabels, imageHeight);
 
         // --- 4. Set up Tooltips for Detail Map ---
         if (markerTooltipOverlay) {
@@ -797,41 +854,49 @@ function showDetailModal(locationName) {
         // Add coordinate display for the detail map
         const modalMousePositionDiv = document.getElementById('modal-mouse-position');
         if (modalMousePositionDiv) {
-            modalMousePositionDiv.textContent = 'X: --- | Y: ---';
-
+            let lastDisplayX, lastDisplayY;
+            
             const offsetX = locationData.offset?.x || 0;
             const offsetY = locationData.offset?.y || 0;
             const originX = locationData.origin?.x || 0;
             const originY = locationData.origin?.y || 0;
             const scale = locationData.scale || 1;
 
+            const updateModalDisplay = () => {
+                const zoom = detailMap.getView().getZoom();
+                const zoomText = 'Zoom: ' + (zoom !== undefined ? Math.round(zoom) : '---');
+                const coordText = (lastDisplayX !== undefined && lastDisplayY !== undefined) ?
+                    'X: ' + lastDisplayX + ' | Y: ' + lastDisplayY :
+                    'X: --- | Y: ---';
+                modalMousePositionDiv.textContent = `${coordText} | ${zoomText}`;
+            };
+
+            // Initial display and update on zoom change
+            detailMap.on('moveend', updateModalDisplay);
+            updateModalDisplay(); // Set initial text
+
             detailMap.on('pointermove', function(evt) {
                 if (evt.dragging) return;
 
                 const coord = evt.coordinate;
                 if (coord) {
-                    // Raw pixel coordinates from top-left of the image.
-                    const rawX = Math.round(coord[0]);
-                    const rawY = Math.round(imageHeight - coord[1]); // Invert Y
-
-                    // 1. Subtract the image padding offset to get the coordinate relative to the map content.
-                    const contentX = rawX - offsetX;
-                    const contentY = rawY - offsetY;
-
-                    // 2. Scale the content coordinate down to the main map's scale.
+                    // Convert OL coordinate (bottom-left origin) to main map coordinate (top-left origin)
+                    const contentX = Math.round(coord[0]) - offsetX;
+                    const contentY = Math.round(imageHeight - coord[1]) - offsetY;
+                    
                     const scaledX = contentX / scale;
                     const scaledY = contentY / scale;
 
-                    // 3. Add the origin to get the final main map coordinate.
-                    const displayX = Math.round(originX + scaledX);
-                    const displayY = Math.round(originY + scaledY);
-
-                    modalMousePositionDiv.textContent = 'X: ' + displayX + ' | Y: ' + displayY;
+                    lastDisplayX = Math.round(originX + scaledX);
+                    lastDisplayY = Math.round(originY + scaledY);
+                    updateModalDisplay();
                 }
             });
 
             detailMap.getViewport().addEventListener('mouseout', function() {
-                modalMousePositionDiv.textContent = 'X: --- | Y: ---';
+                lastDisplayX = undefined;
+                lastDisplayY = undefined;
+                updateModalDisplay();
             });
         }
         
@@ -866,11 +931,52 @@ function addDetailMapMarkers(source, markers, imageHeight) {
 }
 
 /**
+ * Adds a set of labels to a vector source for a detail map.
+ * @param {ol.source.Vector} source - The vector source to add labels to.
+ * @param {Array} labels - An array of label objects to add.
+ * @param {number} imageHeight - The height of the detail map image for coordinate conversion.
+ */
+function addDetailMapLabels(source, labels, imageHeight) {
+    if (!labels || !labels.length) return;
+
+    labels.forEach(label => {
+        // Convert top-left coordinates (from detail-maps.js) to the bottom-left
+        // system that OpenLayers uses for static images.
+        const olY = imageHeight - label.y;
+        const coordinates = [label.x, olY];
+
+        const feature = new ol.Feature({
+            geometry: new ol.geom.Point(coordinates),
+            name: label.name,
+            category: label.category,
+        });
+
+        // Get style options for this category and create a copy to avoid side effects
+        const styleOptions = { ...(labelStyles[label.category] || defaultLabelStyle) };
+
+        // Override font size if provided
+        if (label.fontSize) {
+            styleOptions.fontSize = label.fontSize;
+        }
+
+        // Apply the style
+        feature.setStyle(createLabelImageStyle(label.name, styleOptions.fontSize, styleOptions));
+        source.addFeature(feature);
+    });
+}
+
+/**
  * Closes the detail modal and cleans up the map instance.
  */
 function closeDetailModal() {
     const modal = document.getElementById('detail-modal');
     if (modal) modal.style.display = 'none';
+
+    // Clean up background style from the map container
+    const modalMapContainer = document.getElementById('modal-map');
+    if (modalMapContainer) {
+        modalMapContainer.style.backgroundImage = '';
+    }
 
     if (detailMap) {
         // Move the tooltip overlay back to the main map before destroying the detail map

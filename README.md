@@ -16,6 +16,11 @@ An interactive map for Ashen Empires with pixel-perfect coordinates and multiple
   - [Map Coordinates](#map-coordinates)
   - [A Heads-Up About Map Accuracy](#a-heads-up-about-map-accuracy)
   - [Project Structure](#project-structure)
+  - [Adding and Configuring Detail Maps](#adding-and-configuring-detail-maps)
+    - [Basic Structure](#basic-structure)
+    - [Coordinate Mapping Methodology](#coordinate-mapping-methodology)
+      - [How to Calculate the `origin`](#how-to-calculate-the-origin)
+    - [Advanced Configuration](#advanced-configuration)
   - [Integration Guide](#integration-guide)
     - [Method 1: Using as a Standalone Page](#method-1-using-as-a-standalone-page)
     - [Method 2: Embedding in an Existing Website](#method-2-embedding-in-an-existing-website)
@@ -29,13 +34,15 @@ An interactive map for Ashen Empires with pixel-perfect coordinates and multiple
 - **Precise Coordinates**: Real-time coordinate display showing exact X,Y positions based on the 4096x4096 in-game map.
 - **Interactive Sidebar**: Collapsible sidebar with controls to toggle visibility for different categories of labels and markers.
 - **Dynamic Markers & Labels**:
-  - Markers for portals, docks, shops, trainers, and banks.
-  - Markers for portals, docks, shops, trainers, banks, and **spawn gates**.
+  - Markers for portals, docks, shops, trainers, banks, and spawn gates.
   - Labels for islands, cities, dungeons, and other points of interest.
   - Custom, canvas-rendered icons and text labels with shadows and gradients.
-- **Informative Tooltips**: Hover over a marker to see its name and type.
-- **Informative Tooltips**: Hover over any marker on the main map **or in a detail view** to see its name and type.
-- **Detail Views**: Click on major location labels (like Lotor's Summer Palace) to open a modal with a high-resolution sub-map. These detail maps now **automatically include relevant markers from the main map** and have their own working tooltips and coordinate systems.
+  - **Zoom-based visibility**: Markers and minor labels automatically disappear when zoomed out to reduce clutter.
+- **Informative Tooltips**: Hover over any marker on the main map or in a detail view to see its name and type.
+- **Detail Views**: Click on major location labels (like "Valinor") to open a modal with a high-resolution sub-map. These detail maps are highly configurable and feature:
+  - Automatic inclusion of relevant markers **and labels** from the main map.
+  - Custom initial view settings (center, zoom) and zoom limits.
+  - Precise filtering to prevent including features from nearby, unrelated areas.
 - **Quick Tips**: A helpful, cycling tip bar at the bottom of the map to help users discover features. Click it to open a modal with a full list of game and map tips.
 - **Responsive Design**: The interface adapts to different screen sizes, making it mobile-friendly. However, some of the features are buggy on smaller screens. Desktop browsers recommended.
 
@@ -47,7 +54,7 @@ This project is built using **OpenLayers**, chosen for its superior handling of 
   - `map.js`: Core map functionality, event handling, and modal logic.
   - `sidebar.js`: Manages the interactive sidebar controls.
   - `tips.js`: Powers the quick tips bar and modal.
-  - `labels.js`, `markers.js`, `detail-maps.js`: Data files defining all labels, markers, and sub-map configurations.
+  - `labels.js`, `markers.js`, `detail-maps.js`: Data files defining all labels, markers, and sub-map configurations, including advanced options for filtering and initial views.
 - **Custom Rendering**: Markers and labels are rendered on-the-fly to an HTML canvas for high-quality visuals and performance.
 - **Coordinate System**: The map accurately translates between the 16384x16384 tile-based map and the 4096x4096 in-game coordinate system, ensuring all displayed coordinates are correct.
 
@@ -77,6 +84,64 @@ So, if a coordinate seems slightly off, this is why! It shouldn't affect usage, 
 - `/css/` - Stylesheets for the map and UI.
 - `/tiles/` - Directory containing all map tile images
 - `/images/` - Directory containing background images and assets for detail maps.
+
+## Adding and Configuring Detail Maps
+
+Detail maps are high-resolution sub-maps that appear in a modal window when a user clicks on a major location label. All configuration for these maps is handled in `js/detail-maps.js`.
+
+### Basic Structure
+
+Each detail map is an object within `detailMapData`, keyed by the location's exact name from `js/labels.js`.
+
+```javascript
+"Valinor": {
+    title: "Valinor",
+    image: {
+        url: 'images/Valinor_Island-600x.png',
+        width: 4441,
+        height: 3630
+    },
+    // ... coordinate mapping ...
+    // ... filtering ...
+    // ... initial view ...
+    info: `... HTML content ...`,
+    markers: [ /* markers specific to this map */ ]
+}
+```
+
+### Coordinate Mapping Methodology
+
+To ensure markers and labels from the main map appear correctly on a detail map, you must provide accurate coordinate mapping. This is done using the `origin`, `scale`, and `offset` properties.
+
+-   **`scale`**: The zoom factor of the detail map image compared to the main map. If your detail image is a 600% blow-up of a region, the scale is `6`.
+-   **`offset`**: The pixel padding *inside* the detail map image file. If the map content doesn't start at the very top-left pixel (0,0) of the image, `offset` defines the `x` and `y` distance to where the content begins.
+-   **`origin`**: The coordinate on the main 4096x4096 map that corresponds to the top-left corner of the detail map's *content* (i.e., after accounting for the `offset`).
+
+#### How to Calculate the `origin`
+
+This is the most critical step. You need a single, identifiable landmark that is visible on both the main map and your new detail map image.
+
+1.  **Find a Landmark**: Choose a distinct point, like the corner of a building or a specific marker.
+2.  **Get Main Map Coordinates**: Hover over this landmark on the main map and record its coordinates from the bottom-left display (e.g., `main_X = 776`, `main_Y = 100`).
+3.  **Get Detail Map Coordinates**: Open your detail map image in an editor and find the pixel coordinates of the *exact same landmark* from the top-left corner of the image file (e.g., `detail_X = 1482`, `detail_Y = 756`).
+4.  **Apply the Formula**: Use the following formulas to calculate the origin.
+
+    ```
+    origin_X = main_X - ((detail_X - offset_X) / scale)
+    origin_Y = main_Y - ((detail_Y - offset_Y) / scale)
+    ```
+
+    Once calculated, round the values and place them in the `origin` object. This calculation only needs to be done once per map.
+
+### Advanced Configuration
+
+-   **`filterBbox` (Optional)**: Use this to define a more precise area for fetching features. By default, the map fetches features from a box calculated from the image size. If your image is very large and contains unrelated nearby areas, you can use `filterBbox` to narrow the search. `minX`, `maxX`, `minY`, and `maxY` are based on the 4096x4096 main map coordinates.
+    -   *Example*: `filterBbox: { maxY: 550 }` was used on the Valinor map to prevent it from showing markers from Lotor's Summer Palace to the south.
+
+-   **`initialView` (Optional)**: Controls the initial state of the modal map.
+    -   `center`: The `[X, Y]` starting coordinates, based on the pixel dimensions of the detail map image (top-left origin).
+    -   `zoom`: The initial zoom level.
+    -   `maxZoom`: The maximum zoom level allowed for this specific map.
 
 ## Integration Guide
 
