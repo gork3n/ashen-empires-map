@@ -210,7 +210,7 @@ function initializeMap() {
                     tileGrid: new ol.tilegrid.TileGrid({
                         extent: [0,0,16384,16384],
                         origin: [0,16384],
-                        resolutions: [64, 32, 16, 8, 4, 2],
+                        resolutions: [64, 32, 16, 8, 4, 2, 1],
                         tileSize: [256, 256]
                     }),
                     tileUrlFunction: function(tileCoord) {
@@ -225,7 +225,7 @@ function initializeMap() {
         view: new ol.View({
             center: initialCenterOlCoords,
             resolution: 2,
-            minResolution: 2,
+            minResolution: 1,
             maxResolution: 64,
             constrainOnlyCenter: true,  // Constrain just the center, not the whole view
             showFullExtent: true
@@ -518,7 +518,9 @@ function addMapMarkers(map) {
         const markerLayer = new ol.layer.Vector({
             source: markerSource,
             title: category + ' Markers',
-            visible: true
+            visible: true,
+            minResolution: 2, // Hides layer when zoomed in past level 5 (resolution < 2)
+            maxResolution: 4  // Hides layer when zoomed out to level 4 (resolution >= 4)
         });
         
         // Store the layer reference
@@ -562,12 +564,20 @@ function addMapLabels(map) {
         // Create vector source for this category
         const labelSource = new ol.source.Vector();
         
-        // Create vector layer for this category
-        const labelLayer = new ol.layer.Vector({
+        const layerOptions = {
             source: labelSource,
             title: category + ' Labels',
             visible: true
-        });
+        };
+
+        // Hide all labels except cities and islands when zoomed out (resolution >= 4)
+        if (category !== 'cities' && category !== 'islands') {
+            layerOptions.minResolution = 2;
+            layerOptions.maxResolution = 4;
+        }
+
+        // Create vector layer for this category
+        const labelLayer = new ol.layer.Vector(layerOptions);
         
         // Store the layer reference
         labelLayers[category] = labelLayer;
@@ -935,31 +945,37 @@ function initializeCrosshair(mapInstance) {
 // And replace with this custom coordinate tracking:
 function initializeCoordinateDisplay() {
     const mousePositionDiv = document.getElementById('mouse-position');
-    
-    // Set default text
     if (mousePositionDiv) {
-        mousePositionDiv.textContent = 'X: --- | Y: ---';
-        
+        let lastX, lastY;
+
+        const updateDisplay = () => {
+            const zoom = map.getView().getZoom();
+            const zoomText = 'Zoom: ' + (zoom !== undefined ? Math.round(zoom) : '---');
+            const coordText = (lastX !== undefined && lastY !== undefined) ? 'X: ' + lastX + ' | Y: ' + lastY : 'X: --- | Y: ---';
+            mousePositionDiv.textContent = `${coordText} | ${zoomText}`;
+        };
+
+        // Initial display and update on zoom change
+        map.on('moveend', updateDisplay);
+        updateDisplay(); // Set initial text
+
         // Track pointer movement on the map
         map.on('pointermove', function(evt) {
             if (evt.dragging) return; // Skip during drag operations
-            
-            // Get map coordinates
+
             const coord = evt.coordinate;
-            
             if (coord) {
-                // Format coordinates - scale down, round to whole numbers and invert Y
-                const x = Math.round(coord[0] / 4);
-                const y = Math.round((16384 - coord[1]) / 4); // Invert Y coordinate and scale down
-                
-                // Update the display
-                mousePositionDiv.textContent = 'X: ' + x + ' | Y: ' + y;
+                lastX = Math.round(coord[0] / 4);
+                lastY = Math.round((16384 - coord[1]) / 4); // Invert Y coordinate and scale down
+                updateDisplay();
             }
         });
-        
+
         // Reset when pointer leaves the map
         map.getViewport().addEventListener('mouseout', function() {
-            mousePositionDiv.textContent = 'X: --- | Y: ---';
+            lastX = undefined;
+            lastY = undefined;
+            updateDisplay();
         });
     }
 }
