@@ -81,7 +81,6 @@ const mapLabels = {
         // Krythan Island Caves
         { x: 440, y: 761, name: "Mirthik's Cave", fontSize: 16 },
         { x: 1017, y: 1109, name: "Silvest Mines", fontSize: 15 },
-        { x: 1098, y: 1184, name: "Cliffside Mines", fontSize: 15 },
         { x: 1433, y: 1379, name: "Dalvon Mines", fontSize: 15 },
         { x: 1181, y: 1301, name: "Orc Cave", fontSize: 15 },
         { x: 391, y: 1318, name: "Flataga Mines", fontSize: 15 },
@@ -101,7 +100,7 @@ const mapLabels = {
         { x: 327, y: 742, name: "Jeel Snake Pit", fontSize: 14 },
         { x: 436, y: 855, name: "Crypt of Kargoth", fontSize: 14 },
         { x: 832, y: 1035, name: "Holendar's Mansion", fontSize: 15 },
-        { x: 895, y: 1020, name: "Krythan Crypt", fontSize: 15 },
+        { x: 895, y: 1020, name: "Krythan Cemetary", fontSize: 15 }, // I know it's misspelled on the map but it's also misspelled in AE.
         { x: 836, y: 1279, name: "Scalo's Den", fontSize: 15 },
         { x: 1279, y: 1123, name: "Kobold Castle", fontSize: 18 },
         { x: 1376, y: 1077, name: "Karzak Cove", fontSize: 15 },

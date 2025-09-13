@@ -203,9 +203,12 @@ const mapMarkers = {
         { x: 875, y: 311, type: "underground", tooltip: "Bonesnarl's Lair" }, //I need to verify this location
         { x: 763, y: 118, type: "underground", tooltip: "Stairs to Mage Trainers" },
         
+        
         //Krythan Island Undergrounds
         { x: 967, y: 1318, type: "underground", tooltip: "Snake Pit" },
-
+        { x: 907, y: 1031, type: "underground", tooltip: "Krythan Crypt" }, // I know it's misspelled on the map but it's also misspelled in AE.
+        { x: 1098, y: 1184, type: "underground", tooltip: "Cliffside Mines" },
+        { x: 820, y: 1044, type: "underground", tooltip: "Holendar's Mansion Basement" },
         //Lotor's Summer Palace Undergrounds
         { x: 764, y: 754, type: "underground", tooltip: "Sewer Entrance" },
 
