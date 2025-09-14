@@ -77,6 +77,8 @@ My editing software can only move images by whole pixels, so I couldn't perfectl
 
 So, if a coordinate seems slightly off, this is why! It shouldn't affect usage, but I wanted to let you know.
 
+Similarly, many of the labels and marker positions are being carried over from older map projects. I am actively working on verifying and correcting these as I find discrepancies.
+
 ## Project Structure
 
 - `openlayers.html` - Main HTML file for the map.
@@ -227,6 +229,7 @@ The map tiles were generated from the in-game map using GDAL2Tiles. The website 
 - ⬜ Search functionality for locations
 - ⬜ Mobile-optimized controls (sidebar behavior)
 - ⬜ Complete labeling system for all important locations
+- ⬜ Visual overlays for major regions (e.g., Darkforest, Battle Plains).
 
 ## Credits
 

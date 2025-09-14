@@ -519,7 +519,8 @@ function addMapMarkers(map) {
             source: markerSource,
             title: category + ' Markers',
             visible: true,
-            maxResolution: 4  // Hides layer when zoomed out to level 4 or below (resolution >= 4)
+            minResolution: 1, // Hides when zoomed in past level 6 (resolution < 1)
+            maxResolution: 4  // Hides when zoomed out to level 4 or more (resolution >= 4)
         });
         
         // Store the layer reference
@@ -566,13 +567,10 @@ function addMapLabels(map) {
         const layerOptions = {
             source: labelSource,
             title: category + ' Labels',
-            visible: true
+            visible: true,
+            minResolution: 1, // Hides when zoomed in past level 6 (resolution < 1)
+            maxResolution: 4  // Hides when zoomed out to level 4 or more (resolution >= 4)
         };
-
-        // Hide all labels except cities and islands when zoomed out to level 4 or below (resolution >= 4)
-        if (category !== 'cities' && category !== 'islands') {
-            layerOptions.maxResolution = 4; // Hides layer when zoomed out to level 4 or below (resolution >= 4)
-        }
 
         // Create vector layer for this category
         const labelLayer = new ol.layer.Vector(layerOptions);

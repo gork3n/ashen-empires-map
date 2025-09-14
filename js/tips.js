@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
         ],
         "Gameplay Tips": [
             "Remember to visit a trainer to spend your experience points and level up your skills.",
-            "Banks are shared across your account. Use them to transfer items between your characters.",
+            "Banks are shared across your account. Use them to transfer items between your characters on the same server.",
             "Different weapons have different swing timers and damage types. Experiment to see what works best against certain monsters!",
             "Quests from NPCs are a great way to earn experience, gold, and unique items."
         ]
