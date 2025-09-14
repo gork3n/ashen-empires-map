@@ -49,7 +49,7 @@ const mapLabels = {
         { x: 150, y: 70, name: "GM Island", fontSize: 30 },
         { x: 775, y: 571, name: "Lotor's Summer Palace", fontSize: 30 },
         { x: 663, y: 630, name: "Real Estate Island", fontSize: 20 },
-
+        { x: 1090, y: 992, name: "Krythan Island", fontSize: 35 },
         { x: 920, y: 60, name: "Valinor Island", fontSize: 35 },
         { x: 421, y: 69, name: "Party Island", fontSize: 30 },
         { x: 1545, y: 556, name: "Prison Island", fontSize: 20 },

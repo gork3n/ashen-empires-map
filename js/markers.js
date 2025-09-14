@@ -1,7 +1,10 @@
 // Define markers by category
 const mapMarkers = {
     portals: [
-        // Valinor Island Portals
+        /* Party Island Portals */
+        { x: 440, y: 120, type: "portal", tooltip: "Portal to Lotor's Summer Palace" },
+
+        /* Valinor Island Portals */
         { x: 776, y: 100, type: "portal", tooltip: "Portal to Leave Valinor" },
         { x: 776, y: 168, type: "portal", tooltip: "Portal to Arena Viewing Area" },
 
@@ -12,8 +15,9 @@ const mapMarkers = {
         { x: 185, y: 1466, type: "portal", tooltip: "Portal to Northeastern Mainlands North of Josody" },
         
         // Lotor's Summer Palace Portals
-        { x: 762, y: 593, type: "portal", tooltip: "Portal to Party Island" },
+        { x: 762, y: 589, type: "portal", tooltip: "Portal to Party Island" },
         { x: 763, y: 646, type: "portal", tooltip: "Portal to PvP Island" },
+        { x: 771, y: 615, type: "portal", tooltip: "Portal to Housing Realm" },
 
         // Real Estate Island Portals
         { x: 663, y: 735, type: "portal", tooltip: "Portal to Lotor's Summer Palace" },
@@ -99,13 +103,18 @@ const mapMarkers = {
 
         // Krythan Island Quests
 
+
         // Lotor's Summer Palace Quests
-        
+        { x: 795, y: 603, type: "quest", tooltip: "Captain Renwood" },
+
         // Add more quests NPCs as needed
     ],
     
     shops: [
-        //Valinor Shops
+        /*Party Island Shops*/
+        { x: 438, y: 87, type: "shop", tooltip: "Dalgo's Tavern" },
+
+        /* Valinor Shops */
         { x: 749, y: 116, type: "shop", tooltip: "Larodeth Lywelyn's Pub and Grub Tavern" },
         { x: 738, y: 120, type: "shop", tooltip: "Micheal Vonda's Weapon Shop" },
         { x: 733, y: 125, type: "shop", tooltip: "Thomas Blackstone's Armor Shop" },
@@ -117,7 +126,9 @@ const mapMarkers = {
         { x: 752, y: 154, type: "shop", tooltip: "Tina Florence's Leather Shop" },
 
 
-        //Krythan Shops
+        /* Krythan Shops */
+
+        
         //Varg Shops
         { x: 780, y: 1193, type: "shop", tooltip: "Magic Shop" },
         
@@ -126,6 +137,15 @@ const mapMarkers = {
         { x: 811, y: 683, type: "shop", tooltip: "Colleen Franks' Armor Shop" },
         { x: 863, y: 715, type: "shop", tooltip: "Garius' Farming Shop" },
         { x: 854, y: 712, type: "shop", tooltip: "Tom Uslak Carpentry Shop" },
+        { x: 770, y: 623, type: "shop", tooltip: "Blueprint Sales" },
+        { x: 772, y: 623, type: "shop", tooltip: "Surveying and Tools Sales" },
+        { x: 774, y: 603, type: "shop", tooltip: "Wizard Swishwhich's Shop - Currency: Rune Fragment" },
+        { x: 773, y: 604, type: "shop", tooltip: "Wizard Blunderstone" },
+        { x: 765, y: 606, type: "shop", tooltip: "VIP Store" },
+        { x: 764, y: 600, type: "shop", tooltip: "Lotor's Gardener's Shop" },
+        { x: 792, y: 595, type: "shop", tooltip: "Larson Davide's Shipyard Shop" },
+        { x: 794, y: 595, type: "shop", tooltip: "Tides of Fate Raft Offer" },
+
 
         // Add more shops
     ],
@@ -146,12 +166,20 @@ const mapMarkers = {
         { x: 718, y: 100, type: "trainer", tooltip: "Valinor Orb Reset" },
         { x: 778, y: 103, type: "trainer", tooltip: "Island Steward" },
         { x: 780, y: 175, type: "trainer", tooltip: "Osalka Farming Expert (Wanders)" },
+        { x: 781, y: 609, type: "trainer", tooltip: "Lotorian Faction Officer" },
+        { x: 784, y: 601, type: "trainer", tooltip: "Champion of Lotor" },
+        { x: 789, y: 602, type: "trainer", tooltip: "Advanced Skill Trainer" },
+        { x: 795, y: 623, type: "trainer", tooltip: "Fishing Event Judge" },
 
         // Krythan Island Trainers
         
         // Lotor's Summer Palace Trainers
-        
+        { x: 776, y: 619, type: "trainer", tooltip: "Master Draftsman" },
         { x: 839, y: 708, type: "trainer", tooltip: "Henchman Trainer" },
+        { x: 770, y: 620, type: "trainer", tooltip: "Real Estate Agent" },
+        { x: 771, y: 610, type: "trainer", tooltip: "Lotor's Steward" },
+        
+        
         
         // Add more trainers
     ],
@@ -162,6 +190,8 @@ const mapMarkers = {
         { x: 779, y: 141, type: "spawn_good", tooltip: "Spawn Gate" },
         
         //Krythan Island Spawns
+        { x: 777, y: 873, type: "spawn_evil", tooltip: "Evil Spawn Gate" },
+
 
         
         // Example: { x: 123, y: 456, type: "spawn_good", tooltip: "Good Spawn Gate" }
@@ -198,20 +228,41 @@ const mapMarkers = {
     ],
 
     undergrounds: [
-        //Valinor Island Undergrounds
+        /* Valinor Island Undergrounds */
         { x: 609, y: 359, type: "underground", tooltip: "Frump's Lair" },
         { x: 875, y: 311, type: "underground", tooltip: "Bonesnarl's Lair" }, //I need to verify this location
         { x: 763, y: 118, type: "underground", tooltip: "Stairs to Mage Trainers" },
         
+        /* Lotor's Summer Palace Undergrounds */
+        { x: 764, y: 754, type: "underground", tooltip: "Sewer Entrance" },
         
-        //Krythan Island Undergrounds
-        { x: 967, y: 1318, type: "underground", tooltip: "Snake Pit" },
+        /* Krythan Island Undergrounds */
+
+        // Region: Silvest Valley Undergrounds
+        { x: 967, y: 1348, type: "underground", tooltip: "Snake Pit" },
         { x: 907, y: 1031, type: "underground", tooltip: "Krythan Crypt" }, // I know it's misspelled on the map but it's also misspelled in AE.
         { x: 1098, y: 1184, type: "underground", tooltip: "Cliffside Mines" },
-        { x: 820, y: 1044, type: "underground", tooltip: "Holendar's Mansion Basement" },
-        //Lotor's Summer Palace Undergrounds
-        { x: 764, y: 754, type: "underground", tooltip: "Sewer Entrance" },
 
+        // Region: Krythan Undergrounds
+        { x: 820, y: 1044, type: "underground", tooltip: "Holendar's Mansion Basement" },
+        { x: 781, y: 863, type: "underground", tooltip: "Trap Door to LSP" },
+        { x: 791, y: 918, type: "underground", tooltip: "Ladder to LSP Sewer (Away from evil spawn gate)" },
+
+
+        
+
+        
+    ],
+    
+    information: [
+        /* Valinor Island Information */
+
+        /*Lotor's Summer Palace Information*/
+        { x: 736, y: 591, type: "information", tooltip: "Fallen Warriors Memorial" },
+        { x: 715, y: 602, type: "information", tooltip: "Memorial to the Lost Sons" },
+        { x: 772, y: 687, type: "information", tooltip: "Jamoal the Sage (Wanders) - Exchange Race Changing Scrolls NPC" },
+
+        // Krythan Island Information
         
     ]
 };
@@ -262,6 +313,11 @@ const markerStyles = {
     underground: {
         icon: "tools_ladder",
         color: "#d36517ff", // SaddleBrown
+        size: 18
+    },
+    information: {
+        icon: "info",
+        color: "#00BFFF", // DeepSkyBlue
         size: 18
     }
 };
