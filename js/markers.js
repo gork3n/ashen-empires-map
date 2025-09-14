@@ -12,7 +12,6 @@ const mapMarkers = {
 
         // Krythan Island Portals
         { x: 585, y: 1497, type: "portal", tooltip: "Portal to East Mainlands West of Parian" },
-        { x: 2800, y: 849, type: "portal", tooltip: "Portal to Jeel" },
         { x: 3649, y: 950, type: "portal", tooltip: "Portal to Farstead" },
         { x: 185, y: 1466, type: "portal", tooltip: "Portal to Northeastern Mainlands North of Josody" },
         
