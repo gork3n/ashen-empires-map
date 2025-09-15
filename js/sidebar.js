@@ -10,10 +10,17 @@ function initSidebar() {
     const sidebar = document.getElementById('sidebar');
     const sidebarToggle = document.getElementById('sidebar-toggle');
     const container = document.getElementById('container');
+
+    const isMobile = () => window.innerWidth <= 768;
     
     // Toggle sidebar collapsed state
     if (sidebarToggle && sidebar && container) {
         sidebarToggle.addEventListener('click', function() {
+            // On mobile, this button is hidden by CSS, but as a fallback, prevent action.
+            if (isMobile()) {
+                return;
+            }
+
             sidebar.classList.toggle('collapsed');
             container.classList.toggle('sidebar-collapsed');
             
@@ -23,6 +30,14 @@ function initSidebar() {
             }, 300);
         });
     }
+
+    // On mobile, start with the sidebar collapsed.
+    if (isMobile() && sidebar && container) {
+        if (!sidebar.classList.contains('collapsed')) {
+            sidebar.classList.add('collapsed');
+            container.classList.add('sidebar-collapsed');
+        }
+    }
     
     // Set up icon clicks in collapsed mode
     const iconLabels = document.getElementById('icon-labels');
@@ -31,7 +46,7 @@ function initSidebar() {
     
     if (iconLabels) {
         iconLabels.addEventListener('click', function() {
-            if (sidebar.classList.contains('collapsed')) {
+            if (sidebar.classList.contains('collapsed') && !isMobile()) {
                 sidebar.classList.remove('collapsed');
                 container.classList.remove('sidebar-collapsed');
                 
@@ -44,7 +59,7 @@ function initSidebar() {
     
     if (iconMonsters) {
         iconMonsters.addEventListener('click', function() {
-            if (sidebar.classList.contains('collapsed')) {
+            if (sidebar.classList.contains('collapsed') && !isMobile()) {
                 sidebar.classList.remove('collapsed');
                 container.classList.remove('sidebar-collapsed');
                 
@@ -57,7 +72,7 @@ function initSidebar() {
     
     if (iconMarkers) {
         iconMarkers.addEventListener('click', function() {
-            if (sidebar.classList.contains('collapsed')) {
+            if (sidebar.classList.contains('collapsed') && !isMobile()) {
                 sidebar.classList.remove('collapsed');
                 container.classList.remove('sidebar-collapsed');
                 

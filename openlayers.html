@@ -16,6 +16,63 @@
     <link rel="stylesheet" href="https://unpkg.com/ol-layerswitcher@4.1.1/src/ol-layerswitcher.css">
     <link rel="stylesheet" href="css/map-styles.css">
 
+    <style>
+        /* Mobile-specific styles for an icon-only sidebar */
+        @media (max-width: 768px) {
+            /* Hide the main sidebar toggle button on mobile */
+            #sidebar-toggle {
+                display: none;
+            }
+
+            /* Adjust container margin for the collapsed sidebar's width */
+            #container.sidebar-collapsed {
+                margin-left: 60px; /* A bit wider to comfortably fit icons */
+            }
+
+            .sidebar.collapsed {
+                width: 60px;
+            }
+
+            /* Hide the large, generic icons that normally expand the sidebar */
+            .sidebar.collapsed .sidebar-icons {
+                display: none;
+            }
+
+            /* Show the main content area (where toggles live) in the collapsed sidebar */
+            .sidebar.collapsed .sidebar-content {
+                display: block;
+                padding-top: 60px; /* Add space to not overlap the header */
+            }
+
+            /* Hide section titles, 'Show All' buttons, and 'Coming Soon' text */
+            .sidebar.collapsed .sidebar-section h3,
+            .sidebar.collapsed .sidebar-section .toggle-btn[id^='show-all-'],
+            .sidebar.collapsed .sidebar-section .coming-soon {
+                display: none;
+            }
+
+            /* Arrange individual toggle sections vertically */
+            .sidebar.collapsed #label-toggles,
+            .sidebar.collapsed #marker-toggles,
+            .sidebar.collapsed #monster-toggles {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 8px; /* Space between icons */
+            }
+
+            /* Hide the text span inside the toggle buttons */
+            .sidebar.collapsed .toggle-btn span:last-of-type {
+                display: none;
+            }
+
+            /* Ensure the icon is centered in the button */
+            .sidebar.collapsed .toggle-btn .material-symbols-outlined {
+                margin-right: 0;
+            }
+        }
+    </style>
+
     <!-- Google Material Symbols -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
