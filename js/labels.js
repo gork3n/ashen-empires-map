@@ -10,15 +10,18 @@ const mapLabels = {
     ],
     cities: [
         // Valinor Island Cities
+        // Valinor Region Cities
         { x: 759, y: 65, name: "Valinor", fontSize: 24 },
 
-        // Krythan Island Cities
+        /* Krythan Island Cities */
+        // Krythan Region Cities
         { x: 290, y: 807, name: "Jeel", fontSize: 30 },
         { x: 525, y: 1058, name: "Hothbra", fontSize: 30 },
         { x: 788, y: 1171, name: "Varg", fontSize: 30 },
         { x: 342, y: 1440, name: "New Korelth", fontSize: 30 },
         { x: 670, y: 1670, name: "Vrethpool", fontSize: 30 },
         { x: 247, y: 1116, name: "Lotor's Castle", fontSize: 30 },
+        // Silvest Valley Region Cities
         { x: 1066, y: 1151, name: "Cliffside", fontSize: 30 },
         { x: 1086, y: 1355, name: "Silvest", fontSize: 30 },
         { x: 1344, y: 1282, name: "Fort Eastwatch", fontSize: 30 },
@@ -128,5 +131,8 @@ const mapLabels = {
     mountains: [
         // { x: 567, y: 890, name: "Frost Peak", fontSize: 24 },
         // Add mountain labels here
+
+        //Krog
+        // Medosk Mountains add this label later when you find out which one it is.
     ]
 };
