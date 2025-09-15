@@ -7,6 +7,13 @@ const mapLabels = {
         // Krythan Island Landmarks
         { x: 1374, y: 1435, name: "Valley of the Dead", fontSize: 30 },
 
+        /* Mainland Landmarks */
+
+        // Darkwood Forest Region Landmarks
+
+        // Battleplains Region Landmarks
+        { x: 1752, y: 3404, name: "Proudblood Valley", fontSize: 30 },
+
     ],
     cities: [
         // Valinor Island Cities
@@ -28,15 +35,35 @@ const mapLabels = {
 
 
         //Scarab Island Cities
-
+        { x: 390, y: 2183, name: "Lopal", fontSize: 30 },
 
         // Werewolf Island Cities
-
+        { x: 260, y: 2623, name: "Lycanth", fontSize: 30 },
 
         // Sand of Creation Cities
+        { x: 248, y: 2744, name: "Khafra", fontSize: 30 },
+        { x: 381, y: 3979, name: "Ruhura", fontSize: 30 },
 
+        /* Mainland Cities */
 
-        // Mainland Cities
+        // Darkwood Forest Region Cities
+        { x: 456, y: 2825, name: "Redwake", fontSize: 30 },
+        { x: 405, y: 3418, name: "Whisperdale", fontSize: 30 },
+        { x: 592, y: 3389, name: "Autumn", fontSize: 30 },
+        { x: 901, y: 3064, name: "Darkfell", fontSize: 30 },
+        { x: 1384, y: 3151, name: "Dunmarrow", fontSize: 30 },
+        { x: 1321, y: 2477, name: "Josody", fontSize: 30 },
+
+        // Broken Finger Region Cities
+        { x: 1153, y: 3712, name: "Broken Finger Town", fontSize: 20 },
+
+        // Battleplains Region Cities
+        { x: 2220, y: 3235, name: "Desprail", fontSize: 30 },
+        { x: 2403, y: 3548, name: "Chlera", fontSize: 30 },
+
+        // Highlands Region Cities
+        { x: 2636, y: 3497, name: "Samad", fontSize: 30 },
+        { x: 3088, y: 3356, name: "Dawat", fontSize: 30 },
 
         
         //Tundra
@@ -59,10 +86,13 @@ const mapLabels = {
         { x: 137, y: 230, name: "Minotaur Island", fontSize: 30 },
         { x: 88, y: 942, name: "Guild Arena Island", fontSize: 30 },
         { x: 820, y: 2122, name: "Scorched Island", fontSize: 24 },
-        { x: 1130, y: 3210, name: "Hell Island", fontSize: 30 },
+        { x: 1130, y: 3195, name: "Hell", fontSize: 35 },
         { x: 515, y: 640, name: "Mirthik's Island", fontSize: 14 },
         { x: 223, y: 425, name: "Deserted Island", fontSize: 14 },
-        { x: 404, y: 1996, name: "Scarab Island", fontSize: 25 },
+        { x: 259, y: 2048, name: "Scarab Island", fontSize: 35 },
+        { x: 463, y: 2495, name: "Werewolf Island", fontSize: 35 },
+        { x: 350, y: 3238, name: "Dragoon Island", fontSize: 25 },
+        { x: 160, y: 3792, name: "Greater Dragon Island", fontSize: 25 },
         
     ],
     
@@ -110,6 +140,21 @@ const mapLabels = {
         { x: 88, y: 1503, name: "Tallem'im house", fontSize: 14 },
         { x: 516, y: 1302, name: "Wasp Hive", fontSize: 14 },
         { x: 782, y: 1532, name: "Orc Fort", fontSize: 18 },
+
+        // Hell Places of Interest
+        { x: 1104, y: 3292, name: "Talazar's Castle", fontSize: 25 },
+        { x: 1200, y: 3341, name: "Minion's of Talazar's Stronghold", fontSize: 16 },
+
+
+        // Darkwood Forest Places of Interest
+        { x: 936, y: 2576, name: "Josody Theif Fort", fontSize: 18 },
+        { x: 1030, y: 2977, name: "Crypt of Ryonkah", fontSize: 16 },
+        { x: 555, y: 3158, name: "Lord Vezryl's Estate", fontSize: 16 },
+        { x: 683, y: 3389, name: "Hunting Lodge", fontSize: 16 },
+        { x: 911, y: 3216, name: "Mnemmon", fontSize: 25 },
+        { x: 881, y: 3390, name: "Mnemmon Gaol", fontSize: 20 },
+        { x: 1358, y: 2903, name: "Necropolis", fontSize: 20 },
+        
         
         
         
