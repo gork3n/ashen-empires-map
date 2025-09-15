@@ -1,5 +1,7 @@
 # Ashen Empires Interactive Map
 
+> **Note:** This map is currently under active development. You may see temporary features like a red crosshair used for testing and coordinate verification. These will be removed in a future update.
+
 An interactive map for Ashen Empires with pixel-perfect coordinates and multiple viewing options, built with OpenLayers.
 
 ## Live Demo
@@ -37,7 +39,7 @@ An interactive map for Ashen Empires with pixel-perfect coordinates and multiple
   - Markers for portals, docks, shops, trainers, banks, and spawn gates.
   - Labels for islands, cities, dungeons, and other points of interest.
   - Custom, canvas-rendered icons and text labels with shadows and gradients.
-  - **Zoom-based visibility**: Markers and minor labels automatically disappear when zoomed out to reduce clutter.
+  - **Dynamic Visibility & Sizing**: Key labels (Islands, Cities, Landmarks) are always visible, with font sizes that scale dynamically with zoom for optimal legibility. Other markers and labels appear only at closer zoom levels to reduce clutter.
 - **Informative Tooltips**: Hover over any marker on the main map or in a detail view to see its name and type.
 - **Detail Views**: Click on major location labels (like "Valinor") to open a modal with a high-resolution sub-map. These detail maps are highly configurable and feature:
   - Automatic inclusion of relevant markers **and labels** from the main map.

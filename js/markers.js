@@ -40,7 +40,14 @@ const mapMarkers = {
         // Party Island Portals
 
 
-        //
+        /*  Mainland Portals */
+
+
+
+        // Scorched Island Portals
+        { x: 631, y: 2102, type: "portal", tooltip: "Portal to Battle Plains" },
+        { x: 720, y: 1964, type: "portal", tooltip: "Portal to Hell" },
+
         
     ],
     
@@ -77,7 +84,7 @@ const mapMarkers = {
 
         // Eastern Docks
 
-        // Tundra Docks
+        // Tundria Docks
 
         // New Royale Docks
 
@@ -249,7 +256,7 @@ const mapMarkers = {
 
         //Eastern Mainland Banks
         
-        //Tundra Banks
+        //Tundria Banks
 
 
         // Add more banks
@@ -277,6 +284,42 @@ const mapMarkers = {
         { x: 781, y: 863, type: "underground", tooltip: "Trap Door to LSP" },
         { x: 791, y: 918, type: "underground", tooltip: "Ladder to LSP Sewer (Away from evil spawn gate)" },
 
+        /* Mainland Undergrounds */
+
+        // Darkwoods Forest Region Undergrounds
+
+        // Necropolis Undergrounds
+        { x: 1363, y: 2889, type: "underground", tooltip: "Trap Door to Necropolis Magic and Farm Shops (They do not work)" },
+        { x: 1349, y: 2933, type: "underground", tooltip: "Ladder to inside Necropolis" },
+
+        // Battle Plains Region Undergrounds
+
+        // Black Swamp Region Undergrounds
+
+        // Highlands Region Undergrounds
+
+        // Western Isles Undergrounds
+
+        // Valley of Giants Undergrounds
+
+        // Heartwood Coast Undergrounds
+
+        // Tundria Region Undergrounds
+
+        /* Desert Lands (Not sure what to call these)*/
+        /* These are the areas sounth of Scarb Island and west of the Mainland */
+
+        // Sands of Creation Region
+
+        // Khafra
+
+        // Ruhura
+
+
+
+
+
+
 
         
 
@@ -293,6 +336,37 @@ const mapMarkers = {
         { x: 839, y: 730, type: "information", tooltip: "Malson's Demon's Eye Game" },
 
         // Krythan Island Information
+
+        // Mainland Information
+
+        // Darkwoods Forest Region Information
+        { x: 1192, y: 2903, type: "information", tooltip: "The Utopia Shard" },
+
+        // Battle Plains Region Information
+
+        // Highlands Region Information
+
+        // Tundria Region Information
+
+        // Western Isles Information
+
+        // Valley of Giants Information
+
+        // Heartwood Coast Information
+
+        /* Desert Lands (Not sure what to call these)*/
+
+        // Sands of Creation Region Information
+
+        // Khafra Information
+
+        // Ruhura Information
+
+        // Breakwater Region Information
+
+        // Broken Finger Region Information
+
+
         
     ]
 };

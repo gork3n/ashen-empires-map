@@ -187,7 +187,7 @@ function initializeMap() {
     // --- Set Initial Map View ---
     // Define the center of the map using in-game (4096x4096) coordinates.
     // This makes it easy to change the starting location.
-    const initialCenterGameCoords = { x: 1752, y: 3404 }; // Example: Valinor City
+    const initialCenterGameCoords = { x: 631, y: 2102 }; // Example: Valinor City
 
     // Convert the in-game coordinates to OpenLayers view coordinates.
     // The map is 16384x16384, which is 4x the in-game coordinates.
@@ -436,7 +436,7 @@ function createMarkerStyle(markerType) {
     ctx.fill();
 
     // Add a white border around the circle
-    ctx.strokeStyle = '#50505098';
+    ctx.strokeStyle = '#b6b6b6ff';
     ctx.lineWidth = 1.5;
     ctx.stroke();
 
@@ -563,24 +563,59 @@ function addMapLabels(map) {
     categories.forEach(category => {
         // Create vector source for this category
         const labelSource = new ol.source.Vector();
-        
+
+        const isDynamicCategory = ['landmarks', 'cities', 'islands'].includes(category);
+
         const layerOptions = {
             source: labelSource,
             title: category + ' Labels',
             visible: true,
-            minResolution: 1, // Hides when zoomed in past level 6 (resolution < 1)
-            maxResolution: 4  // Hides when zoomed out to level 4 or more (resolution >= 4)
         };
+
+        if (isDynamicCategory) {
+            // These categories are always visible, but their font size changes with zoom.
+            layerOptions.style = function(feature, resolution) {
+                const text = feature.get('name');
+                const baseFontSize = feature.get('baseFontSize');
+                const category = feature.get('category');
+
+                // This should not happen, but as a safeguard
+                if (!baseFontSize) return null;
+
+                const styleOptions = { ...(labelStyles[category] || defaultLabelStyle) };
+
+                let scaleFactor = 1.0;
+                if (resolution >= 4) {
+                    // Resolutions are powers of 2: 4, 8, 16, 32, 64.
+                    // The font size at resolution `res` is 0.75 times the font size at `res/2`.
+                    // Base font size is for resolutions < 4 (i.e., 2 and 1).
+                    // For res=4, we want scale=0.75^1. For res=8, scale=0.75^2, etc.
+                    // The exponent is log2(resolution/2).
+                    const exponent = Math.log2(resolution / 2);
+                    scaleFactor = Math.pow(0.75, exponent);
+                }
+
+                const newFontSize = Math.round(baseFontSize * scaleFactor);
+
+                styleOptions.fontSize = newFontSize;
+
+                return createLabelImageStyle(text, styleOptions.fontSize, styleOptions);
+            };
+        } else {
+            // Keep old behavior for other categories
+            layerOptions.minResolution = 1; // Hides when zoomed in past level 6 (resolution < 1)
+            maxResolution: 4;  // Hides when zoomed out to level 4 or more (resolution >= 4)
+        }
 
         // Create vector layer for this category
         const labelLayer = new ol.layer.Vector(layerOptions);
-        
+
         // Store the layer reference
         labelLayers[category] = labelLayer;
-        
+
         // Add the layer to the map
         map.addLayer(labelLayer);
-        
+
         // Add all labels in this category
         if (mapLabels[category] && mapLabels[category].length) {
             mapLabels[category].forEach(label => {
@@ -634,9 +669,17 @@ function addLabelFeature(source, x, y, text, fontSize, category) {
         styleOptions.fontSize = fontSize;
     }
     
-    // Apply the style
-    feature.setStyle(createLabelImageStyle(text, styleOptions.fontSize, styleOptions));
-    
+    const isDynamicCategory = ['landmarks', 'cities', 'islands'].includes(category);
+
+    if (isDynamicCategory) {
+        // For dynamic categories, store the base font size.
+        // The style will be handled by the layer's style function.
+        feature.set('baseFontSize', styleOptions.fontSize);
+    } else {
+        // For static categories, apply the style directly to the feature as before.
+        feature.setStyle(createLabelImageStyle(text, styleOptions.fontSize, styleOptions));
+    }
+
     // Add the feature to the provided source
     source.addFeature(feature);
 }
