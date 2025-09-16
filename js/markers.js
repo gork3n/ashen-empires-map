@@ -39,14 +39,18 @@ const mapMarkers = {
 
         // Party Island Portals
 
-
-        /*  Mainland Portals */
-
-
-
         // Scorched Island Portals
         { x: 631, y: 2102, type: "portal", tooltip: "Portal to Battle Plains" },
         { x: 720, y: 1964, type: "portal", tooltip: "Portal to Hell" },
+
+        /*  Mainland Portals */
+
+        // Hell Portals
+        { x: 1052, y: 3289, type: "portal", tooltip: "Portal to Scorched Island" },
+
+
+
+        
 
         
     ],
@@ -262,6 +266,11 @@ const mapMarkers = {
         // Add more banks
     ],
 
+    crafting: [
+        // Add markers for obelisks and ruin spires here
+        // Example: { x: 123, y: 456, type: "crafting", tooltip: "Ancient Obelisk" }
+    ],
+
     undergrounds: [
         /* Valinor Island Undergrounds */
         { x: 609, y: 359, type: "underground", tooltip: "Frump's Lair" },
@@ -412,6 +421,11 @@ const markerStyles = {
     bank: {
         icon: "account_balance",
         color: "#DBC12F", // Gold
+        size: 18
+    },
+    crafting: {
+        icon: "construction",
+        color: "#9370DB", // MediumPurple
         size: 18
     },
     underground: {

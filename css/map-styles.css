@@ -16,11 +16,11 @@ html, body {
     display: flex;
     flex-direction: column;
     height: 100%;
-    padding: 10px 10px 42px; /* Adjusted bottom padding for new footer height */
+    padding: 0 0 32px; /* Remove side/top padding, keep space for footer */
     box-sizing: border-box;
     margin-left: 250px;
     width: calc(100% - 250px);
-    transition: margin-left 0.3s ease, width 0.3s ease;
+    transition: margin-left 0.5s ease, width 0.5s ease;
 }
 
 /* Header styles */
@@ -50,14 +50,13 @@ h1 {
 /* Map container */
 #map { 
     flex: 1;
-    border-radius: 4px;
     background: #002131 url('../images/bg.png'); /* Separate background for map */
     overflow: hidden;
     position: relative; /* For crosshair positioning */
 }
 
 #container.sidebar-collapsed {
-    margin-left: 50px;
+    margin-left: 60px;
     width: calc(100% - 50px);
 }
 /* OpenLayers overrides */
@@ -87,14 +86,14 @@ h1 {
     width: 250px;
     background-color: rgba(0, 0, 0, 0.75);
     color: white;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
     z-index: 1000;
     overflow-x: hidden;
     border-right: 1px solid #444;
 }
 
 .sidebar.collapsed {
-    width: 50px;
+    width: 60px;
 }
 
 .sidebar-header {
@@ -156,7 +155,8 @@ h1 {
 }
 
 .sidebar.collapsed .sidebar-content,
-.sidebar.collapsed .sidebar-title {
+.sidebar.collapsed .sidebar-title,
+.sidebar.collapsed .sidebar-icons {
     display: none;
 }
 
@@ -172,9 +172,9 @@ h1 {
     padding-top: 15px;
 }
 
-.sidebar.collapsed .sidebar-icons {
+/* .sidebar.collapsed .sidebar-icons {
     display: flex;
-}
+} */
 
 .sidebar-icon {
     width: 30px;
@@ -237,21 +237,25 @@ h1 {
     font-weight: bold;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
     line-height: 20px; /* Helps with vertical alignment */
-    flex: 1;
-    text-align: left;
+    flex-shrink: 0; /* Prevent coordinates from being squished */
+    white-space: nowrap;
 }
 
 .dev-status {
     color: #a0a0a0;
     font-size: 18px;
     font-style: italic;
-    white-space: nowrap;
-    flex: 1;
+    flex-grow: 1;
     text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0; /* Allow shrinking */
+    margin: 0 20px;
 }
 
 .footer-right {
-    flex: 1;
+    flex-shrink: 0;
 }
 
 /* Switch control styles */
@@ -388,7 +392,13 @@ input:checked + .slider:before {
 
 /* Target only the text span, not the icon span */
 .toggle-btn span:not(.material-symbols-outlined) {
-    flex: 1;
+    flex: 1; /* Allow text to take up remaining space */
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide text that overflows */
+    opacity: 1; /* Visible by default */
+    max-width: 200px; /* Set a max-width for the transition */
+    /* Animate opacity with a delay to appear after the sidebar opens */
+    transition: opacity 0.3s ease 0.3s, max-width 0.3s ease 0.2s;
 }
 
 /* Default settings for Google Material Symbols */
@@ -598,4 +608,185 @@ input:checked + .slider:before {
     font-size: 15px;
     line-height: 1.4;
     color: #FFFFFF;
+}
+
+/* Toggle button for the mobile info panel, hidden by default on desktop */
+.modal-info-toggle {
+    display: none;
+}
+
+/* --- Collapsed Sidebar Icon-Only Mode --- */
+/* This mode applies whenever the sidebar is collapsed, on any screen size. */
+
+/* Show the main content area (where toggles live) in the collapsed sidebar */
+.sidebar.collapsed .sidebar-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px; /* Creates consistent spacing between sections */
+    padding: 8px 0; /* Consistent vertical padding, no side padding */
+    /* Hide scrollbar but allow scrolling */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Hide scrollbar for Webkit browsers (Chrome, Safari) */
+.sidebar.collapsed .sidebar-content::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide section titles and 'Coming Soon' text */
+.sidebar.collapsed .sidebar-section h3,
+.sidebar.collapsed .sidebar-section .coming-soon {
+    display: none;
+}
+
+/* Make the section a vertical flex container for all buttons */
+.sidebar.collapsed .sidebar-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0; /* Use gap from parent container for inter-section spacing */
+    gap: 8px; /* Space between all icons */
+}
+
+/* In collapsed mode, make the toggle containers transparent to the flex layout,
+   so all buttons inside are treated as direct children of .sidebar-section. */
+.sidebar.collapsed #label-toggles,
+.sidebar.collapsed #marker-toggles,
+.sidebar.collapsed #monster-toggles {
+    display: contents;
+}
+
+/* Style the icon-only buttons */
+.sidebar.collapsed .toggle-btn {
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    justify-content: center;
+    border-left-width: 0; /* Remove the side border */
+    border-radius: 8px; /* Make them more circular/square */
+}
+
+/* Hide the text span inside the toggle buttons */
+.sidebar.collapsed .toggle-btn span:not(.material-symbols-outlined) {
+    opacity: 0;
+    max-width: 0;
+    /* Animate out quickly with no delay */
+    transition: opacity 0.1s ease, max-width 0.3s ease;
+}
+
+/* Ensure the icon is centered in the button */
+.sidebar.collapsed .toggle-btn .material-symbols-outlined {
+    margin-right: 0;
+    font-size: 24px;
+}
+
+/* Add a background to active icon buttons when collapsed */
+.sidebar.collapsed .toggle-btn.active {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+.sidebar.collapsed .toggle-btn.active:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+/* For inactive buttons, just use the default color and remove the background */
+.sidebar.collapsed .toggle-btn.inactive {
+    background-color: transparent;
+}
+.sidebar.collapsed .toggle-btn.inactive:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* --- Mobile Specific Overrides --- */
+@media (max-width: 1024px) {
+    /* On mobile, hide the dev status text in the footer to prevent squishing */
+    .dev-status {
+        display: none;
+    }
+
+    /* --- Detail Modal Mobile Layout (Fullscreen) --- */
+    .modal-content {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        border: none;
+        padding: 0; /* Remove padding to go edge-to-edge */
+    }
+
+    #modal-title {
+        padding: 15px;
+        padding-bottom: 10px;
+        margin-bottom: 0;
+    }
+
+    .modal-close {
+        top: 10px;
+        right: 15px;
+        z-index: 1; /* Ensure it's above the title */
+    }
+
+    .modal-footer {
+        padding: 6px 15px;
+        margin-top: 0;
+    }
+
+    .modal-body {
+        position: relative;
+        gap: 0;
+        padding: 0; /* Remove padding from body */
+    }
+
+    .modal-map-container {
+        width: 100%;
+        height: 100%;
+        border-radius: 0; /* No rounded corners on fullscreen */
+    }
+
+    .modal-info-container {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        background-color: #1a1a1a;
+        max-height: 35vh; /* Default "open" height */
+        transition: max-height 0.5s ease;
+        overflow-y: auto;
+        border-top: 1px solid #444;
+        padding: 0; /* Padding is now on the content wrapper */
+    }
+
+    .modal-info-content-wrapper {
+        padding: 15px;
+    }
+
+    .modal-info-container.collapsed {
+        max-height: 40px; /* When collapsed, show only the toggle button height */
+        overflow: hidden; /* Hide the rest of the content */
+    }
+
+    .modal-info-container.collapsed .modal-info-content-wrapper {
+        display: none;
+    }
+
+    .modal-info-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 40px;
+        padding: 0 15px;
+        background-color: #2a2a2a;
+        border: none;
+        color: white;
+        cursor: pointer;
+    }
+
+    .modal-info-title {
+        margin: 0;
+        font-size: 1em;
+        font-weight: 500;
+        color: #F5D76E;
+    }
 }

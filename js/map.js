@@ -733,7 +733,36 @@ function showDetailModal(locationName) {
 
     // --- 1. Populate Modal Content ---
     modalTitle.textContent = locationData.title;
-    modalInfo.innerHTML = locationData.info;
+
+    // Wrap the info content for better padding control on mobile.
+    const locationInfoHTML = locationData.info;
+    modalInfo.innerHTML = `<div class="modal-info-content-wrapper">${locationInfoHTML}</div>`;
+
+    // --- START: Mobile Info Panel Toggle ---
+    // Find or create the toggle button for the info panel.
+    let infoToggle = modalInfo.querySelector('.modal-info-toggle');
+    if (!infoToggle) {
+        infoToggle = document.createElement('button');
+        infoToggle.className = 'modal-info-toggle';
+        infoToggle.innerHTML = `
+            <h3 class="modal-info-title">Location Information</h3>
+            <span class="material-symbols-outlined">expand_more</span>
+        `;
+        
+        infoToggle.addEventListener('click', () => {
+            const isCollapsed = modalInfo.classList.toggle('collapsed');
+            // The icon 'expand_more' is a down arrow (to collapse), 'expand_less' is an up arrow (to expand).
+            infoToggle.querySelector('.material-symbols-outlined').textContent = isCollapsed ? 'expand_less' : 'expand_more';
+        });
+
+        // Prepend the toggle button to the info container so it's always at the top.
+        modalInfo.prepend(infoToggle);
+    }
+    // Ensure the panel is in the default "open" state when the modal is shown.
+    modalInfo.classList.remove('collapsed');
+    infoToggle.querySelector('.material-symbols-outlined').textContent = 'expand_more';
+    // --- END: Mobile Info Panel Toggle ---
+
     // Apply a background to the map container for styling
     modalMapContainer.style.backgroundImage = "url('images/bg.png')";
     modalMapContainer.style.backgroundRepeat = 'repeat';

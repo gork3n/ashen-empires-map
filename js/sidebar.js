@@ -11,23 +11,18 @@ function initSidebar() {
     const sidebarToggle = document.getElementById('sidebar-toggle');
     const container = document.getElementById('container');
 
-    const isMobile = () => window.innerWidth <= 768;
+    const isMobile = () => window.innerWidth <= 1024;
     
     // Toggle sidebar collapsed state
     if (sidebarToggle && sidebar && container) {
         sidebarToggle.addEventListener('click', function() {
-            // On mobile, this button is hidden by CSS, but as a fallback, prevent action.
-            if (isMobile()) {
-                return;
-            }
-
             sidebar.classList.toggle('collapsed');
             container.classList.toggle('sidebar-collapsed');
             
             // Trigger map resize to handle new container dimensions
             setTimeout(() => {
                 window.dispatchEvent(new Event('resize'));
-            }, 300);
+            }, 500);
         });
     }
 
@@ -52,7 +47,7 @@ function initSidebar() {
                 
                 setTimeout(() => {
                     window.dispatchEvent(new Event('resize'));
-                }, 300);
+                }, 500);
             }
         });
     }
@@ -65,7 +60,7 @@ function initSidebar() {
                 
                 setTimeout(() => {
                     window.dispatchEvent(new Event('resize'));
-                }, 300);
+                }, 500);
             }
         });
     }
@@ -78,7 +73,7 @@ function initSidebar() {
                 
                 setTimeout(() => {
                     window.dispatchEvent(new Event('resize'));
-                }, 300);
+                }, 500);
             }
         });
     }
@@ -241,7 +236,15 @@ function createMarkerToggleButtons() {
         // Get marker style for this category
         // Note: This relies on at least one marker being in the category to determine the type.
         const markerType = mapMarkers[category][0]?.type;
-        const style = markerStyles[markerType];
+        let style = markerStyles[markerType];
+
+        // If the category is empty, the style won't be found.
+        // Let's try to derive the type from the category name as a fallback.
+        if (!style) {
+            // 'portals' -> 'portal', 'docks' -> 'dock', 'crafting' -> 'crafting'
+            const singularType = category.endsWith('s') ? category.slice(0, -1) : category;
+            style = markerStyles[singularType];
+        }
         
         // Create button
         const button = document.createElement('button');
