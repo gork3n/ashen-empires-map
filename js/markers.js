@@ -6,11 +6,13 @@ const mapMarkers = {
         //Done
 
         /* Valinor Island Portals */
+
+        // Valinor Region Portals
         { x: 776, y: 100, type: "portal", tooltip: "Portal to Leave Valinor" },
         { x: 776, y: 168, type: "portal", tooltip: "Portal to Arena Viewing Area" },
         //Done
 
-        // Krythan Island Portals
+        /* Krythan Island Portals */
         // Krythan Region Portals
         { x: 585, y: 1497, type: "portal", tooltip: "Portal to East Mainlands West of Parian" },
         { x: 185, y: 1466, type: "portal", tooltip: "Portal to Northeastern Mainlands North of Josody" },
@@ -31,7 +33,8 @@ const mapMarkers = {
         { x: 832, y: 634, type: "portal", tooltip: "Josody Portal" },
         //Done
 
-        // Real Estate Island Portals
+
+        /* Real Estate Island Portals */
         { x: 663, y: 735, type: "portal", tooltip: "Portal to Lotor's Summer Palace" },
 
 
