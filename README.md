@@ -26,27 +26,30 @@ An interactive map for Ashen Empires with pixel-perfect coordinates and multiple
   - [Integration Guide](#integration-guide)
     - [Method 1: Using as a Standalone Page](#method-1-using-as-a-standalone-page)
     - [Method 2: Embedding in an Existing Website](#method-2-embedding-in-an-existing-website)
-  - [Development](#development)
   - [Planned Features](#planned-features)
   - [Credits](#credits)
 
 ## Features
 
 - **Full Map Exploration**: Navigate the entire Ashen Empires world with smooth panning and zooming.
-- **Precise Coordinates**: Real-time coordinate display showing exact X,Y positions based on the 4096x4096 in-game map.
-- **Interactive Sidebar**: Collapsible sidebar with controls to toggle visibility for different categories of labels and markers.
+- **Precise Coordinates**: Real-time coordinate display that updates continuously as you move your cursor or drag the map.
+- **Interactive Sidebar**: A fully responsive and collapsible sidebar with smooth animations.
+  - **Icon-Only Mode**: When collapsed, the sidebar provides a clean, icon-only interface for quick layer toggling.
+  - **Dynamic Controls**: Buttons are generated dynamically for all label and marker categories.
+  - **Master Toggles**: "Show All" buttons allow you to toggle entire sections at once.
 - **Dynamic Markers & Labels**:
-  - Markers for portals, docks, shops, trainers, banks, and spawn gates.
-  - Labels for islands, cities, dungeons, and other points of interest.
-  - Custom, canvas-rendered icons and text labels with shadows and gradients.
-  - **Dynamic Visibility & Sizing**: Key labels (Islands, Cities, Landmarks) are always visible, with font sizes that scale dynamically with zoom for optimal legibility. Other markers and labels appear only at closer zoom levels to reduce clutter.
-- **Informative Tooltips**: Hover over any marker on the main map or in a detail view to see its name and type.
+  - Markers for portals, docks, shops, trainers, banks, crafting locations, and more.
+  - Custom, canvas-rendered icons with crisp white borders and tooltips.
+  - **Dynamic Sizing & Visibility**:
+    - **Labels**: All labels are always visible and dynamically scale their font size based on the zoom level, ensuring optimal legibility from any distance.
+    - **Markers**: Markers appear at closer zoom levels to reduce clutter when viewing the map from a distance.
 - **Detail Views**: Click on major location labels (like "Valinor") to open a modal with a high-resolution sub-map. These detail maps are highly configurable and feature:
-  - Automatic inclusion of relevant markers **and labels** from the main map.
-  - Custom initial view settings (center, zoom) and zoom limits.
-  - Precise filtering to prevent including features from nearby, unrelated areas.
+  - **Mobile-Optimized**: On phones and tablets, the modal becomes a full-screen experience with the map taking center stage and a collapsible information panel overlaid at the bottom.
+  - **Comprehensive Data**: Detail maps automatically include relevant markers and labels from the main map.
+- **Optimized UI**:
+  - **Repositioned Controls**: Zoom controls have been moved to the bottom-right and enlarged for easier access.
 - **Quick Tips**: A helpful, cycling tip bar at the bottom of the map to help users discover features. Click it to open a modal with a full list of game and map tips.
-- **Responsive Design**: The interface adapts to different screen sizes, making it mobile-friendly. However, some of the features are buggy on smaller screens. Desktop browsers recommended.
+- **Responsive Design**: The interface is optimized for both desktop and mobile devices. The layout adapts to provide a functional and intuitive experience on any screen size, from phones to large monitors.
 
 ## Technical Implementation
 
@@ -56,8 +59,11 @@ This project is built using **OpenLayers**, chosen for its superior handling of 
   - `map.js`: Core map functionality, event handling, and modal logic.
   - `sidebar.js`: Manages the interactive sidebar controls.
   - `tips.js`: Powers the quick tips bar and modal.
-  - `labels.js`, `markers.js`, `detail-maps.js`: Data files defining all labels, markers, and sub-map configurations, including advanced options for filtering and initial views.
-- **Custom Rendering**: Markers and labels are rendered on-the-fly to an HTML canvas for high-quality visuals and performance.
+  - `labels.js`, `markers.js`, `detail-maps.js`: Data files defining all labels, markers, and sub-map configurations.
+- **Dynamic Styling & Rendering**:
+  - Markers and labels are rendered on-the-fly to an HTML canvas for high-quality visuals and performance.
+  - OpenLayers style functions are used to dynamically adjust label font sizes based on map resolution, ensuring legibility at all zoom levels.
+- **Responsive UI Framework**: A combination of CSS Flexbox, Grid, and media queries creates a fluid layout that adapts to any screen size. JavaScript is used to manage state and class toggling for interactive components like the sidebar and modals.
 - **Coordinate System**: The map accurately translates between the 16384x16384 tile-based map and the 4096x4096 in-game coordinate system, ensuring all displayed coordinates are correct.
 
 ## Map Coordinates
@@ -216,20 +222,16 @@ To integrate the full-featured map (including the interactive sidebar) into an e
 
 Once these steps are complete, the map should render and function within your page just as it does on the standalone `openlayers.html` page.
 
-## Development
-
-The map tiles were generated from the in-game map using GDAL2Tiles. The website itself is built with HTML, CSS, and JavaScript, using OpenLayers for the interactive map functionality.
-
 ## Planned Features
 
 - ✅ Layer toggling for displaying different map information
-- ✅ Points of interest markers for key locations
+- 🚧 Points of interest markers for key locations
 - ✅ Separation of code into dedicated files for better maintainability
-- ✅ Interactive sidebar with dynamic controls
-- ✅ Custom markers and tooltips
-- ✅ Interactive elements for more detailed location information (Detail Modals)
+- 🚧 Interactive sidebar with dynamic controls
+- 🚧 Custom markers and tooltips
+- 🚧 Interactive elements for more detailed location information (Detail Modals)
+- 🚧 Mobile-optimized controls and layout
 - ⬜ Search functionality for locations
-- ⬜ Mobile-optimized controls (sidebar behavior)
 - ⬜ Complete labeling system for all important locations
 - ⬜ Visual overlays for major regions (e.g., Darkforest, Battle Plains).
 

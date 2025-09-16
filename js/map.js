@@ -187,7 +187,7 @@ function initializeMap() {
     // --- Set Initial Map View ---
     // Define the center of the map using in-game (4096x4096) coordinates.
     // This makes it easy to change the starting location.
-    const initialCenterGameCoords = { x: 631, y: 2102 }; // Example: Valinor City
+    const initialCenterGameCoords = { x: 2198, y: 1206, }; // Example: Valinor City
 
     // Convert the in-game coordinates to OpenLayers view coordinates.
     // The map is 16384x16384, which is 4x the in-game coordinates.
@@ -564,17 +564,13 @@ function addMapLabels(map) {
         // Create vector source for this category
         const labelSource = new ol.source.Vector();
 
-        const isDynamicCategory = ['landmarks', 'cities', 'islands'].includes(category);
-
         const layerOptions = {
             source: labelSource,
             title: category + ' Labels',
             visible: true,
-        };
-
-        if (isDynamicCategory) {
-            // These categories are always visible, but their font size changes with zoom.
-            layerOptions.style = function(feature, resolution) {
+            // All label categories are now dynamic. They are always visible, and their
+            // font size changes with zoom level, so we use a style function.
+            style: function(feature, resolution) {
                 const text = feature.get('name');
                 const baseFontSize = feature.get('baseFontSize');
                 const category = feature.get('category');
@@ -600,12 +596,8 @@ function addMapLabels(map) {
                 styleOptions.fontSize = newFontSize;
 
                 return createLabelImageStyle(text, styleOptions.fontSize, styleOptions);
-            };
-        } else {
-            // Keep old behavior for other categories
-            layerOptions.minResolution = 1; // Hides when zoomed in past level 6 (resolution < 1)
-            maxResolution: 4;  // Hides when zoomed out to level 4 or more (resolution >= 4)
-        }
+            }
+        };
 
         // Create vector layer for this category
         const labelLayer = new ol.layer.Vector(layerOptions);
@@ -668,17 +660,10 @@ function addLabelFeature(source, x, y, text, fontSize, category) {
     if (fontSize) {
         styleOptions.fontSize = fontSize;
     }
-    
-    const isDynamicCategory = ['landmarks', 'cities', 'islands'].includes(category);
 
-    if (isDynamicCategory) {
-        // For dynamic categories, store the base font size.
-        // The style will be handled by the layer's style function.
-        feature.set('baseFontSize', styleOptions.fontSize);
-    } else {
-        // For static categories, apply the style directly to the feature as before.
-        feature.setStyle(createLabelImageStyle(text, styleOptions.fontSize, styleOptions));
-    }
+    // Since all labels are now dynamic, we just store the base font size.
+    // The style will be calculated by the layer's style function.
+    feature.set('baseFontSize', styleOptions.fontSize);
 
     // Add the feature to the provided source
     source.addFeature(feature);

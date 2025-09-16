@@ -11,7 +11,7 @@ const mapLabels = {
 
         // Darkwood Forest Region Landmarks
 
-        // Battleplains Region Landmarks
+        // Battle Plains Region Landmarks
         { x: 1752, y: 3404, name: "Proudblood Valley", fontSize: 30 },
 
     ],
@@ -57,20 +57,40 @@ const mapLabels = {
         // Broken Finger Region Cities
         { x: 1153, y: 3712, name: "Broken Finger Town", fontSize: 20 },
 
-        // Battleplains Region Cities
+        // Battle Plains Region Cities
         { x: 2220, y: 3235, name: "Desprail", fontSize: 30 },
         { x: 2403, y: 3548, name: "Chlera", fontSize: 30 },
 
         // Highlands Region Cities
         { x: 2636, y: 3497, name: "Samad", fontSize: 30 },
         { x: 3088, y: 3356, name: "Dawat", fontSize: 30 },
+        { x: 3115, y: 3710, name: "Krog", fontSize: 30 },
+        { x: 3064, y: 3978, name: "Maraket", fontSize: 30 }, 
+
+        // Not sure which region this is
+        { x: 3401, y: 3444, name: "Arda", fontSize: 30 },
+        { x: 3462, y: 2939, name: "Parian", fontSize: 30 },
+        { x: 3536, y: 3643, name: "Ethera Palace", fontSize: 30 },
+        { x: 3602, y: 2774, name: "Darushk", fontSize: 30 },
 
         
-        //Tundra
+        //Tundria
         { x: 2793, y: 849, name: "Hammerfist", fontSize: 24 },
-        { x: 3649, y: 935, name: "Duremar", fontSize: 24 },
+        { x: 3649, y: 930, name: "Duremar", fontSize: 24 },
+        { x: 1943, y: 1241, name: "Meroven", fontSize: 24 },
+        { x: 2198, y: 1206, name: "Ringhaven Citadel", fontSize: 24 },
         { x: 2822, y: 1254, name: "Farstead Keep", fontSize: 24 },
-        
+
+        // Need to check these locations for Region name
+        { x: 2626, y: 2106, name: "Valmond", fontSize: 24 },
+        { x: 2497, y: 1616, name: "Teylan", fontSize: 24 },
+        { x: 3274, y: 1631, name: "Syldural", fontSize: 24 },
+
+        //Breakwater
+        { x: 2448, y: 2336, name: "Roycroft", fontSize: 24 },
+        { x: 1961, y: 1885, name: "New Town", fontSize: 24 },
+        { x: 1457, y: 1964, name: "New Royale", fontSize: 24 },
+        // Cities and Towns are done except some comments for region names above need to be filled in.
     
     ],
     
@@ -82,7 +102,7 @@ const mapLabels = {
         { x: 1090, y: 992, name: "Krythan Island", fontSize: 35 },
         { x: 920, y: 60, name: "Valinor Island", fontSize: 35 },
         { x: 421, y: 69, name: "Party Island", fontSize: 30 },
-        { x: 1545, y: 556, name: "Prison Island", fontSize: 20 },
+        { x: 1545, y: 546, name: "Lotor's Prison", fontSize:30 },
         { x: 137, y: 230, name: "Minotaur Island", fontSize: 30 },
         { x: 88, y: 942, name: "Guild Arena Island", fontSize: 30 },
         { x: 820, y: 2122, name: "Scorched Island", fontSize: 35 },
@@ -93,6 +113,9 @@ const mapLabels = {
         { x: 463, y: 2495, name: "Werewolf Island", fontSize: 35 },
         { x: 350, y: 3238, name: "Dragoon Island", fontSize: 25 },
         { x: 160, y: 3792, name: "Greater Dragon Island", fontSize: 25 },
+        { x: 1672, y: 1681, name: "Ettin Island", fontSize: 30 },
+        { x: 3331, y: 254, name: "Northern Frost Giant Island", fontSize: 30 },
+        { x: 3893, y: 1688, name: "PVP Island", fontSize: 30 },
         
     ],
     

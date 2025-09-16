@@ -13,8 +13,9 @@ const mapMarkers = {
         // Krythan Island Portals
         // Krythan Region Portals
         { x: 585, y: 1497, type: "portal", tooltip: "Portal to East Mainlands West of Parian" },
-        { x: 3649, y: 950, type: "portal", tooltip: "Portal to Farstead" },
         { x: 185, y: 1466, type: "portal", tooltip: "Portal to Northeastern Mainlands North of Josody" },
+
+        // Silvest Valley Region Portals
         
         // Lotor's Summer Palace Portals
         { x: 762, y: 589, type: "portal", tooltip: "Portal to Party Island" },
