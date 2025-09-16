@@ -57,7 +57,7 @@ h1 {
 
 #container.sidebar-collapsed {
     margin-left: 60px;
-    width: calc(100% - 50px);
+    width: calc(100% - 60px);
 }
 /* OpenLayers overrides */
 .ol-layer canvas {
@@ -73,6 +73,20 @@ h1 {
 
 .ol-attribution a {
     color: rgba(153, 204, 255, 0) !important;
+}
+
+/* Reposition and resize zoom controls */
+.ol-zoom {
+    top: auto;
+    left: auto;
+    bottom: 4.5em; /* Position above the quick tips bar */
+    right: 1em;
+}
+
+.ol-zoom button {
+    width: 1.75em;
+    height: 1.75em;
+    font-size: 1.3em; /* Makes the button and icon larger */
 }
 
 /* Sidebar styles */

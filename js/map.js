@@ -945,9 +945,24 @@ function showDetailModal(locationName) {
             detailMap.on('moveend', updateModalDisplay);
             updateModalDisplay(); // Set initial text
 
-            detailMap.on('pointermove', function(evt) {
-                if (evt.dragging) return;
+            // Update coordinates on touch/click start for mobile friendliness
+            detailMap.on('pointerdown', function(evt) {
+                const coord = evt.coordinate;
+                if (coord) {
+                    // Convert OL coordinate (bottom-left origin) to main map coordinate (top-left origin)
+                    const contentX = Math.round(coord[0]) - offsetX;
+                    const contentY = Math.round(imageHeight - coord[1]) - offsetY;
+                    
+                    const scaledX = contentX / scale;
+                    const scaledY = contentY / scale;
 
+                    lastDisplayX = Math.round(originX + scaledX);
+                    lastDisplayY = Math.round(originY + scaledY);
+                    updateModalDisplay();
+                }
+            });
+
+            detailMap.on('pointermove', function(evt) {
                 const coord = evt.coordinate;
                 if (coord) {
                     // Convert OL coordinate (bottom-left origin) to main map coordinate (top-left origin)
@@ -1135,10 +1150,18 @@ function initializeCoordinateDisplay() {
         map.on('moveend', updateDisplay);
         updateDisplay(); // Set initial text
 
+        // Update coordinates on touch/click start for mobile friendliness
+        map.on('pointerdown', function(evt) {
+            const coord = evt.coordinate;
+            if (coord) {
+                lastX = Math.round(coord[0] / 4);
+                lastY = Math.round((16384 - coord[1]) / 4); // Invert Y coordinate and scale down
+                updateDisplay();
+            }
+        });
+
         // Track pointer movement on the map
         map.on('pointermove', function(evt) {
-            if (evt.dragging) return; // Skip during drag operations
-
             const coord = evt.coordinate;
             if (coord) {
                 lastX = Math.round(coord[0] / 4);
