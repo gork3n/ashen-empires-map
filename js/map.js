@@ -288,7 +288,7 @@ function initializeMap() {
         view: new ol.View({
             center: initialCenterOlCoords,
             resolution: 2,
-            minResolution: 1,
+            minResolution: 0.5,
             maxResolution: 64,
             constrainOnlyCenter: true,  // Constrain just the center, not the whole view
             showFullExtent: true
@@ -594,7 +594,7 @@ function addMapMarkers(map) {
             source: markerSource,
             title: category + ' Markers',
             visible: true,
-            minResolution: 1, // Hides when zoomed in past level 6 (resolution < 1)
+            minResolution: 0, // Set to 0 to ensure markers are always visible when zoomed in.
             maxResolution: 4  // Hides when zoomed out to level 4 or more (resolution >= 4)
         });
         

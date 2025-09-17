@@ -225,58 +225,52 @@ function createMarkerToggleButtons() {
     const container = document.getElementById('marker-toggles');
     if (!container || typeof mapMarkers === 'undefined') return;
     
-    // Clear any existing toggles
     container.innerHTML = '';
     
-    // Create toggle button for each marker category
-    for (const category in mapMarkers) {
-        // Skip empty categories
-        // if (mapMarkers[category].length === 0) continue; // We want to create toggles even for empty categories
-        
-        // Get marker style for this category
-        // Note: This relies on at least one marker being in the category to determine the type.
-        const markerType = mapMarkers[category][0]?.type;
-        let style = markerStyles[markerType];
+    const markerCategories = [
+        { id: 'portals', name: 'Portals', type: 'portal' },
+        { id: 'docks', name: 'Docks', type: 'dock' },
+        { id: 'quests', name: 'Quests', type: 'quest' },
+        { id: 'shops', name: 'Shops', type: 'shop' },
+        { id: 'trainers', name: 'Trainers', type: 'trainer' },
+        { id: 'spawns', name: 'Spawns', type: 'spawn_good' },
+        { id: 'banks', name: 'Banks', type: 'bank' },
+        { id: 'crafting', name: 'Obelisks and Rune Spires', type: 'crafting' },
+        { id: 'undergrounds', name: 'Undergrounds', type: 'underground' },
+        { id: 'information', name: 'Information', type: 'information' }
+    ];
 
-        // If the category is empty, the style won't be found.
-        // Let's try to derive the type from the category name as a fallback.
-        if (!style) {
-            // 'portals' -> 'portal', 'docks' -> 'dock', 'crafting' -> 'crafting'
-            const singularType = category.endsWith('s') ? category.slice(0, -1) : category;
-            style = markerStyles[singularType];
-        }
+    markerCategories.forEach(category => {
+        const style = markerStyles[category.type];
         
         // Create button
         const button = document.createElement('button');
         button.className = 'toggle-btn active';
-        button.dataset.category = category;
+        button.dataset.category = category.id;
         
         const animationClass = style && style.animation === 'beat' ? 'g-icon-beat' : '';
 
         // Add icon
         const iconSpan = document.createElement('span');
-        if (style && style.icon) {
-            iconSpan.className = `material-symbols-outlined ${animationClass}`;
-            iconSpan.textContent = style.icon;
-            iconSpan.style.color = style.color;
-        } else {
-            iconSpan.className = 'material-symbols-outlined';
-            iconSpan.textContent = 'place';
-        }
+        iconSpan.className = `material-symbols-outlined ${animationClass}`;
+        iconSpan.textContent = style?.icon || 'place';
+        iconSpan.style.color = style?.color || '#FFFFFF';
         button.appendChild(iconSpan);
         
         // Add text
         const textSpan = document.createElement('span');
-        textSpan.textContent = category.charAt(0).toUpperCase() + category.slice(1);
+        textSpan.textContent = category.name;
         button.appendChild(textSpan);
         
         // If the category is empty, disable the button and mark it inactive
-        if (mapMarkers[category].length === 0) {
+        if (!mapMarkers[category.id] || mapMarkers[category.id].length === 0) {
             button.disabled = true;
             button.classList.replace('active', 'inactive');
         }
         // Add click event listener
         button.addEventListener('click', function() {
+            if (button.disabled) return;
+
             const isActive = button.classList.contains('active');
             
             // Toggle button state
@@ -291,7 +285,7 @@ function createMarkerToggleButtons() {
             // Dispatch event to toggle marker visibility
             document.dispatchEvent(new CustomEvent('toggle-marker-category', {
                 detail: { 
-                    category: category, 
+                    category: category.id, 
                     visible: !isActive  // Toggle visibility (true->false or false->true)
                 }
             }));
@@ -302,7 +296,7 @@ function createMarkerToggleButtons() {
         
         // Add to container
         container.appendChild(button);
-    }
+    });
 }
 
 /**
