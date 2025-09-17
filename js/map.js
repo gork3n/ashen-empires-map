@@ -33,8 +33,8 @@ const labelStyles = {
     islands: {
         // Gold gradient for islands only
         useGradient: true,
-        fontFamily: '"Alegreya Sans", sans-serif',
-        fontWeight: 900,
+        fontFamily: '"KJV1611", "Alegreya Sans", sans-serif',
+        fontWeight: 'normal',
         strokeWidth: 2,
         strokeColor: '#000000',
         fontSize: 30,
@@ -56,8 +56,8 @@ const labelStyles = {
         fillColor: '#FFFFFF',
         strokeColor: '#000000',
         strokeWidth: 2.5,
-        fontFamily: '"Alegreya Sans", sans-serif',
-        fontWeight: 900,
+        fontFamily: '"KJV1611", "Alegreya Sans", sans-serif',
+        fontWeight: 'normal',
         fontSize: 24
     },
     dungeons: {
@@ -121,7 +121,19 @@ const defaultLabelStyle = {
     strokeWidth: 2,
     fontFamily: '"Alegreya Sans", sans-serif',
     fontWeight: 700,
-    fontSize: 24
+    fontStyle: 'normal',
+    fontSize: 24,
+    gradientColors: [
+        { pos: 0, color: '#8B7034' },
+        { pos: 0.1, color: '#A7893C' },
+        { pos: 0.3, color: '#D4AF37' },
+        { pos: 0.42, color: '#F8E597' },
+        { pos: 0.5, color: '#FFFFFF' },
+        { pos: 0.58, color: '#F8E597' },
+        { pos: 0.7, color: '#D4AF37' },
+        { pos: 0.9, color: '#A7893C' },
+        { pos: 1, color: '#8B7034' }
+    ]
 };
 
 /**
@@ -298,31 +310,11 @@ function createLabelImageStyle(text, fontSize, styleOptions = {}) {
         return styleCache[cacheKey];
     }
 
-    fontSize = fontSize || 24;
-    
-    // Default style options
-    const options = {
-        fontFamily: '"Alegreya Sans", sans-serif',
-        fontWeight: 700,
-        fontStyle: 'normal',
-        useGradient: true,
-        fillColor: '#FFFFFF',
-        strokeColor: '#000000',
-        strokeWidth: 2,
-        // Gold gradient options
-        gradientColors: [
-            { pos: 0, color: '#8B7034' },
-            { pos: 0.1, color: '#A7893C' },
-            { pos: 0.3, color: '#D4AF37' },
-            { pos: 0.42, color: '#F8E597' },
-            { pos: 0.5, color: '#FFFFFF' },
-            { pos: 0.58, color: '#F8E597' },
-            { pos: 0.7, color: '#D4AF37' },
-            { pos: 0.9, color: '#A7893C' },
-            { pos: 1, color: '#8B7034' }
-        ],
-        ...styleOptions // Override defaults with provided options
-    };
+    // The caller is now responsible for providing a complete style object by merging
+    // with `defaultLabelStyle`. We can therefore trust `styleOptions` is complete
+    // and remove the redundant, conflicting defaults that were previously here.
+    const options = styleOptions;
+    const finalFontSize = fontSize || options.fontSize || 24;
     
     // Create an offscreen canvas to render the text
     var canvas = document.createElement('canvas');
@@ -333,13 +325,13 @@ function createLabelImageStyle(text, fontSize, styleOptions = {}) {
     var ctx = canvas.getContext('2d', { willReadFrequently: true });
     
     // Construct the complete font string with weight and style
-    const fontString = `${options.fontStyle} ${options.fontWeight} ${fontSize}px ${options.fontFamily}`;
+    const fontString = `${options.fontStyle} ${options.fontWeight} ${finalFontSize}px ${options.fontFamily}`;
     ctx.font = fontString;
     
     // Measure text to set canvas dimensions
     var metrics = ctx.measureText(text);
     var textWidth = metrics.width;
-    var textHeight = fontSize * 1.2;
+    var textHeight = finalFontSize * 1.2;
     
     // Set canvas dimensions with padding
     canvas.width = textWidth + paddingX * 2;
@@ -578,18 +570,16 @@ function addMapLabels(map) {
                 // This should not happen, but as a safeguard
                 if (!baseFontSize) return null;
 
-                const styleOptions = { ...(labelStyles[category] || defaultLabelStyle) };
+                const styleOptions = { ...defaultLabelStyle, ...(labelStyles[category] || {}) };
 
-                let scaleFactor = 1.0;
-                if (resolution >= 4) {
-                    // Resolutions are powers of 2: 4, 8, 16, 32, 64.
-                    // The font size at resolution `res` is 0.75 times the font size at `res/2`.
-                    // Base font size is for resolutions < 4 (i.e., 2 and 1).
-                    // For res=4, we want scale=0.75^1. For res=8, scale=0.75^2, etc.
-                    // The exponent is log2(resolution/2).
-                    const exponent = Math.log2(resolution / 2);
-                    scaleFactor = Math.pow(0.75, exponent);
-                }
+                // This formula creates a smooth scaling effect for fonts across all zoom levels.
+                // It avoids the "jumpiness" caused by having a hard cutoff for different resolutions.
+                // The formula is equivalent to: scaleFactor = (2 / resolution) ^ 0.415
+                // At resolution=2 (high zoom), scaleFactor is 1.
+                // At resolution=4, scaleFactor is 0.75.
+                // At resolution=8, scaleFactor is 0.56.
+                const exponent = Math.log2(resolution / 2);
+                const scaleFactor = Math.pow(0.75, exponent);
 
                 const newFontSize = Math.round(baseFontSize * scaleFactor);
 
@@ -654,7 +644,7 @@ function addLabelFeature(source, x, y, text, fontSize, category) {
     });
     
     // Get style options for this category
-    const styleOptions = { ... (labelStyles[category] || defaultLabelStyle) };
+    const styleOptions = { ...defaultLabelStyle, ...(labelStyles[category] || {}) };
     
     // Override font size if provided
     if (fontSize) {
