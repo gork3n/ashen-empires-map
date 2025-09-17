@@ -51,14 +51,24 @@ const labelStyles = {
         ]
     },
     cities: {
-        // White for cities
-        useGradient: false,
-        fillColor: '#FFFFFF',
+        // Gold gradient for cities
+        useGradient: true,
         strokeColor: '#000000',
         strokeWidth: 2.5,
         fontFamily: '"KJV1611", "Alegreya Sans", sans-serif',
         fontWeight: 'normal',
-        fontSize: 24
+        fontSize: 24,
+        gradientColors: [
+            { pos: 0, color: '#8B7034' },
+            { pos: 0.1, color: '#A7893C' },
+            { pos: 0.3, color: '#D4AF37' },
+            { pos: 0.42, color: '#F8E597' },
+            { pos: 0.5, color: '#FFFFFF' },
+            { pos: 0.58, color: '#F8E597' },
+            { pos: 0.7, color: '#D4AF37' },
+            { pos: 0.9, color: '#A7893C' },
+            { pos: 1, color: '#8B7034' }
+        ]
     },
     dungeons: {
         // White for dungeons

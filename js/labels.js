@@ -105,7 +105,7 @@ const mapLabels = {
         { x: 1545, y: 546, name: "Lotor's Prison", fontSize:30 },
         { x: 137, y: 230, name: "Minotaur Island", fontSize: 30 },
         { x: 88, y: 942, name: "Guild Arena Island", fontSize: 30 },
-        { x: 820, y: 2122, name: "Scorched Island", fontSize: 35 },
+        { x: 795, y: 2092, name: "Scorched Island", fontSize: 35 },
         { x: 1130, y: 3195, name: "Hell", fontSize: 35 },
         { x: 515, y: 640, name: "Mirthik's Island", fontSize: 14 },
         { x: 223, y: 425, name: "Deserted Island", fontSize: 14 },

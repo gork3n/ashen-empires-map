@@ -121,9 +121,8 @@ h1 {
 
 .sidebar-title {
     font-size: 1.2em;
-    font-weight: normal;
+    font-weight: 700;
     margin: 0;
-    font-family: 'KJV1611', sans-serif;
     white-space: nowrap;
 }
 
