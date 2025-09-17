@@ -843,6 +843,13 @@ function showDetailModal(locationName) {
         const imageHeight = imageConfig.height;
         const extent = [0, 0, imageWidth, imageHeight];
 
+        // Define coordinate mapping variables early so they can be used for initialView.
+        const originX = locationData.origin?.x || 0;
+        const originY = locationData.origin?.y || 0;
+        const scale = locationData.scale || 1;
+        const offsetX = locationData.offset?.x || 0;
+        const offsetY = locationData.offset?.y || 0;
+
         const projection = new ol.proj.Projection({
             code: 'static-image',
             units: 'pixels',
@@ -862,7 +869,16 @@ function showDetailModal(locationName) {
 
         // Override defaults with settings from detail-maps.js if they exist
         if (locationData.initialView) {
-            if (locationData.initialView.center) {
+            if (locationData.initialView.centerOnMain) {
+                const mainCoord = locationData.initialView.centerOnMain;
+                // Use the formula to convert main map coordinates to detail map pixel coordinates
+                const detailX = ((mainCoord.x - originX) * scale) + offsetX;
+                const detailY = ((mainCoord.y - originY) * scale) + offsetY;
+
+                // Convert top-left pixel coords to OL's bottom-left based coords
+                viewOptions.center = [detailX, imageHeight - detailY];
+
+            } else if (locationData.initialView.center) {
                 // Convert top-left pixel coords to OL's bottom-left based coords
                 const centerX = locationData.initialView.center[0];
                 const centerY = locationData.initialView.center[1];
@@ -899,12 +915,6 @@ function showDetailModal(locationName) {
         // First, collect all markers that should appear on the detail map.
         const detailMarkers = [...(locationData.markers || [])];
         const existingTooltips = new Set(detailMarkers.map(m => m.tooltip));
-
-        const originX = locationData.origin?.x || 0;
-        const originY = locationData.origin?.y || 0;
-        const scale = locationData.scale || 1;
-        const offsetX = locationData.offset?.x || 0;
-        const offsetY = locationData.offset?.y || 0;
 
         // Calculate the size of the content area on the main map, accounting for offsets.
         // This ensures we only fetch markers/labels that are actually on the sub-map.

@@ -36,9 +36,10 @@ const detailMapData = {
         // --- INITIAL VIEW CONFIGURATION (OPTIONAL) ---
         // Sets the starting view for the detail map modal.
         initialView: {
-            center: [877, 683], // [X, Y] pixel coordinates on the detail image (top-left origin)
-            zoom: 2,            // Initial zoom level
-            maxZoom: 6          // Maximum zoom level allowed
+            // Center the view on a specific coordinate from the main 4096x4096 map.
+            centerOnMain: { x: 777, y: 653 }, // Central plaza
+            zoom: 3,            // Initial zoom level
+            maxZoom: 7          // Maximum zoom level allowed
         },
         // --- END INITIAL VIEW ---
         info: `
@@ -85,7 +86,8 @@ const detailMapData = {
         // --- INITIAL VIEW CONFIGURATION (OPTIONAL) ---
         // Sets the starting view for the detail map modal.
         initialView: {
-            center: [1306, 618], // Center on X:761, Y:124
+            // Center the view on a specific coordinate from the main 4096x4096 map.
+            centerOnMain: { x: 761, y: 124 }, // City gate
             zoom: 4,             // Initial zoom level
             maxZoom: 7           // Maximum zoom level allowed
         },
@@ -127,7 +129,8 @@ const detailMapData = {
         },
         // --- INITIAL VIEW CONFIGURATION (OPTIONAL) ---
         initialView: {
-            center: [400, 300], // Center of the placeholder image.
+            // Center the view on a specific coordinate from the main 4096x4096 map.
+            centerOnMain: { x: 440, y: 120 }, // Portal to LSP
             zoom: 2,
             maxZoom: 5
         },

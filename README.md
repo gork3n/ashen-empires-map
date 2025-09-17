@@ -145,7 +145,8 @@ This is the most critical step. You need a single, identifiable landmark that is
 
 ### Advanced Configuration
 -   **`initialView` (Optional)**: Controls the initial state of the modal map.
-    -   `center`: The `[X, Y]` starting coordinates, based on the pixel dimensions of the detail map image (top-left origin).
+    -   `centerOnMain`: (Recommended) An object `{ x: <main_X>, y: <main_Y> }` specifying the main map coordinate to center on. The system will automatically calculate the correct pixel center for the detail map.
+    -   `center`: (Legacy) An array `[X, Y]` specifying the starting pixel coordinates on the detail map image (top-left origin). Use `centerOnMain` instead if possible.
     -   `zoom`: The initial zoom level.
     -   `maxZoom`: The maximum zoom level allowed for this specific map.
 
