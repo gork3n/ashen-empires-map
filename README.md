@@ -144,10 +144,6 @@ This is the most critical step. You need a single, identifiable landmark that is
     Once calculated, round the values and place them in the `origin` object. This calculation only needs to be done once per map.
 
 ### Advanced Configuration
-
--   **`filterBbox` (Optional)**: Use this to define a more precise area for fetching features. By default, the map fetches features from a box calculated from the image size. If your image is very large and contains unrelated nearby areas, you can use `filterBbox` to narrow the search. `minX`, `maxX`, `minY`, and `maxY` are based on the 4096x4096 main map coordinates.
-    -   *Example*: `filterBbox: { maxY: 550 }` was used on the Valinor map to prevent it from showing markers from Lotor's Summer Palace to the south.
-
 -   **`initialView` (Optional)**: Controls the initial state of the modal map.
     -   `center`: The `[X, Y]` starting coordinates, based on the pixel dimensions of the detail map image (top-left origin).
     -   `zoom`: The initial zoom level.

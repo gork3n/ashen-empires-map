@@ -12,17 +12,17 @@ const detailMapData = {
     "Lotor's Summer Palace": {
         title: "Lotor's Summer Palace",
         image: {
-            url: 'images/Lotors_Summer_Palace.png',
-            width: 1272,
-            height: 1116
+            url: 'images/LSP.png',
+            width: 2600,
+            height: 2240
         },
         // --- COORDINATE MAPPING CONFIGURATION ---
         origin: {
             // The coordinate on the main 4096x4096 map that corresponds to the
             // top-left corner of this sub-map's content (after accounting for offset).
             // Use the calculation method provided in the documentation to find this value.
-            x: 701,
-            y: 583
+            x: 510,
+            y: 549
         },
         scale: 6, // The zoom factor of this sub-map image. (e.g., 6 means it's 600% of the original size).
         offset: {
@@ -36,9 +36,9 @@ const detailMapData = {
         // --- INITIAL VIEW CONFIGURATION (OPTIONAL) ---
         // Sets the starting view for the detail map modal.
         initialView: {
-            center: [636, 558], // [X, Y] pixel coordinates on the detail image (top-left origin)
+            center: [877, 683], // [X, Y] pixel coordinates on the detail image (top-left origin)
             zoom: 2,            // Initial zoom level
-            maxZoom: 4          // Maximum zoom level allowed
+            maxZoom: 6          // Maximum zoom level allowed
         },
         // --- END INITIAL VIEW ---
         info: `
@@ -54,21 +54,9 @@ const detailMapData = {
             </ul>
         `,
         markers: [
-            // NOTE: X and Y coordinates are relative to the top-left of the Lotors_Summer_Palace.png image.
-            // You can adjust these values to precisely position the markers on the sub-map.
-            /* { x: 560, y: 610, type: "shop", tooltip: "O'riles Weapon Shop" },
-            { x: 555, y: 650, type: "shop", tooltip: "Colleen Franks' Armor Shop" },
-            { x: 920, y: 820, type: "shop", tooltip: "Garius Farming Shop" },
-            { x: 880, y: 800, type: "shop", tooltip: "Tom Uslak Carpentry Shop" },
-            { x: 780, y: 780, type: "trainer", tooltip: "Henchman Trainer" },
-            { x: 800, y: 640, type: "bank", tooltip: "Bank" },
-            { x: 280, y: 200, type: "portal", tooltip: "Portal to Party Island" },
-            { x: 285, y: 450, type: "portal", tooltip: "Portal to PvP Island" },
-            { x: 430, y: 120, type: "dock", tooltip: "Palace Dock" },
-            { x: 900, y: 900, type: "dock", tooltip: "LSP Dock" },
-            { x: 895, y: 840, type: "quest", tooltip: "Carpentry Taskmaster" },
-            { x: 925, y: 770, type: "quest", tooltip: "Farming Taskmaster" },
-            { x: 300, y: 1000, type: "underground", tooltip: "Sewer Entrance" }, */
+            // No map-specific markers are needed here.
+            // The system automatically pulls in relevant markers from the main map
+            // based on the coordinate mapping configuration.
         ]
     },
     "Valinor": {
@@ -83,7 +71,7 @@ const detailMapData = {
             // The coordinate on the main 4096x4096 map that corresponds to the
             // top-left corner of this sub-map's content (after accounting for offset).
             // Use the calculation method provided in the documentation to find this value.
-            x: 631,
+            x: 560,
             y: 47
         },
         scale: 6, // The zoom factor of this sub-map image. (e.g., 6 means it's 600% of the original size).
@@ -91,22 +79,15 @@ const detailMapData = {
             // The pixel padding inside the image file itself.
             // If the map content in your PNG doesn't start at the very top-left
             // pixel, use this to specify the size of the border/padding.
-            x: 526,
+            x: 100,
             y: 156
-        },
-        // --- FILTERING CONFIGURATION (OPTIONAL) ---
-        // Use this to override parts of the calculated bounding box for fetching
-        // features. This is useful for large island maps where you only want
-        // to show features for a specific area, not the entire island.
-        filterBbox: {
-            maxY: 550,  // South extent, chosen to exclude Lotor's Summer Palace
-            minX: 560   // West extent, expanded to include Frump's Lair and Ruined Temple
         },
         // --- INITIAL VIEW CONFIGURATION (OPTIONAL) ---
         // Sets the starting view for the detail map modal.
         initialView: {
             center: [1306, 618], // Center on X:761, Y:124
-            zoom: 5              // Initial zoom level
+            zoom: 4,             // Initial zoom level
+            maxZoom: 7           // Maximum zoom level allowed
         },
         // --- END INITIAL VIEW ---
         // --- END COORDINATE MAPPING ---
@@ -124,5 +105,42 @@ const detailMapData = {
         markers: [
             // Extra markers can be added here for Valinor
         ]
+    },
+    "Party Island": {
+        title: "Party Island",
+        image: {
+            url: 'images/Party_Island.png', // NOTE: This is a placeholder image path.
+            width: 800,                     // Placeholder width.
+            height: 600                     // Placeholder height.
+        },
+        // --- COORDINATE MAPPING CONFIGURATION ---
+        // NOTE: These are placeholder values. You would need to calculate them
+        // using the methodology in the README.md file once you have the image.
+        origin: {
+            x: 363,
+            y: 37
+        },
+        scale: 4, // Assuming a 400% zoom level for this hypothetical map.
+        offset: {
+            x: 0,
+            y: 0
+        },
+        // --- INITIAL VIEW CONFIGURATION (OPTIONAL) ---
+        initialView: {
+            center: [400, 300], // Center of the placeholder image.
+            zoom: 2,
+            maxZoom: 5
+        },
+        info: `
+            <h4>Welcome to Party Island!</h4>
+            <p>A festive place for celebration and access to Lotor's Summer Palace.</p>
+            <hr>
+            <h5>Key Locations:</h5>
+            <ul>
+                <li>Dalgo's Tavern</li>
+                <li>Portal to Lotor's Summer Palace</li>
+            </ul>
+        `,
+        markers: [] // No map-specific markers needed; they will be pulled from the main map.
     }
 };

@@ -15,6 +15,7 @@ const labelStyles = {
         useGradient: true,
         fontFamily: '"Alegreya Sans", sans-serif',
         fontWeight: 900,
+        fontStyle: 'normal',
         strokeColor: '#000000',
         strokeWidth: 2,
         fontSize: 22,
@@ -35,6 +36,7 @@ const labelStyles = {
         useGradient: true,
         fontFamily: '"KJV1611", "Alegreya Sans", sans-serif',
         fontWeight: 'normal',
+        fontStyle: 'normal',
         strokeWidth: 2,
         strokeColor: '#000000',
         fontSize: 30,
@@ -57,6 +59,7 @@ const labelStyles = {
         strokeWidth: 2.5,
         fontFamily: '"KJV1611", "Alegreya Sans", sans-serif',
         fontWeight: 'normal',
+        fontStyle: 'normal',
         fontSize: 24,
         gradientColors: [
             { pos: 0, color: '#8B7034' },
@@ -79,7 +82,13 @@ const labelStyles = {
         strokeWidth: 2,
         fontFamily: '"Alegreya Sans", sans-serif',
         fontWeight: 700,
-        fontSize: 20
+        fontStyle: 'normal',
+        fontSize: 20,
+        backgroundStyle: { // Added to ensure background style is always present when useBackground is true
+            fill: 'rgba(0, 0, 0, 0.7)',
+            stroke: 'rgba(128, 128, 128, 0.5)',
+            padding: [2, 6] // [Y, X]
+        }
     },
     caves: {
         // White for caves
@@ -90,7 +99,13 @@ const labelStyles = {
         strokeWidth: 2,
         fontFamily: '"Alegreya Sans", sans-serif',
         fontWeight: 600,
-        fontSize: 18
+        fontStyle: 'normal',
+        fontSize: 18,
+        backgroundStyle: { // Added to ensure background style is always present when useBackground is true
+            fill: 'rgba(0, 0, 0, 0.7)',
+            stroke: 'rgba(128, 128, 128, 0.5)',
+            padding: [2, 6] // [Y, X]
+        }
     },
     interests: {
         // White for points of interest
@@ -101,7 +116,13 @@ const labelStyles = {
         strokeWidth: 2,
         fontFamily: '"Alegreya Sans", sans-serif',
         fontWeight: 600,
-        fontSize: 22
+        fontStyle: 'normal',
+        fontSize: 22,
+        backgroundStyle: { // Added to ensure background style is always present when useBackground is true
+            fill: 'rgba(0, 0, 0, 0.7)',
+            stroke: 'rgba(128, 128, 128, 0.5)',
+            padding: [2, 6] // [Y, X]
+        }
     },
     waterBodies: {
         // White for water bodies
@@ -122,6 +143,7 @@ const labelStyles = {
         strokeWidth: 2,
         fontFamily: '"Alegreya Sans", sans-serif',
         fontWeight: 700,
+        fontStyle: 'normal',
         fontSize: 20
     }
 };
@@ -228,7 +250,7 @@ function initializeMap() {
     // --- Set Initial Map View ---
     // Define the center of the map using in-game (4096x4096) coordinates.
     // This makes it easy to change the starting location.
-    const initialCenterGameCoords = { x: 2198, y: 1206, }; // Example: Valinor City
+    const initialCenterGameCoords = { x: 741, y: 704, }; // Example: Valinor City
 
     // Convert the in-game coordinates to OpenLayers view coordinates.
     // The map is 16384x16384, which is 4x the in-game coordinates.
@@ -767,41 +789,38 @@ function showDetailModal(locationName) {
 
     const modal = document.getElementById('detail-modal');
     const modalTitle = document.getElementById('modal-title');
-    const modalInfo = document.getElementById('modal-info');
+    const modalInfoContainer = document.getElementById('modal-info');
     const modalMapContainer = document.getElementById('modal-map');
+    const modalInfoContent = modalInfoContainer.querySelector('.modal-info-content-wrapper');
 
-    if (!modal || !modalTitle || !modalInfo || !modalMapContainer) return;
+    if (!modal || !modalTitle || !modalInfoContainer || !modalMapContainer || !modalInfoContent) return;
 
     // --- 1. Populate Modal Content ---
     modalTitle.textContent = locationData.title;
-
-    // Wrap the info content for better padding control on mobile.
-    const locationInfoHTML = locationData.info;
-    modalInfo.innerHTML = `<div class="modal-info-content-wrapper">${locationInfoHTML}</div>`;
+    modalInfoContent.innerHTML = locationData.info;
 
     // --- START: Mobile Info Panel Toggle ---
-    // Find or create the toggle button for the info panel.
-    let infoToggle = modalInfo.querySelector('.modal-info-toggle');
-    if (!infoToggle) {
-        infoToggle = document.createElement('button');
-        infoToggle.className = 'modal-info-toggle';
-        infoToggle.innerHTML = `
-            <h3 class="modal-info-title">Location Information</h3>
-            <span class="material-symbols-outlined">expand_more</span>
-        `;
-        
+    // The toggle button is now part of the static HTML. We just need to ensure
+    // its event listener is attached once and its state is reset.
+    const infoToggle = modalInfoContainer.querySelector('.modal-info-toggle');
+
+    // Check if we've already attached the listener to avoid duplicates.
+    if (infoToggle && !infoToggle.dataset.listenerAttached) {
         infoToggle.addEventListener('click', () => {
-            const isCollapsed = modalInfo.classList.toggle('collapsed');
-            // The icon 'expand_more' is a down arrow (to collapse), 'expand_less' is an up arrow (to expand).
+            const isCollapsed = modalInfoContainer.classList.toggle('collapsed');
+            // 'expand_less' (up arrow) means the panel is collapsed and can be expanded.
+            // 'expand_more' (down arrow) means the panel is open and can be collapsed.
             infoToggle.querySelector('.material-symbols-outlined').textContent = isCollapsed ? 'expand_less' : 'expand_more';
         });
-
-        // Prepend the toggle button to the info container so it's always at the top.
-        modalInfo.prepend(infoToggle);
+        infoToggle.dataset.listenerAttached = 'true';
     }
+
     // Ensure the panel is in the default "open" state when the modal is shown.
-    modalInfo.classList.remove('collapsed');
-    infoToggle.querySelector('.material-symbols-outlined').textContent = 'expand_more';
+    if (infoToggle) {
+        modalInfoContainer.classList.remove('collapsed');
+        // Set the icon to 'expand_more' (down arrow) to indicate the panel is open.
+        infoToggle.querySelector('.material-symbols-outlined').textContent = 'expand_more';
+    }
     // --- END: Mobile Info Panel Toggle ---
 
     // Apply a background to the map container for styling
@@ -873,84 +892,43 @@ function showDetailModal(locationName) {
             view: new ol.View(viewOptions),
         });
 
-        // Add the hard-coded markers for this location to the detail map
-        // --- Combine markers from detail-maps.js and markers.js ---
+        // --- START: Fetch and Add Features (Markers & Labels) ---
+        // The following logic collects all relevant markers and labels from the main map
+        // that fall within the boundaries of this detail map.
 
-        // 1. Start with markers defined specifically for this detail map.
+        // First, collect all markers that should appear on the detail map.
         const detailMarkers = [...(locationData.markers || [])];
         const existingTooltips = new Set(detailMarkers.map(m => m.tooltip));
 
-        // 2. Calculate the sub-map's bounding box on the main 4096x4096 map.
         const originX = locationData.origin?.x || 0;
         const originY = locationData.origin?.y || 0;
         const scale = locationData.scale || 1;
         const offsetX = locationData.offset?.x || 0;
         const offsetY = locationData.offset?.y || 0;
 
-        const mainMapAreaWidth = imageWidth / scale;
-        const mainMapAreaHeight = imageHeight / scale;
+        // Calculate the size of the content area on the main map, accounting for offsets.
+        // This ensures we only fetch markers/labels that are actually on the sub-map.
+        const mainMapContentWidth = (imageWidth - offsetX) / scale;
+        const mainMapContentHeight = (imageHeight - offsetY) / scale;
+
         const calculatedBbox = {
             minX: originX,
             minY: originY,
-            maxX: originX + mainMapAreaWidth,
-            maxY: originY + mainMapAreaHeight,
+            maxX: originX + mainMapContentWidth,
+            maxY: originY + mainMapContentHeight,
         };
 
-        // Define the bounding box for fetching features. Start with the calculated box and
-        // override with a specific filterBbox if provided. This prevents pulling in
-        // markers from nearby areas if the detail map image is very large.
-        const featureBbox = { ...calculatedBbox, ...locationData.filterBbox };
+        // This is the bounding box on the main map from which to pull features.
+        const featureBbox = calculatedBbox;
 
-        // 3. Iterate through main map markers and pull in any that are within the bounds.
-        for (const category in mapMarkers) {
-            mapMarkers[category].forEach(mainMarker => {
-                // Check if the marker is within the bounding box and not already added.
-                if (
-                    mainMarker.x >= featureBbox.minX && mainMarker.x <= featureBbox.maxX &&
-                    mainMarker.y >= featureBbox.minY && mainMarker.y <= featureBbox.maxY &&
-                    !existingTooltips.has(mainMarker.tooltip)
-                ) {
-                    // Convert main map coordinates to sub-map pixel coordinates.
-                    const subX = ((mainMarker.x - originX) * scale) + offsetX;
-                    const subY = ((mainMarker.y - originY) * scale) + offsetY;
+        // Use a helper function to gather all markers and labels for the detail map.
+        const { markers: allDetailMarkers, labels: allDetailLabels } = getFeaturesForDetailMap(locationData, featureBbox);
 
-                    detailMarkers.push({ x: Math.round(subX), y: Math.round(subY), type: mainMarker.type, tooltip: mainMarker.tooltip });
-                }
-            });
-        }
+        // Add the collected features to the detail map's sources.
+        addDetailMapMarkers(detailMarkerSource, allDetailMarkers, imageHeight);
+        addDetailMapLabels(detailLabelSource, allDetailLabels, imageHeight, locationData);
 
-        addDetailMapMarkers(detailMarkerSource, detailMarkers, imageHeight);
-
-        // --- Combine labels from labels.js ---
-        const detailLabels = [];
-        // In the future, we might have manually defined labels in detail-maps.js, so prepare for that.
-        const existingLabelNames = new Set((locationData.labels || []).map(l => l.name));
-
-        // Iterate through main map labels and pull in any that are within the bounds.
-        for (const category in mapLabels) {
-            mapLabels[category].forEach(mainLabel => {
-                // Check if the label is within the bounding box and not already added.
-                if (
-                    mainLabel.x >= featureBbox.minX && mainLabel.x <= featureBbox.maxX &&
-                    mainLabel.y >= featureBbox.minY && mainLabel.y <= featureBbox.maxY &&
-                    !existingLabelNames.has(mainLabel.name)
-                ) {
-                    // Convert main map coordinates to sub-map pixel coordinates.
-                    const subX = ((mainLabel.x - originX) * scale) + offsetX;
-                    const subY = ((mainLabel.y - originY) * scale) + offsetY;
-
-                    detailLabels.push({
-                        x: Math.round(subX),
-                        y: Math.round(subY),
-                        name: mainLabel.name,
-                        fontSize: mainLabel.fontSize,
-                        category: category
-                    });
-                }
-            });
-        }
-
-        addDetailMapLabels(detailLabelSource, detailLabels, imageHeight);
+        // --- END: Fetch and Add Features ---
 
         // --- 4. Set up Tooltips for Detail Map ---
         if (markerTooltipOverlay) {
@@ -965,69 +943,121 @@ function showDetailModal(locationName) {
         // Add coordinate display for the detail map
         const modalMousePositionDiv = document.getElementById('modal-mouse-position');
         if (modalMousePositionDiv) {
-            let lastDisplayX, lastDisplayY;
-            
-            const offsetX = locationData.offset?.x || 0;
-            const offsetY = locationData.offset?.y || 0;
-            const originX = locationData.origin?.x || 0;
-            const originY = locationData.origin?.y || 0;
-            const scale = locationData.scale || 1;
+            // This function is now self-contained and takes the map instance as an argument.
+            // This avoids closure issues with the global `detailMap` variable.
+            const setupCoordinateDisplay = (mapInstance, locData) => {
+                let lastDisplayX, lastDisplayY;
+                const offsetX = locData.offset?.x || 0;
+                const offsetY = locData.offset?.y || 0;
+                const originX = locData.origin?.x || 0;
+                const originY = locData.origin?.y || 0;
+                const scale = locData.scale || 1;
 
-            const updateModalDisplay = () => {
-                const zoom = detailMap.getView().getZoom();
-                const zoomText = 'Zoom: ' + (zoom !== undefined ? Math.round(zoom) : '---');
-                const coordText = (lastDisplayX !== undefined && lastDisplayY !== undefined) ?
-                    'X: ' + lastDisplayX + ' | Y: ' + lastDisplayY :
-                    'X: --- | Y: ---';
-                modalMousePositionDiv.textContent = `${coordText} | ${zoomText}`;
+                const updateModalDisplay = () => {
+                    const view = mapInstance.getView();
+                    if (!view) return;
+                    const zoom = view.getZoom();
+                    const zoomText = 'Zoom: ' + (zoom !== undefined ? Math.round(zoom) : '---');
+                    const coordText = (lastDisplayX !== undefined && lastDisplayY !== undefined) ?
+                        `X: ${lastDisplayX} | Y: ${lastDisplayY}` :
+                        'X: --- | Y: ---';
+                    modalMousePositionDiv.textContent = `${coordText} | ${zoomText}`;
+                };
+
+                const handlePointerEvent = (evt) => {
+                    if (!evt.coordinate) return;
+                    const coord = evt.coordinate;
+                    const contentX = Math.round(coord[0]) - offsetX;
+                    const contentY = Math.round(imageHeight - coord[1]) - offsetY;
+                    const scaledX = contentX / scale;
+                    const scaledY = contentY / scale;
+                    lastDisplayX = Math.round(originX + scaledX);
+                    lastDisplayY = Math.round(originY + scaledY);
+                    updateModalDisplay();
+                };
+
+                // Attach event listeners to the map instance
+                mapInstance.on('moveend', updateModalDisplay);      // For zoom changes
+                mapInstance.on('pointerdown', handlePointerEvent);  // For touch/click
+                mapInstance.on('pointermove', handlePointerEvent);  // For mouse hover
+                mapInstance.getViewport().addEventListener('mouseout', () => {
+                    lastDisplayX = undefined;
+                    lastDisplayY = undefined;
+                    updateModalDisplay();
+                });
+
+                updateModalDisplay(); // Initial call to set the text
             };
 
-            // Initial display and update on zoom change
-            detailMap.on('moveend', updateModalDisplay);
-            updateModalDisplay(); // Set initial text
-
-            // Update coordinates on touch/click start for mobile friendliness
-            detailMap.on('pointerdown', function(evt) {
-                const coord = evt.coordinate;
-                if (coord) {
-                    // Convert OL coordinate (bottom-left origin) to main map coordinate (top-left origin)
-                    const contentX = Math.round(coord[0]) - offsetX;
-                    const contentY = Math.round(imageHeight - coord[1]) - offsetY;
-                    
-                    const scaledX = contentX / scale;
-                    const scaledY = contentY / scale;
-
-                    lastDisplayX = Math.round(originX + scaledX);
-                    lastDisplayY = Math.round(originY + scaledY);
-                    updateModalDisplay();
-                }
-            });
-
-            detailMap.on('pointermove', function(evt) {
-                const coord = evt.coordinate;
-                if (coord) {
-                    // Convert OL coordinate (bottom-left origin) to main map coordinate (top-left origin)
-                    const contentX = Math.round(coord[0]) - offsetX;
-                    const contentY = Math.round(imageHeight - coord[1]) - offsetY;
-                    
-                    const scaledX = contentX / scale;
-                    const scaledY = contentY / scale;
-
-                    lastDisplayX = Math.round(originX + scaledX);
-                    lastDisplayY = Math.round(originY + scaledY);
-                    updateModalDisplay();
-                }
-            });
-
-            detailMap.getViewport().addEventListener('mouseout', function() {
-                lastDisplayX = undefined;
-                lastDisplayY = undefined;
-                updateModalDisplay();
-            });
+            // Initialize the coordinate display for the newly created detail map.
+            setupCoordinateDisplay(detailMap, locationData);
         }
         
     }, 10); // A small delay ensures the modal container is ready
 }
+
+/**
+ * Gathers all markers and labels from the main map that fall within the
+ * calculated bounding box of a detail map.
+ * @param {object} locationData - The configuration object for the detail map.
+ * @param {object} featureBbox - The calculated bounding box on the main map.
+ * @returns {{markers: Array, labels: Array}} An object containing arrays of markers and labels.
+ */
+function getFeaturesForDetailMap(locationData, featureBbox) {
+    const detailMarkers = [...(locationData.markers || [])];
+    const existingTooltips = new Set(detailMarkers.map(m => m.tooltip));
+
+    const detailLabels = [...(locationData.labels || [])];
+    const existingLabelNames = new Set(detailLabels.map(l => l.name));
+
+    const scale = locationData.scale || 1;
+    const offsetX = locationData.offset?.x || 0;
+    const offsetY = locationData.offset?.y || 0;
+    const originX = locationData.origin?.x || 0;
+    const originY = locationData.origin?.y || 0;
+
+    // Iterate through main map markers
+    for (const category in mapMarkers) {
+        mapMarkers[category].forEach(mainMarker => {
+            if (
+                mainMarker.x >= featureBbox.minX && mainMarker.x <= featureBbox.maxX &&
+                mainMarker.y >= featureBbox.minY && mainMarker.y <= featureBbox.maxY &&
+                !existingTooltips.has(mainMarker.tooltip)
+            ) {
+                const subX = ((mainMarker.x - originX) * scale) + offsetX;
+                const subY = ((mainMarker.y - originY) * scale) + offsetY;
+                detailMarkers.push({ x: Math.round(subX), y: Math.round(subY), type: mainMarker.type, tooltip: mainMarker.tooltip });
+            }
+        });
+    }
+
+    // Iterate through main map labels
+    for (const category in mapLabels) {
+        mapLabels[category].forEach(mainLabel => {
+            if (
+                mainLabel.x >= featureBbox.minX && mainLabel.x <= featureBbox.maxX &&
+                mainLabel.y >= featureBbox.minY && mainLabel.y <= featureBbox.maxY &&
+                !existingLabelNames.has(mainLabel.name)
+            ) {
+                const subX = ((mainLabel.x - originX) * scale) + offsetX;
+                const subY = ((mainLabel.y - originY) * scale) + offsetY;
+                detailLabels.push({
+                    x: Math.round(subX),
+                    y: Math.round(subY),
+                    name: mainLabel.name,
+                    fontSize: mainLabel.fontSize,
+                    category: category
+                });
+            }
+        });
+    }
+
+    return {
+        markers: detailMarkers,
+        labels: detailLabels
+    };
+}
+
 
 /**
  * Adds a set of markers to a vector source for a detail map.
@@ -1062,8 +1092,10 @@ function addDetailMapMarkers(source, markers, imageHeight) {
  * @param {Array} labels - An array of label objects to add.
  * @param {number} imageHeight - The height of the detail map image for coordinate conversion.
  */
-function addDetailMapLabels(source, labels, imageHeight) {
+function addDetailMapLabels(source, labels, imageHeight, locationData) {
     if (!labels || !labels.length) return;
+
+    const scale = locationData.scale || 1;
 
     labels.forEach(label => {
         // Convert top-left coordinates (from detail-maps.js) to the bottom-left
@@ -1077,16 +1109,20 @@ function addDetailMapLabels(source, labels, imageHeight) {
             category: label.category,
         });
 
-        // Get style options for this category and create a copy to avoid side effects
-        const styleOptions = { ...(labelStyles[label.category] || defaultLabelStyle) };
+        // 1. Get the base style object for the label's category.
+        const baseStyle = { ...(labelStyles[label.category] || defaultLabelStyle) };
 
-        // Override font size if provided
-        if (label.fontSize) {
-            styleOptions.fontSize = label.fontSize;
-        }
+        // 2. Determine the base font size. Use the label's specific size, or the category's default.
+        const baseFontSize = label.fontSize || baseStyle.fontSize;
 
-        // Apply the style
-        feature.setStyle(createLabelImageStyle(label.name, styleOptions.fontSize, styleOptions));
+        // 3. Scale the font size for the detail map to make it legible.
+        // A factor of 2.5 seems to provide a good balance on high-DPI screens.
+        const finalFontSize = Math.round(baseFontSize * (scale / 2.5));
+
+        // 4. Create the style. Pass the final size and the base style options.
+        // The createLabelImageStyle function will use these to render the label.
+        // This ensures all properties (fontFamily, fontWeight, etc.) from the baseStyle are used.
+        feature.setStyle(createLabelImageStyle(label.name, finalFontSize, baseStyle));
         source.addFeature(feature);
     });
 }

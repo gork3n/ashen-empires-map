@@ -105,10 +105,6 @@
     </div>
 
     <div id="container">
-        <!-- <div id="header">
-            <h1>Ashen Empires Map</h1>
-            <div id="subheader">Created by Sir Chris</div>
-        </div> -->
         <div id="map" class="map">
             <div id="quick-tips-container" class="quick-tips-container">
                 <span class="material-symbols-outlined">help</span>
@@ -120,22 +116,9 @@
     <!-- Page Footer -->
     <div class="page-footer">
         <div id="mouse-position"></div>
-        <div class="dev-status">Development Stage: Adding Labels and Markers only. I will be adding information and make all markers and labels clickable later.</div>
+        <div class="dev-status">This map is under active development. More features are coming soon!</div>
         <div class="footer-right"></div>
     </div>
-    
-    <!-- Temporary Icon Test Section - Remove once icons are working -->
-    <!-- <div style="padding: 20px; background: white; position: absolute; top: 10px; right: 10px; z-index: 1000;">
-        <h3>Icon Test</h3>
-        <i class="fa-solid fa-door-open" style="color: #8A2BE2; font-size: 16px; margin: 5px;"></i> Portal<br>
-        <i class="fa-solid fa-anchor" style="color: #1E90FF; font-size: 16px; margin: 5px;"></i> Dock<br>
-        <i class="fa-solid fa-ship" style="color: #1E90FF; font-size: 16px; margin: 5px;"></i> Dock (alt)<br>
-        <i class="fa-solid fa-scroll" style="color: #FFD700; font-size: 16px; margin: 5px;"></i> Quest<br>
-        <i class="fa-solid fa-book" style="color: #FFD700; font-size: 16px; margin: 5px;"></i> Quest (alt)<br>
-        <i class="fa-solid fa-store" style="color: #32CD32; font-size: 16px; margin: 5px;"></i> Shop<br>
-        <i class="fa-solid fa-graduation-cap" style="color: #FF8C00; font-size: 16px; margin: 5px;"></i> Trainer<br>
-        <i class="fa-solid fa-landmark" style="color: #A0522D; font-size: 16px; margin: 5px;"></i> Bank<br>
-    </div> -->
     
     <!-- Load your custom JavaScript -->
     <script src="js/labels.js"></script>
@@ -152,7 +135,16 @@
             <h2 id="modal-title"></h2>
             <div class="modal-body">
                 <div id="modal-map" class="modal-map-container"></div>
-                <div id="modal-info" class="modal-info-container"></div>
+                <div id="modal-info" class="modal-info-container">
+                    <!-- This toggle is only visible on mobile via CSS -->
+                    <button class="modal-info-toggle">
+                        <h3 class="modal-info-title">Location Information</h3>
+                        <span class="material-symbols-outlined">expand_more</span>
+                    </button>
+                    <div class="modal-info-content-wrapper">
+                        <!-- Content will be populated here by JS -->
+                    </div>
+                </div>
             </div>
             <div class="modal-footer">
                 <div id="modal-mouse-position"></div>
