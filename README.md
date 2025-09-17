@@ -221,16 +221,32 @@ Once these steps are complete, the map should render and function within your pa
 
 ## Planned Features
 
-- ✅ Layer toggling for displaying different map information
-- 🚧 Points of interest markers for key locations
-- ✅ Separation of code into dedicated files for better maintainability
-- 🚧 Interactive sidebar with dynamic controls
-- 🚧 Custom markers and tooltips
-- 🚧 Interactive elements for more detailed location information (Detail Modals)
-- 🚧 Mobile-optimized controls and layout
+- ✅ **Dynamic Layer Toggling**
+  - ✅ Interactive sidebar for showing/hiding layers.
+  - ✅ Master toggles for labels and markers.
+  - ✅ State-aware buttons with active/inactive styles.
+- ✅ **Points of Interest Markers**
+  - ✅ Custom, canvas-rendered icons for different categories (shops, portals, etc.).
+  - ✅ Dynamic visibility based on zoom level to reduce clutter.
+  - ✅ Informative tooltips on hover.
+- ✅ **Modular Codebase**
+  - ✅ Separation of concerns into `map.js`, `sidebar.js`, `tips.js`.
+  - ✅ Data-driven design using `labels.js`, `markers.js`, and `detail-maps.js`.
+- ✅ **Interactive Detail Modals**
+  - ✅ High-resolution sub-maps for major locations.
+  - ✅ Automatic inclusion of relevant markers and labels.
+  - ✅ Mobile-optimized layout with collapsible info panel.
+- ✅ **Responsive & Mobile-Optimized UI**
+  - ✅ Fluid layout for all screen sizes.
+  - ✅ Collapsible sidebar with icon-only mode.
+  - ✅ Enlarged and repositioned zoom controls for touch devices.
+- 🚧 **Complete Labeling System**
+  - ✅ Dynamic font scaling for legibility at all zoom levels.
+  - 🚧 Ongoing verification and addition of all location labels.
 - ⬜ Search functionality for locations
-- ⬜ Complete labeling system for all important locations
-- ⬜ Visual overlays for major regions (e.g., Darkforest, Battle Plains).
+- ⬜ Monster Data Layer
+- ⬜ Visual Region Overlays
+- ⬜ Finalize UI/UX and Styling
 
 ## Credits
 
