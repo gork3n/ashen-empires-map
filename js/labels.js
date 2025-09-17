@@ -23,7 +23,7 @@ const mapLabels = {
         /* Krythan Island Cities */
         // Krythan Region Cities
         { x: 290, y: 807, name: "Jeel", fontSize: 30 },
-        { x: 525, y: 1058, name: "Hothbra", fontSize: 30 },
+        { x: 522, y: 1058, name: "Hothbra", fontSize: 30 },
         { x: 788, y: 1171, name: "Varg", fontSize: 30 },
         { x: 342, y: 1440, name: "New Korelth", fontSize: 30 },
         { x: 670, y: 1670, name: "Vrethpool", fontSize: 30 },
@@ -100,7 +100,7 @@ const mapLabels = {
         { x: 775, y: 571, name: "Lotor's Summer Palace", fontSize: 30 },
         { x: 663, y: 630, name: "Real Estate Island", fontSize: 20 },
         { x: 1090, y: 992, name: "Krythan Island", fontSize: 35 },
-        { x: 920, y: 60, name: "Valinor Island", fontSize: 35 },
+        { x: 940, y: 60, name: "Valinor Island", fontSize: 35 },
         { x: 421, y: 69, name: "Party Island", fontSize: 30 },
         { x: 1545, y: 546, name: "Lotor's Prison", fontSize:30 },
         { x: 137, y: 230, name: "Minotaur Island", fontSize: 30 },
@@ -154,9 +154,9 @@ const mapLabels = {
 
         // Krythan Island Places of Interest
         { x: 327, y: 742, name: "Jeel Snake Pit", fontSize: 14 },
-        { x: 436, y: 855, name: "Crypt of Kargoth", fontSize: 14 },
+        { x: 436, y: 850, name: "Crypt of Kargoth", fontSize: 14 },
         { x: 832, y: 1035, name: "Holendar's Mansion", fontSize: 15 },
-        { x: 895, y: 1020, name: "Krythan Cemetary", fontSize: 15 }, // I know it's misspelled on the map but it's also misspelled in AE.
+        { x: 895, y: 1023, name: "Krythan Cemetary", fontSize: 15 }, // I know it's misspelled on the map but it's also misspelled in AE.
         { x: 836, y: 1279, name: "Scalo's Den", fontSize: 15 },
         { x: 1279, y: 1123, name: "Kobold Castle", fontSize: 18 },
         { x: 1376, y: 1077, name: "Karzak Cove", fontSize: 15 },
@@ -191,8 +191,8 @@ const mapLabels = {
         // Krythan Island Water Bodies
         { x: 1267, y: 1220, name: "Lake Silvest", fontSize: 15 },
         { x: 390, y: 1090, name: "Queen's Lake", fontSize: 18 },
-        { x: 845, y: 1163, name: "Crow Lake", fontSize: 14 },
-        { x: 1040, y: 1226, name: "Chokecherry Pond", fontSize: 12 },
+        { x: 849, y: 1156, name: "Crow Lake", fontSize: 14 },
+        { x: 1040, y: 1218, name: "Chokecherry Pond", fontSize: 12 },
         // Add water body labels here
     ],
     

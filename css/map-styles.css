@@ -338,9 +338,9 @@ input:checked + .slider:before {
 /* Tooltip styles */
 .marker-tooltip {
     position: absolute;
-    background-color: rgb(0, 0, 0);
-    border: 2px solid #333;
-    border-radius: 6px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 1.5px solid rgba(128, 128, 128, 0.5);
+    border-radius: 8px;
     padding: 6px 10px;
     font-family: 'Alegreya Sans', sans-serif;
     font-size: 15px;

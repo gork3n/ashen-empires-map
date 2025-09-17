@@ -73,6 +73,7 @@ const labelStyles = {
     dungeons: {
         // White for dungeons
         useGradient: false,
+        useBackground: true,
         fillColor: '#FFFFFF',
         strokeColor: '#000000',
         strokeWidth: 2,
@@ -83,6 +84,7 @@ const labelStyles = {
     caves: {
         // White for caves
         useGradient: false,
+        useBackground: true,
         fillColor: '#FFFFFF',
         strokeColor: '#000000',
         strokeWidth: 2,
@@ -93,6 +95,7 @@ const labelStyles = {
     interests: {
         // White for points of interest
         useGradient: false,
+        useBackground: true,
         fillColor: '#FFFFFF',
         strokeColor: '#000000',
         strokeWidth: 2,
@@ -126,6 +129,12 @@ const labelStyles = {
 // Default style for any category not specifically defined
 const defaultLabelStyle = {
     useGradient: false,
+    useBackground: false,
+    backgroundStyle: {
+        fill: 'rgba(0, 0, 0, 0.7)',
+        stroke: 'rgba(128, 128, 128, 0.5)',
+        padding: [2, 6] // [Y, X]
+    },
     fillColor: '#FFFFFF',
     strokeColor: '#000000',
     strokeWidth: 2,
@@ -157,7 +166,11 @@ const tooltipPointerMoveHandler = function(evt) {
         return;
     }
     const feature = currentMap.forEachFeatureAtPixel(evt.pixel, f => f);
-    if (feature && feature.get('tooltip')) {
+
+    const markerTooltipText = feature ? feature.get('tooltip') : null;
+    const labelTooltipText = feature ? feature.get('labelTooltip') : null;
+
+    if (markerTooltipText) {
         const markerType = feature.get('type');
         const style = markerStyles[markerType] || { icon: 'place', color: '#FF0000' };
         const animationClass = style.animation === 'beat' ? 'g-icon-beat' : '';
@@ -165,8 +178,14 @@ const tooltipPointerMoveHandler = function(evt) {
             <div class="tooltip-icon" style="color: ${style.color};">
                 <span class="material-symbols-outlined ${animationClass}">${style.icon}</span>
             </div>
-            <div class="tooltip-text">${feature.get('tooltip')}</div>
+            <div class="tooltip-text">${markerTooltipText}</div>
         `;
+        markerTooltipOverlay.setPosition(feature.getGeometry().getCoordinates());
+        markerTooltipElement.style.display = 'flex';
+        currentMap.getTargetElement().style.cursor = 'pointer';
+    } else if (labelTooltipText) {
+        // For labels, we just want the text in a regular font.
+        markerTooltipElement.innerHTML = `<div class="tooltip-text">${labelTooltipText}</div>`;
         markerTooltipOverlay.setPosition(feature.getGeometry().getCoordinates());
         markerTooltipElement.style.display = 'flex';
         currentMap.getTargetElement().style.cursor = 'pointer';
@@ -328,9 +347,6 @@ function createLabelImageStyle(text, fontSize, styleOptions = {}) {
     
     // Create an offscreen canvas to render the text
     var canvas = document.createElement('canvas');
-    var paddingX = 20;
-    var paddingY = 2; // This controls the vertical space between the text and the anchor point.
-    
     // Set canvas context
     var ctx = canvas.getContext('2d', { willReadFrequently: true });
     
@@ -342,13 +358,45 @@ function createLabelImageStyle(text, fontSize, styleOptions = {}) {
     var metrics = ctx.measureText(text);
     var textWidth = metrics.width;
     var textHeight = finalFontSize * 1.2;
-    
+
+    // Define padding. Use specific background padding if available, otherwise use original values.
+    let paddingX = 20;
+    let paddingY = 2;
+    if (options.useBackground) {
+        // Use padding from the style, assuming it exists because of the default.
+        paddingY = options.backgroundStyle.padding[0];
+        paddingX = options.backgroundStyle.padding[1];
+    }
+
     // Set canvas dimensions with padding
     canvas.width = textWidth + paddingX * 2;
     canvas.height = textHeight + paddingY * 2;
     
     // Clear canvas and set font again (necessary after resizing)
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Draw background if needed
+    if (options.useBackground) {
+        const cornerRadius = 8;
+        const bgStyle = options.backgroundStyle;
+        ctx.fillStyle = bgStyle.fill;
+        ctx.strokeStyle = bgStyle.stroke;
+        ctx.lineWidth = 1.5;
+        ctx.beginPath();
+        ctx.moveTo(cornerRadius, 0);
+        ctx.lineTo(canvas.width - cornerRadius, 0);
+        ctx.arcTo(canvas.width, 0, canvas.width, cornerRadius, cornerRadius);
+        ctx.lineTo(canvas.width, canvas.height - cornerRadius);
+        ctx.arcTo(canvas.width, canvas.height, canvas.width - cornerRadius, canvas.height, cornerRadius);
+        ctx.lineTo(cornerRadius, canvas.height);
+        ctx.arcTo(0, canvas.height, 0, canvas.height - cornerRadius, cornerRadius);
+        ctx.lineTo(0, cornerRadius);
+        ctx.arcTo(0, 0, cornerRadius, 0, cornerRadius);
+        ctx.closePath();
+        ctx.fill();
+        ctx.stroke();
+    }
+
     ctx.font = fontString;
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
@@ -433,12 +481,15 @@ function createMarkerStyle(markerType) {
     ctx.beginPath();
     ctx.arc(size / 2, yCenter, size / 3, 0, 2 * Math.PI);
 
-    // Set the background color to match the sidebar toggle buttons
-    ctx.fillStyle = 'rgba(0, 0, 0, 0.67)';
+    // Create a top-to-bottom linear gradient for the background
+    const gradient = ctx.createLinearGradient(0, yCenter - (size / 3), 0, yCenter + (size / 3));
+    gradient.addColorStop(0, 'rgba(40, 55, 70, 0.8)'); // A lighter, cool blue-gray for subtlety
+    gradient.addColorStop(1, 'rgba(15, 25, 35, 0.8)'); // A darker, cool blue-gray to blend with the map
+    ctx.fillStyle = gradient;
     ctx.fill();
 
-    // Add a white border around the circle
-    ctx.strokeStyle = '#b6b6b6ff';
+    // Add a subtle border to make the marker pop against the background
+    ctx.strokeStyle = 'rgba(100, 120, 140, 0.9)';
     ctx.lineWidth = 1.5;
     ctx.stroke();
 
@@ -653,6 +704,11 @@ function addLabelFeature(source, x, y, text, fontSize, category) {
         category: category
     });
     
+    // Add a tooltip for specific label categories that use a special font.
+    if (category === 'islands' || category === 'cities') {
+        feature.set('labelTooltip', text);
+    }
+
     // Get style options for this category
     const styleOptions = { ...defaultLabelStyle, ...(labelStyles[category] || {}) };
     
