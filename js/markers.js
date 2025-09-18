@@ -12,13 +12,6 @@ const mapMarkers = {
         { x: 776, y: 168, type: "portal", tooltip: "Portal to Arena Viewing Area" },
         //Done
 
-        /* Krythan Island Portals */
-        // Krythan Region Portals
-        { x: 585, y: 1497, type: "portal", tooltip: "Portal to East Mainlands West of Parian" },
-        { x: 185, y: 1466, type: "portal", tooltip: "Portal to Northeastern Mainlands North of Josody" },
-
-        // Silvest Valley Region Portals
-        
         // Lotor's Summer Palace Portals
         { x: 762, y: 589, type: "portal", tooltip: "Portal to Party Island" },
         { x: 763, y: 646, type: "portal", tooltip: "Portal to PvP Island" },
@@ -41,22 +34,27 @@ const mapMarkers = {
         // Minotaur Island Portals
 
 
-        // Party Island Portals
-
         // Scorched Island Portals
         { x: 631, y: 2102, type: "portal", tooltip: "Portal to Battle Plains" },
         { x: 720, y: 1964, type: "portal", tooltip: "Portal to Hell" },
+
+        /* Krythan Island Portals */
+        // Krythan Region Portals
+        { x: 585, y: 1497, type: "portal", tooltip: "Portal to East Mainlands West of Parian" },
+        { x: 185, y: 1466, type: "portal", tooltip: "Portal to Northeastern Mainlands North of Josody" },
+        { x: 473, y: 1896, type: "portal", tooltip: "Portal to Hell" },
+        { x: 713, y: 1753, type: "portal", tooltip: "Portal to Scarab Island" },
+
+        // Silvest Valley Region Portals
+        
+        
 
         /*  Mainland Portals */
 
         // Hell Portals
         { x: 1052, y: 3289, type: "portal", tooltip: "Portal to Scorched Island" },
 
-
-
-        
-
-        
+ 
     ],
     
     docks: [
@@ -142,18 +140,18 @@ const mapMarkers = {
     
     shops: [
         /*Party Island Shops*/
-        { x: 438, y: 87, type: "shop", tooltip: "Dalgo's Tavern" },
+        { x: 438, y: 87, type: "shop_pub", tooltip: "Dalgo's Tavern" },
 
         /* Valinor Shops */
-        { x: 749, y: 116, type: "shop", tooltip: "Larodeth Lywelyn's Pub and Grub Tavern" },
-        { x: 738, y: 120, type: "shop", tooltip: "Micheal Vonda's Weapon Shop" },
-        { x: 733, y: 125, type: "shop", tooltip: "Thomas Blackstone's Armor Shop" },
-        { x: 735, y: 116, type: "shop", tooltip: "Whiliam Rosen's Provisioner Shop" },
-        { x: 772, y: 120, type: "shop", tooltip: "Leon Elias's Provisioner Shop" },
-        { x: 784, y: 115, type: "shop", tooltip: "Cladius Zamilus's Magic Shop" },
-        { x: 752, y: 152, type: "shop", tooltip: "Linus Houson's Carpentry Store" },
-        { x: 752, y: 153, type: "shop", tooltip: "Kerry Thomas' Blacksmith Shop " },
-        { x: 752, y: 154, type: "shop", tooltip: "Tina Florence's Leather Shop" },
+        { x: 749, y: 116, type: "shop_pub", tooltip: "Larodeth Lywelyn's Pub and Grub Tavern" },
+        { x: 738, y: 120, type: "shop_weapon", tooltip: "Micheal Vonda's Weapon Shop" },
+        { x: 733, y: 125, type: "shop_armor", tooltip: "Thomas Blackstone's Armor Shop" },
+        { x: 735, y: 116, type: "shop_provisioner", tooltip: "Whiliam Rosen's Provisioner Shop" },
+        { x: 772, y: 120, type: "shop_provisioner", tooltip: "Leon Elias's Provisioner Shop" },
+        { x: 784, y: 115, type: "shop_generic", tooltip: "Cladius Zamilus's Magic Shop" },
+        { x: 752, y: 152, type: "shop_carpentry", tooltip: "Linus Houson's Carpentry Store" },
+        { x: 752, y: 153, type: "shop_generic", tooltip: "Kerry Thomas' Blacksmith Shop " },
+        { x: 752, y: 154, type: "shop_leather", tooltip: "Tina Florence's Leather Shop" },
         //Done
 
 
@@ -161,28 +159,28 @@ const mapMarkers = {
 
         
         //Varg Shops
-        { x: 780, y: 1193, type: "shop", tooltip: "Magic Shop" },
+        { x: 780, y: 1193, type: "shop_generic", tooltip: "Magic Shop" },
         
         /*Lotor's Summer Palace Shops*/
-        { x: 812, y: 676, type: "shop", tooltip: "O'riles Weapon Shop" },
-        { x: 811, y: 683, type: "shop", tooltip: "Colleen Franks' Armor Shop" },
-        { x: 862, y: 715, type: "shop", tooltip: "Garius' Farming Shop" },
-        { x: 854, y: 712, type: "shop", tooltip: "Tom Uslak Carpentry Shop" },
-        { x: 770, y: 623, type: "shop", tooltip: "Blueprint Sales" },
-        { x: 772, y: 623, type: "shop", tooltip: "Surveying and Tools Sales" },
-        { x: 774, y: 603, type: "shop", tooltip: "Wizard Swishwhich's Shop - Currency: Rune Fragment" },
-        { x: 773, y: 604, type: "shop", tooltip: "Wizard Blunderstone" },
-        { x: 765, y: 606, type: "shop", tooltip: "VIP Store" },
-        { x: 764, y: 600, type: "shop", tooltip: "Lotor's Gardener's Shop" },
-        { x: 792, y: 595, type: "shop", tooltip: "Larson Davide's Shipyard Shop" },
-        { x: 794, y: 595, type: "shop", tooltip: "Tides of Fate Raft Offer" },
-        { x: 758, y: 679, type: "shop", tooltip: "Doyle Trobush's Magic Shop" },
-        { x: 791, y: 662, type: "shop", tooltip: "Panteo's Runecrafting Shop" },
-        { x: 791, y: 692, type: "shop", tooltip: "Canuelle's Jewelry Shop" },
-        { x: 805, y: 706, type: "shop", tooltip: "Mongor's Leatherworking Shop" },
-        { x: 802, y: 701, type: "shop", tooltip: "Kaleic's Blacksmith Shop" },
-        { x: 813, y: 700, type: "shop", tooltip: "Mace Gurban's Provisioner Shop" },
-        { x: 846, y: 729, type: "shop", tooltip: "Docale's Pub" },
+        { x: 812, y: 676, type: "shop_weapon", tooltip: "O'riles Weapon Shop" },
+        { x: 811, y: 683, type: "shop_armor", tooltip: "Colleen Franks' Armor Shop" },
+        { x: 862, y: 715, type: "shop_generic", tooltip: "Garius' Farming Shop" },
+        { x: 854, y: 712, type: "shop_carpentry", tooltip: "Tom Uslak Carpentry Shop" },
+        { x: 770, y: 623, type: "shop_generic", tooltip: "Blueprint Sales" },
+        { x: 772, y: 623, type: "shop_generic", tooltip: "Surveying and Tools Sales" },
+        { x: 774, y: 603, type: "shop_generic", tooltip: "Wizard Swishwhich's Shop - Currency: Rune Fragment" },
+        { x: 773, y: 604, type: "shop_generic", tooltip: "Wizard Blunderstone" },
+        { x: 765, y: 606, type: "shop_generic", tooltip: "VIP Store" },
+        { x: 764, y: 600, type: "shop_generic", tooltip: "Lotor's Gardener's Shop" },
+        { x: 792, y: 595, type: "shop_generic", tooltip: "Larson Davide's Shipyard Shop" },
+        { x: 794, y: 595, type: "shop_generic", tooltip: "Tides of Fate Raft Offer" },
+        { x: 758, y: 679, type: "shop_generic", tooltip: "Doyle Trobush's Magic Shop" },
+        { x: 791, y: 662, type: "shop_generic", tooltip: "Panteo's Runecrafting Shop" },
+        { x: 791, y: 692, type: "shop_jewelry", tooltip: "Canuelle's Jewelry Shop" },
+        { x: 805, y: 706, type: "shop_leather", tooltip: "Mongor's Leatherworking Shop" },
+        { x: 802, y: 701, type: "shop_generic", tooltip: "Kaleic's Blacksmith Shop" },
+        { x: 813, y: 700, type: "shop_provisioner", tooltip: "Mace Gurban's Provisioner Shop" },
+        { x: 846, y: 729, type: "shop_pub", tooltip: "Docale's Pub" },
         //Done
 
     ],
@@ -227,17 +225,17 @@ const mapMarkers = {
         // Add more trainers
     ],
     
-    spawns: [
-        // Add good and evil spawn gates here
+    spawn_good: [
         //Valinor Island Spawns
         { x: 779, y: 141, type: "spawn_good", tooltip: "Spawn Gate" },
-        
+
+        // Example: { x: 123, y: 456, type: "spawn_good", tooltip: "Good Spawn Gate" }
+    ],
+
+    spawn_evil: [
         //Krythan Island Spawns
         { x: 777, y: 873, type: "spawn_evil", tooltip: "Evil Spawn Gate" },
 
-
-        
-        // Example: { x: 123, y: 456, type: "spawn_good", tooltip: "Good Spawn Gate" }
         // Example: { x: 789, y: 101, type: "spawn_evil", tooltip: "Evil Spawn Gate" }
     ],
 
@@ -272,38 +270,41 @@ const mapMarkers = {
 
     crafting: [
         // Add markers for obelisks and ruin spires here
-        // Example: { x: 123, y: 456, type: "crafting", tooltip: "Ancient Obelisk" }
+        /* Mainland Crafting Locations */
+        // Region Western Isles
+        { x: 2109, y: 2734, type: "obelisk", tooltip: "Desprail Obelisk" }
     ],
 
     undergrounds: [
         /* Valinor Island Undergrounds */
-        { x: 609, y: 359, type: "underground", tooltip: "Frump's Lair" },
-        { x: 875, y: 311, type: "underground", tooltip: "Bonesnarl's Lair" }, //I need to verify this location
-        { x: 763, y: 118, type: "underground", tooltip: "Stairs to Mage Trainers" },
+        { x: 609, y: 359, type: "underground_dungeon", tooltip: "Frump's Lair" },
+        { x: 875, y: 311, type: "underground_dungeon", tooltip: "Bonesnarl's Lair" }, //I need to verify this location
+        { x: 763, y: 118, type: "underground_stairs", tooltip: "Stairs to Mage Trainers" },
         
         /* Lotor's Summer Palace Undergrounds */
-        { x: 764, y: 754, type: "underground", tooltip: "Sewer Entrance" },
-        { x: 799, y: 709, type: "underground", tooltip: "Leatherworking and Armor Shop Basement" },
+        { x: 764, y: 754, type: "underground_dungeon", tooltip: "Sewer Entrance" },
+        { x: 799, y: 709, type: "underground_stairs", tooltip: "Leatherworking and Armor Shop Basement" },
         
         /* Krythan Island Undergrounds */
 
         // Region: Silvest Valley Undergrounds
-        { x: 967, y: 1348, type: "underground", tooltip: "Snake Pit" },
-        { x: 907, y: 1031, type: "underground", tooltip: "Krythan Crypt" }, // I know it's misspelled on the map but it's also misspelled in AE.
-        { x: 1098, y: 1184, type: "underground", tooltip: "Cliffside Mines" },
+        { x: 967, y: 1348, type: "snake_pit", tooltip: "Snake Pit" },
+        { x: 907, y: 1031, type: "underground_crypt", tooltip: "Krythan Crypt" }, // I know it's misspelled on the map but it's also misspelled in AE.
+        { x: 1098, y: 1184, type: "underground_cave", tooltip: "Cliffside Mines" },
 
         // Region: Krythan Undergrounds
-        { x: 820, y: 1044, type: "underground", tooltip: "Holendar's Mansion Basement" },
-        { x: 781, y: 863, type: "underground", tooltip: "Trap Door to LSP" },
-        { x: 791, y: 918, type: "underground", tooltip: "Ladder to LSP Sewer (Away from evil spawn gate)" },
+        { x: 327, y: 742, type: "snake_pit", tooltip: "Snake pit" },
+        { x: 820, y: 1044, type: "underground_stairs", tooltip: "Holendar's Mansion Basement" },
+        { x: 781, y: 863, type: "underground_stairs", tooltip: "Trap Door to LSP" },
+        { x: 791, y: 918, type: "underground_stairs", tooltip: "Ladder to LSP Sewer (Away from evil spawn gate)" },
 
         /* Mainland Undergrounds */
 
         // Darkwoods Forest Region Undergrounds
 
         // Necropolis Undergrounds
-        { x: 1363, y: 2889, type: "underground", tooltip: "Trap Door to Necropolis Magic and Farm Shops (They do not work)" },
-        { x: 1349, y: 2933, type: "underground", tooltip: "Ladder to inside Necropolis" },
+        { x: 1363, y: 2889, type: "underground_stairs", tooltip: "Trap Door to Necropolis Magic and Farm Shops (They do not work)" },
+        { x: 1349, y: 2933, type: "underground_stairs", tooltip: "Ladder to inside Necropolis" },
 
         // Battle Plains Region Undergrounds
 
@@ -312,7 +313,7 @@ const mapMarkers = {
         // Highlands Region Undergrounds
 
         // Western Isles Undergrounds
-
+        { x: 2111, y: 2766, type: "underground_stairs", tooltip: "Shadow Temple South Entrance" },
         // Valley of Giants Undergrounds
 
         // Heartwood Coast Undergrounds
@@ -339,6 +340,11 @@ const mapMarkers = {
         
     ],
 
+    games_of_chance: [
+        /*Lotor's Summer Palace Games*/
+        { x: 839, y: 730, type: "game_of_chance", tooltip: "Malson's Demon's Eye Game" },
+    ],
+
     information: [
         /* Valinor Island Information */
 
@@ -346,7 +352,6 @@ const mapMarkers = {
         { x: 736, y: 591, type: "information", tooltip: "Fallen Warriors Memorial" },
         { x: 715, y: 602, type: "information", tooltip: "Memorial to the Lost Sons" },
         { x: 772, y: 687, type: "information", tooltip: "Jamoal the Sage (Wanders) - Exchange Race Changing Scrolls NPC" },
-        { x: 839, y: 730, type: "information", tooltip: "Malson's Demon's Eye Game" },
 
         // Krythan Island Information
 
@@ -384,62 +389,128 @@ const mapMarkers = {
     ]
 };
 
-// Define marker types with appropriate Font Awesome icons and styling
-// Make sure there are NO background properties here
+// Define marker types with appropriate SVG icons and styling.
+// The 'icon' property should be the path to the SVG file.
 const markerStyles = {
+    // Portals & Docks
     portal: {
-        icon: "cyclone",
+        icon: "icons/portal.svg",
         color: "#FFD700", // Gold
-        size: 18
     },
     dock: {
-        icon: "anchor",
+        icon: "icons/anchor.svg",
         color: "#1E90FF", // DodgerBlue
-        size: 18
     },
+
+    // Quests
     quest: {
-        icon: "stars",
+        icon: "icons/scroll-unfurled.svg",
         color: "#FFD700", // Gold
-        size: 18
     },
-    shop: {
-        icon: "store",
+    quest_dynamic: {
+        icon: "icons/jeweled-chalice.svg",
+        color: "#FFD700", // Gold
+    },
+
+    // Shops
+    shop_weapon: {
+        icon: "icons/crossed-swords.svg",
         color: "#32CD32", // LimeGreen
-        size: 18
     },
+    shop_armor: {
+        icon: "icons/round-shield.svg",
+        color: "#32CD32", // LimeGreen
+    },
+    shop_generic: {
+        icon: "icons/hanging-sign.svg",
+        color: "#32CD32", // LimeGreen
+    },
+    shop_provisioner: {
+        icon: "icons/barrel.svg",
+        color: "#32CD32", // LimeGreen
+    },
+    shop_pub: {
+        icon: "icons/beer-stein.svg",
+        color: "#32CD32", // LimeGreen
+    },
+    shop_jewelry: {
+        icon: "icons/big-diamond-ring.svg",
+        color: "#32CD32", // LimeGreen
+    },
+    shop_carpentry: {
+        icon: "icons/hand-saw.svg",
+        color: "#32CD32", // LimeGreen
+    },
+    shop_leather: {
+        icon: "icons/leather-boot.svg",
+        color: "#32CD32", // LimeGreen
+    },
+
+    // Trainers
     trainer: {
-        icon: "book_2",
+        icon: "icons/white-book.svg",
         color: "#FF8C00", // DarkOrange
-        size: 18
     },
+
+    // Spawns
     spawn_good: {
-        icon: "skull",
+        icon: "icons/death-spawn.svg",
         color: "#FFFFFF", // White
-        size: 18
     },
     spawn_evil: {
-        icon: "skull",
+        icon: "icons/death-spawn.svg",
         color: "#8B0000", // DarkRed (Blood Red)
-        size: 18
     },
+
+    // Bank
     bank: {
-        icon: "account_balance",
+        icon: "icons/bank.svg",
         color: "#DBC12F", // Gold
-        size: 18
     },
-    crafting: {
-        icon: "construction",
+
+    // Crafting
+    obelisk: {
+        icon: "icons/crystal-shrine.svg",
         color: "#9370DB", // MediumPurple
-        size: 18
     },
-    underground: {
-        icon: "tools_ladder",
+    rune_spire: {
+        icon: "icons/rune-spire.svg",
+        color: "#9370DB", // MediumPurple
+    },
+
+    // Undergrounds
+    underground_stairs: {
+        icon: "icons/3d-stairs.svg",
         color: "#d36517ff", // SaddleBrown
-        size: 18
+    },
+    underground_cave: {
+        icon: "icons/cave-entrance.svg",
+        color: "#d36517ff", // SaddleBrown
+    },
+    underground_crypt: {
+        icon: "icons/crypt-entrance.svg",
+        color: "#d36517ff", // SaddleBrown
+    },
+    underground_dungeon: {
+        icon: "icons/dungeon-gate.svg",
+        color: "#d36517ff", // SaddleBrown
+    },
+    
+    // Places of Interest
+    snake_pit: {
+        icon: "icons/snake.svg",
+        color: "#d36517ff", // SaddleBrown - same color as other undergrounds
+    },
+    ant_mound: {
+        icon: "icons/ant.svg",
+        color: "#00BFFF", // DeepSkyBlue - same as information
+    },
+    game_of_chance: {
+        icon: "icons/perspective-dice-six-faces.svg",
+        color: "#39FF14", // Neon Green
     },
     information: {
-        icon: "info",
+        icon: "icons/info.svg",
         color: "#00BFFF", // DeepSkyBlue
-        size: 18
     }
 };

@@ -153,7 +153,7 @@ const mapLabels = {
         { x: 965, y: 123, name: "Hermit's Hut", fontSize: 16 },
 
         // Krythan Island Places of Interest
-        { x: 327, y: 742, name: "Jeel Snake Pit", fontSize: 14 },
+        
         { x: 436, y: 850, name: "Crypt of Kargoth", fontSize: 14 },
         { x: 832, y: 1035, name: "Holendar's Mansion", fontSize: 15 },
         { x: 895, y: 1023, name: "Krythan Cemetary", fontSize: 15 }, // I know it's misspelled on the map but it's also misspelled in AE.

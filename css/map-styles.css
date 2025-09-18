@@ -404,6 +404,14 @@ input:checked + .slider:before {
     text-align: center;
 }
 
+/* Styles for custom SVG icons in marker toggle buttons */
+.toggle-btn-icon-img {
+    margin-right: 8px;
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
 /* Target only the text span, not the icon span */
 .toggle-btn span:not(.material-symbols-outlined) {
     flex: 1; /* Allow text to take up remaining space */
@@ -694,6 +702,13 @@ input:checked + .slider:before {
 .sidebar.collapsed .toggle-btn .material-symbols-outlined {
     margin-right: 0;
     font-size: 24px;
+}
+
+/* Ensure the SVG icon is centered and sized correctly in collapsed mode */
+.sidebar.collapsed .toggle-btn .toggle-btn-icon-img {
+    margin-right: 0;
+    width: 24px;
+    height: 24px;
 }
 
 /* Add a background to active icon buttons when collapsed */

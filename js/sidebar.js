@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize sidebar functionality
-    initSidebar();
+    // Wait for the map and icons to be ready before initializing the sidebar.
+    // This ensures that tinted marker icons are available.
+    document.addEventListener('map-ready', function() {
+        initSidebar();
+    });
 });
 
 /**
@@ -231,12 +234,14 @@ function createMarkerToggleButtons() {
         { id: 'portals', name: 'Portals', type: 'portal' },
         { id: 'docks', name: 'Docks', type: 'dock' },
         { id: 'quests', name: 'Quests', type: 'quest' },
-        { id: 'shops', name: 'Shops', type: 'shop' },
+        { id: 'shops', name: 'Shops', type: 'shop_generic' },
         { id: 'trainers', name: 'Trainers', type: 'trainer' },
-        { id: 'spawns', name: 'Spawns', type: 'spawn_good' },
+        { id: 'spawn_good', name: 'Good Spawns', type: 'spawn_good' },
+        { id: 'spawn_evil', name: 'Evil Spawns', type: 'spawn_evil' },
         { id: 'banks', name: 'Banks', type: 'bank' },
-        { id: 'crafting', name: 'Obelisks and Rune Spires', type: 'crafting' },
-        { id: 'undergrounds', name: 'Undergrounds', type: 'underground' },
+        { id: 'crafting', name: 'Crafting', type: 'obelisk' },
+        { id: 'undergrounds', name: 'Undergrounds', type: 'underground_cave' },
+        { id: 'games_of_chance', name: 'Games of Chance', type: 'game_of_chance' },
         { id: 'information', name: 'Information', type: 'information' }
     ];
 
@@ -250,12 +255,13 @@ function createMarkerToggleButtons() {
         
         const animationClass = style && style.animation === 'beat' ? 'g-icon-beat' : '';
 
-        // Add icon
-        const iconSpan = document.createElement('span');
-        iconSpan.className = `material-symbols-outlined ${animationClass}`;
-        iconSpan.textContent = style?.icon || 'place';
-        iconSpan.style.color = style?.color || '#FFFFFF';
-        button.appendChild(iconSpan);
+        // Add icon (now an <img> for SVG)
+        const iconImg = document.createElement('img');
+        // Use the pre-tinted data URL from customMarkerImages for color consistency.
+        iconImg.src = customMarkerImages[category.type] || style?.icon || 'icons/information.svg';
+        iconImg.alt = category.name;
+        iconImg.className = `toggle-btn-icon-img ${animationClass}`;
+        button.appendChild(iconImg);
         
         // Add text
         const textSpan = document.createElement('span');

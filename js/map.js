@@ -194,11 +194,11 @@ const tooltipPointerMoveHandler = function(evt) {
 
     if (markerTooltipText) {
         const markerType = feature.get('type');
-        const style = markerStyles[markerType] || { icon: 'place', color: '#FF0000' };
+        const style = markerStyles[markerType] || { icon: 'icons/information.svg', color: '#FF0000' };
         const animationClass = style.animation === 'beat' ? 'g-icon-beat' : '';
         markerTooltipElement.innerHTML = `
-            <div class="tooltip-icon" style="color: ${style.color};">
-                <span class="material-symbols-outlined ${animationClass}">${style.icon}</span>
+            <div class="tooltip-icon">
+                <img src="${style.icon}" alt="${markerType}" class="${animationClass}" style="width: 20px; height: 20px; vertical-align: middle;">
             </div>
             <div class="tooltip-text">${markerTooltipText}</div>
         `;
@@ -230,12 +230,48 @@ const tooltipMoveStartHandler = function() {
 
 document.addEventListener('DOMContentLoaded', function() {
     // The `document.fonts.ready` promise resolves when all fonts are loaded.
-    // This is crucial to ensure Font Awesome is available before we try to
-    // render icons on the canvas.
     document.fonts.ready.then(function () {
-        initializeMap();
+        // Preload and tint icons, then initialize the map. This ensures that
+        // custom colors can be applied to SVGs that have hardcoded fill colors.
+        preloadAndTintIcons().then(() => {
+            initializeMap();
+            // Dispatch a custom event to notify other scripts that the map and icons are ready.
+            document.dispatchEvent(new CustomEvent('map-ready'));
+        });
     });
 });
+
+/**
+ * Preloads SVG icons and tints them with their specified color.
+ * The tinted versions are stored as data URLs in `customMarkerImages`.
+ * @returns {Promise} A promise that resolves when all icons are processed.
+ */
+function preloadAndTintIcons() {
+    const promises = Object.entries(markerStyles).map(([type, styleProps]) => {
+        return new Promise((resolve) => {
+            const img = new Image();
+            img.crossOrigin = 'Anonymous'; // Needed for canvas security
+            img.onload = function() {
+                const canvas = document.createElement('canvas');
+                canvas.width = img.width;
+                canvas.height = img.height;
+                const ctx = canvas.getContext('2d');
+                ctx.drawImage(img, 0, 0);
+                ctx.globalCompositeOperation = 'source-in';
+                ctx.fillStyle = styleProps.color;
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                customMarkerImages[type] = canvas.toDataURL();
+                resolve();
+            };
+            img.onerror = function() {
+                console.error(`Failed to load icon for tinting: ${styleProps.icon}. Using original.`);
+                resolve();
+            };
+            img.src = styleProps.icon;
+        });
+    });
+    return Promise.all(promises);
+}
 
 /**
  * Initialize the map and controls
@@ -467,82 +503,83 @@ function createLabelImageStyle(text, fontSize, styleOptions = {}) {
 }
 
 /**
- * Creates a marker style with an opaque circular background
- * @param {string} markerType - Type of marker
- * @returns {ol.style.Style} OpenLayers style object
+ * Creates a marker style with a circular background and a foreground SVG icon.
+ * This replicates the look of the original canvas-based markers.
+ * @param {string} markerType - Type of marker, corresponding to a key in `markerStyles`.
+ * @returns {Array<ol.style.Style>} An array of OpenLayers style objects (background and foreground).
  */
 function createMarkerStyle(markerType) {
-    // Use cache to avoid re-creating the same style
-    const cacheKey = `marker-${markerType}`;
+    // Use a new cache key to avoid conflicts with the old single-style markers.
+    const cacheKey = `marker-bg-${markerType}`;
     if (styleCache[cacheKey]) {
         return styleCache[cacheKey];
     }
 
-    const style = markerStyles[markerType] || {
-        icon: "fa-solid fa-map-marker-alt",
-        color: "#FF0000",
-        size: 16
+    // Get the style properties from markerStyles in markers.js
+    const styleProps = markerStyles[markerType] || {
+        icon: 'icons/info.svg', // A fallback icon
+        color: '#FF0000'
     };
-    
-    // Create canvas for icon
-    const canvas = document.createElement('canvas');
-    const size = style.size * 3; // Larger canvas for better quality
-    canvas.width = size;
-    canvas.height = size;
-    const ctx = canvas.getContext('2d', { willReadFrequently: true });
-    
-    // Draw the marker background
-    // Add a shadow for depth
+
+    // --- 1. Create the background style using a canvas ---
+    const bgCanvas = document.createElement('canvas');
+    const circleDiameter = 23; // Increased size to properly frame the large icons
+    const shadowBlur = 0;    // Shadow is removed for perfect centering.
+    const shadowOffsetY = 0; // Shadow is removed for perfect centering.
+    const border = 1.5;
+    // Canvas must be large enough for the circle, its border, and its shadow.
+    const canvasSize = circleDiameter + (border * 2);
+    bgCanvas.width = canvasSize;
+    bgCanvas.height = canvasSize;
+    const ctx = bgCanvas.getContext('2d');
+    const center = canvasSize / 2;
+
+    // Add a shadow for depth.
     ctx.shadowColor = 'rgba(0, 0, 0, 0.6)';
-    ctx.shadowBlur = 3;
-    ctx.shadowOffsetY = 1;
+    ctx.shadowBlur = shadowBlur;
+    ctx.shadowOffsetY = shadowOffsetY;
 
-    // Draw dark circular background
-    // Y-center is moved up slightly to make room for the shadow
-    const yCenter = (size / 2) - 1;
+    // Create a top-to-bottom linear gradient for the background.
+    const gradient = ctx.createLinearGradient(0, center - (circleDiameter / 2), 0, center + (circleDiameter / 2));
+    gradient.addColorStop(0, 'rgba(40, 55, 70, 0.9)');
+    gradient.addColorStop(1, 'rgba(15, 25, 35, 0.9)');
+
+    // Draw the circle at the center of the canvas.
     ctx.beginPath();
-    ctx.arc(size / 2, yCenter, size / 3, 0, 2 * Math.PI);
-
-    // Create a top-to-bottom linear gradient for the background
-    const gradient = ctx.createLinearGradient(0, yCenter - (size / 3), 0, yCenter + (size / 3));
-    gradient.addColorStop(0, 'rgba(40, 55, 70, 0.8)'); // A lighter, cool blue-gray for subtlety
-    gradient.addColorStop(1, 'rgba(15, 25, 35, 0.8)'); // A darker, cool blue-gray to blend with the map
+    ctx.arc(center, center, circleDiameter / 2, 0, 2 * Math.PI);
     ctx.fillStyle = gradient;
     ctx.fill();
 
-    // Add a subtle border to make the marker pop against the background
+    // Add a subtle border. Disable the shadow for the border itself.
+    ctx.shadowColor = 'transparent';
     ctx.strokeStyle = 'rgba(100, 120, 140, 0.9)';
-    ctx.lineWidth = 1.5;
+    ctx.lineWidth = border;
     ctx.stroke();
 
-    // Reset shadow for the icon itself
-    ctx.shadowColor = 'transparent';
-    
-    const iconSize = size / 2.2; // ~16px
-
-    // Draw the icon in the center using Google Material Symbols
-    const iconName = style.icon || 'place';
-    
-    // Set up font for the icon
-    // Note: Google Material Symbols are not bolded via font-weight, but through font settings.
-    ctx.font = `${iconSize}px "Material Symbols Outlined"`;
-    ctx.textAlign = 'center';
-    ctx.textBaseline = 'middle';
-    ctx.fillStyle = style.color;
-    
-    // Draw the icon, also offset
-    ctx.fillText(iconName, size / 2, yCenter);
-    
-    // Return the style with our custom icon
-    const newStyle = new ol.style.Style({
+    const backgroundStyle = new ol.style.Style({
         image: new ol.style.Icon({
-            img: canvas,
-            imgSize: [size, size],
-            scale: 0.65 // Final size will be ~23px
+            img: bgCanvas,
+            imgSize: [canvasSize, canvasSize],
+            scale: 1, // The canvas is already the desired size.
         })
     });
 
-    // Cache and return the style
+    // --- 2. Create the foreground icon style ---
+    const foregroundStyle = new ol.style.Style({
+        image: new ol.style.Icon({
+            // Use the pre-tinted data URL. Fallback to original if tinting failed.
+            src: customMarkerImages[markerType] || styleProps.icon,
+            // Set the scale for the icon. A larger value makes the icon bigger.
+            scale: 0.12,
+            // No displacement is needed as there is no shadow.
+            displacement: [0, 0],
+        })
+    });
+    
+    // --- 3. Combine and cache ---
+    // An array of styles will be rendered in order by OpenLayers.
+    const newStyle = [backgroundStyle, foregroundStyle];
+
     styleCache[cacheKey] = newStyle;
     return newStyle;
 }
