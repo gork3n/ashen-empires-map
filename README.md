@@ -243,10 +243,12 @@ Once these steps are complete, the map should render and function within your pa
 - 🚧 **Complete Labeling System**
   - ✅ Dynamic font scaling for legibility at all zoom levels.
   - 🚧 Ongoing verification and addition of all location labels.
+- ⬜ Advanced Filtering Menu for labels, markers, and monsters.
 - ⬜ Search functionality for locations
 - ⬜ Monster Data Layer
 - ⬜ Visual Region Overlays
 - ⬜ Finalize UI/UX and Styling
+  - ⬜ Replace Google Material Symbols with custom-designed icons from Game-icons.net for a unique look.
 
 ## Credits
 

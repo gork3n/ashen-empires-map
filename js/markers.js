@@ -388,7 +388,7 @@ const mapMarkers = {
 // Make sure there are NO background properties here
 const markerStyles = {
     portal: {
-        icon: "sprint",
+        icon: "cyclone",
         color: "#FFD700", // Gold
         size: 18
     },
