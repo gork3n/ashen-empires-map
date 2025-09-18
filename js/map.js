@@ -5,7 +5,6 @@ let markerLayers = {};
 let markerTooltipElement;
 let markerTooltipOverlay;
 const styleCache = {};
-let detailMap;
 const customMarkerImages = {};
 
 // Define custom styles for different label categories
@@ -356,6 +355,8 @@ function initializeMap() {
     
     // Custom mouse position control
     initializeCoordinateDisplay();
+    // Set up the new info flyout panel
+    setupInfoFlyout();
 
     // Add crosshair for testing
     initializeCrosshair(map);
@@ -373,14 +374,61 @@ function initializeMap() {
             const locationName = feature.get('name');
             // Check if this location has detail data defined in detail-maps.js
             if (typeof detailMapData !== 'undefined' && detailMapData[locationName]) {
-                showDetailModal(locationName);
+                showInfoFlyout(locationName);
             }
         }
     });
+}
 
-    // Add event listener for the modal close button
-    const modalCloseBtn = document.getElementById('modal-close-btn');
-    modalCloseBtn.addEventListener('click', closeDetailModal);
+/**
+ * Creates and appends the info flyout panel to the DOM and sets up its close event.
+ */
+function setupInfoFlyout() {
+    const container = document.getElementById('container');
+    if (!container) return;
+
+    // Check if it already exists to prevent duplicates on hot-reloads
+    if (document.getElementById('info-flyout')) return;
+
+    const flyoutHTML = `
+        <div id="info-flyout" class="info-flyout">
+            <div class="info-flyout-header">
+                <h3 id="info-flyout-title"></h3>
+                <button id="info-flyout-close" class="info-flyout-close" title="Close">&times;</button>
+            </div>
+            <div id="info-flyout-content" class="info-flyout-content"></div>
+        </div>
+    `;
+    container.insertAdjacentHTML('beforeend', flyoutHTML);
+
+    const closeButton = document.getElementById('info-flyout-close');
+    closeButton.addEventListener('click', hideInfoFlyout);
+}
+
+/**
+ * Shows the info flyout panel with content for a specific location.
+ * @param {string} locationName - The name of the location, matching a key in detailMapData.
+ */
+function showInfoFlyout(locationName) {
+    const locationData = detailMapData[locationName];
+    if (!locationData) return;
+
+    const flyout = document.getElementById('info-flyout');
+    const title = document.getElementById('info-flyout-title');
+    const content = document.getElementById('info-flyout-content');
+
+    title.textContent = locationData.title;
+    content.innerHTML = locationData.info;
+
+    flyout.classList.add('visible');
+}
+
+/**
+ * Hides the info flyout panel.
+ */
+function hideInfoFlyout() {
+    const flyout = document.getElementById('info-flyout');
+    flyout.classList.remove('visible');
 }
 
 /**
@@ -812,394 +860,6 @@ function setupMarkerTooltips(map) {
     // Hide tooltip when map is moved
     map.on('movestart', tooltipMoveStartHandler);
 }
-
-/**
- * Displays the detail modal for a specific location.
- * @param {string} locationName - The name of the location, matching a key in detailMapData.
- */
-function showDetailModal(locationName) {
-    const locationData = detailMapData[locationName];
-    if (!locationData) {
-        console.error("No detail data found for location:", locationName);
-        return;
-    }
-
-    const modal = document.getElementById('detail-modal');
-    const modalTitle = document.getElementById('modal-title');
-    const modalInfoContainer = document.getElementById('modal-info');
-    const modalMapContainer = document.getElementById('modal-map');
-    const modalInfoContent = modalInfoContainer.querySelector('.modal-info-content-wrapper');
-
-    if (!modal || !modalTitle || !modalInfoContainer || !modalMapContainer || !modalInfoContent) return;
-
-    // --- 1. Populate Modal Content ---
-    modalTitle.textContent = locationData.title;
-    modalInfoContent.innerHTML = locationData.info;
-
-    // --- START: Mobile Info Panel Toggle ---
-    // The toggle button is now part of the static HTML. We just need to ensure
-    // its event listener is attached once and its state is reset.
-    const infoToggle = modalInfoContainer.querySelector('.modal-info-toggle');
-
-    // Check if we've already attached the listener to avoid duplicates.
-    if (infoToggle && !infoToggle.dataset.listenerAttached) {
-        infoToggle.addEventListener('click', () => {
-            const isCollapsed = modalInfoContainer.classList.toggle('collapsed');
-            // 'expand_less' (up arrow) means the panel is collapsed and can be expanded.
-            // 'expand_more' (down arrow) means the panel is open and can be collapsed.
-            infoToggle.querySelector('.material-symbols-outlined').textContent = isCollapsed ? 'expand_less' : 'expand_more';
-        });
-        infoToggle.dataset.listenerAttached = 'true';
-    }
-
-    // Ensure the panel is in the default "open" state when the modal is shown.
-    if (infoToggle) {
-        modalInfoContainer.classList.remove('collapsed');
-        // Set the icon to 'expand_more' (down arrow) to indicate the panel is open.
-        infoToggle.querySelector('.material-symbols-outlined').textContent = 'expand_more';
-    }
-    // --- END: Mobile Info Panel Toggle ---
-
-    // Apply a background to the map container for styling
-    modalMapContainer.style.backgroundImage = "url('images/bg.png')";
-    modalMapContainer.style.backgroundRepeat = 'repeat';
-
-    // --- 2. Show the Modal ---
-    modal.style.display = 'flex';
-
-    // --- 3. Initialize the Detail Map ---
-    // Use a timeout to ensure the modal is rendered and has dimensions before creating the map.
-    setTimeout(() => {
-        if (detailMap) {
-            detailMap.setTarget(null); // Clean up previous instance
-        }
-        
-        const imageConfig = locationData.image;
-        const imageUrl = imageConfig.url;
-        const imageWidth = imageConfig.width;
-        const imageHeight = imageConfig.height;
-        const extent = [0, 0, imageWidth, imageHeight];
-
-        // Define coordinate mapping variables early so they can be used for initialView.
-        const originX = locationData.origin?.x || 0;
-        const originY = locationData.origin?.y || 0;
-        const scale = locationData.scale || 1;
-        const offsetX = locationData.offset?.x || 0;
-        const offsetY = locationData.offset?.y || 0;
-
-        const projection = new ol.proj.Projection({
-            code: 'static-image',
-            units: 'pixels',
-            extent: extent,
-        });
-
-        const detailMarkerSource = new ol.source.Vector();
-        const detailLabelSource = new ol.source.Vector();
-
-        // --- View Configuration ---
-        const viewOptions = {
-            projection: projection,
-            center: ol.extent.getCenter(extent), // Default: center of the image
-            zoom: 2,                             // Default: initial zoom
-            minZoom: 1,
-        };
-
-        // Override defaults with settings from detail-maps.js if they exist
-        if (locationData.initialView) {
-            if (locationData.initialView.centerOnMain) {
-                const mainCoord = locationData.initialView.centerOnMain;
-                // Use the formula to convert main map coordinates to detail map pixel coordinates
-                const detailX = ((mainCoord.x - originX) * scale) + offsetX;
-                const detailY = ((mainCoord.y - originY) * scale) + offsetY;
-
-                // Convert top-left pixel coords to OL's bottom-left based coords
-                viewOptions.center = [detailX, imageHeight - detailY];
-
-            } else if (locationData.initialView.center) {
-                // Convert top-left pixel coords to OL's bottom-left based coords
-                const centerX = locationData.initialView.center[0];
-                const centerY = locationData.initialView.center[1];
-                viewOptions.center = [centerX, imageHeight - centerY];
-            }
-            if (locationData.initialView.zoom !== undefined) {
-                viewOptions.zoom = locationData.initialView.zoom;
-            }
-            if (locationData.initialView.maxZoom !== undefined) {
-                viewOptions.maxZoom = locationData.initialView.maxZoom;
-            }
-        }
-
-        detailMap = new ol.Map({
-            target: 'modal-map',
-            layers: [
-                new ol.layer.Image({
-                    source: new ol.source.ImageStatic({
-                        url: imageUrl,
-                        projection: projection,
-                        imageExtent: extent,
-                    }),
-                }),
-                new ol.layer.Vector({ source: detailMarkerSource }),
-                new ol.layer.Vector({ source: detailLabelSource }),
-            ],
-            view: new ol.View(viewOptions),
-        });
-
-        // --- START: Fetch and Add Features (Markers & Labels) ---
-        // The following logic collects all relevant markers and labels from the main map
-        // that fall within the boundaries of this detail map.
-
-        // First, collect all markers that should appear on the detail map.
-        const detailMarkers = [...(locationData.markers || [])];
-        const existingTooltips = new Set(detailMarkers.map(m => m.tooltip));
-
-        // Calculate the size of the content area on the main map, accounting for offsets.
-        // This ensures we only fetch markers/labels that are actually on the sub-map.
-        const mainMapContentWidth = (imageWidth - offsetX) / scale;
-        const mainMapContentHeight = (imageHeight - offsetY) / scale;
-
-        const calculatedBbox = {
-            minX: originX,
-            minY: originY,
-            maxX: originX + mainMapContentWidth,
-            maxY: originY + mainMapContentHeight,
-        };
-
-        // This is the bounding box on the main map from which to pull features.
-        const featureBbox = calculatedBbox;
-
-        // Use a helper function to gather all markers and labels for the detail map.
-        const { markers: allDetailMarkers, labels: allDetailLabels } = getFeaturesForDetailMap(locationData, featureBbox);
-
-        // Add the collected features to the detail map's sources.
-        addDetailMapMarkers(detailMarkerSource, allDetailMarkers, imageHeight);
-        addDetailMapLabels(detailLabelSource, allDetailLabels, imageHeight, locationData);
-
-        // --- END: Fetch and Add Features ---
-
-        // --- 4. Set up Tooltips for Detail Map ---
-        if (markerTooltipOverlay) {
-            map.removeOverlay(markerTooltipOverlay); // Remove from main map
-            detailMap.addOverlay(markerTooltipOverlay); // Add to detail map
-            setupMarkerTooltips(detailMap); // Attach event listeners
-        }
-
-        // Add crosshair for testing
-        initializeCrosshair(detailMap);
-
-        // Add coordinate display for the detail map
-        const modalMousePositionDiv = document.getElementById('modal-mouse-position');
-        if (modalMousePositionDiv) {
-            // This function is now self-contained and takes the map instance as an argument.
-            // This avoids closure issues with the global `detailMap` variable.
-            const setupCoordinateDisplay = (mapInstance, locData) => {
-                let lastDisplayX, lastDisplayY;
-                const offsetX = locData.offset?.x || 0;
-                const offsetY = locData.offset?.y || 0;
-                const originX = locData.origin?.x || 0;
-                const originY = locData.origin?.y || 0;
-                const scale = locData.scale || 1;
-
-                const updateModalDisplay = () => {
-                    const view = mapInstance.getView();
-                    if (!view) return;
-                    const zoom = view.getZoom();
-                    const zoomText = 'Zoom: ' + (zoom !== undefined ? Math.round(zoom) : '---');
-                    const coordText = (lastDisplayX !== undefined && lastDisplayY !== undefined) ?
-                        `X: ${lastDisplayX} | Y: ${lastDisplayY}` :
-                        'X: --- | Y: ---';
-                    modalMousePositionDiv.textContent = `${coordText} | ${zoomText}`;
-                };
-
-                const handlePointerEvent = (evt) => {
-                    if (!evt.coordinate) return;
-                    const coord = evt.coordinate;
-                    const contentX = Math.round(coord[0]) - offsetX;
-                    const contentY = Math.round(imageHeight - coord[1]) - offsetY;
-                    const scaledX = contentX / scale;
-                    const scaledY = contentY / scale;
-                    lastDisplayX = Math.round(originX + scaledX);
-                    lastDisplayY = Math.round(originY + scaledY);
-                    updateModalDisplay();
-                };
-
-                // Attach event listeners to the map instance
-                mapInstance.on('moveend', updateModalDisplay);      // For zoom changes
-                mapInstance.on('pointerdown', handlePointerEvent);  // For touch/click
-                mapInstance.on('pointermove', handlePointerEvent);  // For mouse hover
-                mapInstance.getViewport().addEventListener('mouseout', () => {
-                    lastDisplayX = undefined;
-                    lastDisplayY = undefined;
-                    updateModalDisplay();
-                });
-
-                updateModalDisplay(); // Initial call to set the text
-            };
-
-            // Initialize the coordinate display for the newly created detail map.
-            setupCoordinateDisplay(detailMap, locationData);
-        }
-        
-    }, 10); // A small delay ensures the modal container is ready
-}
-
-/**
- * Gathers all markers and labels from the main map that fall within the
- * calculated bounding box of a detail map.
- * @param {object} locationData - The configuration object for the detail map.
- * @param {object} featureBbox - The calculated bounding box on the main map.
- * @returns {{markers: Array, labels: Array}} An object containing arrays of markers and labels.
- */
-function getFeaturesForDetailMap(locationData, featureBbox) {
-    const detailMarkers = [...(locationData.markers || [])];
-    const existingTooltips = new Set(detailMarkers.map(m => m.tooltip));
-
-    const detailLabels = [...(locationData.labels || [])];
-    const existingLabelNames = new Set(detailLabels.map(l => l.name));
-
-    const scale = locationData.scale || 1;
-    const offsetX = locationData.offset?.x || 0;
-    const offsetY = locationData.offset?.y || 0;
-    const originX = locationData.origin?.x || 0;
-    const originY = locationData.origin?.y || 0;
-
-    // Iterate through main map markers
-    for (const category in mapMarkers) {
-        mapMarkers[category].forEach(mainMarker => {
-            if (
-                mainMarker.x >= featureBbox.minX && mainMarker.x <= featureBbox.maxX &&
-                mainMarker.y >= featureBbox.minY && mainMarker.y <= featureBbox.maxY &&
-                !existingTooltips.has(mainMarker.tooltip)
-            ) {
-                const subX = ((mainMarker.x - originX) * scale) + offsetX;
-                const subY = ((mainMarker.y - originY) * scale) + offsetY;
-                detailMarkers.push({ x: Math.round(subX), y: Math.round(subY), type: mainMarker.type, tooltip: mainMarker.tooltip });
-            }
-        });
-    }
-
-    // Iterate through main map labels
-    for (const category in mapLabels) {
-        mapLabels[category].forEach(mainLabel => {
-            if (
-                mainLabel.x >= featureBbox.minX && mainLabel.x <= featureBbox.maxX &&
-                mainLabel.y >= featureBbox.minY && mainLabel.y <= featureBbox.maxY &&
-                !existingLabelNames.has(mainLabel.name)
-            ) {
-                const subX = ((mainLabel.x - originX) * scale) + offsetX;
-                const subY = ((mainLabel.y - originY) * scale) + offsetY;
-                detailLabels.push({
-                    x: Math.round(subX),
-                    y: Math.round(subY),
-                    name: mainLabel.name,
-                    fontSize: mainLabel.fontSize,
-                    category: category
-                });
-            }
-        });
-    }
-
-    return {
-        markers: detailMarkers,
-        labels: detailLabels
-    };
-}
-
-
-/**
- * Adds a set of markers to a vector source for a detail map.
- * @param {ol.source.Vector} source - The vector source to add markers to.
- * @param {Array} markers - An array of marker objects to add.
- * @param {number} imageHeight - The height of the detail map image for coordinate conversion.
- */
-function addDetailMapMarkers(source, markers, imageHeight) {
-    if (!markers || !markers.length) return;
-
-    markers.forEach(marker => {
-        // Convert top-left coordinates (from detail-maps.js) to the bottom-left
-        // system that OpenLayers uses for static images.
-        const olY = imageHeight - marker.y;
-        const coordinates = [marker.x, olY];
-
-        const feature = new ol.Feature({
-            geometry: new ol.geom.Point(coordinates),
-            type: marker.type,
-            tooltip: marker.tooltip,
-        });
-
-        // Reuse the same styling function as the main map for consistency
-        feature.setStyle(createMarkerStyle(marker.type));
-        source.addFeature(feature);
-    });
-}
-
-/**
- * Adds a set of labels to a vector source for a detail map.
- * @param {ol.source.Vector} source - The vector source to add labels to.
- * @param {Array} labels - An array of label objects to add.
- * @param {number} imageHeight - The height of the detail map image for coordinate conversion.
- */
-function addDetailMapLabels(source, labels, imageHeight, locationData) {
-    if (!labels || !labels.length) return;
-
-    const scale = locationData.scale || 1;
-
-    labels.forEach(label => {
-        // Convert top-left coordinates (from detail-maps.js) to the bottom-left
-        // system that OpenLayers uses for static images.
-        const olY = imageHeight - label.y;
-        const coordinates = [label.x, olY];
-
-        const feature = new ol.Feature({
-            geometry: new ol.geom.Point(coordinates),
-            name: label.name,
-            category: label.category,
-        });
-
-        // 1. Get the base style object for the label's category.
-        const baseStyle = { ...(labelStyles[label.category] || defaultLabelStyle) };
-
-        // 2. Determine the base font size. Use the label's specific size, or the category's default.
-        const baseFontSize = label.fontSize || baseStyle.fontSize;
-
-        // 3. Scale the font size for the detail map to make it legible.
-        // A factor of 2.5 seems to provide a good balance on high-DPI screens.
-        const finalFontSize = Math.round(baseFontSize * (scale / 2.5));
-
-        // 4. Create the style. Pass the final size and the base style options.
-        // The createLabelImageStyle function will use these to render the label.
-        // This ensures all properties (fontFamily, fontWeight, etc.) from the baseStyle are used.
-        feature.setStyle(createLabelImageStyle(label.name, finalFontSize, baseStyle));
-        source.addFeature(feature);
-    });
-}
-
-/**
- * Closes the detail modal and cleans up the map instance.
- */
-function closeDetailModal() {
-    const modal = document.getElementById('detail-modal');
-    if (modal) modal.style.display = 'none';
-
-    // Clean up background style from the map container
-    const modalMapContainer = document.getElementById('modal-map');
-    if (modalMapContainer) {
-        modalMapContainer.style.backgroundImage = '';
-    }
-
-    if (detailMap) {
-        // Move the tooltip overlay back to the main map before destroying the detail map
-        if (markerTooltipOverlay) {
-            detailMap.removeOverlay(markerTooltipOverlay);
-            map.addOverlay(markerTooltipOverlay);
-        }
-
-        // Clean up the map instance
-        detailMap.setTarget(null);
-        detailMap = null;
-    }
-}
-
 /**
  * Initializes a crosshair overlay on a map instance for coordinate testing.
  * @param {ol.Map} mapInstance The OpenLayers map to attach the crosshair to.

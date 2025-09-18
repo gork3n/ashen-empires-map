@@ -18,11 +18,6 @@ An interactive map for Ashen Empires with pixel-perfect coordinates and multiple
   - [Map Coordinates](#map-coordinates)
   - [A Heads-Up About Map Accuracy](#a-heads-up-about-map-accuracy)
   - [Project Structure](#project-structure)
-  - [Adding and Configuring Detail Maps](#adding-and-configuring-detail-maps)
-    - [Basic Structure](#basic-structure)
-    - [Coordinate Mapping Methodology](#coordinate-mapping-methodology)
-      - [How to Calculate the `origin`](#how-to-calculate-the-origin)
-    - [Advanced Configuration](#advanced-configuration)
   - [Integration Guide](#integration-guide)
     - [Method 1: Using as a Standalone Page](#method-1-using-as-a-standalone-page)
     - [Method 2: Embedding in an Existing Website](#method-2-embedding-in-an-existing-website)
@@ -38,14 +33,11 @@ An interactive map for Ashen Empires with pixel-perfect coordinates and multiple
   - **Dynamic Controls**: Buttons are generated dynamically for all label and marker categories.
   - **Master Toggles**: "Show All" buttons allow you to toggle entire sections at once.
 - **Dynamic Markers & Labels**:
-  - Markers for portals, docks, shops, trainers, banks, crafting locations, and more.
-  - Custom, canvas-rendered icons with crisp white borders and tooltips.
-  - **Dynamic Sizing & Visibility**:
-    - **Labels**: All labels are always visible and dynamically scale their font size based on the zoom level, ensuring optimal legibility from any distance.
-    - **Markers**: Markers appear at closer zoom levels to reduce clutter when viewing the map from a distance.
-- **Detail Views**: Click on major location labels (like "Valinor") to open a modal with a high-resolution sub-map. These detail maps are highly configurable and feature:
-  - **Mobile-Optimized**: On phones and tablets, the modal becomes a full-screen experience with the map taking center stage and a collapsible information panel overlaid at the bottom.
-  - **Comprehensive Data**: Detail maps automatically include relevant markers and labels from the main map.
+  - Markers for portals, docks, shops, trainers, banks, crafting locations, and more, with custom SVG icons.
+  - A stylized circular background for all markers to ensure visibility.
+  - Tooltips on hover for all markers and major labels.
+  - Labels dynamically scale their font size based on the zoom level, ensuring optimal legibility from any distance.
+- **Info Flyout Panel**: Click on major location labels (like "Valinor") to open a panel that slides up from the bottom, providing detailed information about that location without leaving the main map.
 - **Optimized UI**:
   - **Repositioned Controls**: Zoom controls have been moved to the bottom-right and enlarged for easier access.
 - **Quick Tips**: A helpful, cycling tip bar at the bottom of the map to help users discover features. Click it to open a modal with a full list of game and map tips.
@@ -57,12 +49,13 @@ This project is built using **OpenLayers**, chosen for its superior handling of 
 
 - **Modular JavaScript**: The code is organized into logical files:
   - `map.js`: Core map functionality, event handling, and modal logic.
+  - `map.js`: Core map functionality, event handling, and info flyout logic.
   - `sidebar.js`: Manages the interactive sidebar controls.
   - `tips.js`: Powers the quick tips bar and modal.
   - `labels.js`, `markers.js`, `detail-maps.js`: Data files defining all labels, markers, and sub-map configurations.
 - **Dynamic Styling & Rendering**:
-  - Markers and labels are rendered on-the-fly to an HTML canvas for high-quality visuals and performance.
-  - OpenLayers style functions are used to dynamically adjust label font sizes based on map resolution, ensuring legibility at all zoom levels.
+  - **Markers**: SVG icons are pre-loaded and tinted on the fly with their designated colors. They are then layered on top of a dynamically drawn canvas background.
+  - **Labels**: Labels are rendered to a canvas with custom fonts, gradients, and backgrounds. Their font size scales dynamically with the map's zoom level.
 - **Responsive UI Framework**: A combination of CSS Flexbox, Grid, and media queries creates a fluid layout that adapts to any screen size. JavaScript is used to manage state and class toggling for interactive components like the sidebar and modals.
 - **Coordinate System**: The map accurately translates between the 16384x16384 tile-based map and the 4096x4096 in-game coordinate system, ensuring all displayed coordinates are correct.
 
@@ -94,61 +87,6 @@ Similarly, many of the labels and marker positions are being carried over from o
 - `/css/` - Stylesheets for the map and UI.
 - `/tiles/` - Directory containing all map tile images
 - `/images/` - Directory containing background images and assets for detail maps.
-
-## Adding and Configuring Detail Maps
-
-Detail maps are high-resolution sub-maps that appear in a modal window when a user clicks on a major location label. All configuration for these maps is handled in `js/detail-maps.js`.
-
-### Basic Structure
-
-Each detail map is an object within `detailMapData`, keyed by the location's exact name from `js/labels.js`.
-
-```javascript
-"Valinor": {
-    title: "Valinor",
-    image: {
-        url: 'images/Valinor_Island-600x.png',
-        width: 4441,
-        height: 3630
-    },
-    // ... coordinate mapping ...
-    // ... filtering ...
-    // ... initial view ...
-    info: `... HTML content ...`,
-    markers: [ /* markers specific to this map */ ]
-}
-```
-
-### Coordinate Mapping Methodology
-
-To ensure markers and labels from the main map appear correctly on a detail map, you must provide accurate coordinate mapping. This is done using the `origin`, `scale`, and `offset` properties.
-
--   **`scale`**: The zoom factor of the detail map image compared to the main map. If your detail image is a 600% blow-up of a region, the scale is `6`.
--   **`offset`**: The pixel padding *inside* the detail map image file. If the map content doesn't start at the very top-left pixel (0,0) of the image, `offset` defines the `x` and `y` distance to where the content begins.
--   **`origin`**: The coordinate on the main 4096x4096 map that corresponds to the top-left corner of the detail map's *content* (i.e., after accounting for the `offset`).
-
-#### How to Calculate the `origin`
-
-This is the most critical step. You need a single, identifiable landmark that is visible on both the main map and your new detail map image.
-
-1.  **Find a Landmark**: Choose a distinct point, like the corner of a building or a specific marker.
-2.  **Get Main Map Coordinates**: Hover over this landmark on the main map and record its coordinates from the bottom-left display (e.g., `main_X = 776`, `main_Y = 100`).
-3.  **Get Detail Map Coordinates**: Open your detail map image in an editor and find the pixel coordinates of the *exact same landmark* from the top-left corner of the image file (e.g., `detail_X = 1482`, `detail_Y = 756`).
-4.  **Apply the Formula**: Use the following formulas to calculate the origin.
-
-    ```
-    origin_X = main_X - ((detail_X - offset_X) / scale)
-    origin_Y = main_Y - ((detail_Y - offset_Y) / scale)
-    ```
-
-    Once calculated, round the values and place them in the `origin` object. This calculation only needs to be done once per map.
-
-### Advanced Configuration
--   **`initialView` (Optional)**: Controls the initial state of the modal map.
-    -   `centerOnMain`: (Recommended) An object `{ x: <main_X>, y: <main_Y> }` specifying the main map coordinate to center on. The system will automatically calculate the correct pixel center for the detail map.
-    -   `center`: (Legacy) An array `[X, Y]` specifying the starting pixel coordinates on the detail map image (top-left origin). Use `centerOnMain` instead if possible.
-    -   `zoom`: The initial zoom level.
-    -   `maxZoom`: The maximum zoom level allowed for this specific map.
 
 ## Integration Guide
 
@@ -225,17 +163,17 @@ Once these steps are complete, the map should render and function within your pa
   - ✅ Interactive sidebar for showing/hiding layers.
   - ✅ Master toggles for labels and markers.
   - ✅ State-aware buttons with active/inactive styles.
-- ✅ **Points of Interest Markers**
-  - ✅ Custom, canvas-rendered icons for different categories (shops, portals, etc.).
-  - ✅ Dynamic visibility based on zoom level to reduce clutter.
-  - ✅ Informative tooltips on hover.
+- ✅ **Custom Markers & Icons**
+  - ✅ Custom SVG icons for all marker categories.
+  - ✅ Dynamic icon tinting to apply specific colors.
+  - ✅ Markers are hidden at far zoom levels to reduce clutter.
 - ✅ **Modular Codebase**
-  - ✅ Separation of concerns into `map.js`, `sidebar.js`, `tips.js`.
+  - ✅ Separation of concerns into `map.js`, `sidebar.js`, `tips.js`, etc.
   - ✅ Data-driven design using `labels.js`, `markers.js`, and `detail-maps.js`.
-- ✅ **Interactive Detail Modals**
-  - ✅ High-resolution sub-maps for major locations.
-  - ✅ Automatic inclusion of relevant markers and labels.
-  - ✅ Mobile-optimized layout with collapsible info panel.
+- ✅ **Location Information Panel**
+  - ✅ Clickable location labels open a flyout panel from the bottom.
+  - ✅ Displays custom information for major locations.
+  - ✅ Smooth, non-intrusive slide-up animation.
 - ✅ **Responsive & Mobile-Optimized UI**
   - ✅ Fluid layout for all screen sizes.
   - ✅ Collapsible sidebar with icon-only mode.
@@ -247,8 +185,8 @@ Once these steps are complete, the map should render and function within your pa
 - ⬜ Search functionality for locations
 - ⬜ Monster Data Layer
 - ⬜ Visual Region Overlays
-- ⬜ Finalize UI/UX and Styling
-  - ⬜ Replace Google Material Symbols with custom-designed icons from Game-icons.net for a unique look.
+- ✅ Finalize UI/UX and Styling
+  - ✅ Replaced Google Material Symbols with custom-designed icons from Game-icons.net for a unique look.
 
 ## Credits
 

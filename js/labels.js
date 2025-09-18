@@ -148,7 +148,7 @@ const mapLabels = {
         { x: 651, y: 174, name: "Duncan's Cottage", fontSize: 16 },
         { x: 570, y: 313, name: "Ruined Temple", fontSize: 16 },
         { x: 641, y: 362, name: "Lanore", fontSize: 16 },
-        { x: 1083, y: 475, name: "Ecclain's Caravan", fontSize: 16 },
+        { x: 1083, y: 468, name: "Ecclain's Caravan", fontSize: 16 },
         { x: 1043, y: 282, name: "Valinor Ant Hill", fontSize: 16 },   
         { x: 965, y: 123, name: "Hermit's Hut", fontSize: 16 },
 
