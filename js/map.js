@@ -254,7 +254,7 @@ function preloadAndTintIcons() {
                 const canvas = document.createElement('canvas');
                 canvas.width = img.width;
                 canvas.height = img.height;
-                const ctx = canvas.getContext('2d');
+                const ctx = canvas.getContext('2d', { willReadFrequently: true });
                 ctx.drawImage(img, 0, 0);
                 ctx.globalCompositeOperation = 'source-in';
                 ctx.fillStyle = styleProps.color;
@@ -285,7 +285,7 @@ function initializeMap() {
     // --- Set Initial Map View ---
     // Define the center of the map using in-game (4096x4096) coordinates.
     // This makes it easy to change the starting location.
-    const initialCenterGameCoords = { x: 741, y: 704, }; // Example: Valinor City
+    const initialCenterGameCoords = { x: 164, y: 3084, }; // Example: Valinor City
 
     // Convert the in-game coordinates to OpenLayers view coordinates.
     // The map is 16384x16384, which is 4x the in-game coordinates.
@@ -579,7 +579,7 @@ function createMarkerStyle(markerType) {
     const canvasSize = circleDiameter + (border * 2);
     bgCanvas.width = canvasSize;
     bgCanvas.height = canvasSize;
-    const ctx = bgCanvas.getContext('2d');
+    const ctx = bgCanvas.getContext('2d', { willReadFrequently: true });
     const center = canvasSize / 2;
 
     // Add a shadow for depth.

@@ -614,7 +614,7 @@ input:checked + .slider:before {
     flex-direction: column;
     align-items: center;
     gap: 8px; /* Creates consistent spacing between sections */
-    padding: 8px 0; /* Consistent vertical padding, no side padding */
+    padding: 8px 0 250px; /* Add significant padding at the bottom */
     /* Hide scrollbar but allow scrolling */
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
@@ -638,6 +638,13 @@ input:checked + .slider:before {
     align-items: center;
     margin-bottom: 0; /* Use gap from parent container for inter-section spacing */
     gap: 8px; /* Space between all icons */
+    width: 80%; /* Make the section wide enough for a visible border */
+}
+
+/* Add a separator line between sections in collapsed mode */
+.sidebar.collapsed .sidebar-section:not(:last-of-type) {
+    border-bottom: 1px solid #444;
+    padding-bottom: 8px; /* Match the gap for consistent spacing */
 }
 
 /* In collapsed mode, make the toggle containers transparent to the flex layout,

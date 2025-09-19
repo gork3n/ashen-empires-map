@@ -6,11 +6,14 @@ const mapMarkers = {
         //Done
 
         /* Valinor Island Portals */
-
+        
         // Valinor Region Portals
         { x: 776, y: 100, type: "portal", tooltip: "Portal to Leave Valinor" },
         { x: 776, y: 168, type: "portal", tooltip: "Portal to Arena Viewing Area" },
         //Done
+
+
+        /* Lotor's Summer Palace Portals */
 
         // Lotor's Summer Palace Portals
         { x: 762, y: 589, type: "portal", tooltip: "Portal to Party Island" },
@@ -27,19 +30,22 @@ const mapMarkers = {
         //Done
 
 
-        /* Real Estate Island Portals */
+        // Real Estate Island Portals
         { x: 663, y: 735, type: "portal", tooltip: "Portal to Lotor's Summer Palace" },
 
 
-        // Minotaur Island Portals
+        /* Minotaur Island Portals */
+        { x: 137, y: 248, type: "portal", tooltip: "Portal to Highlands" },
 
 
-        // Scorched Island Portals
+        /* Scorched Island Portals */
         { x: 631, y: 2102, type: "portal", tooltip: "Portal to Battle Plains" },
         { x: 720, y: 1964, type: "portal", tooltip: "Portal to Hell" },
 
+        
         /* Krythan Island Portals */
-        // Krythan Region Portals
+
+        // Krythan Region Portals        
         { x: 585, y: 1497, type: "portal", tooltip: "Portal to East Mainlands West of Parian" },
         { x: 185, y: 1466, type: "portal", tooltip: "Portal to Northeastern Mainlands North of Josody" },
         { x: 473, y: 1896, type: "portal", tooltip: "Portal to Hell" },
@@ -49,11 +55,50 @@ const mapMarkers = {
         
         
 
-        /*  Mainland Portals */
+        /* Mainland Portals */
+
+        // Darkwoods Forest Portals
+        { x: 868, y: 3418, type: "portal", tooltip: "Portal to Mnemmon" },
+        { x: 910, y: 3260, type: "portal", tooltip: "Portal to Mnemmon Gaol" },
+
+        // Battle Plains Portals
+
+        // Black Swamp Portals
+        
+        // Highlands Portals
+        { x: 1214, y: 3173, type: "portal", tooltip: "Portal to Southern Highlands" },
+        { x: 1374, y: 3033, type: "portal", tooltip: "Portal to North Highlands" },
+
+        // Western Isles Portals
 
         // Hell Portals
         { x: 1052, y: 3289, type: "portal", tooltip: "Portal to Scorched Island" },
+        { x: 1178, y: 3290, type: "portal", tooltip: "Portal to Krythan Island" },
 
+        // Valley of Giants Portals
+
+        // Heartwood Coast Portals
+
+        // Tundria Portals
+
+        // Sands of Creation Portals
+
+        // Breakwater
+
+        // Broken Finger
+
+        
+
+        /* Sands of Creation Portals */
+        // Ruhura Side Portals
+        { x: 471, y: 4038, type: "portal", tooltip: "Portal to Lotor's Summer Palace" },
+        { x: 113, y: 3477, type: "portal", tooltip: "Portal to Dragon Lair (Blue Dragons)" },
+
+        // Khafra Side Portals
+        
+        { x: 201, y: 2857, type: "portal", tooltip: "Portal to Lotor's Summer Palace" },
+        { x: 26, y: 3414, type: "portal", tooltip: "Portal to Artonian Island" },
+        { x: 216, y: 3386, type: "portal", tooltip: "Portal to Khafra Side" },
  
     ],
     
@@ -97,6 +142,16 @@ const mapMarkers = {
         // New Town Docks
 
         // Roycroft Docks
+
+        // Werewolf Island Docks
+
+        // Sands of Creation Docks
+
+        // Ruhura Side Docks
+
+        // Khafra Side Docks
+        { x: 88, y: 2693, type: "dock", tooltip: "Khafra Dock" },
+
     ],
     
     quests: [
@@ -229,14 +284,24 @@ const mapMarkers = {
         //Valinor Island Spawns
         { x: 779, y: 141, type: "spawn_good", tooltip: "Spawn Gate" },
 
-        // Example: { x: 123, y: 456, type: "spawn_good", tooltip: "Good Spawn Gate" }
+        // Sands of Creation Spawns
+        // Ruhura Side Spawns
+        { x: 264, y: 3555, type: "spawn_good", tooltip: "Good Spawn Gate" },
+        // Khafra Side Spawns
+
+
     ],
 
     spawn_evil: [
         //Krythan Island Spawns
         { x: 777, y: 873, type: "spawn_evil", tooltip: "Evil Spawn Gate" },
 
-        // Example: { x: 789, y: 101, type: "spawn_evil", tooltip: "Evil Spawn Gate" }
+        // Sands of Creation Spawns
+        // Ruhura Side Spawns
+        { x: 376, y: 4025, type: "spawn_evil", tooltip: "Evil Spawn Gate" },
+
+        // Khafra Side Spawns
+        // No evil spawns on Khafra Side as of now
     ],
 
     banks: [
@@ -272,7 +337,8 @@ const mapMarkers = {
         // Add markers for obelisks and ruin spires here
         /* Mainland Crafting Locations */
         // Region Western Isles
-        { x: 2109, y: 2734, type: "obelisk", tooltip: "Desprail Obelisk" }
+        { x: 2109, y: 2734, type: "obelisk", tooltip: "Desprail Island Obelisk" },
+        { x: 1033, y: 3483, type: "obelisk", tooltip: "Hell Rune Spire" },
     ],
 
     undergrounds: [
@@ -290,7 +356,7 @@ const mapMarkers = {
         // Region: Silvest Valley Undergrounds
         { x: 967, y: 1348, type: "snake_pit", tooltip: "Snake Pit" },
         { x: 907, y: 1031, type: "underground_crypt", tooltip: "Krythan Crypt" }, // I know it's misspelled on the map but it's also misspelled in AE.
-        { x: 1098, y: 1184, type: "underground_cave", tooltip: "Cliffside Mines" },
+        { x: 1098, y: 1184, type: "underground_mine", tooltip: "Cliffside Mines" },
 
         // Region: Krythan Undergrounds
         { x: 327, y: 742, type: "snake_pit", tooltip: "Snake pit" },
@@ -301,6 +367,10 @@ const mapMarkers = {
         /* Mainland Undergrounds */
 
         // Darkwoods Forest Region Undergrounds
+        { x: 838, y: 3270, type: "scorpion_pit", tooltip: "Scorpion Pit" },
+        { x: 760, y: 3323, type: "termigon_mound", tooltip: "Termigon Pit" },
+        { x: 800, y: 3336, type: "underground_mine", tooltip: "South Astari Rune Shelter" },
+        { x: 474, y: 3432, type: "snake_pit", tooltip: "Whisperdale Snake Pit" },
 
         // Necropolis Undergrounds
         { x: 1363, y: 2889, type: "underground_stairs", tooltip: "Trap Door to Necropolis Magic and Farm Shops (They do not work)" },
@@ -320,23 +390,23 @@ const mapMarkers = {
 
         // Tundria Region Undergrounds
 
+        // Hell Undergrounds
+        { x: 1209, y: 3349, type: "underground_dungeon", tooltip: "Lotorian Dungeon" },
+        { x: 1308, y: 3386, type: "underground_cave", tooltip: "Horned One Cave" },
+
         /* Desert Lands (Not sure what to call these)*/
-        /* These are the areas sounth of Scarb Island and west of the Mainland */
+        /* These are the areas sounth of Werewolf Island and west of the Mainland */
 
         // Sands of Creation Region
+        // Ruhura Side Undergrounds
+        { x: 546, y: 3839, type: "underground_stairs", tooltip: "Elemental Cave" },
+        { x: 309, y: 3910, type: "underground_stairs", tooltip: "East Entrance to Greater Dragon Island" },
+        { x: 402, y: 3794, type: "underground_stairs", tooltip: "West Entrance to Ruhura Side" },
+        { x: 455, y: 3719, type: "underground_stairs", tooltip: "Elemental Cave" },
+        { x: 949, y: 4005, type: "underground_dungeon", tooltip: "Mukarramma Dungeon" },
 
-        // Khafra
-
-        // Ruhura
-
-
-
-
-
-
-
-        
-
+        // Khafra Side Undergrounds
+        { x: 78, y: 3354, type: "underground_stairs", tooltip: "Khafra Elemental Cave" },
         
     ],
 
@@ -495,14 +565,30 @@ const markerStyles = {
         icon: "icons/dungeon-gate.svg",
         color: "#d36517ff", // SaddleBrown
     },
+    underground_mine: {
+        icon: "icons/mine.svg",
+        color: "#d36517ff", // SaddleBrown
+    },
     
     // Places of Interest
     snake_pit: {
         icon: "icons/snake.svg",
         color: "#d36517ff", // SaddleBrown - same color as other undergrounds
     },
+    scorpion_pit: {
+        icon: "icons/scorpion.svg",
+        color: "#d36517ff", // SaddleBrown - same color as other undergrounds
+    },
+    spider_pit: {
+        icon: "icons/long-legged-spider.svg",
+        color: "#d36517ff", // SaddleBrown - same color as other undergrounds
+    },
     ant_mound: {
         icon: "icons/ant.svg",
+        color: "#00BFFF", // DeepSkyBlue - same as information
+    },
+    termigon_mound: {
+        icon: "icons/mite.svg",
         color: "#00BFFF", // DeepSkyBlue - same as information
     },
     game_of_chance: {

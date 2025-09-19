@@ -16,7 +16,7 @@ const mapLabels = {
 
     ],
     cities: [
-        // Valinor Island Cities
+        /* Valinor Island Cities */
         // Valinor Region Cities
         { x: 759, y: 65, name: "Valinor", fontSize: 24 },
 
@@ -116,6 +116,7 @@ const mapLabels = {
         { x: 1672, y: 1681, name: "Ettin Island", fontSize: 30 },
         { x: 3331, y: 254, name: "Northern Frost Giant Island", fontSize: 30 },
         { x: 3893, y: 1688, name: "PVP Island", fontSize: 30 },
+        { x: 248, y: 3376, name: "Artonian Island", fontSize: 20 }, // Might be called something else
         
     ],
     
@@ -173,11 +174,33 @@ const mapLabels = {
         { x: 936, y: 2576, name: "Josody Theif Fort", fontSize: 18 },
         { x: 1030, y: 2977, name: "Crypt of Ryonkah", fontSize: 16 },
         { x: 555, y: 3158, name: "Lord Vezryl's Estate", fontSize: 16 },
-        { x: 683, y: 3389, name: "Hunting Lodge", fontSize: 16 },
+        { x: 683, y: 3389, name: "Burslord's Hunting Lodge", fontSize: 16 },
         { x: 911, y: 3216, name: "Mnemmon", fontSize: 25 },
         { x: 881, y: 3390, name: "Mnemmon Gaol", fontSize: 20 },
         { x: 1358, y: 2903, name: "Necropolis", fontSize: 20 },
+        { x: 815, y: 3223, name: "Astari Ruin Shelter", fontSize: 16 },
         
+        // Sands of Creation Places of Interest
+        // Ruhura Side Places of Interest
+        { x: 943, y: 3987, name: "Ruhura Outpost", fontSize: 16 },
+        { x: 842, y: 3924, name: "Sand Golem Crypt", fontSize: 16 },
+        { x: 793, y: 3838, name: "Lupinsix's Lair", fontSize: 16 },
+        { x: 720, y: 3682, name: "Tomna's House", fontSize: 16 },
+        { x: 556, y: 3668, name: "Artonian Fort", fontSize: 16 },
+        { x: 490, y: 3652, name: "Artonian Cave", fontSize: 16 },
+        { x: 422, y: 3686, name: "The GateKeeper", fontSize: 16 },
+        { x: 114, y: 3469, name: "Dragon Lair", fontSize: 16 },
+        // Done
+        
+        // Khafra Side Places of Interest
+        { x: 88, y: 2726, name: "Khafra Fishing Outpost", fontSize: 16 },
+        { x: 313, y: 2979, name: "Baniti's Family Crypt", fontSize: 16 },
+        { x: 56, y: 3026, name: "Blacktail's Crypt", fontSize: 16 },
+        { x: 169, y: 3158, name: "The Guardian", fontSize: 16 },
+        { x: 263, y: 3250, name: "Undead Artonian Crypt", fontSize: 16 },
+        { x: 142, y: 3329, name: "Ancient Artonian Swordsman Dungeon", fontSize: 16 },
+        // Done
+
         
         
         
@@ -194,6 +217,13 @@ const mapLabels = {
         { x: 849, y: 1156, name: "Crow Lake", fontSize: 14 },
         { x: 1040, y: 1218, name: "Chokecherry Pond", fontSize: 12 },
         // Add water body labels here
+
+        // Sands of Creation Water Bodies
+        // Ruhura Side Water Bodies
+
+        // Khafra Side Water Bodies
+        { x: 218, y: 3016, name: "Khafra Oasis", fontSize: 15 },
+        { x: 91, y: 3267, name: "Chomper's Oasis", fontSize: 15 },
     ],
     
     mountains: [
