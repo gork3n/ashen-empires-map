@@ -383,13 +383,16 @@ const mapMarkers = {
         { x: 1349, y: 2933, type: "underground_stairs", tooltip: "Ladder to inside Necropolis" },
 
         // Battle Plains Region Undergrounds
+        { x: 2330, y: 3620, type: "underground_stairs", tooltip: "Chlera Catacombs" },
+        { x: 2137, y: 3156, type: "underground_stairs", tooltip: "Desprail Cave" },
 
         // Black Swamp Region Undergrounds
         { x: 2824, y: 3624, type: "underground_sewer", tooltip: "Krog Sewer" },
         { x: 3019, y: 3815, type: "underground_sewer", tooltip: "Krog Sewer" },
-        { x: 2921, y: 3666, type: "underground_sewer", tooltip: "Drakkan Crypt" },
+        { x: 2793, y: 3834, type: "underground_sewer", tooltip: "Drakkan Crypt" },
         { x: 3245, y: 3835, type: "underground_sewer", tooltip: "Waste Tunnels" },
         { x: 3096, y: 3866, type: "underground_ant", tooltip: "Ant Hill" },
+        { x: 3131, y: 3661, type: "underground_scorpion", tooltip: "Scorpion" },
 
         // Highlands Region Undergrounds
 
@@ -405,8 +408,6 @@ const mapMarkers = {
         { x: 1209, y: 3349, type: "underground_dungeon", tooltip: "Lotorian Dungeon" },
         { x: 1308, y: 3386, type: "underground_cave", tooltip: "Horned One Cave" },
 
-        /* Desert Lands (Not sure what to call these)*/
-        /* These are the areas sounth of Werewolf Island and west of the Mainland */
 
         // Sands of Creation Region
         // Ruhura Side Undergrounds
@@ -590,6 +591,10 @@ const markerStyles = {
     },
     underground_ant: {
         icon: "icons/ant.svg",
+        color: "#d36517ff", // SaddleBrown
+    },
+    underground_scorpion: {
+        icon: "icons/scorpion.svg",
         color: "#d36517ff", // SaddleBrown
     },
     

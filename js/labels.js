@@ -18,6 +18,7 @@ const mapLabels = {
 
         // Highlands Region Landmarks
         { x: 3597, y: 2453, name: "Death Tyrant Valley", fontSize: 30 },
+        { x: 3417, y: 3171, name: "Resource Valley", fontSize: 30 },
 
         // Valley of Giants Region Landmarks
         { x: 3067, y: 2943, name: "Valley of Giants", fontSize: 30 },
@@ -174,8 +175,10 @@ const mapLabels = {
         // Darkwood Forest Caves
 
         // Battle Plains Caves
+        { x: 1961, y: 3762, name: "Fungoid Cave", fontSize: 16 },
 
         // Black Swamp Caves
+        { x: 2963, y: 3910, name: "Ivogur's Mine", fontSize: 16 },
 
         // Highlands Caves
         { x: 3099, y: 2390, name: "Zanock's Mine (East) ", fontSize: 16 },
@@ -210,7 +213,7 @@ const mapLabels = {
         
         { x: 436, y: 850, name: "Crypt of Kargoth", fontSize: 14 },
         { x: 832, y: 1035, name: "Holendar's Mansion", fontSize: 15 },
-        { x: 895, y: 1023, name: "Krythan Cemetary", fontSize: 15 }, // I know it's misspelled on the map but it's also misspelled in AE.
+        { x: 895, y: 1023, name: "Krythan Cemetary", fontSize: 15 }, 
         { x: 836, y: 1279, name: "Scalo's Den", fontSize: 15 },
         { x: 1279, y: 1123, name: "Kobold Castle", fontSize: 18 },
         { x: 1376, y: 1077, name: "Karzak Cove", fontSize: 15 },
@@ -236,8 +239,11 @@ const mapLabels = {
         // Battle Plains Places of Interest
 
         // Black Swamp Places of Interest
-        { x: 2806, y: 3807, name: "Drakken", fontSize: 16 },
+        { x: 2806, y: 3807, name: "Drakkan", fontSize: 16 },
         { x: 3248, y: 3818, name: "Kobold Outpost", fontSize: 16 },
+        { x: 2833, y: 3925, name: "Kobold Village", fontSize: 16 },
+        { x: 3118, y: 3633, name: "Temple of Agon", fontSize: 16 },
+        { x: 2817, y: 3261, name: "Old Ale Warehouse\n(Closed)", fontSize: 16 },
 
         // Highlands Places of Interest
         { x: 2769, y: 3166, name: "Emporium Abbey", fontSize: 16 },
