@@ -348,9 +348,9 @@ input:checked + .slider:before {
     pointer-events: none;
     z-index: 1000;
     box-shadow: 0 1px 5px rgba(0,0,0,0.2);
-    width: 200px;
-    text-align: center;
+    max-width: 250px; /* Prevent very long tooltips from going off-screen */
     box-sizing: border-box;
+    white-space: nowrap; /* Keep tooltip content on a single line */
     display: flex;
     align-items: center;
     color: #ffffff;

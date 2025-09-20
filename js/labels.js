@@ -236,6 +236,8 @@ const mapLabels = {
         // Battle Plains Places of Interest
 
         // Black Swamp Places of Interest
+        { x: 2806, y: 3807, name: "Drakken", fontSize: 16 },
+        { x: 3248, y: 3818, name: "Kobold Outpost", fontSize: 16 },
 
         // Highlands Places of Interest
         { x: 2769, y: 3166, name: "Emporium Abbey", fontSize: 16 },
@@ -251,11 +253,7 @@ const mapLabels = {
         { x: 3099, y: 2390, name: "Zanock's Mine (East) ", fontSize: 16 },        
         { x: 3562, y: 1924, name: "Astari Cave\n(CLOSED)", fontSize: 15 },
         { x: 3610, y: 3621, name: "Ethera Mining Company", fontSize: 16 },
-        { x: 3336, y: 3596, name: "Grell Tunnels", fontSize: 16 },
-        { x: 3336, y: 3734, name: "Warg Pen", fontSize: 16 },
-        
-
-        
+        { x: 3336, y: 3734, name: "Warg Pen", fontSize: 16 },    
 
 
         // Valley of Giants Places of Interest

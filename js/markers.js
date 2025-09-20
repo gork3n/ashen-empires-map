@@ -374,6 +374,10 @@ const mapMarkers = {
         { x: 800, y: 3336, type: "underground_mine", tooltip: "South Astari Rune Shelter" },
         { x: 474, y: 3432, type: "snake_pit", tooltip: "Whisperdale Snake Pit" },
 
+        // Highlands Region Undergrounds
+        { x: 3562, y: 1928, type: "underground_closed", tooltip: "Astari Cave (CLOSED)" },
+        { x: 3336, y: 3596, type: "underground_stairs", tooltip: "Grell Tunnels" },
+
         // Necropolis Undergrounds
         { x: 1363, y: 2889, type: "underground_stairs", tooltip: "Trap Door to Necropolis Magic and Farm Shops (They do not work)" },
         { x: 1349, y: 2933, type: "underground_stairs", tooltip: "Ladder to inside Necropolis" },
@@ -383,6 +387,9 @@ const mapMarkers = {
         // Black Swamp Region Undergrounds
         { x: 2824, y: 3624, type: "underground_sewer", tooltip: "Krog Sewer" },
         { x: 3019, y: 3815, type: "underground_sewer", tooltip: "Krog Sewer" },
+        { x: 2921, y: 3666, type: "underground_sewer", tooltip: "Drakkan Crypt" },
+        { x: 3245, y: 3835, type: "underground_sewer", tooltip: "Waste Tunnels" },
+        { x: 3096, y: 3866, type: "underground_ant", tooltip: "Ant Hill" },
 
         // Highlands Region Undergrounds
 
@@ -575,6 +582,14 @@ const markerStyles = {
     },
     underground_sewer: {
         icon: "icons/trash-can.svg",
+        color: "#d36517ff", // SaddleBrown
+    },
+    underground_closed: {
+        icon: "icons/closed-door-tape.svg",
+        color: "#d36517ff", // SaddleBrown
+    },
+    underground_ant: {
+        icon: "icons/ant.svg",
         color: "#d36517ff", // SaddleBrown
     },
     
