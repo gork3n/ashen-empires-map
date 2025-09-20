@@ -119,18 +119,24 @@ const mapLabels = {
     ],
     
     islands: [
-        //All Islands
+        //Individual Islands
         { x: 150, y: 70, name: "GM Island", fontSize: 30 },
-        { x: 775, y: 571, name: "Lotor's Summer Palace", fontSize: 30 },
-        { x: 663, y: 630, name: "Real Estate Island", fontSize: 20 },
-        { x: 1090, y: 992, name: "Krythan Island", fontSize: 35 },
-        { x: 940, y: 60, name: "Valinor Island", fontSize: 35 },
+        { x: 137, y: 230, name: "Minotaur Island", fontSize: 30 },
         { x: 421, y: 69, name: "Party Island", fontSize: 30 },
         { x: 1545, y: 546, name: "Lotor's Prison", fontSize:30 },
-        { x: 137, y: 230, name: "Minotaur Island", fontSize: 30 },
+        { x: 775, y: 571, name: "Lotor's Summer Palace", fontSize: 30 },
+        { x: 663, y: 630, name: "Real Estate Island", fontSize: 20 },
         { x: 88, y: 942, name: "Guild Arena Island", fontSize: 30 },
+
+        // Valinor Island
+        { x: 940, y: 60, name: "Valinor Island", fontSize: 35 },
+
+        // Krythan Island
+        { x: 1090, y: 992, name: "Krythan Island", fontSize: 35 },
+
+        // Western Isles
         { x: 795, y: 2092, name: "Scorched Island", fontSize: 35 },
-        { x: 1130, y: 3195, name: "Hell", fontSize: 35 },
+        { x: 1130, y: 3195, name: "Hell", fontSize: 45 },
         { x: 515, y: 640, name: "Mirthik's Island", fontSize: 14 },
         { x: 223, y: 425, name: "Deserted Island", fontSize: 14 },
         { x: 259, y: 2048, name: "Scarab Island", fontSize: 35 },
@@ -142,6 +148,8 @@ const mapLabels = {
         { x: 3893, y: 1688, name: "PvP Island", fontSize: 30 },
         { x: 248, y: 3376, name: "Artonian Island", fontSize: 20 }, // Might be called something else
         { x: 3153, y: 3192, name: "Vel Dran", fontSize: 24 },
+
+        // Sands of Creation Islands are consider Western Isles but do not have a specific name
         
     ],
     
@@ -235,6 +243,7 @@ const mapLabels = {
         { x: 881, y: 3390, name: "Mnemmon Gaol", fontSize: 20 },
         { x: 1358, y: 2903, name: "Necropolis", fontSize: 20 },
         { x: 815, y: 3223, name: "Astari Ruin Shelter", fontSize: 16 },
+        { x: 1032, y: 2891, name: "Tuvok", fontSize: 16 },
 
         // Battle Plains Places of Interest
 
@@ -320,6 +329,9 @@ const mapLabels = {
         
         /* Mainland Water Bodies */
         // Darkwood Forest Water Bodies
+        { x: 1015, y: 2869, name: "Cairn Lake", fontSize: 16 },
+        { x: 778, y: 2988, name: "Lake Mraya", fontSize: 16 },
+        { x: 1129, y: 2676, name: "Josody Swamp", fontSize: 18 },
 
         // Battle Plains Water Bodies
 

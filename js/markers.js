@@ -133,26 +133,30 @@ const mapMarkers = {
 
         /* Mainland Docks */
 
-        // Western Docks
+        // Darkwoods Forest Docks
 
-        // Eastern Docks
+        // Highlands Docks
+
+        // Western Isles Docks
+
+        // Valley of Giants Docks
+
+        // Heartwood Coast Docks
 
         // Tundria Docks
 
-        // New Royale Docks
-
-        // New Town Docks
-
-        // Roycroft Docks
+        // Scarab Island Docks
 
         // Werewolf Island Docks
 
         // Sands of Creation Docks
 
         // Ruhura Side Docks
+        { x: 360, y: 4061, type: "dock", tooltip: "Ruhura Dock" },
 
         // Khafra Side Docks
-        { x: 88, y: 2693, type: "dock", tooltip: "Khafra Dock" },
+        { x: 88, y: 2693, type: "dock", tooltip: "Khafra Fishing Outpost Dock" },
+        { x: 212, y: 2753, type: "dock", tooltip: "Khafra Dock" },
 
     ],
     
@@ -373,6 +377,8 @@ const mapMarkers = {
         { x: 760, y: 3323, type: "termigon_mound", tooltip: "Termigon Pit" },
         { x: 800, y: 3336, type: "underground_mine", tooltip: "South Astari Rune Shelter" },
         { x: 474, y: 3432, type: "snake_pit", tooltip: "Whisperdale Snake Pit" },
+        { x: 1272, y: 3032, type: "underground_ant", tooltip: "Dunmarrow Fire Ant Pit" },
+        { x: 1431, y: 3046, type: "underground_crypt", tooltip: "McKelsky Crypt" },
 
         // Highlands Region Undergrounds
         { x: 3562, y: 1928, type: "underground_closed", tooltip: "Astari Cave (CLOSED)" },
