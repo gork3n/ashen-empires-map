@@ -12,9 +12,9 @@ const labelStyles = {
     landmarks: {
         // Gold gradient for landmarks
         useGradient: true,
-        fontFamily: '"Alegreya Sans", sans-serif',
-        fontWeight: 900,
+        fontFamily: '"KJV1611", "Alegreya Sans", sans-serif',
         fontStyle: 'normal',
+        fontWeight: 'normal',
         strokeColor: '#000000',
         strokeWidth: 2,
         fontSize: 22,
@@ -285,7 +285,7 @@ function initializeMap() {
     // --- Set Initial Map View ---
     // Define the center of the map using in-game (4096x4096) coordinates.
     // This makes it easy to change the starting location.
-    const initialCenterGameCoords = { x: 164, y: 3084, }; // Example: Valinor City
+    const initialCenterGameCoords = { x: 3364, y: 3601, }; // Example: Valinor City
 
     // Convert the in-game coordinates to OpenLayers view coordinates.
     // The map is 16384x16384, which is 4x the in-game coordinates.
@@ -460,10 +460,19 @@ function createLabelImageStyle(text, fontSize, styleOptions = {}) {
     const fontString = `${options.fontStyle} ${options.fontWeight} ${finalFontSize}px ${options.fontFamily}`;
     ctx.font = fontString;
     
+    // Handle multi-line text
+    const lines = text.split('\n');
+    const lineHeight = finalFontSize * 1.2;
+
     // Measure text to set canvas dimensions
-    var metrics = ctx.measureText(text);
-    var textWidth = metrics.width;
-    var textHeight = finalFontSize * 1.2;
+    let textWidth = 0;
+    lines.forEach(line => {
+        const metrics = ctx.measureText(line);
+        if (metrics.width > textWidth) {
+            textWidth = metrics.width;
+        }
+    });
+    const textHeight = lineHeight * lines.length;
 
     // Define padding. Use specific background padding if available, otherwise use original values.
     let paddingX = 20;
@@ -507,29 +516,31 @@ function createLabelImageStyle(text, fontSize, styleOptions = {}) {
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
     
-    // Add outline to text
-    ctx.lineWidth = options.strokeWidth;
-    ctx.strokeStyle = options.strokeColor;
-    ctx.strokeText(text, canvas.width / 2, canvas.height / 2);
-    
-    // Fill text with gradient or solid color
-    if (options.useGradient) {
-        // Create gradient
-        var gradient = ctx.createLinearGradient(0, 0, canvas.width, 0);
-        
-        // Add color stops from options
-        options.gradientColors.forEach(stop => {
-            gradient.addColorStop(stop.pos, stop.color);
-        });
-        
-        ctx.fillStyle = gradient;
-    } else {
-        // Use solid fill color
-        ctx.fillStyle = options.fillColor;
-    }
-    
-    // Fill the text
-    ctx.fillText(text, canvas.width / 2, canvas.height / 2);
+    // Calculate starting Y position for the first line of text
+    const startY = (canvas.height / 2) - (textHeight / 2) + (lineHeight / 2);
+
+    lines.forEach((line, index) => {
+        const yPos = startY + (index * lineHeight);
+
+        // Add outline to text
+        ctx.lineWidth = options.strokeWidth;
+        ctx.strokeStyle = options.strokeColor;
+        ctx.strokeText(line, canvas.width / 2, yPos);
+
+        // Fill text with gradient or solid color
+        if (options.useGradient) {
+            var gradient = ctx.createLinearGradient(0, 0, canvas.width, 0);
+            options.gradientColors.forEach(stop => {
+                gradient.addColorStop(stop.pos, stop.color);
+            });
+            ctx.fillStyle = gradient;
+        } else {
+            ctx.fillStyle = options.fillColor;
+        }
+
+        // Fill the text
+        ctx.fillText(line, canvas.width / 2, yPos);
+    });
     
     // Convert canvas to image URL
     var imageUrl = canvas.toDataURL();
@@ -812,7 +823,7 @@ function addLabelFeature(source, x, y, text, fontSize, category) {
     });
     
     // Add a tooltip for specific label categories that use a special font.
-    if (category === 'islands' || category === 'cities') {
+    if (category === 'islands' || category === 'cities' || category === 'landmarks') {
         feature.set('labelTooltip', text);
     }
 

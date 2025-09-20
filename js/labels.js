@@ -14,6 +14,27 @@ const mapLabels = {
         // Battle Plains Region Landmarks
         { x: 1752, y: 3404, name: "Proudblood Valley", fontSize: 30 },
 
+        // Black Swamp Region Landmarks
+
+        // Highlands Region Landmarks
+        { x: 3597, y: 2453, name: "Death Tyrant Valley", fontSize: 30 },
+
+        // Valley of Giants Region Landmarks
+        { x: 3067, y: 2943, name: "Valley of Giants", fontSize: 30 },
+
+        // Badlands Region Landmarks
+        { x: 2825, y: 2670, name: "Badlands", fontSize: 30 },
+
+        // Heartwood Coast Region Landmarks
+
+        // Tundria Region Landmarks
+
+        // Breakwater Region Landmarks
+
+        // Western Isles Region Landmarks
+
+        // Broken Finger Region Landmarks
+
     ],
     cities: [
         /* Valinor Island Cities */
@@ -54,24 +75,23 @@ const mapLabels = {
         { x: 1384, y: 3151, name: "Dunmarrow", fontSize: 30 },
         { x: 1321, y: 2477, name: "Josody", fontSize: 30 },
 
-        // Broken Finger Region Cities
-        { x: 1153, y: 3712, name: "Broken Finger Town", fontSize: 20 },
-
+        
         // Battle Plains Region Cities
         { x: 2220, y: 3235, name: "Desprail", fontSize: 30 },
         { x: 2403, y: 3548, name: "Chlera", fontSize: 30 },
 
-        // Highlands Region Cities
+        // Black Swamp Region Cities
         { x: 2636, y: 3497, name: "Samad", fontSize: 30 },
         { x: 3088, y: 3356, name: "Dawat", fontSize: 30 },
         { x: 3115, y: 3710, name: "Krog", fontSize: 30 },
         { x: 3064, y: 3978, name: "Maraket", fontSize: 30 }, 
 
-        // Not sure which region this is
+        // Highlands Region Cities
+        { x: 3240, y: 3607, name: "Grell", fontSize: 30 },
         { x: 3401, y: 3444, name: "Arda", fontSize: 30 },
         { x: 3462, y: 2939, name: "Parian", fontSize: 30 },
         { x: 3536, y: 3643, name: "Ethera Palace", fontSize: 30 },
-        { x: 3602, y: 2774, name: "Darushk", fontSize: 30 },
+        { x: 3746, y: 2711, name: "Darushk", fontSize: 30 },
 
         
         //Tundria
@@ -81,16 +101,19 @@ const mapLabels = {
         { x: 2198, y: 1206, name: "Ringhaven Citadel", fontSize: 24 },
         { x: 2822, y: 1254, name: "Farstead Keep", fontSize: 24 },
 
-        // Need to check these locations for Region name
+        // Heartwood Coast
         { x: 2626, y: 2106, name: "Valmond", fontSize: 24 },
         { x: 2497, y: 1616, name: "Teylan", fontSize: 24 },
-        { x: 3274, y: 1631, name: "Syldural", fontSize: 24 },
+        { x: 3277, y: 1637, name: "Syldural", fontSize: 24 },
 
         //Breakwater
         { x: 2448, y: 2336, name: "Roycroft", fontSize: 24 },
         { x: 1961, y: 1885, name: "New Town", fontSize: 24 },
         { x: 1457, y: 1964, name: "New Royale", fontSize: 24 },
-        // Cities and Towns are done except some comments for region names above need to be filled in.
+
+        // Broken Finger Region Cities
+        { x: 1153, y: 3712, name: "Broken Finger Town", fontSize: 20 },
+        
     
     ],
     
@@ -115,8 +138,9 @@ const mapLabels = {
         { x: 160, y: 3792, name: "Greater Dragon Island", fontSize: 25 },
         { x: 1672, y: 1681, name: "Ettin Island", fontSize: 30 },
         { x: 3331, y: 254, name: "Northern Frost Giant Island", fontSize: 30 },
-        { x: 3893, y: 1688, name: "PVP Island", fontSize: 30 },
+        { x: 3893, y: 1688, name: "PvP Island", fontSize: 30 },
         { x: 248, y: 3376, name: "Artonian Island", fontSize: 20 }, // Might be called something else
+        { x: 3153, y: 3192, name: "Vel Dran", fontSize: 24 },
         
     ],
     
@@ -135,13 +159,42 @@ const mapLabels = {
     caves: [
         // Caves and Mines Here
 
+        // Valinor Island Caves
+
+
         // Krythan Island Caves
         { x: 440, y: 761, name: "Mirthik's Cave", fontSize: 16 },
         { x: 1017, y: 1109, name: "Silvest Mines", fontSize: 15 },
         { x: 1433, y: 1379, name: "Dalvon Mines", fontSize: 15 },
         { x: 1181, y: 1301, name: "Orc Cave", fontSize: 15 },
         { x: 391, y: 1318, name: "Flataga Mines", fontSize: 15 },
-        // Add cave labels here
+
+        /* Mainland Caves */
+
+        // Darkwood Forest Caves
+
+        // Battle Plains Caves
+
+        // Black Swamp Caves
+
+        // Highlands Caves
+        { x: 3099, y: 2390, name: "Zanock's Mine (East) ", fontSize: 16 },
+        { x: 3624, y: 3596, name: "Termigon Mine", fontSize: 16 },
+
+        // Valley of Giants Caves
+
+        // Heartwood Coast Caves
+        { x: 2871, y: 2358, name: "Zanock's Mine (West)", fontSize: 16 },
+
+        // Tundria Caves
+
+        // Breakwater Caves
+
+        // Western Isles Caves
+
+        // Broken Finger Caves
+        
+        
     ],
     
     interests: [
@@ -169,7 +222,7 @@ const mapLabels = {
         { x: 1104, y: 3292, name: "Talazar's Castle", fontSize: 25 },
         { x: 1200, y: 3341, name: "Minion's of Talazar's Stronghold", fontSize: 16 },
 
-
+        /* Mainland Places of Interest */
         // Darkwood Forest Places of Interest
         { x: 936, y: 2576, name: "Josody Theif Fort", fontSize: 18 },
         { x: 1030, y: 2977, name: "Crypt of Ryonkah", fontSize: 16 },
@@ -179,6 +232,45 @@ const mapLabels = {
         { x: 881, y: 3390, name: "Mnemmon Gaol", fontSize: 20 },
         { x: 1358, y: 2903, name: "Necropolis", fontSize: 20 },
         { x: 815, y: 3223, name: "Astari Ruin Shelter", fontSize: 16 },
+
+        // Battle Plains Places of Interest
+
+        // Black Swamp Places of Interest
+
+        // Highlands Places of Interest
+        { x: 2769, y: 3166, name: "Emporium Abbey", fontSize: 16 },
+        { x: 2930, y: 3169, name: "Ancient Site of Minos", fontSize: 16 },
+        { x: 3001, y: 3040, name: "Minotaur Maze", fontSize: 16 },
+        { x: 3177, y: 3069, name: "Thief Fort", fontSize: 16 },
+        { x: 3368, y: 2958, name: "Supply Shelter", fontSize: 16 },
+        { x: 3603, y: 2775, name: "Darushk Mine", fontSize: 16 },
+        { x: 3609, y: 2995, name: "Astari Cave", fontSize: 16 },
+        { x: 3206, y: 2629, name: "Arllandah's Lair", fontSize: 16 },
+        { x: 2984, y: 2701, name: "Third Book Temple", fontSize: 16 },
+        { x: 3468, y: 2643, name: "Horibus's Camp", fontSize: 16 },
+        { x: 3099, y: 2390, name: "Zanock's Mine (East) ", fontSize: 16 },        
+        { x: 3562, y: 1924, name: "Astari Cave\n(CLOSED)", fontSize: 15 },
+        { x: 3610, y: 3621, name: "Ethera Mining Company", fontSize: 16 },
+        { x: 3336, y: 3596, name: "Grell Tunnels", fontSize: 16 },
+        { x: 3336, y: 3734, name: "Warg Pen", fontSize: 16 },
+        
+
+        
+
+
+        // Valley of Giants Places of Interest
+
+        // Heartwood Coast Places of Interest
+        
+
+        // Tundria Places of Interest
+
+        // Breakwater Places of Interest
+
+        // Western Isles Places of Interest
+
+        // Broken Finger Places of Interest
+
         
         // Sands of Creation Places of Interest
         // Ruhura Side Places of Interest
@@ -212,11 +304,49 @@ const mapLabels = {
         { x: 1177, y: 413, name: "Gut Rot Swamp", fontSize: 20 },
 
         // Krythan Island Water Bodies
+
+        // Silvest Valley Region Water Bodies
         { x: 1267, y: 1220, name: "Lake Silvest", fontSize: 15 },
+        { x: 1040, y: 1218, name: "Chokecherry Pond", fontSize: 12 },
+
+        // Krythan Region Water Bodies
         { x: 390, y: 1090, name: "Queen's Lake", fontSize: 18 },
         { x: 849, y: 1156, name: "Crow Lake", fontSize: 14 },
-        { x: 1040, y: 1218, name: "Chokecherry Pond", fontSize: 12 },
-        // Add water body labels here
+        
+        
+        /* Mainland Water Bodies */
+        // Darkwood Forest Water Bodies
+
+        // Battle Plains Water Bodies
+
+        // Black Swamp Region Water Bodies
+        { x: 2787, y: 3682, name: "Vorda Swamp", fontSize: 20 },
+        { x: 2830, y: 3509, name: "Canis Lake", fontSize: 15 },
+        { x: 2919, y: 3650, name: "Lake Dresta", fontSize: 15 },
+
+
+        // Highlands Region Water Bodies
+        { x: 3377, y: 2980, name: "West Lake", fontSize: 15 },
+        { x: 3512, y: 2951, name: "Parian Lake", fontSize: 15 },
+        { x: 3587, y: 3115, name: "Town Lake", fontSize: 15 },
+        { x: 3576, y: 3234, name: "Kor's Lake", fontSize: 15 },
+        { x: 3033, y: 3229, name: "Lake Ulthien", fontSize: 25 },
+        { x: 3461, y: 2702, name: "Glutton Lake", fontSize: 25 },
+        { x: 3546, y: 3412, name: "Lake Kallon", fontSize: 15 },
+        { x: 3183, y: 3601, name: "Orc Pond", fontSize: 15 },
+
+        // Valley of Giants Water Bodies
+        { x: 3112, y: 2844, name: "Greenmead Lake", fontSize: 16 },
+
+        // Heartwood Coast Region Water Bodies
+
+        // Tundria Region Water Bodies
+
+        // Breakwater Region Water Bodies
+
+        // Western Isles Water Bodies
+
+        // Broken Finger Water Bodies
 
         // Sands of Creation Water Bodies
         // Ruhura Side Water Bodies

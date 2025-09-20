@@ -66,8 +66,10 @@ const mapMarkers = {
         // Black Swamp Portals
         
         // Highlands Portals
-        { x: 1214, y: 3173, type: "portal", tooltip: "Portal to Southern Highlands" },
-        { x: 1374, y: 3033, type: "portal", tooltip: "Portal to North Highlands" },
+        { x: 3416, y: 2919, type: "portal", tooltip: "Portal to Lotor's Summer Palace" },
+        { x: 3336, y: 2809, type: "portal", tooltip: "Portal to Southern Highlands" },
+        { x: 3082, y: 3549, type: "portal", tooltip: "Portal to Highlands (North of Parian)" },
+        { x: 3769, y: 3240, type: "portal", tooltip: "Portal to Darkwoods Forest (East of Redwake)" },
 
         // Western Isles Portals
 
@@ -379,6 +381,8 @@ const mapMarkers = {
         // Battle Plains Region Undergrounds
 
         // Black Swamp Region Undergrounds
+        { x: 2824, y: 3624, type: "underground_sewer", tooltip: "Krog Sewer" },
+        { x: 3019, y: 3815, type: "underground_sewer", tooltip: "Krog Sewer" },
 
         // Highlands Region Undergrounds
 
@@ -567,6 +571,10 @@ const markerStyles = {
     },
     underground_mine: {
         icon: "icons/mine.svg",
+        color: "#d36517ff", // SaddleBrown
+    },
+    underground_sewer: {
+        icon: "icons/trash-can.svg",
         color: "#d36517ff", // SaddleBrown
     },
     
