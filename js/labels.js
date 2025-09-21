@@ -75,6 +75,7 @@ const mapLabels = {
         { x: 901, y: 3064, name: "Darkfell", fontSize: 30 },
         { x: 1384, y: 3151, name: "Dunmarrow", fontSize: 30 },
         { x: 1321, y: 2477, name: "Josody", fontSize: 30 },
+        { x: 1108, y: 2755, name: "Gulley", fontSize: 30 },
 
         
         // Battle Plains Region Cities
@@ -98,7 +99,7 @@ const mapLabels = {
         //Tundria
         { x: 2793, y: 849, name: "Hammerfist", fontSize: 24 },
         { x: 3649, y: 930, name: "Duremar", fontSize: 24 },
-        { x: 1943, y: 1241, name: "Meroven", fontSize: 24 },
+        { x: 1943, y: 1241, name: "Maroven", fontSize: 24 },
         { x: 2198, y: 1206, name: "Ringhaven Citadel", fontSize: 24 },
         { x: 2822, y: 1254, name: "Farstead Keep", fontSize: 24 },
 
@@ -241,9 +242,13 @@ const mapLabels = {
         { x: 683, y: 3389, name: "Burslord's Hunting Lodge", fontSize: 16 },
         { x: 911, y: 3216, name: "Mnemmon", fontSize: 25 },
         { x: 881, y: 3390, name: "Mnemmon Gaol", fontSize: 20 },
-        { x: 1358, y: 2903, name: "Necropolis", fontSize: 20 },
+        { x: 1358, y: 2908, name: "Necropolis", fontSize: 20 },
         { x: 815, y: 3223, name: "Astari Ruin Shelter", fontSize: 16 },
-        { x: 1032, y: 2891, name: "Tuvok", fontSize: 16 },
+        { x: 1032, y: 2891, name: "Tuvok", fontSize: 16 }, // I'm not sure if this is the Name of the place or the name of the NPC that lives there. Question
+        { x: 1369, y: 2737, name: "Warg Pen", fontSize: 16 },
+        { x: 1489, y: 2481, name: "Gadros Ruins", fontSize: 16 },
+        { x: 1463, y: 2710, name: "Shadow Forest", fontSize: 16 }, // Seemed like it needed a name, might have a different name Question
+        { x: 677, y: 3520, name: "Termigon Hive", fontSize: 16 },
 
         // Battle Plains Places of Interest
 
@@ -253,6 +258,7 @@ const mapLabels = {
         { x: 2833, y: 3925, name: "Kobold Village", fontSize: 16 },
         { x: 3118, y: 3633, name: "Temple of Agon", fontSize: 16 },
         { x: 2817, y: 3261, name: "Old Ale Warehouse\n(Closed)", fontSize: 16 },
+        { x: 3101, y: 3488, name: "Valekar's Fortress", fontSize: 16 },
 
         // Highlands Places of Interest
         { x: 2769, y: 3166, name: "Emporium Abbey", fontSize: 16 },
@@ -266,7 +272,7 @@ const mapLabels = {
         { x: 2984, y: 2701, name: "Third Book Temple", fontSize: 16 },
         { x: 3468, y: 2643, name: "Horibus's Camp", fontSize: 16 },
         { x: 3099, y: 2390, name: "Zanock's Mine (East) ", fontSize: 16 },        
-        { x: 3562, y: 1924, name: "Astari Cave\n(CLOSED)", fontSize: 15 },
+        { x: 3562, y: 1924, name: "Astari Cave\n(NO ENTRY)", fontSize: 15 },
         { x: 3610, y: 3621, name: "Ethera Mining Company", fontSize: 16 },
         { x: 3336, y: 3734, name: "Warg Pen", fontSize: 16 },    
 

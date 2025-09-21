@@ -361,6 +361,9 @@ function initializeMap() {
     // Add crosshair for testing
     initializeCrosshair(map);
 
+    // Add axis legend
+    initializeAxisLegend(map);
+
     // --- Add click listener for features ---
     map.on('click', function(evt) {
         // Set cursor to default first
@@ -870,6 +873,30 @@ function setupMarkerTooltips(map) {
     
     // Hide tooltip when map is moved
     map.on('movestart', tooltipMoveStartHandler);
+}
+/**
+ * Adds a static axis legend to the map viewport.
+ * @param {ol.Map} mapInstance The OpenLayers map instance.
+ */
+function initializeAxisLegend(mapInstance) {
+    const mapElement = mapInstance.getTargetElement();
+    if (!mapElement) return;
+
+    // Check if legend already exists to prevent duplicates
+    if (document.querySelector('.axis-legend')) return;
+
+    const legendHTML = `
+        <div class="axis-legend">
+            <div class="axis-y">
+                <span class="axis-label">Y</span>
+            </div>
+            <div class="axis-x">
+                <span class="axis-label">X</span>
+            </div>
+        </div>
+    `;
+
+    mapElement.insertAdjacentHTML('beforeend', legendHTML);
 }
 /**
  * Initializes a crosshair overlay on a map instance for coordinate testing.

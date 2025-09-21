@@ -462,6 +462,74 @@ input:checked + .slider:before {
     left: 0;
 }
 
+/* --- Axis Legend --- */
+.axis-legend {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 60px;
+    height: 60px;
+    z-index: 999;
+    pointer-events: none;
+    color: rgba(255, 255, 255, 0.7);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+    font-family: monospace;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.axis-legend .axis-y,
+.axis-legend .axis-x {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: currentColor;
+}
+
+.axis-legend .axis-y {
+    width: 2px;
+    height: 50px;
+}
+
+.axis-legend .axis-y::after { /* Down Arrowhead */
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: -4px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 8px solid currentColor;
+}
+
+.axis-legend .axis-y .axis-label {
+    position: absolute;
+    top: 50%;
+    left: -12px;
+    transform: translateY(-50%);
+}
+
+.axis-legend .axis-x {
+    width: 50px;
+    height: 2px;
+}
+
+.axis-legend .axis-x::after { /* Right Arrowhead */
+    content: '';
+    position: absolute;
+    right: -8px;
+    top: -4px;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 8px solid currentColor;
+}
+
+.axis-legend .axis-x .axis-label {
+    position: absolute;
+    left: 50%;
+    top: -15px;
+    transform: translateX(-50%);
+}
+
 /* --- Quick Tips Container --- */
 .quick-tips-container {
     position: absolute;

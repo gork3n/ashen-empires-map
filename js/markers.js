@@ -58,8 +58,14 @@ const mapMarkers = {
         /* Mainland Portals */
 
         // Darkwoods Forest Portals
+        { x: 1352, y: 2440, type: "portal", tooltip: "Portal to Krythan Island (West of New Korelth)" },
+        { x: 1272, y: 2513, type: "portal", tooltip: "Portal to House Realm" },
+        { x: 1255, y: 2519, type: "portal", tooltip: "Portal to Lotor's Summer Palace" },
+        { x: 809, y: 2839, type: "portal", tooltip: "Portal to Highlands (Southeast of Parian)" },
         { x: 868, y: 3418, type: "portal", tooltip: "Portal to Mnemmon" },
         { x: 910, y: 3260, type: "portal", tooltip: "Portal to Mnemmon Gaol" },
+        { x: 473, y: 3481, type: "portal", tooltip: "Portal to Lotor's Summer Palace" },
+        
 
         // Battle Plains Portals
 
@@ -134,6 +140,16 @@ const mapMarkers = {
         /* Mainland Docks */
 
         // Darkwoods Forest Docks
+        { x: 1407, y: 2519, type: "dock", tooltip: "Josody Dock" },
+        { x: 405, y: 2868, type: "dock", tooltip: "Redwake Dock" },
+        { x: 404, y: 3222, type: "dock", tooltip: "Dragoon Dock" }, // Just gave it a name, not sure if it's correct
+        { x: 344, y: 3492, type: "dock", tooltip: "Whisperdale Dock" },
+        { x: 913, y: 3122, type: "dock", tooltip: "Darkfell Dock" }, // This is the ruins next to Dunmarrow Dock but I'm not sure what it's called Question
+        { x: 1365, y: 3248, type: "dock", tooltip: "Dunmarrow Dock" },
+
+        // Battle Plains Docks
+        { x: 2011, y: 2634, type: "dock", tooltip: "Wandering Spirit Dock" }, // This is above Shadow Temple Entrance I'm not sure what the ruins are called Question
+        
 
         // Highlands Docks
 
@@ -153,6 +169,9 @@ const mapMarkers = {
 
         // Ruhura Side Docks
         { x: 360, y: 4061, type: "dock", tooltip: "Ruhura Dock" },
+
+        // Greater Dragon Island Docks
+        { x: 281, y: 3919, type: "dock", tooltip: "Greater Dragon Island Dock" },
 
         // Khafra Side Docks
         { x: 88, y: 2693, type: "dock", tooltip: "Khafra Fishing Outpost Dock" },
@@ -355,13 +374,13 @@ const mapMarkers = {
         
         /* Lotor's Summer Palace Undergrounds */
         { x: 764, y: 754, type: "underground_dungeon", tooltip: "Sewer Entrance" },
-        { x: 799, y: 709, type: "underground_stairs", tooltip: "Leatherworking and Armor Shop Basement" },
+        { x: 799, y: 709, type: "underground_stairs", tooltip: "Leather and Armor Shop Basement" },
         
         /* Krythan Island Undergrounds */
 
         // Region: Silvest Valley Undergrounds
         { x: 967, y: 1348, type: "snake_pit", tooltip: "Snake Pit" },
-        { x: 907, y: 1031, type: "underground_crypt", tooltip: "Krythan Crypt" }, // I know it's misspelled on the map but it's also misspelled in AE.
+        { x: 907, y: 1031, type: "underground_crypt", tooltip: "Krythan Crypt" }, 
         { x: 1098, y: 1184, type: "underground_mine", tooltip: "Cliffside Mines" },
 
         // Region: Krythan Undergrounds
@@ -373,12 +392,16 @@ const mapMarkers = {
         /* Mainland Undergrounds */
 
         // Darkwoods Forest Region Undergrounds
+        { x: 1464, y: 2676, type: "underground_spider", tooltip: "Shadow Spider Cave" },
         { x: 838, y: 3270, type: "scorpion_pit", tooltip: "Scorpion Pit" },
         { x: 760, y: 3323, type: "termigon_mound", tooltip: "Termigon Pit" },
         { x: 800, y: 3336, type: "underground_mine", tooltip: "South Astari Rune Shelter" },
         { x: 474, y: 3432, type: "snake_pit", tooltip: "Whisperdale Snake Pit" },
         { x: 1272, y: 3032, type: "underground_ant", tooltip: "Dunmarrow Fire Ant Pit" },
         { x: 1431, y: 3046, type: "underground_crypt", tooltip: "McKelsky Crypt" },
+        { x: 483, y: 3507, type: "underground_dungeon", tooltip: "Marsh Dungeon" },
+        { x: 634, y: 3188, type: "underground_dungeon", tooltip: "Cathedral of Joyous Afterlife (North Entrance)" },
+        { x: 681, y: 3320, type: "underground_dungeon", tooltip: "Cathedral of Joyous Afterlife (South Entrance)" },
 
         // Highlands Region Undergrounds
         { x: 3562, y: 1928, type: "underground_closed", tooltip: "Astari Cave (CLOSED)" },
@@ -417,14 +440,17 @@ const mapMarkers = {
 
         // Sands of Creation Region
         // Ruhura Side Undergrounds
-        { x: 546, y: 3839, type: "underground_stairs", tooltip: "Elemental Cave" },
-        { x: 309, y: 3910, type: "underground_stairs", tooltip: "East Entrance to Greater Dragon Island" },
-        { x: 402, y: 3794, type: "underground_stairs", tooltip: "West Entrance to Ruhura Side" },
-        { x: 455, y: 3719, type: "underground_stairs", tooltip: "Elemental Cave" },
+        { x: 546, y: 3839, type: "underground_cave", tooltip: "Ruhura Elemental Cave" },
+        { x: 309, y: 3910, type: "underground_stairs", tooltip: "East Entrance to Ruhura Side" },
+        { x: 402, y: 3794, type: "underground_stairs", tooltip: "West Entrance to Greater Dragon Island" },
+        { x: 455, y: 3719, type: "underground_cave", tooltip: "Elemental Cave" },
         { x: 949, y: 4005, type: "underground_dungeon", tooltip: "Mukarramma Dungeon" },
 
+        // Greater Dragon Island Undergrounds
+        { x: 300, y: 3772, type: "underground_cave", tooltip: "Greater Dragon Island Cave" },
+
         // Khafra Side Undergrounds
-        { x: 78, y: 3354, type: "underground_stairs", tooltip: "Khafra Elemental Cave" },
+        { x: 78, y: 3354, type: "underground_cave", tooltip: "Khafra Elemental Cave" },
         
     ],
 
@@ -601,6 +627,10 @@ const markerStyles = {
     },
     underground_scorpion: {
         icon: "icons/scorpion.svg",
+        color: "#d36517ff", // SaddleBrown
+    },
+    underground_spider: {
+        icon: "icons/long-legged-spider.svg",
         color: "#d36517ff", // SaddleBrown
     },
     
