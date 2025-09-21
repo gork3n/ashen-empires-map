@@ -248,7 +248,7 @@ const mapLabels = {
         { x: 1369, y: 2737, name: "Warg Pen", fontSize: 16 },
         { x: 1489, y: 2481, name: "Gadros Ruins", fontSize: 16 },
         { x: 1463, y: 2710, name: "Shadow Forest", fontSize: 16 }, // Seemed like it needed a name, might have a different name Question
-        { x: 677, y: 3520, name: "Termigon Hive", fontSize: 16 },
+        { x: 677, y: 3520, name: "Termigon Mound", fontSize: 16 }, // Changed the name from Termigon Hive to Termigon Mound, seems more fitting. Question
 
         // Battle Plains Places of Interest
 

@@ -68,6 +68,8 @@ const mapMarkers = {
         
 
         // Battle Plains Portals
+        { x: 2264, y: 3706, type: "portal", tooltip: "Portal to Proudblood Valley" },
+        { x: 1964, y: 3652, type: "portal", tooltip: "Exit Proudblood Valley" },
 
         // Black Swamp Portals
         
@@ -176,6 +178,12 @@ const mapMarkers = {
         // Khafra Side Docks
         { x: 88, y: 2693, type: "dock", tooltip: "Khafra Fishing Outpost Dock" },
         { x: 212, y: 2753, type: "dock", tooltip: "Khafra Dock" },
+
+        // Breakwater Region Docks
+
+        // Broken Finger Region Docks
+        { x: 1148, y: 3771, type: "dock", tooltip: "Broken Finger Town Dock" },
+        { x: 1428, y: 3837, type: "dock", tooltip: "Broken Finger Island Dock" },
 
     ],
     
@@ -451,6 +459,11 @@ const mapMarkers = {
 
         // Khafra Side Undergrounds
         { x: 78, y: 3354, type: "underground_cave", tooltip: "Khafra Elemental Cave" },
+
+        // Breakwater Region Undergrounds
+
+        // Broken Finger Region Undergrounds
+        { x: 1144, y: 3658, type: "underground_dungeon", tooltip: "Broken Finger Dungeon" },
         
     ],
 
