@@ -362,7 +362,9 @@ const mapLabels = {
         { x: 1011, y: 3092, name: "Darkfell Marsh", fontSize: 16 },
 
         // Battle Plains Water Bodies
-        // There are many bodies of water in the Battle Plains, but none have specific names.
+        { x: 2272, y: 3770, name: "Proudblood Sound", fontSize: 20 },
+        { x: 2558, y: 3713, name: "Chlera Bay", fontSize: 30 },
+        // There are many bodies of water in the Battle Plains, but none have specific names. I'm going to add a few especially around whirlpool portals.
 
         // Black Swamp Region Water Bodies
         { x: 2787, y: 3682, name: "Vorda Swamp", fontSize: 20 },

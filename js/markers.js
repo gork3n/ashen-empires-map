@@ -109,11 +109,14 @@ const mapMarkers = {
 
         // Whirlpool Portals
         // Near Broken Finger 
-        { x: 1469, y: 3714, type: "portal_whirlpool", tooltip: "Whirlpool to Goba 1" }, // Need to get better name
-        { x: 1539, y: 3697, type: "portal_whirlpool", tooltip: "Whirlpool to Goba 1" }, // This is the one in Goba's Area 
-        { x: 1078, y: 3534, type: "portal_whirlpool", tooltip: "Whirlpool to Goba 2" }, // Need to get better name
+        { x: 1469, y: 3714, type: "portal_whirlpool", tooltip: "Whirlpool to Gulf of Goba" }, // Southeast Whirlpool Portal 
+        { x: 1539, y: 3697, type: "portal_whirlpool", tooltip: "Whirlpool to Broken Finger Lake" }, // Broken Finger Lake Whirlpool Portal
+        { x: 1078, y: 3534, type: "portal_whirlpool", tooltip: "Whirlpool to Proudblood Sound" }, // Southwest of Chlera
+        
 
         // Near Chlera
+        { x: 2311, y: 3724, type: "portal_whirlpool", tooltip: "Whirlpool to Gulf of Goba" }, // West of Gulf of Goba
+        { x: 2557, y: 3667, type: "portal_whirlpool", tooltip: "Whirlpool to Lotor's Prison" }, // East of Lotor's Prison
 
         // Near Test Island
 
@@ -459,6 +462,7 @@ const mapMarkers = {
         { x: 3336, y: 3596, type: "underground_stairs", tooltip: "Grell Tunnels" },
         { x: 2889, y: 2883, type: "underground_stairs", tooltip: "Badlands Cave" }, // I'm adding this to Highlands but it could be a part of Battle Plains
         { x: 2710, y: 2888, type: "underground_stairs", tooltip: "Badlands Entrance" },
+        { x: 3288, y: 3301, type: "underground_cave", tooltip: "Vel Dran Cave" }, 
 
         // Necropolis Undergrounds
         { x: 1363, y: 2889, type: "underground_stairs", tooltip: "Trap Door to Necropolis Magic and Farm Shops (They do not work)" },
@@ -474,10 +478,11 @@ const mapMarkers = {
         // Black Swamp Region Undergrounds
         { x: 2824, y: 3624, type: "underground_sewer", tooltip: "Krog Sewer" },
         { x: 3019, y: 3815, type: "underground_sewer", tooltip: "Krog Sewer" },
-        { x: 2793, y: 3834, type: "underground_sewer", tooltip: "Drakkan Crypt" },
+        { x: 2793, y: 3834, type: "underground_crypt", tooltip: "Drakkan Crypt" },
         { x: 3245, y: 3835, type: "underground_sewer", tooltip: "Waste Tunnels" },
         { x: 3096, y: 3866, type: "underground_ant", tooltip: "Ant Hill" },
         { x: 3131, y: 3661, type: "underground_scorpion", tooltip: "Scorpion" },
+        { x: 3080, y: 3517, type: "underground_dungeon", tooltip: "Valekar's Fortress Dungeon" },
 
         // Highlands Region Undergrounds
 
