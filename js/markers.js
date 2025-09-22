@@ -2,92 +2,91 @@
 const mapMarkers = {
     portals: [
         /* Party Island Portals */
-        { x: 440, y: 120, type: "portal", tooltip: "Portal to Lotor's Summer Palace" },
+        { x: 440, y: 120, type: "portal_lsp", tooltip: "Portal to Lotor's Summer Palace" },
         //Done
 
         /* Valinor Island Portals */
         
         // Valinor Region Portals
-        { x: 776, y: 100, type: "portal", tooltip: "Portal to Leave Valinor" },
-        { x: 776, y: 168, type: "portal", tooltip: "Portal to Arena Viewing Area" },
+        { x: 776, y: 100, type: "portal_lsp", tooltip: "Portal to Leave Valinor" },
+        { x: 776, y: 168, type: "portal_small", tooltip: "Portal to Arena Viewing Area" },
         //Done
 
 
         /* Lotor's Summer Palace Portals */
 
         // Lotor's Summer Palace Portals
-        { x: 762, y: 589, type: "portal", tooltip: "Portal to Party Island" },
-        { x: 763, y: 646, type: "portal", tooltip: "Portal to PvP Island" },
-        { x: 771, y: 615, type: "portal", tooltip: "Portal to Housing Realm" },
-        { x: 812, y: 624, type: "portal", tooltip: "Valmond Portal" },
-        { x: 822, y: 624, type: "portal", tooltip: "Krog Portal" },
-        { x: 832, y: 624, type: "portal", tooltip: "Khafra or Ruhura Portal" },
-        { x: 812, y: 644, type: "portal", tooltip: "Silvest Portal" },
-        { x: 822, y: 644, type: "portal", tooltip: "VIP Portal" },
-        { x: 832, y: 644, type: "portal", tooltip: "Whisperdale Portal" },
-        { x: 812, y: 634, type: "portal", tooltip: "Parian Portal" },
-        { x: 832, y: 634, type: "portal", tooltip: "Josody Portal" },
+        { x: 762, y: 589, type: "portal_small", tooltip: "Portal to Party Island" },
+        { x: 763, y: 646, type: "portal_small", tooltip: "Portal to PvP Island" },
+        { x: 771, y: 615, type: "portal_housing", tooltip: "Portal to Housing Realm" },
+        { x: 812, y: 624, type: "portal_lsp", tooltip: "Valmond Portal" },
+        { x: 822, y: 624, type: "portal_lsp", tooltip: "Krog Portal" },
+        { x: 832, y: 624, type: "portal_lsp", tooltip: "Khafra or Ruhura Portal" },
+        { x: 812, y: 644, type: "portal_lsp", tooltip: "Silvest Portal" },
+        { x: 822, y: 644, type: "portal_lsp", tooltip: "VIP Portal" },
+        { x: 832, y: 644, type: "portal_lsp", tooltip: "Whisperdale Portal" },
+        { x: 812, y: 634, type: "portal_lsp", tooltip: "Parian Portal" },
+        { x: 832, y: 634, type: "portal_lsp", tooltip: "Josody Portal" },
         //Done
 
 
         // Real Estate Island Portals
-        { x: 663, y: 735, type: "portal", tooltip: "Portal to Lotor's Summer Palace" },
+        { x: 663, y: 735, type: "portal_lsp", tooltip: "Portal to Lotor's Summer Palace" },
 
 
         /* Minotaur Island Portals */
-        { x: 137, y: 248, type: "portal", tooltip: "Portal to Highlands" },
+        { x: 137, y: 248, type: "portal_blue", tooltip: "Portal to Highlands" },
 
 
         /* Scorched Island Portals */
-        { x: 631, y: 2102, type: "portal", tooltip: "Portal to Battle Plains" },
-        { x: 720, y: 1964, type: "portal", tooltip: "Portal to Hell" },
+        { x: 631, y: 2102, type: "portal_blue", tooltip: "Portal to Battle Plains" },
+        { x: 720, y: 1964, type: "portal_blue", tooltip: "Portal to Hell" },
 
         
         /* Krythan Island Portals */
 
         // Krythan Region Portals        
-        { x: 585, y: 1497, type: "portal", tooltip: "Portal to East Mainlands West of Parian" },
-        { x: 185, y: 1466, type: "portal", tooltip: "Portal to Northeastern Mainlands North of Josody" },
-        { x: 473, y: 1896, type: "portal", tooltip: "Portal to Hell" },
-        { x: 713, y: 1753, type: "portal", tooltip: "Portal to Scarab Island" },
+        { x: 585, y: 1497, type: "portal_blue", tooltip: "Portal to Highlands West of Parian" },
+        { x: 185, y: 1466, type: "portal_blue", tooltip: "Portal to Darkwoods North of Josody" },
+        { x: 473, y: 1896, type: "portal_small", tooltip: "Portal to Hell" },
+        { x: 713, y: 1753, type: "portal_small", tooltip: "Portal to Scarab Island" },
 
         // Silvest Valley Region Portals
-        
-        
 
         /* Mainland Portals */
 
         // Darkwoods Forest Portals
-        { x: 1352, y: 2440, type: "portal", tooltip: "Portal to Krythan Island (West of New Korelth)" },
-        { x: 1272, y: 2513, type: "portal", tooltip: "Portal to House Realm" },
-        { x: 1255, y: 2519, type: "portal", tooltip: "Portal to Lotor's Summer Palace" },
-        { x: 809, y: 2839, type: "portal", tooltip: "Portal to Highlands (Southeast of Parian)" },
-        { x: 868, y: 3418, type: "portal", tooltip: "Portal to Mnemmon" },
-        { x: 910, y: 3260, type: "portal", tooltip: "Portal to Mnemmon Gaol" },
-        { x: 473, y: 3481, type: "portal", tooltip: "Portal to Lotor's Summer Palace" },
+        { x: 1352, y: 2440, type: "portal_blue", tooltip: "Portal to Krythan Island (West of New Korelth)" },
+        { x: 1272, y: 2513, type: "portal_housing", tooltip: "Portal to House Realm" },
+        { x: 1255, y: 2519, type: "portal_lsp", tooltip: "Portal to Lotor's Summer Palace" },
+        { x: 809, y: 2839, type: "portal_blue", tooltip: "Portal to Highlands (Southeast of Parian)" },
+        { x: 868, y: 3418, type: "portal_small", tooltip: "Portal to Mnemmon" },
+        { x: 910, y: 3260, type: "portal_small", tooltip: "Portal to Mnemmon Gaol" },
+        { x: 473, y: 3481, type: "portal_lsp", tooltip: "Portal to Lotor's Summer Palace" },
         
 
         // Battle Plains Portals
-        { x: 2264, y: 3706, type: "portal", tooltip: "Portal to Proudblood Valley" },
-        { x: 1964, y: 3652, type: "portal", tooltip: "Exit Proudblood Valley" },
+        { x: 2264, y: 3706, type: "portal_lsp", tooltip: "Portal to Proudblood Valley" },
+        { x: 1964, y: 3652, type: "portal_small", tooltip: "Exit Proudblood Valley" },
 
         // Black Swamp Portals
         
         // Highlands Portals
-        { x: 3416, y: 2919, type: "portal", tooltip: "Portal to Lotor's Summer Palace" },
-        { x: 3336, y: 2809, type: "portal", tooltip: "Portal to Southern Highlands" },
-        { x: 3082, y: 3549, type: "portal", tooltip: "Portal to Highlands (North of Parian)" },
-        { x: 3769, y: 3240, type: "portal", tooltip: "Portal to Darkwoods Forest (East of Redwake)" },
+        { x: 3416, y: 2919, type: "portal_lsp", tooltip: "Portal to Lotor's Summer Palace" },
+        { x: 3336, y: 2809, type: "portal_small", tooltip: "Portal to Southern Highlands (Northeast of Grell)" },
+        { x: 3082, y: 3549, type: "portal_small", tooltip: "Portal to Highlands (North of Parian)" },
+        { x: 3769, y: 3240, type: "portal_blue", tooltip: "Portal to Darkwoods Forest (East of Redwake)" },
 
         // Western Isles Portals
 
         // Hell Portals
-        { x: 1052, y: 3289, type: "portal", tooltip: "Portal to Scorched Island" },
-        { x: 1178, y: 3290, type: "portal", tooltip: "Portal to Krythan Island" },
+        { x: 1052, y: 3289, type: "portal_small", tooltip: "Portal to Scorched Island" },
+        { x: 1178, y: 3290, type: "portal_small", tooltip: "Portal to Krythan Island" },
 
         // Valley of Giants Portals
 
         // Heartwood Coast Portals
+        { x: 2789, y: 2136, type: "portal_lsp", tooltip: "Portal to Lotor's Summer Palace" },
 
         // Tundria Portals
 
@@ -97,18 +96,38 @@ const mapMarkers = {
 
         // Broken Finger
 
-        
-
         /* Sands of Creation Portals */
         // Ruhura Side Portals
-        { x: 471, y: 4038, type: "portal", tooltip: "Portal to Lotor's Summer Palace" },
-        { x: 113, y: 3477, type: "portal", tooltip: "Portal to Dragon Lair (Blue Dragons)" },
+        { x: 471, y: 4038, type: "portal_lsp", tooltip: "Portal to Lotor's Summer Palace" },
+        { x: 113, y: 3477, type: "portal_blue", tooltip: "Portal to Dragon Lair (Blue Dragons)" },
 
         // Khafra Side Portals
         
-        { x: 201, y: 2857, type: "portal", tooltip: "Portal to Lotor's Summer Palace" },
-        { x: 26, y: 3414, type: "portal", tooltip: "Portal to Artonian Island" },
-        { x: 216, y: 3386, type: "portal", tooltip: "Portal to Khafra Side" },
+        { x: 201, y: 2857, type: "portal_lsp", tooltip: "Portal to Lotor's Summer Palace" },
+        { x: 26, y: 3414, type: "portal_lsp", tooltip: "Portal to Artonian Island" }, // Portals with similar look to lsp portal use the same icon
+        { x: 216, y: 3386, type: "portal_lsp", tooltip: "Portal to Khafra Side" }, // Portals with similar look to lsp portal use the same icon
+
+        // Whirlpool Portals
+        // Near Broken Finger 
+        { x: 1469, y: 3714, type: "portal_whirlpool", tooltip: "Whirlpool to Goba 1" }, // Need to get better name
+        { x: 1539, y: 3697, type: "portal_whirlpool", tooltip: "Whirlpool to Goba 1" }, // This is the one in Goba's Area 
+        { x: 1078, y: 3534, type: "portal_whirlpool", tooltip: "Whirlpool to Goba 2" }, // Need to get better name
+
+        // Near Chlera
+
+        // Near Test Island
+
+        // Near PVP Island
+
+        // Near Scarab Island
+
+        // Near Silvest Valley
+
+        // Near Guild Arena Island
+
+        // Near Lotor's Prison
+
+        // Near Duremar
  
     ],
     
@@ -151,17 +170,34 @@ const mapMarkers = {
 
         // Battle Plains Docks
         { x: 2011, y: 2634, type: "dock", tooltip: "Wandering Spirit Dock" }, // This is above Shadow Temple Entrance I'm not sure what the ruins are called Question
+        { x: 2489, y: 3642, type: "dock", tooltip: "Chlera Dock" },
+        { x: 2600, y: 3508, type: "dock", tooltip: "Battle Plains Dock" },
+        { x: 3110, y: 4021, type: "dock", tooltip: "Maraket Dock" },
         
+        // Black Swamp Docks
+        { x: 2613, y: 3512, type: "dock", tooltip: "Samad Dock" },
 
         // Highlands Docks
+        { x: 3598, y: 3706, type: "dock", tooltip: "Ethera Palace Dock" },
+        { x: 3614, y: 3646, type: "dock", tooltip: "Ethera Mining Company Dock" },
+        { x: 3689, y: 3159, type: "dock", tooltip: "Highlands East Dock - East of Parian" },
+        { x: 3862, y: 2582, type: "dock", tooltip: "Glamara McPlum's Dock" },
+        { x: 3542, y: 1583, type: "dock", tooltip: "North Highlands Dock" },
 
         // Western Isles Docks
 
         // Valley of Giants Docks
 
         // Heartwood Coast Docks
+        { x: 3514, y: 1571, type: "dock", tooltip: "Heartwood North Dock (Northeast of Syldural)" },
 
         // Tundria Docks
+        { x: 3727, y: 954, type: "dock", tooltip: "Duremar Dock" },
+        { x: 3622, y: 1332, type: "dock", tooltip: "Southeast Tundria Dock" },
+        { x: 2031, y: 1049, type: "dock", tooltip: "Bridge Dock" },
+        { x: 2031, y: 1241, type: "dock", tooltip: "Maroven North Dock" },
+        { x: 1978, y: 1267, type: "dock", tooltip: "Maroven Dock" },
+        { x: 1989, y: 1267, type: "dock", tooltip: "Maroven Dock" },
 
         // Scarab Island Docks
 
@@ -372,6 +408,10 @@ const mapMarkers = {
         // Region Western Isles
         { x: 2109, y: 2734, type: "obelisk", tooltip: "Desprail Island Obelisk" },
         { x: 1033, y: 3483, type: "obelisk", tooltip: "Hell Rune Spire" },
+
+
+        // Tundria Region
+        { x: 2960, y: 990, type: "obelisk", tooltip: "Hammerfist Obelisk" },
     ],
 
     undergrounds: [
@@ -401,6 +441,8 @@ const mapMarkers = {
 
         // Darkwoods Forest Region Undergrounds
         { x: 1464, y: 2676, type: "underground_spider", tooltip: "Shadow Spider Cave" },
+        { x: 1655, y: 2679, type: "underground_cave", tooltip: "Swamp Beast Cave" },
+        { x: 1573, y: 2658, type: "underground_cave", tooltip: "Swamp Beast Cave" },
         { x: 838, y: 3270, type: "scorpion_pit", tooltip: "Scorpion Pit" },
         { x: 760, y: 3323, type: "termigon_mound", tooltip: "Termigon Pit" },
         { x: 800, y: 3336, type: "underground_mine", tooltip: "South Astari Rune Shelter" },
@@ -413,6 +455,7 @@ const mapMarkers = {
 
         // Highlands Region Undergrounds
         { x: 3562, y: 1928, type: "underground_closed", tooltip: "Astari Cave (CLOSED)" },
+        { x: 3240, y: 3607, type: "underground_cave", tooltip: "Grell" },
         { x: 3336, y: 3596, type: "underground_stairs", tooltip: "Grell Tunnels" },
 
         // Necropolis Undergrounds
@@ -421,7 +464,10 @@ const mapMarkers = {
 
         // Battle Plains Region Undergrounds
         { x: 2330, y: 3620, type: "underground_stairs", tooltip: "Chlera Catacombs" },
-        { x: 2137, y: 3156, type: "underground_stairs", tooltip: "Desprail Cave" },
+        { x: 2137, y: 3156, type: "underground_cave", tooltip: "Desprail Cave" },
+        { x: 2291, y: 2780, type: "underground_cave", tooltip: "Badlands Cave" },
+        { x: 2010, y: 2676, type: "underground_dungeon", tooltip: "Deep Shadow Temple" },
+        { x: 3273, y: 3991, type: "snake_pit", tooltip: "Krog Snake Pit" },
 
         // Black Swamp Region Undergrounds
         { x: 2824, y: 3624, type: "underground_sewer", tooltip: "Krog Sewer" },
@@ -440,6 +486,14 @@ const mapMarkers = {
         // Heartwood Coast Undergrounds
 
         // Tundria Region Undergrounds
+        { x: 2306, y: 1369, type: "underground_cave", tooltip: "Zule Cavern Entrance" },
+        { x: 2042, y: 1394, type: "underground_crypt", tooltip: "Maroven Crypt" },
+        { x: 1992, y: 1210, type: "underground_crypt", tooltip: "Maroven Crypt" },
+        { x: 2777, y: 595, type: "underground_dungeon", tooltip: "Hammerfist Mine Entrance" },
+        { x: 2874, y: 965, type: "underground_cave", tooltip: "Web Spinner Spider Cave" },
+        { x: 3526, y: 1265, type: "underground_crypt", tooltip: "Duremar Tomb" },
+        { x: 2552, y: 440, type: "underground_dungeon", tooltip: "Frieda's Dungeon" },
+        { x: 2888, y: 423, type: "underground_dungeon", tooltip: "Artraxis Dungeon" },
 
         // Hell Undergrounds
         { x: 1209, y: 3349, type: "underground_dungeon", tooltip: "Lotorian Dungeon" },
@@ -464,6 +518,8 @@ const mapMarkers = {
 
         // Broken Finger Region Undergrounds
         { x: 1144, y: 3658, type: "underground_dungeon", tooltip: "Broken Finger Dungeon" },
+        { x: 1292, y: 3714, type: "underground_stairs", tooltip: "Trap Door to Gulley Portal " },
+        { x: 1212, y: 3557, type: "underground_stairs", tooltip: "Entrance to Horned Ones Cave" },
         
     ],
 
@@ -523,6 +579,30 @@ const markerStyles = {
     portal: {
         icon: "icons/portal.svg",
         color: "#FFD700", // Gold
+    },
+    portal_lsp: {
+        icon: "icons/lsp-portal.svg",
+        color: "#FFD700", // Gold - Same as main portal for now
+    },
+    portal_blue: {
+        icon: "icons/blue-portal.svg", // Using dungeon gate for blue instance portals
+        color: "#00BFFF", // DeepSkyBlue
+    },
+    portal_small: {
+        icon: "icons/small-blue.svg", // Using crystal for small, magical portals
+        color: "#DA70D6", // Orchid
+    },
+    portal_housing: {
+        icon: "icons/bank.svg", // Placeholder, a house icon would be better
+        color: "#32CD32", // LimeGreen
+    },
+    portal_ancient: {
+        icon: "icons/anicent-portal.svg", // Using rune spire for ancient stone portals
+        color: "#A9A9A9", // DarkGray
+    },
+    portal_whirlpool: {
+        icon: "icons/whirlwind.svg", // Using vortex for whirlpool portals
+        color: "#4682B4", // SteelBlue
     },
     dock: {
         icon: "icons/anchor.svg",

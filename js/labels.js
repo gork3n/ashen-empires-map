@@ -149,8 +149,9 @@ const mapLabels = {
         { x: 3893, y: 1688, name: "PvP Island", fontSize: 30 },
         { x: 248, y: 3376, name: "Artonian Island", fontSize: 20 }, // Might be called something else
         { x: 3153, y: 3192, name: "Vel Dran", fontSize: 24 },
+        { x: 1823, y: 3055, name: "Chaos Island", fontSize: 24 },
 
-        // Sands of Creation Islands are consider Western Isles but do not have a specific name
+        // Sands of Creation Islands are basically the names of the cities in them.
         
     ],
     
@@ -283,6 +284,18 @@ const mapLabels = {
         
 
         // Tundria Places of Interest
+        { x: 2945, y: 1224, name: "Orc Raider Camp", fontSize: 16 },
+        { x: 2616, y: 1249, name: "Elsinea Manor", fontSize: 16 },
+        { x: 2575, y: 1129, name: "Frost Troll Coast", fontSize: 16 },
+        { x: 3400, y: 819, name: "Trapper Grayth's Dwelling", fontSize: 16 },
+        { x: 3608, y: 1039, name: "Infiltrator Camp", fontSize: 16 },
+        { x: 3239, y: 755, name: "Altargrade", fontSize: 16 },
+        { x: 3111, y: 861, name: "Orc Raider Fort", fontSize: 16 },
+        { x: 2777, y: 595, name: "Hammerfist Mine", fontSize: 16 },
+        { x: 2563, y: 929, name: "Stormholde", fontSize: 16 },
+        { x: 2543, y: 414, name: "Ruins of Osgarl", fontSize: 16 },
+        { x: 2879, y: 413, name: "Castle of Artraxis", fontSize: 16 },
+        
 
         // Breakwater Places of Interest
 
@@ -338,13 +351,17 @@ const mapLabels = {
         { x: 1015, y: 2869, name: "Cairn Lake", fontSize: 16 },
         { x: 778, y: 2988, name: "Lake Mraya", fontSize: 16 },
         { x: 1129, y: 2676, name: "Josody Swamp", fontSize: 18 },
+        { x: 1640, y: 2600, name: "Greenteeth Swamp", fontSize: 16 }, // Not sure about the name, just thought it needed a name Question
+        { x: 1011, y: 3092, name: "Darkfell Marsh", fontSize: 16 },
 
         // Battle Plains Water Bodies
+        // There are many bodies of water in the Battle Plains, but none have specific names.
 
         // Black Swamp Region Water Bodies
         { x: 2787, y: 3682, name: "Vorda Swamp", fontSize: 20 },
         { x: 2830, y: 3509, name: "Canis Lake", fontSize: 15 },
         { x: 2919, y: 3650, name: "Lake Dresta", fontSize: 15 },
+        { x: 3399, y: 3924, name: "Key Marsh", fontSize: 20 },
 
 
         // Highlands Region Water Bodies
@@ -369,6 +386,7 @@ const mapLabels = {
         // Western Isles Water Bodies
 
         // Broken Finger Water Bodies
+        { x: 1354, y: 3513, name: "Gulf of Goba", fontSize: 25 },
 
         // Sands of Creation Water Bodies
         // Ruhura Side Water Bodies

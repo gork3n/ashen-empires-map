@@ -285,7 +285,7 @@ function initializeMap() {
     // --- Set Initial Map View ---
     // Define the center of the map using in-game (4096x4096) coordinates.
     // This makes it easy to change the starting location.
-    const initialCenterGameCoords = { x: 2403, y: 3485, }; // Example: Valinor City
+    const initialCenterGameCoords = { x: 3007, y: 1389, }; // Example: Valinor City
 
     // Convert the in-game coordinates to OpenLayers view coordinates.
     // The map is 16384x16384, which is 4x the in-game coordinates.
@@ -323,7 +323,7 @@ function initializeMap() {
         view: new ol.View({
             center: initialCenterOlCoords,
             resolution: 2,
-            minResolution: 0.5,
+            minResolution: 0.1,
             maxResolution: 64,
             constrainOnlyCenter: true,  // Constrain just the center, not the whole view
             showFullExtent: true
