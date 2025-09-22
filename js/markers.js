@@ -109,14 +109,14 @@ const mapMarkers = {
 
         // Whirlpool Portals
         // Near Broken Finger 
-        { x: 1469, y: 3714, type: "portal_whirlpool", tooltip: "Whirlpool to Gulf of Goba" }, // Southeast Whirlpool Portal 
-        { x: 1539, y: 3697, type: "portal_whirlpool", tooltip: "Whirlpool to Broken Finger Lake" }, // Broken Finger Lake Whirlpool Portal
-        { x: 1078, y: 3534, type: "portal_whirlpool", tooltip: "Whirlpool to Proudblood Sound" }, // Southwest of Chlera
+        { x: 1469, y: 3714, type: "portal_whirlpool", tooltip: "Whirlpool to Goba Lake" }, // Lake name may change - in Broken Bay
+        { x: 1539, y: 3697, type: "portal_whirlpool", tooltip: "Whirlpool to Broken Bay" }, // in Goba Lake
+        { x: 1078, y: 3534, type: "portal_whirlpool", tooltip: "Whirlpool to Proudblood Sound" }, // Not sure about the name - in Goba Lake
         
 
         // Near Chlera
-        { x: 2311, y: 3724, type: "portal_whirlpool", tooltip: "Whirlpool to Gulf of Goba" }, // West of Gulf of Goba
-        { x: 2557, y: 3667, type: "portal_whirlpool", tooltip: "Whirlpool to Lotor's Prison" }, // East of Lotor's Prison
+        { x: 2311, y: 3724, type: "portal_whirlpool", tooltip: "Whirlpool to Goba Lake" }, // Lake name may change - in Proudblood Sound
+        { x: 2557, y: 3667, type: "portal_whirlpool", tooltip: "Whirlpool to Lotor's Prison" }, // in Chlera Bay name of Chlera Bay may change
 
         // Near Test Island
 

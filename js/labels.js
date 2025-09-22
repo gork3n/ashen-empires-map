@@ -395,7 +395,7 @@ const mapLabels = {
         // Western Isles Water Bodies
 
         // Broken Finger Water Bodies
-        { x: 1354, y: 3513, name: "Gulf of Goba", fontSize: 25 },
+        { x: 1354, y: 3513, name: "Goba Lake?", fontSize: 25 },
 
         // Sands of Creation Water Bodies
         // Ruhura Side Water Bodies
