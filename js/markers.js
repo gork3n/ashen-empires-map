@@ -457,6 +457,8 @@ const mapMarkers = {
         { x: 3562, y: 1928, type: "underground_closed", tooltip: "Astari Cave (CLOSED)" },
         { x: 3240, y: 3607, type: "underground_cave", tooltip: "Grell" },
         { x: 3336, y: 3596, type: "underground_stairs", tooltip: "Grell Tunnels" },
+        { x: 2889, y: 2883, type: "underground_stairs", tooltip: "Badlands Cave" }, // I'm adding this to Highlands but it could be a part of Battle Plains
+        { x: 2710, y: 2888, type: "underground_stairs", tooltip: "Badlands Entrance" },
 
         // Necropolis Undergrounds
         { x: 1363, y: 2889, type: "underground_stairs", tooltip: "Trap Door to Necropolis Magic and Farm Shops (They do not work)" },
@@ -484,6 +486,9 @@ const mapMarkers = {
         // Valley of Giants Undergrounds
 
         // Heartwood Coast Undergrounds
+        { x: 3080, y: 1608, type: "underground_crypt", tooltip: "Gnobol Mauseleum Crypt" },
+        { x: 3274, y: 1634, type: "underground_cave", tooltip: "Syldural" },
+        { x: 3193, y: 1882, type: "snake_pit", tooltip: "Valmond Skeleton Pit" },
 
         // Tundria Region Undergrounds
         { x: 2306, y: 1369, type: "underground_cave", tooltip: "Zule Cavern Entrance" },

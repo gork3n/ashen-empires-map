@@ -281,6 +281,13 @@ const mapLabels = {
         // Valley of Giants Places of Interest
 
         // Heartwood Coast Places of Interest
+        { x: 2472, y: 1506, name: "Infiltrator Camp", fontSize: 16 },
+        { x: 3096, y: 1475, name: "Gnobol Manor", fontSize: 16 },
+        { x: 3096, y: 1569, name: "Gnobol Mauseleum", fontSize: 16 },
+        { x: 2939, y: 1845, name: "Hunter's Lodge", fontSize: 16 },
+        { x: 2919, y: 2257, name: "Talazarian Fort", fontSize: 16 },
+        { x: 2759, y: 2397, name: "Temple of Kuthos", fontSize: 16 },
+
         
 
         // Tundria Places of Interest
