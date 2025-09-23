@@ -5,7 +5,7 @@ let markerLayers = {};
 let markerTooltipElement;
 let markerTooltipOverlay;
 const styleCache = {};
-const customMarkerImages = {};
+const customMarkerCanvases = {};
 
 // Define custom styles for different label categories
 const labelStyles = {
@@ -242,7 +242,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 /**
  * Preloads SVG icons and tints them with their specified color.
- * The tinted versions are stored as data URLs in `customMarkerImages`.
+ * The tinted versions are stored as canvas elements in `customMarkerCanvases`.
  * @returns {Promise} A promise that resolves when all icons are processed.
  */
 function preloadAndTintIcons() {
@@ -254,16 +254,17 @@ function preloadAndTintIcons() {
                 const canvas = document.createElement('canvas');
                 canvas.width = img.width;
                 canvas.height = img.height;
-                const ctx = canvas.getContext('2d', { willReadFrequently: true });
+                const ctx = canvas.getContext('2d', { willReadFrequently: true }); // Add hint for performance
                 ctx.drawImage(img, 0, 0);
                 ctx.globalCompositeOperation = 'source-in';
                 ctx.fillStyle = styleProps.color;
                 ctx.fillRect(0, 0, canvas.width, canvas.height);
-                customMarkerImages[type] = canvas.toDataURL();
+                customMarkerCanvases[type] = canvas;
                 resolve();
             };
             img.onerror = function() {
-                console.error(`Failed to load icon for tinting: ${styleProps.icon}. Using original.`);
+                console.error(`Failed to load icon for tinting: ${styleProps.icon}.`);
+                customMarkerCanvases[type] = null; // Mark as failed
                 resolve();
             };
             img.src = styleProps.icon;
@@ -285,7 +286,7 @@ function initializeMap() {
     // --- Set Initial Map View ---
     // Define the center of the map using in-game (4096x4096) coordinates.
     // This makes it easy to change the starting location.
-    const initialCenterGameCoords = { x: 2437, y: 1942, }; // Example: Valinor City
+    const initialCenterGameCoords = { x: 742, y: 706, }; // Default View is x: 742, y: 706 (Showing Lotor's Summer Palace)
 
     // Convert the in-game coordinates to OpenLayers view coordinates.
     // The map is 16384x16384, which is 4x the in-game coordinates.
@@ -650,15 +651,29 @@ function createMarkerStyle(markerType) {
     });
 
     // --- 2. Create the foreground icon style ---
+    const foregroundIconCanvas = customMarkerCanvases[markerType];
+
+    const iconOptions = {
+        // Set the scale for the icon. A larger value makes the icon bigger.
+        scale: 0.12,
+        // No displacement is needed as there is no shadow.
+        displacement: [0, 0],
+    };
+
+    if (foregroundIconCanvas) {
+        // If we have a pre-rendered canvas, use it directly via the `img` property.
+        // This prevents OpenLayers from creating its own internal canvas for hit detection,
+        // which is what causes the `willReadFrequently` console warning.
+        iconOptions.img = foregroundIconCanvas;
+        // When providing a canvas via `img`, we must also provide its size.
+        iconOptions.imgSize = [foregroundIconCanvas.width, foregroundIconCanvas.height];
+    } else {
+        // Fallback to the original icon path if pre-rendering failed.
+        iconOptions.src = styleProps.icon;
+    }
+
     const foregroundStyle = new ol.style.Style({
-        image: new ol.style.Icon({
-            // Use the pre-tinted data URL. Fallback to original if tinting failed.
-            src: customMarkerImages[markerType] || styleProps.icon,
-            // Set the scale for the icon. A larger value makes the icon bigger.
-            scale: 0.12,
-            // No displacement is needed as there is no shadow.
-            displacement: [0, 0],
-        })
+        image: new ol.style.Icon(iconOptions)
     });
     
     // --- 3. Combine and cache ---

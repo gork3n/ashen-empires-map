@@ -658,7 +658,7 @@ const markerStyles = {
         color: "#32CD32", // LimeGreen
     },
     portal_ancient: {
-        icon: "icons/anicent-portal.svg", // Using rune spire for ancient stone portals
+        icon: "icons/ancient-portal.svg", // Using rune spire for ancient stone portals
         color: "#A9A9A9", // DarkGray
     },
     portal_whirlpool: {

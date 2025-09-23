@@ -13,9 +13,6 @@ html, body {
 }
 
 #container {
-    position: absolute;
-    top: 0;
-    left: 0;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -44,6 +41,8 @@ html, body {
     color: white !important;
     font-family: 'Alegreya Sans', sans-serif !important;
     font-weight: 400;
+    /* Move attribution above the fixed footer */
+    bottom: calc(32px + 0.5em);
 }
 
 .ol-attribution a {
@@ -54,8 +53,8 @@ html, body {
 .ol-zoom {
     top: auto;
     left: auto;
-    bottom: 4.5em; /* Position above the quick tips bar */
-    right: 1em;
+    bottom: 6.5em; /* Positioned higher to avoid overlapping zoom controls */
+    right: 2em;
 }
 
 .ol-zoom button {
@@ -71,18 +70,16 @@ html, body {
     position: fixed;
     top: 0;
     left: 0;
+    width: 100%;
     height: 100%;
-    width: 250px;
     background-color: rgba(0, 0, 0, 0.75);
     color: white;
-    transition: all 0.5s ease;
     z-index: 1000;
     overflow-x: hidden;
-    border-right: 1px solid #444;
-}
-
-.sidebar.collapsed {
-    width: 60px;
+    /* New styles for slide-up menu */
+    transform: translateY(100%);
+    transition: transform 0.4s ease-in-out;
+    border-right: none;
 }
 
 .sidebar-header {
@@ -99,6 +96,11 @@ html, body {
     font-weight: 700;
     margin: 0;
     white-space: nowrap;
+}
+
+/* When the menu is open, bring it into view */
+.sidebar.open {
+    transform: translateY(0);
 }
 
 .sidebar-toggle {
@@ -143,27 +145,12 @@ html, body {
     user-select: none;
 }
 
-.sidebar.collapsed .sidebar-content,
-.sidebar.collapsed .sidebar-title,
-.sidebar.collapsed .sidebar-icons {
-    display: none;
-}
-
-.sidebar.collapsed .sidebar-toggle {
-    transform: rotate(180deg);
-}
-
-/* Icon mode for collapsed sidebar */
 .sidebar-icons {
     display: none;
     flex-direction: column;
     align-items: center;
     padding-top: 15px;
 }
-
-/* .sidebar.collapsed .sidebar-icons {
-    display: flex;
-} */
 
 .sidebar-icon {
     width: 30px;
@@ -358,6 +345,16 @@ input:checked + .slider:before {
     transition: all 0.2s ease;
 }
 
+/* Style the master toggle buttons to span the width of the 3-column grid below them */
+#show-all-labels,
+#show-all-markers,
+#show-all-monsters {
+    width: 330px; /* 3 * 100px columns + 2 * 15px gaps */
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center; /* Center the icon and text inside */
+}
+
 .toggle-btn.active {
     border-left-color: #F5D76E;
     color: white;
@@ -378,6 +375,58 @@ input:checked + .slider:before {
     text-align: center;
 }
 
+/* --- Masonry Grid Layout for Toggles --- */
+#label-toggles,
+#marker-toggles,
+#monster-toggles {
+    display: grid;
+    /* Define 3 columns with a width that fits the content well. */
+    grid-template-columns: repeat(3, 100px);
+    /* Center the grid columns horizontally within the container. */
+    justify-content: center;
+    /* Add a bit more gap for better visual separation. */
+    gap: 15px;
+    /* Add some padding to separate from the 'Show All' button above. */
+    padding-top: 10px;
+}
+
+/* Scoped styles for the icon buttons inside the masonry grid */
+#label-toggles .toggle-btn,
+#marker-toggles .toggle-btn,
+#monster-toggles .toggle-btn {
+    flex-direction: column;
+    height: 90px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 5px;
+    border-left-width: 0;
+    border-bottom: 3px solid transparent;
+    text-align: center;
+}
+#label-toggles .toggle-btn.active,
+#marker-toggles .toggle-btn.active,
+#monster-toggles .toggle-btn.active {
+    border-left-color: transparent;
+    border-bottom-color: #F5D76E;
+}
+#label-toggles .toggle-btn .material-symbols-outlined,
+#marker-toggles .toggle-btn .material-symbols-outlined,
+#monster-toggles .toggle-btn .material-symbols-outlined,
+#label-toggles .toggle-btn .toggle-btn-icon-img,
+#marker-toggles .toggle-btn .toggle-btn-icon-img,
+#monster-toggles .toggle-btn .toggle-btn-icon-img {
+    margin: 0 0 5px 0;
+    font-size: 28px;
+    width: 28px; height: 28px;
+}
+#label-toggles .toggle-btn span:not(.material-symbols-outlined),
+#marker-toggles .toggle-btn span:not(.material-symbols-outlined),
+#monster-toggles .toggle-btn span:not(.material-symbols-outlined) {
+    font-size: 12px;
+    white-space: normal;
+    line-height: 1.2;
+    max-width: 100%;
+}
 /* Styles for custom SVG icons in marker toggle buttons */
 .toggle-btn-icon-img {
     margin-right: 8px;
@@ -389,12 +438,8 @@ input:checked + .slider:before {
 /* Target only the text span, not the icon span */
 .toggle-btn span:not(.material-symbols-outlined) {
     flex: 1; /* Allow text to take up remaining space */
-    white-space: nowrap; /* Prevent text from wrapping */
     overflow: hidden; /* Hide text that overflows */
     opacity: 1; /* Visible by default */
-    max-width: 200px; /* Set a max-width for the transition */
-    /* Animate opacity with a delay to appear after the sidebar opens */
-    transition: opacity 0.3s ease 0.3s, max-width 0.3s ease 0.2s;
 }
 
 /* Default settings for Google Material Symbols */
@@ -572,7 +617,7 @@ input:checked + .slider:before {
 .info-flyout {
     position: fixed;
     bottom: 32px; /* Position above the footer */
-    left: 250px; /* Aligned with sidebar */
+    left: 0;
     right: 0;
     height: 50vh;
     background-color: rgba(0, 0, 0, 0.85);
@@ -580,14 +625,10 @@ input:checked + .slider:before {
     color: white;
     z-index: 1500; /* Above map, below modals */
     transform: translateY(calc(100% + 32px)); /* Start hidden below the viewport */
-    transition: transform 0.4s ease-in-out, left 0.5s ease, height 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out, height 0.4s ease-in-out;
     display: flex;
     flex-direction: column;
     box-shadow: 0 -3px 15px rgba(0,0,0,0.5);
-}
-
-#container.sidebar-collapsed .info-flyout {
-    left: 60px; /* Adjust for collapsed sidebar */
 }
 
 .info-flyout.visible {
@@ -654,104 +695,39 @@ input:checked + .slider:before {
     display: none;
 }
 
-/* --- Collapsed Sidebar Icon-Only Mode --- */
-/* This mode applies whenever the sidebar is collapsed, on any screen size. */
-
-/* Show the main content area (where toggles live) in the collapsed sidebar */
-.sidebar.collapsed .sidebar-content {
+/* --- Mobile Filters Button --- */
+.mobile-filters-btn {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px; /* Creates consistent spacing between sections */
-    padding: 8px 0 250px; /* Add significant padding at the bottom */
-    /* Hide scrollbar but allow scrolling */
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-}
-
-/* Hide scrollbar for Webkit browsers (Chrome, Safari) */
-.sidebar.collapsed .sidebar-content::-webkit-scrollbar {
-    display: none;
-}
-
-/* Hide section titles and 'Coming Soon' text */
-.sidebar.collapsed .sidebar-section h3,
-.sidebar.collapsed .sidebar-section .coming-soon {
-    display: none;
-}
-
-/* Make the section a vertical flex container for all buttons */
-.sidebar.collapsed .sidebar-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 0; /* Use gap from parent container for inter-section spacing */
-    gap: 8px; /* Space between all icons */
-    width: 80%; /* Make the section wide enough for a visible border */
-}
-
-/* Add a separator line between sections in collapsed mode */
-.sidebar.collapsed .sidebar-section:not(:last-of-type) {
-    border-bottom: 1px solid #444;
-    padding-bottom: 8px; /* Match the gap for consistent spacing */
-}
-
-/* In collapsed mode, make the toggle containers transparent to the flex layout,
-   so all buttons inside are treated as direct children of .sidebar-section. */
-.sidebar.collapsed #label-toggles,
-.sidebar.collapsed #marker-toggles,
-.sidebar.collapsed #monster-toggles {
-    display: contents;
-}
-
-/* Style the icon-only buttons */
-.sidebar.collapsed .toggle-btn {
-    width: 44px;
-    height: 44px;
-    padding: 0;
+    position: fixed;
+    bottom: 15em; /* Positioned higher to avoid overlapping zoom controls */
+    right: 2em;
+    width: 56px;
+    height: 56px;
+    background-color: #F5D76E;
+    color: #111;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.4);
+    z-index: 1002; /* Above footer, below menu */
     justify-content: center;
-    border-left-width: 0; /* Remove the side border */
-    border-radius: 8px; /* Make them more circular/square */
+    align-items: center;
+    transition: transform 0.2s;
+}
+.mobile-filters-btn:hover {
+    transform: scale(1.05);
 }
 
-/* Hide the text span inside the toggle buttons */
-.sidebar.collapsed .toggle-btn span:not(.material-symbols-outlined) {
-    opacity: 0;
-    max-width: 0;
-    /* Animate out quickly with no delay */
-    transition: opacity 0.1s ease, max-width 0.3s ease;
+/* The close button in the header is always an 'X' */
+.sidebar-toggle .material-symbols-outlined {
+    transform: none !important; /* Override desktop rotation */
+    font-size: 0; /* Hide the original 'chevron_left' icon text */
+}
+.sidebar-toggle .material-symbols-outlined::before {
+    content: 'close'; /* The name of the 'X' icon */
+    font-size: 24px; /* Restore the icon size */
 }
 
-/* Ensure the icon is centered in the button */
-.sidebar.collapsed .toggle-btn .material-symbols-outlined {
-    margin-right: 0;
-    font-size: 24px;
-}
-
-/* Ensure the SVG icon is centered and sized correctly in collapsed mode */
-.sidebar.collapsed .toggle-btn .toggle-btn-icon-img {
-    margin-right: 0;
-    width: 24px;
-    height: 24px;
-}
-
-/* Add a background to active icon buttons when collapsed */
-.sidebar.collapsed .toggle-btn.active {
-    background-color: rgba(255, 255, 255, 0.15);
-}
-.sidebar.collapsed .toggle-btn.active:hover {
-    background-color: rgba(255, 255, 255, 0.25);
-}
-
-/* For inactive buttons, just use the default color and remove the background */
-.sidebar.collapsed .toggle-btn.inactive {
-    background-color: transparent;
-}
-.sidebar.collapsed .toggle-btn.inactive:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-/* --- Mobile Specific Overrides --- */
 @media (max-width: 1024px) {
     /* On mobile, hide the dev status text in the footer to prevent squishing */
     .dev-status {
@@ -785,5 +761,25 @@ input:checked + .slider:before {
         font-size: 1em;
         font-weight: 500;
         color: #F5D76E;
+    }
+}
+
+/* Styles for very small screens (e.g., small phones in portrait mode) */
+@media (max-width: 480px) {
+    /* Transform the quick tips bar into a simple icon button */
+    .quick-tips-container {
+        width: 44px;
+        height: 44px;
+        padding: 0;
+        border-radius: 50%;
+    }
+
+    #quick-tips-text {
+        display: none;
+    }
+
+    .quick-tips-container .material-symbols-outlined {
+        margin-right: 0;
+        font-size: 24px; /* Make icon slightly larger to fill the circle */
     }
 }

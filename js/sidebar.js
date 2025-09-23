@@ -12,86 +12,22 @@ document.addEventListener('DOMContentLoaded', function() {
 function initSidebar() {
     const sidebar = document.getElementById('sidebar');
     const sidebarToggle = document.getElementById('sidebar-toggle');
-    const container = document.getElementById('container');
+    const mobileFiltersBtn = document.getElementById('mobile-filters-btn');
 
-    const isMobile = () => window.innerWidth <= 1024;
-    
-    // Toggle sidebar collapsed state
-    if (sidebarToggle && sidebar && container) {
+    // The floating filter button toggles the menu
+    if (mobileFiltersBtn) {
+        mobileFiltersBtn.addEventListener('click', () => {
+            sidebar.classList.toggle('open');
+        });
+    }
+
+    // The header toggle button always closes the menu
+    if (sidebarToggle && sidebar) {
         sidebarToggle.addEventListener('click', function() {
-            sidebar.classList.toggle('collapsed');
-            container.classList.toggle('sidebar-collapsed');
-            
-            // Trigger map resize to handle new container dimensions
-            setTimeout(() => {
-                // Calling map.updateSize() is the correct way to tell OpenLayers
-                // that the map container has changed size.
-                if (typeof map !== 'undefined' && map) {
-                    map.updateSize();
-                }
-            }, 500); // This timeout should match the CSS transition duration for the sidebar.
+            sidebar.classList.remove('open');
         });
     }
 
-    // On mobile, start with the sidebar collapsed.
-    if (isMobile() && sidebar && container) {
-        if (!sidebar.classList.contains('collapsed')) {
-            sidebar.classList.add('collapsed');
-            container.classList.add('sidebar-collapsed');
-
-            // On initial load for mobile, the map might be created before the sidebar
-            // is collapsed. We need to tell the map to update its size to fill the
-            // new space, but without a timeout since there's no animation on load.
-            if (typeof map !== 'undefined' && map) {
-                map.updateSize();
-            }
-        }
-    }
-    
-    // Set up icon clicks in collapsed mode
-    const iconLabels = document.getElementById('icon-labels');
-    const iconMonsters = document.getElementById('icon-monsters');
-    const iconMarkers = document.getElementById('icon-markers');
-    
-    if (iconLabels) {
-        iconLabels.addEventListener('click', function() {
-            if (sidebar.classList.contains('collapsed') && !isMobile()) {
-                sidebar.classList.remove('collapsed');
-                container.classList.remove('sidebar-collapsed');
-                
-                setTimeout(() => {
-                    window.dispatchEvent(new Event('resize'));
-                }, 500);
-            }
-        });
-    }
-    
-    if (iconMonsters) {
-        iconMonsters.addEventListener('click', function() {
-            if (sidebar.classList.contains('collapsed') && !isMobile()) {
-                sidebar.classList.remove('collapsed');
-                container.classList.remove('sidebar-collapsed');
-                
-                setTimeout(() => {
-                    window.dispatchEvent(new Event('resize'));
-                }, 500);
-            }
-        });
-    }
-    
-    if (iconMarkers) {
-        iconMarkers.addEventListener('click', function() {
-            if (sidebar.classList.contains('collapsed') && !isMobile()) {
-                sidebar.classList.remove('collapsed');
-                container.classList.remove('sidebar-collapsed');
-                
-                setTimeout(() => {
-                    window.dispatchEvent(new Event('resize'));
-                }, 500);
-            }
-        });
-    }
-    
     // Create individual toggle buttons for each section
     createLabelToggleButtons();
     createMarkerToggleButtons();
@@ -268,8 +204,9 @@ function createMarkerToggleButtons() {
 
         // Add icon (now an <img> for SVG)
         const iconImg = document.createElement('img');
-        // Use the pre-tinted data URL from customMarkerImages for color consistency.
-        iconImg.src = customMarkerImages[category.type] || style?.icon || 'icons/information.svg';
+        // Use the pre-tinted canvas. Convert to data URL for the src attribute.
+        const tintedCanvas = customMarkerCanvases[category.type];
+        iconImg.src = tintedCanvas ? tintedCanvas.toDataURL() : (style?.icon || 'icons/information.svg');
         iconImg.alt = category.name;
         iconImg.className = `toggle-btn-icon-img ${animationClass}`;
         button.appendChild(iconImg);

@@ -27,10 +27,11 @@ An interactive map for Ashen Empires with pixel-perfect coordinates and multiple
 ## Features
 
 - **Full Map Exploration**: Navigate the entire Ashen Empires world with smooth panning and zooming.
-- **Precise Coordinates**: Real-time coordinate display that updates continuously as you move your cursor or drag the map.
-- **Interactive Sidebar**: A fully responsive and collapsible sidebar with smooth animations.
-  - **Icon-Only Mode**: When collapsed, the sidebar provides a clean, icon-only interface for quick layer toggling.
-  - **Dynamic Controls**: Buttons are generated dynamically for all label and marker categories.
+- **Precise Coordinates**: Real-time coordinate display in the footer. On desktop, it updates continuously as you move your cursor. On mobile, it updates when you tap the map.
+- **Unified Filter Menu**:
+  - A floating filter button opens a full-screen, touch-friendly menu on all devices for a consistent experience.
+  - The menu features a centered, three-column grid layout for easy navigation and a clean aesthetic.
+  - **Dynamic Toggles**: Buttons are generated dynamically for all label and marker categories.
   - **Master Toggles**: "Show All" buttons allow you to toggle entire sections at once.
 - **Dynamic Markers & Labels**:
   - Markers for various categories including docks, shops, trainers, and more.
@@ -49,15 +50,14 @@ An interactive map for Ashen Empires with pixel-perfect coordinates and multiple
 This project is built using **OpenLayers**, chosen for its superior handling of custom coordinate systems and better performance with large, custom tilesets.
 
 - **Modular JavaScript**: The code is organized into logical files:
-  - `map.js`: Core map functionality, event handling, and modal logic.
-  - `map.js`: Core map functionality, event handling, and info flyout logic.
-  - `sidebar.js`: Manages the interactive sidebar controls.
+  - `map.js`: Core map functionality, event handling, info flyout, and modal logic.
+  - `sidebar.js`: Manages the interactive filter menu.
   - `tips.js`: Powers the quick tips bar and modal.
   - `labels.js`, `markers.js`, `detail-maps.js`: Data files defining all labels, markers, and sub-map configurations.
 - **Dynamic Styling & Rendering**:
   - **Markers**: SVG icons are pre-loaded and tinted on the fly with their designated colors. They are then layered on top of a dynamically drawn canvas background.
   - **Labels**: Labels are rendered to a canvas with custom fonts, gradients, and backgrounds. Their font size scales dynamically with the map's zoom level.
-- **Responsive UI Framework**: A combination of CSS Flexbox, Grid, and media queries creates a fluid layout that adapts to any screen size. JavaScript is used to manage state and class toggling for interactive components like the sidebar and modals.
+- **Responsive UI Framework**: A mobile-first approach using CSS Flexbox, Grid, and media queries creates a fluid layout that adapts to any screen size. The UI is unified across desktop and mobile for a consistent experience.
 - **Coordinate System**: The map accurately translates between the 16384x16384 tile-based map and the 4096x4096 in-game coordinate system, ensuring all displayed coordinates are correct.
 
 ## Map Coordinates
@@ -177,7 +177,7 @@ Once these steps are complete, the map should render and function within your pa
   - ✅ Smooth, non-intrusive slide-up animation.
 - ✅ **Responsive & Mobile-Optimized UI**
   - ✅ Fluid layout for all screen sizes.
-  - ✅ Collapsible sidebar with icon-only mode.
+  - ✅ Unified full-screen, grid-based filter menu for all devices.
   - ✅ Enlarged and repositioned zoom controls for touch devices.
 - 🚧 **Complete Labeling System**
   - ✅ Dynamic font scaling for legibility at all zoom levels.
@@ -185,7 +185,7 @@ Once these steps are complete, the map should render and function within your pa
 - 🚧 **Expanded Information System**
   - 🚧 Ongoing work to make all labels and markers clickable, providing detailed information via the flyout panel.
   - 🚧 This involves a significant update to `detail-maps.js` to catalog information for hundreds of in-game locations.
-- ⬜ Advanced Filtering Menu for labels, markers, and monsters.
+- ✅ Advanced Filtering Menu (Unified version implemented).
 - ⬜ Search functionality for locations
 - ⬜ Monster Data Layer
 - ⬜ Visual Region Overlays
