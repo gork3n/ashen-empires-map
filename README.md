@@ -21,7 +21,7 @@ An interactive map for Ashen Empires with pixel-perfect coordinates and multiple
   - [Integration Guide](#integration-guide)
     - [Method 1: Using as a Standalone Page](#method-1-using-as-a-standalone-page)
     - [Method 2: Embedding in an Existing Website](#method-2-embedding-in-an-existing-website)
-  - [Planned Features](#planned-features)
+  - [Development Plan](#development-plan)
   - [Credits](#credits)
 
 ## Features
@@ -158,41 +158,9 @@ To integrate the full-featured map (including the interactive sidebar) into an e
 
 Once these steps are complete, the map should render and function within your page just as it does on the standalone `openlayers.html` page.
 
-## Planned Features
+## Development Plan
 
-- ✅ **Dynamic Layer Toggling**
-  - ✅ Interactive sidebar for showing/hiding layers.
-  - ✅ Master toggles for labels and markers.
-  - ✅ State-aware buttons with active/inactive styles.
-- ✅ **Custom Markers & Icons**
-  - ✅ Custom SVG icons for all marker categories.
-  - ✅ Dynamic icon tinting to apply specific colors.
-  - ✅ Markers are hidden at far zoom levels to reduce clutter.
-- ✅ **Modular Codebase**
-  - ✅ Separation of concerns into `map.js`, `sidebar.js`, `tips.js`, etc.
-  - ✅ Data-driven design using `labels.js`, `markers.js`, and `detail-maps.js`.
-- ✅ **Location Information Panel**
-  - ✅ Clickable location labels open a flyout panel from the bottom.
-  - ✅ Displays custom information for major locations.
-  - ✅ Smooth, non-intrusive slide-up animation.
-- ✅ **Responsive & Mobile-Optimized UI**
-  - ✅ Fluid layout for all screen sizes.
-  - ✅ Unified full-screen, grid-based filter menu for all devices.
-  - ✅ Enlarged and repositioned zoom controls for touch devices.
-- 🚧 **Complete Labeling System**
-  - ✅ Dynamic font scaling for legibility at all zoom levels.
-  - 🚧 Ongoing verification and addition of all location labels.
-- 🚧 **Expanded Information System**
-  - 🚧 Ongoing work to make all labels and markers clickable, providing detailed information via the flyout panel.
-  - 🚧 This involves a significant update to `detail-maps.js` to catalog information for hundreds of in-game locations.
-- ✅ Advanced Filtering Menu (Unified version implemented).
-- ⬜ Search functionality for locations
-- ⬜ Monster Data Layer
-- ⬜ Visual Region Overlays
-- ⬜ Detailed Sub-Maps for major underground dungeons.
-- ⬜ A dedicated, high-resolution map for the Housing Realm.
-- ✅ Finalize UI/UX and Styling
-  - ✅ Replaced Google Material Symbols with custom-designed icons from Game-icons.net for a unique look.
+To see the full list of completed, in-progress, and planned features, please see the dedicated Development Plan file. This includes a detailed breakdown of the future information system.
 
 ## Credits
 

@@ -1,149 +1,70 @@
 /**
- * This file contains the data for detailed sub-maps that appear in a modal.
+ * This file contains the data for the information flyout panel.
+ * When a label or marker is clicked, its 'name' or 'tooltip' is used as a key
+ * to look up the corresponding entry in this `detailMapData` object.
  *
- * How to add a new detail map:
+ * How to add a new entry:
  * 1. Add a new entry to the `detailMapData` object. The key must exactly match the
- *    'name' property of the label on the main map (from js/labels.js).
- * 2. Provide the title, image details (URL, width, height), and informational HTML.
- * 3. Add markers to the `markers` array. The 'x' and 'y' coordinates are relative
- *    to the top-left corner (0,0) of the sub-map image itself.
+ *    'name' (for labels) or 'tooltip' (for markers) from js/labels.js or js/markers.js.
+ * 2. Populate the object with the desired information. All fields are optional.
+ *    - title: The main title shown in the flyout header.
+ *    - coordinates: An object {x, y} for the in-game coordinates.
+ *    - image: Path to a representative image.
+ *    - lore: A string (can include HTML) with descriptive text.
+ *    - npcs: An array of objects for related NPCs, each with a 'name' and 'info'.
+ *    - links: An array of objects for external links, each with 'text' and 'url'.
  */
 const detailMapData = {
     "Lotor's Summer Palace": {
         title: "Lotor's Summer Palace",
-        image: {
-            url: 'images/LSP.png',
-            width: 2600,
-            height: 2240
-        },
-        // --- COORDINATE MAPPING CONFIGURATION ---
-        origin: {
-            // The coordinate on the main 4096x4096 map that corresponds to the
-            // top-left corner of this sub-map's content (after accounting for offset).
-            // Use the calculation method provided in the documentation to find this value.
-            x: 510,
-            y: 549
-        },
-        scale: 6, // The zoom factor of this sub-map image. (e.g., 6 means it's 600% of the original size).
-        offset: {
-            // The pixel padding inside the image file itself.
-            // If the map content in your PNG doesn't start at the very top-left
-            // pixel, use this to specify the size of the border/padding.
-            x: 0,
-            y: 0
-        },
-        // --- END COORDINATE MAPPING ---
-        // --- INITIAL VIEW CONFIGURATION (OPTIONAL) ---
-        // Sets the starting view for the detail map modal.
-        initialView: {
-            // Center the view on a specific coordinate from the main 4096x4096 map.
-            centerOnMain: { x: 777, y: 653 }, // Central plaza
-            zoom: 3,            // Initial zoom level
-            maxZoom: 7          // Maximum zoom level allowed
-        },
-        // --- END INITIAL VIEW ---
-        info: `
-            <h4>Welcome to the Palace!</h4>
-            <p>This is a special area where you can find various shops, trainers, and quests.</p>
-            <hr>
-            <h5>Key Locations:</h5>
-            <ul>
-                <li>O'riles Weapon Shop</li>
-                <li>Colleen Franks' Armor Shop</li>
-                <li>Bank</li>
-                <li>...and more!</li>
-            </ul>
-        `,
-        markers: [
-            // No map-specific markers are needed here.
-            // The system automatically pulls in relevant markers from the main map
-            // based on the coordinate mapping configuration.
+        coordinates: { x: 775, y: 571 },
+        lore: "Lotor's Summer Palace is a central hub for players, offering access to various islands, housing realms, and a wide array of shops and services. It's a safe zone bustling with activity.",
+        npcs: [
+            { name: "Captain Renwood", info: "Offers quests to brave adventurers." },
+            { name: "Donkeo", info: "A mysterious figure with unique quests." },
+            { name: "O'riles Weapon Shop", info: "Sells a variety of weapons." },
+            { name: "Colleen Franks' Armor Shop", info: "Provides sturdy armor for all classes." },
+            { name: "Bank", info: "Securely store your valuable items and gold." }
+        ],
+        links: [
+            { text: "More info on Ashen Empires Wiki", url: "#" }
         ]
     },
     "Valinor": {
         title: "Valinor",
-        image: {
-            url: 'images/Valinor_Island-600x.png',
-            width: 4441,
-            height: 3630
-        },
-        // --- COORDINATE MAPPING CONFIGURATION ---
-        origin: {
-            // The coordinate on the main 4096x4096 map that corresponds to the
-            // top-left corner of this sub-map's content (after accounting for offset).
-            // Use the calculation method provided in the documentation to find this value.
-            x: 560,
-            y: 47
-        },
-        scale: 6, // The zoom factor of this sub-map image. (e.g., 6 means it's 600% of the original size).
-        offset: {
-            // The pixel padding inside the image file itself.
-            // If the map content in your PNG doesn't start at the very top-left
-            // pixel, use this to specify the size of the border/padding.
-            x: 100,
-            y: 156
-        },
-        // --- INITIAL VIEW CONFIGURATION (OPTIONAL) ---
-        // Sets the starting view for the detail map modal.
-        initialView: {
-            // Center the view on a specific coordinate from the main 4096x4096 map.
-            centerOnMain: { x: 761, y: 124 }, // City gate
-            zoom: 4,             // Initial zoom level
-            maxZoom: 7           // Maximum zoom level allowed
-        },
-        // --- END INITIAL VIEW ---
-        // --- END COORDINATE MAPPING ---
-        info: `
-            <h4>Welcome to Valinor!</h4>
-            <p>This is a special area where you can find various shops, trainers, and quests.</p>
-            <hr>
-            <h5>Key Locations:</h5>
-            <ul>
-                <li>Weapon and Armor Shops</li>
-                <li>Bank</li>
-                <li>...and more!</li>
-            </ul>
-        `,
-        markers: [
-            // Extra markers can be added here for Valinor
+        coordinates: { x: 759, y: 65 },
+        image: "images/Valinor_Island-600x.png",
+        lore: "Valinor is the starting city for new players, providing essential services and introductory quests to help them begin their journey in the world of Ashen Empires.",
+        npcs: [
+            { name: "Larodeth Lywelyn's Pub", info: "A place to rest and get quests." },
+            { name: "Micheal Vonda's Weapon Shop", info: "Sells starter weapons." },
+            { name: "Thomas Blackstone's Armor Shop", info: "Sells starter armor." },
+            { name: "Bank", info: "Securely store your items." }
+        ],
+        links: [
+            { text: "Valinor quests on AE Wiki", url: "#" }
         ]
     },
     "Party Island": {
         title: "Party Island",
-        image: {
-            url: 'images/Party_Island.png', // NOTE: This is a placeholder image path.
-            width: 800,                     // Placeholder width.
-            height: 600                     // Placeholder height.
-        },
-        // --- COORDINATE MAPPING CONFIGURATION ---
-        // NOTE: These are placeholder values. You would need to calculate them
-        // using the methodology in the README.md file once you have the image.
-        origin: {
-            x: 363,
-            y: 37
-        },
-        scale: 4, // Assuming a 400% zoom level for this hypothetical map.
-        offset: {
-            x: 0,
-            y: 0
-        },
-        // --- INITIAL VIEW CONFIGURATION (OPTIONAL) ---
-        initialView: {
-            // Center the view on a specific coordinate from the main 4096x4096 map.
-            centerOnMain: { x: 440, y: 120 }, // Portal to LSP
-            zoom: 2,
-            maxZoom: 5
-        },
-        info: `
-            <h4>Welcome to Party Island!</h4>
-            <p>A festive place for celebration and access to Lotor's Summer Palace.</p>
-            <hr>
-            <h5>Key Locations:</h5>
-            <ul>
-                <li>Dalgo's Tavern</li>
-                <li>Portal to Lotor's Summer Palace</li>
-            </ul>
-        `,
-        markers: [] // No map-specific markers needed; they will be pulled from the main map.
+        coordinates: { x: 421, y: 69 },
+        image: "images/Party_Island.png",
+        lore: "A festive island known for celebrations. It holds the main portal to access Lotor's Summer Palace.",
+        npcs: [
+            { name: "Dalgo's Tavern", info: "A lively tavern on the island." },
+            { name: "Portal to Lotor's Summer Palace", info: "The primary way to reach the palace." }
+        ],
+        links: []
+    },
+    // Example of an entry for a specific marker (NPC)
+    "Captain Renwood": {
+        title: "Captain Renwood",
+        coordinates: { x: 795, y: 603 },
+        image: "images/npcs/captain_renwood.png", // Placeholder image path
+        lore: "Captain Renwood is a quest-giving NPC located in Lotor's Summer Palace. He is looking for heroes to assist with various tasks.",
+        npcs: [], // This section is for listing NPCs *within* a larger area. Not needed for a single NPC.
+        links: [
+            { text: "Captain Renwood's Quests (Wiki)", url: "#" }
+        ]
     }
 };

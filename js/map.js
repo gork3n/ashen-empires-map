@@ -360,11 +360,12 @@ function initializeMap() {
             return f;
         });
 
-        if (feature && feature.get('name')) {
-            const locationName = feature.get('name');
-            // Check if this location has detail data defined in detail-maps.js
-            if (typeof detailMapData !== 'undefined' && detailMapData[locationName]) {
-                showInfoFlyout(locationName);
+        if (feature) {
+            // Use the 'name' for labels or 'tooltip' for markers as the key.
+            const dataKey = feature.get('name') || feature.get('tooltip');
+
+            if (dataKey && typeof detailMapData !== 'undefined' && detailMapData[dataKey]) {
+                showInfoFlyout(dataKey);
             }
         }
     });
@@ -414,18 +415,54 @@ function setupInfoFlyout() {
 
 /**
  * Shows the info flyout panel with content for a specific location.
- * @param {string} locationName - The name of the location, matching a key in detailMapData.
+ * @param {string} dataKey - The key (name or tooltip) matching an entry in detailMapData.
  */
-function showInfoFlyout(locationName) {
-    const locationData = detailMapData[locationName];
-    if (!locationData) return;
+function showInfoFlyout(dataKey) {
+    const data = detailMapData[dataKey];
+    if (!data) return;
 
     const flyout = document.getElementById('info-flyout');
     const title = document.getElementById('info-flyout-title');
     const content = document.getElementById('info-flyout-content');
 
-    title.textContent = locationData.title;
-    content.innerHTML = locationData.info;
+    title.textContent = data.title;
+
+    let html = '';
+
+    // Coordinates
+    if (data.coordinates) {
+        html += `<p><strong>Coordinates:</strong> X: ${data.coordinates.x}, Y: ${data.coordinates.y}</p><hr>`;
+    }
+
+    // Image
+    if (data.image) {
+        html += `<img src="${data.image}" alt="${data.title}" style="width: 100%; max-width: 300px; border-radius: 4px; margin: 0 auto 15px; display: block; border: 1px solid #444;">`;
+    }
+
+    // Lore/Info
+    if (data.lore) {
+        html += `<h4>Information</h4><p>${data.lore}</p>`;
+    }
+
+    // NPCs
+    if (data.npcs && data.npcs.length > 0) {
+        html += '<h4>Key NPCs / Locations</h4><ul>';
+        data.npcs.forEach(npc => {
+            html += `<li><strong>${npc.name}:</strong> ${npc.info}</li>`;
+        });
+        html += '</ul>';
+    }
+
+    // Links
+    if (data.links && data.links.length > 0) {
+        html += '<h4>External Links</h4><ul>';
+        data.links.forEach(link => {
+            html += `<li><a href="${link.url}" target="_blank" rel="noopener noreferrer">${link.text}</a></li>`;
+        });
+        html += '</ul>';
+    }
+
+    content.innerHTML = html;
 
     flyout.classList.add('visible');
 }
