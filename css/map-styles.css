@@ -63,8 +63,8 @@ html, body {
     font-size: 1.3em; /* Makes the button and icon larger */
 }
 
-/* Sidebar styles */
-.sidebar {
+/* Filter Menu styles */
+.filter-menu {
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -82,7 +82,7 @@ html, body {
     border-right: none;
 }
 
-.sidebar-header {
+.filter-menu-header {
     padding: 15px;
     display: flex;
     justify-content: space-between;
@@ -91,7 +91,7 @@ html, body {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-.sidebar-title {
+.filter-menu-title {
     font-size: 1.2em;
     font-weight: 700;
     margin: 0;
@@ -99,11 +99,11 @@ html, body {
 }
 
 /* When the menu is open, bring it into view */
-.sidebar.open {
+.filter-menu.open {
     transform: translateY(0);
 }
 
-.sidebar-toggle {
+.filter-menu-toggle {
     cursor: pointer;
     background: none;
     border: none;
@@ -112,17 +112,17 @@ html, body {
     padding: 0;
 }
 
-.sidebar-content {
+.filter-menu-content {
     flex: 1;
     overflow-y: auto;
     padding: 15px;
 }
 
-.sidebar-section {
+.filter-menu-section {
     margin-bottom: 20px;
 }
 
-.sidebar-section h3 {
+.filter-menu-section h3 {
     margin-top: 0;
     margin-bottom: 10px;
     font-size: 1.1em;
@@ -619,11 +619,11 @@ input:checked + .slider:before {
 }
 
 /* The close button in the header is always an 'X' */
-.sidebar-toggle .material-symbols-outlined {
+.filter-menu-toggle .material-symbols-outlined {
     transform: none !important; /* Override desktop rotation */
     font-size: 0; /* Hide the original 'chevron_left' icon text */
 }
-.sidebar-toggle .material-symbols-outlined::before {
+.filter-menu-toggle .material-symbols-outlined::before {
     content: 'close'; /* The name of the 'X' icon */
     font-size: 24px; /* Restore the icon size */
 }

@@ -33,6 +33,19 @@
             font-style: normal;
             font-display: swap;
         }
+
+        /* Link Styles for UI Components */
+        #filter-menu a, #info-flyout a, #tips-modal a,
+        #filter-menu a:visited, #info-flyout a:visited, #tips-modal a:visited {
+            color: #00BFFF; /* DeepSkyBlue, matches info icons */
+            text-decoration: none;
+            transition: color 0.2s ease-in-out;
+        }
+
+        #filter-menu a:hover, #info-flyout a:hover, #tips-modal a:hover {
+            color: #87CEFA; /* LightSkyBlue for hover effect */
+            text-decoration: underline;
+        }
     </style>
 
     <!-- JavaScript libraries -->
@@ -40,18 +53,18 @@
     <script src="https://unpkg.com/ol-layerswitcher@4.1.1"></script>
 </head>
 <body>
-    <!-- Sidebar -->
-    <div id="sidebar" class="sidebar">
-        <div class="sidebar-header">
-            <h2 class="sidebar-title">Map Controls</h2>
-            <button class="sidebar-toggle" id="sidebar-toggle">
+    <!-- Filter Menu -->
+    <div id="filter-menu" class="filter-menu">
+        <div class="filter-menu-header">
+            <h2 class="filter-menu-title">Filters</h2>
+            <button class="filter-menu-toggle" id="filter-menu-toggle">
                 <span class="material-symbols-outlined">chevron_left</span>
             </button>
         </div>
 
-        <div class="sidebar-content">
+        <div class="filter-menu-content">
             <!-- Labels section -->
-            <div class="sidebar-section">
+            <div class="filter-menu-section">
                 <h3>Labels</h3>
                 <button id="show-all-labels" class="toggle-btn active">
                     <span class="material-symbols-outlined">label</span>
@@ -62,7 +75,7 @@
                 </div>
             </div>
             <!-- Markers section -->
-            <div class="sidebar-section">
+            <div class="filter-menu-section">
                 <h3>Markers</h3>
                 <button id="show-all-markers" class="toggle-btn active">
                     <span class="material-symbols-outlined">place</span>
@@ -74,7 +87,7 @@
             </div>
 
             <!-- Monsters section (for future use) -->
-            <div class="sidebar-section">
+            <div class="filter-menu-section">
                 <h3>Monsters</h3>
                 <button id="show-all-monsters" class="toggle-btn active">
                     <span class="material-symbols-outlined">pets</span>
@@ -109,10 +122,10 @@
     
     <!-- Load your custom JavaScript -->
     <script src="js/labels.js"></script>
+    <script src="js/markers.js"></script>
     <script src="js/map.js"></script>
     <script src="js/tips.js"></script>
-    <script src="js/sidebar.js"></script>
-    <script src="js/markers.js"></script>
+    <script src="js/filter-menu.js"></script>
 
     <!-- Tips Modal -->
     <div id="tips-modal" class="modal-overlay" style="display: none;">

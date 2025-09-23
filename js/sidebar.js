@@ -1,30 +1,30 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Wait for the map and icons to be ready before initializing the sidebar.
+    // Wait for the map and icons to be ready before initializing the filter menu.
     // This ensures that tinted marker icons are available.
     document.addEventListener('map-ready', function() {
-        initSidebar();
+        initFilterMenu();
     });
 });
 
 /**
- * Initialize sidebar functionality
+ * Initialize filter menu functionality
  */
-function initSidebar() {
-    const sidebar = document.getElementById('sidebar');
-    const sidebarToggle = document.getElementById('sidebar-toggle');
+function initFilterMenu() {
+    const filterMenu = document.getElementById('filter-menu');
+    const filterMenuToggle = document.getElementById('filter-menu-toggle');
     const mobileFiltersBtn = document.getElementById('mobile-filters-btn');
 
     // The floating filter button toggles the menu
     if (mobileFiltersBtn) {
         mobileFiltersBtn.addEventListener('click', () => {
-            sidebar.classList.toggle('open');
+            filterMenu.classList.toggle('open');
         });
     }
 
     // The header toggle button always closes the menu
-    if (sidebarToggle && sidebar) {
-        sidebarToggle.addEventListener('click', function() {
-            sidebar.classList.remove('open');
+    if (filterMenuToggle && filterMenu) {
+        filterMenuToggle.addEventListener('click', function() {
+            filterMenu.classList.remove('open');
         });
     }
 

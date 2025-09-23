@@ -51,9 +51,9 @@ This project is built using **OpenLayers**, chosen for its superior handling of 
 
 - **Modular JavaScript**: The code is organized into logical files:
   - `map.js`: Core map functionality, event handling, info flyout, and modal logic.
-  - `sidebar.js`: Manages the interactive filter menu.
+  - `filter-menu.js`: Manages the interactive filter menu.
   - `tips.js`: Powers the quick tips bar and modal.
-  - `labels.js`, `markers.js`, `detail-maps.js`: Data files defining all labels, markers, and sub-map configurations.
+  - `labels.js`, `markers.js`: Data files defining all labels and markers.
 - **Dynamic Styling & Rendering**:
   - **Markers**: A colored circular background and a white foreground icon are drawn onto a single composite canvas. This ensures both elements scale together perfectly and provides a modern, clean look.
   - **Labels**: Labels are rendered to a canvas with custom fonts, gradients, and backgrounds. Their font size scales dynamically with the map's zoom level.
@@ -100,7 +100,7 @@ This is the simplest method. It gives you the full experience with the interacti
 1. Clone or download the repository.
 2. Ensure you have the following files and folders in your project:
     - `openlayers.html`
-    - `/js/` (containing `map.js`, `markers.js`, `labels.js`, `sidebar.js`, `detail-maps.js`, `tips.js`)
+    - `/js/` (containing `map.js`, `markers.js`, `labels.js`, `filter-menu.js`, `tips.js`)
     - `/css/` (containing `map-styles.css`)
     - `/tiles/` (containing all map tile images)
     - `/images/` (containing background images)
@@ -144,10 +144,9 @@ To integrate the full-featured map (including the interactive sidebar) into an e
     <!-- Project-specific Scripts (order matters) -->
     <script src="js/labels.js"></script>
     <script src="js/markers.js"></script>
-    <script src="js/detail-maps.js"></script>
     <script src="js/map.js"></script>
     <script src="js/tips.js"></script>
-    <script src="js/sidebar.js"></script>
+    <script src="js/filter-menu.js"></script>
    ```
 
 5. **Adjust Paths**:

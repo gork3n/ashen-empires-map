@@ -15,8 +15,8 @@ This section is migrated from the main README to consolidate all planning detail
     -   ✅ Dynamic icon tinting to apply specific colors.
     -   ✅ Markers are hidden at far zoom levels to reduce clutter.
 -   ✅ **Modular Codebase**
-    -   ✅ Separation of concerns into `map.js`, `sidebar.js`, `tips.js`, etc.
-    -   ✅ Data-driven design using `labels.js`, `markers.js`, and `detail-maps.js`.
+    -   ✅ Separation of concerns into `map.js`, `filter-menu.js`, `tips.js`.
+    -   ✅ Data-driven design using `labels.js` and `markers.js`.
 -   ✅ **Location Information Panel**
 -   🚧 **Responsive & Mobile-Optimized UI**
     -   ✅ Fluid layout for all screen sizes.
@@ -26,9 +26,8 @@ This section is migrated from the main README to consolidate all planning detail
     -   ✅ Dynamic font scaling for legibility at all zoom levels.
     -   🚧 Ongoing verification and addition of all location labels.
 -   🚧 **Expanded Information System**
-    -   🚧 Ongoing work to make all labels and markers clickable, providing detailed information via the flyout panel.
-    -   🚧 This involves a significant update to `detail-maps.js` to catalog information for hundreds of in-game locations.
-    -   💡 **Future Refactor Idea:** Consolidate all data into `markers.js` and `labels.js`. This would merge the information from `detail-maps.js` and eliminate the need for organizational comments (e.g., `// Lotor's Summer Palace`). This refactor would improve data locality and make it easier to manage and search.
+    -   ✅ All labels and markers are clickable, providing detailed information via the flyout panel.
+    -   ✅ **Refactor Complete:** All data has been consolidated into `markers.js` and `labels.js`. The `detail-maps.js` file has been eliminated. This improves data locality and makes it easier to manage and search.
         -   Each marker and label object would contain its own `details`, `region`, and `place` information.
         -   `region`: The major geographical area (e.g., "Krythan", "Tundria").
         -   `place`: The specific named location where the marker is found. This could be a city ("Valinor"), a dungeon ("Kylian's Lair"), a building, or a general area ("East Krythan Fields").
