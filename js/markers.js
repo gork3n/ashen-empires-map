@@ -723,7 +723,7 @@ const markerStyles = {
     // Spawns
     spawn_good: {
         icon: "icons/death-spawn.svg",
-        color: "#FFFFFF", // White
+        color: "#000000", // Black
     },
     spawn_evil: {
         icon: "icons/death-spawn.svg",
