@@ -361,9 +361,6 @@ function initializeMap() {
     // Add crosshair for testing
     initializeCrosshair(map);
 
-    // Add axis legend
-    initializeAxisLegend(map);
-
     // --- Add click listener for features ---
     map.on('click', function(evt) {
         // Set cursor to default first
@@ -397,7 +394,14 @@ function setupInfoFlyout() {
         <div id="info-flyout" class="info-flyout">
             <div class="info-flyout-header">
                 <h3 id="info-flyout-title"></h3>
-                <button id="info-flyout-close" class="info-flyout-close" title="Close">&times;</button>
+                <div class="info-flyout-controls">
+                    <button id="info-flyout-fullscreen" class="info-flyout-control-btn" title="Toggle Fullscreen">
+                        <span class="material-symbols-outlined">fullscreen</span>
+                    </button>
+                    <button id="info-flyout-close" class="info-flyout-control-btn" title="Close">
+                        <span class="material-symbols-outlined">close</span>
+                    </button>
+                </div>
             </div>
             <div id="info-flyout-content" class="info-flyout-content"></div>
         </div>
@@ -406,6 +410,16 @@ function setupInfoFlyout() {
 
     const closeButton = document.getElementById('info-flyout-close');
     closeButton.addEventListener('click', hideInfoFlyout);
+
+    const fullscreenButton = document.getElementById('info-flyout-fullscreen');
+    const flyoutPanel = document.getElementById('info-flyout');
+    fullscreenButton.addEventListener('click', function() {
+        flyoutPanel.classList.toggle('fullscreen');
+        const icon = fullscreenButton.querySelector('.material-symbols-outlined');
+        icon.textContent = flyoutPanel.classList.contains('fullscreen')
+            ? 'fullscreen_exit'
+            : 'fullscreen';
+    });
 }
 
 /**
@@ -432,6 +446,15 @@ function showInfoFlyout(locationName) {
 function hideInfoFlyout() {
     const flyout = document.getElementById('info-flyout');
     flyout.classList.remove('visible');
+
+    // Also remove fullscreen class and reset icon when closing
+    if (flyout.classList.contains('fullscreen')) {
+        flyout.classList.remove('fullscreen');
+        const fullscreenButton = document.getElementById('info-flyout-fullscreen');
+        if (fullscreenButton) {
+            fullscreenButton.querySelector('.material-symbols-outlined').textContent = 'fullscreen';
+        }
+    }
 }
 
 /**
@@ -873,30 +896,6 @@ function setupMarkerTooltips(map) {
     
     // Hide tooltip when map is moved
     map.on('movestart', tooltipMoveStartHandler);
-}
-/**
- * Adds a static axis legend to the map viewport.
- * @param {ol.Map} mapInstance The OpenLayers map instance.
- */
-function initializeAxisLegend(mapInstance) {
-    const mapElement = mapInstance.getTargetElement();
-    if (!mapElement) return;
-
-    // Check if legend already exists to prevent duplicates
-    if (document.querySelector('.axis-legend')) return;
-
-    const legendHTML = `
-        <div class="axis-legend">
-            <div class="axis-y">
-                <span class="axis-label">Y</span>
-            </div>
-            <div class="axis-x">
-                <span class="axis-label">X</span>
-            </div>
-        </div>
-    `;
-
-    mapElement.insertAdjacentHTML('beforeend', legendHTML);
 }
 /**
  * Initializes a crosshair overlay on a map instance for coordinate testing.

@@ -13,39 +13,18 @@ html, body {
 }
 
 #container {
+    position: absolute;
+    top: 0;
+    left: 0;
     display: flex;
     flex-direction: column;
     height: 100%;
-    padding: 0 0 32px; /* Remove side/top padding, keep space for footer */
+    width: 100%;
     box-sizing: border-box;
-    margin-left: 250px;
-    width: calc(100% - 250px);
-    transition: margin-left 0.5s ease, width 0.5s ease;
 }
 
 /* Header styles */
-h1 { 
-    margin: 0; 
-    padding: 6px; 
-    border: 0;
-    font-size: 20pt;
-    font-weight: 700;
-    color: white;
-}
-
-#header { 
-    padding: 5px 10px; 
-    background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 4px;
-    margin-bottom: 10px;
-}
-
-#subheader { 
-    text-align: right; 
-    font-size: 10px; 
-    font-weight: 300;
-    color: #ccc;
-}
+/* Header styles are no longer part of the main layout. */
 
 /* Map container */
 #map { 
@@ -55,10 +34,6 @@ h1 {
     position: relative; /* For crosshair positioning */
 }
 
-#container.sidebar-collapsed {
-    margin-left: 60px;
-    width: calc(100% - 60px);
-}
 /* OpenLayers overrides */
 .ol-layer canvas {
     background: transparent !important;
@@ -462,78 +437,10 @@ input:checked + .slider:before {
     left: 0;
 }
 
-/* --- Axis Legend --- */
-.axis-legend {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    width: 60px;
-    height: 60px;
-    z-index: 999;
-    pointer-events: none;
-    color: rgba(255, 255, 255, 0.7);
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
-    font-family: monospace;
-    font-size: 14px;
-    font-weight: bold;
-}
-
-.axis-legend .axis-y,
-.axis-legend .axis-x {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: currentColor;
-}
-
-.axis-legend .axis-y {
-    width: 2px;
-    height: 50px;
-}
-
-.axis-legend .axis-y::after { /* Down Arrowhead */
-    content: '';
-    position: absolute;
-    bottom: -8px;
-    left: -4px;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top: 8px solid currentColor;
-}
-
-.axis-legend .axis-y .axis-label {
-    position: absolute;
-    top: 50%;
-    left: -12px;
-    transform: translateY(-50%);
-}
-
-.axis-legend .axis-x {
-    width: 50px;
-    height: 2px;
-}
-
-.axis-legend .axis-x::after { /* Right Arrowhead */
-    content: '';
-    position: absolute;
-    right: -8px;
-    top: -4px;
-    border-top: 5px solid transparent;
-    border-bottom: 5px solid transparent;
-    border-left: 8px solid currentColor;
-}
-
-.axis-legend .axis-x .axis-label {
-    position: absolute;
-    left: 50%;
-    top: -15px;
-    transform: translateX(-50%);
-}
-
 /* --- Quick Tips Container --- */
 .quick-tips-container {
     position: absolute;
-    bottom: 10px; /* Positioned inside the map container, just above the footer area */
+    top: 10px; /* Positioned at the top of the map container */
     left: 50%;
     transform: translateX(-50%);
     background-color: rgba(0, 0, 0, 0.75);
@@ -569,6 +476,65 @@ input:checked + .slider:before {
     font-family: 'Alegreya Sans', sans-serif;
     font-size: 14px;
     font-weight: 500;
+}
+
+/* --- Generic Modal Styles --- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000; /* Ensure it's on top of everything */
+}
+
+.modal-content {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    position: relative;
+    width: 90%;
+    max-width: 800px; /* Adjust as needed */
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #444;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 28px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.modal-close:hover {
+    color: #fff;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+    color: #F5D76E;
+    border-bottom: 1px solid #444;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.modal-body {
+    flex-grow: 1;
+    overflow-y: auto;
+    color: #ccc;
 }
 
 /* --- Tips Modal --- */
@@ -608,14 +574,13 @@ input:checked + .slider:before {
     bottom: 32px; /* Position above the footer */
     left: 250px; /* Aligned with sidebar */
     right: 0;
-    height: 35vh;
-    max-height: 300px;
+    height: 50vh;
     background-color: rgba(0, 0, 0, 0.85);
     border-top: 2px solid #444;
     color: white;
     z-index: 1500; /* Above map, below modals */
     transform: translateY(calc(100% + 32px)); /* Start hidden below the viewport */
-    transition: transform 0.4s ease-in-out, left 0.5s ease;
+    transition: transform 0.4s ease-in-out, left 0.5s ease, height 0.4s ease-in-out;
     display: flex;
     flex-direction: column;
     box-shadow: 0 -3px 15px rgba(0,0,0,0.5);
@@ -627,6 +592,10 @@ input:checked + .slider:before {
 
 .info-flyout.visible {
     transform: translateY(0);
+}
+
+.info-flyout.fullscreen {
+    height: calc(100vh - 32px); /* Full height minus footer */
 }
 
 .info-flyout-header {
@@ -645,19 +614,32 @@ input:checked + .slider:before {
     color: #F5D76E;
 }
 
-.info-flyout-close {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-    line-height: 1;
-    padding: 0 5px;
+.info-flyout-controls {
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
-.info-flyout-close:hover {
-    color: #F5D76E;
+.info-flyout-control-btn {
+    background: none;
+    border: none;
+    color: #ccc;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.info-flyout-control-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.info-flyout-control-btn .material-symbols-outlined {
+    font-size: 24px;
 }
 
 .info-flyout-content {

@@ -33,7 +33,8 @@ An interactive map for Ashen Empires with pixel-perfect coordinates and multiple
   - **Dynamic Controls**: Buttons are generated dynamically for all label and marker categories.
   - **Master Toggles**: "Show All" buttons allow you to toggle entire sections at once.
 - **Dynamic Markers & Labels**:
-  - Markers for portals, docks, shops, trainers, banks, crafting locations, and more, with custom SVG icons.
+  - Markers for various categories including docks, shops, trainers, and more.
+  - Portals are broken down into distinct types (Lotor's Palace, Ancient, Whirlpool, etc.) each with a unique, color-coded icon for easy identification.
   - A stylized circular background for all markers to ensure visibility.
   - Tooltips on hover for all markers and major labels.
   - Labels dynamically scale their font size based on the zoom level, ensuring optimal legibility from any distance.
@@ -181,10 +182,15 @@ Once these steps are complete, the map should render and function within your pa
 - 🚧 **Complete Labeling System**
   - ✅ Dynamic font scaling for legibility at all zoom levels.
   - 🚧 Ongoing verification and addition of all location labels.
+- 🚧 **Expanded Information System**
+  - 🚧 Ongoing work to make all labels and markers clickable, providing detailed information via the flyout panel.
+  - 🚧 This involves a significant update to `detail-maps.js` to catalog information for hundreds of in-game locations.
 - ⬜ Advanced Filtering Menu for labels, markers, and monsters.
 - ⬜ Search functionality for locations
 - ⬜ Monster Data Layer
 - ⬜ Visual Region Overlays
+- ⬜ Detailed Sub-Maps for major underground dungeons.
+- ⬜ A dedicated, high-resolution map for the Housing Realm.
 - ✅ Finalize UI/UX and Styling
   - ✅ Replaced Google Material Symbols with custom-designed icons from Game-icons.net for a unique look.
 

@@ -24,8 +24,12 @@ function initSidebar() {
             
             // Trigger map resize to handle new container dimensions
             setTimeout(() => {
-                window.dispatchEvent(new Event('resize'));
-            }, 500);
+                // Calling map.updateSize() is the correct way to tell OpenLayers
+                // that the map container has changed size.
+                if (typeof map !== 'undefined' && map) {
+                    map.updateSize();
+                }
+            }, 500); // This timeout should match the CSS transition duration for the sidebar.
         });
     }
 
@@ -34,6 +38,13 @@ function initSidebar() {
         if (!sidebar.classList.contains('collapsed')) {
             sidebar.classList.add('collapsed');
             container.classList.add('sidebar-collapsed');
+
+            // On initial load for mobile, the map might be created before the sidebar
+            // is collapsed. We need to tell the map to update its size to fill the
+            // new space, but without a timeout since there's no animation on load.
+            if (typeof map !== 'undefined' && map) {
+                map.updateSize();
+            }
         }
     }
     
