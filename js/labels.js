@@ -372,7 +372,7 @@ const mapLabels = {
         // Krythan Region Water Bodies
         { x: 390, y: 1090, name: "Queen's Lake", fontSize: 18 },
         { x: 849, y: 1156, name: "Crow Lake", fontSize: 14 },
-        { x: 190, y: 1766, name: "Krythan Swamp", fontSize: 16 }, // Not sure about the name, just thought it needed a name Question
+        { x: 190, y: 1766, name: "Krythan Swamp", fontSize: 20 }, // Not sure about the name, just thought it needed a name Question
         
         
         /* Mainland Water Bodies */

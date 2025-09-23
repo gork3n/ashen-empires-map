@@ -278,7 +278,7 @@ function initializeMap() {
     // --- Set Initial Map View ---
     // Define the center of the map using in-game (4096x4096) coordinates.
     // This makes it easy to change the starting location.
-    const initialCenterGameCoords = { x: 783, y: 677, }; // Default View is x: 742, y: 706 (Showing Lotor's Summer Palace)
+    const initialCenterGameCoords = { x: 402, y: 2222, }; // Default View is x: 742, y: 706 (Showing Lotor's Summer Palace)
 
     // Convert the in-game coordinates to OpenLayers view coordinates.
     // The map is 16384x16384, which is 4x the in-game coordinates.

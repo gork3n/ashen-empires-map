@@ -39,8 +39,8 @@ const mapMarkers = {
 
 
         /* Scorched Island Portals */
-        { x: 631, y: 2102, type: "portal_blue", tooltip: "Portal to Battle Plains" },
-        { x: 720, y: 1964, type: "portal_blue", tooltip: "Portal to Hell" },
+        { x: 631, y: 2102, type: "portal_small", tooltip: "Portal to Battle Plains" },
+        { x: 720, y: 1964, type: "portal_small", tooltip: "Portal to Hell" },
 
         
         /* Krythan Island Portals */
@@ -52,6 +52,10 @@ const mapMarkers = {
         { x: 713, y: 1753, type: "portal_small", tooltip: "Portal to Scarab Island" },
 
         // Silvest Valley Region Portals
+
+        // Scarab Island Portals
+        { x: 473, y: 2184, type: "portal_small", tooltip: "Portal to Krythan Region" },
+        //Done
 
         /* Lotor's Prison Portals */
         { x: 1486, y: 632, type: "portal_small", tooltip: "Portal to Lotor's Castle" },
@@ -223,12 +227,12 @@ const mapMarkers = {
 
         // Scarab Island Docks
         { x: 345, y: 2271, type: "dock", tooltip: "Lopal Dock" },
+        //Done
 
         // Werewolf Island Docks
         // No active docks on Werewolf Island as of now
 
         // Sands of Creation Docks
-
         // Ruhura Side Docks
         { x: 360, y: 4061, type: "dock", tooltip: "Ruhura Dock" },
 
@@ -348,6 +352,17 @@ const mapMarkers = {
         { x: 846, y: 729, type: "shop_pub", tooltip: "Docale's Pub" },
         //Done
 
+        //Scarab Island Shops
+        //Lopal Shops
+        { x: 407, y: 2194, type: "shop_carpentry", tooltip: "Ricbert's Carpentry Shop" },
+        { x: 400, y: 2196, type: "shop_generic", tooltip: "Berctuald's Farming Shop" },
+        { x: 404, y: 2221, type: "shop_pub", tooltip: "Osric's Pub" },
+        { x: 386, y: 2221, type: "shop_provisioner", tooltip: "Wulfhere's Provisioner Shop" },
+        { x: 372, y: 2221, type: "shop_weapon", tooltip: "Killjoy's Weaponry Shop" },
+        { x: 376, y: 2217, type: "shop_armor", tooltip: "Harkyn's Armor Shop" },
+        { x: 381, y: 2238, type: "shop_generic", tooltip: "Aldulf's Magic Shop" },
+        //Done
+
     ],
     
     trainers: [
@@ -383,8 +398,22 @@ const mapMarkers = {
         { x: 763, y: 683, type: "trainer", tooltip: "Alchemy Taskmaster" },
         { x: 848, y: 734, type: "trainer", tooltip: "Brewing Taskmaster" },
         { x: 836, y: 733, type: "trainer", tooltip: "Neutral Faction Officer" },
+
+        // Krythan Island Trainers
+
+        // Silvest Valley Trainers
+
+        // Krythan Trainers
         
-        
+        // Scarab Island Trainers
+        // Lopal Trainers
+        { x: 406, y: 2198, type: "trainer", tooltip: "Carpentry Taskmaster" },
+        { x: 394, y: 2198, type: "trainer", tooltip: "Farming Taskmaster" },
+        { x: 409, y: 2212, type: "trainer", tooltip: "Tailoring Taskmaster" },
+        { x: 402, y: 2227, type: "trainer", tooltip: "Brewing Taskmaster" },
+        { x: 379, y: 2215, type: "trainer", tooltip: "Blacksmith Taskmaster" },
+        { x: 361, y: 2209, type: "trainer", tooltip: "Leatherworking Taskmaster" },
+        { x: 380, y: 2236, type: "trainer", tooltip: "Alchemy Taskmaster" },
         
         
         // Add more trainers
@@ -393,6 +422,14 @@ const mapMarkers = {
     spawn_good: [
         //Valinor Island Spawns
         { x: 779, y: 141, type: "spawn_good", tooltip: "Spawn Gate" },
+
+        // Krythan Island Spawns
+        // Silvest Valley Spawns
+
+        // Krythan Region Spawns
+
+        // Scarab Island Spawns
+        { x: 440, y: 2026, type: "spawn_good", tooltip: "Good Spawn Gate" },
 
         // Sands of Creation Spawns
         // Ruhura Side Spawns
@@ -403,8 +440,17 @@ const mapMarkers = {
     ],
 
     spawn_evil: [
+        //Valinor Island Spawns
+
+
         //Krythan Island Spawns
+        // Silvest Valley Region Spawns
+
+        // Krythan Region Spawns
         { x: 777, y: 873, type: "spawn_evil", tooltip: "Evil Spawn Gate" },
+
+        // Scarab Island Spawns
+        { x: 200, y: 2135, type: "spawn_evil", tooltip: "Evil Spawn Gate" },
 
         // Sands of Creation Spawns
         // Ruhura Side Spawns
@@ -423,13 +469,16 @@ const mapMarkers = {
 
         // Krythan Island Banks
 
-        //Jeel Banks
+        // Silvest Valley Banks
+        //Fort Eastwatch
+        { x: 1353, y: 1289, type: "bank", tooltip: "Bank" },
+        // Silvest Banks
+        { x: 1098, y: 1375, type: "bank", tooltip: "Bank" },
 
-        //Hothbra Banks
+        // Krythan Banks
 
-        //Varg Banks
-
-        //Silvest Banks
+        // Scarab Island Banks
+        { x: 419, y: 2220, type: "bank", tooltip: "Bank" },
 
 
         //Mainland Banks
@@ -477,6 +526,18 @@ const mapMarkers = {
         { x: 820, y: 1044, type: "underground_stairs", tooltip: "Holendar's Mansion Basement" },
         { x: 781, y: 863, type: "underground_stairs", tooltip: "Trap Door to LSP" },
         { x: 791, y: 918, type: "underground_stairs", tooltip: "Ladder to LSP Sewer (Away from evil spawn gate)" },
+        { x: 794, y: 1576, type: "underground_stairs", tooltip: "Orc Fort Tunnels" },
+        { x: 755, y: 1540, type: "underground_stairs", tooltip: "Orc Fort Tunnels" },
+        { x: 363, y: 1465, type: "underground_dungeon", tooltip: "Talazarian Dungeon" },
+
+        // Scarab Island Undergrounds
+        { x: 273, y: 2202, type: "underground_crypt", tooltip: "Lopal Crypt" }, // Something very strange about this crypt.
+        { x: 344, y: 2137, type: "underground_mine", tooltip: "Scarab Island Mine" },
+        { x: 408, y: 2232, type: "underground_stairs", tooltip: "Lopal Catacombs" },
+
+        // Werewolf Island Undergrounds
+        { x: 319, y: 2604, type: "underground_cave", tooltip: "Werewolf Cave" },
+        { x: 298, y: 2618, type: "underground_stairs", tooltip: "Lycanth Crypt" },
 
         /* Mainland Undergrounds */
 
@@ -587,6 +648,16 @@ const mapMarkers = {
     games_of_chance: [
         /*Lotor's Summer Palace Games*/
         { x: 839, y: 730, type: "game_of_chance", tooltip: "Malson's Demon's Eye Game" },
+
+        // Krythan Island Games of Chance
+        // Silvest Valley Games of Chance
+
+        // Krythan Games of Chance
+
+        // Scarab Island Games of Chance
+        { x: 421, y: 2197, type: "game_of_chance", tooltip: "Lopal Demon Eye" },
+
+
     ],
 
     information: [
@@ -598,6 +669,11 @@ const mapMarkers = {
         { x: 772, y: 687, type: "information", tooltip: "Jamoal the Sage (Wanders) - Exchange Race Changing Scrolls NPC" },
 
         // Krythan Island Information
+        // Silvest Valley Region Information
+
+        // Krythan Region Information
+        // Verthpool Information
+        { x: 647, y: 1709, type: "information", tooltip: "Grim Demonhunter" },
 
         // Mainland Information
 
@@ -715,7 +791,7 @@ const markerStyles = {
     // Spawns
     spawn_good: {
         icon: "icons/death-spawn.svg",
-        color: "#000000", // Black
+        color: "#28a745", // A flat, visible green
     },
     spawn_evil: {
         icon: "icons/death-spawn.svg",
@@ -787,7 +863,7 @@ const markerStyles = {
     // Places of Interest
     game_of_chance: {
         icon: "icons/perspective-dice-six-faces.svg",
-        color: "#39FF14", // Neon Green
+        color: "#32CD32", // LimeGreen
     },
     information: {
         icon: "icons/info.svg",
