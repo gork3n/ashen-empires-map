@@ -60,7 +60,7 @@ const mapLabels = {
         { x: 390, y: 2183, name: "Lopal", fontSize: 30 },
 
         // Werewolf Island Cities
-        { x: 260, y: 2623, name: "Lycanth", fontSize: 30 },
+        { x: 260, y: 2633, name: "Lycanth", fontSize: 30 },
 
         // Sand of Creation Cities
         { x: 248, y: 2744, name: "Khafra", fontSize: 30 },
@@ -143,15 +143,21 @@ const mapLabels = {
         { x: 259, y: 2048, name: "Scarab Island", fontSize: 35 },
         { x: 463, y: 2495, name: "Werewolf Island", fontSize: 35 },
         { x: 350, y: 3238, name: "Dragoon Island", fontSize: 25 },
+        { x: 2117, y: 2704, name: "Obelisk Island", fontSize: 25 },
         { x: 160, y: 3792, name: "Greater Dragon Island", fontSize: 25 },
         { x: 1672, y: 1681, name: "Ettin Island", fontSize: 30 },
         { x: 3331, y: 254, name: "Northern Frost Giant Island", fontSize: 30 },
         { x: 3893, y: 1688, name: "PvP Island", fontSize: 30 },
-        { x: 248, y: 3376, name: "Artonian Island", fontSize: 20 }, // Might be called something else
+        { x: 248, y: 3376, name: "Artonian Island", fontSize: 20 }, // Might be called something else Question
         { x: 3153, y: 3192, name: "Vel Dran", fontSize: 24 },
         { x: 1823, y: 3055, name: "Chaos Island", fontSize: 24 },
+        { x: 3923, y: 3728, name: "Test Island", fontSize: 24 }, // Not suer if this island is part of the Western Isles region Question
 
-        // Sands of Creation Islands are basically the names of the cities in them.
+        // Tundria Islands
+        { x: 3799, y: 975, name: "Unnamed Island", fontSize: 20 },
+
+        // Sands of Creation Islands
+        
         
     ],
     
@@ -252,6 +258,7 @@ const mapLabels = {
         { x: 677, y: 3520, name: "Termigon Mound", fontSize: 16 }, // Changed the name from Termigon Hive to Termigon Mound, seems more fitting. Question
 
         // Battle Plains Places of Interest
+        { x: 1657, y: 2959, name: "Wasp Hive", fontSize: 16 },
 
         // Black Swamp Places of Interest
         { x: 2806, y: 3807, name: "Drakkan", fontSize: 16 },
@@ -273,7 +280,7 @@ const mapLabels = {
         { x: 2984, y: 2701, name: "Third Book Temple", fontSize: 16 },
         { x: 3468, y: 2643, name: "Horibus's Camp", fontSize: 16 },
         { x: 3099, y: 2390, name: "Zanock's Mine (East) ", fontSize: 16 },        
-        { x: 3562, y: 1924, name: "Astari Cave\n(NO ENTRY)", fontSize: 15 },
+        { x: 3562, y: 1924, name: "Cave\n(NO ENTRY)", fontSize: 15 },
         { x: 3610, y: 3621, name: "Ethera Mining Company", fontSize: 16 },
         { x: 3336, y: 3734, name: "Warg Pen", fontSize: 16 },    
 
@@ -305,6 +312,20 @@ const mapLabels = {
         
 
         // Breakwater Places of Interest
+        // New Royale Island Places of Interest
+        { x: 1351, y: 1762, name: "Pirate Raider's Camp", fontSize: 16 },
+        { x: 1784, y: 2431, name: "Athropiniax's Temple", fontSize: 16 },
+
+        // New Town Island Places of Interest
+        { x: 1924, y: 1732, name: "Undead Dwarven Fort", fontSize: 16 },
+        { x: 1945, y: 1692, name: "Deadwing's Lair", fontSize: 16 },
+        { x: 2173, y: 1510, name: "Dwarf Fortress", fontSize: 16 },
+
+        // Roycroft Island Places of Interest
+        { x: 2215, y: 2253, name: "Sea Pirate Shack", fontSize: 16 },
+        
+
+
 
         // Western Isles Places of Interest
 
@@ -351,6 +372,7 @@ const mapLabels = {
         // Krythan Region Water Bodies
         { x: 390, y: 1090, name: "Queen's Lake", fontSize: 18 },
         { x: 849, y: 1156, name: "Crow Lake", fontSize: 14 },
+        { x: 190, y: 1766, name: "Krythan Swamp", fontSize: 16 }, // Not sure about the name, just thought it needed a name Question
         
         
         /* Mainland Water Bodies */
@@ -392,10 +414,18 @@ const mapLabels = {
 
         // Breakwater Region Water Bodies
 
+        // New Royale Water Bodies
+
+        // New Town Water Bodies
+
+        // Roycroft Water Bodies
+        { x: 2270, y: 2177, name: "The Choke", fontSize: 16 },
+
         // Western Isles Water Bodies
 
         // Broken Finger Water Bodies
-        { x: 1354, y: 3513, name: "Goba Lake?", fontSize: 25 },
+        { x: 1120, y: 3660, name: "Broken Lake", fontSize: 20 }, // Not sure about the name, just thought it needed a name Question
+        { x: 1354, y: 3513, name: "Obsidian Lake", fontSize: 25 }, // Kiddy Pond of Goba lol. Affectionately known as Knitting Lake by some. 
 
         // Sands of Creation Water Bodies
         // Ruhura Side Water Bodies

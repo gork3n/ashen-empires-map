@@ -53,6 +53,9 @@ const mapMarkers = {
 
         // Silvest Valley Region Portals
 
+        /* Lotor's Prison Portals */
+        { x: 1486, y: 632, type: "portal_small", tooltip: "Portal to Lotor's Castle" },
+
         /* Mainland Portals */
 
         // Darkwoods Forest Portals
@@ -66,6 +69,7 @@ const mapMarkers = {
         
 
         // Battle Plains Portals
+        { x: 1601, y: 3078, type: "portal_small", tooltip: "Portal to Scorched Island" },
         { x: 2264, y: 3706, type: "portal_lsp", tooltip: "Portal to Proudblood Valley" },
         { x: 1964, y: 3652, type: "portal_small", tooltip: "Exit Proudblood Valley" },
 
@@ -109,28 +113,35 @@ const mapMarkers = {
 
         // Whirlpool Portals
         // Near Broken Finger 
-        { x: 1469, y: 3714, type: "portal_whirlpool", tooltip: "Whirlpool to Goba Lake" }, // Lake name may change - in Broken Bay
-        { x: 1539, y: 3697, type: "portal_whirlpool", tooltip: "Whirlpool to Broken Bay" }, // in Goba Lake
-        { x: 1078, y: 3534, type: "portal_whirlpool", tooltip: "Whirlpool to Proudblood Sound" }, // Not sure about the name - in Goba Lake
+        { x: 1469, y: 3714, type: "portal_whirlpool", tooltip: "Whirlpool to Obsidian Lake" }, // Lake name may change - in Obsidian Lake
+        { x: 1539, y: 3697, type: "portal_whirlpool", tooltip: "Whirlpool to Broken Lake" }, // in Obsidian Lake
+        { x: 1078, y: 3534, type: "portal_whirlpool", tooltip: "Whirlpool to Proudblood Sound" }, // Not sure about the name - in Obsidian Lake
         
 
         // Near Chlera
-        { x: 2311, y: 3724, type: "portal_whirlpool", tooltip: "Whirlpool to Goba Lake" }, // Lake name may change - in Proudblood Sound
-        { x: 2557, y: 3667, type: "portal_whirlpool", tooltip: "Whirlpool to Lotor's Prison" }, // in Chlera Bay name of Chlera Bay may change
+        { x: 2311, y: 3724, type: "portal_whirlpool", tooltip: "Whirlpool to Obsidian Lake" }, // Near Chlera Dock
+        { x: 2557, y: 3667, type: "portal_whirlpool", tooltip: "Whirlpool to Lotor's Prison" }, // Near Chlera Dock
 
         // Near Test Island
+        { x: 4001, y: 4001, type: "portal_whirlpool", tooltip: "Whirlpool to Jeel Docks" }, // South of Test Island near Ethera Palace Docks
 
         // Near PVP Island
+        { x: 4015, y: 2426, type: "portal_whirlpool", tooltip: "Whirlpool to Silvest Bay" }, // Near Death Tyrant Valley - Glamara McPlum's Dock
 
         // Near Scarab Island
+        { x: 31, y: 2228, type: "portal_whirlpool", tooltip: "Whirlpool to Tundria East of Duremar" }, // Near Lopal and Khafra Fishing Outpost Dock
 
         // Near Silvest Valley
+        { x: 1243, y: 1549, type: "portal_whirlpool", tooltip: "Whirlpool to East Highlands of Death Tyrant Valley" }, // Near Glamara McPlum's and Parian Dock
 
         // Near Guild Arena Island
+        { x: 64, y: 848, type: "portal_whirlpool", tooltip: "Whirlpool to South of Test Island" }, // Closest Dock Ethera Palace Dock
 
         // Near Lotor's Prison
+        { x: 1472, y: 632, type: "portal_whirlpool", tooltip: "Whirlpool to Chlera Bay" }, // Near Lotor's Prison - Karzak Cove Dock and LSP Dock
 
         // Near Duremar
+        { x: 3999, y: 948, type: "portal_whirlpool", tooltip: "Whirlpool to Scarab Island" }, // Near Duremar Dock
  
     ],
     
@@ -188,10 +199,18 @@ const mapMarkers = {
         { x: 3542, y: 1583, type: "dock", tooltip: "North Highlands Dock" },
 
         // Western Isles Docks
+        { x: 1707, y: 1837, type: "dock", tooltip: "Ettin Island Dock" },
 
         // Valley of Giants Docks
+        // No Docks here to see
 
         // Heartwood Coast Docks
+        { x: 2592, y: 2184, type: "dock", tooltip: "Valmond East Dock" },
+        { x: 2592, y: 2196, type: "dock", tooltip: "Valmond East Dock" },
+        { x: 2655, y: 2117, type: "dock", tooltip: "Valmond North Dock" },
+        { x: 2663, y: 2131, type: "dock", tooltip: "Valmond North Dock" },
+        { x: 2678, y: 2131, type: "dock", tooltip: "Valmond North Dock" },
+        { x: 2424, y: 1642, type: "dock", tooltip: "Teylan Dock" },
         { x: 3514, y: 1571, type: "dock", tooltip: "Heartwood North Dock (Northeast of Syldural)" },
 
         // Tundria Docks
@@ -203,8 +222,10 @@ const mapMarkers = {
         { x: 1989, y: 1267, type: "dock", tooltip: "Maroven Dock" },
 
         // Scarab Island Docks
+        { x: 345, y: 2271, type: "dock", tooltip: "Lopal Dock" },
 
         // Werewolf Island Docks
+        // No active docks on Werewolf Island as of now
 
         // Sands of Creation Docks
 
@@ -219,6 +240,23 @@ const mapMarkers = {
         { x: 212, y: 2753, type: "dock", tooltip: "Khafra Dock" },
 
         // Breakwater Region Docks
+        // New Town Island Docks
+        { x: 1974, y: 1904, type: "dock", tooltip: "New Town Dock" },
+        { x: 1843, y: 1752, type: "dock", tooltip: "Undead Dwarven Dock" },
+        { x: 1797, y: 1708, type: "dock", tooltip: "Deadman Island Dock" },
+
+        // Roycroft Island Docks
+        { x: 2517, y: 2417, type: "dock", tooltip: "Roycroft North Dock" },
+        { x: 2451, y: 2518, type: "dock", tooltip: "Roycroft South Dock" },
+        { x: 2460, y: 2518, type: "dock", tooltip: "Roycroft South Dock" },
+        { x: 2469, y: 2518, type: "dock", tooltip: "Roycroft South Dock" },
+
+        // New Royale Island Docks
+        { x: 1335, y: 1768, type: "dock", tooltip: "Pirate Raider's Dock" },
+        { x: 1440, y: 1929, type: "dock", tooltip: "New Royal North Dock" },
+        { x: 1300, y: 2028, type: "dock", tooltip: "New Royal South Dock" },
+        { x: 1658, y: 2302, type: "dock", tooltip: "New Royal Island South Dock" },
+
 
         // Broken Finger Region Docks
         { x: 1148, y: 3771, type: "dock", tooltip: "Broken Finger Town Dock" },
@@ -457,7 +495,7 @@ const mapMarkers = {
         { x: 681, y: 3320, type: "underground_dungeon", tooltip: "Cathedral of Joyous Afterlife (South Entrance)" },
 
         // Highlands Region Undergrounds
-        { x: 3562, y: 1928, type: "underground_closed", tooltip: "Astari Cave (CLOSED)" },
+        { x: 3562, y: 1928, type: "underground_closed", tooltip: "Cave (CLOSED)" }, // Used to be Astari Cave but it's closed now
         { x: 3240, y: 3607, type: "underground_cave", tooltip: "Grell" },
         { x: 3336, y: 3596, type: "underground_stairs", tooltip: "Grell Tunnels" },
         { x: 2889, y: 2883, type: "underground_stairs", tooltip: "Badlands Cave" }, // I'm adding this to Highlands but it could be a part of Battle Plains
@@ -496,12 +534,13 @@ const mapMarkers = {
         { x: 3193, y: 1882, type: "snake_pit", tooltip: "Valmond Skeleton Pit" },
 
         // Tundria Region Undergrounds
-        { x: 2306, y: 1369, type: "underground_cave", tooltip: "Zule Cavern Entrance" },
+        { x: 2306, y: 1369, type: "underground_cave", tooltip: "Icebane's Cavern Entrance" },
         { x: 2042, y: 1394, type: "underground_crypt", tooltip: "Maroven Crypt" },
         { x: 1992, y: 1210, type: "underground_crypt", tooltip: "Maroven Crypt" },
         { x: 2777, y: 595, type: "underground_dungeon", tooltip: "Hammerfist Mine Entrance" },
         { x: 2874, y: 965, type: "underground_cave", tooltip: "Web Spinner Spider Cave" },
         { x: 3526, y: 1265, type: "underground_crypt", tooltip: "Duremar Tomb" },
+        { x: 3785, y: 987, type: "underground_crypt", tooltip: "Unknown Crypt" }, // A Crypt with Greater Skeletons Question
         { x: 2552, y: 440, type: "underground_dungeon", tooltip: "Frieda's Dungeon" },
         { x: 2888, y: 423, type: "underground_dungeon", tooltip: "Artraxis Dungeon" },
 
@@ -525,6 +564,18 @@ const mapMarkers = {
         { x: 78, y: 3354, type: "underground_cave", tooltip: "Khafra Elemental Cave" },
 
         // Breakwater Region Undergrounds
+        // New Town Island Undergrounds
+        { x: 1944, y: 1695, type: "underground_crypt", tooltip: "Darkwing's Lair Entrance" },
+        { x: 2038, y: 1832, type: "underground_dungeon", tooltip: "Cyclops and Lion Cave" }, // I was thinking of changing the name to New Town Mine but haven't found any info on that
+        { x: 2174, y: 1517, type: "underground_mine", tooltip: "Zule's Cave Entrance" },
+
+        // Roycroft Island Undergrounds
+        { x: 2215, y: 2260, type: "underground_stairs", tooltip: "Son of Scalo's Hideout" },
+        { x: 2458, y: 2357, type: "underground_stairs", tooltip: "Warehouse Basement" },
+        { x: 2310, y: 2198, type: "underground_stairs", tooltip: "Underground Pass to Northern Roycroft Island" },
+        { x: 2310, y: 2184, type: "underground_stairs", tooltip: "Underground Pass to Southern Roycroft Island" },
+
+        // New Royale Island Undergrounds
 
         // Broken Finger Region Undergrounds
         { x: 1144, y: 3658, type: "underground_dungeon", tooltip: "Broken Finger Dungeon" },
@@ -612,7 +663,7 @@ const markerStyles = {
     },
     portal_whirlpool: {
         icon: "icons/whirlwind.svg", // Using vortex for whirlpool portals
-        color: "#4682B4", // SteelBlue
+        color: "#00CADD", // LightSkyBlue
     },
     dock: {
         icon: "icons/anchor.svg",
