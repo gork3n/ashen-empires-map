@@ -178,7 +178,7 @@ function createMarkerToggleButtons() {
     container.innerHTML = '';
     
     const markerCategories = [
-        { id: 'portals', name: 'Portals', type: 'portal' },
+        { id: 'portals', name: 'Portals', type: 'portal_lsp' },
         { id: 'docks', name: 'Docks', type: 'dock' },
         { id: 'quests', name: 'Quests', type: 'quest' },
         { id: 'shops', name: 'Shops', type: 'shop_generic' },

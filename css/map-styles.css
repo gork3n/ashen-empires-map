@@ -276,9 +276,9 @@ input:checked + .slider:before {
 #show-all-labels,
 #show-all-markers,
 #show-all-monsters {
-    width: 330px; /* 3 * 100px columns + 2 * 15px gaps */
-    margin-left: auto;
-    margin-right: auto;
+    grid-column: 1 / -1; /* Span all columns of the grid */
+    width: auto; /* Let the grid handle the width */
+    margin: 0 auto 10px; /* Center and add bottom margin */
     justify-content: center; /* Center the icon and text inside */
 }
 
