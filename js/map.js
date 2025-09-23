@@ -5,7 +5,7 @@ let markerLayers = {};
 let markerTooltipElement;
 let markerTooltipOverlay;
 const styleCache = {};
-const customMarkerCanvases = {};
+const markerImageCache = {};
 
 // Define custom styles for different label categories
 const labelStyles = {
@@ -232,7 +232,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.fonts.ready.then(function () {
         // Preload and tint icons, then initialize the map. This ensures that
         // custom colors can be applied to SVGs that have hardcoded fill colors.
-        preloadAndTintIcons().then(() => {
+        preloadIcons().then(() => {
             initializeMap();
             // Dispatch a custom event to notify other scripts that the map and icons are ready.
             document.dispatchEvent(new CustomEvent('map-ready'));
@@ -241,30 +241,22 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 /**
- * Preloads SVG icons and tints them with their specified color.
- * The tinted versions are stored as canvas elements in `customMarkerCanvases`.
+ * Preloads SVG icons used for markers.
+ * The loaded images are stored in `markerImageCache`.
  * @returns {Promise} A promise that resolves when all icons are processed.
  */
-function preloadAndTintIcons() {
+function preloadIcons() {
     const promises = Object.entries(markerStyles).map(([type, styleProps]) => {
         return new Promise((resolve) => {
             const img = new Image();
             img.crossOrigin = 'Anonymous'; // Needed for canvas security
             img.onload = function() {
-                const canvas = document.createElement('canvas');
-                canvas.width = img.width;
-                canvas.height = img.height;
-                const ctx = canvas.getContext('2d', { willReadFrequently: true }); // Add hint for performance
-                ctx.drawImage(img, 0, 0);
-                ctx.globalCompositeOperation = 'source-in';
-                ctx.fillStyle = styleProps.color;
-                ctx.fillRect(0, 0, canvas.width, canvas.height);
-                customMarkerCanvases[type] = canvas;
+                markerImageCache[type] = img;
                 resolve();
             };
             img.onerror = function() {
-                console.error(`Failed to load icon for tinting: ${styleProps.icon}.`);
-                customMarkerCanvases[type] = null; // Mark as failed
+                console.error(`Failed to load icon: ${styleProps.icon}.`);
+                markerImageCache[type] = null; // Mark as failed
                 resolve();
             };
             img.src = styleProps.icon;
@@ -589,97 +581,78 @@ function createLabelImageStyle(text, fontSize, styleOptions = {}) {
 }
 
 /**
- * Creates a marker style with a circular background and a foreground SVG icon.
- * This replicates the look of the original canvas-based markers.
+ * Creates a marker style with a colored circular background and a white foreground icon.
+ * This replicates the look of modern map markers and combines them into a single canvas
+ * so they scale together.
  * @param {string} markerType - Type of marker, corresponding to a key in `markerStyles`.
- * @returns {Array<ol.style.Style>} An array of OpenLayers style objects (background and foreground).
+ * @returns {ol.style.Style} A single OpenLayers style object.
  */
 function createMarkerStyle(markerType) {
-    // Use a new cache key to avoid conflicts with the old single-style markers.
-    const cacheKey = `marker-bg-${markerType}`;
+    const cacheKey = `marker-v2-${markerType}`;
     if (styleCache[cacheKey]) {
         return styleCache[cacheKey];
     }
 
-    // Get the style properties from markerStyles in markers.js
     const styleProps = markerStyles[markerType] || {
         icon: 'icons/info.svg', // A fallback icon
         color: '#FF0000'
     };
 
-    // --- 1. Create the background style using a canvas ---
-    const bgCanvas = document.createElement('canvas');
-    const circleDiameter = 23; // Increased size to properly frame the large icons
-    const shadowBlur = 0;    // Shadow is removed for perfect centering.
-    const shadowOffsetY = 0; // Shadow is removed for perfect centering.
-    const border = 1.5;
-    // Canvas must be large enough for the circle, its border, and its shadow.
-    const canvasSize = circleDiameter + (border * 2);
-    bgCanvas.width = canvasSize;
-    bgCanvas.height = canvasSize;
-    const ctx = bgCanvas.getContext('2d', { willReadFrequently: true });
+    // --- 1. Define Marker and Canvas Sizes ---
+    const backgroundDiameter = 28;
+    const iconSize = backgroundDiameter * 0.6;
+    const border = 2;
+    const shadowBlur = 3;
+    const shadowOffsetY = 2;
+
+    // The canvas must be large enough for the circle, its border, and its shadow.
+    const canvasPadding = (border * 2) + (shadowBlur * 2);
+    const canvasSize = Math.ceil(backgroundDiameter + canvasPadding);
     const center = canvasSize / 2;
 
-    // Add a shadow for depth.
-    ctx.shadowColor = 'rgba(0, 0, 0, 0.6)';
+    // --- 2. Create the composite canvas ---
+    const finalCanvas = document.createElement('canvas');
+    finalCanvas.width = canvasSize;
+    finalCanvas.height = canvasSize;
+    const ctx = finalCanvas.getContext('2d', { willReadFrequently: true });
+
+    // --- 3. Draw Drop Shadow and Background Circle ---
+    ctx.shadowColor = 'rgba(0, 0, 0, 0.3)';
     ctx.shadowBlur = shadowBlur;
     ctx.shadowOffsetY = shadowOffsetY;
 
-    // Create a top-to-bottom linear gradient for the background.
-    const gradient = ctx.createLinearGradient(0, center - (circleDiameter / 2), 0, center + (circleDiameter / 2));
-    gradient.addColorStop(0, 'rgba(40, 55, 70, 0.9)');
-    gradient.addColorStop(1, 'rgba(15, 25, 35, 0.9)');
-
-    // Draw the circle at the center of the canvas.
+    // Draw the colored circle. The shadow is applied automatically.
+    ctx.fillStyle = styleProps.color;
     ctx.beginPath();
-    ctx.arc(center, center, circleDiameter / 2, 0, 2 * Math.PI);
-    ctx.fillStyle = gradient;
+    ctx.arc(center, center - (shadowOffsetY / 2), backgroundDiameter / 2, 0, 2 * Math.PI);
     ctx.fill();
 
-    // Add a subtle border. Disable the shadow for the border itself.
-    ctx.shadowColor = 'transparent';
-    ctx.strokeStyle = 'rgba(100, 120, 140, 0.9)';
+    // --- 4. Draw Border and Icon ---
+    ctx.shadowColor = 'transparent'; // Disable shadow for the next elements
+
+    // Draw the white border
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.75)';
     ctx.lineWidth = border;
     ctx.stroke();
 
-    const backgroundStyle = new ol.style.Style({
+    // Draw the white icon on top
+    const foregroundIconImage = markerImageCache[markerType];
+    if (foregroundIconImage) {
+        const iconX = center - (iconSize / 2);
+        const iconY = center - (iconSize / 2) - (shadowOffsetY / 2);
+        ctx.drawImage(foregroundIconImage, iconX, iconY, iconSize, iconSize);
+    }
+
+    // --- 5. Create a single style from the composite canvas ---
+    const newStyle = new ol.style.Style({
         image: new ol.style.Icon({
-            img: bgCanvas,
+            img: finalCanvas,
             imgSize: [canvasSize, canvasSize],
-            scale: 1, // The canvas is already the desired size.
+            scale: 1.0, 
         })
     });
 
-    // --- 2. Create the foreground icon style ---
-    const foregroundIconCanvas = customMarkerCanvases[markerType];
-
-    const iconOptions = {
-        // Set the scale for the icon. A larger value makes the icon bigger.
-        scale: 0.12,
-        // No displacement is needed as there is no shadow.
-        displacement: [0, 0],
-    };
-
-    if (foregroundIconCanvas) {
-        // If we have a pre-rendered canvas, use it directly via the `img` property.
-        // This prevents OpenLayers from creating its own internal canvas for hit detection,
-        // which is what causes the `willReadFrequently` console warning.
-        iconOptions.img = foregroundIconCanvas;
-        // When providing a canvas via `img`, we must also provide its size.
-        iconOptions.imgSize = [foregroundIconCanvas.width, foregroundIconCanvas.height];
-    } else {
-        // Fallback to the original icon path if pre-rendering failed.
-        iconOptions.src = styleProps.icon;
-    }
-
-    const foregroundStyle = new ol.style.Style({
-        image: new ol.style.Icon(iconOptions)
-    });
-    
-    // --- 3. Combine and cache ---
-    // An array of styles will be rendered in order by OpenLayers.
-    const newStyle = [backgroundStyle, foregroundStyle];
-
+    // --- 6. Cache and return ---
     styleCache[cacheKey] = newStyle;
     return newStyle;
 }

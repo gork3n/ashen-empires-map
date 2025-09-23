@@ -204,9 +204,12 @@ function createMarkerToggleButtons() {
 
         // Add icon (now an <img> for SVG)
         const iconImg = document.createElement('img');
-        // Use the pre-tinted canvas. Convert to data URL for the src attribute.
-        const tintedCanvas = customMarkerCanvases[category.type];
-        iconImg.src = tintedCanvas ? tintedCanvas.toDataURL() : (style?.icon || 'icons/information.svg');
+        
+        // Create the composite marker style to get the final canvas image, ensuring
+        // the sidebar icon perfectly matches the map marker.
+        const markerStyle = createMarkerStyle(category.type);
+        const markerCanvas = markerStyle.getImage().getImage(); // ol.style.Style -> ol.style.Icon -> HTMLCanvasElement
+        iconImg.src = markerCanvas.toDataURL();
         iconImg.alt = category.name;
         iconImg.className = `toggle-btn-icon-img ${animationClass}`;
         button.appendChild(iconImg);
