@@ -145,49 +145,6 @@ html, body {
     user-select: none;
 }
 
-.sidebar-icons {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 15px;
-}
-
-.sidebar-icon {
-    width: 30px;
-    height: 30px;
-    margin-bottom: 10px;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    border-radius: 4px;
-    font-size: 16px;
-}
-
-.sidebar-icon:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-.icon-tooltip {
-    position: absolute;
-    left: 55px;
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 5px 10px;
-    border-radius: 4px;
-    font-size: 12px;
-    font-weight: 400;
-    white-space: nowrap;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.2s;
-}
-
-.sidebar-icon:hover .icon-tooltip {
-    visibility: visible;
-    opacity: 1;
-}
-
 /* Page footer */
 .page-footer {
     position: fixed;
@@ -215,19 +172,6 @@ html, body {
     line-height: 20px; /* Helps with vertical alignment */
     flex-shrink: 0; /* Prevent coordinates from being squished */
     white-space: nowrap;
-}
-
-.dev-status {
-    color: #a0a0a0;
-    font-size: 18px;
-    font-style: italic;
-    flex-grow: 1;
-    text-align: center;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    min-width: 0; /* Allow shrinking */
-    margin: 0 20px;
 }
 
 .footer-right {
@@ -278,23 +222,6 @@ input:checked + .slider {
 
 input:checked + .slider:before {
     transform: translateX(20px);
-}
-
-/* Marker styles */
-.map-marker {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    cursor: pointer;
-    z-index: 500;
-    background: rgba(0, 0, 0, 0.76);
-    border-radius: 50%;
-    width: 14px;
-    height: 14px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 1px 3px rgb(0, 0, 0);
-    border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 /* Tooltip styles */
@@ -437,7 +364,6 @@ input:checked + .slider:before {
 
 /* Target only the text span, not the icon span */
 .toggle-btn span:not(.material-symbols-outlined) {
-    flex: 1; /* Allow text to take up remaining space */
     overflow: hidden; /* Hide text that overflows */
     opacity: 1; /* Visible by default */
 }
@@ -459,27 +385,6 @@ input:checked + .slider:before {
 @keyframes g-icon-beat {
   0%, 100% { transform: scale(1); }
   50% { transform: scale(1.25); }
-}
-
-/* Crosshair lines for testing */
-.crosshair-line {
-    position: absolute;
-    background-color: rgba(255, 0, 0, 0.7);
-    pointer-events: none;
-    z-index: 10;
-    display: none; /* Hidden by default */
-}
-
-.crosshair-line-v {
-    width: 1px;
-    height: 100%;
-    top: 0;
-}
-
-.crosshair-line-h {
-    height: 1px;
-    width: 100%;
-    left: 0;
 }
 
 /* --- Quick Tips Container --- */
@@ -690,11 +595,6 @@ input:checked + .slider:before {
     color: #ccc;
 }
 
-/* Toggle button for the mobile info panel, hidden by default on desktop */
-.modal-info-toggle {
-    display: none;
-}
-
 /* --- Mobile Filters Button --- */
 .mobile-filters-btn {
     display: flex;
@@ -729,39 +629,6 @@ input:checked + .slider:before {
 }
 
 @media (max-width: 1024px) {
-    /* On mobile, hide the dev status text in the footer to prevent squishing */
-    .dev-status {
-        display: none;
-    }
-
-    .modal-info-container.collapsed {
-        max-height: 40px; /* When collapsed, show only the toggle button height */
-        overflow: hidden; /* Hide the rest of the content */
-    }
-
-    .modal-info-container.collapsed .modal-info-content-wrapper {
-        display: none;
-    }
-
-    .modal-info-toggle {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-        height: 40px;
-        padding: 0 15px;
-        background-color: #2a2a2a;
-        border: none;
-        color: white;
-        cursor: pointer;
-    }
-
-    .modal-info-title {
-        margin: 0;
-        font-size: 1em;
-        font-weight: 500;
-        color: #F5D76E;
-    }
 }
 
 /* Styles for very small screens (e.g., small phones in portrait mode) */

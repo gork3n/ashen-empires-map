@@ -36,7 +36,7 @@ An interactive map for Ashen Empires with pixel-perfect coordinates and multiple
 - **Dynamic Markers & Labels**:
   - Markers for various categories including docks, shops, trainers, and more.
   - Portals are broken down into distinct types (Lotor's Palace, Ancient, Whirlpool, etc.) each with a unique, color-coded icon for easy identification.
-  - A stylized circular background for all markers to ensure visibility.
+  - Markers are styled as colored circles with a white icon, providing excellent contrast and readability.
   - Tooltips on hover for all markers and major labels.
   - Labels dynamically scale their font size based on the zoom level, ensuring optimal legibility from any distance.
 - **Info Flyout Panel**: Click on major location labels (like "Valinor") to open a panel that slides up from the bottom, providing detailed information about that location without leaving the main map.
@@ -55,7 +55,7 @@ This project is built using **OpenLayers**, chosen for its superior handling of 
   - `tips.js`: Powers the quick tips bar and modal.
   - `labels.js`, `markers.js`, `detail-maps.js`: Data files defining all labels, markers, and sub-map configurations.
 - **Dynamic Styling & Rendering**:
-  - **Markers**: SVG icons are pre-loaded and tinted on the fly with their designated colors. They are then layered on top of a dynamically drawn canvas background.
+  - **Markers**: A colored circular background and a white foreground icon are drawn onto a single composite canvas. This ensures both elements scale together perfectly and provides a modern, clean look.
   - **Labels**: Labels are rendered to a canvas with custom fonts, gradients, and backgrounds. Their font size scales dynamically with the map's zoom level.
 - **Responsive UI Framework**: A mobile-first approach using CSS Flexbox, Grid, and media queries creates a fluid layout that adapts to any screen size. The UI is unified across desktop and mobile for a consistent experience.
 - **Coordinate System**: The map accurately translates between the 16384x16384 tile-based map and the 4096x4096 in-game coordinate system, ensuring all displayed coordinates are correct.

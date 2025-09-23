@@ -468,12 +468,12 @@ const mapMarkers = {
         /* Krythan Island Undergrounds */
 
         // Region: Silvest Valley Undergrounds
-        { x: 967, y: 1348, type: "snake_pit", tooltip: "Snake Pit" },
+        { x: 967, y: 1348, type: "underground_snake", tooltip: "Snake Pit" },
         { x: 907, y: 1031, type: "underground_crypt", tooltip: "Krythan Crypt" }, 
         { x: 1098, y: 1184, type: "underground_mine", tooltip: "Cliffside Mines" },
 
         // Region: Krythan Undergrounds
-        { x: 327, y: 742, type: "snake_pit", tooltip: "Snake pit" },
+        { x: 327, y: 742, type: "underground_snake", tooltip: "Snake pit" },
         { x: 820, y: 1044, type: "underground_stairs", tooltip: "Holendar's Mansion Basement" },
         { x: 781, y: 863, type: "underground_stairs", tooltip: "Trap Door to LSP" },
         { x: 791, y: 918, type: "underground_stairs", tooltip: "Ladder to LSP Sewer (Away from evil spawn gate)" },
@@ -484,10 +484,10 @@ const mapMarkers = {
         { x: 1464, y: 2676, type: "underground_spider", tooltip: "Shadow Spider Cave" },
         { x: 1655, y: 2679, type: "underground_cave", tooltip: "Swamp Beast Cave" },
         { x: 1573, y: 2658, type: "underground_cave", tooltip: "Swamp Beast Cave" },
-        { x: 838, y: 3270, type: "scorpion_pit", tooltip: "Scorpion Pit" },
-        { x: 760, y: 3323, type: "termigon_mound", tooltip: "Termigon Pit" },
+        { x: 838, y: 3270, type: "underground_scorpion", tooltip: "Scorpion Pit" },
+        { x: 760, y: 3323, type: "underground_termigon", tooltip: "Termigon Pit" },
         { x: 800, y: 3336, type: "underground_mine", tooltip: "South Astari Rune Shelter" },
-        { x: 474, y: 3432, type: "snake_pit", tooltip: "Whisperdale Snake Pit" },
+        { x: 474, y: 3432, type: "underground_snake", tooltip: "Whisperdale Snake Pit" },
         { x: 1272, y: 3032, type: "underground_ant", tooltip: "Dunmarrow Fire Ant Pit" },
         { x: 1431, y: 3046, type: "underground_crypt", tooltip: "McKelsky Crypt" },
         { x: 483, y: 3507, type: "underground_dungeon", tooltip: "Marsh Dungeon" },
@@ -511,7 +511,7 @@ const mapMarkers = {
         { x: 2137, y: 3156, type: "underground_cave", tooltip: "Desprail Cave" },
         { x: 2291, y: 2780, type: "underground_cave", tooltip: "Badlands Cave" },
         { x: 2010, y: 2676, type: "underground_dungeon", tooltip: "Deep Shadow Temple" },
-        { x: 3273, y: 3991, type: "snake_pit", tooltip: "Krog Snake Pit" },
+        { x: 3273, y: 3991, type: "underground_snake", tooltip: "Krog Snake Pit" },
 
         // Black Swamp Region Undergrounds
         { x: 2824, y: 3624, type: "underground_sewer", tooltip: "Krog Sewer" },
@@ -531,7 +531,7 @@ const mapMarkers = {
         // Heartwood Coast Undergrounds
         { x: 3080, y: 1608, type: "underground_crypt", tooltip: "Gnobol Mauseleum Crypt" },
         { x: 3274, y: 1634, type: "underground_cave", tooltip: "Syldural" },
-        { x: 3193, y: 1882, type: "snake_pit", tooltip: "Valmond Skeleton Pit" },
+        { x: 3193, y: 1882, type: "underground_snake", tooltip: "Valmond Skeleton Pit" },
 
         // Tundria Region Undergrounds
         { x: 2306, y: 1369, type: "underground_cave", tooltip: "Icebane's Cavern Entrance" },
@@ -637,13 +637,9 @@ const mapMarkers = {
 // The 'icon' property should be the path to the SVG file.
 const markerStyles = {
     // Portals & Docks
-    portal: {
-        icon: "icons/portal.svg",
-        color: "#FFD700", // Gold
-    },
     portal_lsp: {
         icon: "icons/lsp-portal.svg",
-        color: "#FFD700", // Gold - Same as main portal for now
+        color: "#B8860B", // DarkGoldenrod - for better contrast on desert
     },
     portal_blue: {
         icon: "icons/blue-portal.svg", // Using dungeon gate for blue instance portals
@@ -673,10 +669,6 @@ const markerStyles = {
     // Quests
     quest: {
         icon: "icons/scroll-unfurled.svg",
-        color: "#FFD700", // Gold
-    },
-    quest_dynamic: {
-        icon: "icons/jeweled-chalice.svg",
         color: "#FFD700", // Gold
     },
 
@@ -733,16 +725,12 @@ const markerStyles = {
     // Bank
     bank: {
         icon: "icons/bank.svg",
-        color: "#DBC12F", // Gold
+        color: "#c9b128ff", // GoldenRod
     },
 
     // Crafting
     obelisk: {
         icon: "icons/crystal-shrine.svg",
-        color: "#9370DB", // MediumPurple
-    },
-    rune_spire: {
-        icon: "icons/rune-spire.svg",
         color: "#9370DB", // MediumPurple
     },
 
@@ -787,28 +775,16 @@ const markerStyles = {
         icon: "icons/long-legged-spider.svg",
         color: "#d36517ff", // SaddleBrown
     },
+    underground_snake: {
+        icon: "icons/snake.svg",
+        color: "#d36517ff", // SaddleBrown
+    },
+    underground_termigon: {
+        icon: "icons/mite.svg",
+        color: "#d36517ff", // SaddleBrown
+    },
     
     // Places of Interest
-    snake_pit: {
-        icon: "icons/snake.svg",
-        color: "#d36517ff", // SaddleBrown - same color as other undergrounds
-    },
-    scorpion_pit: {
-        icon: "icons/scorpion.svg",
-        color: "#d36517ff", // SaddleBrown - same color as other undergrounds
-    },
-    spider_pit: {
-        icon: "icons/long-legged-spider.svg",
-        color: "#d36517ff", // SaddleBrown - same color as other undergrounds
-    },
-    ant_mound: {
-        icon: "icons/ant.svg",
-        color: "#00BFFF", // DeepSkyBlue - same as information
-    },
-    termigon_mound: {
-        icon: "icons/mite.svg",
-        color: "#00BFFF", // DeepSkyBlue - same as information
-    },
     game_of_chance: {
         icon: "icons/perspective-dice-six-faces.svg",
         color: "#39FF14", // Neon Green
@@ -816,5 +792,9 @@ const markerStyles = {
     information: {
         icon: "icons/info.svg",
         color: "#00BFFF", // DeepSkyBlue
+    },
+    event: {
+        icon: "icons/ticket.svg",
+        color: "#FF1493", // DeepPink
     }
 };

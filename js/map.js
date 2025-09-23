@@ -278,7 +278,7 @@ function initializeMap() {
     // --- Set Initial Map View ---
     // Define the center of the map using in-game (4096x4096) coordinates.
     // This makes it easy to change the starting location.
-    const initialCenterGameCoords = { x: 742, y: 706, }; // Default View is x: 742, y: 706 (Showing Lotor's Summer Palace)
+    const initialCenterGameCoords = { x: 783, y: 677, }; // Default View is x: 742, y: 706 (Showing Lotor's Summer Palace)
 
     // Convert the in-game coordinates to OpenLayers view coordinates.
     // The map is 16384x16384, which is 4x the in-game coordinates.
@@ -350,9 +350,6 @@ function initializeMap() {
     initializeCoordinateDisplay();
     // Set up the new info flyout panel
     setupInfoFlyout();
-
-    // Add crosshair for testing
-    initializeCrosshair(map);
 
     // --- Add click listener for features ---
     map.on('click', function(evt) {
@@ -600,7 +597,7 @@ function createMarkerStyle(markerType) {
 
     // --- 1. Define Marker and Canvas Sizes ---
     const backgroundDiameter = 28;
-    const iconSize = backgroundDiameter * 0.6;
+    const iconSize = backgroundDiameter * 0.74; // Further increased icon size by ~2px
     const border = 2;
     const shadowBlur = 3;
     const shadowOffsetY = 2;
@@ -884,45 +881,6 @@ function setupMarkerTooltips(map) {
     
     // Hide tooltip when map is moved
     map.on('movestart', tooltipMoveStartHandler);
-}
-/**
- * Initializes a crosshair overlay on a map instance for coordinate testing.
- * @param {ol.Map} mapInstance The OpenLayers map to attach the crosshair to.
- */
-function initializeCrosshair(mapInstance) {
-    const mapElement = mapInstance.getTargetElement();
-    if (!mapElement) return;
-
-    // Create crosshair elements
-    const vLine = document.createElement('div');
-    vLine.className = 'crosshair-line crosshair-line-v';
-    const hLine = document.createElement('div');
-    hLine.className = 'crosshair-line crosshair-line-h';
-
-    // Append to the map container
-    mapElement.appendChild(vLine);
-    mapElement.appendChild(hLine);
-
-    // Show and move crosshair on pointer move
-    mapInstance.on('pointermove', function(evt) {
-        if (evt.dragging) return;
-
-        const mapRect = mapElement.getBoundingClientRect();
-        const x = evt.originalEvent.clientX - mapRect.left;
-        const y = evt.originalEvent.clientY - mapRect.top;
-
-        vLine.style.left = `${x}px`;
-        hLine.style.top = `${y}px`;
-
-        vLine.style.display = 'block';
-        hLine.style.display = 'block';
-    });
-
-    // Hide crosshair when pointer leaves the map
-    mapInstance.getViewport().addEventListener('mouseout', function() {
-        vLine.style.display = 'none';
-        hLine.style.display = 'none';
-    });
 }
 
 // Replace the MousePosition control code with this custom implementation
