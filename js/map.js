@@ -361,11 +361,10 @@ function initializeMap() {
         });
 
         if (feature) {
-            // Use the 'name' for labels or 'tooltip' for markers as the key.
-            const dataKey = feature.get('name') || feature.get('tooltip');
+            const details = feature.get('details');
 
-            if (dataKey && typeof detailMapData !== 'undefined' && detailMapData[dataKey]) {
-                showInfoFlyout(dataKey);
+            if (details) {
+                showInfoFlyout(details);
             }
         }
     });
@@ -415,10 +414,9 @@ function setupInfoFlyout() {
 
 /**
  * Shows the info flyout panel with content for a specific location.
- * @param {string} dataKey - The key (name or tooltip) matching an entry in detailMapData.
+ * @param {object} data - The details object from the clicked feature.
  */
-function showInfoFlyout(dataKey) {
-    const data = detailMapData[dataKey];
+function showInfoFlyout(data) {
     if (!data) return;
 
     const flyout = document.getElementById('info-flyout');
@@ -698,8 +696,9 @@ function createMarkerStyle(markerType) {
  * @param {number} y - Y coordinate
  * @param {string} type - Marker type
  * @param {string} tooltip - Tooltip text
+ * @param {object} [details] - Optional details object for the info flyout.
  */
-function addMarkerFeature(source, x, y, type, tooltip) {
+function addMarkerFeature(source, x, y, type, tooltip, details) {
     // Scale coordinates for 16384x16384 map and convert to OpenLayers coordinate system (y is inverted)
     const scaledX = x * 4;
     const scaledY = y * 4;
@@ -710,7 +709,8 @@ function addMarkerFeature(source, x, y, type, tooltip) {
     var feature = new ol.Feature({
         geometry: new ol.geom.Point(coordinates),
         type: type,
-        tooltip: tooltip
+        tooltip: tooltip,
+        details: details
     });
 
     // Set the style for the feature
@@ -756,7 +756,8 @@ function addMapMarkers(map) {
                     marker.x, 
                     marker.y, 
                     marker.type,
-                    marker.tooltip
+                    marker.tooltip,
+                    marker.details
                 );
             });
         }
@@ -834,7 +835,8 @@ function addMapLabels(map) {
                     label.y, 
                     label.name, 
                     label.fontSize, 
-                    category
+                    category,
+                    label.details
                 );
             });
         }
@@ -856,8 +858,9 @@ function addMapLabels(map) {
  * @param {string} text - Label text
  * @param {number} fontSize - Font size in pixels
  * @param {string} category - Label category name
+ * @param {object} [details] - Optional details object for the info flyout.
  */
-function addLabelFeature(source, x, y, text, fontSize, category) {
+function addLabelFeature(source, x, y, text, fontSize, category, details) {
     // Scale coordinates for 16384x16384 map and convert to OpenLayers coordinate system (y is inverted)
     const scaledX = x * 4;
     const scaledY = y * 4;
@@ -867,7 +870,8 @@ function addLabelFeature(source, x, y, text, fontSize, category) {
     var feature = new ol.Feature({
         geometry: new ol.geom.Point([scaledX, olY]),
         name: text,
-        category: category
+        category: category,
+        details: details
     });
     
     // Add a tooltip for specific label categories that use a special font.

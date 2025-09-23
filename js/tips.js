@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // All tips for the modal, categorized.
     const allTips = {
         "Map Tips": [
-            "Click on location labels like 'Valinor' or 'Lotor's Summer Palace' to open a detailed, high-resolution map of that area.",
+            "Click on location labels like 'Valinor' or 'Lotor's Summer Palace' to open an information panel about that area.",
             "Use the sidebar toggles to show or hide different categories of markers and labels, helping you declutter the map.",
             "The coordinates in the bottom-left corner match the in-game X/Y positions, perfect for finding your way.",
             "Hover over any icon on the map to see a tooltip with its name and type."
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // --- Initial Setup ---
     // 1. Set the initial, fixed tip.
     if (quickTipsText) {
-        quickTipsText.textContent = "You can click on labels like 'Valinor' to zoom into cities for more information!";
+        quickTipsText.textContent = "Click on labels like 'Valinor' to get more information about the city!";
     }
 
     // 2. Start the 30-second cycle for subsequent tips.
