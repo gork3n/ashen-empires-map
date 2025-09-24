@@ -601,7 +601,7 @@ const mapLabels = {
             }
         },
         { 
-            x: 1457, y: 1964, name: "New Royale", fontSize: 24, region: 'Breakwater', place: 'New Royale Island',
+            x: 1394, y: 1892, name: "New Royale", fontSize: 24, region: 'Breakwater', place: 'New Royale Island',
             details: {
                 title: "New Royale",
                 coordinates: { x: 1457, y: 1964 },
