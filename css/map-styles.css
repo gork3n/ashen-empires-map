@@ -51,10 +51,8 @@ html, body {
 
 /* Reposition and resize zoom controls */
 .ol-zoom {
-    top: auto;
-    left: auto;
-    bottom: 6.5em; /* Positioned higher to avoid overlapping zoom controls */
-    right: 2em;
+    top: .5em;
+    left: .5em;
 }
 
 .ol-zoom button {
