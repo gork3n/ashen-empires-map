@@ -830,9 +830,9 @@ function addMapLabels(map) {
         if (mapLabels[category] && mapLabels[category].length) {
             mapLabels[category].forEach(label => {
                 addLabelFeature(
-                    labelSource, 
-                    label.x, 
-                    label.y, 
+                    labelSource,
+                    label.details.coordinates.x,
+                    label.details.coordinates.y,
                     label.name, 
                     label.fontSize, 
                     category,
