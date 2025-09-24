@@ -20,9 +20,6 @@ html, body {
     box-sizing: border-box;
 }
 
-/* Header styles */
-/* Header styles are no longer part of the main layout. */
-
 /* Map container */
 #map { 
     flex: 1;
@@ -67,11 +64,8 @@ html, body {
     background-color: rgba(0, 0, 0, 0.75);
     color: white;
     z-index: 1000;
-    overflow-x: hidden;
-    /* New styles for slide-up menu */
-    transform: translateY(100%);
-    transition: transform 0.4s ease-in-out;
-    border-right: none;
+    overflow: hidden;
+    display: none;
 }
 
 .filter-menu-header {
@@ -92,12 +86,19 @@ html, body {
 
 /* When the menu is open, bring it into view */
 .filter-menu.open {
-    transform: translateY(0);
+    display: flex;
 }
 
 .filter-menu-toggle {
     cursor: pointer;
-    background: none;
+    /* Style as a modern, circular button */
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: none;
     color: white;
     font-size: 20px;
@@ -105,8 +106,13 @@ html, body {
 }
 
 .filter-menu-content {
-    flex: 1;
-    overflow-y: auto;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75); /* Same transparency as the header */
+    overflow-y: auto; /* The entire content area scrolls */
+}
+
+.filter-menu-content-inner {
     padding: 15px;
 }
 
@@ -298,10 +304,9 @@ input:checked + .slider:before {
 #label-toggles,
 #marker-toggles,
 #monster-toggles {
-    display: grid;
-    /* Define 3 columns with a width that fits the content well. */
-    grid-template-columns: repeat(3, 100px);
-    /* Center the grid columns horizontally within the container. */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
     justify-content: center;
     /* Add a bit more gap for better visual separation. */
     gap: 15px;
@@ -309,55 +314,141 @@ input:checked + .slider:before {
     padding-top: 10px;
 }
 
-/* Scoped styles for the icon buttons inside the masonry grid */
-#label-toggles .toggle-btn,
-#marker-toggles .toggle-btn,
+/* --- Marker Category Rows --- */
+.marker-category-row {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    align-items: stretch; /* Allow child button to stretch full width */
+}
+
+/* Generic styles for custom SVG icons in marker toggle buttons */
+.toggle-btn-icon-img {
+    margin-right: 8px;
+    width: 24px; /* Slightly larger icon for headers */
+    height: 24px;
+    object-fit: contain;
+}
+
+.marker-category-row > .toggle-btn {
+    flex-direction: row; /* Icon and text side-by-side */
+    width: 100%; /* Stretch to full width */
+    height: auto;
+    border-bottom: none;
+    margin-bottom: 0;
+    justify-content: flex-start; /* Align content to the left */
+    gap: 0;
+    border-left-width: 0;
+    border-bottom: none;
+}
+
+.marker-category-row .toggle-btn.active {
+    border-bottom-color: transparent; /* No bottom border for active state */
+}
+
+/* Override generic icon styles for the main category button's icon */
+.marker-category-row > .toggle-btn .toggle-btn-icon-img {
+    margin-right: 8px;
+}
+
+.marker-category-row .toggle-btn span {
+    font-size: 16px;
+    white-space: nowrap; /* Prevent main category title from wrapping */
+    font-weight: 600;
+}
+
+.marker-subtype-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center; /* Center the buttons within the container */
+    padding-top: 10px; /* Added padding from main button */
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.marker-subtype-btn {
+    flex-direction: column;
+    height: 95px; /* Reduced height for smaller icon */
+    width: 95px; /* Reduced width for smaller icon */
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border-bottom-width: 3px;
+    border-left-width: 0; /* Remove left border inherited from .toggle-btn */
+    gap: 5px; /* Reduced space between icon and text */
+}
+
+.marker-subtype-btn .toggle-btn-icon-canvas {
+    /* Style the canvas element directly for full control */
+    width: 50px;
+    height: 50px;
+    /* margin-right is not needed as canvas doesn't inherit it like the img did */
+}
+
+.marker-subtype-btn span:not(.material-symbols-outlined) {
+    font-size: 12px;
+    white-space: normal; /* Allow text to wrap */
+    line-height: 1.2;
+    text-align: center;
+    font-weight: 400; /* Match label button font weight */
+    flex: 0 1 auto; /* Allow text to take up space but not shrink icon */
+}
+
+/* Keep label toggles as they were */
 #monster-toggles .toggle-btn {
     flex-direction: column;
     height: 90px;
     justify-content: center;
     align-items: center;
-    padding: 10px 5px;
+    padding: 10px;
     border-left-width: 0;
     border-bottom: 3px solid transparent;
     text-align: center;
 }
+
 #label-toggles .toggle-btn.active,
-#marker-toggles .toggle-btn.active,
 #monster-toggles .toggle-btn.active {
     border-left-color: transparent;
     border-bottom-color: #F5D76E;
 }
-#label-toggles .toggle-btn .material-symbols-outlined,
-#marker-toggles .toggle-btn .material-symbols-outlined,
-#monster-toggles .toggle-btn .material-symbols-outlined,
-#label-toggles .toggle-btn .toggle-btn-icon-img,
-#marker-toggles .toggle-btn .toggle-btn-icon-img,
-#monster-toggles .toggle-btn .toggle-btn-icon-img {
-    margin: 0 0 5px 0;
-    font-size: 28px;
-    width: 28px; height: 28px;
-}
-#label-toggles .toggle-btn span:not(.material-symbols-outlined),
-#marker-toggles .toggle-btn span:not(.material-symbols-outlined),
-#monster-toggles .toggle-btn span:not(.material-symbols-outlined) {
-    font-size: 12px;
-    white-space: normal;
-    line-height: 1.2;
-    max-width: 100%;
-}
-/* Styles for custom SVG icons in marker toggle buttons */
-.toggle-btn-icon-img {
-    margin-right: 8px;
-    width: 20px;
-    height: 20px;
-    object-fit: contain;
+
+/* --- New Grid Layout for Label Toggles --- */
+#label-toggles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Create a 2-column grid */
+    gap: 10px;
 }
 
-/* Target only the text span, not the icon span */
-.toggle-btn span:not(.material-symbols-outlined) {
-    overflow: hidden; /* Hide text that overflows */
-    opacity: 1; /* Visible by default */
+#label-toggles .toggle-btn {
+    flex-direction: column;
+    height: 80px; /* Adjusted height for a more compact look */
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border-left-width: 0;
+    border-bottom: 3px solid transparent;
+    text-align: center;
+}
+
+#label-toggles .toggle-btn .material-symbols-outlined {
+    margin: 0 0 5px 0;
+    font-size: 28px;
+}
+
+#label-toggles .toggle-btn span:not(.material-symbols-outlined) {
+    font-size: 12px;
+    white-space: normal;
+}
+
+.sub-toggle-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0;
+    font-size: 14px;
 }
 
 /* Default settings for Google Material Symbols */
@@ -587,6 +678,25 @@ input:checked + .slider:before {
     color: #ccc;
 }
 
+/* --- Dark Mode Scrollbar for Filter Menu --- */
+.filter-menu-content::-webkit-scrollbar {
+    width: 10px;
+}
+
+.filter-menu-content::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2); /* Transparent track */
+}
+
+.filter-menu-content::-webkit-scrollbar-thumb {
+    background-color: #555; /* Dark grey thumb */
+    border-radius: 5px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+}
+.filter-menu-content::-webkit-scrollbar-thumb:hover {
+    background-color: #777; /* Lighter on hover */
+}
+
 /* --- Mobile Filters Button --- */
 .mobile-filters-btn {
     display: flex;
@@ -605,11 +715,15 @@ input:checked + .slider:before {
     justify-content: center;
     align-items: center;
     transition: transform 0.2s;
+    display: flex; /* Always visible */
 }
 .mobile-filters-btn:hover {
     transform: scale(1.05);
 }
 
+.desktop-filters-btn {
+    display: none; /* Hidden by default, shown on desktop */
+}
 /* The close button in the header is always an 'X' */
 .filter-menu-toggle .material-symbols-outlined {
     transform: none !important; /* Override desktop rotation */
@@ -620,11 +734,53 @@ input:checked + .slider:before {
     font-size: 24px; /* Restore the icon size */
 }
 
-@media (max-width: 1024px) {
+/* --- Desktop and Tablet Styles --- */
+@media (min-width: 769px) {
+    /* On desktop, center the inner content, not the whole panel */
+    .filter-menu-content-inner {
+        width: 100%;
+        max-width: 550px; /* Max width for the content area */
+        margin: 0 auto; /* Center the inner container */
+    }
+
+    /* Increase marker sub-type button width on desktop */
+    .marker-subtype-btn {
+        /* Reverted to base size, no override needed */
+    }
+
+    /* Use a 4-column grid for labels on desktop */
+    #label-toggles {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* The floating button is for mobile only */
+    .mobile-filters-btn {
+    }
+
+    /* The header toggle button is also mobile-only */
+    .filter-menu-toggle {
+    }
+
+    /* Add a dedicated desktop button */
+    .desktop-filters-btn {
+    }
 }
 
-/* Styles for very small screens (e.g., small phones in portrait mode) */
-@media (max-width: 480px) {
+/* --- Mobile and Tablet Styles --- */
+@media (max-width: 768px) {
+    /* On mobile, the menu is a full-screen slide-up panel */
+    .filter-menu-content {
+        height: 90vh; /* Take up 90% of the screen height */
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        /* Animation setup */
+        transform: translateY(100%);
+        transition: transform 0.4s ease-in-out;
+    }
+    .filter-menu.open .filter-menu-content {
+        transform: translateY(0);
+    }
+
     /* Transform the quick tips bar into a simple icon button */
     .quick-tips-container {
         width: 44px;
@@ -640,5 +796,11 @@ input:checked + .slider:before {
     .quick-tips-container .material-symbols-outlined {
         margin-right: 0;
         font-size: 24px; /* Make icon slightly larger to fill the circle */
+    }
+
+    /* Position the mobile filter button */
+    .mobile-filters-btn {
+        bottom: 6.5em;
+        right: 1.5em;
     }
 }

@@ -1,4 +1,172 @@
-// Define markers by category
+const markerStyles = {
+  // Portals & Docks
+  portal_lsp: {
+    icon: "icons/lsp-portal.svg",
+    color: "#B8860B", // DarkGoldenrod - for better contrast on desert
+  },
+  portal_blue: {
+    icon: "icons/blue-portal.svg", // Using dungeon gate for blue instance portals
+    color: "#00BFFF", // DeepSkyBlue
+  },
+  portal_small: {
+    icon: "icons/small-blue.svg", // Using crystal for small, magical portals
+    color: "#DA70D6", // Orchid
+  },
+  portal_housing: {
+    icon: "icons/bank.svg", // Placeholder, a house icon would be better
+    color: "#32CD32", // LimeGreen
+  },
+  portal_ancient: {
+    icon: "icons/ancient-portal.svg", // Using rune spire for ancient stone portals
+    color: "#A9A9A9", // DarkGray
+  },
+  portal_whirlpool: {
+    icon: "icons/whirlwind.svg", // Using vortex for whirlpool portals
+    color: "#00CADD", // LightSkyBlue
+  },
+  dock: {
+    icon: "icons/anchor.svg",
+    color: "#1E90FF", // DodgerBlue
+  },
+
+  // Quests
+  quest: {
+    icon: "icons/scroll-unfurled.svg",
+    color: "#FFD700", // Gold
+  },
+
+  // Shops
+  shop_weapon: {
+    icon: "icons/crossed-swords.svg",
+    color: "#32CD32", // LimeGreen
+  },
+  shop_armor: {
+    icon: "icons/round-shield.svg",
+    color: "#32CD32", // LimeGreen
+  },
+  shop_generic: {
+    icon: "icons/hanging-sign.svg",
+    color: "#32CD32", // LimeGreen
+  },
+  shop_provisioner: {
+    icon: "icons/barrel.svg",
+    color: "#32CD32", // LimeGreen
+  },
+  shop_pub: {
+    icon: "icons/beer-stein.svg",
+    color: "#32CD32", // LimeGreen
+  },
+  shop_jewelry: {
+    icon: "icons/big-diamond-ring.svg",
+    color: "#32CD32", // LimeGreen
+  },
+  shop_carpentry: {
+    icon: "icons/hand-saw.svg",
+    color: "#32CD32", // LimeGreen
+  },
+  shop_leather: {
+    icon: "icons/leather-boot.svg",
+    color: "#32CD32", // LimeGreen
+  },
+
+  // Trainers
+  trainer: {
+    icon: "icons/white-book.svg",
+    color: "#FF8C00", // DarkOrange
+  },
+
+  // Spawns
+  spawn_good: {
+    icon: "icons/death-spawn.svg",
+    color: "#28a745", // A flat, visible green
+  },
+  spawn_evil: {
+    icon: "icons/death-spawn.svg",
+    color: "#8B0000", // DarkRed (Blood Red)
+  },
+
+  // Bank
+  bank: {
+    icon: "icons/bank.svg",
+    color: "#c9b128ff", // GoldenRod
+  },
+
+  altar: {
+    icon: "icons/ancient-portal.svg",
+    color: "#20B2AA", // LightSeaGreen
+  },
+
+  // Crafting
+  obelisk: {
+    icon: "icons/crystal-shrine.svg",
+    color: "#9370DB", // MediumPurple
+  },
+
+  // Undergrounds
+  underground_stairs: {
+    icon: "icons/3d-stairs.svg",
+    color: "#d36517ff", // SaddleBrown
+  },
+  underground_cave: {
+    icon: "icons/cave-entrance.svg",
+    color: "#d36517ff", // SaddleBrown
+  },
+  underground_crypt: {
+    icon: "icons/crypt-entrance.svg",
+    color: "#d36517ff", // SaddleBrown
+  },
+  underground_dungeon: {
+    icon: "icons/dungeon-gate.svg",
+    color: "#d36517ff", // SaddleBrown
+  },
+  underground_mine: {
+    icon: "icons/mine.svg",
+    color: "#d36517ff", // SaddleBrown
+  },
+  underground_sewer: {
+    icon: "icons/trash-can.svg",
+    color: "#d36517ff", // SaddleBrown
+  },
+  underground_closed: {
+    icon: "icons/closed-door-tape.svg",
+    color: "#d36517ff", // SaddleBrown
+  },
+  underground_ant: {
+    icon: "icons/ant.svg",
+    color: "#d36517ff", // SaddleBrown
+  },
+  underground_scorpion: {
+    icon: "icons/scorpion.svg",
+    color: "#d36517ff", // SaddleBrown
+  },
+  underground_spider: {
+    icon: "icons/long-legged-spider.svg",
+    color: "#d36517ff", // SaddleBrown
+  },
+  underground_snake: {
+    icon: "icons/snake.svg",
+    color: "#d36517ff", // SaddleBrown
+  },
+  underground_termigon: {
+    icon: "icons/mite.svg",
+    color: "#d36517ff", // SaddleBrown
+  },
+
+  // Places of Interest
+  game_of_chance: {
+    icon: "icons/perspective-dice-six-faces.svg",
+    color: "#32CD32", // LimeGreen
+  },
+  information: {
+    icon: "icons/info.svg",
+    color: "#00BFFF", // DeepSkyBlue
+  },
+  event: {
+    icon: "icons/ticket.svg",
+    color: "#FF1493", // DeepPink
+  },
+};
+
 const mapMarkers = {
   portals: [
     /* Party Island Portals */
@@ -4848,175 +5016,4 @@ const mapMarkers = {
 
     // Broken Finger Region Information
   ],
-};
-
-// Define marker types with appropriate SVG icons and styling.
-// The 'icon' property should be the path to the SVG file.
-const markerStyles = {
-  // Portals & Docks
-  portal_lsp: {
-    icon: "icons/lsp-portal.svg",
-    color: "#B8860B", // DarkGoldenrod - for better contrast on desert
-  },
-  portal_blue: {
-    icon: "icons/blue-portal.svg", // Using dungeon gate for blue instance portals
-    color: "#00BFFF", // DeepSkyBlue
-  },
-  portal_small: {
-    icon: "icons/small-blue.svg", // Using crystal for small, magical portals
-    color: "#DA70D6", // Orchid
-  },
-  portal_housing: {
-    icon: "icons/bank.svg", // Placeholder, a house icon would be better
-    color: "#32CD32", // LimeGreen
-  },
-  portal_ancient: {
-    icon: "icons/ancient-portal.svg", // Using rune spire for ancient stone portals
-    color: "#A9A9A9", // DarkGray
-  },
-  portal_whirlpool: {
-    icon: "icons/whirlwind.svg", // Using vortex for whirlpool portals
-    color: "#00CADD", // LightSkyBlue
-  },
-  dock: {
-    icon: "icons/anchor.svg",
-    color: "#1E90FF", // DodgerBlue
-  },
-
-  // Quests
-  quest: {
-    icon: "icons/scroll-unfurled.svg",
-    color: "#FFD700", // Gold
-  },
-
-  // Shops
-  shop_weapon: {
-    icon: "icons/crossed-swords.svg",
-    color: "#32CD32", // LimeGreen
-  },
-  shop_armor: {
-    icon: "icons/round-shield.svg",
-    color: "#32CD32", // LimeGreen
-  },
-  shop_generic: {
-    icon: "icons/hanging-sign.svg",
-    color: "#32CD32", // LimeGreen
-  },
-  shop_provisioner: {
-    icon: "icons/barrel.svg",
-    color: "#32CD32", // LimeGreen
-  },
-  shop_pub: {
-    icon: "icons/beer-stein.svg",
-    color: "#32CD32", // LimeGreen
-  },
-  shop_jewelry: {
-    icon: "icons/big-diamond-ring.svg",
-    color: "#32CD32", // LimeGreen
-  },
-  shop_carpentry: {
-    icon: "icons/hand-saw.svg",
-    color: "#32CD32", // LimeGreen
-  },
-  shop_leather: {
-    icon: "icons/leather-boot.svg",
-    color: "#32CD32", // LimeGreen
-  },
-
-  // Trainers
-  trainer: {
-    icon: "icons/white-book.svg",
-    color: "#FF8C00", // DarkOrange
-  },
-
-  // Spawns
-  spawn_good: {
-    icon: "icons/death-spawn.svg",
-    color: "#28a745", // A flat, visible green
-  },
-  spawn_evil: {
-    icon: "icons/death-spawn.svg",
-    color: "#8B0000", // DarkRed (Blood Red)
-  },
-
-  // Bank
-  bank: {
-    icon: "icons/bank.svg",
-    color: "#c9b128ff", // GoldenRod
-  },
-
-  altar: {
-    icon: "icons/ancient-portal.svg",
-    color: "#20B2AA", // LightSeaGreen
-  },
-
-  // Crafting
-  obelisk: {
-    icon: "icons/crystal-shrine.svg",
-    color: "#9370DB", // MediumPurple
-  },
-
-  // Undergrounds
-  underground_stairs: {
-    icon: "icons/3d-stairs.svg",
-    color: "#d36517ff", // SaddleBrown
-  },
-  underground_cave: {
-    icon: "icons/cave-entrance.svg",
-    color: "#d36517ff", // SaddleBrown
-  },
-  underground_crypt: {
-    icon: "icons/crypt-entrance.svg",
-    color: "#d36517ff", // SaddleBrown
-  },
-  underground_dungeon: {
-    icon: "icons/dungeon-gate.svg",
-    color: "#d36517ff", // SaddleBrown
-  },
-  underground_mine: {
-    icon: "icons/mine.svg",
-    color: "#d36517ff", // SaddleBrown
-  },
-  underground_sewer: {
-    icon: "icons/trash-can.svg",
-    color: "#d36517ff", // SaddleBrown
-  },
-  underground_closed: {
-    icon: "icons/closed-door-tape.svg",
-    color: "#d36517ff", // SaddleBrown
-  },
-  underground_ant: {
-    icon: "icons/ant.svg",
-    color: "#d36517ff", // SaddleBrown
-  },
-  underground_scorpion: {
-    icon: "icons/scorpion.svg",
-    color: "#d36517ff", // SaddleBrown
-  },
-  underground_spider: {
-    icon: "icons/long-legged-spider.svg",
-    color: "#d36517ff", // SaddleBrown
-  },
-  underground_snake: {
-    icon: "icons/snake.svg",
-    color: "#d36517ff", // SaddleBrown
-  },
-  underground_termigon: {
-    icon: "icons/mite.svg",
-    color: "#d36517ff", // SaddleBrown
-  },
-
-  // Places of Interest
-  game_of_chance: {
-    icon: "icons/perspective-dice-six-faces.svg",
-    color: "#32CD32", // LimeGreen
-  },
-  information: {
-    icon: "icons/info.svg",
-    color: "#00BFFF", // DeepSkyBlue
-  },
-  event: {
-    icon: "icons/ticket.svg",
-    color: "#FF1493", // DeepPink
-  },
 };

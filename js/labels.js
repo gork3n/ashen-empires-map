@@ -9,7 +9,6 @@ const mapLabels = {
       name: "Valley of the Dead",
       fontSize: 30,
       region: "Krythan",
-      place: "Valley of the Dead",
       details: {
         title: "Valley of the Dead",
         coordinates: { x: 1374, y: 1435 },
@@ -28,8 +27,7 @@ const mapLabels = {
     {
       name: "Proudblood Valley",
       fontSize: 30,
-      region: "Mainland",
-      place: "Battle Plains",
+      region: "Battle Plains",
       details: {
         title: "Proudblood Valley",
         coordinates: { x: 1752, y: 3404 },
@@ -46,8 +44,7 @@ const mapLabels = {
     {
       name: "Death Tyrant Valley",
       fontSize: 30,
-      region: "Mainland",
-      place: "Highlands",
+      region: "Highlands",
       details: {
         title: "Death Tyrant Valley",
         coordinates: { x: 3597, y: 2453 },
@@ -60,8 +57,7 @@ const mapLabels = {
     {
       name: "Resource Valley",
       fontSize: 30,
-      region: "Mainland",
-      place: "Highlands",
+      region: "Highlands",
       details: {
         title: "Resource Valley",
         coordinates: { x: 3417, y: 3171 },
@@ -76,8 +72,7 @@ const mapLabels = {
     {
       name: "Valley of Giants",
       fontSize: 30,
-      region: "Mainland",
-      place: "Valley of Giants",
+      region: "Valley of Giants",
       details: {
         title: "Valley of Giants",
         coordinates: { x: 3067, y: 2943 },
@@ -92,8 +87,7 @@ const mapLabels = {
     {
       name: "Badlands",
       fontSize: 30,
-      region: "Mainland",
-      place: "Badlands",
+      region: "Badlands",
       details: {
         title: "Badlands",
         coordinates: { x: 2825, y: 2670 },
@@ -120,8 +114,7 @@ const mapLabels = {
     {
       name: "Valinor",
       fontSize: 24,
-      region: "Valinor Island",
-      place: "Valinor",
+      region: "Valinor",
       details: {
         title: "Valinor",
         coordinates: { x: 759, y: 65 },
@@ -152,7 +145,6 @@ const mapLabels = {
       name: "Jeel",
       fontSize: 30,
       region: "Krythan",
-      place: "Jeel",
       details: {
         title: "Jeel",
         coordinates: { x: 290, y: 807 },
@@ -166,7 +158,6 @@ const mapLabels = {
       name: "Hothbra",
       fontSize: 30,
       region: "Krythan",
-      place: "Hothbra",
       details: {
         title: "Hothbra",
         coordinates: { x: 522, y: 1058 },
@@ -180,7 +171,6 @@ const mapLabels = {
       name: "Varg",
       fontSize: 30,
       region: "Krythan",
-      place: "Varg",
       details: {
         title: "Varg",
         coordinates: { x: 788, y: 1171 },
@@ -194,7 +184,6 @@ const mapLabels = {
       name: "New Korelth",
       fontSize: 30,
       region: "Krythan",
-      place: "New Korelth",
       details: {
         title: "New Korelth",
         coordinates: { x: 342, y: 1440 },
@@ -208,7 +197,6 @@ const mapLabels = {
       name: "Vrethpool",
       fontSize: 30,
       region: "Krythan",
-      place: "Vrethpool",
       details: {
         title: "Vrethpool",
         coordinates: { x: 670, y: 1670 },
@@ -221,8 +209,7 @@ const mapLabels = {
     {
       name: "Lotor's Castle",
       fontSize: 30,
-      region: "Krythan",
-      place: "Lotor's Castle",
+      region: "Silvest Valley",
       details: {
         title: "Lotor's Castle",
         coordinates: { x: 247, y: 1116 },
@@ -236,8 +223,7 @@ const mapLabels = {
     {
       name: "Cliffside",
       fontSize: 30,
-      region: "Krythan",
-      place: "Silvest Valley",
+      region: "Silvest Valley",
       details: {
         title: "Cliffside",
         coordinates: { x: 1066, y: 1151 },
@@ -250,8 +236,7 @@ const mapLabels = {
     {
       name: "Silvest",
       fontSize: 30,
-      region: "Krythan",
-      place: "Silvest Valley",
+      region: "Silvest Valley",
       details: {
         title: "Silvest",
         coordinates: { x: 1086, y: 1355 },
@@ -264,8 +249,7 @@ const mapLabels = {
     {
       name: "Fort Eastwatch",
       fontSize: 30,
-      region: "Krythan",
-      place: "Silvest Valley",
+      region: "Silvest Valley",
       details: {
         title: "Fort Eastwatch",
         coordinates: { x: 1344, y: 1282 },
@@ -276,28 +260,13 @@ const mapLabels = {
       },
     },
 
-    //Scarab Island Cities
-    {
-      name: "Lopal",
-      fontSize: 30,
-      region: "Krythan",
-      place: "Scarab Island",
-      details: {
-        title: "Lopal",
-        coordinates: { x: 390, y: 2183 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Lopal is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
+
 
     // Werewolf Island Cities
     {
       name: "Lycanth",
       fontSize: 30,
-      region: "Krythan",
-      place: "Werewolf Island",
+      region: "Western Isles",
       details: {
         title: "Lycanth",
         coordinates: { x: 260, y: 2633 },
@@ -313,7 +282,6 @@ const mapLabels = {
       name: "Khafra",
       fontSize: 30,
       region: "Sands of Creation",
-      place: "Khafra",
       details: {
         title: "Khafra",
         coordinates: { x: 248, y: 2744 },
@@ -327,7 +295,6 @@ const mapLabels = {
       name: "Ruhura",
       fontSize: 30,
       region: "Sands of Creation",
-      place: "Ruhura",
       details: {
         title: "Ruhura",
         coordinates: { x: 381, y: 3979 },
@@ -344,8 +311,7 @@ const mapLabels = {
     {
       name: "Redwake",
       fontSize: 30,
-      region: "Mainland",
-      place: "Darkwoods Forest",
+      region: "Darkwoods Forest",
       details: {
         title: "Redwake",
         coordinates: { x: 456, y: 2825 },
@@ -358,8 +324,7 @@ const mapLabels = {
     {
       name: "Whisperdale",
       fontSize: 30,
-      region: "Mainland",
-      place: "Darkwoods Forest",
+      region: "Darkwoods Forest",
       details: {
         title: "Whisperdale",
         coordinates: { x: 405, y: 3418 },
@@ -372,8 +337,7 @@ const mapLabels = {
     {
       name: "Autumn",
       fontSize: 30,
-      region: "Mainland",
-      place: "Darkwoods Forest",
+      region: "Darkwoods Forest",
       details: {
         title: "Autumn",
         coordinates: { x: 592, y: 3389 },
@@ -386,8 +350,7 @@ const mapLabels = {
     {
       name: "Darkfell",
       fontSize: 30,
-      region: "Mainland",
-      place: "Darkwoods Forest",
+      region: "Darkwoods Forest",
       details: {
         title: "Darkfell",
         coordinates: { x: 901, y: 3064 },
@@ -400,8 +363,7 @@ const mapLabels = {
     {
       name: "Dunmarrow",
       fontSize: 30,
-      region: "Mainland",
-      place: "Darkwoods Forest",
+      region: "Darkwoods Forest",
       details: {
         title: "Dunmarrow",
         coordinates: { x: 1384, y: 3151 },
@@ -414,8 +376,7 @@ const mapLabels = {
     {
       name: "Josody",
       fontSize: 30,
-      region: "Mainland",
-      place: "Darkwoods Forest",
+      region: "Darkwoods Forest",
       details: {
         title: "Josody",
         coordinates: { x: 1321, y: 2477 },
@@ -428,8 +389,7 @@ const mapLabels = {
     {
       name: "Gulley",
       fontSize: 30,
-      region: "Mainland",
-      place: "Darkwoods Forest",
+      region: "Darkwoods Forest",
       details: {
         title: "Gulley",
         coordinates: { x: 1108, y: 2755 },
@@ -444,8 +404,7 @@ const mapLabels = {
     {
       name: "Desprail",
       fontSize: 30,
-      region: "Mainland",
-      place: "Battle Plains",
+      region: "Battle Plains",
       details: {
         title: "Desprail",
         coordinates: { x: 2220, y: 3235 },
@@ -458,8 +417,7 @@ const mapLabels = {
     {
       name: "Chlera",
       fontSize: 30,
-      region: "Mainland",
-      place: "Battle Plains",
+      region: "Battle Plains",
       details: {
         title: "Chlera",
         coordinates: { x: 2403, y: 3548 },
@@ -474,8 +432,7 @@ const mapLabels = {
     {
       name: "Samad",
       fontSize: 30,
-      region: "Mainland",
-      place: "Black Swamp",
+      region: "Black Swamp",
       details: {
         title: "Samad",
         coordinates: { x: 2636, y: 3497 },
@@ -488,8 +445,7 @@ const mapLabels = {
     {
       name: "Dawat",
       fontSize: 30,
-      region: "Mainland",
-      place: "Black Swamp",
+      region: "Black Swamp",
       details: {
         title: "Dawat",
         coordinates: { x: 3088, y: 3356 },
@@ -502,8 +458,7 @@ const mapLabels = {
     {
       name: "Krog",
       fontSize: 30,
-      region: "Mainland",
-      place: "Black Swamp",
+      region: "Black Swamp",
       details: {
         title: "Krog",
         coordinates: { x: 3115, y: 3710 },
@@ -516,8 +471,7 @@ const mapLabels = {
     {
       name: "Maraket",
       fontSize: 30,
-      region: "Mainland",
-      place: "Black Swamp",
+      region: "Black Swamp",
       details: {
         title: "Maraket",
         coordinates: { x: 3064, y: 3978 },
@@ -532,8 +486,7 @@ const mapLabels = {
     {
       name: "Grell",
       fontSize: 30,
-      region: "Mainland",
-      place: "Highlands",
+      region: "Highlands",
       details: {
         title: "Grell",
         coordinates: { x: 3240, y: 3607 },
@@ -546,8 +499,7 @@ const mapLabels = {
     {
       name: "Arda",
       fontSize: 30,
-      region: "Mainland",
-      place: "Highlands",
+      region: "Highlands",
       details: {
         title: "Arda",
         coordinates: { x: 3401, y: 3444 },
@@ -560,8 +512,7 @@ const mapLabels = {
     {
       name: "Parian",
       fontSize: 30,
-      region: "Mainland",
-      place: "Highlands",
+      region: "Highlands",
       details: {
         title: "Parian",
         coordinates: { x: 3462, y: 2939 },
@@ -574,8 +525,7 @@ const mapLabels = {
     {
       name: "Ethera Palace",
       fontSize: 30,
-      region: "Mainland",
-      place: "Highlands",
+      region: "Highlands",
       details: {
         title: "Ethera Palace",
         coordinates: { x: 3536, y: 3643 },
@@ -588,8 +538,7 @@ const mapLabels = {
     {
       name: "Darushk",
       fontSize: 30,
-      region: "Mainland",
-      place: "Highlands",
+      region: "Highlands",
       details: {
         title: "Darushk",
         coordinates: { x: 3746, y: 2711 },
@@ -604,8 +553,7 @@ const mapLabels = {
     {
       name: "Hammerfist",
       fontSize: 24,
-      region: "Mainland",
-      place: "Tundria",
+      region: "Tundria",
       details: {
         title: "Hammerfist",
         coordinates: { x: 2793, y: 849 },
@@ -618,8 +566,7 @@ const mapLabels = {
     {
       name: "Duremar",
       fontSize: 24,
-      region: "Mainland",
-      place: "Tundria",
+      region: "Tundria",
       details: {
         title: "Duremar",
         coordinates: { x: 3649, y: 930 },
@@ -632,8 +579,7 @@ const mapLabels = {
     {
       name: "Maroven",
       fontSize: 24,
-      region: "Mainland",
-      place: "Tundria",
+      region: "Tundria",
       details: {
         title: "Maroven",
         coordinates: { x: 1943, y: 1241 },
@@ -646,8 +592,7 @@ const mapLabels = {
     {
       name: "Ringhaven Citadel",
       fontSize: 24,
-      region: "Mainland",
-      place: "Tundria",
+      region: "Tundria",
       details: {
         title: "Ringhaven Citadel",
         coordinates: { x: 2198, y: 1206 },
@@ -660,8 +605,7 @@ const mapLabels = {
     {
       name: "Farstead Keep",
       fontSize: 24,
-      region: "Mainland",
-      place: "Tundria",
+      region: "Tundria",
       details: {
         title: "Farstead Keep",
         coordinates: { x: 2822, y: 1254 },
@@ -676,8 +620,7 @@ const mapLabels = {
     {
       name: "Valmond",
       fontSize: 24,
-      region: "Mainland",
-      place: "Heartwood Coast",
+      region: "Heartwood Coast",
       details: {
         title: "Valmond",
         coordinates: { x: 2626, y: 2106 },
@@ -690,8 +633,7 @@ const mapLabels = {
     {
       name: "Teylan",
       fontSize: 24,
-      region: "Mainland",
-      place: "Heartwood Coast",
+      region: "Heartwood Coast",
       details: {
         title: "Teylan",
         coordinates: { x: 2497, y: 1616 },
@@ -704,8 +646,7 @@ const mapLabels = {
     {
       name: "Syldural",
       fontSize: 24,
-      region: "Mainland",
-      place: "Heartwood Coast",
+      region: "Heartwood Coast",
       details: {
         title: "Syldural",
         coordinates: { x: 3277, y: 1637 },
@@ -721,7 +662,6 @@ const mapLabels = {
       name: "Roycroft",
       fontSize: 35,
       region: "Breakwater",
-      place: "Roycroft Island",
       details: {
         title: "Roycroft",
         coordinates: { x: 2448, y: 2336 },
@@ -735,7 +675,6 @@ const mapLabels = {
       name: "New Town",
       fontSize: 35,
       region: "Breakwater",
-      place: "New Town Island",
       details: {
         title: "New Town",
         coordinates: { x: 1961, y: 1885 },
@@ -749,7 +688,6 @@ const mapLabels = {
       name: "New Royale",
       fontSize: 35,
       region: "Breakwater",
-      place: "New Royale Island",
       details: {
         title: "New Royale",
         coordinates: { x: 1393, y: 1898 },
@@ -765,7 +703,6 @@ const mapLabels = {
       name: "Broken Finger Town",
       fontSize: 20,
       region: "Broken Finger",
-      place: "Broken Finger",
       details: {
         title: "Broken Finger Town",
         coordinates: { x: 1153, y: 3712 },
@@ -783,7 +720,6 @@ const mapLabels = {
       name: "GM Island",
       fontSize: 30,
       region: "Special",
-      place: "GM Island",
       details: {
         title: "GM Island",
         coordinates: { x: 150, y: 70 },
@@ -797,7 +733,6 @@ const mapLabels = {
       name: "Minotaur Island",
       fontSize: 30,
       region: "Krythan",
-      place: "Minotaur Island",
       details: {
         title: "Minotaur Island",
         coordinates: { x: 137, y: 230 },
@@ -811,7 +746,6 @@ const mapLabels = {
       name: "Party Island",
       fontSize: 30,
       region: "Krythan",
-      place: "Party Island",
       details: {
         title: "Party Island",
         coordinates: { x: 421, y: 69 },
@@ -831,7 +765,6 @@ const mapLabels = {
       name: "Lotor's Prison",
       fontSize: 30,
       region: "Krythan",
-      place: "Lotor's Prison",
       details: {
         title: "Lotor's Prison",
         coordinates: { x: 1545, y: 546 },
@@ -845,7 +778,6 @@ const mapLabels = {
       name: "Lotor's Summer Palace",
       fontSize: 30,
       region: "Krythan",
-      place: "Lotor's Summer Palace",
       details: {
         title: "Lotor's Summer Palace",
         coordinates: { x: 775, y: 571 },
@@ -874,7 +806,6 @@ const mapLabels = {
       name: "Real Estate Island",
       fontSize: 20,
       region: "Krythan",
-      place: "Real Estate Island",
       details: {
         title: "Real Estate Island",
         coordinates: { x: 663, y: 630 },
@@ -888,7 +819,6 @@ const mapLabels = {
       name: "Guild Arena Island",
       fontSize: 30,
       region: "Krythan",
-      place: "Guild Arena Island",
       details: {
         title: "Guild Arena Island",
         coordinates: { x: 88, y: 942 },
@@ -898,13 +828,10 @@ const mapLabels = {
         links: [],
       },
     },
-
-    // Valinor Island
     {
       name: "Valinor Island",
       fontSize: 35,
-      region: "Valinor Island",
-      place: "Valinor Island",
+      region: "Valinor",
       details: {
         title: "Valinor Island",
         coordinates: { x: 940, y: 60 },
@@ -914,13 +841,10 @@ const mapLabels = {
         links: [],
       },
     },
-
-    // Krythan Island
     {
       name: "Krythan Island",
       fontSize: 35,
       region: "Krythan",
-      place: "Krythan Island",
       details: {
         title: "Krythan Island",
         coordinates: { x: 1090, y: 992 },
@@ -931,12 +855,24 @@ const mapLabels = {
       },
     },
 
-    // Western Isles
+    // Region: Western Isles
+    {
+      name: "Lopal",
+      fontSize: 30,
+      region: "Western Isles",
+      details: {
+        title: "Lopal",
+        coordinates: { x: 390, y: 2183 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Lopal is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
     {
       name: "Scorched Island",
       fontSize: 35,
       region: "Western Isles",
-      place: "Scorched Island",
       details: {
         title: "Scorched Island",
         coordinates: { x: 795, y: 2092 },
@@ -949,8 +885,7 @@ const mapLabels = {
     {
       name: "Hell",
       fontSize: 45,
-      region: "Hell",
-      place: "Hell",
+      region: "Western Isles",
       details: {
         title: "Hell",
         coordinates: { x: 1130, y: 3195 },
@@ -960,25 +895,11 @@ const mapLabels = {
         links: [],
       },
     },
-    {
-      name: "Monk Island",
-      fontSize: 20,
-      region: "Krythan",
-      place: "Monk Island",
-      details: {
-        title: "Monk Island",
-        coordinates: { x: 552, y: 661 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Mirthik's Island is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
+    
     {
       name: "Deserted Island",
       fontSize: 14,
       region: "Krythan",
-      place: "Deserted Island",
       details: {
         title: "Deserted Island",
         coordinates: { x: 223, y: 425 },
@@ -992,7 +913,6 @@ const mapLabels = {
       name: "Scarab Island",
       fontSize: 35,
       region: "Krythan",
-      place: "Scarab Island",
       details: {
         title: "Scarab Island",
         coordinates: { x: 259, y: 2048 },
@@ -1006,7 +926,6 @@ const mapLabels = {
       name: "Werewolf Island",
       fontSize: 35,
       region: "Krythan",
-      place: "Werewolf Island",
       details: {
         title: "Werewolf Island",
         coordinates: { x: 463, y: 2495 },
@@ -1019,8 +938,7 @@ const mapLabels = {
     {
       name: "Dragoon Island",
       fontSize: 25,
-      region: "Mainland",
-      place: "Darkwoods Forest",
+      region: "Darkwoods Forest",
       details: {
         title: "Dragoon Island",
         coordinates: { x: 350, y: 3238 },
@@ -1034,7 +952,6 @@ const mapLabels = {
       name: "Obelisk Island",
       fontSize: 25,
       region: "Western Isles",
-      place: "Obelisk Island",
       details: {
         title: "Obelisk Island",
         coordinates: { x: 2117, y: 2704 },
@@ -1048,7 +965,6 @@ const mapLabels = {
       name: "Greater Dragon Island",
       fontSize: 25,
       region: "Sands of Creation",
-      place: "Greater Dragon Island",
       details: {
         title: "Greater Dragon Island",
         coordinates: { x: 160, y: 3792 },
@@ -1062,7 +978,6 @@ const mapLabels = {
       name: "Ettin Island",
       fontSize: 30,
       region: "Western Isles",
-      place: "Ettin Island",
       details: {
         title: "Ettin Island",
         coordinates: { x: 1672, y: 1681 },
@@ -1075,8 +990,7 @@ const mapLabels = {
     {
       name: "Northern Frost Giant Island",
       fontSize: 30,
-      region: "Mainland",
-      place: "Tundria",
+      region: "Tundria",
       details: {
         title: "Northern Frost Giant Island",
         coordinates: { x: 3331, y: 254 },
@@ -1090,7 +1004,6 @@ const mapLabels = {
       name: "PvP Island",
       fontSize: 30,
       region: "Western Isles",
-      place: "PvP Island",
       details: {
         title: "PvP Island",
         coordinates: { x: 3893, y: 1688 },
@@ -1104,7 +1017,6 @@ const mapLabels = {
       name: "Artonian Island",
       fontSize: 20,
       region: "Sands of Creation",
-      place: "Artonian Island", // Might be called something else Question
       details: {
         title: "Artonian Island",
         coordinates: { x: 248, y: 3376 },
@@ -1117,8 +1029,7 @@ const mapLabels = {
     {
       name: "Vel Dran",
       fontSize: 24,
-      region: "Mainland",
-      place: "Highlands",
+      region: "Highlands",
       details: {
         title: "Vel Dran",
         coordinates: { x: 3153, y: 3192 },
@@ -1131,8 +1042,7 @@ const mapLabels = {
     {
       name: "Chaos Island",
       fontSize: 24,
-      region: "Mainland",
-      place: "Battle Plains",
+      region: "Battle Plains",
       details: {
         title: "Chaos Island",
         coordinates: { x: 1823, y: 3055 },
@@ -1146,7 +1056,6 @@ const mapLabels = {
       name: "Test Island",
       fontSize: 24,
       region: "Western Isles",
-      place: "Test Island", // Not sure if this island is part of the Western Isles region Question
       details: {
         title: "Test Island",
         coordinates: { x: 3923, y: 3728 },
@@ -1159,10 +1068,9 @@ const mapLabels = {
 
     // Tundria Islands
     {
-      name: "Unnamed Island",
+      name: "Unnamed Island", // Not sure on the name Question Mark
       fontSize: 20,
-      region: "Mainland",
-      place: "Tundria",
+      region: "Tundria",
       details: {
         title: "Unnamed Island",
         coordinates: { x: 3799, y: 975 },
@@ -1179,12 +1087,12 @@ const mapLabels = {
   dungeons: [
     // Dungeons and Lairs Here
 
-    // Krythan Island Dungeons
+    // Krythan Island Dungeons - Region: Krythan
+    //  
     {
       name: "Cultist Lair",
       fontSize: 15,
       region: "Krythan",
-      place: "Krythan Fields",
       details: {
         title: "Cultist Lair",
         coordinates: { x: 874, y: 1377 },
@@ -1195,12 +1103,11 @@ const mapLabels = {
       },
     },
 
-    // Valinor Island Dungeons
+    // Valinor Island Dungeons - Region: Valinor
     {
       name: "Bonesnarl's Lair",
       fontSize: 16,
-      region: "Valinor Island",
-      place: "Valinor",
+      region: "Valinor",
       details: {
         title: "Bonesnarl's Lair",
         coordinates: { x: 866, y: 302 },
@@ -1215,14 +1122,14 @@ const mapLabels = {
   caves: [
     // Caves and Mines Here
 
-    // Valinor Island Caves
+    // Region: Valinor
 
     // Krythan Island Caves
+    // Region: Krythan
     {
       name: "Minion Cave",
       fontSize: 16,
       region: "Krythan",
-      place: "Krythan Fields",
       details: {
         title: "Minion Cave",
         coordinates: { x: 504, y: 685 },
@@ -1236,7 +1143,6 @@ const mapLabels = {
       name: "Minion Cave",
       fontSize: 16,
       region: "Krythan",
-      place: "Krythan Fields",
       details: {
         title: "Minion Cave",
         coordinates: { x: 440, y: 761 },
@@ -1247,10 +1153,23 @@ const mapLabels = {
       },
     },
     {
-      name: "Silvest Mines",
+      name: "Flataga Mines",
       fontSize: 15,
       region: "Krythan",
-      place: "Silvest Valley",
+      details: {
+        title: "Flataga Mines",
+        coordinates: { x: 391, y: 1318 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Flataga Mines is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    // Region: Silvest Valley
+    {
+      name: "Silvest Mines",
+      fontSize: 15,
+      region: "Silvest Valley",
       details: {
         title: "Silvest Mines",
         coordinates: { x: 1017, y: 1109 },
@@ -1263,8 +1182,7 @@ const mapLabels = {
     {
       name: "Dalvon Mines",
       fontSize: 15,
-      region: "Krythan",
-      place: "Silvest Valley",
+      region: "Silvest Valley",
       details: {
         title: "Dalvon Mines",
         coordinates: { x: 1433, y: 1379 },
@@ -1277,8 +1195,7 @@ const mapLabels = {
     {
       name: "Orc Cave",
       fontSize: 15,
-      region: "Krythan",
-      place: "Silvest Valley",
+      region: "Silvest Valley",
       details: {
         title: "Orc Cave",
         coordinates: { x: 1181, y: 1301 },
@@ -1288,31 +1205,16 @@ const mapLabels = {
         links: [],
       },
     },
-    {
-      name: "Flataga Mines",
-      fontSize: 15,
-      region: "Krythan",
-      place: "Krythan Fields",
-      details: {
-        title: "Flataga Mines",
-        coordinates: { x: 391, y: 1318 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Flataga Mines is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
+    
 
     /* Mainland Caves */
 
     // Darkwood Forest Caves
-
-    // Battle Plains Caves
+    // Region: Battle Plains
     {
       name: "Fungoid Cave",
       fontSize: 16,
-      region: "Mainland",
-      place: "Battle Plains",
+      region: "Battle Plains",
       details: {
         title: "Fungoid Cave",
         coordinates: { x: 1961, y: 3762 },
@@ -1323,12 +1225,11 @@ const mapLabels = {
       },
     },
 
-    // Black Swamp Caves
+    // Region: Black Swamp
     {
       name: "Ivogur's Mine",
       fontSize: 16,
-      region: "Mainland",
-      place: "Black Swamp",
+      region: "Black Swamp",
       details: {
         title: "Ivogur's Mine",
         coordinates: { x: 2963, y: 3910 },
@@ -1339,12 +1240,11 @@ const mapLabels = {
       },
     },
 
-    // Highlands Caves
+    // Region: Highlands
     {
       name: "Zanock's Mine (East) ",
       fontSize: 16,
-      region: "Mainland",
-      place: "Highlands",
+      region: "Highlands",
       details: {
         title: "Zanock's Mine (East) ",
         coordinates: { x: 3099, y: 2390 },
@@ -1357,8 +1257,7 @@ const mapLabels = {
     {
       name: "Termigon Mine",
       fontSize: 16,
-      region: "Mainland",
-      place: "Highlands",
+      region: "Highlands",
       details: {
         title: "Termigon Mine",
         coordinates: { x: 3624, y: 3596 },
@@ -1369,14 +1268,13 @@ const mapLabels = {
       },
     },
 
-    // Valley of Giants Caves
+    // Region: Valley of Giants
 
     // Heartwood Coast Caves
     {
       name: "Zanock's Mine (West)",
       fontSize: 16,
-      region: "Mainland",
-      place: "Heartwood Coast",
+      region: "Heartwood Coast",
       details: {
         title: "Zanock's Mine (West)",
         coordinates: { x: 2871, y: 2358 },
@@ -1397,12 +1295,13 @@ const mapLabels = {
   ],
 
   interests: [
-    // Valinor Island Places of Interest
+    // Places of Interest Here
+
+    // Place of Interest - Region: Valinor
     {
       name: "Duncan's Cottage",
       fontSize: 16,
-      region: "Valinor Island",
-      place: "Valinor",
+      region: "Valinor",
       details: {
         title: "Duncan's Cottage",
         coordinates: { x: 651, y: 174 },
@@ -1415,8 +1314,7 @@ const mapLabels = {
     {
       name: "Ruined Temple",
       fontSize: 16,
-      region: "Valinor Island",
-      place: "Valinor",
+      region: "Valinor",
       details: {
         title: "Ruined Temple",
         coordinates: { x: 570, y: 313 },
@@ -1429,8 +1327,7 @@ const mapLabels = {
     {
       name: "Lanore",
       fontSize: 16,
-      region: "Valinor Island",
-      place: "Valinor",
+      region: "Valinor",
       details: {
         title: "Lanore",
         coordinates: { x: 641, y: 362 },
@@ -1443,8 +1340,7 @@ const mapLabels = {
     {
       name: "Ecclain's Caravan",
       fontSize: 16,
-      region: "Valinor Island",
-      place: "Valinor",
+      region: "Valinor",
       details: {
         title: "Ecclain's Caravan",
         coordinates: { x: 1083, y: 468 },
@@ -1457,8 +1353,7 @@ const mapLabels = {
     {
       name: "Valinor Ant Hill",
       fontSize: 16,
-      region: "Valinor Island",
-      place: "Valinor",
+      region: "Valinor",
       details: {
         title: "Valinor Ant Hill",
         coordinates: { x: 1043, y: 282 },
@@ -1471,8 +1366,7 @@ const mapLabels = {
     {
       name: "Hermit's Hut",
       fontSize: 16,
-      region: "Valinor Island",
-      place: "Valinor",
+      region: "Valinor",
       details: {
         title: "Hermit's Hut",
         coordinates: { x: 965, y: 123 },
@@ -1483,12 +1377,11 @@ const mapLabels = {
       },
     },
 
-    // Krythan Island Places of Interest
+    // Places of Interest - Region: Krythan
     {
       name: "Gideon Cottage",
       fontSize: 16,
       region: "Krythan",
-      place: "Krythan Fields",
       details: {
         title: "Gideon Cottage",
         coordinates: { x: 509, y: 574 },
@@ -1502,7 +1395,6 @@ const mapLabels = {
       name: "Mirthik's Dwelling",
       fontSize: 16,
       region: "Krythan",
-      place: "Krythan Fields",
       details: {
         title: "Mirthik's Dwelling",
         coordinates: { x: 508, y: 640 },
@@ -1516,7 +1408,6 @@ const mapLabels = {
       name: "Jeel Ruins",
       fontSize: 16,
       region: "Krythan",
-      place: "Jeel Ruins",
       details: {
         title: "Jeel Ruins",
         coordinates: { x: 504, y: 753 },
@@ -1530,7 +1421,6 @@ const mapLabels = {
       name: "Crypt of Kargoth",
       fontSize: 14,
       region: "Krythan",
-      place: "Krythan Fields",
       details: {
         title: "Crypt of Kargoth",
         coordinates: { x: 436, y: 850 },
@@ -1544,7 +1434,6 @@ const mapLabels = {
       name: "Ruins of Tal S'kar",
       fontSize: 14,
       region: "Krythan",
-      place: "Krythan Fields",
       details: {
         title: "Ruins of Tal S'kar",
         coordinates: { x: 190, y: 989 },
@@ -1558,7 +1447,6 @@ const mapLabels = {
       name: "Holendar's Mansion",
       fontSize: 15,
       region: "Krythan",
-      place: "Krythan Fields",
       details: {
         title: "Holendar's Mansion",
         coordinates: { x: 832, y: 1035 },
@@ -1572,7 +1460,6 @@ const mapLabels = {
       name: "Krythan Cemetary",
       fontSize: 15,
       region: "Krythan",
-      place: "Krythan Fields",
       details: {
         title: "Krythan Cemetary",
         coordinates: { x: 895, y: 1023 },
@@ -1586,7 +1473,6 @@ const mapLabels = {
       name: "Scalo's Den",
       fontSize: 15,
       region: "Krythan",
-      place: "Krythan Fields",
       details: {
         title: "Scalo's Den",
         coordinates: { x: 836, y: 1279 },
@@ -1600,7 +1486,6 @@ const mapLabels = {
       name: "Kobold Castle",
       fontSize: 18,
       region: "Krythan",
-      place: "Silvest Valley",
       details: {
         title: "Kobold Castle",
         coordinates: { x: 1279, y: 1123 },
@@ -1614,7 +1499,6 @@ const mapLabels = {
       name: "Karzak Cove",
       fontSize: 15,
       region: "Krythan",
-      place: "Krythan Fields",
       details: {
         title: "Karzak Cove",
         coordinates: { x: 1376, y: 1077 },
@@ -1628,7 +1512,6 @@ const mapLabels = {
       name: "Tallem'im house",
       fontSize: 14,
       region: "Krythan",
-      place: "Krythan Fields",
       details: {
         title: "Tallem'im house",
         coordinates: { x: 88, y: 1503 },
@@ -1642,7 +1525,6 @@ const mapLabels = {
       name: "Wasp Hive",
       fontSize: 14,
       region: "Krythan",
-      place: "Krythan Fields",
       details: {
         title: "Wasp Hive",
         coordinates: { x: 516, y: 1302 },
@@ -1656,7 +1538,6 @@ const mapLabels = {
       name: "Orc Fort",
       fontSize: 18,
       region: "Krythan",
-      place: "Krythan Fields",
       details: {
         title: "Orc Fort",
         coordinates: { x: 782, y: 1532 },
@@ -1667,26 +1548,12 @@ const mapLabels = {
       },
     },
 
-    // Hell Places of Interest
-    {
-      name: "Talazar's Castle",
-      fontSize: 25,
-      region: "Hell",
-      place: "Hell",
-      details: {
-        title: "Talazar's Castle",
-        coordinates: { x: 1104, y: 3292 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Talazar's Castle is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
+    // Places of Interest - Region: Western Isles 5022
+    
     {
       name: "Minion's of Talazar's Stronghold",
       fontSize: 16,
       region: "Hell",
-      place: "Hell",
       details: {
         title: "Minion's of Talazar's Stronghold",
         coordinates: { x: 1200, y: 3341 },
@@ -1702,8 +1569,7 @@ const mapLabels = {
     {
       name: "Josody Theif Fort",
       fontSize: 18,
-      region: "Mainland",
-      place: "Darkwoods Forest",
+      region: "Darkwoods Forest",
       details: {
         title: "Josody Theif Fort",
         coordinates: { x: 936, y: 2576 },
@@ -1716,8 +1582,7 @@ const mapLabels = {
     {
       name: "Crypt of Ryonkah",
       fontSize: 16,
-      region: "Mainland",
-      place: "Darkwoods Forest",
+      region: "Darkwoods Forest",
       details: {
         title: "Crypt of Ryonkah",
         coordinates: { x: 1030, y: 2977 },
@@ -1730,8 +1595,7 @@ const mapLabels = {
     {
       name: "Lord Vezryl's Estate",
       fontSize: 16,
-      region: "Mainland",
-      place: "Darkwoods Forest",
+      region: "Darkwoods Forest",
       details: {
         title: "Lord Vezryl's Estate",
         coordinates: { x: 555, y: 3158 },
@@ -1744,8 +1608,7 @@ const mapLabels = {
     {
       name: "Burslord's Hunting Lodge",
       fontSize: 16,
-      region: "Mainland",
-      place: "Darkwoods Forest",
+      region: "Darkwoods Forest",
       details: {
         title: "Burslord's Hunting Lodge",
         coordinates: { x: 683, y: 3389 },
@@ -1758,8 +1621,7 @@ const mapLabels = {
     {
       name: "Mnemmon",
       fontSize: 25,
-      region: "Mainland",
-      place: "Darkwoods Forest",
+      region: "Darkwoods Forest",
       details: {
         title: "Mnemmon",
         coordinates: { x: 911, y: 3216 },
@@ -1772,8 +1634,7 @@ const mapLabels = {
     {
       name: "Mnemmon Gaol",
       fontSize: 20,
-      region: "Mainland",
-      place: "Darkwoods Forest",
+      region: "Darkwoods Forest",
       details: {
         title: "Mnemmon Gaol",
         coordinates: { x: 881, y: 3390 },
@@ -1786,8 +1647,7 @@ const mapLabels = {
     {
       name: "Necropolis",
       fontSize: 20,
-      region: "Mainland",
-      place: "Necropolis",
+      region: "Necropolis",
       details: {
         title: "Necropolis",
         coordinates: { x: 1358, y: 2908 },
@@ -1800,8 +1660,7 @@ const mapLabels = {
     {
       name: "Astari Ruin Shelter",
       fontSize: 16,
-      region: "Mainland",
-      place: "Darkwoods Forest",
+      region: "Darkwoods Forest",
       details: {
         title: "Astari Ruin Shelter",
         coordinates: { x: 815, y: 3223 },
@@ -1814,8 +1673,7 @@ const mapLabels = {
     {
       name: "Tuvok",
       fontSize: 16,
-      region: "Mainland",
-      place: "Darkwoods Forest", // I'm not sure if this is the Name of the place or the name of the NPC that lives there. Question
+      region: "Darkwoods Forest", // I'm not sure if this is the Name of the place or the name of the NPC that lives there. Question Mark
       details: {
         title: "Tuvok",
         coordinates: { x: 1032, y: 2891 },
@@ -1828,8 +1686,7 @@ const mapLabels = {
     {
       name: "Warg Pen",
       fontSize: 16,
-      region: "Mainland",
-      place: "Darkwoods Forest",
+      region: "Darkwoods Forest",
       details: {
         title: "Warg Pen",
         coordinates: { x: 1369, y: 2737 },
@@ -1842,8 +1699,7 @@ const mapLabels = {
     {
       name: "Gadros Ruins",
       fontSize: 16,
-      region: "Mainland",
-      place: "Darkwoods Forest",
+      region: "Darkwoods Forest",
       details: {
         title: "Gadros Ruins",
         coordinates: { x: 1489, y: 2481 },
@@ -1856,8 +1712,7 @@ const mapLabels = {
     {
       name: "Shadow Forest",
       fontSize: 16,
-      region: "Mainland",
-      place: "Darkwoods Forest", // Seemed like it needed a name, might have a different name Question
+      region: "Darkwoods Forest", // Seemed like it needed a name, might have a different name Question Mark
       details: {
         title: "Shadow Forest",
         coordinates: { x: 1463, y: 2710 },
@@ -1870,8 +1725,7 @@ const mapLabels = {
     {
       name: "Termigon Mound",
       fontSize: 16,
-      region: "Mainland",
-      place: "Darkwoods Forest", // Changed the name from Termigon Hive to Termigon Mound, seems more fitting. Question
+      region: "Darkwoods Forest", // Changed the name from Termigon Hive to Termigon Mound, seems more fitting. Question Mark
       details: {
         title: "Termigon Mound",
         coordinates: { x: 677, y: 3520 },
@@ -1886,8 +1740,7 @@ const mapLabels = {
     {
       name: "Wasp Hive",
       fontSize: 16,
-      region: "Mainland",
-      place: "Battle Plains",
+      region: "Battle Plains",
       details: {
         title: "Wasp Hive",
         coordinates: { x: 1657, y: 2959 },
@@ -1902,8 +1755,7 @@ const mapLabels = {
     {
       name: "Drakkan",
       fontSize: 16,
-      region: "Mainland",
-      place: "Black Swamp",
+      region: "Black Swamp",
       details: {
         title: "Drakkan",
         coordinates: { x: 2806, y: 3807 },
@@ -1916,8 +1768,7 @@ const mapLabels = {
     {
       name: "Kobold Outpost",
       fontSize: 16,
-      region: "Mainland",
-      place: "Black Swamp",
+      region: "Black Swamp",
       details: {
         title: "Kobold Outpost",
         coordinates: { x: 3248, y: 3818 },
@@ -1930,8 +1781,7 @@ const mapLabels = {
     {
       name: "Kobold Village",
       fontSize: 16,
-      region: "Mainland",
-      place: "Black Swamp",
+      region: "Black Swamp",
       details: {
         title: "Kobold Village",
         coordinates: { x: 2833, y: 3925 },
@@ -1944,8 +1794,7 @@ const mapLabels = {
     {
       name: "Temple of Agon",
       fontSize: 16,
-      region: "Mainland",
-      place: "Black Swamp",
+      region: "Black Swamp",
       details: {
         title: "Temple of Agon",
         coordinates: { x: 3118, y: 3633 },
@@ -1958,8 +1807,7 @@ const mapLabels = {
     {
       name: "Old Ale Warehouse\n(Closed)",
       fontSize: 16,
-      region: "Mainland",
-      place: "Black Swamp",
+      region: "Black Swamp",
       details: {
         title: "Old Ale Warehouse\n(Closed)",
         coordinates: { x: 2817, y: 3261 },
@@ -1972,8 +1820,7 @@ const mapLabels = {
     {
       name: "Valekar's Fortress",
       fontSize: 16,
-      region: "Mainland",
-      place: "Black Swamp",
+      region: "Black Swamp",
       details: {
         title: "Valekar's Fortress",
         coordinates: { x: 3101, y: 3488 },
@@ -1988,8 +1835,7 @@ const mapLabels = {
     {
       name: "Emporium Abbey",
       fontSize: 16,
-      region: "Mainland",
-      place: "Highlands",
+      region: "Highlands",
       details: {
         title: "Emporium Abbey",
         coordinates: { x: 2769, y: 3166 },
@@ -2002,8 +1848,7 @@ const mapLabels = {
     {
       name: "Ancient Site of Minos",
       fontSize: 16,
-      region: "Mainland",
-      place: "Highlands",
+      region: "Highlands",
       details: {
         title: "Ancient Site of Minos",
         coordinates: { x: 2930, y: 3169 },
@@ -2016,8 +1861,7 @@ const mapLabels = {
     {
       name: "Minotaur Maze",
       fontSize: 16,
-      region: "Mainland",
-      place: "Highlands",
+      region: "Highlands",
       details: {
         title: "Minotaur Maze",
         coordinates: { x: 3001, y: 3040 },
@@ -2030,8 +1874,7 @@ const mapLabels = {
     {
       name: "Thief Fort",
       fontSize: 16,
-      region: "Mainland",
-      place: "Highlands",
+      region: "Highlands",
       details: {
         title: "Thief Fort",
         coordinates: { x: 3177, y: 3069 },
@@ -2044,8 +1887,7 @@ const mapLabels = {
     {
       name: "Supply Shelter",
       fontSize: 16,
-      region: "Mainland",
-      place: "Highlands",
+      region: "Highlands",
       details: {
         title: "Supply Shelter",
         coordinates: { x: 3368, y: 2958 },
@@ -2058,8 +1900,7 @@ const mapLabels = {
     {
       name: "Darushk Mine",
       fontSize: 16,
-      region: "Mainland",
-      place: "Highlands",
+      region: "Highlands",
       details: {
         title: "Darushk Mine",
         coordinates: { x: 3603, y: 2775 },
@@ -2072,8 +1913,7 @@ const mapLabels = {
     {
       name: "Astari Cave",
       fontSize: 16,
-      region: "Mainland",
-      place: "Highlands",
+      region: "Highlands",
       details: {
         title: "Astari Cave",
         coordinates: { x: 3609, y: 2995 },
@@ -2086,8 +1926,7 @@ const mapLabels = {
     {
       name: "Arllandah's Lair",
       fontSize: 16,
-      region: "Mainland",
-      place: "Highlands",
+      region: "Highlands",
       details: {
         title: "Arllandah's Lair",
         coordinates: { x: 3206, y: 2629 },
@@ -2100,8 +1939,7 @@ const mapLabels = {
     {
       name: "Third Book Temple",
       fontSize: 16,
-      region: "Mainland",
-      place: "Highlands",
+      region: "Highlands",
       details: {
         title: "Third Book Temple",
         coordinates: { x: 2984, y: 2701 },
@@ -2114,8 +1952,7 @@ const mapLabels = {
     {
       name: "Horibus's Camp",
       fontSize: 16,
-      region: "Mainland",
-      place: "Highlands",
+      region: "Highlands",
       details: {
         title: "Horibus's Camp",
         coordinates: { x: 3468, y: 2643 },
@@ -2128,8 +1965,7 @@ const mapLabels = {
     {
       name: "Zanock's Mine (East) ",
       fontSize: 16,
-      region: "Mainland",
-      place: "Highlands",
+      region: "Highlands",
       details: {
         title: "Zanock's Mine (East) ",
         coordinates: { x: 3099, y: 2390 },
@@ -2142,8 +1978,7 @@ const mapLabels = {
     {
       name: "Cave\n(NO ENTRY)",
       fontSize: 15,
-      region: "Mainland",
-      place: "Highlands",
+      region: "Highlands",
       details: {
         title: "Cave\n(NO ENTRY)",
         coordinates: { x: 3562, y: 1924 },
@@ -2156,8 +1991,7 @@ const mapLabels = {
     {
       name: "Ethera Mining Company",
       fontSize: 16,
-      region: "Mainland",
-      place: "Highlands",
+      region: "Highlands",
       details: {
         title: "Ethera Mining Company",
         coordinates: { x: 3610, y: 3621 },
@@ -2170,8 +2004,7 @@ const mapLabels = {
     {
       name: "Warg Pen",
       fontSize: 16,
-      region: "Mainland",
-      place: "Highlands",
+      region: "Highlands",
       details: {
         title: "Warg Pen",
         coordinates: { x: 3336, y: 3734 },
@@ -2188,8 +2021,7 @@ const mapLabels = {
     {
       name: "Infiltrator Camp",
       fontSize: 16,
-      region: "Mainland",
-      place: "Heartwood Coast",
+      region: "Heartwood Coast",
       details: {
         title: "Infiltrator Camp",
         coordinates: { x: 2472, y: 1506 },
@@ -2202,8 +2034,7 @@ const mapLabels = {
     {
       name: "Gnobol Manor",
       fontSize: 16,
-      region: "Mainland",
-      place: "Heartwood Coast",
+      region: "Heartwood Coast",
       details: {
         title: "Gnobol Manor",
         coordinates: { x: 3096, y: 1475 },
@@ -2216,8 +2047,7 @@ const mapLabels = {
     {
       name: "Gnobol Mauseleum",
       fontSize: 16,
-      region: "Mainland",
-      place: "Heartwood Coast",
+      region: "Heartwood Coast",
       details: {
         title: "Gnobol Mauseleum",
         coordinates: { x: 3096, y: 1569 },
@@ -2230,8 +2060,7 @@ const mapLabels = {
     {
       name: "Hunter's Lodge",
       fontSize: 16,
-      region: "Mainland",
-      place: "Heartwood Coast",
+      region: "Heartwood Coast",
       details: {
         title: "Hunter's Lodge",
         coordinates: { x: 2939, y: 1845 },
@@ -2244,8 +2073,7 @@ const mapLabels = {
     {
       name: "Talazarian Fort",
       fontSize: 16,
-      region: "Mainland",
-      place: "Heartwood Coast",
+      region: "Heartwood Coast",
       details: {
         title: "Talazarian Fort",
         coordinates: { x: 2919, y: 2257 },
@@ -2258,8 +2086,7 @@ const mapLabels = {
     {
       name: "Temple of Kuthos",
       fontSize: 16,
-      region: "Mainland",
-      place: "Heartwood Coast",
+      region: "Heartwood Coast",
       details: {
         title: "Temple of Kuthos",
         coordinates: { x: 2759, y: 2397 },
@@ -2274,8 +2101,7 @@ const mapLabels = {
     {
       name: "Orc Raider Camp",
       fontSize: 16,
-      region: "Mainland",
-      place: "Tundria",
+      region: "Tundria",
       details: {
         title: "Orc Raider Camp",
         coordinates: { x: 2945, y: 1224 },
@@ -2288,8 +2114,7 @@ const mapLabels = {
     {
       name: "Elsinea Manor",
       fontSize: 16,
-      region: "Mainland",
-      place: "Tundria",
+      region: "Tundria",
       details: {
         title: "Elsinea Manor",
         coordinates: { x: 2616, y: 1249 },
@@ -2302,8 +2127,7 @@ const mapLabels = {
     {
       name: "Frost Troll Coast",
       fontSize: 16,
-      region: "Mainland",
-      place: "Tundria",
+      region: "Tundria",
       details: {
         title: "Frost Troll Coast",
         coordinates: { x: 2575, y: 1129 },
@@ -2316,8 +2140,7 @@ const mapLabels = {
     {
       name: "Trapper Grayth's Dwelling",
       fontSize: 16,
-      region: "Mainland",
-      place: "Tundria",
+      region: "Tundria",
       details: {
         title: "Trapper Grayth's Dwelling",
         coordinates: { x: 3400, y: 819 },
@@ -2330,8 +2153,7 @@ const mapLabels = {
     {
       name: "Infiltrator Camp",
       fontSize: 16,
-      region: "Mainland",
-      place: "Tundria",
+      region: "Tundria",
       details: {
         title: "Infiltrator Camp",
         coordinates: { x: 3608, y: 1039 },
@@ -2344,8 +2166,7 @@ const mapLabels = {
     {
       name: "Altargrade",
       fontSize: 16,
-      region: "Mainland",
-      place: "Tundria",
+      region: "Tundria",
       details: {
         title: "Altargrade",
         coordinates: { x: 3239, y: 755 },
@@ -2358,8 +2179,7 @@ const mapLabels = {
     {
       name: "Orc Raider Fort",
       fontSize: 16,
-      region: "Mainland",
-      place: "Tundria",
+      region: "Tundria",
       details: {
         title: "Orc Raider Fort",
         coordinates: { x: 3111, y: 861 },
@@ -2372,8 +2192,7 @@ const mapLabels = {
     {
       name: "Hammerfist Mine",
       fontSize: 16,
-      region: "Mainland",
-      place: "Tundria",
+      region: "Tundria",
       details: {
         title: "Hammerfist Mine",
         coordinates: { x: 2777, y: 595 },
@@ -2386,8 +2205,7 @@ const mapLabels = {
     {
       name: "Stormholde",
       fontSize: 16,
-      region: "Mainland",
-      place: "Tundria",
+      region: "Tundria",
       details: {
         title: "Stormholde",
         coordinates: { x: 2563, y: 929 },
@@ -2400,8 +2218,7 @@ const mapLabels = {
     {
       name: "Ruins of Osgarl",
       fontSize: 16,
-      region: "Mainland",
-      place: "Tundria",
+      region: "Tundria",
       details: {
         title: "Ruins of Osgarl",
         coordinates: { x: 2543, y: 414 },
@@ -2414,8 +2231,7 @@ const mapLabels = {
     {
       name: "Castle of Artraxis",
       fontSize: 16,
-      region: "Mainland",
-      place: "Tundria",
+      region: "Tundria",
       details: {
         title: "Castle of Artraxis",
         coordinates: { x: 2879, y: 413 },
@@ -2432,7 +2248,6 @@ const mapLabels = {
       name: "Pirate Raider's Camp",
       fontSize: 16,
       region: "Breakwater",
-      place: "New Royale Island",
       details: {
         title: "Pirate Raider's Camp",
         coordinates: { x: 1351, y: 1762 },
@@ -2446,7 +2261,6 @@ const mapLabels = {
       name: "Athropiniax's Temple",
       fontSize: 16,
       region: "Breakwater",
-      place: "New Royale Island",
       details: {
         title: "Athropiniax's Temple",
         coordinates: { x: 1784, y: 2431 },
@@ -2462,7 +2276,6 @@ const mapLabels = {
       name: "Undead Dwarven Fort",
       fontSize: 16,
       region: "Breakwater",
-      place: "New Town Island",
       details: {
         title: "Undead Dwarven Fort",
         coordinates: { x: 1924, y: 1732 },
@@ -2476,7 +2289,6 @@ const mapLabels = {
       name: "Deadwing's Lair",
       fontSize: 16,
       region: "Breakwater",
-      place: "New Town Island",
       details: {
         title: "Deadwing's Lair",
         coordinates: { x: 1945, y: 1692 },
@@ -2490,7 +2302,6 @@ const mapLabels = {
       name: "Dwarf Fortress",
       fontSize: 16,
       region: "Breakwater",
-      place: "New Town Island",
       details: {
         title: "Dwarf Fortress",
         coordinates: { x: 2173, y: 1510 },
@@ -2506,7 +2317,6 @@ const mapLabels = {
       name: "Sea Pirate Shack",
       fontSize: 16,
       region: "Breakwater",
-      place: "Roycroft Island",
       details: {
         title: "Sea Pirate Shack",
         coordinates: { x: 2215, y: 2253 },
@@ -2517,17 +2327,29 @@ const mapLabels = {
       },
     },
 
-    // Western Isles Places of Interest
+    // Places of Interest - Region: Western Isles
+    {
+      name: "Talazar's Castle",
+      fontSize: 25,
+      region: "Western Isles",
+      details: {
+        title: "Talazar's Castle",
+        coordinates: { x: 1104, y: 3292 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Talazar's Castle is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
 
-    // Broken Finger Places of Interest
+    // Places of Interest - Region: Broken Figer
 
-    // Sands of Creation Places of Interest
-    // Ruhura Side Places of Interest
+    // Places of Interest - Region: Sands of Creation
+    // Places of Interest - Ruhura 
     {
       name: "Ruhura Outpost",
       fontSize: 16,
       region: "Sands of Creation",
-      place: "Ruhura",
       details: {
         title: "Ruhura Outpost",
         coordinates: { x: 943, y: 3987 },
@@ -2541,7 +2363,6 @@ const mapLabels = {
       name: "Sand Golem Crypt",
       fontSize: 16,
       region: "Sands of Creation",
-      place: "Ruhura",
       details: {
         title: "Sand Golem Crypt",
         coordinates: { x: 842, y: 3924 },
@@ -2555,7 +2376,6 @@ const mapLabels = {
       name: "Lupinsix's Lair",
       fontSize: 16,
       region: "Sands of Creation",
-      place: "Ruhura",
       details: {
         title: "Lupinsix's Lair",
         coordinates: { x: 793, y: 3838 },
@@ -2569,7 +2389,6 @@ const mapLabels = {
       name: "Tomna's House",
       fontSize: 16,
       region: "Sands of Creation",
-      place: "Ruhura",
       details: {
         title: "Tomna's House",
         coordinates: { x: 720, y: 3682 },
@@ -2583,7 +2402,6 @@ const mapLabels = {
       name: "Artonian Fort",
       fontSize: 16,
       region: "Sands of Creation",
-      place: "Ruhura",
       details: {
         title: "Artonian Fort",
         coordinates: { x: 556, y: 3668 },
@@ -2597,7 +2415,6 @@ const mapLabels = {
       name: "Artonian Cave",
       fontSize: 16,
       region: "Sands of Creation",
-      place: "Ruhura",
       details: {
         title: "Artonian Cave",
         coordinates: { x: 490, y: 3652 },
@@ -2611,7 +2428,6 @@ const mapLabels = {
       name: "The GateKeeper",
       fontSize: 16,
       region: "Sands of Creation",
-      place: "Ruhura",
       details: {
         title: "The GateKeeper",
         coordinates: { x: 422, y: 3686 },
@@ -2625,7 +2441,6 @@ const mapLabels = {
       name: "Dragon Lair",
       fontSize: 16,
       region: "Sands of Creation",
-      place: "Ruhura",
       details: {
         title: "Dragon Lair",
         coordinates: { x: 114, y: 3469 },
@@ -2637,12 +2452,11 @@ const mapLabels = {
     },
     // Done
 
-    // Khafra Side Places of Interest
+    // Khafra
     {
       name: "Khafra Fishing Outpost",
       fontSize: 16,
       region: "Sands of Creation",
-      place: "Khafra",
       details: {
         title: "Khafra Fishing Outpost",
         coordinates: { x: 88, y: 2726 },
@@ -2656,7 +2470,6 @@ const mapLabels = {
       name: "Baniti's Family Crypt",
       fontSize: 16,
       region: "Sands of Creation",
-      place: "Khafra",
       details: {
         title: "Baniti's Family Crypt",
         coordinates: { x: 313, y: 2979 },
@@ -2670,7 +2483,6 @@ const mapLabels = {
       name: "Blacktail's Crypt",
       fontSize: 16,
       region: "Sands of Creation",
-      place: "Khafra",
       details: {
         title: "Blacktail's Crypt",
         coordinates: { x: 56, y: 3026 },
@@ -2684,7 +2496,6 @@ const mapLabels = {
       name: "The Guardian",
       fontSize: 16,
       region: "Sands of Creation",
-      place: "Khafra",
       details: {
         title: "The Guardian",
         coordinates: { x: 169, y: 3158 },
@@ -2698,7 +2509,6 @@ const mapLabels = {
       name: "Undead Artonian Crypt",
       fontSize: 16,
       region: "Sands of Creation",
-      place: "Khafra",
       details: {
         title: "Undead Artonian Crypt",
         coordinates: { x: 263, y: 3250 },
@@ -2712,7 +2522,6 @@ const mapLabels = {
       name: "Ancient Artonian Swordsman Dungeon",
       fontSize: 16,
       region: "Sands of Creation",
-      place: "Khafra",
       details: {
         title: "Ancient Artonian Swordsman Dungeon",
         coordinates: { x: 142, y: 3329 },
@@ -2730,8 +2539,7 @@ const mapLabels = {
     {
       name: "Gut Rot Swamp",
       fontSize: 20,
-      region: "Valinor Island",
-      place: "Valinor",
+      region: "Valinor",
       details: {
         title: "Gut Rot Swamp",
         coordinates: { x: 1177, y: 413 },
@@ -2749,7 +2557,6 @@ const mapLabels = {
       name: "Lake Silvest",
       fontSize: 15,
       region: "Krythan",
-      place: "Silvest Valley",
       details: {
         title: "Lake Silvest",
         coordinates: { x: 1267, y: 1220 },
@@ -2763,7 +2570,6 @@ const mapLabels = {
       name: "Chokecherry Pond",
       fontSize: 12,
       region: "Krythan",
-      place: "Silvest Valley",
       details: {
         title: "Chokecherry Pond",
         coordinates: { x: 1040, y: 1218 },
@@ -2774,12 +2580,11 @@ const mapLabels = {
       },
     },
 
-    // Krythan Region Water Bodies
+    // Bodies of Water - Region: Krythan
     {
       name: "Queen's Lake",
       fontSize: 18,
       region: "Krythan",
-      place: "Krythan Fields",
       details: {
         title: "Queen's Lake",
         coordinates: { x: 390, y: 1090 },
@@ -2793,7 +2598,6 @@ const mapLabels = {
       name: "Crow Lake",
       fontSize: 14,
       region: "Krythan",
-      place: "Krythan Fields",
       details: {
         title: "Crow Lake",
         coordinates: { x: 849, y: 1156 },
@@ -2807,7 +2611,6 @@ const mapLabels = {
       name: "Krythan Swamp",
       fontSize: 20,
       region: "Krythan",
-      place: "Krythan Fields", // Not sure about the name, just thought it needed a name Question
       details: {
         title: "Krythan Swamp",
         coordinates: { x: 190, y: 1766 },
@@ -2819,12 +2622,11 @@ const mapLabels = {
     },
 
     /* Mainland Water Bodies */
-    // Darkwood Forest Water Bodies
+    // Bodies of Water - Region: Darkwoods Forest
     {
       name: "Cairn Lake",
       fontSize: 16,
-      region: "Mainland",
-      place: "Darkwoods Forest",
+      region: "Darkwoods Forest",
       details: {
         title: "Cairn Lake",
         coordinates: { x: 1015, y: 2869 },
@@ -2837,8 +2639,7 @@ const mapLabels = {
     {
       name: "Lake Mraya",
       fontSize: 16,
-      region: "Mainland",
-      place: "Darkwoods Forest",
+      region: "Darkwoods Forest",
       details: {
         title: "Lake Mraya",
         coordinates: { x: 778, y: 2988 },
@@ -2851,8 +2652,7 @@ const mapLabels = {
     {
       name: "Josody Swamp",
       fontSize: 18,
-      region: "Mainland",
-      place: "Darkwoods Forest",
+      region: "Darkwoods Forest",
       details: {
         title: "Josody Swamp",
         coordinates: { x: 1129, y: 2676 },
@@ -2863,10 +2663,9 @@ const mapLabels = {
       },
     },
     {
-      name: "Greenteeth Swamp",
+      name: "Greenteeth Swamp", // Not sure about the name, just thought it needed one. Question Mark
       fontSize: 16,
-      region: "Mainland",
-      place: "Darkwoods Forest", // Not sure about the name, just thought it needed a name Question
+      region: "Darkwoods Forest", 
       details: {
         title: "Greenteeth Swamp",
         coordinates: { x: 1640, y: 2600 },
@@ -2879,8 +2678,7 @@ const mapLabels = {
     {
       name: "Darkfell Marsh",
       fontSize: 16,
-      region: "Mainland",
-      place: "Darkwoods Forest",
+      region: "Darkwoods Forest",
       details: {
         title: "Darkfell Marsh",
         coordinates: { x: 1011, y: 3092 },
@@ -2891,12 +2689,11 @@ const mapLabels = {
       },
     },
 
-    // Battle Plains Water Bodies
+    // Bodies of Water - Region: Battle Plains
     {
       name: "Proudblood Sound",
       fontSize: 20,
-      region: "Mainland",
-      place: "Battle Plains",
+      region: "Battle Plains",
       details: {
         title: "Proudblood Sound",
         coordinates: { x: 2272, y: 3770 },
@@ -2909,8 +2706,7 @@ const mapLabels = {
     {
       name: "Chlera Bay",
       fontSize: 30,
-      region: "Mainland",
-      place: "Battle Plains",
+      region: "Battle Plains",
       details: {
         title: "Chlera Bay",
         coordinates: { x: 2558, y: 3713 },
@@ -2920,14 +2716,15 @@ const mapLabels = {
         links: [],
       },
     },
+
+    // Bodies of Water - Region: Battle Plains
     // There are many bodies of water in the Battle Plains, but none have specific names. I'm going to add a few especially around whirlpool portals.
 
-    // Black Swamp Region Water Bodies
+    // Bodies of Water - Region: Black Swamp
     {
       name: "Vorda Swamp",
       fontSize: 20,
-      region: "Mainland",
-      place: "Black Swamp",
+      region: "Black Swamp",
       details: {
         title: "Vorda Swamp",
         coordinates: { x: 2787, y: 3682 },
@@ -2940,8 +2737,7 @@ const mapLabels = {
     {
       name: "Canis Lake",
       fontSize: 15,
-      region: "Mainland",
-      place: "Black Swamp",
+      region: "Black Swamp",
       details: {
         title: "Canis Lake",
         coordinates: { x: 2830, y: 3509 },
@@ -2954,8 +2750,7 @@ const mapLabels = {
     {
       name: "Lake Dresta",
       fontSize: 15,
-      region: "Mainland",
-      place: "Black Swamp",
+      region: "Black Swamp",
       details: {
         title: "Lake Dresta",
         coordinates: { x: 2919, y: 3650 },
@@ -2968,8 +2763,7 @@ const mapLabels = {
     {
       name: "Key Marsh",
       fontSize: 20,
-      region: "Mainland",
-      place: "Black Swamp",
+      region: "Black Swamp",
       details: {
         title: "Key Marsh",
         coordinates: { x: 3399, y: 3924 },
@@ -2980,12 +2774,11 @@ const mapLabels = {
       },
     },
 
-    // Highlands Region Water Bodies
+    // Bodies of Water - Region: Highlands
     {
       name: "West Lake",
       fontSize: 15,
-      region: "Mainland",
-      place: "Highlands",
+      region: "Highlands",
       details: {
         title: "West Lake",
         coordinates: { x: 3377, y: 2980 },
@@ -2998,8 +2791,7 @@ const mapLabels = {
     {
       name: "Parian Lake",
       fontSize: 15,
-      region: "Mainland",
-      place: "Highlands",
+      region: "Highlands",
       details: {
         title: "Parian Lake",
         coordinates: { x: 3512, y: 2951 },
@@ -3012,8 +2804,7 @@ const mapLabels = {
     {
       name: "Town Lake",
       fontSize: 15,
-      region: "Mainland",
-      place: "Highlands",
+      region: "Highlands",
       details: {
         title: "Town Lake",
         coordinates: { x: 3587, y: 3115 },
@@ -3026,8 +2817,7 @@ const mapLabels = {
     {
       name: "Kor's Lake",
       fontSize: 15,
-      region: "Mainland",
-      place: "Highlands",
+      region: "Highlands",
       details: {
         title: "Kor's Lake",
         coordinates: { x: 3576, y: 3234 },
@@ -3040,8 +2830,7 @@ const mapLabels = {
     {
       name: "Lake Ulthien",
       fontSize: 25,
-      region: "Mainland",
-      place: "Highlands",
+      region: "Highlands",
       details: {
         title: "Lake Ulthien",
         coordinates: { x: 3033, y: 3229 },
@@ -3054,8 +2843,7 @@ const mapLabels = {
     {
       name: "Glutton Lake",
       fontSize: 25,
-      region: "Mainland",
-      place: "Highlands",
+      region: "Highlands",
       details: {
         title: "Glutton Lake",
         coordinates: { x: 3461, y: 2702 },
@@ -3068,8 +2856,7 @@ const mapLabels = {
     {
       name: "Lake Kallon",
       fontSize: 15,
-      region: "Mainland",
-      place: "Highlands",
+      region: "Highlands",
       details: {
         title: "Lake Kallon",
         coordinates: { x: 3546, y: 3412 },
@@ -3082,8 +2869,7 @@ const mapLabels = {
     {
       name: "Orc Pond",
       fontSize: 15,
-      region: "Mainland",
-      place: "Highlands",
+      region: "Highlands",
       details: {
         title: "Orc Pond",
         coordinates: { x: 3183, y: 3601 },
@@ -3094,12 +2880,11 @@ const mapLabels = {
       },
     },
 
-    // Valley of Giants Water Bodies
+    // Bodies of Water - Region: Valley of Giants
     {
       name: "Greenmead Lake",
       fontSize: 16,
-      region: "Mainland",
-      place: "Valley of Giants",
+      region: "Valley of Giants",
       details: {
         title: "Greenmead Lake",
         coordinates: { x: 3112, y: 2844 },
@@ -3110,22 +2895,18 @@ const mapLabels = {
       },
     },
 
-    // Heartwood Coast Region Water Bodies
+    // Bodies of Water - Region: Heartwood Coast
 
-    // Tundria Region Water Bodies
+    // Bodies of Water - Region: Tundria
 
-    // Breakwater Region Water Bodies
-
-    // New Royale Water Bodies
-
-    // New Town Water Bodies
-
-    // Roycroft Water Bodies
+    // Bodies of Water - Region: Breakwater
+    // New Royale
+    // New Town
+    // Roycroft
     {
       name: "The Choke",
       fontSize: 16,
       region: "Breakwater",
-      place: "Roycroft Island",
       details: {
         title: "The Choke",
         coordinates: { x: 2270, y: 2177 },
@@ -3136,14 +2917,13 @@ const mapLabels = {
       },
     },
 
-    // Western Isles Water Bodies
+    // Bodies of Water - Region: Western Isles
 
-    // Broken Finger Water Bodies
+    // Bodies of Water - Region: Broken Finger
     {
       name: "Broken Lake",
       fontSize: 20,
       region: "Broken Finger",
-      place: "Broken Finger", // Not sure about the name, just thought it needed a name Question
       details: {
         title: "Broken Lake",
         coordinates: { x: 1120, y: 3660 },
@@ -3157,7 +2937,6 @@ const mapLabels = {
       name: "Obsidian Lake",
       fontSize: 25,
       region: "Broken Finger",
-      place: "Obsidian Lake", // Kiddy Pond of Goba lol. Affectionately known as Knitting Lake by some.
       details: {
         title: "Obsidian Lake",
         coordinates: { x: 1354, y: 3513 },
@@ -3168,15 +2947,13 @@ const mapLabels = {
       },
     },
 
-    // Sands of Creation Water Bodies
-    // Ruhura Side Water Bodies
-
-    // Khafra Side Water Bodies
+    // Bodies of Water - Region: Sands of Creation
+    // Ruhura
+    // Khafra
     {
       name: "Khafra Oasis",
       fontSize: 15,
       region: "Sands of Creation",
-      place: "Khafra",
       details: {
         title: "Khafra Oasis",
         coordinates: { x: 218, y: 3016 },
@@ -3190,7 +2967,6 @@ const mapLabels = {
       name: "Chomper's Oasis",
       fontSize: 15,
       region: "Sands of Creation",
-      place: "Khafra",
       details: {
         title: "Chomper's Oasis",
         coordinates: { x: 91, y: 3267 },
@@ -3203,9 +2979,46 @@ const mapLabels = {
   ],
 
   mountains: [
-    // { x: 567, y: 890, name: "Frost Peak", fontSize: 24 },
-    // Add mountain labels here
-    //Krog
-    // Medosk Mountains add this label later when you find out which one it is.
+    // I added Regions to the mountain ranges but some of them span multiple regions so I just picked one region for each mountain range. Might need to change later.
+    // Mountains - Region: Valinor
+
+    // Mountains - Region: Krythan
+
+    // Mountains - Region: Darkwoods Forest
+
+    // Mountains - Region: Battle Plains
+
+    // Mountains - Region: Black Swamp
+    {
+      name: "Medosk Mountains",
+      fontSize: 15,
+      region: "Black Swamp",
+      details: {
+        title: "Medosk Mountains",
+        coordinates: [
+          { x: 2981, y: 3533 },
+          { x: 3151, y: 3847 }, // Added a second coordinate for the same label
+        ],
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Medosk Mountains is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // Mountains - Region: Highlands
+
+    // Mountains - Region: Valley of Giants
+
+    // Mountains - Region: Heartwood Coast
+
+    // Mountains - Region: Tundria
+
+    // Mountains - Region: Breakwater
+
+    // Mountains - Region: Western Isles
+
+    // Mountains - Region: Broken Finger
+    
   ],
 };

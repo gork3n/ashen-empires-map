@@ -49,9 +49,9 @@ This section is migrated from the main README to consolidate all planning detail
             }
         }
         ```
--   🚧 **Granular Marker Filtering**
-    -   ⬜ Differentiate marker sub-types (e.g., `shop_weapon`, `shop_armor`, `portal_ancient`, `portal_lsp`).
-    -   ⬜ Update the filter menu to allow toggling these more specific sub-types.
+-   ✅ **Granular Marker Filtering**
+    -   ✅ Differentiate marker sub-types (e.g., `shop_weapon`, `shop_armor`, `portal_ancient`, `portal_lsp`).
+    -   ✅ Update the filter menu to allow toggling these more specific sub-types, complete with unique icons and styling.
 -   ⬜ **Search Functionality**
     -   ⬜ Implement a search bar to find locations, NPCs, and markers.
     -   ⬜ Feature an auto-complete list as the user types.

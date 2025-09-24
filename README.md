@@ -36,7 +36,8 @@ An interactive map for Ashen Empires with pixel-perfect coordinates and multiple
   - A floating filter button opens a full-screen, touch-friendly menu on all devices for a consistent experience.
   - The menu features a centered, three-column grid layout for easy navigation and a clean aesthetic.
   - **Dynamic Toggles**: Buttons are generated dynamically for all label and marker categories.
-  - **Master Toggles**: "Show All" buttons allow you to toggle entire sections at once.
+  - **Granular Marker Filtering**: Marker categories are presented as full-width headers (e.g., 'Portals', 'Shops') that toggle the entire group. Below each header, individual sub-types (e.g., 'Ancient Portals', 'Weapon Shops') can be toggled independently, each with its own unique icon.
+  - **Master Toggles**: "Show All" buttons allow you to toggle entire sections on or off at once.
 - **Dynamic Markers & Labels**:
   - Markers for various categories including docks, shops, trainers, and more.
   - Portals are broken down into distinct types (Lotor's Palace, Ancient, Whirlpool, etc.) each with a unique, color-coded icon for easy identification.
@@ -59,7 +60,7 @@ This project is built using **OpenLayers**, chosen for its superior handling of 
   - `labels.js`, `markers.js`: Data files defining all labels and markers.
 - **Dynamic Styling & Rendering**:
   - **Markers**: A colored circular background and a white foreground icon are drawn onto a single composite canvas. This ensures both elements scale together perfectly and provides a modern, clean look.
-  - **Labels**: Labels are rendered to a canvas with custom fonts, gradients, and backgrounds. Their font size scales dynamically with the map's zoom level.
+  - **Labels & UI Icons**: Text labels and icons in the filter menu are rendered to a canvas with custom fonts, gradients, and backgrounds. Label font size scales dynamically with the map's zoom level.
 - **Responsive UI Framework**: A mobile-first approach using CSS Flexbox, Grid, and media queries creates a fluid layout that adapts to any screen size. The UI is unified across desktop and mobile for a consistent experience.
 - **Coordinate System**: The map accurately translates between the 16384x16384 tile-based map and the 4096x4096 in-game coordinate system, ensuring all displayed coordinates are correct.
 

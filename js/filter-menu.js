@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Wait for the map and icons to be ready before initializing the filter menu.
     // This ensures that tinted marker icons are available.
+    // We also need access to the map and its layers.
+    // The 'map-ready' event provides this.
     document.addEventListener('map-ready', function() {
         initFilterMenu();
     });
@@ -14,7 +16,7 @@ function initFilterMenu() {
     const filterMenuToggle = document.getElementById('filter-menu-toggle');
     const mobileFiltersBtn = document.getElementById('mobile-filters-btn');
 
-    // The floating filter button toggles the menu
+    // The floating filter button on mobile toggles the menu
     if (mobileFiltersBtn) {
         mobileFiltersBtn.addEventListener('click', () => {
             filterMenu.classList.toggle('open');
@@ -194,66 +196,124 @@ function createMarkerToggleButtons() {
     ];
 
     markerCategories.forEach(category => {
-        const style = markerStyles[category.type];
-        
-        // Create button
-        const button = document.createElement('button');
-        button.className = 'toggle-btn active';
-        button.dataset.category = category.id;
-        
-        const animationClass = style && style.animation === 'beat' ? 'g-icon-beat' : '';
+        // Create the main container for this category row
+        const categoryRow = document.createElement('div');
+        categoryRow.className = 'marker-category-row';
 
-        // Add icon (now an <img> for SVG)
-        const iconImg = document.createElement('img');
-        
-        // Create the composite marker style to get the final canvas image, ensuring
-        // the sidebar icon perfectly matches the map marker.
-        const markerStyle = createMarkerStyle(category.type);
-        const markerCanvas = markerStyle.getImage().getImage(); // ol.style.Style -> ol.style.Icon -> HTMLCanvasElement
-        iconImg.src = markerCanvas.toDataURL();
-        iconImg.alt = category.name;
-        iconImg.className = `toggle-btn-icon-img ${animationClass}`;
-        button.appendChild(iconImg);
-        
-        // Add text
-        const textSpan = document.createElement('span');
-        textSpan.textContent = category.name;
-        button.appendChild(textSpan);
-        
-        // If the category is empty, disable the button and mark it inactive
-        if (!mapMarkers[category.id] || mapMarkers[category.id].length === 0) {
-            button.disabled = true;
-            button.classList.replace('active', 'inactive');
+        // --- 1. Create the Master Category Toggle Button ---
+        const mainButton = document.createElement('button');
+        mainButton.className = 'toggle-btn active';
+        mainButton.dataset.category = category.id;
+
+        // Revert to using a smaller img icon for the header-style button
+        const mainIcon = document.createElement('img');
+        mainIcon.src = createMarkerStyle(category.type).getImage().getImage().toDataURL();
+        mainIcon.className = 'toggle-btn-icon-img';
+        mainButton.appendChild(mainIcon);
+
+        // Text for the master button
+        const mainText = document.createElement('span');
+        mainText.textContent = category.name;
+        mainButton.appendChild(mainText);
+
+        // Disable if the category is empty
+        const isCategoryEmpty = !mapMarkers[category.id] || mapMarkers[category.id].length === 0;
+        if (isCategoryEmpty) {
+            mainButton.disabled = true;
+            mainButton.classList.replace('active', 'inactive');
         }
-        // Add click event listener
-        button.addEventListener('click', function() {
-            if (button.disabled) return;
 
-            const isActive = button.classList.contains('active');
+        // --- 2. Create the container for sub-type toggles ---
+        const subtypeContainer = document.createElement('div');
+        subtypeContainer.className = 'marker-subtype-container';
+
+        // Get all unique marker types within this category
+        const subtypes = [...new Set(mapMarkers[category.id]?.map(marker => marker.type) || [])];
+
+        // --- 3. Create individual sub-type toggle buttons ---
+        subtypes.forEach(subtype => {
+            const subtypeButton = document.createElement('button');
+            subtypeButton.className = 'toggle-btn active marker-subtype-btn';
+            subtypeButton.dataset.subtype = subtype;
+            subtypeButton.dataset.category = category.id;
+
+            // Create and append the canvas icon directly. This gives us more control.
+            const subtypeIconCanvas = createUIMarkerIcon(subtype);
+            subtypeIconCanvas.className = 'toggle-btn-icon-canvas'; // Use a new class for canvas styling
+            subtypeButton.appendChild(subtypeIconCanvas);
+
+            // --- Text for the sub-type button ---
+            // Create a more readable name from the subtype string.
+            // e.g., 'portal_lsp' -> 'LSP'
+            // e.g., 'shop_weapon' -> 'Weapon'
+            // e.g., 'underground_cave' -> 'Cave'
+            let subtypeName = subtype.replace(/^(shop|portal|underground)_/, ''); // Remove common prefixes
+            subtypeName = subtypeName.replace(/_/g, ' '); // Replace underscores with spaces
             
-            // Toggle button state
-            if (isActive) {
-                button.classList.remove('active');
-                button.classList.add('inactive');
-            } else {
-                button.classList.remove('inactive');
-                button.classList.add('active');
+            // Special case for 'lsp'
+            if (subtypeName.toLowerCase() === 'lsp') {
+                subtypeName = 'LSP';
             }
-            
-            // Dispatch event to toggle marker visibility
-            document.dispatchEvent(new CustomEvent('toggle-marker-category', {
-                detail: { 
-                    category: category.id, 
-                    visible: !isActive  // Toggle visibility (true->false or false->true)
-                }
-            }));
-            
-            // Update "Show All" button state
-            updateShowAllMarkersState();
+
+            const subtypeText = document.createElement('span');
+            subtypeText.textContent = subtypeName.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+            subtypeButton.appendChild(subtypeText);
+
+            // Event listener for the sub-type button
+            subtypeButton.addEventListener('click', function(e) {
+                e.stopPropagation(); // Prevent the main category button from firing
+                const isActive = this.classList.toggle('active');
+                this.classList.toggle('inactive', !isActive);
+
+                const layer = markerLayers[category.id];
+                if (!layer) return;
+
+                // Toggle visibility of features with this subtype
+                layer.getSource().getFeatures().forEach(feature => {
+                    if (feature.get('type') === subtype) {
+                        feature.setStyle(isActive ? createMarkerStyle(subtype) : null);
+                    }
+                });
+                
+                // Check if all subtype buttons are inactive to update the main button
+                const allSubtypesInactive = Array.from(subtypeContainer.children).every(btn => btn.classList.contains('inactive'));
+                mainButton.classList.toggle('active', !allSubtypesInactive);
+                mainButton.classList.toggle('inactive', allSubtypesInactive);
+            });
+
+            subtypeContainer.appendChild(subtypeButton);
         });
         
-        // Add to container
-        container.appendChild(button);
+        // --- 4. Add Event Listener to the Master Category Button ---
+        mainButton.addEventListener('click', function() {
+            if (isCategoryEmpty) return;
+
+            const wasActive = this.classList.contains('active');
+            const newActiveState = !wasActive;
+
+            this.classList.toggle('active', newActiveState);
+            this.classList.toggle('inactive', !newActiveState);
+
+            // Toggle the main layer visibility
+            document.dispatchEvent(new CustomEvent('toggle-marker-category', {
+                detail: { category: category.id, visible: newActiveState }
+            }));
+
+            // Also update all sub-type buttons to match the master state
+            subtypeContainer.querySelectorAll('.marker-subtype-btn').forEach(subBtn => {
+                subBtn.classList.toggle('active', newActiveState);
+                subBtn.classList.toggle('inactive', !newActiveState);
+            });
+
+            updateShowAllMarkersState();
+        });
+
+        // --- 5. Assemble and Append to DOM ---
+        categoryRow.appendChild(mainButton);
+        if (subtypes.length > 1) { // Only show subtype container if there's more than one type
+            categoryRow.appendChild(subtypeContainer);
+        }
+        container.appendChild(categoryRow);
     });
 }
 

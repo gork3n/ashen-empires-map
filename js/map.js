@@ -1,11 +1,11 @@
 // Global variables
 let labelLayers = {};
 let map;
-let markerLayers = {};
 let markerTooltipElement;
 let markerTooltipOverlay;
 const styleCache = {};
 const markerImageCache = {};
+let markerLayers = {};
 
 // Define custom styles for different label categories
 const labelStyles = {
@@ -137,13 +137,19 @@ const labelStyles = {
     mountains: {
         // White for mountains
         useGradient: false,
+        useBackground: true,
         fillColor: '#FFFFFF',
         strokeColor: '#000000',
         strokeWidth: 2,
         fontFamily: '"Alegreya Sans", sans-serif',
         fontWeight: 700,
         fontStyle: 'normal',
-        fontSize: 20
+        fontSize: 20,
+        backgroundStyle: {
+            fill: 'rgba(0, 0, 0, 0.7)',
+            stroke: 'rgba(128, 128, 128, 0.5)',
+            padding: [2, 6] // [Y, X]
+        }
     }
 };
 
@@ -292,7 +298,7 @@ function initializeMap() {
 
     // Initialize the map
     map = new ol.Map({
-        controls: ol.control.defaults.defaults(), pixelRatio: 1, // Improves performance on low-end devices
+        pixelRatio: 1, // Improves performance on low-end devices,
         target: 'map',
         layers: [
             new ol.layer.Tile({
@@ -695,6 +701,69 @@ function createMarkerStyle(markerType) {
 }
 
 /**
+ * Creates a larger marker icon specifically for UI elements like the filter menu.
+ * This is separate from createMarkerStyle to avoid affecting map markers.
+ * @param {string} markerType - Type of marker, corresponding to a key in `markerStyles`.
+ * @returns {HTMLCanvasElement} A canvas element with the larger icon.
+ */
+function createUIMarkerIcon(markerType) {
+    const cacheKey = `ui-marker-v1-${markerType}`;
+    if (styleCache[cacheKey]) {
+        return styleCache[cacheKey];
+    }
+
+    const styleProps = markerStyles[markerType] || {
+        icon: 'icons/info.svg',
+        color: '#FF0000'
+    };
+
+    // --- 1. Define Larger Marker and Canvas Sizes for UI ---
+    const backgroundDiameter = 48; // Reduced from 90 for ~50px size
+    const iconSize = backgroundDiameter * 0.7;
+    const border = 3; // Scaled down border
+    const shadowBlur = 4; // Scaled down shadow
+    const shadowOffsetY = 3; // Scaled down shadow
+
+    const canvasPadding = (border * 2) + (shadowBlur * 2);
+    const canvasSize = Math.ceil(backgroundDiameter + canvasPadding);
+    const center = canvasSize / 2;
+
+    // --- 2. Create the composite canvas ---
+    const finalCanvas = document.createElement('canvas');
+    finalCanvas.width = canvasSize;
+    finalCanvas.height = canvasSize;
+    const ctx = finalCanvas.getContext('2d', { willReadFrequently: true });
+
+    // --- 3. Draw Drop Shadow and Background Circle ---
+    ctx.shadowColor = 'rgba(0, 0, 0, 0.3)';
+    ctx.shadowBlur = shadowBlur;
+    ctx.shadowOffsetY = shadowOffsetY;
+
+    ctx.fillStyle = styleProps.color;
+    ctx.beginPath();
+    ctx.arc(center, center - (shadowOffsetY / 2), backgroundDiameter / 2, 0, 2 * Math.PI);
+    ctx.fill();
+
+    // --- 4. Draw Border and Icon ---
+    ctx.shadowColor = 'transparent';
+
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.75)';
+    ctx.lineWidth = border;
+    ctx.stroke();
+
+    const foregroundIconImage = markerImageCache[markerType];
+    if (foregroundIconImage) {
+        const iconX = center - (iconSize / 2);
+        const iconY = center - (iconSize / 2) - (shadowOffsetY / 2);
+        ctx.drawImage(foregroundIconImage, iconX, iconY, iconSize, iconSize);
+    }
+
+    // --- 5. Cache and return the canvas itself ---
+    styleCache[cacheKey] = finalCanvas;
+    return finalCanvas;
+}
+
+/**
  * Add a single marker to the map
  * @param {ol.source.Vector} source - Vector source
  * @param {number} x - X coordinate
@@ -833,16 +902,29 @@ function addMapLabels(map) {
 
         // Add all labels in this category
         if (mapLabels[category] && mapLabels[category].length) {
-            mapLabels[category].forEach(label => {
-                addLabelFeature(
-                    labelSource,
-                    label.details.coordinates.x,
-                    label.details.coordinates.y,
-                    label.name, 
-                    label.fontSize, 
-                    category,
-                    label.details
-                );
+            mapLabels[category].forEach((label) => {
+                const coords = label.details.coordinates;
+
+                // Check if coordinates is an array to support multiple locations for one label
+                if (Array.isArray(coords)) {
+                    coords.forEach((coord) => {
+                        addLabelFeature(
+                            labelSource,
+                            coord.x,
+                            coord.y,
+                            label.name,
+                            label.fontSize,
+                            category,
+                            label.details
+                        );
+                    });
+                } else {
+                    // Handle single coordinate object for backward compatibility
+                    addLabelFeature(
+                        labelSource,
+                        coords.x, coords.y, label.name, label.fontSize, category, label.details
+                    );
+                }
             });
         }
     });
