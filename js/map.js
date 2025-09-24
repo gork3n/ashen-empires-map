@@ -278,7 +278,7 @@ function initializeMap() {
     // --- Set Initial Map View ---
     // Define the center of the map using in-game (4096x4096) coordinates.
     // This makes it easy to change the starting location.
-    const initialCenterGameCoords = { x: 402, y: 2222, }; // Default View is x: 742, y: 706 (Showing Lotor's Summer Palace)
+    const initialCenterGameCoords = { x: 452, y: 716, }; // Default View is x: 742, y: 706 (Showing Lotor's Summer Palace)
 
     // Convert the in-game coordinates to OpenLayers view coordinates.
     // The map is 16384x16384, which is 4x the in-game coordinates.
@@ -429,8 +429,13 @@ function showInfoFlyout(data) {
 
     // Coordinates
     if (data.coordinates) {
-        html += `<p><strong>Coordinates:</strong> X: ${data.coordinates.x}, Y: ${data.coordinates.y}</p><hr>`;
+        html += `<p><strong>Coordinates:</strong> X: ${data.coordinates.x}, Y: ${data.coordinates.y}</p>`;
+    } else if (data.x !== undefined && data.y !== undefined) {
+        // Fallback for markers where coordinates are at the top level of the details object
+        html += `<p><strong>Coordinates:</strong> X: ${data.x}, Y: ${data.y}</p>`;
     }
+
+    html += '<hr>';
 
     // Image
     if (data.image) {
@@ -752,12 +757,12 @@ function addMapMarkers(map) {
         if (mapMarkers[category] && mapMarkers[category].length) {
             mapMarkers[category].forEach(marker => {
                 addMarkerFeature(
-                    markerSource, 
-                    marker.x, 
-                    marker.y, 
+                    markerSource,
+                    marker.details.coordinates.x,
+                    marker.details.coordinates.y,
                     marker.type,
                     marker.tooltip,
-                    marker.details
+                    marker.details // Pass the whole details object
                 );
             });
         }

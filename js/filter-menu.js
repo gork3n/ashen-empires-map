@@ -186,6 +186,7 @@ function createMarkerToggleButtons() {
         { id: 'spawn_good', name: 'Good Spawns', type: 'spawn_good' },
         { id: 'spawn_evil', name: 'Evil Spawns', type: 'spawn_evil' },
         { id: 'banks', name: 'Banks', type: 'bank' },
+        { id: 'altars', name: 'Altars', type: 'altar' },
         { id: 'crafting', name: 'Crafting', type: 'obelisk' },
         { id: 'undergrounds', name: 'Undergrounds', type: 'underground_cave' },
         { id: 'games_of_chance', name: 'Games of Chance', type: 'game_of_chance' },
