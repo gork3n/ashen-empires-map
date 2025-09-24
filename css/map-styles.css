@@ -49,12 +49,6 @@ html, body {
     color: rgba(153, 204, 255, 0) !important;
 }
 
-/* Reposition and resize zoom controls */
-.ol-zoom {
-    top: .5em;
-    left: .5em;
-}
-
 .ol-zoom button {
     width: 1.75em;
     height: 1.75em;

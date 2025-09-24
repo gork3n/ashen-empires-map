@@ -21,7 +21,7 @@ This section is migrated from the main README to consolidate all planning detail
 -   🚧 **Responsive & Mobile-Optimized UI**
     -   ✅ Fluid layout for all screen sizes.
     -   ✅ Unified full-screen, grid-based filter menu for all devices.
-    -   ✅ Revert zoom controls to default top-left position to avoid overlap with filter button on mobile.
+    -   ✅ Reverted zoom controls to default top-left position to avoid overlap with filter button on mobile.
 -   🚧 **Complete Labeling System**
     -   ✅ Dynamic font scaling for legibility at all zoom levels.
     -   🚧 Ongoing verification and addition of all location labels.

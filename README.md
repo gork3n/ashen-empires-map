@@ -41,7 +41,6 @@ An interactive map for Ashen Empires with pixel-perfect coordinates and multiple
   - Labels dynamically scale their font size based on the zoom level, ensuring optimal legibility from any distance.
 - **Info Flyout Panel**: Click on major location labels (like "Valinor") to open a panel that slides up from the bottom, providing detailed information about that location without leaving the main map.
 - **Optimized UI**:
-  - **Repositioned Controls**: Zoom controls have been moved to the bottom-right and enlarged for easier access.
 - **Quick Tips**: A helpful, cycling tip bar at the bottom of the map to help users discover features. Click it to open a modal with a full list of game and map tips.
 - **Responsive Design**: The interface is optimized for both desktop and mobile devices. The layout adapts to provide a functional and intuitive experience on any screen size, from phones to large monitors.
 
