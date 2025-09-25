@@ -1076,6 +1076,19 @@ const mapLabels = {
         links: [],
       },
     },
+    {
+      name: "Crab Island", // Not sure on the name Question Mark
+      fontSize: 20,
+      region: "Breakwater",
+      details: {
+        title: "Crab Island",
+        coordinates: { x: 1063, y: 1951 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Crab Island is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // Sands of Creation Islands Technically might be Ruhara Island and Khafra Island, but this might be redundant. Question Mark
   ],

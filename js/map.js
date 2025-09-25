@@ -284,7 +284,7 @@ function initializeMap() {
     // --- Set Initial Map View ---
     // Define the center of the map using in-game (4096x4096) coordinates.
     // This makes it easy to change the starting location.
-    const initialCenterGameCoords = { x: 2888, y: 423, }; // Default View is { x: 776, y: 668, } (Showing Lotor's Summer Palace) Centers LSP on smaller screens.
+    const initialCenterGameCoords = { x: 777, y: 668, }; // Default View is { x: 776, y: 668, } (Showing Lotor's Summer Palace) Centers LSP on smaller screens.
 
     // Convert the in-game coordinates to OpenLayers view coordinates.
     // The map is 16384x16384, which is 4x the in-game coordinates.
@@ -813,7 +813,7 @@ function addMapMarkers(map) {
             title: category + ' Markers',
             visible: true,
             minResolution: 0, // Set to 0 to ensure markers are always visible when zoomed in.
-            maxResolution: 4  // Hides when zoomed out to level 4 or more (resolution >= 4)
+            maxResolution: 16  // Hides when zoomed out to level 2 or more (resolution >= 16)
         });
         
         // Store the layer reference

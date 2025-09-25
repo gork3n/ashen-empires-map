@@ -1984,6 +1984,20 @@ const mapMarkers = {
         links: [],
       },
     },
+    {
+      type: "dock",
+      tooltip: "Crab Island Dock",
+      region: "Breakwater",
+      place: "Crab Island",
+      details: {
+        title: "New Royal Island South Dock",
+        coordinates: { x: 1059, y: 2075 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Crab Island Dock is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // Broken Finger Region Docks
     {
