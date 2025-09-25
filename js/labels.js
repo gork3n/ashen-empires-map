@@ -311,7 +311,7 @@ const mapLabels = {
     {
       name: "Redwake",
       fontSize: 30,
-      region: "Darkwoods Forest",
+      region: "Darkwoods",
       details: {
         title: "Redwake",
         coordinates: { x: 456, y: 2825 },
@@ -324,7 +324,7 @@ const mapLabels = {
     {
       name: "Whisperdale",
       fontSize: 30,
-      region: "Darkwoods Forest",
+      region: "Darkwoods",
       details: {
         title: "Whisperdale",
         coordinates: { x: 405, y: 3418 },
@@ -337,7 +337,7 @@ const mapLabels = {
     {
       name: "Autumn",
       fontSize: 30,
-      region: "Darkwoods Forest",
+      region: "Darkwoods",
       details: {
         title: "Autumn",
         coordinates: { x: 592, y: 3389 },
@@ -350,7 +350,7 @@ const mapLabels = {
     {
       name: "Darkfell",
       fontSize: 30,
-      region: "Darkwoods Forest",
+      region: "Darkwoods",
       details: {
         title: "Darkfell",
         coordinates: { x: 901, y: 3064 },
@@ -363,7 +363,7 @@ const mapLabels = {
     {
       name: "Dunmarrow",
       fontSize: 30,
-      region: "Darkwoods Forest",
+      region: "Darkwoods",
       details: {
         title: "Dunmarrow",
         coordinates: { x: 1384, y: 3151 },
@@ -376,7 +376,7 @@ const mapLabels = {
     {
       name: "Josody",
       fontSize: 30,
-      region: "Darkwoods Forest",
+      region: "Darkwoods",
       details: {
         title: "Josody",
         coordinates: { x: 1321, y: 2477 },
@@ -389,7 +389,7 @@ const mapLabels = {
     {
       name: "Gulley",
       fontSize: 30,
-      region: "Darkwoods Forest",
+      region: "Darkwoods",
       details: {
         title: "Gulley",
         coordinates: { x: 1108, y: 2755 },
@@ -732,7 +732,7 @@ const mapLabels = {
     {
       name: "Minotaur Island",
       fontSize: 30,
-      region: "Krythan",
+      region: "Western Isles",
       details: {
         title: "Minotaur Island",
         coordinates: { x: 137, y: 230 },
@@ -745,7 +745,7 @@ const mapLabels = {
     {
       name: "Party Island",
       fontSize: 30,
-      region: "Krythan",
+      region: "Western Isles",
       details: {
         title: "Party Island",
         coordinates: { x: 421, y: 69 },
@@ -764,7 +764,7 @@ const mapLabels = {
     {
       name: "Lotor's Prison",
       fontSize: 30,
-      region: "Krythan",
+      region: "Western Isles",
       details: {
         title: "Lotor's Prison",
         coordinates: { x: 1545, y: 546 },
@@ -777,7 +777,7 @@ const mapLabels = {
     {
       name: "Lotor's Summer Palace",
       fontSize: 30,
-      region: "Krythan",
+      region: "Special",
       details: {
         title: "Lotor's Summer Palace",
         coordinates: { x: 775, y: 571 },
@@ -805,7 +805,7 @@ const mapLabels = {
     {
       name: "Real Estate Island",
       fontSize: 20,
-      region: "Krythan",
+      region: "Special",
       details: {
         title: "Real Estate Island",
         coordinates: { x: 663, y: 630 },
@@ -818,7 +818,7 @@ const mapLabels = {
     {
       name: "Guild Arena Island",
       fontSize: 30,
-      region: "Krythan",
+      region: "Western Isles",
       details: {
         title: "Guild Arena Island",
         coordinates: { x: 88, y: 942 },
@@ -844,7 +844,7 @@ const mapLabels = {
     {
       name: "Krythan Island",
       fontSize: 35,
-      region: "Krythan",
+      region: "Special",
       details: {
         title: "Krythan Island",
         coordinates: { x: 1090, y: 992 },
@@ -854,8 +854,6 @@ const mapLabels = {
         links: [],
       },
     },
-
-    // Region: Western Isles
     {
       name: "Lopal",
       fontSize: 30,
@@ -899,7 +897,7 @@ const mapLabels = {
     {
       name: "Deserted Island",
       fontSize: 14,
-      region: "Krythan",
+      region: "Special",
       details: {
         title: "Deserted Island",
         coordinates: { x: 223, y: 425 },
@@ -912,7 +910,7 @@ const mapLabels = {
     {
       name: "Scarab Island",
       fontSize: 35,
-      region: "Krythan",
+      region: "Western Isles",
       details: {
         title: "Scarab Island",
         coordinates: { x: 259, y: 2048 },
@@ -925,7 +923,7 @@ const mapLabels = {
     {
       name: "Werewolf Island",
       fontSize: 35,
-      region: "Krythan",
+      region: "Western Isles",
       details: {
         title: "Werewolf Island",
         coordinates: { x: 463, y: 2495 },
@@ -938,7 +936,7 @@ const mapLabels = {
     {
       name: "Dragoon Island",
       fontSize: 25,
-      region: "Darkwoods Forest",
+      region: "Darkwoods", // I think this is correct because of proximity to Darkwood Forest and the bridge, but it could be Western Isles. Question Mark
       details: {
         title: "Dragoon Island",
         coordinates: { x: 350, y: 3238 },
@@ -1065,8 +1063,6 @@ const mapLabels = {
         links: [],
       },
     },
-
-    // Tundria Islands
     {
       name: "Unnamed Island", // Not sure on the name Question Mark
       fontSize: 20,
@@ -1081,7 +1077,7 @@ const mapLabels = {
       },
     },
 
-    // Sands of Creation Islands
+    // Sands of Creation Islands Technically might be Ruhara Island and Khafra Island, but this might be redundant. Question Mark
   ],
 
   dungeons: [
@@ -1569,7 +1565,7 @@ const mapLabels = {
     {
       name: "Josody Theif Fort",
       fontSize: 18,
-      region: "Darkwoods Forest",
+      region: "Darkwoods",
       details: {
         title: "Josody Theif Fort",
         coordinates: { x: 936, y: 2576 },
@@ -1582,7 +1578,7 @@ const mapLabels = {
     {
       name: "Crypt of Ryonkah",
       fontSize: 16,
-      region: "Darkwoods Forest",
+      region: "Darkwoods",
       details: {
         title: "Crypt of Ryonkah",
         coordinates: { x: 1030, y: 2977 },
@@ -1595,7 +1591,7 @@ const mapLabels = {
     {
       name: "Lord Vezryl's Estate",
       fontSize: 16,
-      region: "Darkwoods Forest",
+      region: "Darkwoods",
       details: {
         title: "Lord Vezryl's Estate",
         coordinates: { x: 555, y: 3158 },
@@ -1608,7 +1604,7 @@ const mapLabels = {
     {
       name: "Burslord's Hunting Lodge",
       fontSize: 16,
-      region: "Darkwoods Forest",
+      region: "Darkwoods",
       details: {
         title: "Burslord's Hunting Lodge",
         coordinates: { x: 683, y: 3389 },
@@ -1621,7 +1617,7 @@ const mapLabels = {
     {
       name: "Mnemmon",
       fontSize: 25,
-      region: "Darkwoods Forest",
+      region: "Darkwoods",
       details: {
         title: "Mnemmon",
         coordinates: { x: 911, y: 3216 },
@@ -1634,7 +1630,7 @@ const mapLabels = {
     {
       name: "Mnemmon Gaol",
       fontSize: 20,
-      region: "Darkwoods Forest",
+      region: "Darkwoods",
       details: {
         title: "Mnemmon Gaol",
         coordinates: { x: 881, y: 3390 },
@@ -1660,7 +1656,7 @@ const mapLabels = {
     {
       name: "Astari Ruin Shelter",
       fontSize: 16,
-      region: "Darkwoods Forest",
+      region: "Darkwoods",
       details: {
         title: "Astari Ruin Shelter",
         coordinates: { x: 815, y: 3223 },
@@ -1673,7 +1669,7 @@ const mapLabels = {
     {
       name: "Tuvok",
       fontSize: 16,
-      region: "Darkwoods Forest", // I'm not sure if this is the Name of the place or the name of the NPC that lives there. Question Mark
+      region: "Darkwoods", // I'm not sure if this is the Name of the place or the name of the NPC that lives there. Question Mark
       details: {
         title: "Tuvok",
         coordinates: { x: 1032, y: 2891 },
@@ -1686,7 +1682,7 @@ const mapLabels = {
     {
       name: "Warg Pen",
       fontSize: 16,
-      region: "Darkwoods Forest",
+      region: "Darkwoods",
       details: {
         title: "Warg Pen",
         coordinates: { x: 1369, y: 2737 },
@@ -1699,7 +1695,7 @@ const mapLabels = {
     {
       name: "Gadros Ruins",
       fontSize: 16,
-      region: "Darkwoods Forest",
+      region: "Darkwoods",
       details: {
         title: "Gadros Ruins",
         coordinates: { x: 1489, y: 2481 },
@@ -1710,9 +1706,9 @@ const mapLabels = {
       },
     },
     {
-      name: "Shadow Forest",
+      name: "Shadow Forest", // Seemed like it needed a name, might have a different name Question Mark
       fontSize: 16,
-      region: "Darkwoods Forest", // Seemed like it needed a name, might have a different name Question Mark
+      region: "Darkwoods", 
       details: {
         title: "Shadow Forest",
         coordinates: { x: 1463, y: 2710 },
@@ -1725,7 +1721,7 @@ const mapLabels = {
     {
       name: "Termigon Mound",
       fontSize: 16,
-      region: "Darkwoods Forest", // Changed the name from Termigon Hive to Termigon Mound, seems more fitting. Question Mark
+      region: "Darkwoods", // Changed the name from Termigon Hive to Termigon Mound, seems more fitting. Question Mark
       details: {
         title: "Termigon Mound",
         coordinates: { x: 677, y: 3520 },
@@ -2622,11 +2618,11 @@ const mapLabels = {
     },
 
     /* Mainland Water Bodies */
-    // Bodies of Water - Region: Darkwoods Forest
+    // Bodies of Water - Region: Darkwoods
     {
       name: "Cairn Lake",
       fontSize: 16,
-      region: "Darkwoods Forest",
+      region: "Darkwoods",
       details: {
         title: "Cairn Lake",
         coordinates: { x: 1015, y: 2869 },
@@ -2639,7 +2635,7 @@ const mapLabels = {
     {
       name: "Lake Mraya",
       fontSize: 16,
-      region: "Darkwoods Forest",
+      region: "Darkwoods",
       details: {
         title: "Lake Mraya",
         coordinates: { x: 778, y: 2988 },
@@ -2652,7 +2648,7 @@ const mapLabels = {
     {
       name: "Josody Swamp",
       fontSize: 18,
-      region: "Darkwoods Forest",
+      region: "Darkwoods",
       details: {
         title: "Josody Swamp",
         coordinates: { x: 1129, y: 2676 },
@@ -2665,7 +2661,7 @@ const mapLabels = {
     {
       name: "Greenteeth Swamp", // Not sure about the name, just thought it needed one. Question Mark
       fontSize: 16,
-      region: "Darkwoods Forest", 
+      region: "Darkwoods", 
       details: {
         title: "Greenteeth Swamp",
         coordinates: { x: 1640, y: 2600 },
@@ -2678,7 +2674,7 @@ const mapLabels = {
     {
       name: "Darkfell Marsh",
       fontSize: 16,
-      region: "Darkwoods Forest",
+      region: "Darkwoods",
       details: {
         title: "Darkfell Marsh",
         coordinates: { x: 1011, y: 3092 },
@@ -2984,7 +2980,7 @@ const mapLabels = {
 
     // Mountains - Region: Krythan
 
-    // Mountains - Region: Darkwoods Forest
+    // Mountains - Region: Darkwoods
 
     // Mountains - Region: Battle Plains
 

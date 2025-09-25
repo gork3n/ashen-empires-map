@@ -1,4 +1,4 @@
-// Global variables
+// Global constiables
 let labelLayers = {};
 let map;
 let markerTooltipElement;
@@ -284,7 +284,7 @@ function initializeMap() {
     // --- Set Initial Map View ---
     // Define the center of the map using in-game (4096x4096) coordinates.
     // This makes it easy to change the starting location.
-    const initialCenterGameCoords = { x: 452, y: 716, }; // Default View is x: 742, y: 706 (Showing Lotor's Summer Palace)
+    const initialCenterGameCoords = { x: 2888, y: 423, }; // Default View is { x: 776, y: 668, } (Showing Lotor's Summer Palace) Centers LSP on smaller screens.
 
     // Convert the in-game coordinates to OpenLayers view coordinates.
     // The map is 16384x16384, which is 4x the in-game coordinates.
@@ -514,9 +514,9 @@ function createLabelImageStyle(text, fontSize, styleOptions = {}) {
     const finalFontSize = fontSize || options.fontSize || 24;
     
     // Create an offscreen canvas to render the text
-    var canvas = document.createElement('canvas');
+    const canvas = document.createElement('canvas');
     // Set canvas context
-    var ctx = canvas.getContext('2d', { willReadFrequently: true });
+    const ctx = canvas.getContext('2d', { willReadFrequently: true });
     
     // Construct the complete font string with weight and style
     const fontString = `${options.fontStyle} ${options.fontWeight} ${finalFontSize}px ${options.fontFamily}`;
@@ -591,7 +591,7 @@ function createLabelImageStyle(text, fontSize, styleOptions = {}) {
 
         // Fill text with gradient or solid color
         if (options.useGradient) {
-            var gradient = ctx.createLinearGradient(0, 0, canvas.width, 0);
+            const gradient = ctx.createLinearGradient(0, 0, canvas.width, 0);
             options.gradientColors.forEach(stop => {
                 gradient.addColorStop(stop.pos, stop.color);
             });
@@ -605,7 +605,7 @@ function createLabelImageStyle(text, fontSize, styleOptions = {}) {
     });
     
     // Convert canvas to image URL
-    var imageUrl = canvas.toDataURL();
+    const imageUrl = canvas.toDataURL();
     
     // Create style with icon
     const style = new ol.style.Style({
@@ -776,11 +776,11 @@ function addMarkerFeature(source, x, y, type, tooltip, details) {
     // Scale coordinates for 16384x16384 map and convert to OpenLayers coordinate system (y is inverted)
     const scaledX = x * 4;
     const scaledY = y * 4;
-    var olY = 16384 - scaledY;
-    var coordinates = [scaledX, olY];
+    const olY = 16384 - scaledY;
+    const coordinates = [scaledX, olY];
     
     // Create a feature for the marker
-    var feature = new ol.Feature({
+    const feature = new ol.Feature({
         geometry: new ol.geom.Point(coordinates),
         type: type,
         tooltip: tooltip,
@@ -951,10 +951,10 @@ function addLabelFeature(source, x, y, text, fontSize, category, details) {
     // Scale coordinates for 16384x16384 map and convert to OpenLayers coordinate system (y is inverted)
     const scaledX = x * 4;
     const scaledY = y * 4;
-    var olY = 16384 - scaledY;
+    const olY = 16384 - scaledY;
     
     // Create a point feature at this location
-    var feature = new ol.Feature({
+    const feature = new ol.Feature({
         geometry: new ol.geom.Point([scaledX, olY]),
         name: text,
         category: category,

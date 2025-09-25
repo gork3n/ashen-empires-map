@@ -792,6 +792,20 @@ const mapMarkers = {
     },
 
     // Tundria Portals
+    {
+      type: "portal_lsp",
+      tooltip: "Portal to Northern Frost Giant Island",
+      region: "Tundria",
+      place: "Northwest Tundria",
+      details: {
+        title: "Portal to Lotor's Summer Palace",
+        coordinates: { x: 1689, y: 153 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Portal to Northern Frost Giant Island is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // Sands of Creation Portals
 
@@ -1645,8 +1659,8 @@ const mapMarkers = {
     {
       type: "dock",
       tooltip: "Maroven North Dock",
-      region: "Mainland",
-      place: "Tundria",
+      region: "Tundria",
+      place: "Maroven",
       details: {
         title: "Maroven North Dock",
         coordinates: { x: 2031, y: 1241 },
@@ -1659,8 +1673,8 @@ const mapMarkers = {
     {
       type: "dock",
       tooltip: "Maroven Dock",
-      region: "Mainland",
-      place: "Tundria",
+      region: "Tundria",
+      place: "Maroven",
       details: {
         title: "Maroven Dock",
         coordinates: { x: 1978, y: 1267 },
@@ -1673,13 +1687,55 @@ const mapMarkers = {
     {
       type: "dock",
       tooltip: "Maroven Dock",
-      region: "Mainland",
-      place: "Tundria",
+      region: "Tundria",
+      place: "Maroven",
       details: {
         title: "Maroven Dock",
         coordinates: { x: 1989, y: 1267 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Maroven Dock is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "dock",
+      tooltip: "Maroven Dock",
+      region: "Tundria",
+      place: "Maroven",
+      details: {
+        title: "Maroven Dock",
+        coordinates: { x: 1998, y: 1281 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Maroven Dock is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "dock",
+      tooltip: "Ruins of Osgarl Dock",
+      region: "Tundria",
+      place: "Ruins of Osgarl",
+      details: {
+        title: "Maroven Dock",
+        coordinates: { x: 2501, y: 382 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Ruins of Osgarl Dock is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "dock",
+      tooltip: "Tundria Northern Dock", // Temporary name until official name is known
+      region: "Tundria",
+      place: "Tundria Big Finger", // Temporary name until official name is known
+      details: {
+        title: "Maroven Dock",
+        coordinates: { x: 1972, y: 391 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Ruins of Osgarl Dock is coming soon.",
         npcs: [],
         links: [],
       },
@@ -3560,7 +3616,21 @@ const mapMarkers = {
       },
     },
 
-    // Tundria Region
+    // Crafting Region: Tundria
+    {
+      type: "obelisk",
+      tooltip: "Northwest Tundria Obelisk",
+      region: "Tundria",
+      place: "Northwest Tundria",
+      details: {
+        title: "Hammerfist Obelisk",
+        coordinates: { x: 1639, y: 121 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Hammerfist Obelisk is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
     {
       type: "obelisk",
       tooltip: "Hammerfist Obelisk",
@@ -3571,6 +3641,20 @@ const mapMarkers = {
         coordinates: { x: 2960, y: 990 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Hammerfist Obelisk is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "obelisk",
+      tooltip: "Tundria Rune Spire",
+      region: "Tundria",
+      place: "West of Trapdoor to Hammerfist Mine",
+      details: {
+        title: "Hammerfist Obelisk",
+        coordinates: { x: 2967, y: 649 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Tundria Rune Spire is coming soon.",
         npcs: [],
         links: [],
       },
@@ -3845,7 +3929,7 @@ const mapMarkers = {
     // Scarab Island Undergrounds
     {
       type: "underground_crypt",
-      tooltip: "Lopal Crypt",
+      tooltip: "Lopal Crypt", // Something very strange about this crypt.
       region: "Krythan",
       place: "Scarab Island",
       details: {
@@ -3856,7 +3940,7 @@ const mapMarkers = {
         npcs: [],
         links: [],
       },
-    }, // Something very strange about this crypt.
+    }, 
     {
       type: "underground_mine",
       tooltip: "Scarab Island Mine",
@@ -4445,7 +4529,7 @@ const mapMarkers = {
     {
       type: "underground_cave",
       tooltip: "Icebane's Cavern Entrance",
-      region: "Mainland",
+      region: "Tundria",
       place: "Tundria",
       details: {
         title: "Icebane's Cavern Entrance",
@@ -4459,7 +4543,7 @@ const mapMarkers = {
     {
       type: "underground_crypt",
       tooltip: "Maroven Crypt",
-      region: "Mainland",
+      region: "Tundria",
       place: "Tundria",
       details: {
         title: "Maroven Crypt",
@@ -4473,8 +4557,8 @@ const mapMarkers = {
     {
       type: "underground_crypt",
       tooltip: "Maroven Crypt",
-      region: "Mainland",
-      place: "Tundria",
+      region: "Tundria",
+      place: "Maroven",
       details: {
         title: "Maroven Crypt",
         coordinates: { x: 1992, y: 1210 },
@@ -4528,7 +4612,7 @@ const mapMarkers = {
     },
     {
       type: "underground_crypt",
-      tooltip: "Unknown Crypt",
+      tooltip: "Unknown Crypt", // A Crypt with Greater Skeletons Question
       region: "Mainland",
       place: "Tundria",
       details: {
@@ -4539,7 +4623,7 @@ const mapMarkers = {
         npcs: [],
         links: [],
       },
-    }, // A Crypt with Greater Skeletons Question
+    }, 
     {
       type: "underground_dungeon",
       tooltip: "Frieda's Dungeon",
@@ -4561,9 +4645,51 @@ const mapMarkers = {
       place: "Tundria",
       details: {
         title: "Artraxis Dungeon",
-        coordinates: { x: 2888, y: 423 },
+        coordinates: { x: 2889, y: 427 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Artraxis Dungeon is coming soon. Note: This coordinate is off by a few pixels from the actual dungeon entrance. x:2888, y:423 is correct.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "underground_dungeon",
+      tooltip: "Darok the Banished's Jail", // Not sure on the name - Question Mark
+      region: "Mainland",
+      place: "Tundria",
+      details: {
+        title: "Artraxis Dungeon",
+        coordinates: { x: 2921, y: 410 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Artraxis Dungeon is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "underground_dungeon",
+      tooltip: "Darok the Banished's Jail", // Not sure on the name - Question Mark
+      region: "Mainland",
+      place: "Tundria",
+      details: {
+        title: "Artraxis Dungeon",
+        coordinates: { x: 2897, y: 444 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Artraxis Dungeon is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "underground_dungeon",
+      tooltip: "Trap Door to Hammerfist Mine", // Not sure on the name - Question Mark
+      region: "Tundria",
+      place: "Tundria Northeast Coast",
+      details: {
+        title: "Artraxis Dungeon",
+        coordinates: { x: 2839, y: 614 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Trap Door to Hammerfist Mine is coming soon.",
         npcs: [],
         links: [],
       },
@@ -4631,28 +4757,28 @@ const mapMarkers = {
     },
     {
       type: "underground_stairs",
-      tooltip: "East Entrance to Ruhura Side",
+      tooltip: "Artonian Pass to Ruhura Side",
       region: "Sands of Creation",
       place: "Ruhura",
       details: {
-        title: "East Entrance to Ruhura Side",
+        title: "Artonian Pass to Ruhura Side",
         coordinates: { x: 309, y: 3910 },
         image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about East Entrance to Ruhura Side is coming soon.",
+        lore: "More information about Artonian Pass to Ruhura Side is coming soon.",
         npcs: [],
         links: [],
       },
     },
     {
       type: "underground_stairs",
-      tooltip: "West Entrance to Greater Dragon Island",
+      tooltip: "Artonian Pass to Greater Dragon Island",
       region: "Sands of Creation",
       place: "Ruhura",
       details: {
-        title: "West Entrance to Greater Dragon Island",
+        title: "Artonian Pass to Greater Dragon Island",
         coordinates: { x: 402, y: 3794 },
         image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about West Entrance to Greater Dragon Island is coming soon.",
+        lore: "More information about Artonian Pass to Greater Dragon Island is coming soon.",
         npcs: [],
         links: [],
       },

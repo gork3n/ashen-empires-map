@@ -337,16 +337,16 @@ input:checked + .slider:before {
     flex-direction: row; /* Icon and text side-by-side */
     width: 100%; /* Stretch to full width */
     height: auto;
-    border-bottom: none;
+    border-bottom: 3px solid transparent; /* Add transparent bottom border for active state */
     margin-bottom: 0;
     justify-content: flex-start; /* Align content to the left */
     gap: 0;
     border-left-width: 0;
-    border-bottom: none;
+    padding-bottom: 5px; /* Adjust padding to account for new border */
 }
 
 .marker-category-row .toggle-btn.active {
-    border-bottom-color: transparent; /* No bottom border for active state */
+    border-bottom-color: #F5D76E; /* Add yellow bottom border for active state */
 }
 
 /* Override generic icon styles for the main category button's icon */
@@ -374,7 +374,7 @@ input:checked + .slider:before {
     height: 95px; /* Reduced height for smaller icon */
     width: 95px; /* Reduced width for smaller icon */
     justify-content: center;
-    align-items: center;
+    align-items: center; 
     padding: 5px;
     border-bottom-width: 3px;
     border-left-width: 0; /* Remove left border inherited from .toggle-btn */
@@ -395,6 +395,12 @@ input:checked + .slider:before {
     text-align: center;
     font-weight: 400; /* Match label button font weight */
     flex: 0 1 auto; /* Allow text to take up space but not shrink icon */
+}
+
+/* Add yellow bottom border to active subtype buttons */
+.marker-subtype-container .marker-subtype-btn.active {
+    border-left: none; /* Reset the left border completely */
+    border-bottom: 3px solid #F5D76E; /* Apply only the bottom border */
 }
 
 /* Keep label toggles as they were */
