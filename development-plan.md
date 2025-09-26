@@ -27,7 +27,7 @@ This section is migrated from the main README to consolidate all planning detail
     -   🚧 Ongoing verification and addition of all location labels.
 -   🚧 **Expanded Information System**
 -   🚧 **Marker & Label Position Verification**
-    -   🚧 Following the map tile recalibration, all existing markers and labels are being systematically reviewed and repositioned to ensure perfect alignment with the new, high-accuracy map.
+    -   🚧 A bulk coordinate correction has been applied to all markers and labels to align them with the new map tiles. The process of manually verifying each individual marker against its precise in-game location is now underway to ensure pixel-perfect accuracy across the board.
     -   ✅ All labels and markers are clickable, providing detailed information via the flyout panel.
     -   ✅ **Refactor Complete:** All data has been consolidated into `markers.js` and `labels.js`. The `detail-maps.js` file has been eliminated. This improves data locality and makes it easier to manage and search.
         -   Each marker and label object would contain its own `details`, `region`, and `place` information.

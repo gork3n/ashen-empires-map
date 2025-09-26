@@ -11,7 +11,7 @@ const mapLabels = {
       region: "Krythan",
       details: {
         title: "Valley of the Dead",
-        coordinates: { x: 1374, y: 1435 },
+        coordinates: { x: 1372, y: 1433 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Valley of the Dead is coming soon.",
         npcs: [],
@@ -30,7 +30,7 @@ const mapLabels = {
       region: "Battle Plains",
       details: {
         title: "Proudblood Valley",
-        coordinates: { x: 1752, y: 3404 },
+        coordinates: { x: 1750, y: 3402 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Proudblood Valley is coming soon.",
         npcs: [],
@@ -47,7 +47,7 @@ const mapLabels = {
       region: "Highlands",
       details: {
         title: "Death Tyrant Valley",
-        coordinates: { x: 3597, y: 2453 },
+        coordinates: { x: 3595, y: 2451 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Death Tyrant Valley is coming soon.",
         npcs: [],
@@ -60,7 +60,7 @@ const mapLabels = {
       region: "Highlands",
       details: {
         title: "Resource Valley",
-        coordinates: { x: 3417, y: 3171 },
+        coordinates: { x: 3415, y: 3169 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Resource Valley is coming soon.",
         npcs: [],
@@ -75,7 +75,7 @@ const mapLabels = {
       region: "Valley of Giants",
       details: {
         title: "Valley of Giants",
-        coordinates: { x: 3067, y: 2943 },
+        coordinates: { x: 3065, y: 2941 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Valley of Giants is coming soon.",
         npcs: [],
@@ -90,7 +90,7 @@ const mapLabels = {
       region: "Badlands",
       details: {
         title: "Badlands",
-        coordinates: { x: 2825, y: 2670 },
+        coordinates: { x: 2823, y: 2668 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Badlands is coming soon.",
         npcs: [],
@@ -117,7 +117,7 @@ const mapLabels = {
       region: "Valinor",
       details: {
         title: "Valinor",
-        coordinates: { x: 759, y: 65 },
+        coordinates: { x: 757, y: 63 },
         image: "images/Valinor_Island-600x.png",
         lore: "Valinor is the starting city for new players, providing essential services and introductory quests to help them begin their journey in the world of Ashen Empires.",
         npcs: [
@@ -147,7 +147,7 @@ const mapLabels = {
       region: "Krythan",
       details: {
         title: "Jeel",
-        coordinates: { x: 290, y: 807 },
+        coordinates: { x: 288, y: 805 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Jeel is coming soon.",
         npcs: [],
@@ -160,7 +160,7 @@ const mapLabels = {
       region: "Krythan",
       details: {
         title: "Hothbra",
-        coordinates: { x: 522, y: 1058 },
+        coordinates: { x: 520, y: 1056 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Hothbra is coming soon.",
         npcs: [],
@@ -173,7 +173,7 @@ const mapLabels = {
       region: "Krythan",
       details: {
         title: "Varg",
-        coordinates: { x: 788, y: 1171 },
+        coordinates: { x: 786, y: 1169 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Varg is coming soon.",
         npcs: [],
@@ -186,7 +186,7 @@ const mapLabels = {
       region: "Krythan",
       details: {
         title: "New Korelth",
-        coordinates: { x: 342, y: 1440 },
+        coordinates: { x: 340, y: 1438 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about New Korelth is coming soon.",
         npcs: [],
@@ -199,7 +199,7 @@ const mapLabels = {
       region: "Krythan",
       details: {
         title: "Vrethpool",
-        coordinates: { x: 670, y: 1670 },
+        coordinates: { x: 668, y: 1668 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Vrethpool is coming soon.",
         npcs: [],
@@ -212,7 +212,7 @@ const mapLabels = {
       region: "Silvest Valley",
       details: {
         title: "Lotor's Castle",
-        coordinates: { x: 247, y: 1116 },
+        coordinates: { x: 245, y: 1114 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Lotor's Castle is coming soon.",
         npcs: [],
@@ -226,7 +226,7 @@ const mapLabels = {
       region: "Silvest Valley",
       details: {
         title: "Cliffside",
-        coordinates: { x: 1066, y: 1151 },
+        coordinates: { x: 1064, y: 1149 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Cliffside is coming soon.",
         npcs: [],
@@ -239,7 +239,7 @@ const mapLabels = {
       region: "Silvest Valley",
       details: {
         title: "Silvest",
-        coordinates: { x: 1086, y: 1355 },
+        coordinates: { x: 1084, y: 1353 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Silvest is coming soon.",
         npcs: [],
@@ -252,7 +252,7 @@ const mapLabels = {
       region: "Silvest Valley",
       details: {
         title: "Fort Eastwatch",
-        coordinates: { x: 1344, y: 1282 },
+        coordinates: { x: 1342, y: 1280 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Fort Eastwatch is coming soon.",
         npcs: [],
@@ -269,7 +269,7 @@ const mapLabels = {
       region: "Western Isles",
       details: {
         title: "Lycanth",
-        coordinates: { x: 260, y: 2633 },
+        coordinates: { x: 258, y: 2631 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Lycanth is coming soon.",
         npcs: [],
@@ -284,7 +284,7 @@ const mapLabels = {
       region: "Sands of Creation",
       details: {
         title: "Khafra",
-        coordinates: { x: 248, y: 2744 },
+        coordinates: { x: 246, y: 2742 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Khafra is coming soon.",
         npcs: [],
@@ -297,7 +297,7 @@ const mapLabels = {
       region: "Sands of Creation",
       details: {
         title: "Ruhura",
-        coordinates: { x: 381, y: 3979 },
+        coordinates: { x: 379, y: 3977 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Ruhura is coming soon.",
         npcs: [],
@@ -314,7 +314,7 @@ const mapLabels = {
       region: "Darkwoods",
       details: {
         title: "Redwake",
-        coordinates: { x: 456, y: 2825 },
+        coordinates: { x: 454, y: 2823 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Redwake is coming soon.",
         npcs: [],
@@ -327,7 +327,7 @@ const mapLabels = {
       region: "Darkwoods",
       details: {
         title: "Whisperdale",
-        coordinates: { x: 405, y: 3418 },
+        coordinates: { x: 403, y: 3416 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Whisperdale is coming soon.",
         npcs: [],
@@ -340,7 +340,7 @@ const mapLabels = {
       region: "Darkwoods",
       details: {
         title: "Autumn",
-        coordinates: { x: 592, y: 3389 },
+        coordinates: { x: 590, y: 3387 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Autumn is coming soon.",
         npcs: [],
@@ -353,7 +353,7 @@ const mapLabels = {
       region: "Darkwoods",
       details: {
         title: "Darkfell",
-        coordinates: { x: 901, y: 3064 },
+        coordinates: { x: 899, y: 3062 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Darkfell is coming soon.",
         npcs: [],
@@ -366,7 +366,7 @@ const mapLabels = {
       region: "Darkwoods",
       details: {
         title: "Dunmarrow",
-        coordinates: { x: 1384, y: 3151 },
+        coordinates: { x: 1382, y: 3149 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Dunmarrow is coming soon.",
         npcs: [],
@@ -379,7 +379,7 @@ const mapLabels = {
       region: "Darkwoods",
       details: {
         title: "Josody",
-        coordinates: { x: 1321, y: 2477 },
+        coordinates: { x: 1319, y: 2475 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Josody is coming soon.",
         npcs: [],
@@ -392,7 +392,7 @@ const mapLabels = {
       region: "Darkwoods",
       details: {
         title: "Gulley",
-        coordinates: { x: 1108, y: 2755 },
+        coordinates: { x: 1106, y: 2753 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Gulley is coming soon.",
         npcs: [],
@@ -407,7 +407,7 @@ const mapLabels = {
       region: "Battle Plains",
       details: {
         title: "Desprail",
-        coordinates: { x: 2220, y: 3235 },
+        coordinates: { x: 2218, y: 3233 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Desprail is coming soon.",
         npcs: [],
@@ -420,7 +420,7 @@ const mapLabels = {
       region: "Battle Plains",
       details: {
         title: "Chlera",
-        coordinates: { x: 2403, y: 3548 },
+        coordinates: { x: 2401, y: 3546 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Chlera is coming soon.",
         npcs: [],
@@ -435,7 +435,7 @@ const mapLabels = {
       region: "Black Swamp",
       details: {
         title: "Samad",
-        coordinates: { x: 2636, y: 3497 },
+        coordinates: { x: 2634, y: 3495 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Samad is coming soon.",
         npcs: [],
@@ -448,7 +448,7 @@ const mapLabels = {
       region: "Black Swamp",
       details: {
         title: "Dawat",
-        coordinates: { x: 3088, y: 3356 },
+        coordinates: { x: 3086, y: 3354 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Dawat is coming soon.",
         npcs: [],
@@ -461,7 +461,7 @@ const mapLabels = {
       region: "Black Swamp",
       details: {
         title: "Krog",
-        coordinates: { x: 3115, y: 3710 },
+        coordinates: { x: 3113, y: 3708 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Krog is coming soon.",
         npcs: [],
@@ -474,7 +474,7 @@ const mapLabels = {
       region: "Black Swamp",
       details: {
         title: "Maraket",
-        coordinates: { x: 3064, y: 3978 },
+        coordinates: { x: 3062, y: 3976 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Maraket is coming soon.",
         npcs: [],
@@ -489,7 +489,7 @@ const mapLabels = {
       region: "Highlands",
       details: {
         title: "Grell",
-        coordinates: { x: 3240, y: 3607 },
+        coordinates: { x: 3238, y: 3605 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Grell is coming soon.",
         npcs: [],
@@ -502,7 +502,7 @@ const mapLabels = {
       region: "Highlands",
       details: {
         title: "Arda",
-        coordinates: { x: 3401, y: 3444 },
+        coordinates: { x: 3399, y: 3442 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Arda is coming soon.",
         npcs: [],
@@ -515,7 +515,7 @@ const mapLabels = {
       region: "Highlands",
       details: {
         title: "Parian",
-        coordinates: { x: 3462, y: 2939 },
+        coordinates: { x: 3460, y: 2937 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Parian is coming soon.",
         npcs: [],
@@ -528,7 +528,7 @@ const mapLabels = {
       region: "Highlands",
       details: {
         title: "Ethera Palace",
-        coordinates: { x: 3536, y: 3643 },
+        coordinates: { x: 3534, y: 3641 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Ethera Palace is coming soon.",
         npcs: [],
@@ -541,7 +541,7 @@ const mapLabels = {
       region: "Highlands",
       details: {
         title: "Darushk",
-        coordinates: { x: 3746, y: 2711 },
+        coordinates: { x: 3744, y: 2709 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Darushk is coming soon.",
         npcs: [],
@@ -556,7 +556,7 @@ const mapLabels = {
       region: "Tundria",
       details: {
         title: "Hammerfist",
-        coordinates: { x: 2793, y: 849 },
+        coordinates: { x: 2791, y: 847 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Hammerfist is coming soon.",
         npcs: [],
@@ -569,7 +569,7 @@ const mapLabels = {
       region: "Tundria",
       details: {
         title: "Duremar",
-        coordinates: { x: 3649, y: 930 },
+        coordinates: { x: 3647, y: 928 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Duremar is coming soon.",
         npcs: [],
@@ -582,7 +582,7 @@ const mapLabels = {
       region: "Tundria",
       details: {
         title: "Maroven",
-        coordinates: { x: 1943, y: 1241 },
+        coordinates: { x: 1941, y: 1239 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Maroven is coming soon.",
         npcs: [],
@@ -595,7 +595,7 @@ const mapLabels = {
       region: "Tundria",
       details: {
         title: "Ringhaven Citadel",
-        coordinates: { x: 2198, y: 1206 },
+        coordinates: { x: 2196, y: 1204 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Ringhaven Citadel is coming soon.",
         npcs: [],
@@ -608,7 +608,7 @@ const mapLabels = {
       region: "Tundria",
       details: {
         title: "Farstead Keep",
-        coordinates: { x: 2822, y: 1254 },
+        coordinates: { x: 2820, y: 1252 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Farstead Keep is coming soon.",
         npcs: [],
@@ -623,7 +623,7 @@ const mapLabels = {
       region: "Heartwood Coast",
       details: {
         title: "Valmond",
-        coordinates: { x: 2626, y: 2106 },
+        coordinates: { x: 2624, y: 2104 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Valmond is coming soon.",
         npcs: [],
@@ -636,7 +636,7 @@ const mapLabels = {
       region: "Heartwood Coast",
       details: {
         title: "Teylan",
-        coordinates: { x: 2497, y: 1616 },
+        coordinates: { x: 2495, y: 1614 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Teylan is coming soon.",
         npcs: [],
@@ -649,7 +649,7 @@ const mapLabels = {
       region: "Heartwood Coast",
       details: {
         title: "Syldural",
-        coordinates: { x: 3277, y: 1637 },
+        coordinates: { x: 3275, y: 1635 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Syldural is coming soon.",
         npcs: [],
@@ -664,7 +664,7 @@ const mapLabels = {
       region: "Breakwater",
       details: {
         title: "Roycroft",
-        coordinates: { x: 2448, y: 2336 },
+        coordinates: { x: 2446, y: 2334 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Roycroft is coming soon.",
         npcs: [],
@@ -677,7 +677,7 @@ const mapLabels = {
       region: "Breakwater",
       details: {
         title: "New Town",
-        coordinates: { x: 1961, y: 1885 },
+        coordinates: { x: 1959, y: 1883 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about New Town is coming soon.",
         npcs: [],
@@ -690,7 +690,7 @@ const mapLabels = {
       region: "Breakwater",
       details: {
         title: "New Royale",
-        coordinates: { x: 1393, y: 1898 },
+        coordinates: { x: 1391, y: 1896 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about New Royale is coming soon.",
         npcs: [],
@@ -705,7 +705,7 @@ const mapLabels = {
       region: "Broken Finger",
       details: {
         title: "Broken Finger Town",
-        coordinates: { x: 1153, y: 3712 },
+        coordinates: { x: 1151, y: 3710 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Broken Finger Town is coming soon.",
         npcs: [],
@@ -722,7 +722,7 @@ const mapLabels = {
       region: "Special",
       details: {
         title: "GM Island",
-        coordinates: { x: 150, y: 70 },
+        coordinates: { x: 148, y: 68 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about GM Island is coming soon.",
         npcs: [],
@@ -735,7 +735,7 @@ const mapLabels = {
       region: "Western Isles",
       details: {
         title: "Minotaur Island",
-        coordinates: { x: 137, y: 230 },
+        coordinates: { x: 135, y: 228 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Minotaur Island is coming soon.",
         npcs: [],
@@ -748,7 +748,7 @@ const mapLabels = {
       region: "Western Isles",
       details: {
         title: "Party Island",
-        coordinates: { x: 421, y: 69 },
+        coordinates: { x: 419, y: 67 },
         image: "images/Party_Island.png",
         lore: "A festive island known for celebrations. It holds the main portal to access Lotor's Summer Palace.",
         npcs: [
@@ -767,7 +767,7 @@ const mapLabels = {
       region: "Western Isles",
       details: {
         title: "Lotor's Prison",
-        coordinates: { x: 1545, y: 546 },
+        coordinates: { x: 1543, y: 544 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Lotor's Prison is coming soon.",
         npcs: [],
@@ -780,7 +780,7 @@ const mapLabels = {
       region: "Special",
       details: {
         title: "Lotor's Summer Palace",
-        coordinates: { x: 775, y: 571 },
+        coordinates: { x: 773, y: 569 },
         image: "images/LSP.png",
         lore: "Lotor's Summer Palace is a central hub for players, offering access to various islands, housing realms, and a wide array of shops and services. It's a safe zone bustling with activity.",
         npcs: [
@@ -808,7 +808,7 @@ const mapLabels = {
       region: "Special",
       details: {
         title: "Real Estate Island",
-        coordinates: { x: 663, y: 630 },
+        coordinates: { x: 661, y: 628 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Real Estate Island is coming soon.",
         npcs: [],
@@ -821,7 +821,7 @@ const mapLabels = {
       region: "Western Isles",
       details: {
         title: "Guild Arena Island",
-        coordinates: { x: 88, y: 942 },
+        coordinates: { x: 86, y: 940 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Guild Arena Island is coming soon.",
         npcs: [],
@@ -834,7 +834,7 @@ const mapLabels = {
       region: "Valinor",
       details: {
         title: "Valinor Island",
-        coordinates: { x: 940, y: 60 },
+        coordinates: { x: 938, y: 58 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Valinor Island is coming soon.",
         npcs: [],
@@ -847,7 +847,7 @@ const mapLabels = {
       region: "Special",
       details: {
         title: "Krythan Island",
-        coordinates: { x: 1090, y: 992 },
+        coordinates: { x: 1088, y: 990 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Krythan Island is coming soon.",
         npcs: [],
@@ -860,7 +860,7 @@ const mapLabels = {
       region: "Western Isles",
       details: {
         title: "Lopal",
-        coordinates: { x: 390, y: 2183 },
+        coordinates: { x: 388, y: 2181 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Lopal is coming soon.",
         npcs: [],
@@ -873,7 +873,7 @@ const mapLabels = {
       region: "Western Isles",
       details: {
         title: "Scorched Island",
-        coordinates: { x: 795, y: 2092 },
+        coordinates: { x: 793, y: 2090 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Scorched Island is coming soon.",
         npcs: [],
@@ -886,7 +886,7 @@ const mapLabels = {
       region: "Western Isles",
       details: {
         title: "Hell",
-        coordinates: { x: 1130, y: 3195 },
+        coordinates: { x: 1128, y: 3193 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Hell is coming soon.",
         npcs: [],
@@ -900,7 +900,7 @@ const mapLabels = {
       region: "Special",
       details: {
         title: "Deserted Island",
-        coordinates: { x: 223, y: 425 },
+        coordinates: { x: 221, y: 423 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Deserted Island is coming soon.",
         npcs: [],
@@ -913,7 +913,7 @@ const mapLabels = {
       region: "Western Isles",
       details: {
         title: "Scarab Island",
-        coordinates: { x: 259, y: 2048 },
+        coordinates: { x: 257, y: 2046 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Scarab Island is coming soon.",
         npcs: [],
@@ -926,7 +926,7 @@ const mapLabels = {
       region: "Western Isles",
       details: {
         title: "Werewolf Island",
-        coordinates: { x: 463, y: 2495 },
+        coordinates: { x: 461, y: 2493 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Werewolf Island is coming soon.",
         npcs: [],
@@ -939,7 +939,7 @@ const mapLabels = {
       region: "Darkwoods", // I think this is correct because of proximity to Darkwood Forest and the bridge, but it could be Western Isles. Question Mark
       details: {
         title: "Dragoon Island",
-        coordinates: { x: 350, y: 3238 },
+        coordinates: { x: 348, y: 3236 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Dragoon Island is coming soon.",
         npcs: [],
@@ -952,7 +952,7 @@ const mapLabels = {
       region: "Western Isles",
       details: {
         title: "Obelisk Island",
-        coordinates: { x: 2117, y: 2704 },
+        coordinates: { x: 2115, y: 2702 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Obelisk Island is coming soon.",
         npcs: [],
@@ -965,7 +965,7 @@ const mapLabels = {
       region: "Sands of Creation",
       details: {
         title: "Greater Dragon Island",
-        coordinates: { x: 160, y: 3792 },
+        coordinates: { x: 158, y: 3790 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Greater Dragon Island is coming soon.",
         npcs: [],
@@ -978,7 +978,7 @@ const mapLabels = {
       region: "Western Isles",
       details: {
         title: "Ettin Island",
-        coordinates: { x: 1672, y: 1681 },
+        coordinates: { x: 1670, y: 1679 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Ettin Island is coming soon.",
         npcs: [],
@@ -991,7 +991,7 @@ const mapLabels = {
       region: "Tundria",
       details: {
         title: "Northern Frost Giant Island",
-        coordinates: { x: 3331, y: 254 },
+        coordinates: { x: 3329, y: 252 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Northern Frost Giant Island is coming soon.",
         npcs: [],
@@ -1004,7 +1004,7 @@ const mapLabels = {
       region: "Western Isles",
       details: {
         title: "PvP Island",
-        coordinates: { x: 3893, y: 1688 },
+        coordinates: { x: 3891, y: 1686 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about PvP Island is coming soon.",
         npcs: [],
@@ -1017,7 +1017,7 @@ const mapLabels = {
       region: "Sands of Creation",
       details: {
         title: "Artonian Island",
-        coordinates: { x: 248, y: 3376 },
+        coordinates: { x: 246, y: 3374 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Artonian Island is coming soon.",
         npcs: [],
@@ -1030,7 +1030,7 @@ const mapLabels = {
       region: "Highlands",
       details: {
         title: "Vel Dran",
-        coordinates: { x: 3153, y: 3192 },
+        coordinates: { x: 3151, y: 3190 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Vel Dran is coming soon.",
         npcs: [],
@@ -1043,7 +1043,7 @@ const mapLabels = {
       region: "Battle Plains",
       details: {
         title: "Chaos Island",
-        coordinates: { x: 1823, y: 3055 },
+        coordinates: { x: 1821, y: 3053 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Chaos Island is coming soon.",
         npcs: [],
@@ -1056,7 +1056,7 @@ const mapLabels = {
       region: "Western Isles",
       details: {
         title: "Test Island",
-        coordinates: { x: 3923, y: 3728 },
+        coordinates: { x: 3921, y: 3726 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Test Island is coming soon.",
         npcs: [],
@@ -1069,7 +1069,7 @@ const mapLabels = {
       region: "Tundria",
       details: {
         title: "Unnamed Island",
-        coordinates: { x: 3799, y: 975 },
+        coordinates: { x: 3797, y: 973 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Unnamed Island is coming soon.",
         npcs: [],
@@ -1082,7 +1082,7 @@ const mapLabels = {
       region: "Breakwater",
       details: {
         title: "Crab Island",
-        coordinates: { x: 1063, y: 1951 },
+        coordinates: { x: 1061, y: 1949 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Crab Island is coming soon.",
         npcs: [],
@@ -1104,7 +1104,7 @@ const mapLabels = {
       region: "Krythan",
       details: {
         title: "Cultist Lair",
-        coordinates: { x: 874, y: 1377 },
+        coordinates: { x: 872, y: 1375 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Cultist Lair is coming soon.",
         npcs: [],
@@ -1119,7 +1119,7 @@ const mapLabels = {
       region: "Valinor",
       details: {
         title: "Bonesnarl's Lair",
-        coordinates: { x: 866, y: 302 },
+        coordinates: { x: 864, y: 300 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Bonesnarl's Lair is coming soon.",
         npcs: [],
@@ -1141,7 +1141,7 @@ const mapLabels = {
       region: "Krythan",
       details: {
         title: "Minion Cave",
-        coordinates: { x: 504, y: 685 },
+        coordinates: { x: 502, y: 683 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Minion Cave is coming soon.",
         npcs: [],
@@ -1154,7 +1154,7 @@ const mapLabels = {
       region: "Krythan",
       details: {
         title: "Minion Cave",
-        coordinates: { x: 440, y: 761 },
+        coordinates: { x: 438, y: 759 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Minion Cave is coming soon.",
         npcs: [],
@@ -1167,7 +1167,7 @@ const mapLabels = {
       region: "Krythan",
       details: {
         title: "Flataga Mines",
-        coordinates: { x: 391, y: 1318 },
+        coordinates: { x: 389, y: 1316 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Flataga Mines is coming soon.",
         npcs: [],
@@ -1181,7 +1181,7 @@ const mapLabels = {
       region: "Silvest Valley",
       details: {
         title: "Silvest Mines",
-        coordinates: { x: 1017, y: 1109 },
+        coordinates: { x: 1015, y: 1107 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Silvest Mines is coming soon.",
         npcs: [],
@@ -1194,7 +1194,7 @@ const mapLabels = {
       region: "Silvest Valley",
       details: {
         title: "Dalvon Mines",
-        coordinates: { x: 1433, y: 1379 },
+        coordinates: { x: 1431, y: 1377 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Dalvon Mines is coming soon.",
         npcs: [],
@@ -1207,7 +1207,7 @@ const mapLabels = {
       region: "Silvest Valley",
       details: {
         title: "Orc Cave",
-        coordinates: { x: 1181, y: 1301 },
+        coordinates: { x: 1179, y: 1299 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Orc Cave is coming soon.",
         npcs: [],
@@ -1226,7 +1226,7 @@ const mapLabels = {
       region: "Battle Plains",
       details: {
         title: "Fungoid Cave",
-        coordinates: { x: 1961, y: 3762 },
+        coordinates: { x: 1959, y: 3760 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Fungoid Cave is coming soon.",
         npcs: [],
@@ -1241,7 +1241,7 @@ const mapLabels = {
       region: "Black Swamp",
       details: {
         title: "Ivogur's Mine",
-        coordinates: { x: 2963, y: 3910 },
+        coordinates: { x: 2961, y: 3908 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Ivogur's Mine is coming soon.",
         npcs: [],
@@ -1256,7 +1256,7 @@ const mapLabels = {
       region: "Highlands",
       details: {
         title: "Zanock's Mine (East) ",
-        coordinates: { x: 3099, y: 2390 },
+        coordinates: { x: 3097, y: 2388 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Zanock's Mine (East)  is coming soon.",
         npcs: [],
@@ -1269,7 +1269,7 @@ const mapLabels = {
       region: "Highlands",
       details: {
         title: "Termigon Mine",
-        coordinates: { x: 3624, y: 3596 },
+        coordinates: { x: 3622, y: 3594 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Termigon Mine is coming soon.",
         npcs: [],
@@ -1286,7 +1286,7 @@ const mapLabels = {
       region: "Heartwood Coast",
       details: {
         title: "Zanock's Mine (West)",
-        coordinates: { x: 2871, y: 2358 },
+        coordinates: { x: 2869, y: 2356 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Zanock's Mine (West) is coming soon.",
         npcs: [],
@@ -1313,7 +1313,7 @@ const mapLabels = {
       region: "Valinor",
       details: {
         title: "Duncan's Cottage",
-        coordinates: { x: 651, y: 174 },
+        coordinates: { x: 649, y: 172 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Duncan's Cottage is coming soon.",
         npcs: [],
@@ -1326,7 +1326,7 @@ const mapLabels = {
       region: "Valinor",
       details: {
         title: "Ruined Temple",
-        coordinates: { x: 570, y: 313 },
+        coordinates: { x: 568, y: 311 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Ruined Temple is coming soon.",
         npcs: [],
@@ -1339,7 +1339,7 @@ const mapLabels = {
       region: "Valinor",
       details: {
         title: "Lanore",
-        coordinates: { x: 641, y: 362 },
+        coordinates: { x: 639, y: 360 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Lanore is coming soon.",
         npcs: [],
@@ -1352,7 +1352,7 @@ const mapLabels = {
       region: "Valinor",
       details: {
         title: "Ecclain's Caravan",
-        coordinates: { x: 1083, y: 468 },
+        coordinates: { x: 1081, y: 466 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Ecclain's Caravan is coming soon.",
         npcs: [],
@@ -1365,7 +1365,7 @@ const mapLabels = {
       region: "Valinor",
       details: {
         title: "Valinor Ant Hill",
-        coordinates: { x: 1043, y: 282 },
+        coordinates: { x: 1041, y: 280 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Valinor Ant Hill is coming soon.",
         npcs: [],
@@ -1378,7 +1378,7 @@ const mapLabels = {
       region: "Valinor",
       details: {
         title: "Hermit's Hut",
-        coordinates: { x: 965, y: 123 },
+        coordinates: { x: 963, y: 121 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Hermit's Hut is coming soon.",
         npcs: [],
@@ -1393,7 +1393,7 @@ const mapLabels = {
       region: "Krythan",
       details: {
         title: "Gideon Cottage",
-        coordinates: { x: 509, y: 574 },
+        coordinates: { x: 507, y: 572 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Gideon Cottage is coming soon.",
         npcs: [],
@@ -1406,7 +1406,7 @@ const mapLabels = {
       region: "Krythan",
       details: {
         title: "Mirthik's Dwelling",
-        coordinates: { x: 508, y: 640 },
+        coordinates: { x: 506, y: 638 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Mirthik's Dwelling is coming soon.",
         npcs: [],
@@ -1419,7 +1419,7 @@ const mapLabels = {
       region: "Krythan",
       details: {
         title: "Jeel Ruins",
-        coordinates: { x: 504, y: 753 },
+        coordinates: { x: 502, y: 751 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Jeel Ruins is coming soon.",
         npcs: [],
@@ -1432,7 +1432,7 @@ const mapLabels = {
       region: "Krythan",
       details: {
         title: "Crypt of Kargoth",
-        coordinates: { x: 436, y: 850 },
+        coordinates: { x: 434, y: 848 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Crypt of Kargoth is coming soon.",
         npcs: [],
@@ -1445,7 +1445,7 @@ const mapLabels = {
       region: "Krythan",
       details: {
         title: "Ruins of Tal S'kar",
-        coordinates: { x: 190, y: 989 },
+        coordinates: { x: 188, y: 987 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Ruins of Tal S'kar is coming soon.",
         npcs: [],
@@ -1458,7 +1458,7 @@ const mapLabels = {
       region: "Krythan",
       details: {
         title: "Holendar's Mansion",
-        coordinates: { x: 832, y: 1035 },
+        coordinates: { x: 830, y: 1033 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Holendar's Mansion is coming soon.",
         npcs: [],
@@ -1471,7 +1471,7 @@ const mapLabels = {
       region: "Krythan",
       details: {
         title: "Krythan Cemetary",
-        coordinates: { x: 895, y: 1023 },
+        coordinates: { x: 893, y: 1021 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Krythan Cemetary is coming soon.",
         npcs: [],
@@ -1484,7 +1484,7 @@ const mapLabels = {
       region: "Krythan",
       details: {
         title: "Scalo's Den",
-        coordinates: { x: 836, y: 1279 },
+        coordinates: { x: 834, y: 1277 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Scalo's Den is coming soon.",
         npcs: [],
@@ -1497,7 +1497,7 @@ const mapLabels = {
       region: "Krythan",
       details: {
         title: "Kobold Castle",
-        coordinates: { x: 1279, y: 1123 },
+        coordinates: { x: 1277, y: 1121 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Kobold Castle is coming soon.",
         npcs: [],
@@ -1510,7 +1510,7 @@ const mapLabels = {
       region: "Krythan",
       details: {
         title: "Karzak Cove",
-        coordinates: { x: 1376, y: 1077 },
+        coordinates: { x: 1374, y: 1075 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Karzak Cove is coming soon.",
         npcs: [],
@@ -1523,7 +1523,7 @@ const mapLabels = {
       region: "Krythan",
       details: {
         title: "Tallem'im house",
-        coordinates: { x: 88, y: 1503 },
+        coordinates: { x: 86, y: 1501 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Tallem'im house is coming soon.",
         npcs: [],
@@ -1536,7 +1536,7 @@ const mapLabels = {
       region: "Krythan",
       details: {
         title: "Wasp Hive",
-        coordinates: { x: 516, y: 1302 },
+        coordinates: { x: 514, y: 1300 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Wasp Hive is coming soon.",
         npcs: [],
@@ -1549,7 +1549,7 @@ const mapLabels = {
       region: "Krythan",
       details: {
         title: "Orc Fort",
-        coordinates: { x: 782, y: 1532 },
+        coordinates: { x: 780, y: 1530 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Orc Fort is coming soon.",
         npcs: [],
@@ -1565,7 +1565,7 @@ const mapLabels = {
       region: "Hell",
       details: {
         title: "Minion's of Talazar's Stronghold",
-        coordinates: { x: 1200, y: 3341 },
+        coordinates: { x: 1198, y: 3339 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Minion's of Talazar's Stronghold is coming soon.",
         npcs: [],
@@ -1581,7 +1581,7 @@ const mapLabels = {
       region: "Darkwoods",
       details: {
         title: "Josody Theif Fort",
-        coordinates: { x: 936, y: 2576 },
+        coordinates: { x: 934, y: 2574 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Josody Theif Fort is coming soon.",
         npcs: [],
@@ -1594,7 +1594,7 @@ const mapLabels = {
       region: "Darkwoods",
       details: {
         title: "Crypt of Ryonkah",
-        coordinates: { x: 1030, y: 2977 },
+        coordinates: { x: 1028, y: 2975 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Crypt of Ryonkah is coming soon.",
         npcs: [],
@@ -1607,7 +1607,7 @@ const mapLabels = {
       region: "Darkwoods",
       details: {
         title: "Lord Vezryl's Estate",
-        coordinates: { x: 555, y: 3158 },
+        coordinates: { x: 553, y: 3156 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Lord Vezryl's Estate is coming soon.",
         npcs: [],
@@ -1620,7 +1620,7 @@ const mapLabels = {
       region: "Darkwoods",
       details: {
         title: "Burslord's Hunting Lodge",
-        coordinates: { x: 683, y: 3389 },
+        coordinates: { x: 681, y: 3387 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Burslord's Hunting Lodge is coming soon.",
         npcs: [],
@@ -1633,7 +1633,7 @@ const mapLabels = {
       region: "Darkwoods",
       details: {
         title: "Mnemmon",
-        coordinates: { x: 911, y: 3216 },
+        coordinates: { x: 909, y: 3214 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Mnemmon is coming soon.",
         npcs: [],
@@ -1646,7 +1646,7 @@ const mapLabels = {
       region: "Darkwoods",
       details: {
         title: "Mnemmon Gaol",
-        coordinates: { x: 881, y: 3390 },
+        coordinates: { x: 879, y: 3388 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Mnemmon Gaol is coming soon.",
         npcs: [],
@@ -1659,7 +1659,7 @@ const mapLabels = {
       region: "Necropolis",
       details: {
         title: "Necropolis",
-        coordinates: { x: 1358, y: 2908 },
+        coordinates: { x: 1356, y: 2906 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Necropolis is coming soon.",
         npcs: [],
@@ -1672,7 +1672,7 @@ const mapLabels = {
       region: "Darkwoods",
       details: {
         title: "Astari Ruin Shelter",
-        coordinates: { x: 815, y: 3223 },
+        coordinates: { x: 813, y: 3221 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Astari Ruin Shelter is coming soon.",
         npcs: [],
@@ -1685,7 +1685,7 @@ const mapLabels = {
       region: "Darkwoods", // I'm not sure if this is the Name of the place or the name of the NPC that lives there. Question Mark
       details: {
         title: "Tuvok",
-        coordinates: { x: 1032, y: 2891 },
+        coordinates: { x: 1030, y: 2889 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Tuvok is coming soon.",
         npcs: [],
@@ -1698,7 +1698,7 @@ const mapLabels = {
       region: "Darkwoods",
       details: {
         title: "Warg Pen",
-        coordinates: { x: 1369, y: 2737 },
+        coordinates: { x: 1367, y: 2735 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Warg Pen is coming soon.",
         npcs: [],
@@ -1711,7 +1711,7 @@ const mapLabels = {
       region: "Darkwoods",
       details: {
         title: "Gadros Ruins",
-        coordinates: { x: 1489, y: 2481 },
+        coordinates: { x: 1487, y: 2479 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Gadros Ruins is coming soon.",
         npcs: [],
@@ -1724,7 +1724,7 @@ const mapLabels = {
       region: "Darkwoods", 
       details: {
         title: "Shadow Forest",
-        coordinates: { x: 1463, y: 2710 },
+        coordinates: { x: 1461, y: 2708 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Shadow Forest is coming soon.",
         npcs: [],
@@ -1737,7 +1737,7 @@ const mapLabels = {
       region: "Darkwoods", // Changed the name from Termigon Hive to Termigon Mound, seems more fitting. Question Mark
       details: {
         title: "Termigon Mound",
-        coordinates: { x: 677, y: 3520 },
+        coordinates: { x: 675, y: 3518 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Termigon Mound is coming soon.",
         npcs: [],
@@ -1752,7 +1752,7 @@ const mapLabels = {
       region: "Battle Plains",
       details: {
         title: "Wasp Hive",
-        coordinates: { x: 1657, y: 2959 },
+        coordinates: { x: 1655, y: 2957 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Wasp Hive is coming soon.",
         npcs: [],
@@ -1767,7 +1767,7 @@ const mapLabels = {
       region: "Black Swamp",
       details: {
         title: "Drakkan",
-        coordinates: { x: 2806, y: 3807 },
+        coordinates: { x: 2804, y: 3805 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Drakkan is coming soon.",
         npcs: [],
@@ -1780,7 +1780,7 @@ const mapLabels = {
       region: "Black Swamp",
       details: {
         title: "Kobold Outpost",
-        coordinates: { x: 3248, y: 3818 },
+        coordinates: { x: 3246, y: 3816 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Kobold Outpost is coming soon.",
         npcs: [],
@@ -1793,7 +1793,7 @@ const mapLabels = {
       region: "Black Swamp",
       details: {
         title: "Kobold Village",
-        coordinates: { x: 2833, y: 3925 },
+        coordinates: { x: 2831, y: 3923 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Kobold Village is coming soon.",
         npcs: [],
@@ -1806,7 +1806,7 @@ const mapLabels = {
       region: "Black Swamp",
       details: {
         title: "Temple of Agon",
-        coordinates: { x: 3118, y: 3633 },
+        coordinates: { x: 3116, y: 3631 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Temple of Agon is coming soon.",
         npcs: [],
@@ -1819,7 +1819,7 @@ const mapLabels = {
       region: "Black Swamp",
       details: {
         title: "Old Ale Warehouse\n(Closed)",
-        coordinates: { x: 2817, y: 3261 },
+        coordinates: { x: 2815, y: 3259 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Old Ale Warehouse\n(Closed) is coming soon.",
         npcs: [],
@@ -1832,7 +1832,7 @@ const mapLabels = {
       region: "Black Swamp",
       details: {
         title: "Valekar's Fortress",
-        coordinates: { x: 3101, y: 3488 },
+        coordinates: { x: 3099, y: 3486 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Valekar's Fortress is coming soon.",
         npcs: [],
@@ -1847,7 +1847,7 @@ const mapLabels = {
       region: "Highlands",
       details: {
         title: "Emporium Abbey",
-        coordinates: { x: 2769, y: 3166 },
+        coordinates: { x: 2767, y: 3164 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Emporium Abbey is coming soon.",
         npcs: [],
@@ -1860,7 +1860,7 @@ const mapLabels = {
       region: "Highlands",
       details: {
         title: "Ancient Site of Minos",
-        coordinates: { x: 2930, y: 3169 },
+        coordinates: { x: 2928, y: 3167 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Ancient Site of Minos is coming soon.",
         npcs: [],
@@ -1873,7 +1873,7 @@ const mapLabels = {
       region: "Highlands",
       details: {
         title: "Minotaur Maze",
-        coordinates: { x: 3001, y: 3040 },
+        coordinates: { x: 2999, y: 3038 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Minotaur Maze is coming soon.",
         npcs: [],
@@ -1886,7 +1886,7 @@ const mapLabels = {
       region: "Highlands",
       details: {
         title: "Thief Fort",
-        coordinates: { x: 3177, y: 3069 },
+        coordinates: { x: 3175, y: 3067 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Thief Fort is coming soon.",
         npcs: [],
@@ -1899,7 +1899,7 @@ const mapLabels = {
       region: "Highlands",
       details: {
         title: "Supply Shelter",
-        coordinates: { x: 3368, y: 2958 },
+        coordinates: { x: 3366, y: 2956 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Supply Shelter is coming soon.",
         npcs: [],
@@ -1912,7 +1912,7 @@ const mapLabels = {
       region: "Highlands",
       details: {
         title: "Darushk Mine",
-        coordinates: { x: 3603, y: 2775 },
+        coordinates: { x: 3601, y: 2773 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Darushk Mine is coming soon.",
         npcs: [],
@@ -1925,7 +1925,7 @@ const mapLabels = {
       region: "Highlands",
       details: {
         title: "Astari Cave",
-        coordinates: { x: 3609, y: 2995 },
+        coordinates: { x: 3607, y: 2993 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Astari Cave is coming soon.",
         npcs: [],
@@ -1938,7 +1938,7 @@ const mapLabels = {
       region: "Highlands",
       details: {
         title: "Arllandah's Lair",
-        coordinates: { x: 3206, y: 2629 },
+        coordinates: { x: 3204, y: 2627 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Arllandah's Lair is coming soon.",
         npcs: [],
@@ -1951,7 +1951,7 @@ const mapLabels = {
       region: "Highlands",
       details: {
         title: "Third Book Temple",
-        coordinates: { x: 2984, y: 2701 },
+        coordinates: { x: 2982, y: 2699 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Third Book Temple is coming soon.",
         npcs: [],
@@ -1964,7 +1964,7 @@ const mapLabels = {
       region: "Highlands",
       details: {
         title: "Horibus's Camp",
-        coordinates: { x: 3468, y: 2643 },
+        coordinates: { x: 3466, y: 2641 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Horibus's Camp is coming soon.",
         npcs: [],
@@ -1977,7 +1977,7 @@ const mapLabels = {
       region: "Highlands",
       details: {
         title: "Zanock's Mine (East) ",
-        coordinates: { x: 3099, y: 2390 },
+        coordinates: { x: 3097, y: 2388 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Zanock's Mine (East)  is coming soon.",
         npcs: [],
@@ -1990,7 +1990,7 @@ const mapLabels = {
       region: "Highlands",
       details: {
         title: "Cave\n(NO ENTRY)",
-        coordinates: { x: 3562, y: 1924 },
+        coordinates: { x: 3560, y: 1922 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Cave\n(NO ENTRY) is coming soon.",
         npcs: [],
@@ -2003,7 +2003,7 @@ const mapLabels = {
       region: "Highlands",
       details: {
         title: "Ethera Mining Company",
-        coordinates: { x: 3610, y: 3621 },
+        coordinates: { x: 3608, y: 3619 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Ethera Mining Company is coming soon.",
         npcs: [],
@@ -2016,7 +2016,7 @@ const mapLabels = {
       region: "Highlands",
       details: {
         title: "Warg Pen",
-        coordinates: { x: 3336, y: 3734 },
+        coordinates: { x: 3334, y: 3732 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Warg Pen is coming soon.",
         npcs: [],
@@ -2033,7 +2033,7 @@ const mapLabels = {
       region: "Heartwood Coast",
       details: {
         title: "Infiltrator Camp",
-        coordinates: { x: 2472, y: 1506 },
+        coordinates: { x: 2470, y: 1504 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Infiltrator Camp is coming soon.",
         npcs: [],
@@ -2046,7 +2046,7 @@ const mapLabels = {
       region: "Heartwood Coast",
       details: {
         title: "Gnobol Manor",
-        coordinates: { x: 3096, y: 1475 },
+        coordinates: { x: 3094, y: 1473 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Gnobol Manor is coming soon.",
         npcs: [],
@@ -2059,7 +2059,7 @@ const mapLabels = {
       region: "Heartwood Coast",
       details: {
         title: "Gnobol Mauseleum",
-        coordinates: { x: 3096, y: 1569 },
+        coordinates: { x: 3094, y: 1567 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Gnobol Mauseleum is coming soon.",
         npcs: [],
@@ -2072,7 +2072,7 @@ const mapLabels = {
       region: "Heartwood Coast",
       details: {
         title: "Hunter's Lodge",
-        coordinates: { x: 2939, y: 1845 },
+        coordinates: { x: 2937, y: 1843 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Hunter's Lodge is coming soon.",
         npcs: [],
@@ -2085,7 +2085,7 @@ const mapLabels = {
       region: "Heartwood Coast",
       details: {
         title: "Talazarian Fort",
-        coordinates: { x: 2919, y: 2257 },
+        coordinates: { x: 2917, y: 2255 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Talazarian Fort is coming soon.",
         npcs: [],
@@ -2098,7 +2098,7 @@ const mapLabels = {
       region: "Heartwood Coast",
       details: {
         title: "Temple of Kuthos",
-        coordinates: { x: 2759, y: 2397 },
+        coordinates: { x: 2757, y: 2395 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Temple of Kuthos is coming soon.",
         npcs: [],
@@ -2113,7 +2113,7 @@ const mapLabels = {
       region: "Tundria",
       details: {
         title: "Orc Raider Camp",
-        coordinates: { x: 2945, y: 1224 },
+        coordinates: { x: 2943, y: 1222 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Orc Raider Camp is coming soon.",
         npcs: [],
@@ -2126,7 +2126,7 @@ const mapLabels = {
       region: "Tundria",
       details: {
         title: "Elsinea Manor",
-        coordinates: { x: 2616, y: 1249 },
+        coordinates: { x: 2614, y: 1247 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Elsinea Manor is coming soon.",
         npcs: [],
@@ -2139,7 +2139,7 @@ const mapLabels = {
       region: "Tundria",
       details: {
         title: "Frost Troll Coast",
-        coordinates: { x: 2575, y: 1129 },
+        coordinates: { x: 2573, y: 1127 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Frost Troll Coast is coming soon.",
         npcs: [],
@@ -2152,7 +2152,7 @@ const mapLabels = {
       region: "Tundria",
       details: {
         title: "Trapper Grayth's Dwelling",
-        coordinates: { x: 3400, y: 819 },
+        coordinates: { x: 3398, y: 817 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Trapper Grayth's Dwelling is coming soon.",
         npcs: [],
@@ -2165,7 +2165,7 @@ const mapLabels = {
       region: "Tundria",
       details: {
         title: "Infiltrator Camp",
-        coordinates: { x: 3608, y: 1039 },
+        coordinates: { x: 3606, y: 1037 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Infiltrator Camp is coming soon.",
         npcs: [],
@@ -2178,7 +2178,7 @@ const mapLabels = {
       region: "Tundria",
       details: {
         title: "Altargrade",
-        coordinates: { x: 3239, y: 755 },
+        coordinates: { x: 3237, y: 753 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Altargrade is coming soon.",
         npcs: [],
@@ -2191,7 +2191,7 @@ const mapLabels = {
       region: "Tundria",
       details: {
         title: "Orc Raider Fort",
-        coordinates: { x: 3111, y: 861 },
+        coordinates: { x: 3109, y: 859 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Orc Raider Fort is coming soon.",
         npcs: [],
@@ -2204,7 +2204,7 @@ const mapLabels = {
       region: "Tundria",
       details: {
         title: "Hammerfist Mine",
-        coordinates: { x: 2777, y: 595 },
+        coordinates: { x: 2775, y: 593 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Hammerfist Mine is coming soon.",
         npcs: [],
@@ -2217,7 +2217,7 @@ const mapLabels = {
       region: "Tundria",
       details: {
         title: "Stormholde",
-        coordinates: { x: 2563, y: 929 },
+        coordinates: { x: 2561, y: 927 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Stormholde is coming soon.",
         npcs: [],
@@ -2230,7 +2230,7 @@ const mapLabels = {
       region: "Tundria",
       details: {
         title: "Ruins of Osgarl",
-        coordinates: { x: 2543, y: 414 },
+        coordinates: { x: 2541, y: 412 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Ruins of Osgarl is coming soon.",
         npcs: [],
@@ -2243,7 +2243,7 @@ const mapLabels = {
       region: "Tundria",
       details: {
         title: "Castle of Artraxis",
-        coordinates: { x: 2879, y: 413 },
+        coordinates: { x: 2877, y: 411 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Castle of Artraxis is coming soon.",
         npcs: [],
@@ -2259,7 +2259,7 @@ const mapLabels = {
       region: "Breakwater",
       details: {
         title: "Pirate Raider's Camp",
-        coordinates: { x: 1351, y: 1762 },
+        coordinates: { x: 1349, y: 1760 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Pirate Raider's Camp is coming soon.",
         npcs: [],
@@ -2272,7 +2272,7 @@ const mapLabels = {
       region: "Breakwater",
       details: {
         title: "Athropiniax's Temple",
-        coordinates: { x: 1784, y: 2431 },
+        coordinates: { x: 1782, y: 2429 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Athropiniax's Temple is coming soon.",
         npcs: [],
@@ -2287,7 +2287,7 @@ const mapLabels = {
       region: "Breakwater",
       details: {
         title: "Undead Dwarven Fort",
-        coordinates: { x: 1924, y: 1732 },
+        coordinates: { x: 1922, y: 1730 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Undead Dwarven Fort is coming soon.",
         npcs: [],
@@ -2300,7 +2300,7 @@ const mapLabels = {
       region: "Breakwater",
       details: {
         title: "Deadwing's Lair",
-        coordinates: { x: 1945, y: 1692 },
+        coordinates: { x: 1943, y: 1690 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Deadwing's Lair is coming soon.",
         npcs: [],
@@ -2313,7 +2313,7 @@ const mapLabels = {
       region: "Breakwater",
       details: {
         title: "Dwarf Fortress",
-        coordinates: { x: 2173, y: 1510 },
+        coordinates: { x: 2171, y: 1508 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Dwarf Fortress is coming soon.",
         npcs: [],
@@ -2328,7 +2328,7 @@ const mapLabels = {
       region: "Breakwater",
       details: {
         title: "Sea Pirate Shack",
-        coordinates: { x: 2215, y: 2253 },
+        coordinates: { x: 2213, y: 2251 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Sea Pirate Shack is coming soon.",
         npcs: [],
@@ -2343,7 +2343,7 @@ const mapLabels = {
       region: "Western Isles",
       details: {
         title: "Talazar's Castle",
-        coordinates: { x: 1104, y: 3292 },
+        coordinates: { x: 1102, y: 3290 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Talazar's Castle is coming soon.",
         npcs: [],
@@ -2361,7 +2361,7 @@ const mapLabels = {
       region: "Sands of Creation",
       details: {
         title: "Ruhura Outpost",
-        coordinates: { x: 943, y: 3987 },
+        coordinates: { x: 941, y: 3985 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Ruhura Outpost is coming soon.",
         npcs: [],
@@ -2374,7 +2374,7 @@ const mapLabels = {
       region: "Sands of Creation",
       details: {
         title: "Sand Golem Crypt",
-        coordinates: { x: 842, y: 3924 },
+        coordinates: { x: 840, y: 3922 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Sand Golem Crypt is coming soon.",
         npcs: [],
@@ -2387,7 +2387,7 @@ const mapLabels = {
       region: "Sands of Creation",
       details: {
         title: "Lupinsix's Lair",
-        coordinates: { x: 793, y: 3838 },
+        coordinates: { x: 791, y: 3836 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Lupinsix's Lair is coming soon.",
         npcs: [],
@@ -2400,7 +2400,7 @@ const mapLabels = {
       region: "Sands of Creation",
       details: {
         title: "Tomna's House",
-        coordinates: { x: 720, y: 3682 },
+        coordinates: { x: 718, y: 3680 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Tomna's House is coming soon.",
         npcs: [],
@@ -2413,7 +2413,7 @@ const mapLabels = {
       region: "Sands of Creation",
       details: {
         title: "Artonian Fort",
-        coordinates: { x: 556, y: 3668 },
+        coordinates: { x: 554, y: 3666 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Artonian Fort is coming soon.",
         npcs: [],
@@ -2426,7 +2426,7 @@ const mapLabels = {
       region: "Sands of Creation",
       details: {
         title: "Artonian Cave",
-        coordinates: { x: 490, y: 3652 },
+        coordinates: { x: 488, y: 3650 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Artonian Cave is coming soon.",
         npcs: [],
@@ -2439,7 +2439,7 @@ const mapLabels = {
       region: "Sands of Creation",
       details: {
         title: "The GateKeeper",
-        coordinates: { x: 422, y: 3686 },
+        coordinates: { x: 420, y: 3684 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about The GateKeeper is coming soon.",
         npcs: [],
@@ -2452,7 +2452,7 @@ const mapLabels = {
       region: "Sands of Creation",
       details: {
         title: "Dragon Lair",
-        coordinates: { x: 114, y: 3469 },
+        coordinates: { x: 112, y: 3467 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Dragon Lair is coming soon.",
         npcs: [],
@@ -2468,7 +2468,7 @@ const mapLabels = {
       region: "Sands of Creation",
       details: {
         title: "Khafra Fishing Outpost",
-        coordinates: { x: 88, y: 2726 },
+        coordinates: { x: 86, y: 2724 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Khafra Fishing Outpost is coming soon.",
         npcs: [],
@@ -2481,7 +2481,7 @@ const mapLabels = {
       region: "Sands of Creation",
       details: {
         title: "Baniti's Family Crypt",
-        coordinates: { x: 313, y: 2979 },
+        coordinates: { x: 311, y: 2977 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Baniti's Family Crypt is coming soon.",
         npcs: [],
@@ -2494,7 +2494,7 @@ const mapLabels = {
       region: "Sands of Creation",
       details: {
         title: "Blacktail's Crypt",
-        coordinates: { x: 56, y: 3026 },
+        coordinates: { x: 54, y: 3024 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Blacktail's Crypt is coming soon.",
         npcs: [],
@@ -2507,7 +2507,7 @@ const mapLabels = {
       region: "Sands of Creation",
       details: {
         title: "The Guardian",
-        coordinates: { x: 169, y: 3158 },
+        coordinates: { x: 167, y: 3156 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about The Guardian is coming soon.",
         npcs: [],
@@ -2520,7 +2520,7 @@ const mapLabels = {
       region: "Sands of Creation",
       details: {
         title: "Undead Artonian Crypt",
-        coordinates: { x: 263, y: 3250 },
+        coordinates: { x: 261, y: 3248 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Undead Artonian Crypt is coming soon.",
         npcs: [],
@@ -2533,7 +2533,7 @@ const mapLabels = {
       region: "Sands of Creation",
       details: {
         title: "Ancient Artonian Swordsman Dungeon",
-        coordinates: { x: 142, y: 3329 },
+        coordinates: { x: 140, y: 3327 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Ancient Artonian Swordsman Dungeon is coming soon.",
         npcs: [],
@@ -2551,7 +2551,7 @@ const mapLabels = {
       region: "Valinor",
       details: {
         title: "Gut Rot Swamp",
-        coordinates: { x: 1177, y: 413 },
+        coordinates: { x: 1175, y: 411 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Gut Rot Swamp is coming soon.",
         npcs: [],
@@ -2568,7 +2568,7 @@ const mapLabels = {
       region: "Krythan",
       details: {
         title: "Lake Silvest",
-        coordinates: { x: 1267, y: 1220 },
+        coordinates: { x: 1265, y: 1218 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Lake Silvest is coming soon.",
         npcs: [],
@@ -2581,7 +2581,7 @@ const mapLabels = {
       region: "Krythan",
       details: {
         title: "Chokecherry Pond",
-        coordinates: { x: 1040, y: 1218 },
+        coordinates: { x: 1038, y: 1216 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Chokecherry Pond is coming soon.",
         npcs: [],
@@ -2596,7 +2596,7 @@ const mapLabels = {
       region: "Krythan",
       details: {
         title: "Queen's Lake",
-        coordinates: { x: 390, y: 1090 },
+        coordinates: { x: 388, y: 1088 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Queen's Lake is coming soon.",
         npcs: [],
@@ -2609,7 +2609,7 @@ const mapLabels = {
       region: "Krythan",
       details: {
         title: "Crow Lake",
-        coordinates: { x: 849, y: 1156 },
+        coordinates: { x: 847, y: 1154 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Crow Lake is coming soon.",
         npcs: [],
@@ -2622,7 +2622,7 @@ const mapLabels = {
       region: "Krythan",
       details: {
         title: "Krythan Swamp",
-        coordinates: { x: 190, y: 1766 },
+        coordinates: { x: 188, y: 1764 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Krythan Swamp is coming soon.",
         npcs: [],
@@ -2638,7 +2638,7 @@ const mapLabels = {
       region: "Darkwoods",
       details: {
         title: "Cairn Lake",
-        coordinates: { x: 1015, y: 2869 },
+        coordinates: { x: 1013, y: 2867 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Cairn Lake is coming soon.",
         npcs: [],
@@ -2651,7 +2651,7 @@ const mapLabels = {
       region: "Darkwoods",
       details: {
         title: "Lake Mraya",
-        coordinates: { x: 778, y: 2988 },
+        coordinates: { x: 776, y: 2986 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Lake Mraya is coming soon.",
         npcs: [],
@@ -2664,7 +2664,7 @@ const mapLabels = {
       region: "Darkwoods",
       details: {
         title: "Josody Swamp",
-        coordinates: { x: 1129, y: 2676 },
+        coordinates: { x: 1127, y: 2674 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Josody Swamp is coming soon.",
         npcs: [],
@@ -2677,7 +2677,7 @@ const mapLabels = {
       region: "Darkwoods", 
       details: {
         title: "Greenteeth Swamp",
-        coordinates: { x: 1640, y: 2600 },
+        coordinates: { x: 1638, y: 2598 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Greenteeth Swamp is coming soon.",
         npcs: [],
@@ -2690,7 +2690,7 @@ const mapLabels = {
       region: "Darkwoods",
       details: {
         title: "Darkfell Marsh",
-        coordinates: { x: 1011, y: 3092 },
+        coordinates: { x: 1009, y: 3090 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Darkfell Marsh is coming soon.",
         npcs: [],
@@ -2705,7 +2705,7 @@ const mapLabels = {
       region: "Battle Plains",
       details: {
         title: "Proudblood Sound",
-        coordinates: { x: 2272, y: 3770 },
+        coordinates: { x: 2270, y: 3768 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Proudblood Sound is coming soon.",
         npcs: [],
@@ -2718,7 +2718,7 @@ const mapLabels = {
       region: "Battle Plains",
       details: {
         title: "Chlera Bay",
-        coordinates: { x: 2558, y: 3713 },
+        coordinates: { x: 2556, y: 3711 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Chlera Bay is coming soon.",
         npcs: [],
@@ -2736,7 +2736,7 @@ const mapLabels = {
       region: "Black Swamp",
       details: {
         title: "Vorda Swamp",
-        coordinates: { x: 2787, y: 3682 },
+        coordinates: { x: 2785, y: 3680 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Vorda Swamp is coming soon.",
         npcs: [],
@@ -2749,7 +2749,7 @@ const mapLabels = {
       region: "Black Swamp",
       details: {
         title: "Canis Lake",
-        coordinates: { x: 2830, y: 3509 },
+        coordinates: { x: 2828, y: 3507 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Canis Lake is coming soon.",
         npcs: [],
@@ -2762,7 +2762,7 @@ const mapLabels = {
       region: "Black Swamp",
       details: {
         title: "Lake Dresta",
-        coordinates: { x: 2919, y: 3650 },
+        coordinates: { x: 2917, y: 3648 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Lake Dresta is coming soon.",
         npcs: [],
@@ -2775,7 +2775,7 @@ const mapLabels = {
       region: "Black Swamp",
       details: {
         title: "Key Marsh",
-        coordinates: { x: 3399, y: 3924 },
+        coordinates: { x: 3397, y: 3922 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Key Marsh is coming soon.",
         npcs: [],
@@ -2790,7 +2790,7 @@ const mapLabels = {
       region: "Highlands",
       details: {
         title: "West Lake",
-        coordinates: { x: 3377, y: 2980 },
+        coordinates: { x: 3375, y: 2978 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about West Lake is coming soon.",
         npcs: [],
@@ -2803,7 +2803,7 @@ const mapLabels = {
       region: "Highlands",
       details: {
         title: "Parian Lake",
-        coordinates: { x: 3512, y: 2951 },
+        coordinates: { x: 3510, y: 2949 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Parian Lake is coming soon.",
         npcs: [],
@@ -2816,7 +2816,7 @@ const mapLabels = {
       region: "Highlands",
       details: {
         title: "Town Lake",
-        coordinates: { x: 3587, y: 3115 },
+        coordinates: { x: 3585, y: 3113 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Town Lake is coming soon.",
         npcs: [],
@@ -2829,7 +2829,7 @@ const mapLabels = {
       region: "Highlands",
       details: {
         title: "Kor's Lake",
-        coordinates: { x: 3576, y: 3234 },
+        coordinates: { x: 3574, y: 3232 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Kor's Lake is coming soon.",
         npcs: [],
@@ -2842,7 +2842,7 @@ const mapLabels = {
       region: "Highlands",
       details: {
         title: "Lake Ulthien",
-        coordinates: { x: 3033, y: 3229 },
+        coordinates: { x: 3031, y: 3227 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Lake Ulthien is coming soon.",
         npcs: [],
@@ -2855,7 +2855,7 @@ const mapLabels = {
       region: "Highlands",
       details: {
         title: "Glutton Lake",
-        coordinates: { x: 3461, y: 2702 },
+        coordinates: { x: 3459, y: 2700 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Glutton Lake is coming soon.",
         npcs: [],
@@ -2868,7 +2868,7 @@ const mapLabels = {
       region: "Highlands",
       details: {
         title: "Lake Kallon",
-        coordinates: { x: 3546, y: 3412 },
+        coordinates: { x: 3544, y: 3410 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Lake Kallon is coming soon.",
         npcs: [],
@@ -2881,7 +2881,7 @@ const mapLabels = {
       region: "Highlands",
       details: {
         title: "Orc Pond",
-        coordinates: { x: 3183, y: 3601 },
+        coordinates: { x: 3181, y: 3599 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Orc Pond is coming soon.",
         npcs: [],
@@ -2896,7 +2896,7 @@ const mapLabels = {
       region: "Valley of Giants",
       details: {
         title: "Greenmead Lake",
-        coordinates: { x: 3112, y: 2844 },
+        coordinates: { x: 3110, y: 2842 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Greenmead Lake is coming soon.",
         npcs: [],
@@ -2918,7 +2918,7 @@ const mapLabels = {
       region: "Breakwater",
       details: {
         title: "The Choke",
-        coordinates: { x: 2270, y: 2177 },
+        coordinates: { x: 2268, y: 2175 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about The Choke is coming soon.",
         npcs: [],
@@ -2935,7 +2935,7 @@ const mapLabels = {
       region: "Broken Finger",
       details: {
         title: "Broken Lake",
-        coordinates: { x: 1120, y: 3660 },
+        coordinates: { x: 1118, y: 3658 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Broken Lake is coming soon.",
         npcs: [],
@@ -2948,7 +2948,7 @@ const mapLabels = {
       region: "Broken Finger",
       details: {
         title: "Obsidian Lake",
-        coordinates: { x: 1354, y: 3513 },
+        coordinates: { x: 1352, y: 3511 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Obsidian Lake is coming soon.",
         npcs: [],
@@ -2965,7 +2965,7 @@ const mapLabels = {
       region: "Sands of Creation",
       details: {
         title: "Khafra Oasis",
-        coordinates: { x: 218, y: 3016 },
+        coordinates: { x: 216, y: 3014 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Khafra Oasis is coming soon.",
         npcs: [],
@@ -2978,7 +2978,7 @@ const mapLabels = {
       region: "Sands of Creation",
       details: {
         title: "Chomper's Oasis",
-        coordinates: { x: 91, y: 3267 },
+        coordinates: { x: 89, y: 3265 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Chomper's Oasis is coming soon.",
         npcs: [],
@@ -3005,8 +3005,8 @@ const mapLabels = {
       details: {
         title: "Medosk Mountains",
         coordinates: [
-          { x: 2981, y: 3533 },
-          { x: 3151, y: 3847 }, // Added a second coordinate for the same label
+          { x: 2979, y: 3531 },
+          { x: 3149, y: 3845 }, // Added a second coordinate for the same label
         ],
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Medosk Mountains is coming soon.",
