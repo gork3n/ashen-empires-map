@@ -16,7 +16,7 @@ An interactive map for Ashen Empires with pixel-perfect coordinates and multiple
   - [Features](#features)
   - [Technical Implementation](#technical-implementation)
   - [Map Coordinates](#map-coordinates)
-  - [A Heads-Up About Map Accuracy](#a-heads-up-about-map-accuracy)
+  - [A Note on Map \& Marker Accuracy](#a-note-on-map--marker-accuracy)
   - [Project Structure](#project-structure)
   - [Integration Guide](#integration-guide)
     - [Method 1: Using as a Standalone Page](#method-1-using-as-a-standalone-page)
@@ -73,17 +73,11 @@ The map itself is rendered from a 16384x16384 pixel tileset. However, the coordi
 
 The map automatically scales these coordinates to the larger map size. This matches the coordinate system used in-game for player location.
 
-## A Heads-Up About Map Accuracy
+## A Note on Map & Marker Accuracy
 
-Just a quick note about the map coordinates. You might notice that some spots are off by a few pixels. This is because of how the map was built.
+This map has been rebuilt with a new, highly accurate set of tiles. The alignment is now pixel-perfect on most zoom levels. When fully zoomed in, you may still encounter a rare discrepancy of a single pixel, but for all practical purposes, the map coordinates are now extremely precise.
 
-I created this map by taking hundreds of screenshots and manually piecing them together in image editing software. The problem is that the in-game camera doesn't always move a perfect pixel at a time. Sometimes, it shifts by a "half-pixel," which is a tiny amount you can't even see.
-
-My editing software can only move images by whole pixels, so I couldn't perfectly match up those tiny "half-pixel" shifts. I did my best to line everything up, but this resulted in some very small alignment errors. Think of it like a tiny texture seam you might see in a game world.
-
-So, if a coordinate seems slightly off, this is why! It shouldn't affect usage, but I wanted to let you know.
-
-Similarly, many of the labels and marker positions are being carried over from older map projects. I am actively working on verifying and correcting these as I find discrepancies.
+A side effect of this high-precision update is that some existing markers and labels, which were placed based on the old map, may now appear slightly misaligned. I am aware of this and will be manually correcting their positions over time.
 
 ## Project Structure
 
