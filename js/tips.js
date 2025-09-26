@@ -4,9 +4,10 @@ document.addEventListener('DOMContentLoaded', function() {
         "Use the sidebar toggles to show or hide different categories of markers and labels, helping you declutter the map.",
         "The coordinates in the bottom-left corner match the in-game X/Y positions, perfect for finding your way.",
         "Hover over any icon on the map to see a tooltip with its name and type.",
-        "Remember to visit a trainer to spend your experience points and level up your skills.",
-        "Banks are shared across your account. Use them to transfer items between your characters.",
-        "Different weapons have different swing timers and damage types. Experiment to see what works best against certain monsters!",
+        "Banks are shared across your characters on the same server. Use them to transfer items between your characters. VIP subscription is required to use shared banks.",
+        "Learn to use the Hunter's Handbook; it will become your best friend.",
+        "Once you've killed a monster and explored its spawn area, the handbook will show you where that monster spawns.",
+        "Press the 'H' key to open the Hunter's Handbook and the 'L' key to open your Quest Log.",
         "Quests from NPCs are a great way to earn experience, gold, and unique items."
     ];
 
@@ -14,15 +15,18 @@ document.addEventListener('DOMContentLoaded', function() {
     const allTips = {
         "Map Tips": [
             "Click on location labels like 'Valinor' or 'Lotor's Summer Palace' to open an information panel about that area.",
-            "Use the sidebar toggles to show or hide different categories of markers and labels, helping you declutter the map.",
+            "Use the filter menu toggles to show or hide different categories of markers and labels, helping you declutter the map.",
             "The coordinates in the bottom-left corner match the in-game X/Y positions, perfect for finding your way.",
             "Hover over any icon on the map to see a tooltip with its name and type."
         ],
         "Gameplay Tips": [
-            "Remember to visit a trainer to spend your experience points and level up your skills.",
-            "Banks are shared across your account. Use them to transfer items between your characters on the same server.",
-            "Different weapons have different swing timers and damage types. Experiment to see what works best against certain monsters!",
-            "Quests from NPCs are a great way to earn experience, gold, and unique items."
+            "Learn to use the Hunter's Handbook; it will become your best friend. Once you've killed a monster and explored its spawn area, the handbook will show you where that monster spawns.",
+            "Press the 'H' key to open the Hunter's Handbook and the 'L' key to open your Quest Log.",
+            "After leaving Valinor, get a town bonus orb from a Town Steward. Whisperdale offers Dexterity, Krog offers Strength, and Silvest offers Intelligence. This allows you to start Patron quests, which give great XP and gear until level 43.",
+            "Some quests require a specific reputation (the color of your name). Consider locking your reputation early to avoid becoming too 'good', which can block you from entering evil towns for certain quests, like the Parian Warlord questline at level 50.",
+            "When you die, your gear gets damaged, reducing its effectiveness. Remember to repair your equipment using spells, potions, or an NPC to maintain its full power.",
+            "You can get a cheap sail by completing a quest from Captain Rictor at the Valmond docks.",
+            "If you need storage crates, an NPC named Rella at the woodworking shop in east Parian sells them for 50,000 gold."
         ]
     };
 
