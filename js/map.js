@@ -284,16 +284,18 @@ function initializeMap() {
     // --- Set Initial Map View ---
     // Define the center of the map using in-game (4096x4096) coordinates.
     // This makes it easy to change the starting location.
-    const initialCenterGameCoords = { x: 777, y: 668, }; // Default View is { x: 776, y: 668, } (Showing Lotor's Summer Palace) Centers LSP on smaller screens.
+    const initialCenterGameCoords = { x: 3400, y: 3484, }; // Default View is { x: 776, y: 668, } (Showing Lotor's Summer Palace) Centers LSP on smaller screens.
+
+    const mapSize = 32768;
+    const scaleFactor = mapSize / 4096; // New scaling factor
 
     // Convert the in-game coordinates to OpenLayers view coordinates.
-    // The map is 16384x16384, which is 4x the in-game coordinates.
-    // X coordinate is scaled by 4.
-    // Y coordinate is scaled by 4 and then inverted (16384 - Y) because OpenLayers
-    // has its origin at the bottom-left, while the game and our tiles have it at the top-left.
+    // With the new gdal2tiles raster profile, the origin is top-left [0, 0] and the extent
+    // goes into negative Y values. We must convert our game coordinates (which are positive-Y-down)
+    // to this new system by making the Y-coordinate negative.
     const initialCenterOlCoords = [
-        initialCenterGameCoords.x * 4,
-        16384 - (initialCenterGameCoords.y * 4)
+        initialCenterGameCoords.x * scaleFactor,
+        -(initialCenterGameCoords.y * scaleFactor)
     ];
 
     // Initialize the map
@@ -304,28 +306,31 @@ function initializeMap() {
             new ol.layer.Tile({
                 source: new ol.source.TileImage({
                     attributions: '<span style="color: white;">Map tiles created by Sir Chris using GDAL2Tiles</span>',
+                    cacheSize: 4096, // Increase cache size to keep more tiles in memory for faster panning.
+                    preload: 1, // Preload one zoom level lower to make zooming out feel more responsive.
                     tileGrid: new ol.tilegrid.TileGrid({
-                        extent: [0,0,16384,16384],
-                        origin: [0,16384],
-                        resolutions: [64, 32, 16, 8, 4, 2],
+                        extent: [0, -32768, 32768, 0],
+                        origin: [0, 0],
+                        resolutions: [128, 64, 32, 16, 8, 4, 2, 1],
                         tileSize: [256, 256]
                     }),
-                    tileUrlFunction: function(tileCoord) {
-                        return ('./tiles/{z}/{x}/{y}.png'
-                            .replace('{z}', String(tileCoord[0]))
-                            .replace('{x}', String(tileCoord[1]))
-                            .replace('{y}', String(tileCoord[2])));
+                    tileUrlFunction: function(tileCoord, pixelRatio, projection) {
+                        const z = tileCoord[0];
+                        const x = tileCoord[1];
+                        const y = tileCoord[2];
+                        return `./tiles/${z}/${x}/${y}.png`;
                     },
                 })
             })
         ],
         view: new ol.View({
-            center: initialCenterOlCoords,
-            resolution: 2,
-            minResolution: 0.1,
-            maxResolution: 64,
+            center: initialCenterOlCoords, // Use your calculated center
+            resolution: 4, // Set a reasonable starting resolution from your new array
+            minResolution: 1, // Corresponds to the most zoomed-in level
+            maxResolution: 128,
             constrainOnlyCenter: true,  // Constrain just the center, not the whole view
-            showFullExtent: true
+            showFullExtent: true,
+            extent: [0, -32768, 32768, 0]
         })
     });
     
@@ -445,7 +450,11 @@ function showInfoFlyout(data) {
 
     // Image
     if (data.image) {
-        html += `<img src="${data.image}" alt="${data.title}" style="width: 100%; max-width: 300px; border-radius: 4px; margin: 0 auto 15px; display: block; border: 1px solid #444;">`;
+        html += `
+            <div style="width: 300px; height: 350px; margin: 0 auto 15px; border-radius: 4px; overflow: hidden; border: 1px solid #444; background-color: #111;">
+                <img src="${data.image}" alt="${data.title}" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+            </div>
+        `;
     }
 
     // Lore/Info
@@ -773,10 +782,12 @@ function createUIMarkerIcon(markerType) {
  * @param {object} [details] - Optional details object for the info flyout.
  */
 function addMarkerFeature(source, x, y, type, tooltip, details) {
-    // Scale coordinates for 16384x16384 map and convert to OpenLayers coordinate system (y is inverted)
-    const scaledX = x * 4;
-    const scaledY = y * 4;
-    const olY = 16384 - scaledY;
+    const mapSize = 32768;
+    const scaleFactor = mapSize / 4096;
+
+    // Scale coordinates for the new map size and convert to OpenLayers coordinate system (y is inverted)
+    const scaledX = x * scaleFactor;
+    const olY = -(y * scaleFactor);
     const coordinates = [scaledX, olY];
     
     // Create a feature for the marker
@@ -813,7 +824,7 @@ function addMapMarkers(map) {
             title: category + ' Markers',
             visible: true,
             minResolution: 0, // Set to 0 to ensure markers are always visible when zoomed in.
-            maxResolution: 16  // Hides when zoomed out to level 2 or more (resolution >= 16)
+            maxResolution: 32  // Hides when zoomed out to level 2 or more (resolution >= 32)
         });
         
         // Store the layer reference
@@ -948,10 +959,12 @@ function addMapLabels(map) {
  * @param {object} [details] - Optional details object for the info flyout.
  */
 function addLabelFeature(source, x, y, text, fontSize, category, details) {
-    // Scale coordinates for 16384x16384 map and convert to OpenLayers coordinate system (y is inverted)
-    const scaledX = x * 4;
-    const scaledY = y * 4;
-    const olY = 16384 - scaledY;
+    const mapSize = 32768;
+    const scaleFactor = mapSize / 4096;
+
+    // Scale coordinates for the new map size and convert to OpenLayers coordinate system (y is inverted)
+    const scaledX = x * scaleFactor;
+    const olY = -(y * scaleFactor);
     
     // Create a point feature at this location
     const feature = new ol.Feature({
@@ -1031,6 +1044,9 @@ function setupMarkerTooltips(map) {
 // And replace with this custom coordinate tracking:
 function initializeCoordinateDisplay() {
     const mousePositionDiv = document.getElementById('mouse-position');
+    const mapSize = 32768;
+    const scaleFactor = mapSize / 4096;
+
     if (mousePositionDiv) {
         let lastX, lastY;
 
@@ -1049,8 +1065,8 @@ function initializeCoordinateDisplay() {
         map.on('pointerdown', function(evt) {
             const coord = evt.coordinate;
             if (coord) {
-                lastX = Math.round(coord[0] / 4);
-                lastY = Math.round((16384 - coord[1]) / 4); // Invert Y coordinate and scale down
+                lastX = Math.round(coord[0] / scaleFactor);
+                lastY = Math.round(-coord[1] / scaleFactor); // Invert Y coordinate and scale down
                 updateDisplay();
             }
         });
@@ -1059,8 +1075,8 @@ function initializeCoordinateDisplay() {
         map.on('pointermove', function(evt) {
             const coord = evt.coordinate;
             if (coord) {
-                lastX = Math.round(coord[0] / 4);
-                lastY = Math.round((16384 - coord[1]) / 4); // Invert Y coordinate and scale down
+                lastX = Math.round(coord[0] / scaleFactor);
+                lastY = Math.round(-coord[1] / scaleFactor); // Invert Y coordinate and scale down
                 updateDisplay();
             }
         });

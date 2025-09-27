@@ -68,6 +68,26 @@ const markerStyles = {
     icon: "icons/leather-boot.svg",
     color: "#32CD32", // LimeGreen
   },
+  shop_farming: {
+    icon: "icons/spade.svg",
+    color: "#32CD32", // LimeGreen
+  },
+  shop_blacksmith: {
+    icon: "icons/anvil.svg",
+    color: "#32CD32", // LimeGreen
+  },
+  shop_magic: {
+    icon: "icons/wizard-staff.svg",
+    color: "#32CD32", // LimeGreen
+  },
+  shop_runecrafting: {
+    icon: "icons/rupee.svg",
+    color: "#32CD32", // LimeGreen
+  },
+  shop_survey: {
+    icon: "icons/scroll-unfurled.svg",
+    color: "#32CD32", // LimeGreen
+  },
 
   // Trainers
   trainer: {
@@ -2480,7 +2500,7 @@ const mapMarkers = {
       },
     },
     {
-      type: "shop_generic",
+      type: "shop_magic",
       tooltip: "Cladius Zamilus's Magic Shop",
       region: "Valinor Island",
       place: "Valinor",
@@ -2508,7 +2528,7 @@ const mapMarkers = {
       },
     },
     {
-      type: "shop_generic",
+      type: "shop_blacksmith",
       tooltip: "Kerry Thomas' Blacksmith Shop ",
       region: "Valinor Island",
       place: "Valinor",
@@ -2537,25 +2557,9 @@ const mapMarkers = {
     },
     //Done
 
-    /* Krythan Shops */
+    
 
-    //Varg Shops
-    {
-      type: "shop_generic",
-      tooltip: "Magic Shop",
-      region: "Krythan",
-      place: "Varg",
-      details: {
-        title: "Magic Shop",
-        coordinates: { x: 778, y: 1191 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Magic Shop is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-
-    /*Lotor's Summer Palace Shops*/
+    // Region: Lotor's Summer Palace Shops
     {
       type: "shop_weapon",
       tooltip: "O'riles Weapon Shop",
@@ -2585,7 +2589,7 @@ const mapMarkers = {
       },
     },
     {
-      type: "shop_generic",
+      type: "shop_farming",
       tooltip: "Garius' Farming Shop",
       region: "Krythan",
       place: "Lotor's Summer Palace",
@@ -2613,7 +2617,7 @@ const mapMarkers = {
       },
     },
     {
-      type: "shop_generic",
+      type: "shop_survey",
       tooltip: "Blueprint Sales",
       region: "Krythan",
       place: "Lotor's Summer Palace",
@@ -2627,7 +2631,7 @@ const mapMarkers = {
       },
     },
     {
-      type: "shop_generic",
+      type: "shop_survey",
       tooltip: "Surveying and Tools Sales",
       region: "Krythan",
       place: "Lotor's Summer Palace",
@@ -2641,7 +2645,7 @@ const mapMarkers = {
       },
     },
     {
-      type: "shop_generic",
+      type: "shop_magic",
       tooltip: "Wizard Swishwhich's Shop - Currency: Rune Fragment",
       region: "Krythan",
       place: "Lotor's Summer Palace",
@@ -2655,7 +2659,7 @@ const mapMarkers = {
       },
     },
     {
-      type: "shop_generic",
+      type: "shop_magic",
       tooltip: "Wizard Blunderstone",
       region: "Krythan",
       place: "Lotor's Summer Palace",
@@ -2725,7 +2729,7 @@ const mapMarkers = {
       },
     },
     {
-      type: "shop_generic",
+      type: "shop_magic",
       tooltip: "Doyle Trobush's Magic Shop",
       region: "Krythan",
       place: "Lotor's Summer Palace",
@@ -2739,7 +2743,7 @@ const mapMarkers = {
       },
     },
     {
-      type: "shop_generic",
+      type: "shop_runecrafting",
       tooltip: "Panteo's Runecrafting Shop",
       region: "Krythan",
       place: "Lotor's Summer Palace",
@@ -2781,7 +2785,7 @@ const mapMarkers = {
       },
     },
     {
-      type: "shop_generic",
+      type: "shop_blacksmith",
       tooltip: "Kaleic's Blacksmith Shop",
       region: "Krythan",
       place: "Lotor's Summer Palace",
@@ -2823,9 +2827,193 @@ const mapMarkers = {
       },
     },
     //Done
+    // Island: Krythan Island Shops
+    // Region: Silvest Valley Shops
+    // City: Cliffside Shops
 
-    //Scarab Island Shops
-    //Lopal Shops
+    // City: Silvest Shops
+
+    // City: Fort Eastwatch Shops
+
+    // Region: Krythan Shops
+    // City: Jeel Shops
+
+    // City: Lotor's Castle Shops
+
+    // City: Hothbra Shops
+
+    // City: New Korelth Shops
+    // It was toast, no shops here.
+
+    // City: Verthpool Shops
+
+    // City: Varg Shops
+    {
+      type: "shop_magic",
+      tooltip: "Magic Shop",
+      region: "Krythan",
+      place: "Varg",
+      details: {
+        title: "Magic Shop",
+        coordinates: { x: 778, y: 1191 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Magic Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    
+    //Done
+
+    // Mainland Shops
+
+    // Region: Darkwoods Shops
+
+    // Region: Battle Plains Shops
+
+    // Region: Black Swamp Shops
+
+    // Region: Highlands Shops
+    // City: Parian Shops
+
+    // City: Arda Shops
+    {
+      type: "shop_weapon",
+      tooltip: "Kedalel's Weapon Shop",
+      region: "Highlands",
+      place: "Arda",
+      details: {
+        title: "Kedalel's Weapon Shop",
+        coordinates: { x: 3405, y: 3491 },
+        image: "images/npcs/Kedalel_Weapon_Shop.png",
+        lore: "More information about Kedalel's Weapon Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_weapon",
+      tooltip: "Adie's Weapon Shop",
+      region: "Highlands",
+      place: "Arda",
+      details: {
+        title: "Adie's Weapon Shop",
+        coordinates: { x: 3401, y: 3495 },
+        image: "images/npcs/Adie_Weapon_Shop.png",
+        lore: "More information about Adie's Weapon Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_leather",
+      tooltip: "Mo's Leather Shop",
+      region: "Highlands",
+      place: "Arda",
+      details: {
+        title: "Adie's Leather Shop",
+        coordinates: { x: 3413, y: 3496 },
+        image: "images/npcs/Mo_Leather_Shop.png",
+        lore: "More information about Adie's Leather Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_carpentry",
+      tooltip: "Delawyth's Carpentry Shop",
+      region: "Highlands",
+      place: "Arda",
+      details: {
+        title: "Delawyth's Carpentry Shop",
+        coordinates: { x: 3422, y: 3496 },
+        image: "images/npcs/Delawyth_Carpentry_Shop.png",
+        lore: "More information about Delawyth's Carpentry Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_armor",
+      tooltip: "Edelassa's Armory Shop",
+      region: "Highlands",
+      place: "Arda",
+      details: {
+        title: "Edelassa's Armory Shop",
+        coordinates: { x: 3380, y: 3495 },
+        image: "images/npcs/Edelassa_Armory_Shop.png",
+        lore: "More information about Edelassa's Armory Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_blacksmith",
+      tooltip: "Edelbram's Blacksmith Shop",
+      region: "Highlands",
+      place: "Arda",
+      details: {
+        title: "Edelbram's Blacksmith Shop",
+        coordinates: { x: 3382, y: 3490 },
+        image: "images/npcs/Edelbram_Blacksmith_Shop.png",
+        lore: "More information about Edelbram's Blacksmith Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_generic",
+      tooltip: "Lothath's Provisioner Shop",
+      region: "Highlands",
+      place: "Arda",
+      details: {
+        title: "Lothath's Provisioner Shop",
+        coordinates: { x: 3393, y: 3476 },
+        image: "images/npcs/Lothath_Provisioner_Shop.png",
+        lore: "More information about Lothath's Provisioner Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_pub",
+      tooltip: "Grimlock's Pub",
+      region: "Highlands",
+      place: "Arda",
+      details: {
+        title: "Grimlock's Pub",
+        coordinates: { x: 3420, y: 3467 },
+        image: "images/npcs/Grimlock_Pub_Shop.png",
+        lore: "More information about Grimlock's Pub is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_magic",
+      tooltip: "Janus Laruis' Magic Shop",
+      region: "Highlands",
+      place: "Arda",
+      details: {
+        title: "Janus Laruis' Magic Shop",
+        coordinates: { x: 3381, y: 3470 },
+        image: "images/npcs/Janus_Laruis_Magic_Shop.png",
+        lore: "More information about Janus Laruis' Magic Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    // Done
+
+    // City: Grell Shops
+
+    // City: Ethera Palace Shops
+
+    // Region: Western Isles Shops
+    // Western Isles - being islands that are a part of Non-Expansion Content in Ashen Empires. This doesn't include Sands of Creation or Tides of Fate (expansions) content.
+    // Island: Scarab Island Shops
+    // City: Lopal Shops
     {
       type: "shop_carpentry",
       tooltip: "Ricbert's Carpentry Shop",
@@ -2841,7 +3029,7 @@ const mapMarkers = {
       },
     },
     {
-      type: "shop_generic",
+      type: "shop_farming",
       tooltip: "Berctuald's Farming Shop",
       region: "Krythan",
       place: "Scarab Island",
@@ -2854,6 +3042,23 @@ const mapMarkers = {
         links: [],
       },
     },
+    {
+      type: "shop_farming",
+      tooltip: "Sevyd's Farming Shop",
+      region: "Highlands",
+      place: "Arda",
+      details: {
+        title: "Sevyd's Farming Shop",
+        coordinates: { x: 3405, y: 3476 },
+        image: "images/npcs/Sevyd_Farming_Shop.png",
+        lore: "More information about Sevyd's Farming Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // City: Grell Shops
+
     {
       type: "shop_pub",
       tooltip: "Osric's Pub",
@@ -2911,7 +3116,7 @@ const mapMarkers = {
       },
     },
     {
-      type: "shop_generic",
+      type: "shop_magic",
       tooltip: "Aldulf's Magic Shop",
       region: "Krythan",
       place: "Scarab Island",
@@ -2924,7 +3129,21 @@ const mapMarkers = {
         links: [],
       },
     },
-    //Done
+
+    // Region: Valley of Giants Shops
+    // No shops in Valley of Giants
+
+    // Region: Heartwood Coast Shops
+
+    // Region: Tundria Shops
+
+    // Region: Sands of Creation Shops
+    // City: Khafra Shops
+
+    // City: Ruhura Shops
+
+    // Region: Broken Finger Shops
+    // City: Broken Finger Town Shops
   ],
 
   trainers: [
@@ -3520,8 +3739,8 @@ const mapMarkers = {
 
     // Krythan Island Banks
 
-    // Silvest Valley Banks
-    //Fort Eastwatch
+    // Region: Silvest Valley Banks
+    // City: Fort Eastwatch
     {
       type: "bank",
       tooltip: "Bank",
@@ -3536,7 +3755,7 @@ const mapMarkers = {
         links: [],
       },
     },
-    // Silvest Banks
+    // City: Silvest Banks
     {
       type: "bank",
       tooltip: "Bank",
@@ -3552,9 +3771,32 @@ const mapMarkers = {
       },
     },
 
-    // Krythan Banks
+    //Mainland Banks
 
-    // Scarab Island Banks
+    // Region: Darkwoods Banks
+
+    // Region: Battle Plains Banks
+
+    // Region: Black Swamp Banks
+
+    // Region: Highlands Banks
+    // City: Arda Banks
+    {
+      type: "bank",
+      tooltip: "Bank",
+      region: "Highlands",
+      place: "Arda",
+      details: {
+        title: "Bank",
+        coordinates: { x: 3392, y: 3493 },
+        image: "images/npcs/Arda_Bank.png",
+        lore: "More information about Bank is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // City: Lopal Banks
     {
       type: "bank",
       tooltip: "Bank",
@@ -3570,14 +3812,16 @@ const mapMarkers = {
       },
     },
 
-    //Mainland Banks
-    //Western Mainland Banks
 
-    //Eastern Mainland Banks
+    // Region: Western Isles Banks
 
-    //Tundria Banks
+    // Region: Valley of Giants Banks
 
-    // Add more banks
+    // Region: Heartwood Coast Banks
+
+    // Region: Tundria Banks
+
+    //
   ],
 
   altars: [

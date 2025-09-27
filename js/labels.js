@@ -2877,7 +2877,7 @@ const mapLabels = {
     },
     {
       name: "Lake Kallon",
-      alias: "Arda Pond",
+      alias: "Arda Pond", // Added an alias for a quest that calls it Arda Pond. Question mark
       fontSize: 15,
       region: "Highlands",
       details: {
