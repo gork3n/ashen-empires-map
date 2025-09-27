@@ -306,8 +306,8 @@ function initializeMap() {
             new ol.layer.Tile({
                 source: new ol.source.TileImage({
                     attributions: '<span style="color: white;">Map tiles created by Sir Chris using GDAL2Tiles</span>',
-                    cacheSize: 4096, // Increase cache size to keep more tiles in memory for faster panning.
-                    preload: 1, // Preload one zoom level lower to make zooming out feel more responsive.
+                    cacheSize: 2048, // Default cache size for a balance of performance and memory usage.
+                    preload: 0, // Disable preloading to reduce memory usage and improve performance.
                     tileGrid: new ol.tilegrid.TileGrid({
                         extent: [0, -32768, 32768, 0],
                         origin: [0, 0],
@@ -504,23 +504,21 @@ function hideInfoFlyout() {
 
 /**
  * Function to create a text-to-image label with customizable styling
- * @param {string} text - The label text
- * @param {number} fontSize - Font size in pixels
+ * @param {string} text - The label text.
+ * @param {string} category - The label category (e.g., 'cities', 'landmarks').
+ * @param {number} fontSize - The exact font size to render.
  * @param {Object} styleOptions - Custom styling options
  * @returns {ol.style.Style} The style object for the label
  */
-function createLabelImageStyle(text, fontSize, styleOptions = {}) {
+function createLabelImageStyle(text, category, fontSize) {
     // Create a cache key to avoid re-creating the same style
-    const cacheKey = `label-${text}-${fontSize}-${JSON.stringify(styleOptions)}`;
+    const cacheKey = `label-${category}-${text}-${fontSize}`;
     if (styleCache[cacheKey]) {
         return styleCache[cacheKey];
     }
-
-    // The caller is now responsible for providing a complete style object by merging
-    // with `defaultLabelStyle`. We can therefore trust `styleOptions` is complete
-    // and remove the redundant, conflicting defaults that were previously here.
-    const options = styleOptions;
-    const finalFontSize = fontSize || options.fontSize || 24;
+    
+    const options = { ...defaultLabelStyle, ...(labelStyles[category] || {}) };
+    const finalFontSize = fontSize;
     
     // Create an offscreen canvas to render the text
     const canvas = document.createElement('canvas');
@@ -873,17 +871,23 @@ function addMapLabels(map) {
             source: labelSource,
             title: category + ' Labels',
             visible: true,
+            // Performance: Hide less critical labels when zoomed out to reduce rendering load.
+            // Resolutions correspond to zoom levels. 32 is zoom level 2.
+            // Hiding these layers when resolution is 32 or higher.
+            maxResolution: (category === 'interests' || category === 'caves') ? 32 : undefined,
+            // Performance: To avoid re-rendering labels that are not in view,
+            // we can set a buffer. This tells the layer not to render features
+            // that are outside the viewport. A value of 100 pixels is a good starting point.
+            renderBuffer: 100,
             // All label categories are now dynamic. They are always visible, and their
             // font size changes with zoom level, so we use a style function.
             style: function(feature, resolution) {
                 const text = feature.get('name');
-                const baseFontSize = feature.get('baseFontSize');
                 const category = feature.get('category');
+                const baseFontSize = feature.get('baseFontSize');
 
                 // This should not happen, but as a safeguard
                 if (!baseFontSize) return null;
-
-                const styleOptions = { ...defaultLabelStyle, ...(labelStyles[category] || {}) };
 
                 // This formula creates a smooth scaling effect for fonts across all zoom levels.
                 // It avoids the "jumpiness" caused by having a hard cutoff for different resolutions.
@@ -891,14 +895,10 @@ function addMapLabels(map) {
                 // At resolution=2 (high zoom), scaleFactor is 1.
                 // At resolution=4, scaleFactor is 0.75.
                 // At resolution=8, scaleFactor is 0.56.
-                const exponent = Math.log2(resolution / 2);
-                const scaleFactor = Math.pow(0.75, exponent);
+                const scaleFactor = Math.pow(2 / resolution, 0.415);
+                const newFontSize = Math.max(8, Math.round(baseFontSize * scaleFactor)); // Ensure font size doesn't get too small
 
-                const newFontSize = Math.round(baseFontSize * scaleFactor);
-
-                styleOptions.fontSize = newFontSize;
-
-                return createLabelImageStyle(text, styleOptions.fontSize, styleOptions);
+                return createLabelImageStyle(text, category, newFontSize);
             }
         };
 
