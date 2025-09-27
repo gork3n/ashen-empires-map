@@ -855,6 +855,19 @@ const mapLabels = {
       },
     },
     {
+      name: "Monk Island",
+      fontSize: 20,
+      region: "Krythan", // I think this is correct because of proximity to Krythan Island, but it could be Western Isles. Question Mark
+      details: {
+        title: "Monk Island",
+        coordinates: { x: 559, y: 655 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Monk Island is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
       name: "Lopal",
       fontSize: 30,
       region: "Western Isles",
@@ -2864,6 +2877,7 @@ const mapLabels = {
     },
     {
       name: "Lake Kallon",
+      alias: "Arda Pond",
       fontSize: 15,
       region: "Highlands",
       details: {
