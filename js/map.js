@@ -326,7 +326,7 @@ function initializeMap() {
         view: new ol.View({
             center: initialCenterOlCoords, // Use your calculated center
             resolution: 4, // Set a reasonable starting resolution from your new array
-            minResolution: 1, // Corresponds to the most zoomed-in level
+            minResolution: 0.1, // Corresponds to the most zoomed-in level
             maxResolution: 128,
             constrainOnlyCenter: true,  // Constrain just the center, not the whole view
             showFullExtent: true,
