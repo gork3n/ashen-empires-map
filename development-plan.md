@@ -53,7 +53,7 @@ This section is migrated from the main README to consolidate all planning detail
         }
         ```
 -   ✅ **Granular Marker Filtering** (Complete)
-    -   ✅ Differentiated marker sub-types (e.g., `shop_weapon`, `shop_armor`, `portal_ancient`, `portal_lsp`).
+    -   🚧 Differentiated marker sub-types (e.g., `shop_weapon`, `shop_armor`, `portal_ancient`, `portal_lsp`).
     -   ✅ Updated the filter menu to allow toggling these more specific sub-types, complete with unique icons and styling.
 -   ⬜ **Search Functionality**
     -   ⬜ Implement a search bar to find locations, NPCs, and markers.
@@ -83,7 +83,7 @@ This section is migrated from the main README to consolidate all planning detail
 -   ⬜ **Upgrade OpenLayers Version**: Plan to migrate from the legacy OpenLayers v7.0.0 to a more recent version to leverage the latest API improvements, performance enhancements, and features.
 -   ⬜ **Higher Resolution Map Tiles**: Introduce an 8x resolution map layer to provide even greater detail when fully zoomed in. This will be particularly useful for detailed sub-maps of dungeons and cities.
 -   ⬜ **Coordinate System Recalibration**: A long-term goal is to perform a full recalibration of the map's coordinate system. This would involve a more automated process to correct the minor pixel shifts that occurred during the manual stitching of map screenshots, resulting in near-perfect alignment with in-game coordinates across the entire world.
--   ✅ **Coordinate System Recalibration**: The map has been rebuilt with a new, highly accurate set of tiles, correcting the minor pixel shifts from the original version. This has resulted in near-perfect alignment with in-game coordinates across the entire world.
+    -   ✅ **Map Tile Recalibration**: The map has been rebuilt with a new, highly accurate set of tiles, correcting the minor pixel shifts from the original version. This has resulted in near-perfect alignment with in-game coordinates across the entire world.
 
 ---
 
