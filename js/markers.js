@@ -2981,14 +2981,14 @@ const mapMarkers = {
     // City: Varg Shops
     {
       type: "shop_magic",
-      tooltip: "Magic Shop",
+      tooltip: "Aedelwald's Magic Shop",
       region: "Krythan",
       place: "Varg",
       details: {
-        title: "Magic Shop",
+        title: "Aedelwald's Magic Shop",
         coordinates: { x: 778, y: 1191 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Magic Shop is coming soon.",
+        image: "images/npcs/Aedelwald_Magic_Shop.png",
+        lore: "More information about Aedelwald's Magic Shop is coming soon.",
         npcs: [],
         links: [],
       },

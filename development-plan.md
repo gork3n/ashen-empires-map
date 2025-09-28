@@ -36,24 +36,25 @@ This section is migrated from the main README to consolidate all planning detail
         -   This structure would make it programmatically possible to implement features like "show all markers in Valinor".
 
         Example marker object:
+        
         ```javascript
         {
-            coords: { x: 777, y: 653 },
             type: 'shop_weapon',
             tooltip: 'O\'riles Weapon Shop',
             region: 'Krythan',
             place: 'Lotor\'s Summer Palace',
-            details: { // This data currently lives in detail-maps.js
+            details: {
                 title: 'O\'riles Weapon Shop',
+                coordinates: { x: 777, y: 653 },
                 image: 'images/shops/oriles.png',
                 lore: 'Sells a variety of fine weapons.',
                 links: [...]
             }
         }
         ```
--   ✅ **Granular Marker Filtering**
-    -   ✅ Differentiate marker sub-types (e.g., `shop_weapon`, `shop_armor`, `portal_ancient`, `portal_lsp`).
-    -   ✅ Update the filter menu to allow toggling these more specific sub-types, complete with unique icons and styling.
+-   ✅ **Granular Marker Filtering** (Complete)
+    -   ✅ Differentiated marker sub-types (e.g., `shop_weapon`, `shop_armor`, `portal_ancient`, `portal_lsp`).
+    -   ✅ Updated the filter menu to allow toggling these more specific sub-types, complete with unique icons and styling.
 -   ⬜ **Search Functionality**
     -   ⬜ Implement a search bar to find locations, NPCs, and markers.
     -   ⬜ Feature an auto-complete list as the user types.
