@@ -239,7 +239,7 @@ const mapLabels = {
       region: "Silvest Valley",
       details: {
         title: "Silvest",
-        coordinates: { x: 1084, y: 1353 },
+        coordinates: { x: 1084, y: 1343 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Silvest is coming soon.",
         npcs: [],
@@ -909,7 +909,7 @@ const mapLabels = {
     
     {
       name: "Deserted Island",
-      fontSize: 14,
+      fontSize: 20,
       region: "Special",
       details: {
         title: "Deserted Island",
@@ -1441,7 +1441,7 @@ const mapLabels = {
     },
     {
       name: "Crypt of Kargoth",
-      fontSize: 14,
+      fontSize: 20,
       region: "Krythan",
       details: {
         title: "Crypt of Kargoth",
@@ -1454,7 +1454,7 @@ const mapLabels = {
     },
     {
       name: "Ruins of Tal S'kar",
-      fontSize: 14,
+      fontSize: 20,
       region: "Krythan",
       details: {
         title: "Ruins of Tal S'kar",
@@ -1532,7 +1532,7 @@ const mapLabels = {
     },
     {
       name: "Tallem'im house",
-      fontSize: 14,
+      fontSize: 20,
       region: "Krythan",
       details: {
         title: "Tallem'im house",
@@ -1545,7 +1545,7 @@ const mapLabels = {
     },
     {
       name: "Wasp Hive",
-      fontSize: 14,
+      fontSize: 20,
       region: "Krythan",
       details: {
         title: "Wasp Hive",
@@ -2590,7 +2590,7 @@ const mapLabels = {
     },
     {
       name: "Chokecherry Pond",
-      fontSize: 12,
+      fontSize: 20,
       region: "Krythan",
       details: {
         title: "Chokecherry Pond",
@@ -2605,7 +2605,7 @@ const mapLabels = {
     // Bodies of Water - Region: Krythan
     {
       name: "Queen's Lake",
-      fontSize: 18,
+      fontSize: 25,
       region: "Krythan",
       details: {
         title: "Queen's Lake",
@@ -2618,7 +2618,7 @@ const mapLabels = {
     },
     {
       name: "Crow Lake",
-      fontSize: 14,
+      fontSize: 20,
       region: "Krythan",
       details: {
         title: "Crow Lake",

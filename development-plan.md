@@ -39,16 +39,16 @@ This section is migrated from the main README to consolidate all planning detail
         
         ```javascript
         {
-            type: 'shop_weapon',
-            tooltip: 'O\'riles Weapon Shop',
-            region: 'Krythan',
-            place: 'Lotor\'s Summer Palace',
-            details: {
-                title: 'O\'riles Weapon Shop',
-                coordinates: { x: 777, y: 653 },
-                image: 'images/shops/oriles.png',
-                lore: 'Sells a variety of fine weapons.',
-                links: [...]
+            type: 'shop_weapon', // Displays a custom icon
+            tooltip: 'O\'riles Weapon Shop', // Displays when mouse hovered over marker (On Desktop)
+            region: 'Krythan', // Region of marker
+            place: 'Lotor\'s Summer Palace', // Specific location of marker
+            details: { // Information for flyout panel
+                title: 'O\'riles Weapon Shop', // Separate Title for flyout if more information needed
+                coordinates: { x: 777, y: 653 }, // Coordinates for marker render location and in-game coordinates (in-game coordinates are close enough.)
+                image: 'images/shops/oriles.png', // Image of npc or location in-game
+                lore: 'Sells a variety of fine weapons.', // Used for lore or information about marker
+                links: [...] // Links that have more information about marker if they exist.
             }
         }
         ```

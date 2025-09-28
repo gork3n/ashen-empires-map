@@ -1178,14 +1178,14 @@ const mapMarkers = {
     },
     {
       type: "dock",
-      tooltip: "Scalo's Den Dock",
+      tooltip: "Karzak Cove Dock",
       region: "Krythan",
       place: "Krythan Fields",
       details: {
-        title: "Scalo's Den Dock",
-        coordinates: { x: 841, y: 1328 },
+        title: "Karzak Cove Dock",
+        coordinates: { x: 1407, y: 1096 },
         image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Scalo's Den Dock is coming soon.",
+        lore: "More information about Karzak Cove Dock is coming soon.",
         npcs: [],
         links: [],
       },
@@ -1197,7 +1197,7 @@ const mapMarkers = {
       place: "Krythan Fields",
       details: {
         title: "Karzak Cove Dock",
-        coordinates: { x: 1407, y: 1096 },
+        coordinates: { x: 1371, y: 1114 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Karzak Cove Dock is coming soon.",
         npcs: [],
@@ -2834,6 +2834,62 @@ const mapMarkers = {
     // Island: Krythan Island Shops
     // Region: Silvest Valley Shops
     // City: Cliffside Shops
+    {
+      type: "shop_pub",
+      tooltip: "Folger's Pub",
+      region: "Silvest Valley",
+      place: "Silvest",
+      details: {
+        title: "Folger's Pub",
+        coordinates: { x: 1064, y: 1169 },
+        image: "images/npcs/Folger_Pub.png",
+        lore: "More information about Folger's Pub is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_provisioner",
+      tooltip: "Stedwyck's Provisioner Shop",
+      region: "Silvest Valley",
+      place: "Silvest",
+      details: {
+        title: "Stedwyck's Provisioner Shop",
+        coordinates: { x: 1064, y: 1155 },
+        image: "images/npcs/Stedwyck_Provisioner_Shop.png",
+        lore: "More information about Stedwyck's Provisioner Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_leather",
+      tooltip: "Glover's Leather Shop",
+      region: "Silvest Valley",
+      place: "Silvest",
+      details: {
+        title: "Glover's Leather Shop",
+        coordinates: { x: 1083, y: 1172 },
+        image: "images/npcs/Glover_Leather_Shop.png",
+        lore: "More information about Glover's Leather Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_carpentry",
+      tooltip: "Peake's Carpentry Shop",
+      region: "Silvest Valley",
+      place: "Silvest",
+      details: {
+        title: "Peake's Carpentry Shop",
+        coordinates: { x: 1074, y: 1179 },
+        image: "images/npcs/Peake_Carpentry_Shop.png",
+        lore: "More information about Peake's Carpentry Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // City: Silvest Shops
     {
@@ -2965,6 +3021,62 @@ const mapMarkers = {
     },
 
     // City: Fort Eastwatch Shops
+    {
+      type: "shop_weapon",
+      tooltip: "Sgt. Stykler's Weapon Shop",
+      region: "Silvest Valley",
+      place: "Fort Eastwatch",
+      details: {
+        title: "Sgt. Stykler's Weapon Shop",
+        coordinates: { x: 1355, y: 1298 },
+        image: "images/npcs/Sgt_Stykler_Weapon_Shop.png",
+        lore: "More information about Sgt. Stykler's Weapon Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_armory",
+      tooltip: "Sgt. Brayce's Armory Shop",
+      region: "Silvest Valley",
+      place: "Fort Eastwatch",
+      details: {
+        title: "Sgt. Brayce's Armory Shop",
+        coordinates: { x: 1355, y: 1307 },
+        image: "images/npcs/Sgt_Stykler_Weapon_Shop.png",
+        lore: "More information about Sgt. Brayce's Armory Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_armory",
+      tooltip: "Keppler's Provisioner Shop",
+      region: "Silvest Valley",
+      place: "Fort Eastwatch",
+      details: {
+        title: "Keppler's Provisioner Shop",
+        coordinates: { x: 1336, y: 1297 },
+        image: "images/npcs/Keppler_Provisioner_Shop.png",
+        lore: "More information about Keppler's Provisioner Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_pub",
+      tooltip: "Timison's Pub",
+      region: "Silvest Valley",
+      place: "Fort Eastwatch",
+      details: {
+        title: "Timison's Pub",
+        coordinates: { x: 1340, y: 1308 },
+        image: "images/npcs/Timison_Pub.png",
+        lore: "More information about Timison's Pub is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // Region: Krythan Shops
     // City: Jeel Shops
@@ -2986,9 +3098,37 @@ const mapMarkers = {
       place: "Varg",
       details: {
         title: "Aedelwald's Magic Shop",
-        coordinates: { x: 778, y: 1191 },
+        coordinates: { x: 778, y: 1193 },
         image: "images/npcs/Aedelwald_Magic_Shop.png",
         lore: "More information about Aedelwald's Magic Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_provisioner",
+      tooltip: "Trondhere's Provisioner Shop",
+      region: "Krythan",
+      place: "Varg",
+      details: {
+        title: "Aedelwald's Magic Shop",
+        coordinates: { x: 773, y: 1193 },
+        image: "images/npcs/Trondhere_Provisioner_Shop.png",
+        lore: "More information about Trondhere's Provisioner Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_pub",
+      tooltip: "Egbert's Pub",
+      region: "Krythan",
+      place: "Varg",
+      details: {
+        title: "Egbert's Pub",
+        coordinates: { x: 772, y: 1172 },
+        image: "images/npcs/Egbert_Pub.png",
+        lore: "More information about Egbert's Pub is coming soon.",
         npcs: [],
         links: [],
       },
@@ -3808,12 +3948,13 @@ const mapMarkers = {
     },
 
     // Krythan Island Spawns
-    // Silvest Valley Spawns
+    // Region: Silvest Valley Spawns
+    // City: Silvest Spawns
     {
       type: "spawn_good",
       tooltip: "Silvest Spawn Gate",
-      region: "Valinor Island",
-      place: "Valinor",
+      region: "Silvest Valley",
+      place: "Silvest",
       details: {
         title: "Spawn Gate",
         coordinates: { x: 1126, y: 1337 },
@@ -3823,8 +3964,47 @@ const mapMarkers = {
         links: [],
       },
     },
+    // City: Varg Spawns
+    {
+      type: "spawn_good",
+      tooltip: "Varg Spawn Gate",
+      region: "Silvest Valley",
+      place: "Varg",
+      details: {
+        title: "Spawn Gate",
+        coordinates: { x: 760, y: 1174 },
+        image: "images/spawns/Varg_Spawn_Gate.png",
+        lore: "More information about Varg Spawn Gate is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    // City: Cliffside Spawns
+    // No good spawns in Cliffside as of now
 
-    // Krythan Region Spawns
+    // City: Fort Eastwatch Spawns
+    {
+      type: "spawn_good",
+      tooltip: "Fort Eastwatch Spawn Gate",
+      region: "Silvest Valley",
+      place: "Fort Eastwatch",
+      details: {
+        title: "Spawn Gate",
+        coordinates: { x: 1318, y: 1289 },
+        image: "images/spawns/Fort_Eastwatch_Spawn_Gate.png",
+        lore: "More information about Fort Eastwatch Spawn Gate is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+
+    // Region: Krythan Spawns
+    
+
+    // Region: Krythan Spawns
+
+    // Region: Western Isles Spawns
 
     // Scarab Island Spawns
     {
@@ -3842,7 +4022,7 @@ const mapMarkers = {
       },
     },
 
-    // Sands of Creation Spawns
+    // Region: Sands of Creation Spawns
     // Ruhura Side Spawns
     {
       type: "spawn_good",
@@ -3960,13 +4140,13 @@ const mapMarkers = {
     {
       type: "bank",
       tooltip: "Bank",
-      region: "Krythan",
+      region: "Silvest Valley",
       place: "Fort Eastwatch",
       details: {
         title: "Bank",
-        coordinates: { x: 1351, y: 1287 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Bank is coming soon.",
+        coordinates: { x: 1348, y: 1301 },
+        image: "images/npcs/Fort_Eastwatch_Bank.png",
+        lore: "More information about Fort Eastwatch Bank is coming soon.",
         npcs: [],
         links: [],
       },
@@ -3975,12 +4155,58 @@ const mapMarkers = {
     {
       type: "bank",
       tooltip: "Bank",
-      region: "Krythan",
+      region: "Silvest Valley",
       place: "Silvest",
       details: {
         title: "Bank",
         coordinates: { x: 1096, y: 1373 },
         image: "images/npcs/Silvest_Bank.png",
+        lore: "More information about Silvest Bank is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    // City: Cliffside Banks
+    {
+      type: "bank",
+      tooltip: "Bank",
+      region: "Silvest Valley",
+      place: "Cliffside",
+      details: {
+        title: "Bank",
+        coordinates: { x: 1057, y: 1153 },
+        image: "images/npcs/Varg_Bank.png",
+        lore: "More information about Cliffside Bank is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // Region: Krythan Banks
+    // City: Varg Banks
+    {
+      type: "bank",
+      tooltip: "Bank",
+      region: "Krythan",
+      place: "Varg",
+      details: {
+        title: "Bank",
+        coordinates: { x: 802, y: 1175 },
+        image: "images/npcs/Varg_Bank.png",
+        lore: "More information about Varg Bank is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "bank",
+      tooltip: "Bank",
+      region: "Krythan",
+      place: "Cliffside",
+      details: {
+        title: "Bank",
+        coordinates: { x: 1057, y: 1153 },
+        image: "images/npcs/Varg_Bank.png",
         lore: "More information about Bank is coming soon.",
         npcs: [],
         links: [],
@@ -4216,8 +4442,22 @@ const mapMarkers = {
     // Region: Silvest Valley Undergrounds
     {
       type: "underground_snake",
+      tooltip: "Cultist Lair's Underground",
+      region: "Silvest Valley",
+      place: "Cultist Lair's Underground",
+      details: {
+        title: "Snake Pit",
+        coordinates: { x: 965, y: 1346 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Cultist Lair's Underground is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "underground_snake",
       tooltip: "Snake Pit",
-      region: "Krythan",
+      region: "Silvest Valley",
       place: "Silvest Valley",
       details: {
         title: "Snake Pit",
@@ -4228,25 +4468,12 @@ const mapMarkers = {
         links: [],
       },
     },
-    {
-      type: "underground_crypt",
-      tooltip: "Krythan Crypt",
-      region: "Krythan",
-      place: "Silvest Valley",
-      details: {
-        title: "Krythan Crypt",
-        coordinates: { x: 905, y: 1029 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Krythan Crypt is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
+    
     {
       type: "underground_mine",
       tooltip: "Cliffside Mines",
-      region: "Krythan",
-      place: "Silvest Valley",
+      region: "Silvest Valley",
+      place: "Cliffside Pass",
       details: {
         title: "Cliffside Mines",
         coordinates: { x: 1096, y: 1182 },
@@ -4270,10 +4497,88 @@ const mapMarkers = {
         links: [],
       },
     },
+    {
+      type: "underground_cave",
+      tooltip: "Galen's Hideout",
+      region: "Silvest Valley",
+      place: "Galen's Hideout",
+      details: {
+        title: "Provisioner's Basement",
+        coordinates: { x: 1303, y: 1111 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Galen's Hideout is coming soon.",
+        npcs: [
+          {
+          name: "Galen"
+          },
+        ],
+        links: [],
+      },
+    },
+    {
+      type: "underground_cave",
+      tooltip: "Sozal's Cave",
+      region: "Silvest Valley",
+      place: "Sozal's Cave",
+      details: {
+        title: "Provisioner's Basement",
+        coordinates: { x: 1125, y: 1154 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Sozal's Cave is coming soon.",
+        npcs: [
+          {
+          name: "Sozal (At the entrance)"
+          },
+        ],
+        links: [],
+      },
+    },
+    {
+      type: "underground_cave",
+      tooltip: "Kozak Cove's Underground",
+      region: "Silvest Valley",
+      place: "Kozak Cove",
+      details: {
+        title: "Kozak Cove's Underground",
+        coordinates: { x: 1377, y: 1105 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Kozak Cove's Underground is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "underground_cave",
+      tooltip: "Sozal's Cave",
+      region: "Silvest Valley",
+      place: "Near Silvest Valley North Coast",
+      details: {
+        title: "Sozal's Cave",
+        coordinates: { x: 1161, y: 1175 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Sozal's Cave is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
 
   
 
     // Region: Krythan Undergrounds
+    {
+      type: "underground_snake",
+      tooltip: "Krythan Crypt",
+      region: "Krythan",
+      place: "Krythan Cemetary",
+      details: {
+        title: "Krythan Crypt",
+        coordinates: { x: 905, y: 1029 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Krythan Crypt is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
     {
       type: "underground_stairs",
       tooltip: "Gideon's Trapdoor",
@@ -4410,6 +4715,34 @@ const mapMarkers = {
         coordinates: { x: 361, y: 1463 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Talazarian Dungeon is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "underground_stairs",
+      tooltip: "Krythan Swamp Backdoor",
+      region: "Krythan",
+      place: "South West Krythan",
+      details: {
+        title: "Krythan Swamp Backdoor",
+        coordinates: { x: 145, y: 1614 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Ladder to Krythan Swamp Backdoor is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "underground_stairs",
+      tooltip: "Krythan Swamp Backdoor",
+      region: "Krythan",
+      place: "Krythan Swamp",
+      details: {
+        title: "Krythan Swamp Backdoor",
+        coordinates: { x: 119, y: 1640 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Ladder to Krythan Swamp Backdoor is coming soon.",
         npcs: [],
         links: [],
       },
