@@ -804,7 +804,7 @@ const mapLabels = {
     },
     {
       name: "Real Estate Island",
-      fontSize: 20,
+      fontSize: 30,
       region: "Special",
       details: {
         title: "Real Estate Island",
@@ -856,7 +856,7 @@ const mapLabels = {
     },
     {
       name: "Monk Island",
-      fontSize: 20,
+      fontSize: 30,
       region: "Krythan", // I think this is correct because of proximity to Krythan Island, but it could be Western Isles. Question Mark
       details: {
         title: "Monk Island",
@@ -1078,7 +1078,7 @@ const mapLabels = {
     },
     {
       name: "Unnamed Island", // Not sure on the name Question Mark
-      fontSize: 20,
+      fontSize: 30,
       region: "Tundria",
       details: {
         title: "Unnamed Island",
@@ -1091,7 +1091,7 @@ const mapLabels = {
     },
     {
       name: "Crab Island", // Not sure on the name Question Mark
-      fontSize: 20,
+      fontSize: 30,
       region: "Breakwater",
       details: {
         title: "Crab Island",
@@ -1113,7 +1113,7 @@ const mapLabels = {
     //  
     {
       name: "Cultist Lair",
-      fontSize: 15,
+      fontSize: 20,
       region: "Krythan",
       details: {
         title: "Cultist Lair",
@@ -1128,7 +1128,7 @@ const mapLabels = {
     // Valinor Island Dungeons - Region: Valinor
     {
       name: "Bonesnarl's Lair",
-      fontSize: 16,
+      fontSize: 20,
       region: "Valinor",
       details: {
         title: "Bonesnarl's Lair",
@@ -1150,7 +1150,7 @@ const mapLabels = {
     // Region: Krythan
     {
       name: "Minion Cave",
-      fontSize: 16,
+      fontSize: 20,
       region: "Krythan",
       details: {
         title: "Minion Cave",
@@ -1163,7 +1163,7 @@ const mapLabels = {
     },
     {
       name: "Minion Cave",
-      fontSize: 16,
+      fontSize: 20,
       region: "Krythan",
       details: {
         title: "Minion Cave",
@@ -1176,7 +1176,7 @@ const mapLabels = {
     },
     {
       name: "Flataga Mines",
-      fontSize: 15,
+      fontSize: 20,
       region: "Krythan",
       details: {
         title: "Flataga Mines",
@@ -1190,7 +1190,7 @@ const mapLabels = {
     // Region: Silvest Valley
     {
       name: "Silvest Mines",
-      fontSize: 15,
+      fontSize: 20,
       region: "Silvest Valley",
       details: {
         title: "Silvest Mines",
@@ -1203,7 +1203,7 @@ const mapLabels = {
     },
     {
       name: "Dalvon Mines",
-      fontSize: 15,
+      fontSize: 20,
       region: "Silvest Valley",
       details: {
         title: "Dalvon Mines",
@@ -1216,7 +1216,7 @@ const mapLabels = {
     },
     {
       name: "Orc Cave",
-      fontSize: 15,
+      fontSize: 20,
       region: "Silvest Valley",
       details: {
         title: "Orc Cave",
@@ -1235,7 +1235,7 @@ const mapLabels = {
     // Region: Battle Plains
     {
       name: "Fungoid Cave",
-      fontSize: 16,
+      fontSize: 20,
       region: "Battle Plains",
       details: {
         title: "Fungoid Cave",
@@ -1250,7 +1250,7 @@ const mapLabels = {
     // Region: Black Swamp
     {
       name: "Ivogur's Mine",
-      fontSize: 16,
+      fontSize: 20,
       region: "Black Swamp",
       details: {
         title: "Ivogur's Mine",
@@ -1265,7 +1265,7 @@ const mapLabels = {
     // Region: Highlands
     {
       name: "Zanock's Mine (East) ",
-      fontSize: 16,
+      fontSize: 20,
       region: "Highlands",
       details: {
         title: "Zanock's Mine (East) ",
@@ -1278,7 +1278,7 @@ const mapLabels = {
     },
     {
       name: "Termigon Mine",
-      fontSize: 16,
+      fontSize: 20,
       region: "Highlands",
       details: {
         title: "Termigon Mine",
@@ -1295,7 +1295,7 @@ const mapLabels = {
     // Heartwood Coast Caves
     {
       name: "Zanock's Mine (West)",
-      fontSize: 16,
+      fontSize: 20,
       region: "Heartwood Coast",
       details: {
         title: "Zanock's Mine (West)",
@@ -1322,7 +1322,7 @@ const mapLabels = {
     // Place of Interest - Region: Valinor
     {
       name: "Duncan's Cottage",
-      fontSize: 16,
+      fontSize: 20,
       region: "Valinor",
       details: {
         title: "Duncan's Cottage",
@@ -1335,7 +1335,7 @@ const mapLabels = {
     },
     {
       name: "Ruined Temple",
-      fontSize: 16,
+      fontSize: 20,
       region: "Valinor",
       details: {
         title: "Ruined Temple",
@@ -1348,7 +1348,7 @@ const mapLabels = {
     },
     {
       name: "Lanore",
-      fontSize: 16,
+      fontSize: 20,
       region: "Valinor",
       details: {
         title: "Lanore",
@@ -1361,7 +1361,7 @@ const mapLabels = {
     },
     {
       name: "Ecclain's Caravan",
-      fontSize: 16,
+      fontSize: 20,
       region: "Valinor",
       details: {
         title: "Ecclain's Caravan",
@@ -1374,7 +1374,7 @@ const mapLabels = {
     },
     {
       name: "Valinor Ant Hill",
-      fontSize: 16,
+      fontSize: 20,
       region: "Valinor",
       details: {
         title: "Valinor Ant Hill",
@@ -1387,7 +1387,7 @@ const mapLabels = {
     },
     {
       name: "Hermit's Hut",
-      fontSize: 16,
+      fontSize: 20,
       region: "Valinor",
       details: {
         title: "Hermit's Hut",
@@ -1402,7 +1402,7 @@ const mapLabels = {
     // Places of Interest - Region: Krythan
     {
       name: "Gideon Cottage",
-      fontSize: 16,
+      fontSize: 20,
       region: "Krythan",
       details: {
         title: "Gideon Cottage",
@@ -1415,7 +1415,7 @@ const mapLabels = {
     },
     {
       name: "Mirthik's Dwelling",
-      fontSize: 16,
+      fontSize: 20,
       region: "Krythan",
       details: {
         title: "Mirthik's Dwelling",
@@ -1428,7 +1428,7 @@ const mapLabels = {
     },
     {
       name: "Jeel Ruins",
-      fontSize: 16,
+      fontSize: 20,
       region: "Krythan",
       details: {
         title: "Jeel Ruins",
@@ -1467,7 +1467,7 @@ const mapLabels = {
     },
     {
       name: "Holendar's Mansion",
-      fontSize: 15,
+      fontSize: 20,
       region: "Krythan",
       details: {
         title: "Holendar's Mansion",
@@ -1480,7 +1480,7 @@ const mapLabels = {
     },
     {
       name: "Krythan Cemetary",
-      fontSize: 15,
+      fontSize: 20,
       region: "Krythan",
       details: {
         title: "Krythan Cemetary",
@@ -1493,7 +1493,7 @@ const mapLabels = {
     },
     {
       name: "Scalo's Den",
-      fontSize: 15,
+      fontSize: 20,
       region: "Krythan",
       details: {
         title: "Scalo's Den",
@@ -1519,7 +1519,7 @@ const mapLabels = {
     },
     {
       name: "Karzak Cove",
-      fontSize: 15,
+      fontSize: 20,
       region: "Krythan",
       details: {
         title: "Karzak Cove",
@@ -1574,7 +1574,7 @@ const mapLabels = {
     
     {
       name: "Minion's of Talazar's Stronghold",
-      fontSize: 16,
+      fontSize: 20,
       region: "Hell",
       details: {
         title: "Minion's of Talazar's Stronghold",
@@ -1603,7 +1603,7 @@ const mapLabels = {
     },
     {
       name: "Crypt of Ryonkah",
-      fontSize: 16,
+      fontSize: 20,
       region: "Darkwoods",
       details: {
         title: "Crypt of Ryonkah",
@@ -1616,7 +1616,7 @@ const mapLabels = {
     },
     {
       name: "Lord Vezryl's Estate",
-      fontSize: 16,
+      fontSize: 20,
       region: "Darkwoods",
       details: {
         title: "Lord Vezryl's Estate",
@@ -1629,7 +1629,7 @@ const mapLabels = {
     },
     {
       name: "Burslord's Hunting Lodge",
-      fontSize: 16,
+      fontSize: 20,
       region: "Darkwoods",
       details: {
         title: "Burslord's Hunting Lodge",
@@ -1681,7 +1681,7 @@ const mapLabels = {
     },
     {
       name: "Astari Ruin Shelter",
-      fontSize: 16,
+      fontSize: 20,
       region: "Darkwoods",
       details: {
         title: "Astari Ruin Shelter",
@@ -1694,7 +1694,7 @@ const mapLabels = {
     },
     {
       name: "Tuvok",
-      fontSize: 16,
+      fontSize: 20,
       region: "Darkwoods", // I'm not sure if this is the Name of the place or the name of the NPC that lives there. Question Mark
       details: {
         title: "Tuvok",
@@ -1707,7 +1707,7 @@ const mapLabels = {
     },
     {
       name: "Warg Pen",
-      fontSize: 16,
+      fontSize: 20,
       region: "Darkwoods",
       details: {
         title: "Warg Pen",
@@ -1720,7 +1720,7 @@ const mapLabels = {
     },
     {
       name: "Gadros Ruins",
-      fontSize: 16,
+      fontSize: 20,
       region: "Darkwoods",
       details: {
         title: "Gadros Ruins",
@@ -1733,7 +1733,7 @@ const mapLabels = {
     },
     {
       name: "Shadow Forest", // Seemed like it needed a name, might have a different name Question Mark
-      fontSize: 16,
+      fontSize: 20,
       region: "Darkwoods", 
       details: {
         title: "Shadow Forest",
@@ -1746,7 +1746,7 @@ const mapLabels = {
     },
     {
       name: "Termigon Mound",
-      fontSize: 16,
+      fontSize: 20,
       region: "Darkwoods", // Changed the name from Termigon Hive to Termigon Mound, seems more fitting. Question Mark
       details: {
         title: "Termigon Mound",
@@ -1761,7 +1761,7 @@ const mapLabels = {
     // Battle Plains Places of Interest
     {
       name: "Wasp Hive",
-      fontSize: 16,
+      fontSize: 20,
       region: "Battle Plains",
       details: {
         title: "Wasp Hive",
@@ -1776,7 +1776,7 @@ const mapLabels = {
     // Black Swamp Places of Interest
     {
       name: "Drakkan",
-      fontSize: 16,
+      fontSize: 20,
       region: "Black Swamp",
       details: {
         title: "Drakkan",
@@ -1789,7 +1789,7 @@ const mapLabels = {
     },
     {
       name: "Kobold Outpost",
-      fontSize: 16,
+      fontSize: 20,
       region: "Black Swamp",
       details: {
         title: "Kobold Outpost",
@@ -1802,7 +1802,7 @@ const mapLabels = {
     },
     {
       name: "Kobold Village",
-      fontSize: 16,
+      fontSize: 20,
       region: "Black Swamp",
       details: {
         title: "Kobold Village",
@@ -1815,7 +1815,7 @@ const mapLabels = {
     },
     {
       name: "Temple of Agon",
-      fontSize: 16,
+      fontSize: 20,
       region: "Black Swamp",
       details: {
         title: "Temple of Agon",
@@ -1828,7 +1828,7 @@ const mapLabels = {
     },
     {
       name: "Old Ale Warehouse\n(Closed)",
-      fontSize: 16,
+      fontSize: 20,
       region: "Black Swamp",
       details: {
         title: "Old Ale Warehouse\n(Closed)",
@@ -1841,7 +1841,7 @@ const mapLabels = {
     },
     {
       name: "Valekar's Fortress",
-      fontSize: 16,
+      fontSize: 20,
       region: "Black Swamp",
       details: {
         title: "Valekar's Fortress",
@@ -1856,7 +1856,7 @@ const mapLabels = {
     // Highlands Places of Interest
     {
       name: "Emporium Abbey",
-      fontSize: 16,
+      fontSize: 20,
       region: "Highlands",
       details: {
         title: "Emporium Abbey",
@@ -1869,7 +1869,7 @@ const mapLabels = {
     },
     {
       name: "Ancient Site of Minos",
-      fontSize: 16,
+      fontSize: 20,
       region: "Highlands",
       details: {
         title: "Ancient Site of Minos",
@@ -1882,7 +1882,7 @@ const mapLabels = {
     },
     {
       name: "Minotaur Maze",
-      fontSize: 16,
+      fontSize: 20,
       region: "Highlands",
       details: {
         title: "Minotaur Maze",
@@ -1895,7 +1895,7 @@ const mapLabels = {
     },
     {
       name: "Thief Fort",
-      fontSize: 16,
+      fontSize: 20,
       region: "Highlands",
       details: {
         title: "Thief Fort",
@@ -1908,7 +1908,7 @@ const mapLabels = {
     },
     {
       name: "Supply Shelter",
-      fontSize: 16,
+      fontSize: 20,
       region: "Highlands",
       details: {
         title: "Supply Shelter",
@@ -1921,7 +1921,7 @@ const mapLabels = {
     },
     {
       name: "Darushk Mine",
-      fontSize: 16,
+      fontSize: 20,
       region: "Highlands",
       details: {
         title: "Darushk Mine",
@@ -1934,7 +1934,7 @@ const mapLabels = {
     },
     {
       name: "Astari Cave",
-      fontSize: 16,
+      fontSize: 20,
       region: "Highlands",
       details: {
         title: "Astari Cave",
@@ -1947,7 +1947,7 @@ const mapLabels = {
     },
     {
       name: "Arllandah's Lair",
-      fontSize: 16,
+      fontSize: 20,
       region: "Highlands",
       details: {
         title: "Arllandah's Lair",
@@ -1960,7 +1960,7 @@ const mapLabels = {
     },
     {
       name: "Third Book Temple",
-      fontSize: 16,
+      fontSize: 20,
       region: "Highlands",
       details: {
         title: "Third Book Temple",
@@ -1973,7 +1973,7 @@ const mapLabels = {
     },
     {
       name: "Horibus's Camp",
-      fontSize: 16,
+      fontSize: 20,
       region: "Highlands",
       details: {
         title: "Horibus's Camp",
@@ -1986,7 +1986,7 @@ const mapLabels = {
     },
     {
       name: "Zanock's Mine (East) ",
-      fontSize: 16,
+      fontSize: 20,
       region: "Highlands",
       details: {
         title: "Zanock's Mine (East) ",
@@ -1999,7 +1999,7 @@ const mapLabels = {
     },
     {
       name: "Cave\n(NO ENTRY)",
-      fontSize: 15,
+      fontSize: 20,
       region: "Highlands",
       details: {
         title: "Cave\n(NO ENTRY)",
@@ -2012,7 +2012,7 @@ const mapLabels = {
     },
     {
       name: "Ethera Mining Company",
-      fontSize: 16,
+      fontSize: 20,
       region: "Highlands",
       details: {
         title: "Ethera Mining Company",
@@ -2025,7 +2025,7 @@ const mapLabels = {
     },
     {
       name: "Warg Pen",
-      fontSize: 16,
+      fontSize: 20,
       region: "Highlands",
       details: {
         title: "Warg Pen",
@@ -2042,7 +2042,7 @@ const mapLabels = {
     // Heartwood Coast Places of Interest
     {
       name: "Infiltrator Camp",
-      fontSize: 16,
+      fontSize: 20,
       region: "Heartwood Coast",
       details: {
         title: "Infiltrator Camp",
@@ -2055,7 +2055,7 @@ const mapLabels = {
     },
     {
       name: "Gnobol Manor",
-      fontSize: 16,
+      fontSize: 20,
       region: "Heartwood Coast",
       details: {
         title: "Gnobol Manor",
@@ -2068,7 +2068,7 @@ const mapLabels = {
     },
     {
       name: "Gnobol Mauseleum",
-      fontSize: 16,
+      fontSize: 20,
       region: "Heartwood Coast",
       details: {
         title: "Gnobol Mauseleum",
@@ -2081,7 +2081,7 @@ const mapLabels = {
     },
     {
       name: "Hunter's Lodge",
-      fontSize: 16,
+      fontSize: 20,
       region: "Heartwood Coast",
       details: {
         title: "Hunter's Lodge",
@@ -2094,7 +2094,7 @@ const mapLabels = {
     },
     {
       name: "Talazarian Fort",
-      fontSize: 16,
+      fontSize: 20,
       region: "Heartwood Coast",
       details: {
         title: "Talazarian Fort",
@@ -2107,7 +2107,7 @@ const mapLabels = {
     },
     {
       name: "Temple of Kuthos",
-      fontSize: 16,
+      fontSize: 20,
       region: "Heartwood Coast",
       details: {
         title: "Temple of Kuthos",
@@ -2122,7 +2122,7 @@ const mapLabels = {
     // Tundria Places of Interest
     {
       name: "Orc Raider Camp",
-      fontSize: 16,
+      fontSize: 20,
       region: "Tundria",
       details: {
         title: "Orc Raider Camp",
@@ -2135,7 +2135,7 @@ const mapLabels = {
     },
     {
       name: "Elsinea Manor",
-      fontSize: 16,
+      fontSize: 20,
       region: "Tundria",
       details: {
         title: "Elsinea Manor",
@@ -2148,7 +2148,7 @@ const mapLabels = {
     },
     {
       name: "Frost Troll Coast",
-      fontSize: 16,
+      fontSize: 20,
       region: "Tundria",
       details: {
         title: "Frost Troll Coast",
@@ -2161,7 +2161,7 @@ const mapLabels = {
     },
     {
       name: "Trapper Grayth's Dwelling",
-      fontSize: 16,
+      fontSize: 20,
       region: "Tundria",
       details: {
         title: "Trapper Grayth's Dwelling",
@@ -2174,7 +2174,7 @@ const mapLabels = {
     },
     {
       name: "Infiltrator Camp",
-      fontSize: 16,
+      fontSize: 20,
       region: "Tundria",
       details: {
         title: "Infiltrator Camp",
@@ -2187,7 +2187,7 @@ const mapLabels = {
     },
     {
       name: "Altargrade",
-      fontSize: 16,
+      fontSize: 20,
       region: "Tundria",
       details: {
         title: "Altargrade",
@@ -2200,7 +2200,7 @@ const mapLabels = {
     },
     {
       name: "Orc Raider Fort",
-      fontSize: 16,
+      fontSize: 20,
       region: "Tundria",
       details: {
         title: "Orc Raider Fort",
@@ -2213,7 +2213,7 @@ const mapLabels = {
     },
     {
       name: "Hammerfist Mine",
-      fontSize: 16,
+      fontSize: 20,
       region: "Tundria",
       details: {
         title: "Hammerfist Mine",
@@ -2226,7 +2226,7 @@ const mapLabels = {
     },
     {
       name: "Stormholde",
-      fontSize: 16,
+      fontSize: 20,
       region: "Tundria",
       details: {
         title: "Stormholde",
@@ -2239,7 +2239,7 @@ const mapLabels = {
     },
     {
       name: "Ruins of Osgarl",
-      fontSize: 16,
+      fontSize: 20,
       region: "Tundria",
       details: {
         title: "Ruins of Osgarl",
@@ -2252,7 +2252,7 @@ const mapLabels = {
     },
     {
       name: "Castle of Artraxis",
-      fontSize: 16,
+      fontSize: 20,
       region: "Tundria",
       details: {
         title: "Castle of Artraxis",
@@ -2268,7 +2268,7 @@ const mapLabels = {
     // New Royale Island Places of Interest
     {
       name: "Pirate Raider's Camp",
-      fontSize: 16,
+      fontSize: 20,
       region: "Breakwater",
       details: {
         title: "Pirate Raider's Camp",
@@ -2281,7 +2281,7 @@ const mapLabels = {
     },
     {
       name: "Athropiniax's Temple",
-      fontSize: 16,
+      fontSize: 20,
       region: "Breakwater",
       details: {
         title: "Athropiniax's Temple",
@@ -2296,7 +2296,7 @@ const mapLabels = {
     // New Town Island Places of Interest
     {
       name: "Undead Dwarven Fort",
-      fontSize: 16,
+      fontSize: 20,
       region: "Breakwater",
       details: {
         title: "Undead Dwarven Fort",
@@ -2309,7 +2309,7 @@ const mapLabels = {
     },
     {
       name: "Deadwing's Lair",
-      fontSize: 16,
+      fontSize: 20,
       region: "Breakwater",
       details: {
         title: "Deadwing's Lair",
@@ -2322,7 +2322,7 @@ const mapLabels = {
     },
     {
       name: "Dwarf Fortress",
-      fontSize: 16,
+      fontSize: 20,
       region: "Breakwater",
       details: {
         title: "Dwarf Fortress",
@@ -2337,7 +2337,7 @@ const mapLabels = {
     // Roycroft Island Places of Interest
     {
       name: "Sea Pirate Shack",
-      fontSize: 16,
+      fontSize: 20,
       region: "Breakwater",
       details: {
         title: "Sea Pirate Shack",
@@ -2370,7 +2370,7 @@ const mapLabels = {
     // Places of Interest - Ruhura 
     {
       name: "Ruhura Outpost",
-      fontSize: 16,
+      fontSize: 20,
       region: "Sands of Creation",
       details: {
         title: "Ruhura Outpost",
@@ -2383,7 +2383,7 @@ const mapLabels = {
     },
     {
       name: "Sand Golem Crypt",
-      fontSize: 16,
+      fontSize: 20,
       region: "Sands of Creation",
       details: {
         title: "Sand Golem Crypt",
@@ -2396,7 +2396,7 @@ const mapLabels = {
     },
     {
       name: "Lupinsix's Lair",
-      fontSize: 16,
+      fontSize: 20,
       region: "Sands of Creation",
       details: {
         title: "Lupinsix's Lair",
@@ -2409,7 +2409,7 @@ const mapLabels = {
     },
     {
       name: "Tomna's House",
-      fontSize: 16,
+      fontSize: 20,
       region: "Sands of Creation",
       details: {
         title: "Tomna's House",
@@ -2422,7 +2422,7 @@ const mapLabels = {
     },
     {
       name: "Artonian Fort",
-      fontSize: 16,
+      fontSize: 20,
       region: "Sands of Creation",
       details: {
         title: "Artonian Fort",
@@ -2435,7 +2435,7 @@ const mapLabels = {
     },
     {
       name: "Artonian Cave",
-      fontSize: 16,
+      fontSize: 20,
       region: "Sands of Creation",
       details: {
         title: "Artonian Cave",
@@ -2448,7 +2448,7 @@ const mapLabels = {
     },
     {
       name: "The GateKeeper",
-      fontSize: 16,
+      fontSize: 20,
       region: "Sands of Creation",
       details: {
         title: "The GateKeeper",
@@ -2461,7 +2461,7 @@ const mapLabels = {
     },
     {
       name: "Dragon Lair",
-      fontSize: 16,
+      fontSize: 20,
       region: "Sands of Creation",
       details: {
         title: "Dragon Lair",
@@ -2477,7 +2477,7 @@ const mapLabels = {
     // Khafra
     {
       name: "Khafra Fishing Outpost",
-      fontSize: 16,
+      fontSize: 20,
       region: "Sands of Creation",
       details: {
         title: "Khafra Fishing Outpost",
@@ -2490,7 +2490,7 @@ const mapLabels = {
     },
     {
       name: "Baniti's Family Crypt",
-      fontSize: 16,
+      fontSize: 20,
       region: "Sands of Creation",
       details: {
         title: "Baniti's Family Crypt",
@@ -2503,7 +2503,7 @@ const mapLabels = {
     },
     {
       name: "Blacktail's Crypt",
-      fontSize: 16,
+      fontSize: 20,
       region: "Sands of Creation",
       details: {
         title: "Blacktail's Crypt",
@@ -2516,7 +2516,7 @@ const mapLabels = {
     },
     {
       name: "The Guardian",
-      fontSize: 16,
+      fontSize: 20,
       region: "Sands of Creation",
       details: {
         title: "The Guardian",
@@ -2529,7 +2529,7 @@ const mapLabels = {
     },
     {
       name: "Undead Artonian Crypt",
-      fontSize: 16,
+      fontSize: 20,
       region: "Sands of Creation",
       details: {
         title: "Undead Artonian Crypt",
@@ -2542,7 +2542,7 @@ const mapLabels = {
     },
     {
       name: "Ancient Artonian Swordsman Dungeon",
-      fontSize: 16,
+      fontSize: 20,
       region: "Sands of Creation",
       details: {
         title: "Ancient Artonian Swordsman Dungeon",
@@ -2577,7 +2577,7 @@ const mapLabels = {
     // Silvest Valley Region Water Bodies
     {
       name: "Lake Silvest",
-      fontSize: 15,
+      fontSize: 20,
       region: "Krythan",
       details: {
         title: "Lake Silvest",
@@ -2647,7 +2647,7 @@ const mapLabels = {
     // Bodies of Water - Region: Darkwoods
     {
       name: "Cairn Lake",
-      fontSize: 16,
+      fontSize: 20,
       region: "Darkwoods",
       details: {
         title: "Cairn Lake",
@@ -2660,7 +2660,7 @@ const mapLabels = {
     },
     {
       name: "Lake Mraya",
-      fontSize: 16,
+      fontSize: 20,
       region: "Darkwoods",
       details: {
         title: "Lake Mraya",
@@ -2686,7 +2686,7 @@ const mapLabels = {
     },
     {
       name: "Greenteeth Swamp", // Not sure about the name, just thought it needed one. Question Mark
-      fontSize: 16,
+      fontSize: 20,
       region: "Darkwoods", 
       details: {
         title: "Greenteeth Swamp",
@@ -2699,7 +2699,7 @@ const mapLabels = {
     },
     {
       name: "Darkfell Marsh",
-      fontSize: 16,
+      fontSize: 20,
       region: "Darkwoods",
       details: {
         title: "Darkfell Marsh",
@@ -2758,7 +2758,7 @@ const mapLabels = {
     },
     {
       name: "Canis Lake",
-      fontSize: 15,
+      fontSize: 20,
       region: "Black Swamp",
       details: {
         title: "Canis Lake",
@@ -2771,7 +2771,7 @@ const mapLabels = {
     },
     {
       name: "Lake Dresta",
-      fontSize: 15,
+      fontSize: 20,
       region: "Black Swamp",
       details: {
         title: "Lake Dresta",
@@ -2799,7 +2799,7 @@ const mapLabels = {
     // Bodies of Water - Region: Highlands
     {
       name: "West Lake",
-      fontSize: 15,
+      fontSize: 20,
       region: "Highlands",
       details: {
         title: "West Lake",
@@ -2812,7 +2812,7 @@ const mapLabels = {
     },
     {
       name: "Parian Lake",
-      fontSize: 15,
+      fontSize: 20,
       region: "Highlands",
       details: {
         title: "Parian Lake",
@@ -2825,7 +2825,7 @@ const mapLabels = {
     },
     {
       name: "Town Lake",
-      fontSize: 15,
+      fontSize: 20,
       region: "Highlands",
       details: {
         title: "Town Lake",
@@ -2838,7 +2838,7 @@ const mapLabels = {
     },
     {
       name: "Kor's Lake",
-      fontSize: 15,
+      fontSize: 20,
       region: "Highlands",
       details: {
         title: "Kor's Lake",
@@ -2878,7 +2878,7 @@ const mapLabels = {
     {
       name: "Lake Kallon",
       alias: "Arda Pond", // Added an alias for a quest that calls it Arda Pond. Question mark
-      fontSize: 15,
+      fontSize: 20,
       region: "Highlands",
       details: {
         title: "Lake Kallon",
@@ -2891,7 +2891,7 @@ const mapLabels = {
     },
     {
       name: "Orc Pond",
-      fontSize: 15,
+      fontSize: 20,
       region: "Highlands",
       details: {
         title: "Orc Pond",
@@ -2906,7 +2906,7 @@ const mapLabels = {
     // Bodies of Water - Region: Valley of Giants
     {
       name: "Greenmead Lake",
-      fontSize: 16,
+      fontSize: 20,
       region: "Valley of Giants",
       details: {
         title: "Greenmead Lake",
@@ -2928,7 +2928,7 @@ const mapLabels = {
     // Roycroft
     {
       name: "The Choke",
-      fontSize: 16,
+      fontSize: 20,
       region: "Breakwater",
       details: {
         title: "The Choke",
@@ -2975,7 +2975,7 @@ const mapLabels = {
     // Khafra
     {
       name: "Khafra Oasis",
-      fontSize: 15,
+      fontSize: 20,
       region: "Sands of Creation",
       details: {
         title: "Khafra Oasis",
@@ -2988,7 +2988,7 @@ const mapLabels = {
     },
     {
       name: "Chomper's Oasis",
-      fontSize: 15,
+      fontSize: 20,
       region: "Sands of Creation",
       details: {
         title: "Chomper's Oasis",
@@ -3014,7 +3014,7 @@ const mapLabels = {
     // Mountains - Region: Black Swamp
     {
       name: "Medosk Mountains",
-      fontSize: 15,
+      fontSize: 20,
       region: "Black Swamp",
       details: {
         title: "Medosk Mountains",

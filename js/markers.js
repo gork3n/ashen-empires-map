@@ -40,7 +40,7 @@ const markerStyles = {
     icon: "icons/crossed-swords.svg",
     color: "#32CD32", // LimeGreen
   },
-  shop_armor: {
+  shop_armory: {
     icon: "icons/round-shield.svg",
     color: "#32CD32", // LimeGreen
   },
@@ -93,6 +93,10 @@ const markerStyles = {
   trainer: {
     icon: "icons/white-book.svg",
     color: "#FF8C00", // DarkOrange
+  },
+  town_steward: {
+    icon: "icons/elf-helmet.svg",
+    color: "#4169E1", // RoyalBlue
   },
 
   // Spawns
@@ -2458,15 +2462,15 @@ const mapMarkers = {
       },
     },
     {
-      type: "shop_armor",
-      tooltip: "Thomas Blackstone's Armor Shop",
+      type: "shop_armory",
+      tooltip: "Thomas Blackstone's Armory Shop",
       region: "Valinor Island",
       place: "Valinor",
       details: {
-        title: "Thomas Blackstone's Armor Shop",
+        title: "Thomas Blackstone's Armory Shop",
         coordinates: { x: 731, y: 123 },
         image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Thomas Blackstone's Armor Shop is coming soon.",
+        lore: "More information about Thomas Blackstone's Armory Shop is coming soon.",
         npcs: [],
         links: [],
       },
@@ -2575,15 +2579,15 @@ const mapMarkers = {
       },
     },
     {
-      type: "shop_armor",
-      tooltip: "Colleen Franks' Armor Shop",
+      type: "shop_armory",
+      tooltip: "Colleen Franks' Armory Shop",
       region: "Krythan",
       place: "Lotor's Summer Palace",
       details: {
-        title: "Colleen Franks' Armor Shop",
+        title: "Colleen Franks' Armory Shop",
         coordinates: { x: 809, y: 681 },
         image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Colleen Franks' Armor Shop is coming soon.",
+        lore: "More information about Colleen Franks' Armory Shop is coming soon.",
         npcs: [],
         links: [],
       },
@@ -2832,6 +2836,133 @@ const mapMarkers = {
     // City: Cliffside Shops
 
     // City: Silvest Shops
+    {
+      type: "shop_weapon",
+      tooltip: "Bertwald's Weapon Shop",
+      region: "Silvest Valley",
+      place: "Silvest",
+      details: {
+        title: "Docale's Pub",
+        coordinates: { x: 1136, y: 1369 },
+        image: "images/npcs/Bertwald_Weapon_Shop.png",
+        lore: "More information about Bertwald's Weapon Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_armory",
+      tooltip: "Oswyn's Armory Shop",
+      region: "Silvest Valley",
+      place: "Silvest",
+      details: {
+        title: "Docale's Pub",
+        coordinates: { x: 1118, y: 1380 },
+        image: "images/npcs/Oswyn_Armory_Shop.png",
+        lore: "More information about Bertwald's Weapon Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_blacksmith",
+      tooltip: "Eadwyn's Blacksmith Shop",
+      region: "Silvest Valley",
+      place: "Silvest",
+      details: {
+        title: "Docale's Pub",
+        coordinates: { x: 1115, y: 1389 },
+        image: "images/npcs/Eadwyn_Blacksmith_Shop.png",
+        lore: "More information about Eadwyn's Blacksmith Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_pub",
+      tooltip: "Cearl's Pub",
+      alias: "Triddle's Tavern",
+      region: "Silvest Valley",
+      place: "Silvest",
+      details: {
+        title: "Docale's Pub",
+        coordinates: { x: 1092, y: 1385 },
+        image: "images/npcs/Cearl_Pub.png",
+        lore: "More information about Cearl's Pub is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_farming",
+      tooltip: "Bunker's Farming Shop",
+      region: "Silvest Valley",
+      place: "Silvest",
+      details: {
+        title: "Bunker's Farming Shop",
+        coordinates: { x: 1078, y: 1379 },
+        image: "images/npcs/Cearl_Pub.png",
+        lore: "More information about Bunker's Farming Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_leather",
+      tooltip: "Vessik's Leather Shop",
+      region: "Silvest Valley",
+      place: "Silvest",
+      details: {
+        title: "Vessik's Leather Shop",
+        coordinates: { x: 1086, y: 1358 },
+        image: "images/npcs/Vessik_Leather_Shop.png",
+        lore: "More information about Vessik's Leather Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_carpentry",
+      tooltip: "Bunden's Carpentry Shop",
+      region: "Silvest Valley",
+      place: "Silvest",
+      details: {
+        title: "Bunden's Carpentry Shop",
+        coordinates: { x: 1090, y: 1355 },
+        image: "images/npcs/Bunden_Carpentry_Shop.png",
+        lore: "More information about Bunden's Carpentry Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_magic",
+      tooltip: "Thyrdwulf's Magic Shop",
+      region: "Silvest Valley",
+      place: "Silvest",
+      details: {
+        title: "Thyrdwulf's Magic Shop",
+        coordinates: { x: 1100, y: 1358 },
+        image: "images/npcs/Thyrdwulf_Magic_Shop.png",
+        lore: "More information about Thyrdwulf's Magic Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_provisioner",
+      tooltip: "Coenred's Provisioner Shop",
+      region: "Silvest Valley",
+      place: "Silvest",
+      details: {
+        title: "Coenred's Provisioner Shop",
+        coordinates: { x: 1117, y: 1361 },
+        image: "images/npcs/Coenred_Provisioner_Shop.png",
+        lore: "More information about Coenred's Provisioner Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // City: Fort Eastwatch Shops
 
@@ -2935,7 +3066,7 @@ const mapMarkers = {
       },
     },
     {
-      type: "shop_armor",
+      type: "shop_armory",
       tooltip: "Edelassa's Armory Shop",
       region: "Highlands",
       place: "Arda",
@@ -3102,15 +3233,15 @@ const mapMarkers = {
       },
     },
     {
-      type: "shop_armor",
-      tooltip: "Harkyn's Armor Shop",
+      type: "shop_armory",
+      tooltip: "Harkyn's Armory Shop",
       region: "Krythan",
       place: "Scarab Island",
       details: {
-        title: "Harkyn's Armor Shop",
+        title: "Harkyn's Armory Shop",
         coordinates: { x: 374, y: 2215 },
         image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Harkyn's Armor Shop is coming soon.",
+        lore: "More information about Harkyn's Armory Shop is coming soon.",
         npcs: [],
         links: [],
       },
@@ -3585,6 +3716,77 @@ const mapMarkers = {
       },
     },
 
+    // Town Stewards
+
+    // Krythan Island Town Stewards
+    // Region: Silvest Valley Town Stewards
+    {
+      type: "town_steward",
+      tooltip: "Town Steward (Silvest)",
+      region: "Silvest Valley",
+      place: "Silvest",
+      details: {
+        title: "Town Steward (Silvest)",
+        coordinates: { x: 1130, y: 1340 },
+        image: "images/npcs/Silvest_Town_Steward.png",
+        lore: "The Town Steward of Silvest offers a town bonus orb that grants Intelligence.",
+        npcs: [],
+        links: [],
+      },
+    },
+    // Region: Krythan Town Stewards
+
+    //Mainland Town Stewards
+    // Region: Darkwoods Town Stewards
+
+    {
+      type: "town_steward",
+      tooltip: "Town Steward (Whisperdale)",
+      region: "Darkwoods",
+      place: "Whisperdale",
+      details: {
+        title: "Town Steward (Whisperdale)",
+        coordinates: { x: 403, y: 3416 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "The Town Steward of Whisperdale offers a town bonus orb that grants Dexterity.",
+        npcs: [],
+        links: [],
+      },
+    },
+    // Region: Battle Plains Town Stewards
+
+    // Region: Black Swamp Town Stewards
+    {
+      type: "town_steward",
+      tooltip: "Town Steward (Krog)",
+      region: "Black Swamp",
+      place: "Krog",
+      details: {
+        title: "Town Steward (Krog)",
+        coordinates: { x: 3113, y: 3708 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "The Town Steward of Krog offers a town bonus orb that grants Strength.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // Region: Highlands Town Stewards
+
+    // Region: Western Isles Town Stewards
+
+    // Region: Valley of Giants Town Stewards
+
+    // Region: Heartwood Coast Town Stewards
+
+    // Region: Tundria Town Stewards
+
+    // Region: Sands of Creation Town Stewards
+
+    // Region: Breakwater Town Stewards
+
+    // Region: Broken Finger Town Stewards
+
     // Add more trainers
   ],
 
@@ -3607,6 +3809,20 @@ const mapMarkers = {
 
     // Krythan Island Spawns
     // Silvest Valley Spawns
+    {
+      type: "spawn_good",
+      tooltip: "Silvest Spawn Gate",
+      region: "Valinor Island",
+      place: "Valinor",
+      details: {
+        title: "Spawn Gate",
+        coordinates: { x: 1126, y: 1337 },
+        image: "images/spawns/Silvest_Spawn_Gate.png",
+        lore: "More information about Silvest Spawn Gate is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // Krythan Region Spawns
 
@@ -3764,7 +3980,7 @@ const mapMarkers = {
       details: {
         title: "Bank",
         coordinates: { x: 1096, y: 1373 },
-        image: "images/placeholders/image_coming_soon.png",
+        image: "images/npcs/Silvest_Bank.png",
         lore: "More information about Bank is coming soon.",
         npcs: [],
         links: [],
@@ -3920,7 +4136,8 @@ const mapMarkers = {
   ],
 
   undergrounds: [
-    /* Valinor Island Undergrounds */
+    // Valinor Island Undergrounds
+    // Region: Valinor Undergrounds
     {
       type: "underground_dungeon",
       tooltip: "Frump's Lair",
@@ -3942,13 +4159,13 @@ const mapMarkers = {
       place: "Valinor",
       details: {
         title: "Bonesnarl's Lair",
-        coordinates: { x: 873, y: 309 },
+        coordinates: { x: 873, y: 309 }, //I need to verify this location
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Bonesnarl's Lair is coming soon.",
         npcs: [],
         links: [],
       },
-    }, //I need to verify this location
+    }, 
     {
       type: "underground_stairs",
       tooltip: "Stairs to Mage Trainers",
@@ -3964,7 +4181,7 @@ const mapMarkers = {
       },
     },
 
-    /* Lotor's Summer Palace Undergrounds */
+    // Lotor's Summer Palace Undergrounds
     {
       type: "underground_dungeon",
       tooltip: "Sewer Entrance",
@@ -3981,20 +4198,20 @@ const mapMarkers = {
     },
     {
       type: "underground_stairs",
-      tooltip: "Leather and Armor Shop Basement",
+      tooltip: "Leather and Armory Shop Basement",
       region: "Krythan",
       place: "Lotor's Summer Palace",
       details: {
-        title: "Leather and Armor Shop Basement",
+        title: "Leather and Armory Shop Basement",
         coordinates: { x: 797, y: 707 },
         image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Leather and Armor Shop Basement is coming soon.",
+        lore: "More information about Leather and Armory Shop Basement is coming soon.",
         npcs: [],
         links: [],
       },
     },
 
-    /* Krythan Island Undergrounds */
+    // Krythan Island Undergrounds
 
     // Region: Silvest Valley Undergrounds
     {
@@ -4035,6 +4252,20 @@ const mapMarkers = {
         coordinates: { x: 1096, y: 1182 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Cliffside Mines is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "underground_stairs",
+      tooltip: "Provisioner's Basement",
+      region: "Silvest Valley",
+      place: "Silvest",
+      details: {
+        title: "Provisioner's Basement",
+        coordinates: { x: 1122, y: 1361 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Provisioner's Basement is coming soon.",
         npcs: [],
         links: [],
       },

@@ -284,7 +284,7 @@ function initializeMap() {
     // --- Set Initial Map View ---
     // Define the center of the map using in-game (4096x4096) coordinates.
     // This makes it easy to change the starting location.
-    const initialCenterGameCoords = { x: 3400, y: 3484, }; // Default View is { x: 776, y: 668, } (Showing Lotor's Summer Palace) Centers LSP on smaller screens.
+    const initialCenterGameCoords = { x: 1114, y: 1372, }; // Default View is { x: 776, y: 668, } (Showing Lotor's Summer Palace) Centers LSP on smaller screens.
 
     const mapSize = 32768;
     const scaleFactor = mapSize / 4096; // New scaling factor
@@ -372,10 +372,12 @@ function initializeMap() {
         });
 
         if (feature) {
-            const details = feature.get('details');
+            // Get all properties from the feature, which includes details, place, region, etc.
+            const featureData = feature.getProperties();
 
-            if (details) {
-                showInfoFlyout(details);
+            if (featureData.details) {
+                // Pass the entire data object to the flyout function
+                showInfoFlyout(featureData);
             }
         }
     });
@@ -428,20 +430,22 @@ function setupInfoFlyout() {
  * @param {object} data - The details object from the clicked feature.
  */
 function showInfoFlyout(data) {
-    if (!data) return;
+    // The data object now contains everything, but the core info is in `details`.
+    const details = data.details;
+    if (!details) return;
 
     const flyout = document.getElementById('info-flyout');
     const title = document.getElementById('info-flyout-title');
     const content = document.getElementById('info-flyout-content');
 
-    title.textContent = data.title;
+    title.textContent = details.title;
 
     let html = '';
 
     // Coordinates
-    if (data.coordinates) {
-        html += `<p><strong>Coordinates:</strong> X: ${data.coordinates.x}, Y: ${data.coordinates.y}</p>`;
-    } else if (data.x !== undefined && data.y !== undefined) {
+    if (details.coordinates) {
+        html += `<p><strong>Coordinates:</strong> X: ${details.coordinates.x}, Y: ${details.coordinates.y}</p>`;
+    } else if (details.x !== undefined && details.y !== undefined) {
         // Fallback for markers where coordinates are at the top level of the details object
         html += `<p><strong>Coordinates:</strong> X: ${data.x}, Y: ${data.y}</p>`;
     }
@@ -449,32 +453,48 @@ function showInfoFlyout(data) {
     html += '<hr>';
 
     // Image
-    if (data.image) {
+    if (details.image) {
         html += `
             <div style="width: 300px; height: 350px; margin: 0 auto 15px; border-radius: 4px; overflow: hidden; border: 1px solid #444; background-color: #111;">
-                <img src="${data.image}" alt="${data.title}" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+                <img src="${details.image}" alt="${details.title}" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
             </div>
         `;
     }
 
     // Lore/Info
-    if (data.lore) {
-        html += `<h4>Information</h4><p>${data.lore}</p>`;
+    // Display the Information section if there is a place, region, or lore to show.
+    if (data.place || data.region || details.lore) {
+        html += `<h4>Information</h4>`;
+
+        // Group Place and Region together at the top.
+        if (data.place) {
+            html += `<p>${data.place}<br>`;
+            if (data.region) {
+                html += `<em>Region: ${data.region}</em></p>`;
+            } else {
+                html += `</p>`; // Close the paragraph if no region
+            }
+        }
+
+        // Then, display the lore/description if it exists.
+        if (details.lore) html += `<p>${details.lore}</p>`;
     }
 
     // NPCs
-    if (data.npcs && data.npcs.length > 0) {
+    // This is now grouped under the main "Information" section.
+    if (details.npcs && details.npcs.length > 0) {
         html += '<h4>Key NPCs / Locations</h4><ul>';
-        data.npcs.forEach(npc => {
+        details.npcs.forEach(npc => {
             html += `<li><strong>${npc.name}:</strong> ${npc.info}</li>`;
         });
         html += '</ul>';
     }
 
     // Links
-    if (data.links && data.links.length > 0) {
+    // This is now grouped under the main "Information" section.
+    if (details.links && details.links.length > 0) {
         html += '<h4>External Links</h4><ul>';
-        data.links.forEach(link => {
+        details.links.forEach(link => {
             html += `<li><a href="${link.url}" target="_blank" rel="noopener noreferrer">${link.text}</a></li>`;
         });
         html += '</ul>';
@@ -778,8 +798,10 @@ function createUIMarkerIcon(markerType) {
  * @param {string} type - Marker type
  * @param {string} tooltip - Tooltip text
  * @param {object} [details] - Optional details object for the info flyout.
+ * @param {string} [place] - The place name for the marker.
+ * @param {string} [region] - The region name for the marker.
  */
-function addMarkerFeature(source, x, y, type, tooltip, details) {
+function addMarkerFeature(source, x, y, type, tooltip, details, place, region) {
     const mapSize = 32768;
     const scaleFactor = mapSize / 4096;
 
@@ -793,7 +815,9 @@ function addMarkerFeature(source, x, y, type, tooltip, details) {
         geometry: new ol.geom.Point(coordinates),
         type: type,
         tooltip: tooltip,
-        details: details
+        details: details, // The details object is nested here
+        place: place,
+        region: region
     });
 
     // Set the style for the feature
@@ -840,7 +864,9 @@ function addMapMarkers(map) {
                     marker.details.coordinates.y,
                     marker.type,
                     marker.tooltip,
-                    marker.details // Pass the whole details object
+                    marker.details, // Pass the whole details object
+                    marker.place,
+                    marker.region
                 );
             });
         }
