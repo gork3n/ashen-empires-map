@@ -440,67 +440,75 @@ function showInfoFlyout(data) {
 
     title.textContent = details.title;
 
-    let html = '';
-
-    // Coordinates
-    if (details.coordinates) {
-        html += `<p><strong>Coordinates:</strong> X: ${details.coordinates.x}, Y: ${details.coordinates.y}</p>`;
-    } else if (details.x !== undefined && details.y !== undefined) {
-        // Fallback for markers where coordinates are at the top level of the details object
-        html += `<p><strong>Coordinates:</strong> X: ${data.x}, Y: ${data.y}</p>`;
-    }
-
-    html += '<hr>';
+    let imageHtml = '';
+    let textHtml = '';
 
     // Image
     if (details.image) {
-        html += `
-            <div class="info-flyout-image-container">
-                <img src="${details.image}" alt="${details.title}">
+        imageHtml = `
+            <div class="flyout-image-column">
+                <div class="info-flyout-image-container">
+                    <img src="${details.image}" alt="${details.title}">
+                </div>
             </div>
         `;
     }
 
-    // Lore/Info
-    // Display the Information section if there is a place, region, or lore to show.
-    if (data.place || data.region || details.lore) {
-        html += `<h4>Information</h4>`;
+    // --- Build Text Column ---
+    // Coordinates
+    if (details.coordinates) {
+        textHtml += `<p><strong>Coordinates:</strong> X: ${details.coordinates.x}, Y: ${details.coordinates.y}</p><hr>`;
+    } else if (data.x !== undefined && data.y !== undefined) {
+        // Fallback for markers where coordinates are at the top level of the details object
+        textHtml += `<p><strong>Coordinates:</strong> X: ${data.x}, Y: ${data.y}</p><hr>`;
+    }
 
-        // Group Place and Region together at the top.
+    // Lore/Info
+    if (data.place || data.region || details.lore) {
+        textHtml += `<h4>Information</h4>`;
         if (data.place) {
-            html += `<p>${data.place}<br>`;
+            textHtml += `<p>${data.place}<br>`;
             if (data.region) {
-                html += `<em>Region: ${data.region}</em></p>`;
+                textHtml += `<em>Region: ${data.region}</em></p>`;
             } else {
-                html += `</p>`; // Close the paragraph if no region
+                textHtml += `</p>`;
             }
         }
-
-        // Then, display the lore/description if it exists.
-        if (details.lore) html += `<p>${details.lore}</p>`;
+        if (details.lore) textHtml += `<p>${details.lore}</p>`;
     }
 
     // NPCs
-    // This is now grouped under the main "Information" section.
     if (details.npcs && details.npcs.length > 0) {
-        html += '<h4>Key NPCs / Locations</h4><ul>';
+        textHtml += '<h4>Key NPCs / Locations</h4><ul>';
         details.npcs.forEach(npc => {
-            html += `<li><strong>${npc.name}:</strong> ${npc.info}</li>`;
+            textHtml += `<li><strong>${npc.name}:</strong> ${npc.info}</li>`;
         });
-        html += '</ul>';
+        textHtml += '</ul>';
     }
 
     // Links
-    // This is now grouped under the main "Information" section.
     if (details.links && details.links.length > 0) {
-        html += '<h4>External Links</h4><ul>';
+        textHtml += '<h4>External Links</h4><ul>';
         details.links.forEach(link => {
-            html += `<li><a href="${link.url}" target="_blank" rel="noopener noreferrer">${link.text}</a></li>`;
+            textHtml += `<li><a href="${link.url}" target="_blank" rel="noopener noreferrer">${link.text}</a></li>`;
         });
-        html += '</ul>';
+        textHtml += '</ul>';
     }
 
-    content.innerHTML = html;
+    // --- Combine and Render ---
+    // If there's an image, wrap the text in its own column. Otherwise, the text can be standalone.
+    let finalHtml;
+    if (imageHtml) {
+        finalHtml = `
+            <div class="flyout-main-content">
+                ${imageHtml}
+                <div class="flyout-text-column">${textHtml}</div>
+            </div>`;
+    } else {
+        finalHtml = `<div class="flyout-text-column">${textHtml}</div>`;
+    }
+
+    content.innerHTML = finalHtml;
 
     flyout.classList.add('visible');
 }
