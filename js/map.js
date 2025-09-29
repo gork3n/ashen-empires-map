@@ -284,7 +284,7 @@ function initializeMap() {
     // --- Set Initial Map View ---
     // Define the center of the map using in-game (4096x4096) coordinates.
     // This makes it easy to change the starting location.
-    const initialCenterGameCoords = { x: 1114, y: 1372, }; // Default View is { x: 776, y: 668, } (Showing Lotor's Summer Palace) Centers LSP on smaller screens.
+    const initialCenterGameCoords = { x: 776, y: 668, }; // Default View is { x: 776, y: 668, } (Showing Lotor's Summer Palace) Centers LSP on smaller screens.
 
     const mapSize = 32768;
     const scaleFactor = mapSize / 4096; // New scaling factor
@@ -455,8 +455,8 @@ function showInfoFlyout(data) {
     // Image
     if (details.image) {
         html += `
-            <div style="width: 300px; height: 350px; margin: 0 auto 15px; border-radius: 4px; overflow: hidden; border: 1px solid #444; background-color: #111;">
-                <img src="${details.image}" alt="${details.title}" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+            <div class="info-flyout-image-container">
+                <img src="${details.image}" alt="${details.title}">
             </div>
         `;
     }

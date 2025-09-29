@@ -684,6 +684,29 @@ input:checked + .slider:before {
     color: #ccc;
 }
 
+.info-flyout-image-container {
+    height: 350px; /* Set a fixed height for all image containers */
+    margin: 0 auto 15px; /* Center the container horizontally */
+    /* The background is transparent to blend with the flyout panel. */
+    background-color: transparent;
+    overflow: hidden; /* Clip any content that overflows the container */
+    display: flex; /* Use flexbox to center the image */
+    justify-content: center; /* Center image horizontally */
+    align-items: center; /* Center image vertically */
+}
+
+.info-flyout-image-container img {
+    /* 
+     * Let the image have its natural width and height.
+     * The flex container will handle centering, and the container's
+     * overflow: hidden will clip it.
+     */
+    width: auto;
+    height: auto;
+    max-width: 100%; /* Prevent very wide images from overflowing horizontally */
+    flex-shrink: 0; /* Prevent the image from shrinking if the container is too small */
+}
+
 /* --- Dark Mode Scrollbar for Filter Menu --- */
 .filter-menu-content::-webkit-scrollbar {
     width: 10px;
