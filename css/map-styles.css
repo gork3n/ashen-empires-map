@@ -26,6 +26,8 @@ html, body {
     background: #002131 url('../images/bg.png'); /* Separate background for map */
     overflow: hidden;
     position: relative; /* For crosshair positioning */
+    /* Prevents the blue flash on mobile when tapping, which can interfere with feature selection */
+    -webkit-tap-highlight-color: transparent;
 }
 
 /* OpenLayers overrides */

@@ -1124,9 +1124,13 @@ function initializeCoordinateDisplay() {
         map.on('pointermove', function(evt) {
             const coord = evt.coordinate;
             if (coord) {
-                lastX = Math.round(coord[0] / scaleFactor);
-                lastY = Math.round(-coord[1] / scaleFactor); // Invert Y coordinate and scale down
-                updateDisplay();
+                const newX = Math.round(coord[0] / scaleFactor);
+                const newY = Math.round(-coord[1] / scaleFactor); // Invert Y coordinate and scale down
+                if (newX !== lastX || newY !== lastY) {
+                    lastX = newX;
+                    lastY = newY;
+                    updateDisplay();
+                }
             }
         });
 

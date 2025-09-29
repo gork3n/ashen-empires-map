@@ -261,7 +261,7 @@ const mapMarkers = {
       place: "Lotor's Summer Palace",
       details: {
         title: "Portal to Party Island",
-        coordinates: { x: 760, y: 589 },
+        coordinates: { x: 760, y: 588 },
         image: "images/portals/Party_Island_Portal.png",
         lore: "More information about Portal to Party Island is coming soon.",
         npcs: [],
@@ -289,7 +289,7 @@ const mapMarkers = {
       place: "Lotor's Summer Palace",
       details: {
         title: "Portal to Housing Realm",
-        coordinates: { x: 769, y: 613 },
+        coordinates: { x: 768, y: 613 },
         image: "images/portals/LSP_Housing_Realm_Portal.png",
         lore: "More information about Portal to Housing Realm is coming soon.",
         npcs: [],
@@ -303,7 +303,7 @@ const mapMarkers = {
       place: "Lotor's Summer Palace",
       details: {
         title: "Valmond Portal",
-        coordinates: { x: 810, y: 622 },
+        coordinates: { x: 809, y: 622 },
         image: "images/portals/Valmond_Portal.png",
         lore: "Lotor's Summer Palace to Valmond.",
         npcs: [],
@@ -317,7 +317,7 @@ const mapMarkers = {
       place: "Lotor's Summer Palace",
       details: {
         title: "Krog Portal",
-        coordinates: { x: 820, y: 622 },
+        coordinates: { x: 819, y: 622 },
         image: "images/portals/Krog_Portal.png",
         lore: "Lotor's Summer Palace to Krog Portal.",
         npcs: [],
@@ -331,7 +331,7 @@ const mapMarkers = {
       place: "Lotor's Summer Palace",
       details: {
         title: "Khafra or Ruhura Portal",
-        coordinates: { x: 830, y: 622 },
+        coordinates: { x: 829, y: 622 },
         image: "images/portals/Khafra_or_Ruhura_Portal.png",
         lore: "Lotor's Summer Palace to Khafra or Ruhura Portal.",
         npcs: [],
@@ -359,7 +359,7 @@ const mapMarkers = {
       place: "Lotor's Summer Palace",
       details: {
         title: "VIP Portal",
-        coordinates: { x: 820, y: 642 },
+        coordinates: { x: 819, y: 642 },
         image: "images/portals/VIP_Portal.png",
         lore: "Lotor's Summer Palace VIP Portal - Choose your destination: Silvest, Parian, Valmond, Krog, Khafra or Ruhura, Josody, and Whisperdale.",
         npcs: [],
@@ -373,7 +373,7 @@ const mapMarkers = {
       place: "Lotor's Summer Palace",
       details: {
         title: "Whisperdale Portal",
-        coordinates: { x: 830, y: 642 },
+        coordinates: { x: 829, y: 642 },
         image: "images/portals/Whisperdale_Portal.png",
         lore: "Lotor's Summer Palace to Whisperdale Portal.",
         npcs: [],
@@ -387,7 +387,7 @@ const mapMarkers = {
       place: "Lotor's Summer Palace",
       details: {
         title: "Parian Portal",
-        coordinates: { x: 810, y: 632 },
+        coordinates: { x: 809, y: 632 },
         image: "images/portals/Parian_Portal.png",
         lore: "Lotor's Summer Palace to Parian Portal.",
         npcs: [],
@@ -401,7 +401,7 @@ const mapMarkers = {
       place: "Lotor's Summer Palace",
       details: {
         title: "Josody Portal",
-        coordinates: { x: 830, y: 632 },
+        coordinates: { x: 829, y: 632 },
         image: "images/portals/Josody_Portal.png",
         lore: "Lotor's Summer Palace to Josody Portal.",
         npcs: [],
@@ -1264,7 +1264,7 @@ const mapMarkers = {
       place: "Lotor's Summer Palace",
       details: {
         title: "Palace Dock",
-        coordinates: { x: 791, y: 582 },
+        coordinates: { x: 791, y: 581 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Palace Dock is coming soon.",
         npcs: [],
@@ -1278,7 +1278,7 @@ const mapMarkers = {
       place: "Lotor's Summer Palace",
       details: {
         title: "LSP Dock",
-        coordinates: { x: 856, y: 726 },
+        coordinates: { x: 854, y: 725 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about LSP Dock is coming soon.",
         npcs: [],
@@ -2621,7 +2621,7 @@ const mapMarkers = {
       place: "Lotor's Summer Palace",
       details: {
         title: "Tom Uslak Carpenter Shop",
-        coordinates: { x: 852, y: 710 },
+        coordinates: { x: 852, y: 709 },
         image: "images/npcs/Tom_Uslak_Carpenter_Shop.png",
         lore: "More information about Tom Uslak Carpenter Shop is coming soon.",
         npcs: [],
@@ -2663,7 +2663,7 @@ const mapMarkers = {
       place: "Lotor's Summer Palace",
       details: {
         title: "Wizard Swishwhich's Shop",
-        coordinates: { x: 772, y: 601 },
+        coordinates: { x: 770, y: 599 },
         image: "images/npcs/Wizard_Swishwhich_Shop.png", 
         lore: "More information about Wizard Swishwhich's Shop is coming soon.",
         currency: "Rune Fragment",
@@ -2678,7 +2678,7 @@ const mapMarkers = {
       place: "Lotor's Summer Palace",
       details: {
         title: "Wizard Blunderstone",
-        coordinates: { x: 771, y: 602 },
+        coordinates: { x: 769, y: 600 },
         image: "images/npcs/Wizard_Blunderstone_Shop.png",
         lore: "More information about Wizard Blunderstone is coming soon.",
         npcs: [],
@@ -2748,7 +2748,7 @@ const mapMarkers = {
       place: "Lotor's Summer Palace",
       details: {
         title: "Doyle Trobush's Magic Shop",
-        coordinates: { x: 756, y: 677 },
+        coordinates: { x: 756, y: 676 },
         image: "images/npcs/Doyle_Trobush_Magic_Shop.png",
         lore: "More information about Doyle Trobush's Magic Shop is coming soon.",
         npcs: [],
@@ -2790,7 +2790,7 @@ const mapMarkers = {
       place: "Lotor's Summer Palace",
       details: {
         title: "Mongor's Leatherworking Shop",
-        coordinates: { x: 803, y: 704 },
+        coordinates: { x: 802, y: 703 },
         image: "images/npcs/Mongor_Leatherworking_Shop.png",
         lore: "More information about Mongor's Leatherworking Shop is coming soon.",
         npcs: [],
@@ -2804,7 +2804,7 @@ const mapMarkers = {
       place: "Lotor's Summer Palace",
       details: {
         title: "Kaleic's Blacksmith Shop",
-        coordinates: { x: 800, y: 699 },
+        coordinates: { x: 799, y: 699 },
         image: "images/npcs/Kaleic_Blacksmith_Shop.png",
         lore: "More information about Kaleic's Blacksmith Shop is coming soon.",
         npcs: [],
@@ -2818,7 +2818,7 @@ const mapMarkers = {
       place: "Lotor's Summer Palace",
       details: {
         title: "Mace Gurban's Provisioner Shop",
-        coordinates: { x: 811, y: 698 },
+        coordinates: { x: 811, y: 697 },
         image: "images/npcs/Mace_Gurban_Provisioner_Shop.png",
         lore: "More information about Mace Gurban's Provisioner Shop is coming soon.",
         npcs: [],
@@ -2832,7 +2832,7 @@ const mapMarkers = {
       place: "Lotor's Summer Palace",
       details: {
         title: "Docale's Pub",
-        coordinates: { x: 844, y: 727 },
+        coordinates: { x: 845, y: 727 },
         image: "images/npcs/Docale_Pub.png",
         lore: "More information about Docale's Pub is coming soon.",
         npcs: [],
@@ -3568,7 +3568,7 @@ const mapMarkers = {
       place: "Lotor's Summer Palace",
       details: {
         title: "Master Draftsman",
-        coordinates: { x: 774, y: 617 },
+        coordinates: { x: 773, y: 618 },
         image: "images/npcs/Master_Draftsman.png",
         lore: "More information about Master Draftsman is coming soon.",
         npcs: [],
@@ -3582,7 +3582,7 @@ const mapMarkers = {
       place: "Lotor's Summer Palace",
       details: {
         title: "Henchman Trainer",
-        coordinates: { x: 837, y: 706 },
+        coordinates: { x: 837, y: 705 },
         image: "images/npcs/Henchman_Trainer.png",
         lore: "More information about Henchman Trainer is coming soon.",
         npcs: [],
@@ -3638,7 +3638,7 @@ const mapMarkers = {
       place: "Lotor's Summer Palace",
       details: {
         title: "Advanced Skill Trainer",
-        coordinates: { x: 787, y: 600 },
+        coordinates: { x: 787, y: 599 },
         image: "images/npcs/Advanced_Skill_Trainer.png",
         lore: "More information about Advanced Skill Trainer is coming soon.",
         npcs: [],
@@ -3666,7 +3666,7 @@ const mapMarkers = {
       place: "Lotor's Summer Palace",
       details: {
         title: "Mining Event Judge",
-        coordinates: { x: 815, y: 708 },
+        coordinates: { x: 814, y: 708 },
         image: "images/npcs/Mining_Event_Judge.png",
         lore: "More information about Mining Event Judge is coming soon.",
         npcs: [],
@@ -3694,7 +3694,7 @@ const mapMarkers = {
       place: "Lotor's Summer Palace",
       details: {
         title: "Alchemy Taskmaster",
-        coordinates: { x: 761, y: 681 },
+        coordinates: { x: 760, y: 681 },
         image: "images/npcs/Alchemy_Taskmaster.png",
         lore: "More information about Alchemy Taskmaster is coming soon.",
         npcs: [],
@@ -3708,7 +3708,7 @@ const mapMarkers = {
       place: "Lotor's Summer Palace",
       details: {
         title: "Brewing Taskmaster",
-        coordinates: { x: 846, y: 732 },
+        coordinates: { x: 845, y: 731 },
         image: "images/npcs/Brewing_Taskmaster.png",
         lore: "More information about Brewing Taskmaster is coming soon.",
         npcs: [],
@@ -3722,7 +3722,7 @@ const mapMarkers = {
       place: "Lotor's Summer Palace",
       details: {
         title: "Carpentry Taskmaster",
-        coordinates: { x: 855, y: 716 },
+        coordinates: { x: 855, y: 715 },
         image: "images/npcs/Carpentry_Taskmaster.png",
         lore: "More information about Carpentry Taskmaster is coming soon.",
         npcs: [],
@@ -3736,7 +3736,7 @@ const mapMarkers = {
       place: "Lotor's Summer Palace",
       details: {
         title: "Neutral Faction Officer",
-        coordinates: { x: 834, y: 731 },
+        coordinates: { x: 833, y: 731 },
         image: "images/npcs/Neutral_Faction_Officer.png",
         lore: "More information about Neutral Faction Officer is coming soon.",
         npcs: [],
@@ -4417,13 +4417,13 @@ const mapMarkers = {
 
     // Lotor's Summer Palace Undergrounds
     {
-      type: "underground_dungeon",
+      type: "underground_stairs",
       tooltip: "Sewer Entrance",
       region: "Krythan",
       place: "Lotor's Summer Palace",
       details: {
         title: "Sewer Entrance",
-        coordinates: { x: 762, y: 752 },
+        coordinates: { x: 763, y: 751 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Sewer Entrance is coming soon.",
         npcs: [],
@@ -4437,7 +4437,7 @@ const mapMarkers = {
       place: "Lotor's Summer Palace",
       details: {
         title: "Leather and Armory Shop Basement",
-        coordinates: { x: 797, y: 707 },
+        coordinates: { x: 797, y: 704 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Leather and Armory Shop Basement is coming soon.",
         npcs: [],
@@ -5847,7 +5847,7 @@ const mapMarkers = {
       place: "Lotor's Summer Palace",
       details: {
         title: "Malson's Demon's Eye Game",
-        coordinates: { x: 839, y: 730 },
+        coordinates: { x: 838, y: 729 },
         image: "images/npcs/Malsons_Demon_Eyes_Game.png",
         lore: "More information about Malson's Demon's Eye Game is coming soon.",
         npcs: [],
@@ -5929,7 +5929,7 @@ const mapMarkers = {
       place: "Lotor's Summer Palace",
       details: {
         title: "Jamoal the Sage (Wanders)",
-        coordinates: { x: 772, y: 687 },
+        coordinates: { x: 770, y: 684 },
         image: "images/npcs/Jamoal_the_Sage_Information.png",
         lore: "Jamoal the Sage (Wanders) - Exchange Race Changing Scrolls NPC.",
         npcs: [],
