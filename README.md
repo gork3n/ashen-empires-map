@@ -13,6 +13,7 @@ An interactive map for Ashen Empires with pixel-perfect coordinates and multiple
 - [Ashen Empires Interactive Map](#ashen-empires-interactive-map)
   - [Live Demo](#live-demo)
   - [Table of Contents](#table-of-contents)
+  - [Customizing the Map](#customizing-the-map)
   - [Features](#features)
   - [Technical Implementation](#technical-implementation)
   - [Map Coordinates](#map-coordinates)
@@ -27,6 +28,25 @@ An interactive map for Ashen Empires with pixel-perfect coordinates and multiple
     - [Submitting Your Changes](#submitting-your-changes)
   - [Development Plan](#development-plan)
   - [Credits](#credits)
+
+## Customizing the Map
+
+The map is designed to be easily configurable. Here are the key files and settings you can adjust:
+
+-   **Marker Size & Appearance**:
+    -   **File**: `js/map.js`
+    -   **Function**: `createMarkerStyle()`
+    -   **Settings**: Adjust `backgroundDiameter`, `iconSize`, `border`, and `shadowBlur` to change the base size and look of all markers.
+
+-   **Marker Scaling at Different Zooms**:
+    -   **File**: `js/map.js`
+    -   **Function**: `addMapMarkers()`
+    -   **Settings**: In the `style` function for the `markerLayer`, modify the `scale` variable's logic to control how large markers appear at different `resolution` (zoom) levels.
+
+-   **Initial Map View**:
+    -   **File**: `js/map.js`
+    -   **Variable**: `initialCenterGameCoords`
+    -   **Settings**: Change the `x` and `y` values to set the default location the map centers on when it first loads.
 
 ## Features
 
