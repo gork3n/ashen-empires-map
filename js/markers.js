@@ -131,6 +131,10 @@ const markerStyles = {
     icon: "icons/3d-stairs.svg",
     color: "#d36517ff", // SaddleBrown
   },
+  underground_ladder: {
+    icon: "icons/hole-ladder.svg",
+    color: "#d36517ff", // SaddleBrown
+  },
   underground_cave: {
     icon: "icons/cave-entrance.svg",
     color: "#d36517ff", // SaddleBrown
@@ -341,7 +345,7 @@ const mapMarkers = {
       place: "Lotor's Summer Palace",
       details: {
         title: "Silvest Portal",
-        coordinates: { x: 810, y: 642 },
+        coordinates: { x: 809, y: 642 },
         image: "images/portals/Silvest_Portal.png",
         lore: "Lotor's Summer Palace to Silvest Portal.",
         npcs: [],
@@ -3592,7 +3596,7 @@ const mapMarkers = {
       place: "Lotor's Summer Palace",
       details: {
         title: "Real Estate Agent",
-        coordinates: { x: 768, y: 618 },
+        coordinates: { x: 768, y: 616 },
         image: "images/npcs/Real_Estate_Agent.png",
         lore: "More information about Real Estate Agent is coming soon.",
         npcs: [],
@@ -4565,6 +4569,20 @@ const mapMarkers = {
         links: [],
       },
     },
+    {
+      type: "underground_ladder",
+      tooltip: "Entrance to Silvest Mine",
+      region: "Silvest Valley",
+      place: "Kobold Castle",
+      details: {
+        title: "Sozal's Cave",
+        coordinates: { x: 1291, y: 1121 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Sozal's Cave is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
 
   
 
@@ -4598,10 +4616,10 @@ const mapMarkers = {
       },
     },
     {
-      type: "underground_stairs",
-      tooltip: "Mirthik's Underground",
+      type: "underground_ladder",
+      tooltip: "Mirthik's Underground Passage",
       region: "Krythan",
-      place: "Mirthik's Underground",
+      place: "Mirthik's Underground Passage",
       details: {
         title: "Gideon's Trapdoor",
         coordinates: { x: 508, y: 607 },
@@ -4612,7 +4630,7 @@ const mapMarkers = {
       },
     },
     {
-      type: "underground_stairs",
+      type: "underground_ladder",
       tooltip: "Mirthik's Underground",
       region: "Krythan",
       place: "Monk Island",
@@ -4640,7 +4658,7 @@ const mapMarkers = {
       },
     },
     {
-      type: "underground_stairs",
+      type: "underground_ladder",
       tooltip: "Holendar's Mansion Basement",
       region: "Krythan",
       place: "Krythan Fields",
@@ -4668,7 +4686,7 @@ const mapMarkers = {
       },
     },
     {
-      type: "underground_stairs",
+      type: "underground_ladder",
       tooltip: "Ladder to LSP Sewer (Away from evil spawn gate)",
       region: "Krythan",
       place: "Krythan Fields",
@@ -4682,7 +4700,7 @@ const mapMarkers = {
       },
     },
     {
-      type: "underground_stairs",
+      type: "underground_ladder",
       tooltip: "Orc Fort Tunnels",
       region: "Krythan",
       place: "Krythan Fields",
@@ -4696,7 +4714,7 @@ const mapMarkers = {
       },
     },
     {
-      type: "underground_stairs",
+      type: "underground_ladder",
       tooltip: "Orc Fort Tunnels",
       region: "Krythan",
       place: "Krythan Fields",
@@ -4724,7 +4742,7 @@ const mapMarkers = {
       },
     },
     {
-      type: "underground_stairs",
+      type: "underground_ladder",
       tooltip: "Krythan Swamp Backdoor",
       region: "Krythan",
       place: "South West Krythan",
@@ -4738,7 +4756,7 @@ const mapMarkers = {
       },
     },
     {
-      type: "underground_stairs",
+      type: "underground_ladder",
       tooltip: "Krythan Swamp Backdoor",
       region: "Krythan",
       place: "Krythan Swamp",
@@ -4782,7 +4800,7 @@ const mapMarkers = {
       },
     },
     {
-      type: "underground_stairs",
+      type: "underground_ladder",
       tooltip: "Lopal Catacombs",
       region: "Krythan",
       place: "Scarab Island",
@@ -5102,7 +5120,7 @@ const mapMarkers = {
       },
     },
     {
-      type: "underground_stairs",
+      type: "underground_ladder",
       tooltip: "Ladder to inside Necropolis",
       region: "Mainland",
       place: "Necropolis",

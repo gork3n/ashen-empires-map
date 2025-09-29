@@ -677,11 +677,11 @@ function createMarkerStyle(markerType) {
     };
 
     // --- 1. Define Marker and Canvas Sizes ---
-    const backgroundDiameter = 28;
-    const iconSize = backgroundDiameter * 0.74; // Further increased icon size by ~2px
-    const border = 2;
-    const shadowBlur = 3;
-    const shadowOffsetY = 2;
+    const backgroundDiameter = 44; // Increased from 36 for better visibility/touch
+    const iconSize = backgroundDiameter * 0.8;
+    const border = 3;
+    const shadowBlur = 4;
+    const shadowOffsetY = 3;
 
     // The canvas must be large enough for the circle, its border, and its shadow.
     const canvasPadding = (border * 2) + (shadowBlur * 2);
@@ -812,10 +812,12 @@ function createUIMarkerIcon(markerType) {
 function addMarkerFeature(source, x, y, type, tooltip, details, place, region) {
     const mapSize = 32768;
     const scaleFactor = mapSize / 4096;
+    const offset = scaleFactor / 2; // Half of the scale factor to center the marker
 
     // Scale coordinates for the new map size and convert to OpenLayers coordinate system (y is inverted)
-    const scaledX = x * scaleFactor;
-    const olY = -(y * scaleFactor);
+    // Add the offset to place the anchor in the center of the scaled pixel block
+    const scaledX = x * scaleFactor + offset;
+    const olY = -(y * scaleFactor) - offset;
     const coordinates = [scaledX, olY];
     
     // Create a feature for the marker
@@ -828,9 +830,6 @@ function addMarkerFeature(source, x, y, type, tooltip, details, place, region) {
         region: region
     });
 
-    // Set the style for the feature
-    feature.setStyle(createMarkerStyle(type));
-    
     // Add the feature to the source
     source.addFeature(feature);
 }
@@ -854,7 +853,21 @@ function addMapMarkers(map) {
             title: category + ' Markers',
             visible: true,
             minResolution: 0, // Set to 0 to ensure markers are always visible when zoomed in.
-            maxResolution: 32  // Hides when zoomed out to level 2 or more (resolution >= 32)
+            maxResolution: 96,  // Hides when zoomed out to level 1 or more (resolution >= 64)
+            style: function(feature, resolution) {
+                const type = feature.get('type');
+                const style = createMarkerStyle(type);
+
+                // Resolutions are [128, 64, 32, 16, 8, 4, 2, 1].
+                // Zoom 7 is resolution 1. Zoom 8 is resolution 0.5.
+                // We want 100% scale at zoom 8 (resolution 0.5) and below.
+                // We want 75% scale at zoom 7 (resolution 1).
+                // We want 50% scale at zoom 6 (resolution 2).
+                const scale = resolution < 1 ? 1.0 : (resolution < 2 ? 0.85 : 0.65);
+                style.getImage().setScale(scale);
+
+                return style;
+            }
         });
         
         // Store the layer reference
@@ -995,10 +1008,12 @@ function addMapLabels(map) {
 function addLabelFeature(source, x, y, text, fontSize, category, details) {
     const mapSize = 32768;
     const scaleFactor = mapSize / 4096;
+    const offset = scaleFactor / 2; // Half of the scale factor to center the label
 
     // Scale coordinates for the new map size and convert to OpenLayers coordinate system (y is inverted)
-    const scaledX = x * scaleFactor;
-    const olY = -(y * scaleFactor);
+    // Add the offset to place the anchor in the center of the scaled pixel block
+    const scaledX = x * scaleFactor + offset;
+    const olY = -(y * scaleFactor) - offset;
     
     // Create a point feature at this location
     const feature = new ol.Feature({
