@@ -28,7 +28,8 @@ This section is migrated from the main README to consolidate all planning detail
 -   🚧 **Expanded Information System**
 -   🚧 **Marker & Label Position Verification**
     -   🚧 A bulk coordinate correction has been applied to all markers and labels to align them with the new map tiles. The process of manually verifying each individual marker against its precise in-game location is now underway to ensure pixel-perfect accuracy across the board.
-    -   ✅ All labels and markers are clickable, providing detailed information via the flyout panel.
+    -   ✅ **Coordinate Centering Correction**: A bulk coordinate correction has been applied to all markers and labels, adding an offset to center them perfectly within their scaled pixel blocks. This fixed a systemic issue where markers were anchored to the top-left corner of their coordinate space instead of the center.
+    -   🚧 With the centering correction in place, the process of manually verifying each individual marker against its precise in-game location is now underway. This will correct any remaining inaccuracies from initial visual estimations.
     -   ✅ **Refactor Complete:** All data has been consolidated into `markers.js` and `labels.js`. The `detail-maps.js` file has been eliminated. This improves data locality and makes it easier to manage and search.
         -   Each marker and label object would contain its own `details`, `region`, and `place` information.
         -   `region`: The major geographical area (e.g., "Krythan", "Tundria").

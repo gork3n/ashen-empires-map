@@ -77,9 +77,11 @@ The map automatically scales these coordinates to the larger map size. This matc
 
 ## A Note on Map & Marker Accuracy
 
-This map has been rebuilt with a new, highly accurate set of tiles. The alignment is now pixel-perfect on most zoom levels. When fully zoomed in, you may still encounter a rare discrepancy of a single pixel, but for all practical purposes, the map coordinates are now extremely precise.
+This map has been rebuilt with a new, highly accurate set of tiles, resulting in near-perfect alignment with in-game coordinates.
 
-Following this high-precision update, a bulk coordinate correction has been applied to all existing markers and labels. While this has fixed the vast majority of misalignments, I am now in the process of manually verifying each marker against its precise in-game location to ensure pixel-perfect accuracy. This is an ongoing effort.
+Following this, a bulk coordinate correction was applied to all markers and labels. This change added a 4-pixel offset to center each marker perfectly within its scaled `8x8` pixel block, fixing a systemic issue where markers were anchored to the top-left corner of their coordinate space.
+
+With this centering correction in place, the process of manually verifying each individual marker against its precise in-game location is now underway. This will correct any remaining inaccuracies from initial visual estimations and ensure pixel-perfect accuracy across the board.
 
 ## Project Structure
 
