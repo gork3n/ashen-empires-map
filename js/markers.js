@@ -418,7 +418,7 @@ const mapMarkers = {
       place: "Real Estate Island",
       details: {
         title: "Portal to Lotor's Summer Palace",
-        coordinates: { x: 661, y: 733 },
+        coordinates: { x: 661, y: 730 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Portal to Lotor's Summer Palace is coming soon.",
         npcs: [],
