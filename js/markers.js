@@ -4238,7 +4238,7 @@ const mapMarkers = {
       place: "Arda",
       details: {
         title: "Bank",
-        coordinates: { x: 3392, y: 3493 },
+        coordinates: { x: 3391, y: 3492 },
         image: "images/npcs/Arda_Bank.png",
         lore: "More information about Bank is coming soon.",
         npcs: [],
