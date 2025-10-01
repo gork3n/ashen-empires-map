@@ -1,5 +1,5 @@
 // Define all map labels organized by category
-const mapLabels = {
+export const mapLabels = {
   landmarks: [
     // Add landmark labels here
     // Valinor Island Landmarks

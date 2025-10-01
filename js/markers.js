@@ -1,4 +1,4 @@
-const markerStyles = {
+export const markerStyles = {
   // Portals & Docks
   portal_lsp: {
     icon: "icons/lsp-portal.svg",
@@ -199,7 +199,7 @@ const markerStyles = {
   },
 };
 
-const mapMarkers = {
+export const mapMarkers = {
   portals: [
     /* Party Island Portals */
     {

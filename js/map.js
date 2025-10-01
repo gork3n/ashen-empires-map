@@ -1,3 +1,20 @@
+import Map from 'ol/Map.js';
+import View from 'ol/View.js';
+import Feature from 'ol/Feature.js';
+import Overlay from 'ol/Overlay.js';
+import { Point } from 'ol/geom.js';
+import TileLayer from 'ol/layer/Tile.js';
+import VectorLayer from 'ol/layer/Vector.js';
+import XYZ from 'ol/source/XYZ.js';
+import VectorSource from 'ol/source/Vector.js';
+import { Style, Icon } from 'ol/style.js';
+import TileGrid from 'ol/tilegrid/TileGrid.js';
+
+// Import local data modules
+import { mapLabels } from './labels.js';
+import { mapMarkers, markerStyles } from './markers.js';
+
+
 // Global constiables
 let labelLayers = {};
 let map;
@@ -182,56 +199,6 @@ const defaultLabelStyle = {
     ]
 };
 
-/**
- * Generic handler for pointer move events to show/hide tooltips.
- * @param {ol.MapBrowserEvent} evt The event object.
- */
-const tooltipPointerMoveHandler = function(evt) {
-    const currentMap = evt.map;
-    if (evt.dragging) {
-        markerTooltipElement.style.display = 'none';
-        return;
-    }
-    const feature = currentMap.forEachFeatureAtPixel(evt.pixel, f => f);
-
-    const markerTooltipText = feature ? feature.get('tooltip') : null;
-    const labelTooltipText = feature ? feature.get('labelTooltip') : null;
-
-    if (markerTooltipText) {
-        const markerType = feature.get('type');
-        const style = markerStyles[markerType] || { icon: 'icons/information.svg', color: '#FF0000' };
-        const animationClass = style.animation === 'beat' ? 'g-icon-beat' : '';
-        markerTooltipElement.innerHTML = `
-            <div class="tooltip-icon">
-                <img src="${style.icon}" alt="${markerType}" class="${animationClass}" style="width: 20px; height: 20px; vertical-align: middle;">
-            </div>
-            <div class="tooltip-text">${markerTooltipText}</div>
-        `;
-        markerTooltipOverlay.setPosition(feature.getGeometry().getCoordinates());
-        markerTooltipElement.style.display = 'flex';
-        currentMap.getTargetElement().style.cursor = 'pointer';
-    } else if (labelTooltipText) {
-        // For labels, we just want the text in a regular font.
-        markerTooltipElement.innerHTML = `<div class="tooltip-text">${labelTooltipText}</div>`;
-        markerTooltipOverlay.setPosition(feature.getGeometry().getCoordinates());
-        markerTooltipElement.style.display = 'flex';
-        currentMap.getTargetElement().style.cursor = 'pointer';
-    } else {
-        markerTooltipElement.style.display = 'none';
-        const hasFeature = currentMap.hasFeatureAtPixel(evt.pixel);
-        currentMap.getTargetElement().style.cursor = hasFeature ? 'pointer' : '';
-    }
-};
-
-/**
- * Generic handler for map move start events to hide tooltips.
- */
-const tooltipMoveStartHandler = function() {
-    if (markerTooltipElement) {
-        markerTooltipElement.style.display = 'none';
-    }
-};
-
 
 document.addEventListener('DOMContentLoaded', function() {
     // The `document.fonts.ready` promise resolves when all fonts are loaded.
@@ -299,40 +266,33 @@ function initializeMap() {
     ];
 
     // Initialize the map
-    map = new ol.Map({
-        pixelRatio: 1, // Improves performance on low-end devices,
+    map = new Map({ // Improves performance on low-end devices,
         target: 'map',
         layers: [
-            new ol.layer.Tile({
-                source: new ol.source.TileImage({
-                    attributions: '<span style="color: white;">Map tiles created by Sir Chris using GDAL2Tiles</span>',
-                    cacheSize: 2048, // Default cache size for a balance of performance and memory usage.
+            new TileLayer({
+                source: new XYZ({
+                    attributions: '<span style="color: white;">Map tiles by Sir Chris via GDAL2Tiles</span>',
                     preload: 0, // Disable preloading to reduce memory usage and improve performance.
-                    tileGrid: new ol.tilegrid.TileGrid({
-                        extent: [0, -32768, 32768, 0],
-                        origin: [0, 0],
-                        resolutions: [128, 64, 32, 16, 8, 4, 2, 1],
-                        tileSize: [256, 256]
-                    }),
-                    tileUrlFunction: function(tileCoord, pixelRatio, projection) {
-                        const z = tileCoord[0];
-                        const x = tileCoord[1];
-                        const y = tileCoord[2];
-                        return `./tiles/${z}/${x}/${y}.png`;
-                    },
+                    url: 'tiles/{z}/{x}/{y}.png',
+                    tileGrid: new TileGrid({
+                        extent: [0, -32768, 32768, 0], // The full extent of your map
+                        origin: [0, 0], // Top-left corner
+                        resolutions: [128, 64, 32, 16, 8, 4, 2, 1], // Resolutions for each zoom level
+                        tileSize: [256, 256] // The size of your tiles
+                    })
                 })
             })
         ],
-        view: new ol.View({
+        view: new View({
             center: initialCenterOlCoords, // Use your calculated center
             resolution: 4, // Set a reasonable starting resolution from your new array
             minResolution: 0.1, // Corresponds to the most zoomed-in level
-            maxResolution: 128,
-            constrainOnlyCenter: true,  // Constrain just the center, not the whole view
-            showFullExtent: true,
-            extent: [0, -32768, 32768, 0]
+            maxResolution: 128, // Corresponds to the most zoomed-out level
+            constrainResolution: true, // Snap to integer zoom levels
         })
     });
+
+
     
     // Add markers to the map
     addMapMarkers(map);
@@ -536,7 +496,7 @@ function hideInfoFlyout() {
  * @param {string} category - The label category (e.g., 'cities', 'landmarks').
  * @param {number} fontSize - The exact font size to render.
  * @param {Object} styleOptions - Custom styling options
- * @returns {ol.style.Style} The style object for the label
+ * @returns {Style} The style object for the label
  */
 function createLabelImageStyle(text, category, fontSize) {
     // Create a cache key to avoid re-creating the same style
@@ -544,7 +504,6 @@ function createLabelImageStyle(text, category, fontSize) {
     if (styleCache[cacheKey]) {
         return styleCache[cacheKey];
     }
-    
     const options = { ...defaultLabelStyle, ...(labelStyles[category] || {}) };
     const finalFontSize = fontSize;
     
@@ -643,8 +602,8 @@ function createLabelImageStyle(text, category, fontSize) {
     const imageUrl = canvas.toDataURL();
     
     // Create style with icon
-    const style = new ol.style.Style({
-        image: new ol.style.Icon({
+    const style = new Style({
+        image: new Icon({
             src: imageUrl,
             anchor: [0.5, 1],
             anchorXUnits: 'fraction',
@@ -653,7 +612,6 @@ function createLabelImageStyle(text, category, fontSize) {
         })
     });
 
-    // Cache and return the style
     styleCache[cacheKey] = style;
     return style;
 }
@@ -663,7 +621,7 @@ function createLabelImageStyle(text, category, fontSize) {
  * This replicates the look of modern map markers and combines them into a single canvas
  * so they scale together.
  * @param {string} markerType - Type of marker, corresponding to a key in `markerStyles`.
- * @returns {ol.style.Style} A single OpenLayers style object.
+ * @returns {Style} A single OpenLayers style object.
  */
 function createMarkerStyle(markerType) {
     const cacheKey = `marker-v2-${markerType}`;
@@ -672,8 +630,8 @@ function createMarkerStyle(markerType) {
     }
 
     const styleProps = markerStyles[markerType] || {
-        icon: 'icons/info.svg', // A fallback icon
-        color: '#FF0000'
+        icon: 'icons/info.svg',
+        color: '#FF0000' // A fallback color
     };
 
     // --- 1. Define Marker and Canvas Sizes ---
@@ -722,8 +680,8 @@ function createMarkerStyle(markerType) {
     }
 
     // --- 5. Create a single style from the composite canvas ---
-    const newStyle = new ol.style.Style({
-        image: new ol.style.Icon({
+    const newStyle = new Style({
+        image: new Icon({
             img: finalCanvas,
             imgSize: [canvasSize, canvasSize],
             scale: 1.0, 
@@ -735,12 +693,6 @@ function createMarkerStyle(markerType) {
     return newStyle;
 }
 
-/**
- * Creates a larger marker icon specifically for UI elements like the filter menu.
- * This is separate from createMarkerStyle to avoid affecting map markers.
- * @param {string} markerType - Type of marker, corresponding to a key in `markerStyles`.
- * @returns {HTMLCanvasElement} A canvas element with the larger icon.
- */
 function createUIMarkerIcon(markerType) {
     const cacheKey = `ui-marker-v1-${markerType}`;
     if (styleCache[cacheKey]) {
@@ -800,7 +752,7 @@ function createUIMarkerIcon(markerType) {
 
 /**
  * Add a single marker to the map
- * @param {ol.source.Vector} source - Vector source
+ * @param {VectorSource} source - Vector source
  * @param {number} x - X coordinate
  * @param {number} y - Y coordinate
  * @param {string} type - Marker type
@@ -812,17 +764,16 @@ function createUIMarkerIcon(markerType) {
 function addMarkerFeature(source, x, y, type, tooltip, details, place, region) {
     const mapSize = 32768;
     const scaleFactor = mapSize / 4096;
-    const offset = scaleFactor / 2; // Half of the scale factor to center the marker
-
-    // Scale coordinates for the new map size and convert to OpenLayers coordinate system (y is inverted)
+    const offset = scaleFactor / 2;
+        // Scale coordinates for the new map size and convert to OpenLayers coordinate system (y is inverted)
     // Add the offset to place the anchor in the center of the scaled pixel block
     const scaledX = x * scaleFactor + offset;
     const olY = -(y * scaleFactor) - offset;
     const coordinates = [scaledX, olY];
     
     // Create a feature for the marker
-    const feature = new ol.Feature({
-        geometry: new ol.geom.Point(coordinates),
+    const feature = new Feature({
+        geometry: new Point(coordinates),
         type: type,
         tooltip: tooltip,
         details: details, // The details object is nested here
@@ -836,24 +787,21 @@ function addMarkerFeature(source, x, y, type, tooltip, details, place, region) {
 
 /**
  * Add map markers by category
- * @param {ol.Map} map - The OpenLayers map
+ * @param {Map} map - The OpenLayers map
  */
 function addMapMarkers(map) {
-    // Get all marker categories
-    const categories = Object.keys(mapMarkers);
+    const categories = Object.keys(mapMarkers); // Get all marker categories
     
     // Create a layer for each category
     categories.forEach(category => {
         // Create vector source for this category
-        const markerSource = new ol.source.Vector();
+        const markerSource = new VectorSource();
         
         // Create vector layer for this category
-        const markerLayer = new ol.layer.Vector({
+        const markerLayer = new VectorLayer({
             source: markerSource,
             title: category + ' Markers',
-            visible: true,
-            minResolution: 0, // Set to 0 to ensure markers are always visible when zoomed in.
-            maxResolution: 96,  // Hides when zoomed out to level 1 or more (resolution >= 64)
+            visible: true, // Set to 0 to ensure markers are always visible when zoomed in.
             style: function(feature, resolution) {
                 const type = feature.get('type');
                 const style = createMarkerStyle(type);
@@ -862,9 +810,8 @@ function addMapMarkers(map) {
                 // Zoom 7 is resolution 1. Zoom 8 is resolution 0.5.
                 // We want 100% scale at zoom 8 (resolution 0.5) and below.
                 // We want 75% scale at zoom 7 (resolution 1).
-                // We want 50% scale at zoom 6 (resolution 2).
-                const scale = resolution < 1 ? 1.0 : (resolution < 2 ? 0.85 : 0.65);
-                style.getImage().setScale(scale);
+                // We want 65% scale at zoom 6 (resolution 2) and above.
+                style.getImage().setScale(resolution < 1 ? 1.0 : (resolution < 2 ? 0.85 : 0.65));
 
                 return style;
             }
@@ -902,102 +849,8 @@ function addMapMarkers(map) {
 }
 
 /**
- * Add all map labels
- * @param {ol.Map} map - The OpenLayers map object
- */
-function addMapLabels(map) {
-    // Get all category names from mapLabels object
-    const categories = Object.keys(mapLabels);
-    
-    // Create a label layer for each category
-    categories.forEach(category => {
-        // Create vector source for this category
-        const labelSource = new ol.source.Vector();
-
-        const layerOptions = {
-            source: labelSource,
-            title: category + ' Labels',
-            visible: true,
-            // Performance: Hide less critical labels when zoomed out to reduce rendering load.
-            // Resolutions correspond to zoom levels. 32 is zoom level 2.
-            // Hiding these layers when resolution is 32 or higher.
-            maxResolution: (category === 'interests' || category === 'caves') ? 32 : undefined,
-            // Performance: To avoid re-rendering labels that are not in view,
-            // we can set a buffer. This tells the layer not to render features
-            // that are outside the viewport. A value of 100 pixels is a good starting point.
-            renderBuffer: 100,
-            // All label categories are now dynamic. They are always visible, and their
-            // font size changes with zoom level, so we use a style function.
-            style: function(feature, resolution) {
-                const text = feature.get('name');
-                const category = feature.get('category');
-                const baseFontSize = feature.get('baseFontSize');
-
-                // This should not happen, but as a safeguard
-                if (!baseFontSize) return null;
-
-                // This formula creates a smooth scaling effect for fonts across all zoom levels.
-                // It avoids the "jumpiness" caused by having a hard cutoff for different resolutions.
-                // The formula is equivalent to: scaleFactor = (2 / resolution) ^ 0.415
-                // At resolution=2 (high zoom), scaleFactor is 1.
-                // At resolution=4, scaleFactor is 0.75.
-                // At resolution=8, scaleFactor is 0.56.
-                const scaleFactor = Math.pow(2 / resolution, 0.415);
-                const newFontSize = Math.max(8, Math.round(baseFontSize * scaleFactor)); // Ensure font size doesn't get too small
-
-                return createLabelImageStyle(text, category, newFontSize);
-            }
-        };
-
-        // Create vector layer for this category
-        const labelLayer = new ol.layer.Vector(layerOptions);
-
-        // Store the layer reference
-        labelLayers[category] = labelLayer;
-
-        // Add the layer to the map
-        map.addLayer(labelLayer);
-
-        // Add all labels in this category
-        if (mapLabels[category] && mapLabels[category].length) {
-            mapLabels[category].forEach((label) => {
-                const coords = label.details.coordinates;
-
-                // Check if coordinates is an array to support multiple locations for one label
-                if (Array.isArray(coords)) {
-                    coords.forEach((coord) => {
-                        addLabelFeature(
-                            labelSource,
-                            coord.x,
-                            coord.y,
-                            label.name,
-                            label.fontSize,
-                            category,
-                            label.details
-                        );
-                    });
-                } else {
-                    // Handle single coordinate object for backward compatibility
-                    addLabelFeature(
-                        labelSource,
-                        coords.x, coords.y, label.name, label.fontSize, category, label.details
-                    );
-                }
-            });
-        }
-    });
-    
-    // Notify the sidebar that labels are loaded with available categories
-    document.dispatchEvent(new CustomEvent('labels-loaded', {
-        detail: {
-            categories: categories
-        }
-    }));
-}
-
-/**
  * Add a single label to the map
- * @param {ol.source.Vector} source - Vector source to add the label to
+ * @param {VectorSource} source - Vector source to add the label to
  * @param {number} x - X coordinate
  * @param {number} y - Y coordinate
  * @param {string} text - Label text
@@ -1016,9 +869,10 @@ function addLabelFeature(source, x, y, text, fontSize, category, details) {
     const olY = -(y * scaleFactor) - offset;
     
     // Create a point feature at this location
-    const feature = new ol.Feature({
-        geometry: new ol.geom.Point([scaledX, olY]),
+    const feature = new Feature({
+        geometry: new Point([scaledX, olY]),
         name: text,
+        baseFontSize: fontSize,
         category: category,
         details: details
     });
@@ -1028,25 +882,110 @@ function addLabelFeature(source, x, y, text, fontSize, category, details) {
         feature.set('labelTooltip', text);
     }
 
-    // Get style options for this category
-    const styleOptions = { ...defaultLabelStyle, ...(labelStyles[category] || {}) };
-    
-    // Override font size if provided
-    if (fontSize) {
-        styleOptions.fontSize = fontSize;
-    }
-
     // Since all labels are now dynamic, we just store the base font size.
     // The style will be calculated by the layer's style function.
-    feature.set('baseFontSize', styleOptions.fontSize);
+    feature.set('baseFontSize', fontSize);
 
     // Add the feature to the provided source
     source.addFeature(feature);
 }
+/**
+ * Add all map labels
+ * @param {Map} map - The OpenLayers map object
+ */
+function addMapLabels(map) {
+    // Get all category names from mapLabels object
+    const categories = Object.keys(mapLabels);
+    
+    // Create a label layer for each category
+    categories.forEach(category => {
+        // Create vector source for this category
+        const labelSource = new VectorSource();
+
+        const layerOptions = {
+            source: labelSource,
+            title: category + ' Labels',
+            visible: true,
+            /* Performance: Hide less critical labels when zoomed out to reduce rendering load.
+            Resolutions correspond to zoom levels. 32 is zoom level 2.            
+            we can set a buffer. This tells the layer not to render features
+            that are outside the viewport. A value of 100 pixels is a good starting point. */
+            renderBuffer: 100,
+            // All label categories are now dynamic. They are always visible, and their
+            // font size changes with zoom level, so we use a style function.
+            style: function(feature, resolution) {
+                const text = feature.get('name');
+                const category = feature.get('category');
+                const baseFontSize = feature.get('baseFontSize');
+                
+                 // This should not happen, but as a safeguard
+                if (!baseFontSize) return null;
+
+                // This formula creates a smooth scaling effect for fonts across all zoom levels.
+                // It avoids the "jumpiness" caused by having a hard cutoff for different resolutions.
+                // The formula is equivalent to: scaleFactor = (2 / resolution) ^ 0.415
+                // At resolution=2 (high zoom), scaleFactor is 1.
+                // At resolution=4, scaleFactor is 0.75.
+                // At resolution=8, scaleFactor is 0.56.
+                const scaleFactor = Math.pow(2 / resolution, 0.415);
+                const newFontSize = Math.max(8, Math.round(baseFontSize * scaleFactor)); // Ensure font size doesn't get too small
+
+                return createLabelImageStyle(text, category, newFontSize);
+            }
+        };
+
+        // Create vector layer for this category
+        const labelLayer = new VectorLayer(layerOptions);
+
+        // Store the layer reference
+        labelLayers[category] = labelLayer;
+
+        // Add the layer to the map
+        map.addLayer(labelLayer);
+
+        // Add all labels in this category
+        if (mapLabels[category] && mapLabels[category].length) {
+            mapLabels[category].forEach((label) => {
+                const coords = label.details.coordinates;
+
+                // Check if coordinates is an array to support multiple locations for one label
+                if (Array.isArray(coords)) {
+                    coords.forEach((coord) => {
+                        addLabelFeature(
+                            labelSource, 
+                            coord.x, 
+                            coord.y, 
+                            label.name, 
+                            label.fontSize, 
+                            category, 
+                            label.details
+                        );
+                    });
+                } else {
+
+                    // Handle single coordinate object for backward compatibility
+                    addLabelFeature(
+                        labelSource, 
+                        coords.x, 
+                        coords.y, 
+                        label.name, label.fontSize, category, label.details
+                    );
+                }
+            });
+        }
+    });
+    
+    // Notify the sidebar that labels are loaded with available categories
+    document.dispatchEvent(new CustomEvent('labels-loaded', {
+        detail: {
+            categories: categories
+        }
+    }));
+}
 
 /**
  * Set up tooltip interaction for markers
- * @param {ol.Map} map - The OpenLayers map
+ * @param {Map} map - The OpenLayers map
  */
 function setupMarkerTooltips(map) {
     // Create tooltip element if it doesn't exist
@@ -1057,7 +996,7 @@ function setupMarkerTooltips(map) {
         document.body.appendChild(markerTooltipElement);
         
         // Create overlay for the tooltip
-        markerTooltipOverlay = new ol.Overlay({
+        markerTooltipOverlay = new Overlay({
             element: markerTooltipElement,
             offset: [10, 0],
             positioning: 'bottom-left'
@@ -1066,11 +1005,44 @@ function setupMarkerTooltips(map) {
         map.addOverlay(markerTooltipOverlay);
     }
     
-    // Attach the generic handlers to the map instance
-    map.on('pointermove', tooltipPointerMoveHandler);
+    const tooltipPointerMoveHandler = function(evt) {
+        const currentMap = evt.map;
+        if (evt.dragging) {
+            markerTooltipElement.style.display = 'none';
+            return;
+        }
+        const feature = currentMap.forEachFeatureAtPixel(evt.pixel, f => f);
+
+        const markerTooltipText = feature ? feature.get('tooltip') : null;
+        const labelTooltipText = feature ? feature.get('labelTooltip') : null;
+
+        if (markerTooltipText) {
+            const markerType = feature.get('type');
+            const style = markerStyles[markerType] || { icon: 'icons/information.svg', color: '#FF0000' };
+            markerTooltipElement.innerHTML = `
+                <div class="tooltip-icon">
+                    <img src="${style.icon}" alt="${markerType}" style="width: 20px; height: 20px; vertical-align: middle;">
+                </div>
+                <div class="tooltip-text">${markerTooltipText}</div>
+            `;
+            markerTooltipOverlay.setPosition(feature.getGeometry().getCoordinates());
+            markerTooltipElement.style.display = 'flex';
+            currentMap.getTargetElement().style.cursor = 'pointer';
+        } else if (labelTooltipText) {
+            markerTooltipElement.innerHTML = `<div class="tooltip-text">${labelTooltipText}</div>`;
+            markerTooltipOverlay.setPosition(feature.getGeometry().getCoordinates());
+            markerTooltipElement.style.display = 'flex';
+            currentMap.getTargetElement().style.cursor = 'pointer';
+        } else {
+            markerTooltipElement.style.display = 'none';
+            currentMap.getTargetElement().style.cursor = currentMap.hasFeatureAtPixel(evt.pixel) ? 'pointer' : '';
+        }
+    };
     
-    // Hide tooltip when map is moved
-    map.on('movestart', tooltipMoveStartHandler);
+    map.on('pointermove', tooltipPointerMoveHandler);
+    map.on('movestart', () => {
+        if (markerTooltipElement) markerTooltipElement.style.display = 'none';
+    });
 }
 
 // Replace the MousePosition control code with this custom implementation
@@ -1082,8 +1054,7 @@ function setupMarkerTooltips(map) {
 //         return 'X: ' + Math.round(coord[0]) + ' | Y: ' + Math.round(4096 - coord[1]); // Adjust Y if needed
 //     },
 //     projection: 'EPSG:3857', // Or whatever projection you're using
-//     className: 'custom-mouse-position', // Custom class instead of using the element ID
-//     target: document.getElementById('mouse-position'), // Keep using the sidebar's mouse-position div
+//     className: 'custom-mouse-position'osition'), // Keep using the sidebar's mouse-position div
 //     undefinedHTML: 'X: --- | Y: ---'
 // });
 //

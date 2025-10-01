@@ -2,8 +2,7 @@
 <html>
 <head>
     <title>Ashen Empires Map</title>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-    <meta http-equiv='imagetoolbar' content='no'/>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
     <!-- Google Font - Alegreya Sans -->
@@ -12,9 +11,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap" rel="stylesheet">
     
     <!-- CSS files -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@main/dist/en/v7.0.0/legacy/ol.css">
-    <link rel="stylesheet" href="https://unpkg.com/ol-layerswitcher@4.1.1/src/ol-layerswitcher.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v9.2.4/ol.css">
     <link rel="stylesheet" href="css/map-styles.css">
+
+    <!-- Definitive Import Map for OpenLayers and its dependencies -->
+    <script type="importmap">
+      {
+        "imports": {
+          "ol/": "https://cdn.jsdelivr.net/npm/ol@v9.2.4/",
+          "rbush": "https://esm.sh/rbush@3.0.1",
+          "color-space/": "https://cdn.jsdelivr.net/npm/color-space@2.0.1/",
+          "color-rgba": "https://cdn.jsdelivr.net/npm/color-rgba@2.4.0/index.mjs",
+          "color-parse": "https://cdn.jsdelivr.net/npm/color-parse@1.4.1/index.mjs",
+          "color-name": "https://esm.sh/color-name@1.1.4"
+        }
+      }
+    </script>
 
     <!-- Google Material Symbols -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -47,9 +59,6 @@
             text-decoration: underline;
         }
     </style>
-
-    <!-- JavaScript libraries -->
-    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@main/dist/en/v7.0.0/legacy/ol.js"></script>
 </head>
 <body>
     <!-- Filter Menu -->
@@ -122,11 +131,11 @@
     </div>
     
     <!-- Load your custom JavaScript -->
-    <script src="js/labels.js"></script>
-    <script src="js/markers.js"></script>
-    <script src="js/map.js"></script>
-    <script src="js/tips.js"></script>
-    <script src="js/filter-menu.js"></script>
+    <script type="module" src="js/labels.js"></script>
+    <script type="module" src="js/markers.js"></script>
+    <script type="module" src="js/map.js"></script>
+    <script type="module" src="js/tips.js"></script>
+    <script type="module" src="js/filter-menu.js"></script>
 
     <!-- Tips Modal -->
     <div id="tips-modal" class="modal-overlay" style="display: none;">
