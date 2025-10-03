@@ -571,6 +571,9 @@ input:checked + .slider:before {
     padding-bottom: 10px;
     margin-bottom: 15px;
 }
+.modal-content h2 {
+    flex-shrink: 0; /* Prevent the header from shrinking */
+}
 
 .modal-body {
     flex-grow: 1;

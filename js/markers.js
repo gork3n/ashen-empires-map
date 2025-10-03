@@ -13,7 +13,7 @@ export const markerStyles = {
     color: "#DA70D6", // Orchid
   },
   portal_housing: {
-    icon: "icons/bank.svg", // Placeholder, a house icon would be better
+    icon: "icons/house.svg",
     color: "#32CD32", // LimeGreen
   },
   portal_ancient: {
@@ -272,6 +272,37 @@ export const mapMarkers = {
       },
     },
     //Done
+    // Housing Realm Portals
+    // Lotor's Summer Palace Housing Realm Portal
+    {
+      type: "portal_housing",
+      tooltip: "Portal to Housing Realm",
+      region: "Krythan",
+      place: "Lotor's Summer Palace",
+      details: {
+        title: "Portal to Housing Realm",
+        coordinates: { x: 768, y: 613 },
+        image: "images/portals/LSP_Housing_Realm_Portal.png",
+        lore: "More information about Portal to Housing Realm is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    // Parian Housing Realm Portal
+    {
+      type: "portal_housing",
+      tooltip: "Portal to Housing Realm",
+      region: "Highlands",
+      place: "Lotor's Summer Palace",
+      details: {
+        title: "Portal to Housing Realm",
+        coordinates: { x: 3464, y: 3131 },
+        image: "images/portals/Parian_Housing_Realm_Portal.png",
+        lore: "More information about Portal to Housing Realm is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
 
     /* Lotor's Summer Palace Portals */
 
@@ -300,20 +331,6 @@ export const mapMarkers = {
         coordinates: { x: 761, y: 644 },
         image: "images/portals/PvP_Island_Portal.png",
         lore: "More information about Portal to PvP Island is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "portal_housing",
-      tooltip: "Portal to Housing Realm",
-      region: "Krythan",
-      place: "Lotor's Summer Palace",
-      details: {
-        title: "Portal to Housing Realm",
-        coordinates: { x: 768, y: 613 },
-        image: "images/portals/LSP_Housing_Realm_Portal.png",
-        lore: "More information about Portal to Housing Realm is coming soon.",
         npcs: [],
         links: [],
       },
