@@ -1,24 +1,21 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // The 'map-ready' event signifies that the map is initialized and we can build the UI.
-    document.addEventListener('map-ready', function() {
-        console.log('[Filter Menu] Event received: map-ready');
-        initFilterMenu();
-    });
-
-    // The 'icons-ready' event signifies that marker icons are preloaded and we can create the marker buttons.
-    document.addEventListener('icons-ready', function() {
-        console.log('[Filter Menu] Event received: icons-ready');
-        createMarkerToggleButtons();
-        // Re-run setupMasterToggleButtons to include the newly created marker buttons.
-        setupMasterToggleButtons();
-    });
-});
-
+let mapMarkers, markerStyles, markerLayers, createUIMarkerIcon;
 
 /**
- * Initialize filter menu functionality
+ * Initialize filter menu functionality. This is the main entry point for this module.
+ * @param {object} data - The data object from map.js.
+ * @param {object} data.mapMarkers - The marker data.
+ * @param {object} data.markerStyles - The marker style definitions.
+ * @param {object} data.markerLayers - The marker layer references. 
+ * @param {Function} data.createUIMarkerIcon - The function to create UI icons.
  */
-function initFilterMenu() {
+export function initializeFilterMenu(data) {
+    console.log('[Filter Menu] Initializing with data from map.js...');
+    // Receive data directly from the function call
+    mapMarkers = data.mapMarkers;
+    markerStyles = data.markerStyles;
+    markerLayers = data.markerLayers;
+    createUIMarkerIcon = data.createUIMarkerIcon;
+
     const filterMenu = document.getElementById('filter-menu');
     const filterMenuToggle = document.getElementById('filter-menu-toggle');
     const mobileFiltersBtn = document.getElementById('mobile-filters-btn');
@@ -26,19 +23,33 @@ function initFilterMenu() {
     // The floating filter button on mobile toggles the menu
     if (mobileFiltersBtn) {
         mobileFiltersBtn.addEventListener('click', () => {
-            filterMenu.classList.toggle('open');
+            const isOpen = filterMenu.classList.toggle('open');
+            mobileFiltersBtn.classList.toggle('hidden', isOpen);
         });
     }
 
     // The header toggle button always closes the menu
     if (filterMenuToggle && filterMenu) {
         filterMenuToggle.addEventListener('click', function() {
-            filterMenu.classList.remove('open');
+            const isOpen = filterMenu.classList.remove('open');
+            mobileFiltersBtn.classList.remove('hidden', !isOpen);
         });
     }
 
+    // Add a listener to the whole window to close the menu when clicking outside
+    window.addEventListener('click', function(event) {
+        // Check if the menu is open and the click was outside the menu and not on the toggle button itself
+        // This prevents the menu from closing immediately when the toggle button is clicked.
+        if (filterMenu.classList.contains('open') && !filterMenu.contains(event.target) && event.target !== mobileFiltersBtn && !mobileFiltersBtn.contains(event.target)) {
+            filterMenu.classList.remove('open');
+            mobileFiltersBtn.classList.remove('hidden');
+        }
+    });
+
+
     // Create individual toggle buttons for each section
     createLabelToggleButtons();
+    createMarkerToggleButtons();
     setupMasterToggleButtons();
 }
 
@@ -190,20 +201,11 @@ function createMarkerToggleButtons() {
     
     const markerCategories = [
         { id: 'portals', name: 'Portals', type: 'portal_lsp' },
-        { id: 'docks', name: 'Docks', type: 'dock' },
-        { id: 'quests', name: 'Quests', type: 'quest' },
         { id: 'shops', name: 'Shops', type: 'shop_generic' },
-        { id: 'trainers', name: 'Trainers', type: 'trainer' },
-        { id: 'spawn_good', name: 'Good Spawns', type: 'spawn_good' },
-        { id: 'spawn_evil', name: 'Evil Spawns', type: 'spawn_evil' },
-        { id: 'banks', name: 'Banks', type: 'bank' },
-        { id: 'altars', name: 'Altars', type: 'altar' },
-        { id: 'makers', name: 'Makers', type: 'obelisk' },
+        { id: 'services_npcs', name: 'Services & NPCs', type: 'services_npcs' },
+        { id: 'spawns', name: 'Spawns', type: 'spawn_good' },
         { id: 'undergrounds', name: 'Undergrounds', type: 'underground_cave' },
-        { id: 'events', name: 'Events', type: 'event_ticket' },
-        { id: 'games_of_chance', name: 'Games of Chance', type: 'game_of_chance' },
-        { id: 'guards', name: 'Guards', type: 'town_guard' },
-        { id: 'information', name: 'Information', type: 'information' }
+        
     ];
 
     markerCategories.forEach(category => {

@@ -101,6 +101,12 @@ export const markerStyles = {
     color: "#32CD32", // LimeGreen
   },
 
+  // Services and NPCs
+  services_npcs: {
+    icon: "icons/guards.svg",
+    color: "#4682B4", // SteelBlue
+  },
+
   // Trainers
   trainer: {
     icon: "icons/white-book.svg",
@@ -127,7 +133,7 @@ export const markerStyles = {
 
   // Bank
   bank: {
-    icon: "icons/bank.svg",
+    icon: "icons/knapsack.svg",
     color: "#c9b128ff", // GoldenRod
   },
 
@@ -207,7 +213,7 @@ export const markerStyles = {
   },
   event_ticket: {
     icon: "icons/ticket.svg",
-    color: "#C0C0C0", // Silver - a bright, neutral color
+    color: "#963a3aff", // Dark Sienna
   },
   event_judge: {
     icon: "icons/gavel.svg",
@@ -1140,7 +1146,354 @@ export const mapMarkers = {
     },
   ],
 
-  docks: [
+  services_npcs: [
+    // Sub-Category Quests NPCs
+    // Valinor Island Quests
+    {
+      type: "quest",
+      tooltip: "Sandre (Wanders)",
+      region: "Valinor Island",
+      place: "Valinor",
+      details: {
+        title: "Sandre (Wanders)",
+        coordinates: { x: 768, y: 137 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Sandre (Wanders) is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "quest",
+      tooltip: "Kumba Northern (Wanders)",
+      region: "Valinor Island",
+      place: "Valinor",
+      details: {
+        title: "Kumba Northern (Wanders)",
+        coordinates: { x: 757, y: 135 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Kumba Northern (Wanders) is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "quest",
+      tooltip: "Mary Locksley (Wanders)",
+      region: "Valinor Island",
+      place: "Valinor",
+      details: {
+        title: "Mary Locksley (Wanders)",
+        coordinates: { x: 772, y: 144 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Mary Locksley (Wanders) is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "quest",
+      tooltip: "Davey Logan (Wanders)",
+      region: "Valinor Island",
+      place: "Valinor",
+      details: {
+        title: "Davey Logan (Wanders)",
+        coordinates: { x: 745, y: 143 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Davey Logan (Wanders) is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "quest",
+      tooltip: "Imica (Wanders)",
+      region: "Valinor Island",
+      place: "Valinor",
+      details: {
+        title: "Imica (Wanders)",
+        coordinates: { x: 742, y: 135 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Imica (Wanders) is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "quest",
+      tooltip: "Timothy Jager (Wanders)",
+      region: "Valinor Island",
+      place: "Valinor",
+      details: {
+        title: "Timothy Jager (Wanders)",
+        coordinates: { x: 732, y: 135 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Timothy Jager (Wanders) is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "quest",
+      tooltip: "Sandre (Wanders)",
+      region: "Valinor Island",
+      place: "Valinor",
+      details: {
+        title: "Sandre (Wanders)",
+        coordinates: { x: 748, y: 104 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Sandre (Wanders) is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "quest",
+      tooltip: "Hereward (Wanders)",
+      region: "Valinor Island",
+      place: "Valinor",
+      details: {
+        title: "Hereward (Wanders)",
+        coordinates: { x: 764, y: 143 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Hereward (Wanders) is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "quest",
+      tooltip: "Topacia (Wanders)",
+      region: "Valinor Island",
+      place: "Valinor",
+      details: {
+        title: "Topacia (Wanders)",
+        coordinates: { x: 770, y: 108 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Topacia (Wanders) is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "quest",
+      tooltip: "Alchemist Baki",
+      region: "Valinor Island",
+      place: "Valinor",
+      details: {
+        title: "Alchemist Baki",
+        coordinates: { x: 780, y: 114 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Alchemist Baki is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "quest",
+      tooltip: "Sarah Bent",
+      region: "Valinor Island",
+      place: "Valinor",
+      details: {
+        title: "Sarah Bent",
+        coordinates: { x: 781, y: 119 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Sarah Bent is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "quest",
+      tooltip: "Serina Wilcut",
+      region: "Valinor Island",
+      place: "Valinor",
+      details: {
+        title: "Serina Wilcut",
+        coordinates: { x: 781, y: 121 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Serina Wilcut is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "quest",
+      tooltip: "Knight Bastrop",
+      region: "Valinor Island",
+      place: "Valinor",
+      details: {
+        title: "Knight Bastrop",
+        coordinates: { x: 779, y: 123 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Knight Bastrop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "quest",
+      tooltip: "Eustacius (Wanders)",
+      region: "Valinor Island",
+      place: "Valinor",
+      details: {
+        title: "Eustacius (Wanders)",
+        coordinates: { x: 785, y: 125 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Eustacius (Wanders) is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "quest",
+      tooltip: "Curtis Leabu (Wanders)",
+      region: "Valinor Island",
+      place: "Valinor",
+      details: {
+        title: "Curtis Leabu (Wanders)",
+        coordinates: { x: 786, y: 95 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Curtis Leabu (Wanders) is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "quest",
+      tooltip: "Hasculf (Wanders)",
+      region: "Valinor Island",
+      place: "Valinor",
+      details: {
+        title: "Hasculf (Wanders)",
+        coordinates: { x: 782, y: 93 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Hasculf (Wanders) is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "quest",
+      tooltip: "A Young Maid (Wanders)",
+      region: "Valinor Island",
+      place: "Valinor",
+      details: {
+        title: "A Young Maid (Wanders)",
+        coordinates: { x: 794, y: 156 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about A Young Maid (Wanders) is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "quest",
+      tooltip: "Eastern Gate Lieutenant",
+      region: "Valinor Island",
+      place: "Valinor",
+      details: {
+        title: "Eastern Gate Lieutenant",
+        coordinates: { x: 885, y: 136 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Eastern Gate Lieutenant is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "quest",
+      tooltip: "Roger Duncan",
+      region: "Valinor Island",
+      place: "Valinor",
+      details: {
+        title: "Roger Duncan",
+        coordinates: { x: 646, y: 179 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Roger Duncan is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "quest",
+      tooltip: "Paula Duncan",
+      region: "Valinor Island",
+      place: "Valinor",
+      details: {
+        title: "Paula Duncan",
+        coordinates: { x: 646, y: 187 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Paula Duncan is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // Krythan Island Quests
+
+    // Lotor's Summer Palace Quests
+    {
+      type: "quest",
+      tooltip: "Captain Renwood",
+      region: "Krythan",
+      place: "Lotor's Summer Palace",
+      details: {
+        title: "Captain Renwood",
+        coordinates: { x: 793, y: 601 },
+        image: "images/npcs/Captain_Renwood_Quest.png", // Placeholder image path
+        lore: "Captain Renwood is a quest-giving NPC located in Lotor's Summer Palace. He is looking for heroes to assist with various tasks.",
+        npcs: [],
+        links: [{ text: "Ashen Empires Wiki (Royal Relic)", url: "https://ashenempires.fandom.com/wiki/Royal_Relic" }],
+      },
+    },
+    {
+      type: "quest",
+      tooltip: "Donkeo",
+      region: "Krythan",
+      place: "Lotor's Summer Palace",
+      details: {
+        title: "Donkeo",
+        coordinates: { x: 850, y: 726 },
+        image: "images/npcs/Donkeo_Quest.png",
+        lore: "More information about Donkeo is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "quest",
+      tooltip: "Rodald (Wanders) - Rock Trolls Near Josody",
+      region: "Krythan",
+      place: "Lotor's Summer Palace",
+      details: {
+        title: "Rodald (Wanders) - Rock Trolls Near Josody",
+        coordinates: { x: 824, y: 675 },
+        image: "images/npcs/Rodald_Quest.png", 
+        lore: "More information about Rodald (Wanders) - Rock Trolls Near Josody is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "quest",
+      tooltip: "Estiban (Wanders) - Sand Golems",
+      region: "Krythan",
+      place: "Lotor's Summer Palace",
+      details: {
+        title: "Estiban (Wanders) - Sand Golems",
+        coordinates: { x: 842, y: 697 },
+        image: "images/npcs/Estiban_Quest.png", 
+        lore: "More information about Estiban (Wanders) - Sand Golems is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    //Done
+
+    // Add more quests NPCs as needed
+
+    // Sub-Category Docks
     /* Valinor Island Docks */
     // No active docks on Valinor Island as of now
 
@@ -2091,353 +2444,1166 @@ export const mapMarkers = {
         links: [],
       },
     },
-  ],
 
-  quests: [
-    // Valinor Island Quests
+
+    // Sub-Category Information
+    /* Valinor Island Information */
+
+    /*Lotor's Summer Palace Information*/
     {
-      type: "quest",
-      tooltip: "Sandre (Wanders)",
-      region: "Valinor Island",
-      place: "Valinor",
+      type: "information",
+      tooltip: "Fallen Warriors Memorial",
+      region: "Krythan",
+      place: "Lotor's Summer Palace",
       details: {
-        title: "Sandre (Wanders)",
-        coordinates: { x: 768, y: 137 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Sandre (Wanders) is coming soon.",
+        title: "Fallen Warriors Memorial",
+        coordinates: { x: 736, y: 591 },
+        image: "images/npcs/Fallen_Warriors_Memorial.png",
+        lore: "More information about Fallen Warriors Memorial is coming soon.",
         npcs: [],
         links: [],
       },
     },
     {
-      type: "quest",
-      tooltip: "Kumba Northern (Wanders)",
-      region: "Valinor Island",
-      place: "Valinor",
+      type: "information",
+      tooltip: "Memorial to the Lost Sons",
+      region: "Krythan",
+      place: "Lotor's Summer Palace",
       details: {
-        title: "Kumba Northern (Wanders)",
-        coordinates: { x: 757, y: 135 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Kumba Northern (Wanders) is coming soon.",
+        title: "Memorial to the Lost Sons",
+        coordinates: { x: 715, y: 602 },
+        image: "images/npcs/Memorial_to_the_Lost_Sons.png",
+        lore: "More information about Memorial to the Lost Sons is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },{
+      type: "information",
+      tooltip: "Brain Smith Memorial",
+      region: "Krythan",
+      place: "Lotor's Summer Palace",
+      details: {
+        title: "Brain Smith Memorial",
+        coordinates: { x: 761, y: 708 },
+        image: "images/npcs/Brain_Smith_Memorial.png",
+        lore: "More information about Brain Smith Memorial is coming soon.",
         npcs: [],
         links: [],
       },
     },
     {
-      type: "quest",
-      tooltip: "Mary Locksley (Wanders)",
-      region: "Valinor Island",
-      place: "Valinor",
+      type: "information",
+      tooltip: "Jamoal the Sage (Wanders)",
+      region: "Krythan",
+      place: "Lotor's Summer Palace",
       details: {
-        title: "Mary Locksley (Wanders)",
-        coordinates: { x: 772, y: 144 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Mary Locksley (Wanders) is coming soon.",
+        title: "Jamoal the Sage (Wanders)",
+        coordinates: { x: 770, y: 684 },
+        image: "images/npcs/Jamoal_the_Sage_Information.png",
+        lore: "Jamoal the Sage (Wanders) - Exchange Race Changing Scrolls NPC.",
         npcs: [],
         links: [],
       },
     },
     {
-      type: "quest",
-      tooltip: "Davey Logan (Wanders)",
-      region: "Valinor Island",
-      place: "Valinor",
+      type: "information",
+      tooltip: "PvP Island Information",
+      region: "Krythan",
+      place: "Lotor's Summer Palace",
       details: {
-        title: "Davey Logan (Wanders)",
-        coordinates: { x: 745, y: 143 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Davey Logan (Wanders) is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "quest",
-      tooltip: "Imica (Wanders)",
-      region: "Valinor Island",
-      place: "Valinor",
-      details: {
-        title: "Imica (Wanders)",
-        coordinates: { x: 742, y: 135 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Imica (Wanders) is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "quest",
-      tooltip: "Timothy Jager (Wanders)",
-      region: "Valinor Island",
-      place: "Valinor",
-      details: {
-        title: "Timothy Jager (Wanders)",
-        coordinates: { x: 732, y: 135 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Timothy Jager (Wanders) is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "quest",
-      tooltip: "Sandre (Wanders)",
-      region: "Valinor Island",
-      place: "Valinor",
-      details: {
-        title: "Sandre (Wanders)",
-        coordinates: { x: 748, y: 104 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Sandre (Wanders) is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "quest",
-      tooltip: "Hereward (Wanders)",
-      region: "Valinor Island",
-      place: "Valinor",
-      details: {
-        title: "Hereward (Wanders)",
-        coordinates: { x: 764, y: 143 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Hereward (Wanders) is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "quest",
-      tooltip: "Topacia (Wanders)",
-      region: "Valinor Island",
-      place: "Valinor",
-      details: {
-        title: "Topacia (Wanders)",
-        coordinates: { x: 770, y: 108 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Topacia (Wanders) is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "quest",
-      tooltip: "Alchemist Baki",
-      region: "Valinor Island",
-      place: "Valinor",
-      details: {
-        title: "Alchemist Baki",
-        coordinates: { x: 780, y: 114 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Alchemist Baki is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "quest",
-      tooltip: "Sarah Bent",
-      region: "Valinor Island",
-      place: "Valinor",
-      details: {
-        title: "Sarah Bent",
-        coordinates: { x: 781, y: 119 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Sarah Bent is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "quest",
-      tooltip: "Serina Wilcut",
-      region: "Valinor Island",
-      place: "Valinor",
-      details: {
-        title: "Serina Wilcut",
-        coordinates: { x: 781, y: 121 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Serina Wilcut is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "quest",
-      tooltip: "Knight Bastrop",
-      region: "Valinor Island",
-      place: "Valinor",
-      details: {
-        title: "Knight Bastrop",
-        coordinates: { x: 779, y: 123 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Knight Bastrop is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "quest",
-      tooltip: "Eustacius (Wanders)",
-      region: "Valinor Island",
-      place: "Valinor",
-      details: {
-        title: "Eustacius (Wanders)",
-        coordinates: { x: 785, y: 125 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Eustacius (Wanders) is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "quest",
-      tooltip: "Curtis Leabu (Wanders)",
-      region: "Valinor Island",
-      place: "Valinor",
-      details: {
-        title: "Curtis Leabu (Wanders)",
-        coordinates: { x: 786, y: 95 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Curtis Leabu (Wanders) is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "quest",
-      tooltip: "Hasculf (Wanders)",
-      region: "Valinor Island",
-      place: "Valinor",
-      details: {
-        title: "Hasculf (Wanders)",
-        coordinates: { x: 782, y: 93 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Hasculf (Wanders) is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "quest",
-      tooltip: "A Young Maid (Wanders)",
-      region: "Valinor Island",
-      place: "Valinor",
-      details: {
-        title: "A Young Maid (Wanders)",
-        coordinates: { x: 794, y: 156 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about A Young Maid (Wanders) is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "quest",
-      tooltip: "Eastern Gate Lieutenant",
-      region: "Valinor Island",
-      place: "Valinor",
-      details: {
-        title: "Eastern Gate Lieutenant",
-        coordinates: { x: 885, y: 136 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Eastern Gate Lieutenant is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "quest",
-      tooltip: "Roger Duncan",
-      region: "Valinor Island",
-      place: "Valinor",
-      details: {
-        title: "Roger Duncan",
-        coordinates: { x: 646, y: 179 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Roger Duncan is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "quest",
-      tooltip: "Paula Duncan",
-      region: "Valinor Island",
-      place: "Valinor",
-      details: {
-        title: "Paula Duncan",
-        coordinates: { x: 646, y: 187 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Paula Duncan is coming soon.",
+        title: "PvP Island",
+        coordinates: { x: 759, y: 643 },
+        image: "images/npcs/PvP_Island_Information.png",
+        lore: "NPC with information about PvP Island.",
         npcs: [],
         links: [],
       },
     },
 
-    // Krythan Island Quests
+    // Krythan Island Information
+    // Silvest Valley Region Information
 
-    // Lotor's Summer Palace Quests
+    // Krythan Region Information
+    // Verthpool Information
     {
-      type: "quest",
-      tooltip: "Captain Renwood",
+      type: "information",
+      tooltip: "Grim Demonhunter",
       region: "Krythan",
-      place: "Lotor's Summer Palace",
+      place: "Vrethpool",
       details: {
-        title: "Captain Renwood",
-        coordinates: { x: 793, y: 601 },
-        image: "images/npcs/Captain_Renwood_Quest.png", // Placeholder image path
-        lore: "Captain Renwood is a quest-giving NPC located in Lotor's Summer Palace. He is looking for heroes to assist with various tasks.",
-        npcs: [],
-        links: [{ text: "Ashen Empires Wiki (Royal Relic)", url: "https://ashenempires.fandom.com/wiki/Royal_Relic" }],
-      },
-    },
-    {
-      type: "quest",
-      tooltip: "Donkeo",
-      region: "Krythan",
-      place: "Lotor's Summer Palace",
-      details: {
-        title: "Donkeo",
-        coordinates: { x: 850, y: 726 },
-        image: "images/npcs/Donkeo_Quest.png",
-        lore: "More information about Donkeo is coming soon.",
+        title: "Grim Demonhunter",
+        coordinates: { x: 647, y: 1709 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Grim Demonhunter is coming soon.",
         npcs: [],
         links: [],
       },
     },
-    {
-      type: "quest",
-      tooltip: "Rodald (Wanders) - Rock Trolls Near Josody",
-      region: "Krythan",
-      place: "Lotor's Summer Palace",
-      details: {
-        title: "Rodald (Wanders) - Rock Trolls Near Josody",
-        coordinates: { x: 824, y: 675 },
-        image: "images/npcs/Rodald_Quest.png", 
-        lore: "More information about Rodald (Wanders) - Rock Trolls Near Josody is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "quest",
-      tooltip: "Estiban (Wanders) - Sand Golems",
-      region: "Krythan",
-      place: "Lotor's Summer Palace",
-      details: {
-        title: "Estiban (Wanders) - Sand Golems",
-        coordinates: { x: 842, y: 697 },
-        image: "images/npcs/Estiban_Quest.png", 
-        lore: "More information about Estiban (Wanders) - Sand Golems is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    //Done
 
-    // Add more quests NPCs as needed
+    // Mainland Information
+
+    // Region: Darkwood Information
+    {
+      type: "information",
+      tooltip: "The Utopia Shard",
+      region: "Mainland",
+      place: "Darkwoods",
+      details: {
+        title: "The Utopia Shard",
+        coordinates: { x: 1192, y: 2903 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about The Utopia Shard is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // Region: Battle Plains Information
+
+    // Highlands Region Information
+
+    // Tundria Region Information
+
+    // Western Isles Information
+
+    // Valley of Giants Information
+
+    // Heartwood Coast Information
+
+    /* Desert Lands (Not sure what to call these)*/
+
+    // Sands of Creation Region Information
+
+    // Khafra Information
+
+    // Ruhura Information
+
+    // Breakwater Region Information
+
+    // Broken Finger Region Information
+
+    // Sub-Category Town Stewards
+    // Town Stewards
+
+    // Krythan Island Town Stewards
+    // Region: Silvest Valley Town Stewards
+    {
+      type: "town_steward",
+      tooltip: "Town Steward (Silvest)",
+      region: "Silvest Valley",
+      place: "Silvest",
+      details: {
+        title: "Town Steward (Silvest)",
+        coordinates: { x: 1130, y: 1340 },
+        image: "images/npcs/Silvest_Town_Steward.png",
+        lore: "The Town Steward of Silvest offers a town bonus orb that grants Intelligence.",
+        npcs: [],
+        links: [],
+      },
+    },
+    // Region: Krythan Town Stewards
+
+    //Mainland Town Stewards
+    // Region: Darkwoods Town Stewards
+
+    {
+      type: "town_steward",
+      tooltip: "Town Steward (Whisperdale)",
+      region: "Darkwoods",
+      place: "Whisperdale",
+      details: {
+        title: "Town Steward (Whisperdale)",
+        coordinates: { x: 403, y: 3416 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "The Town Steward of Whisperdale offers a town bonus orb that grants Dexterity.",
+        npcs: [],
+        links: [],
+      },
+    },
+    // Region: Battle Plains Town Stewards
+
+    // Region: Black Swamp Town Stewards
+    {
+      type: "town_steward",
+      tooltip: "Town Steward (Krog)",
+      region: "Black Swamp",
+      place: "Krog",
+      details: {
+        title: "Town Steward (Krog)",
+        coordinates: { x: 3113, y: 3708 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "The Town Steward of Krog offers a town bonus orb that grants Strength.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // Region: Highlands Town Stewards
+
+    // Region: Western Isles Town Stewards
+
+    // Region: Valley of Giants Town Stewards
+
+    // Region: Heartwood Coast Town Stewards
+
+    // Region: Tundria Town Stewards
+
+    // Region: Sands of Creation Town Stewards
+
+    // Region: Breakwater Town Stewards
+
+    // Region: Broken Finger Town Stewards
+
+    // Add more trainers
+
+    // Sub-Category Town Guardians
+    // Krythan Island Guards
+    // Region: Silvest Valley Guards
+
+    // Region: Krythan Guards
+
+    // Mainland Guards
+    // Region: Darkwoods Guards
+
+    // Region: Highlands Guards
+    // City: Parian Guards
+    {
+      type: "town_guard",
+      tooltip: "Town Guardian (Parian)",
+      region: "Valinor Island",
+      place: "Valinor",
+      details: {
+        title: "Town Guardian",
+        coordinates: { x: 3433, y: 3029 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "The Town Guardian in Parian.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // Region: Battle Plains Guards
+
+    // Region: Black Swamp Guards
+
+    // Region: Heartwood Coast Guards
+
+    // Region: Tundria Guards
+
+    // Western Isles Guards
+
+    // Sands of Creation Region Guards
+    // Ruhura Side Guards
+
+    // Khafra Side Guards
+
+    // Breakwater Region Guards
+
+    // Broken Finger Region Guards
+
+    // Sub-Category Game of Chance
+    /*Lotor's Summer Palace Games*/
+    {
+      type: "game_of_chance",
+      tooltip: "Malson's Demon's Eye Game",
+      region: "Krythan",
+      place: "Lotor's Summer Palace",
+      details: {
+        title: "Malson's Demon's Eye Game",
+        coordinates: { x: 838, y: 729 },
+        image: "images/npcs/Malsons_Demon_Eyes_Game.png",
+        lore: "More information about Malson's Demon's Eye Game is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // Krythan Island Games of Chance
+    // Silvest Valley Games of Chance
+
+    // Krythan Island Games of Chance
+
+    // Mainland Games of Chance
+    // Region: Darkwoods Games of Chance
+
+    // Region: Battle Plains Games of Chance
+
+    // Region: Highlands Games of Chance
+    // City: Parian Games of Chance
+    {
+      type: "game_of_chance",
+      tooltip: "Trinde's Demon Eye Game",
+      region: "Krythan",
+      place: "Parian",
+      details: {
+        title: "Trinde's Demon Eye Game",
+        coordinates: { x: 3515, y: 3039 },
+        image: "images/placeholders/Trinde_Demon_Eye_Game.png",
+        lore: "More information about Trinde's Demon Eye Game is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // Region: Tundria Games of Chance
+
+    // Region: Breakwater Games of Chance
+
+    // Region: Broken Finger Games of Chance
+
+    // Region: Sands of Creation Games of Chance
+    // Khafra Games of Chance
+
+    // Ruhura Games of Chance
+
+    // Regoin: Western Isles Games of Chance
+    // City: Lopal Games of Chance
+    {
+      type: "game_of_chance",
+      tooltip: "Lopal Demon Eye",
+      region: "Krythan",
+      place: "Scarab Island",
+      details: {
+        title: "Lopal Demon Eye",
+        coordinates: { x: 421, y: 2197 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Lopal Demon Eye is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // Sub-Category Events
+    /*Lotor's Summer Palace Events*/
+    {
+      type: "event_judge",
+      tooltip: "Fishing Event Judge",
+      region: "Krythan",
+      place: "Lotor's Summer Palace",
+      details: {
+        title: "Fishing Event Judge",
+        coordinates: { x: 793, y: 621 },
+        image: "images/npcs/Fishing_Event_Judge.png",
+        lore: "More information about Fishing Event Judge is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "event_judge",
+      tooltip: "Mining Event Judge",
+      region: "Krythan",
+      place: "Lotor's Summer Palace",
+      details: {
+        title: "Mining Event Judge",
+        coordinates: { x: 814, y: 708 },
+        image: "images/npcs/Mining_Event_Judge.png",
+        lore: "More information about Mining Event Judge is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // Krythan Island Events
+    // Silvest Valley Events
+
+    // Krythan Events
+
+    // Mainland Events
+    // Darkwoods Events
+
+    // Highlands Events
+    // City: Parian Events
+    {
+      type: "event_ticket",
+      tooltip: "Armsmaster (The Guantlet Challenge)",
+      region: "Krythan",
+      place: "Lotor's Summer Palace",
+      details: {
+        title: "Armsmaster",
+        coordinates: { x: 3469, y: 3075 },
+        image: "images/npcs/Armsmaster.png",
+        lore: "More information about Armsmaster is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // City: Grell Undergrounds Events
+
+    // Region: Battle Plains Events
+
+    // Region: Black Swamp Events
+
+    // Region: Heartwood Coast Events
+
+    // Region: Tundria Events
+
+    // Region: Western Isles Events
+
+    // Sub-Category Crafting
+    // Add markers for obelisks and ruin spires here
+    /* Mainland Crafting Locations */
+    // Region Western Isles
+    {
+      type: "obelisk",
+      tooltip: "Desprail Island Obelisk",
+      region: "Western Isles",
+      place: "Desprail Island",
+      details: {
+        title: "Desprail Island Obelisk",
+        coordinates: { x: 2107, y: 2732 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Desprail Island Obelisk is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "obelisk",
+      tooltip: "Hell Rune Spire",
+      region: "Hell",
+      place: "Hell",
+      details: {
+        title: "Hell Rune Spire",
+        coordinates: { x: 1031, y: 3481 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Hell Rune Spire is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // Crafting Region: Tundria
+    {
+      type: "obelisk",
+      tooltip: "Northwest Tundria Obelisk",
+      region: "Tundria",
+      place: "Northwest Tundria",
+      details: {
+        title: "Hammerfist Obelisk",
+        coordinates: { x: 1637, y: 119 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Hammerfist Obelisk is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "obelisk",
+      tooltip: "Hammerfist Obelisk",
+      region: "Mainland",
+      place: "Tundria",
+      details: {
+        title: "Hammerfist Obelisk",
+        coordinates: { x: 2958, y: 988 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Hammerfist Obelisk is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "obelisk",
+      tooltip: "Tundria Rune Spire",
+      region: "Tundria",
+      place: "West of Trapdoor to Hammerfist Mine",
+      details: {
+        title: "Hammerfist Obelisk",
+        coordinates: { x: 2965, y: 647 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Tundria Rune Spire is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+
+    // Sub-Category Altar
+    {
+      type: "altar",
+      tooltip: "Evil Altar",
+      region: "Western Isles",
+      place: "Hell",
+      details: {
+        title: "Evil Altar",
+        coordinates: { x: 1003, y: 3321 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Evil Altar is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    // Sub-Category Banks
+    //Valinor Island Banks
+
+    {
+      type: "bank",
+      tooltip: "Bank",
+      region: "Valinor Island",
+      place: "Valinor",
+      details: {
+        title: "Bank",
+        coordinates: { x: 742, y: 98 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Bank is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    //Lotor's Summer Palace Banks
+    {
+      type: "bank",
+      tooltip: "Bank",
+      region: "Krythan",
+      place: "Lotor's Summer Palace",
+      details: {
+        title: "Bank",
+        coordinates: { x: 839, y: 679 },
+        image: "images/npcs/Lotors_Summer_Palace_Bank.png",
+        lore: "More information about Bank is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // Krythan Island Banks
+
+    // Region: Silvest Valley Banks
+    // City: Fort Eastwatch
+    {
+      type: "bank",
+      tooltip: "Bank",
+      region: "Silvest Valley",
+      place: "Fort Eastwatch",
+      details: {
+        title: "Bank",
+        coordinates: { x: 1348, y: 1301 },
+        image: "images/npcs/Fort_Eastwatch_Bank.png",
+        lore: "More information about Fort Eastwatch Bank is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    // City: Silvest Banks
+    {
+      type: "bank",
+      tooltip: "Bank",
+      region: "Silvest Valley",
+      place: "Silvest",
+      details: {
+        title: "Bank",
+        coordinates: { x: 1096, y: 1373 },
+        image: "images/npcs/Silvest_Bank.png",
+        lore: "More information about Silvest Bank is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    // City: Cliffside Banks
+    {
+      type: "bank",
+      tooltip: "Bank",
+      region: "Silvest Valley",
+      place: "Cliffside",
+      details: {
+        title: "Bank",
+        coordinates: { x: 1057, y: 1153 },
+        image: "images/npcs/Varg_Bank.png",
+        lore: "More information about Cliffside Bank is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // Region: Krythan Banks
+    // City: Varg Banks
+    {
+      type: "bank",
+      tooltip: "Bank",
+      region: "Krythan",
+      place: "Varg",
+      details: {
+        title: "Bank",
+        coordinates: { x: 802, y: 1175 },
+        image: "images/npcs/Varg_Bank.png",
+        lore: "More information about Varg Bank is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "bank",
+      tooltip: "Bank",
+      region: "Krythan",
+      place: "Cliffside",
+      details: {
+        title: "Bank",
+        coordinates: { x: 1057, y: 1153 },
+        image: "images/npcs/Varg_Bank.png",
+        lore: "More information about Bank is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    //Mainland Banks
+
+    // Region: Darkwoods Banks
+
+    // Region: Battle Plains Banks
+
+    // Region: Black Swamp Banks
+
+    // Region: Highlands Banks
+    // City: Parian Banks
+    {
+      type: "bank",
+      tooltip: "North Bank",
+      region: "Highlands",
+      place: "Parian",
+      details: {
+        title: "North Bank",
+        coordinates: { x: 3440, y: 2955 },
+        image: "images/npcs/Parian_North_Bank.png",
+        lore: "More information about North Bank is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "bank",
+      tooltip: "East Bank",
+      region: "Highlands",
+      place: "Parian",
+      details: {
+        title: "East Bank",
+        coordinates: { x: 3496, y: 3023 },
+        image: "images/npcs/Parian_North_Bank.png",
+        lore: "More information about East Bank is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "bank",
+      tooltip: "South Bank",
+      region: "Highlands",
+      place: "Parian",
+      details: {
+        title: "South Bank",
+        coordinates: { x: 3450, y: 3071 },
+        image: "images/npcs/Parian_North_Bank.png",
+        lore: "More information about South Bank is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    // City: Arda Banks
+    {
+      type: "bank",
+      tooltip: "Bank",
+      region: "Highlands",
+      place: "Arda",
+      details: {
+        title: "Bank",
+        coordinates: { x: 3391, y: 3492 },
+        image: "images/npcs/Arda_Bank.png",
+        lore: "More information about Bank is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // City: Lopal Banks
+    {
+      type: "bank",
+      tooltip: "Bank",
+      region: "Krythan",
+      place: "Scarab Island",
+      details: {
+        title: "Bank",
+        coordinates: { x: 417, y: 2218 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Bank is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+
+    // Region: Western Isles Banks
+
+    // Region: Valley of Giants Banks
+
+    // Region: Heartwood Coast Banks
+
+    // Region: Tundria Banks
+
+    //
+    // Sub-Category Trainers
+    // Valinor Island Trainers
+
+    {
+      type: "trainer",
+      tooltip: "Tradeskill Trainers",
+      region: "Valinor Island",
+      place: "Valinor",
+      details: {
+        title: "Tradeskill Trainers",
+        coordinates: { x: 754, y: 111 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Tradeskill Trainers is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "trainer",
+      tooltip: "Weapon Trainers",
+      region: "Valinor Island",
+      place: "Valinor",
+      details: {
+        title: "Weapon Trainers",
+        coordinates: { x: 763, y: 111 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Weapon Trainers is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "trainer",
+      tooltip: "Leadership Trainers",
+      region: "Valinor Island",
+      place: "Valinor",
+      details: {
+        title: "Leadership Trainers",
+        coordinates: { x: 762, y: 120 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Leadership Trainers is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "trainer",
+      tooltip: "Tailoring Trainer",
+      region: "Valinor Island",
+      place: "Valinor",
+      details: {
+        title: "Tailoring Trainer",
+        coordinates: { x: 735, y: 107 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Tailoring Trainer is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "trainer",
+      tooltip: "Farming Trainer",
+      region: "Valinor Island",
+      place: "Valinor",
+      details: {
+        title: "Farming Trainer",
+        coordinates: { x: 771, y: 113 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Farming Trainer is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "trainer",
+      tooltip: "Ralnaka (Farming Information)",
+      region: "Valinor Island",
+      place: "Valinor",
+      details: {
+        title: "Ralnaka (Farming Information)",
+        coordinates: { x: 768, y: 113 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Ralnaka (Farming Information) is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "trainer",
+      tooltip: "Valinor Orb Reset",
+      region: "Valinor Island",
+      place: "Valinor",
+      details: {
+        title: "Valinor Orb Reset",
+        coordinates: { x: 716, y: 98 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Valinor Orb Reset is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "trainer",
+      tooltip: "Island Steward",
+      region: "Valinor Island",
+      place: "Valinor",
+      details: {
+        title: "Island Steward",
+        coordinates: { x: 776, y: 101 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Island Steward is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "trainer",
+      tooltip: "Osalka Farming Expert (Wanders)",
+      region: "Valinor Island",
+      place: "Valinor",
+      details: {
+        title: "Osalka Farming Expert (Wanders)",
+        coordinates: { x: 778, y: 173 },
+        image: "images/npcs/Osalka_Farming_Expert.png",
+        lore: "More information about Osalka Farming Expert (Wanders) is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // Krythan Island Trainers
+
+    // Lotor's Summer Palace Trainers
+    {
+      type: "trainer",
+      tooltip: "Master Draftsman",
+      region: "Krythan",
+      place: "Lotor's Summer Palace",
+      details: {
+        title: "Master Draftsman",
+        coordinates: { x: 773, y: 618 },
+        image: "images/npcs/Master_Draftsman.png",
+        lore: "More information about Master Draftsman is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "trainer",
+      tooltip: "Henchman Trainer",
+      region: "Krythan",
+      place: "Lotor's Summer Palace",
+      details: {
+        title: "Henchman Trainer",
+        coordinates: { x: 837, y: 705 },
+        image: "images/npcs/Henchman_Trainer.png",
+        lore: "More information about Henchman Trainer is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "trainer",
+      tooltip: "Real Estate Agent",
+      region: "Krythan",
+      place: "Lotor's Summer Palace",
+      details: {
+        title: "Real Estate Agent",
+        coordinates: { x: 768, y: 616 },
+        image: "images/npcs/Real_Estate_Agent.png",
+        lore: "More information about Real Estate Agent is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "trainer",
+      tooltip: "Lotorian Faction Officer",
+      region: "Krythan",
+      place: "Lotor's Summer Palace",
+      details: {
+        title: "Lotorian Faction Officer",
+        coordinates: { x: 779, y: 607 },
+        image: "images/npcs/Lotorian_Faction_Officer.png",
+        lore: "More information about Lotorian Faction Officer is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "trainer",
+      tooltip: "Champion of Lotor",
+      region: "Krythan",
+      place: "Lotor's Summer Palace",
+      details: {
+        title: "Champion of Lotor",
+        coordinates: { x: 782, y: 599 },
+        image: "images/npcs/Champion_of_Lotor.png",
+        lore: "More information about Champion of Lotor is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "trainer",
+      tooltip: "Advanced Skill Trainer",
+      region: "Krythan",
+      place: "Lotor's Summer Palace",
+      details: {
+        title: "Advanced Skill Trainer",
+        coordinates: { x: 787, y: 599 },
+        image: "images/npcs/Advanced_Skill_Trainer.png",
+        lore: "More information about Advanced Skill Trainer is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "trainer",
+      tooltip: "Lotor's Steward",
+      region: "Krythan",
+      place: "Lotor's Summer Palace",
+      details: {
+        title: "Lotor's Steward",
+        coordinates: { x: 769, y: 608 },
+        image: "images/npcs/Lotors_Steward.png",
+        lore: "More information about Lotor's Steward is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "trainer",
+      tooltip: "Alchemy Taskmaster",
+      region: "Krythan",
+      place: "Lotor's Summer Palace",
+      details: {
+        title: "Alchemy Taskmaster",
+        coordinates: { x: 760, y: 681 },
+        image: "images/npcs/Alchemy_Taskmaster.png",
+        lore: "More information about Alchemy Taskmaster is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "trainer",
+      tooltip: "Brewing Taskmaster",
+      region: "Krythan",
+      place: "Lotor's Summer Palace",
+      details: {
+        title: "Brewing Taskmaster",
+        coordinates: { x: 845, y: 731 },
+        image: "images/npcs/Brewing_Taskmaster.png",
+        lore: "More information about Brewing Taskmaster is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "trainer",
+      tooltip: "Carpentry Taskmaster",
+      region: "Krythan",
+      place: "Lotor's Summer Palace",
+      details: {
+        title: "Carpentry Taskmaster",
+        coordinates: { x: 855, y: 715 },
+        image: "images/npcs/Carpentry_Taskmaster.png",
+        lore: "More information about Carpentry Taskmaster is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "trainer",
+      tooltip: "Neutral Faction Officer",
+      region: "Krythan",
+      place: "Lotor's Summer Palace",
+      details: {
+        title: "Neutral Faction Officer",
+        coordinates: { x: 833, y: 731 },
+        image: "images/npcs/Neutral_Faction_Officer.png",
+        lore: "More information about Neutral Faction Officer is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "trainer",
+      tooltip: "Farming Taskmaster",
+      region: "Krythan",
+      place: "Lotor's Summer Palace",
+      details: {
+        title: "Farming Taskmaster",
+        coordinates: { x: 861, y: 704 },
+        image: "images/npcs/Farming_Taskmaster.png",
+        lore: "More information about Farming Taskmaster is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // Mainlands Trainers
+
+    // Region: Darkwoods Trainers
+
+    // Region: Battle Plains Trainers
+
+    // Region: Black Swamp Trainers
+
+    // Region: Highlands Trainers
+    // City: Parian Trainers
+    {
+      type: "trainer",
+      tooltip: "Warlord Isbraen (Archery Trainer)",
+      region: "Krythan",
+      place: "Lotor's Summer Palace",
+      details: {
+        title: "Warlord Isbraen",
+        coordinates: { x: 3431, y: 3049 },
+        image: "images/npcs/Warlord_Isbraen.png",
+        lore: "Warlord Isbraen is an Archery Trainer located in Parian in the Government building.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "trainer",
+      tooltip: "Warlord Uerog (Warrior Trainer)",
+      region: "Krythan",
+      place: "Lotor's Summer Palace",
+      details: {
+        title: "Warlord Isbraen",
+        coordinates: { x: 3429, y: 3043 },
+        image: "images/npcs/Warlord_Uerog.png",
+        lore: "Warlord Uerog is a Warrior Trainer located in Parian in the Government building.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "trainer",
+      tooltip: "Warlord Cheroth (Mage Trainer)",
+      region: "Krythan",
+      place: "Lotor's Summer Palace",
+      details: {
+        title: "Warlord Cheroth",
+        coordinates: { x: 3434, y: 3041 },
+        image: "images/npcs/Warlord_Uerog.png",
+        lore: "Warlord Uerog is a Mage Trainer located in Parian in the Government building.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+
+    // Region: Krythan Trainers
+
+    // Silvest Valley Trainers
+
+    // Region: Western Isles Trainers
+
+    // Scarab Island Trainers
+    // Lopal Trainers
+    {
+      type: "trainer",
+      tooltip: "Carpentry Taskmaster",
+      region: "Krythan",
+      place: "Scarab Island",
+      details: {
+        title: "Carpentry Taskmaster",
+        coordinates: { x: 404, y: 2196 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Carpentry Taskmaster is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "trainer",
+      tooltip: "Farming Taskmaster",
+      region: "Krythan",
+      place: "Scarab Island",
+      details: {
+        title: "Farming Taskmaster",
+        coordinates: { x: 392, y: 2196 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Farming Taskmaster is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "trainer",
+      tooltip: "Tailoring Taskmaster",
+      region: "Krythan",
+      place: "Scarab Island",
+      details: {
+        title: "Tailoring Taskmaster",
+        coordinates: { x: 407, y: 2210 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Tailoring Taskmaster is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "trainer",
+      tooltip: "Brewing Taskmaster",
+      region: "Krythan",
+      place: "Scarab Island",
+      details: {
+        title: "Brewing Taskmaster",
+        coordinates: { x: 400, y: 2225 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Brewing Taskmaster is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "trainer",
+      tooltip: "Blacksmith Taskmaster",
+      region: "Krythan",
+      place: "Scarab Island",
+      details: {
+        title: "Blacksmith Taskmaster",
+        coordinates: { x: 377, y: 2213 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Blacksmith Taskmaster is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "trainer",
+      tooltip: "Leatherworking Taskmaster",
+      region: "Krythan",
+      place: "Scarab Island",
+      details: {
+        title: "Leatherworking Taskmaster",
+        coordinates: { x: 359, y: 2207 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Leatherworking Taskmaster is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "trainer",
+      tooltip: "Alchemy Taskmaster",
+      region: "Krythan",
+      place: "Scarab Island",
+      details: {
+        title: "Alchemy Taskmaster",
+        coordinates: { x: 378, y: 2234 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Alchemy Taskmaster is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+
   ],
 
   shops: [
@@ -3597,546 +4763,7 @@ export const mapMarkers = {
     // City: Broken Finger Town Shops
   ],
 
-  trainers: [
-    // Trainers category encompasses various trainer and taskmaster NPCs
-
-    // Valinor Island Trainers
-
-    {
-      type: "trainer",
-      tooltip: "Tradeskill Trainers",
-      region: "Valinor Island",
-      place: "Valinor",
-      details: {
-        title: "Tradeskill Trainers",
-        coordinates: { x: 754, y: 111 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Tradeskill Trainers is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "trainer",
-      tooltip: "Weapon Trainers",
-      region: "Valinor Island",
-      place: "Valinor",
-      details: {
-        title: "Weapon Trainers",
-        coordinates: { x: 763, y: 111 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Weapon Trainers is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "trainer",
-      tooltip: "Leadership Trainers",
-      region: "Valinor Island",
-      place: "Valinor",
-      details: {
-        title: "Leadership Trainers",
-        coordinates: { x: 762, y: 120 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Leadership Trainers is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "trainer",
-      tooltip: "Tailoring Trainer",
-      region: "Valinor Island",
-      place: "Valinor",
-      details: {
-        title: "Tailoring Trainer",
-        coordinates: { x: 735, y: 107 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Tailoring Trainer is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "trainer",
-      tooltip: "Farming Trainer",
-      region: "Valinor Island",
-      place: "Valinor",
-      details: {
-        title: "Farming Trainer",
-        coordinates: { x: 771, y: 113 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Farming Trainer is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "trainer",
-      tooltip: "Ralnaka (Farming Information)",
-      region: "Valinor Island",
-      place: "Valinor",
-      details: {
-        title: "Ralnaka (Farming Information)",
-        coordinates: { x: 768, y: 113 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Ralnaka (Farming Information) is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "trainer",
-      tooltip: "Valinor Orb Reset",
-      region: "Valinor Island",
-      place: "Valinor",
-      details: {
-        title: "Valinor Orb Reset",
-        coordinates: { x: 716, y: 98 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Valinor Orb Reset is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "trainer",
-      tooltip: "Island Steward",
-      region: "Valinor Island",
-      place: "Valinor",
-      details: {
-        title: "Island Steward",
-        coordinates: { x: 776, y: 101 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Island Steward is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "trainer",
-      tooltip: "Osalka Farming Expert (Wanders)",
-      region: "Valinor Island",
-      place: "Valinor",
-      details: {
-        title: "Osalka Farming Expert (Wanders)",
-        coordinates: { x: 778, y: 173 },
-        image: "images/npcs/Osalka_Farming_Expert.png",
-        lore: "More information about Osalka Farming Expert (Wanders) is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-
-    // Krythan Island Trainers
-
-    // Lotor's Summer Palace Trainers
-    {
-      type: "trainer",
-      tooltip: "Master Draftsman",
-      region: "Krythan",
-      place: "Lotor's Summer Palace",
-      details: {
-        title: "Master Draftsman",
-        coordinates: { x: 773, y: 618 },
-        image: "images/npcs/Master_Draftsman.png",
-        lore: "More information about Master Draftsman is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "trainer",
-      tooltip: "Henchman Trainer",
-      region: "Krythan",
-      place: "Lotor's Summer Palace",
-      details: {
-        title: "Henchman Trainer",
-        coordinates: { x: 837, y: 705 },
-        image: "images/npcs/Henchman_Trainer.png",
-        lore: "More information about Henchman Trainer is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "trainer",
-      tooltip: "Real Estate Agent",
-      region: "Krythan",
-      place: "Lotor's Summer Palace",
-      details: {
-        title: "Real Estate Agent",
-        coordinates: { x: 768, y: 616 },
-        image: "images/npcs/Real_Estate_Agent.png",
-        lore: "More information about Real Estate Agent is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "trainer",
-      tooltip: "Lotorian Faction Officer",
-      region: "Krythan",
-      place: "Lotor's Summer Palace",
-      details: {
-        title: "Lotorian Faction Officer",
-        coordinates: { x: 779, y: 607 },
-        image: "images/npcs/Lotorian_Faction_Officer.png",
-        lore: "More information about Lotorian Faction Officer is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "trainer",
-      tooltip: "Champion of Lotor",
-      region: "Krythan",
-      place: "Lotor's Summer Palace",
-      details: {
-        title: "Champion of Lotor",
-        coordinates: { x: 782, y: 599 },
-        image: "images/npcs/Champion_of_Lotor.png",
-        lore: "More information about Champion of Lotor is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "trainer",
-      tooltip: "Advanced Skill Trainer",
-      region: "Krythan",
-      place: "Lotor's Summer Palace",
-      details: {
-        title: "Advanced Skill Trainer",
-        coordinates: { x: 787, y: 599 },
-        image: "images/npcs/Advanced_Skill_Trainer.png",
-        lore: "More information about Advanced Skill Trainer is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "trainer",
-      tooltip: "Lotor's Steward",
-      region: "Krythan",
-      place: "Lotor's Summer Palace",
-      details: {
-        title: "Lotor's Steward",
-        coordinates: { x: 769, y: 608 },
-        image: "images/npcs/Lotors_Steward.png",
-        lore: "More information about Lotor's Steward is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "trainer",
-      tooltip: "Alchemy Taskmaster",
-      region: "Krythan",
-      place: "Lotor's Summer Palace",
-      details: {
-        title: "Alchemy Taskmaster",
-        coordinates: { x: 760, y: 681 },
-        image: "images/npcs/Alchemy_Taskmaster.png",
-        lore: "More information about Alchemy Taskmaster is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "trainer",
-      tooltip: "Brewing Taskmaster",
-      region: "Krythan",
-      place: "Lotor's Summer Palace",
-      details: {
-        title: "Brewing Taskmaster",
-        coordinates: { x: 845, y: 731 },
-        image: "images/npcs/Brewing_Taskmaster.png",
-        lore: "More information about Brewing Taskmaster is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "trainer",
-      tooltip: "Carpentry Taskmaster",
-      region: "Krythan",
-      place: "Lotor's Summer Palace",
-      details: {
-        title: "Carpentry Taskmaster",
-        coordinates: { x: 855, y: 715 },
-        image: "images/npcs/Carpentry_Taskmaster.png",
-        lore: "More information about Carpentry Taskmaster is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "trainer",
-      tooltip: "Neutral Faction Officer",
-      region: "Krythan",
-      place: "Lotor's Summer Palace",
-      details: {
-        title: "Neutral Faction Officer",
-        coordinates: { x: 833, y: 731 },
-        image: "images/npcs/Neutral_Faction_Officer.png",
-        lore: "More information about Neutral Faction Officer is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "trainer",
-      tooltip: "Farming Taskmaster",
-      region: "Krythan",
-      place: "Lotor's Summer Palace",
-      details: {
-        title: "Farming Taskmaster",
-        coordinates: { x: 861, y: 704 },
-        image: "images/npcs/Farming_Taskmaster.png",
-        lore: "More information about Farming Taskmaster is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-
-    // Mainlands Trainers
-
-    // Region: Darkwoods Trainers
-
-    // Region: Battle Plains Trainers
-
-    // Region: Black Swamp Trainers
-
-    // Region: Highlands Trainers
-    // City: Parian Trainers
-    {
-      type: "trainer",
-      tooltip: "Warlord Isbraen (Archery Trainer)",
-      region: "Krythan",
-      place: "Lotor's Summer Palace",
-      details: {
-        title: "Warlord Isbraen",
-        coordinates: { x: 3431, y: 3049 },
-        image: "images/npcs/Warlord_Isbraen.png",
-        lore: "Warlord Isbraen is an Archery Trainer located in Parian in the Government building.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "trainer",
-      tooltip: "Warlord Uerog (Warrior Trainer)",
-      region: "Krythan",
-      place: "Lotor's Summer Palace",
-      details: {
-        title: "Warlord Isbraen",
-        coordinates: { x: 3429, y: 3043 },
-        image: "images/npcs/Warlord_Uerog.png",
-        lore: "Warlord Uerog is a Warrior Trainer located in Parian in the Government building.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "trainer",
-      tooltip: "Warlord Cheroth (Mage Trainer)",
-      region: "Krythan",
-      place: "Lotor's Summer Palace",
-      details: {
-        title: "Warlord Cheroth",
-        coordinates: { x: 3434, y: 3041 },
-        image: "images/npcs/Warlord_Uerog.png",
-        lore: "Warlord Uerog is a Mage Trainer located in Parian in the Government building.",
-        npcs: [],
-        links: [],
-      },
-    },
-
-
-    // Region: Krythan Trainers
-
-    // Silvest Valley Trainers
-
-    // Region: Western Isles Trainers
-
-    // Scarab Island Trainers
-    // Lopal Trainers
-    {
-      type: "trainer",
-      tooltip: "Carpentry Taskmaster",
-      region: "Krythan",
-      place: "Scarab Island",
-      details: {
-        title: "Carpentry Taskmaster",
-        coordinates: { x: 404, y: 2196 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Carpentry Taskmaster is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "trainer",
-      tooltip: "Farming Taskmaster",
-      region: "Krythan",
-      place: "Scarab Island",
-      details: {
-        title: "Farming Taskmaster",
-        coordinates: { x: 392, y: 2196 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Farming Taskmaster is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "trainer",
-      tooltip: "Tailoring Taskmaster",
-      region: "Krythan",
-      place: "Scarab Island",
-      details: {
-        title: "Tailoring Taskmaster",
-        coordinates: { x: 407, y: 2210 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Tailoring Taskmaster is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "trainer",
-      tooltip: "Brewing Taskmaster",
-      region: "Krythan",
-      place: "Scarab Island",
-      details: {
-        title: "Brewing Taskmaster",
-        coordinates: { x: 400, y: 2225 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Brewing Taskmaster is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "trainer",
-      tooltip: "Blacksmith Taskmaster",
-      region: "Krythan",
-      place: "Scarab Island",
-      details: {
-        title: "Blacksmith Taskmaster",
-        coordinates: { x: 377, y: 2213 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Blacksmith Taskmaster is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "trainer",
-      tooltip: "Leatherworking Taskmaster",
-      region: "Krythan",
-      place: "Scarab Island",
-      details: {
-        title: "Leatherworking Taskmaster",
-        coordinates: { x: 359, y: 2207 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Leatherworking Taskmaster is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "trainer",
-      tooltip: "Alchemy Taskmaster",
-      region: "Krythan",
-      place: "Scarab Island",
-      details: {
-        title: "Alchemy Taskmaster",
-        coordinates: { x: 378, y: 2234 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Alchemy Taskmaster is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-
-    // Town Stewards
-
-    // Krythan Island Town Stewards
-    // Region: Silvest Valley Town Stewards
-    {
-      type: "town_steward",
-      tooltip: "Town Steward (Silvest)",
-      region: "Silvest Valley",
-      place: "Silvest",
-      details: {
-        title: "Town Steward (Silvest)",
-        coordinates: { x: 1130, y: 1340 },
-        image: "images/npcs/Silvest_Town_Steward.png",
-        lore: "The Town Steward of Silvest offers a town bonus orb that grants Intelligence.",
-        npcs: [],
-        links: [],
-      },
-    },
-    // Region: Krythan Town Stewards
-
-    //Mainland Town Stewards
-    // Region: Darkwoods Town Stewards
-
-    {
-      type: "town_steward",
-      tooltip: "Town Steward (Whisperdale)",
-      region: "Darkwoods",
-      place: "Whisperdale",
-      details: {
-        title: "Town Steward (Whisperdale)",
-        coordinates: { x: 403, y: 3416 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "The Town Steward of Whisperdale offers a town bonus orb that grants Dexterity.",
-        npcs: [],
-        links: [],
-      },
-    },
-    // Region: Battle Plains Town Stewards
-
-    // Region: Black Swamp Town Stewards
-    {
-      type: "town_steward",
-      tooltip: "Town Steward (Krog)",
-      region: "Black Swamp",
-      place: "Krog",
-      details: {
-        title: "Town Steward (Krog)",
-        coordinates: { x: 3113, y: 3708 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "The Town Steward of Krog offers a town bonus orb that grants Strength.",
-        npcs: [],
-        links: [],
-      },
-    },
-
-    // Region: Highlands Town Stewards
-
-    // Region: Western Isles Town Stewards
-
-    // Region: Valley of Giants Town Stewards
-
-    // Region: Heartwood Coast Town Stewards
-
-    // Region: Tundria Town Stewards
-
-    // Region: Sands of Creation Town Stewards
-
-    // Region: Breakwater Town Stewards
-
-    // Region: Broken Finger Town Stewards
-
-    // Add more trainers
-  ],
-
-  spawn_good: [
+  spawns: [      
     //Valinor Island Spawns
     {
       type: "spawn_good",
@@ -4204,9 +4831,21 @@ export const mapMarkers = {
       },
     },
 
-
     // Region: Krythan Spawns
-    
+    {
+      type: "spawn_evil",
+      tooltip: "Evil Spawn Gate",
+      region: "Krythan",
+      place: "Krythan Fields",
+      details: {
+        title: "Evil Spawn Gate",
+        coordinates: { x: 775, y: 871 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Evil Spawn Gate is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },    
 
     // Region: Krythan Spawns
 
@@ -4245,369 +4884,6 @@ export const mapMarkers = {
       },
     },
     // Khafra Side Spawns
-  ],
-
-  spawn_evil: [
-    //Valinor Island Spawns
-
-    //Krythan Island Spawns
-    // Silvest Valley Region Spawns
-
-    // Krythan Region Spawns
-    {
-      type: "spawn_evil",
-      tooltip: "Evil Spawn Gate",
-      region: "Krythan",
-      place: "Krythan Fields",
-      details: {
-        title: "Evil Spawn Gate",
-        coordinates: { x: 775, y: 871 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Evil Spawn Gate is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-
-    // Scarab Island Spawns
-    {
-      type: "spawn_evil",
-      tooltip: "Evil Spawn Gate",
-      region: "Krythan",
-      place: "Scarab Island",
-      details: {
-        title: "Evil Spawn Gate",
-        coordinates: { x: 198, y: 2133 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Evil Spawn Gate is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-
-    // Sands of Creation Spawns
-    // Ruhura Side Spawns
-    {
-      type: "spawn_evil",
-      tooltip: "Evil Spawn Gate",
-      region: "Sands of Creation",
-      place: "Ruhura",
-      details: {
-        title: "Evil Spawn Gate",
-        coordinates: { x: 374, y: 4023 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Evil Spawn Gate is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-
-    // Khafra Side Spawns
-    // No evil spawns on Khafra Side as of now
-  ],
-
-  banks: [
-    //Valinor Island Banks
-
-    {
-      type: "bank",
-      tooltip: "Bank",
-      region: "Valinor Island",
-      place: "Valinor",
-      details: {
-        title: "Bank",
-        coordinates: { x: 742, y: 98 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Bank is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    //Lotor's Summer Palace Banks
-    {
-      type: "bank",
-      tooltip: "Bank",
-      region: "Krythan",
-      place: "Lotor's Summer Palace",
-      details: {
-        title: "Bank",
-        coordinates: { x: 839, y: 679 },
-        image: "images/npcs/Lotors_Summer_Palace_Bank.png",
-        lore: "More information about Bank is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-
-    // Krythan Island Banks
-
-    // Region: Silvest Valley Banks
-    // City: Fort Eastwatch
-    {
-      type: "bank",
-      tooltip: "Bank",
-      region: "Silvest Valley",
-      place: "Fort Eastwatch",
-      details: {
-        title: "Bank",
-        coordinates: { x: 1348, y: 1301 },
-        image: "images/npcs/Fort_Eastwatch_Bank.png",
-        lore: "More information about Fort Eastwatch Bank is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    // City: Silvest Banks
-    {
-      type: "bank",
-      tooltip: "Bank",
-      region: "Silvest Valley",
-      place: "Silvest",
-      details: {
-        title: "Bank",
-        coordinates: { x: 1096, y: 1373 },
-        image: "images/npcs/Silvest_Bank.png",
-        lore: "More information about Silvest Bank is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    // City: Cliffside Banks
-    {
-      type: "bank",
-      tooltip: "Bank",
-      region: "Silvest Valley",
-      place: "Cliffside",
-      details: {
-        title: "Bank",
-        coordinates: { x: 1057, y: 1153 },
-        image: "images/npcs/Varg_Bank.png",
-        lore: "More information about Cliffside Bank is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-
-    // Region: Krythan Banks
-    // City: Varg Banks
-    {
-      type: "bank",
-      tooltip: "Bank",
-      region: "Krythan",
-      place: "Varg",
-      details: {
-        title: "Bank",
-        coordinates: { x: 802, y: 1175 },
-        image: "images/npcs/Varg_Bank.png",
-        lore: "More information about Varg Bank is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "bank",
-      tooltip: "Bank",
-      region: "Krythan",
-      place: "Cliffside",
-      details: {
-        title: "Bank",
-        coordinates: { x: 1057, y: 1153 },
-        image: "images/npcs/Varg_Bank.png",
-        lore: "More information about Bank is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-
-    //Mainland Banks
-
-    // Region: Darkwoods Banks
-
-    // Region: Battle Plains Banks
-
-    // Region: Black Swamp Banks
-
-    // Region: Highlands Banks
-    // City: Parian Banks
-    {
-      type: "bank",
-      tooltip: "North Bank",
-      region: "Highlands",
-      place: "Parian",
-      details: {
-        title: "North Bank",
-        coordinates: { x: 3440, y: 2955 },
-        image: "images/npcs/Parian_North_Bank.png",
-        lore: "More information about North Bank is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "bank",
-      tooltip: "East Bank",
-      region: "Highlands",
-      place: "Parian",
-      details: {
-        title: "East Bank",
-        coordinates: { x: 3496, y: 3023 },
-        image: "images/npcs/Parian_North_Bank.png",
-        lore: "More information about East Bank is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "bank",
-      tooltip: "South Bank",
-      region: "Highlands",
-      place: "Parian",
-      details: {
-        title: "South Bank",
-        coordinates: { x: 3450, y: 3071 },
-        image: "images/npcs/Parian_North_Bank.png",
-        lore: "More information about South Bank is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    // City: Arda Banks
-    {
-      type: "bank",
-      tooltip: "Bank",
-      region: "Highlands",
-      place: "Arda",
-      details: {
-        title: "Bank",
-        coordinates: { x: 3391, y: 3492 },
-        image: "images/npcs/Arda_Bank.png",
-        lore: "More information about Bank is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-
-    // City: Lopal Banks
-    {
-      type: "bank",
-      tooltip: "Bank",
-      region: "Krythan",
-      place: "Scarab Island",
-      details: {
-        title: "Bank",
-        coordinates: { x: 417, y: 2218 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Bank is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-
-
-    // Region: Western Isles Banks
-
-    // Region: Valley of Giants Banks
-
-    // Region: Heartwood Coast Banks
-
-    // Region: Tundria Banks
-
-    //
-  ],
-
-  altars: [
-    {
-      type: "altar",
-      tooltip: "Evil Altar",
-      region: "Western Isles",
-      place: "Hell",
-      details: {
-        title: "Evil Altar",
-        coordinates: { x: 1003, y: 3321 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Evil Altar is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-  ],
-
-  crafting: [
-    // Add markers for obelisks and ruin spires here
-    /* Mainland Crafting Locations */
-    // Region Western Isles
-    {
-      type: "obelisk",
-      tooltip: "Desprail Island Obelisk",
-      region: "Western Isles",
-      place: "Desprail Island",
-      details: {
-        title: "Desprail Island Obelisk",
-        coordinates: { x: 2107, y: 2732 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Desprail Island Obelisk is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "obelisk",
-      tooltip: "Hell Rune Spire",
-      region: "Hell",
-      place: "Hell",
-      details: {
-        title: "Hell Rune Spire",
-        coordinates: { x: 1031, y: 3481 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Hell Rune Spire is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-
-    // Crafting Region: Tundria
-    {
-      type: "obelisk",
-      tooltip: "Northwest Tundria Obelisk",
-      region: "Tundria",
-      place: "Northwest Tundria",
-      details: {
-        title: "Hammerfist Obelisk",
-        coordinates: { x: 1637, y: 119 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Hammerfist Obelisk is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "obelisk",
-      tooltip: "Hammerfist Obelisk",
-      region: "Mainland",
-      place: "Tundria",
-      details: {
-        title: "Hammerfist Obelisk",
-        coordinates: { x: 2958, y: 988 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Hammerfist Obelisk is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "obelisk",
-      tooltip: "Tundria Rune Spire",
-      region: "Tundria",
-      place: "West of Trapdoor to Hammerfist Mine",
-      details: {
-        title: "Hammerfist Obelisk",
-        coordinates: { x: 2965, y: 647 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Tundria Rune Spire is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
   ],
 
   undergrounds: [
@@ -5260,7 +5536,7 @@ export const mapMarkers = {
     // Region: Highlands Undergrounds
     {
       type: "underground_closed",
-      tooltip: "Cave (CLOSED)", // Used to be Astari Cave but it's closed now and Astari Cave moved south
+      tooltip: "Cave (CLOSED)", // This was the former Astari Cave, which has since moved south.
       region: "Mainland",
       place: "Highlands",
       details: {
@@ -5728,7 +6004,7 @@ export const mapMarkers = {
     },
     {
       type: "underground_crypt",
-      tooltip: "Unknown Crypt", // A Crypt with Greater Skeletons Question
+      tooltip: "Unknown Crypt", // A Crypt with Greater Skeletons
       region: "Mainland",
       place: "Tundria",
       details: {
@@ -5770,7 +6046,7 @@ export const mapMarkers = {
     },
     {
       type: "underground_dungeon",
-      tooltip: "Darok the Banished's Jail", // Not sure on the name - Question Mark
+      tooltip: "Darok the Banished's Jail",
       region: "Mainland",
       place: "Tundria",
       details: {
@@ -5784,7 +6060,7 @@ export const mapMarkers = {
     },
     {
       type: "underground_dungeon",
-      tooltip: "Darok the Banished's Jail", // Not sure on the name - Question Mark
+      tooltip: "Darok the Banished's Jail",
       region: "Mainland",
       place: "Tundria",
       details: {
@@ -5798,7 +6074,7 @@ export const mapMarkers = {
     },
     {
       type: "underground_dungeon",
-      tooltip: "Trap Door to Hammerfist Mine", // Not sure on the name - Question Mark
+      tooltip: "Trap Door to Hammerfist Mine",
       region: "Tundria",
       place: "Tundria Northeast Coast",
       details: {
@@ -6108,332 +6384,5 @@ export const mapMarkers = {
         links: [],
       },
     },
-  ],
-
-  events: [
-    /*Lotor's Summer Palace Events*/
-    {
-      type: "event_judge",
-      tooltip: "Fishing Event Judge",
-      region: "Krythan",
-      place: "Lotor's Summer Palace",
-      details: {
-        title: "Fishing Event Judge",
-        coordinates: { x: 793, y: 621 },
-        image: "images/npcs/Fishing_Event_Judge.png",
-        lore: "More information about Fishing Event Judge is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "event_judge",
-      tooltip: "Mining Event Judge",
-      region: "Krythan",
-      place: "Lotor's Summer Palace",
-      details: {
-        title: "Mining Event Judge",
-        coordinates: { x: 814, y: 708 },
-        image: "images/npcs/Mining_Event_Judge.png",
-        lore: "More information about Mining Event Judge is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-
-    // Krythan Island Events
-    // Silvest Valley Events
-
-    // Krythan Events
-
-    // Mainland Events
-    // Darkwoods Events
-
-    // Highlands Events
-    // City: Parian Events
-    {
-      type: "event_ticket",
-      tooltip: "Armsmaster (The Guantlet Challenge)",
-      region: "Krythan",
-      place: "Lotor's Summer Palace",
-      details: {
-        title: "Armsmaster",
-        coordinates: { x: 3469, y: 3075 },
-        image: "images/npcs/Armsmaster.png",
-        lore: "More information about Armsmaster is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-
-    // City: Grell Undergrounds Events
-
-    // Region: Battle Plains Events
-
-    // Region: Black Swamp Events
-
-    // Region: Heartwood Coast Events
-
-    // Region: Tundria Events
-
-    // Region: Western Isles Events
-  ],
-
-
-  guards: [
-    // Krythan Island Guards
-    // Region: Silvest Valley Guards
-
-    // Region: Krythan Guards
-
-    // Mainland Guards
-    // Region: Darkwoods Guards
-
-    // Region: Highlands Guards
-    // City: Parian Guards
-    {
-      type: "town_guard",
-      tooltip: "Town Guardian (Parian)",
-      region: "Valinor Island",
-      place: "Valinor",
-      details: {
-        title: "Town Guardian",
-        coordinates: { x: 3433, y: 3029 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "The Town Guardian in Parian.",
-        npcs: [],
-        links: [],
-      },
-    },
-  ],
-
-    // Region: Battle Plains Guards
-
-    // Region: Black Swamp Guards
-
-    // Region: Heartwood Coast Guards
-
-    // Region: Tundria Guards
-
-    // Western Isles Guards
-
-    // Sands of Creation Region Guards
-    // Ruhura Side Guards
-
-    // Khafra Side Guards
-
-    // Breakwater Region Guards
-
-    // Broken Finger Region Guards
-    
-
-  games_of_chance: [
-    /*Lotor's Summer Palace Games*/
-    {
-      type: "game_of_chance",
-      tooltip: "Malson's Demon's Eye Game",
-      region: "Krythan",
-      place: "Lotor's Summer Palace",
-      details: {
-        title: "Malson's Demon's Eye Game",
-        coordinates: { x: 838, y: 729 },
-        image: "images/npcs/Malsons_Demon_Eyes_Game.png",
-        lore: "More information about Malson's Demon's Eye Game is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-
-    // Krythan Island Games of Chance
-    // Silvest Valley Games of Chance
-
-    // Krythan Island Games of Chance
-
-    // Mainland Games of Chance
-    // Region: Darkwoods Games of Chance
-
-    // Region: Battle Plains Games of Chance
-
-    // Region: Highlands Games of Chance
-    // City: Parian Games of Chance
-    {
-      type: "game_of_chance",
-      tooltip: "Trinde's Demon Eye Game",
-      region: "Krythan",
-      place: "Parian",
-      details: {
-        title: "Trinde's Demon Eye Game",
-        coordinates: { x: 3515, y: 3039 },
-        image: "images/placeholders/Trinde_Demon_Eye_Game.png",
-        lore: "More information about Trinde's Demon Eye Game is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-
-    // Region: Tundria Games of Chance
-
-    // Region: Breakwater Games of Chance
-
-    // Region: Broken Finger Games of Chance
-
-    // Region: Sands of Creation Games of Chance
-    // Khafra Games of Chance
-
-    // Ruhura Games of Chance
-
-    // Regoin: Western Isles Games of Chance
-    // City: Lopal Games of Chance
-    {
-      type: "game_of_chance",
-      tooltip: "Lopal Demon Eye",
-      region: "Krythan",
-      place: "Scarab Island",
-      details: {
-        title: "Lopal Demon Eye",
-        coordinates: { x: 421, y: 2197 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Lopal Demon Eye is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-  ],
-
-  information: [
-    /* Valinor Island Information */
-
-    /*Lotor's Summer Palace Information*/
-    {
-      type: "information",
-      tooltip: "Fallen Warriors Memorial",
-      region: "Krythan",
-      place: "Lotor's Summer Palace",
-      details: {
-        title: "Fallen Warriors Memorial",
-        coordinates: { x: 736, y: 591 },
-        image: "images/npcs/Fallen_Warriors_Memorial.png",
-        lore: "More information about Fallen Warriors Memorial is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "information",
-      tooltip: "Memorial to the Lost Sons",
-      region: "Krythan",
-      place: "Lotor's Summer Palace",
-      details: {
-        title: "Memorial to the Lost Sons",
-        coordinates: { x: 715, y: 602 },
-        image: "images/npcs/Memorial_to_the_Lost_Sons.png",
-        lore: "More information about Memorial to the Lost Sons is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },{
-      type: "information",
-      tooltip: "Brain Smith Memorial",
-      region: "Krythan",
-      place: "Lotor's Summer Palace",
-      details: {
-        title: "Brain Smith Memorial",
-        coordinates: { x: 761, y: 708 },
-        image: "images/npcs/Brain_Smith_Memorial.png",
-        lore: "More information about Brain Smith Memorial is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "information",
-      tooltip: "Jamoal the Sage (Wanders)",
-      region: "Krythan",
-      place: "Lotor's Summer Palace",
-      details: {
-        title: "Jamoal the Sage (Wanders)",
-        coordinates: { x: 770, y: 684 },
-        image: "images/npcs/Jamoal_the_Sage_Information.png",
-        lore: "Jamoal the Sage (Wanders) - Exchange Race Changing Scrolls NPC.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "information",
-      tooltip: "PvP Island Information",
-      region: "Krythan",
-      place: "Lotor's Summer Palace",
-      details: {
-        title: "PvP Island",
-        coordinates: { x: 759, y: 643 },
-        image: "images/npcs/PvP_Island_Information.png",
-        lore: "NPC with information about PvP Island.",
-        npcs: [],
-        links: [],
-      },
-    },
-
-    // Krythan Island Information
-    // Silvest Valley Region Information
-
-    // Krythan Region Information
-    // Verthpool Information
-    {
-      type: "information",
-      tooltip: "Grim Demonhunter",
-      region: "Krythan",
-      place: "Vrethpool",
-      details: {
-        title: "Grim Demonhunter",
-        coordinates: { x: 647, y: 1709 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Grim Demonhunter is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-
-    // Mainland Information
-
-    // Region: Darkwood Information
-    {
-      type: "information",
-      tooltip: "The Utopia Shard",
-      region: "Mainland",
-      place: "Darkwoods",
-      details: {
-        title: "The Utopia Shard",
-        coordinates: { x: 1192, y: 2903 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about The Utopia Shard is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-
-    // Region: Battle Plains Information
-
-    // Highlands Region Information
-
-    // Tundria Region Information
-
-    // Western Isles Information
-
-    // Valley of Giants Information
-
-    // Heartwood Coast Information
-
-    /* Desert Lands (Not sure what to call these)*/
-
-    // Sands of Creation Region Information
-
-    // Khafra Information
-
-    // Ruhura Information
-
-    // Breakwater Region Information
-
-    // Broken Finger Region Information
   ],
 };

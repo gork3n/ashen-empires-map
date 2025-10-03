@@ -13,9 +13,9 @@ import TileGrid from 'ol/tilegrid/TileGrid.js';
 // Import local data modules
 import { mapLabels } from './labels.js';
 import { mapMarkers, markerStyles } from './markers.js';
+import { initializeFilterMenu } from './filter-menu.js';
 
-
-// Global constiables
+// Global variables
 let labelLayers = {};
 let map;
 let markerTooltipElement;
@@ -209,8 +209,14 @@ document.addEventListener('DOMContentLoaded', function() {
             // Dispatch a custom event to notify other scripts that the icons are ready.
             document.dispatchEvent(new CustomEvent('icons-ready'));
             initializeMap();
-            // Dispatch a custom event to notify other scripts that the map and icons are ready.
-            document.dispatchEvent(new CustomEvent('map-ready'));
+            // Now that the map is fully initialized, initialize the filter menu
+            // and pass the necessary data directly.
+            initializeFilterMenu({
+                mapMarkers: mapMarkers,
+                markerStyles: markerStyles,
+                markerLayers: markerLayers,
+                createUIMarkerIcon: createUIMarkerIcon // Pass the function directly
+            });
         });
     });
 });
@@ -267,8 +273,7 @@ function initializeMap() {
         -(initialCenterGameCoords.y * scaleFactor)
     ];
 
-    // Initialize the map
-    map = new Map({ // Improves performance on low-end devices,
+    map = new Map({ // Initialize the map
         target: 'map',
         layers: [
             new TileLayer({
@@ -803,7 +808,7 @@ function addMapMarkers(map) {
         const markerLayer = new VectorLayer({
             source: markerSource,
             title: category + ' Markers',
-             visible: true, // Set to 0 to ensure markers are always visible when zoomed in.
+             visible: true,
             style: function(feature, resolution) {
                 const type = feature.get('type');
 

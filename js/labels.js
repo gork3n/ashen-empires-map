@@ -1088,7 +1088,7 @@ export const mapLabels = {
       },
     },
     {
-      name: "Unnamed Island", // Not sure on the name Question Mark
+      name: "Unnamed Island",
       fontSize: 30,
       region: "Tundria",
       details: {
@@ -1101,7 +1101,7 @@ export const mapLabels = {
       },
     },
     {
-      name: "Crab Island", // Not sure on the name Question Mark
+      name: "Crab Island",
       fontSize: 30,
       region: "Breakwater",
       details: {
@@ -1114,7 +1114,7 @@ export const mapLabels = {
       },
     },
 
-    // Sands of Creation Islands Technically might be Ruhara Island and Khafra Island, but this might be redundant. Question Mark
+    // Sands of Creation Islands Technically might be Ruhura Island and Khafra Island, but this might be redundant.
   ],
 
   dungeons: [
@@ -1704,7 +1704,7 @@ export const mapLabels = {
       },
     },
     {
-      name: "Tuvok",
+      name: "Tuvok", // This is the name of the NPC who lives here.
       fontSize: 20,
       region: "Darkwoods", // I'm not sure if this is the Name of the place or the name of the NPC that lives there. Question Mark
       details: {
@@ -1743,7 +1743,7 @@ export const mapLabels = {
       },
     },
     {
-      name: "Shadow Forest", // Seemed like it needed a name, might have a different name Question Mark
+      name: "Shadow Forest", // Seemed like it needed a name, might have a different name.
       fontSize: 20,
       region: "Darkwoods", 
       details: {
@@ -1756,7 +1756,7 @@ export const mapLabels = {
       },
     },
     {
-      name: "Termigon Mound",
+      name: "Termigon Mound", // Changed the name from Termigon Hive to Termigon Mound, seems more fitting.
       fontSize: 20,
       region: "Darkwoods", // Changed the name from Termigon Hive to Termigon Mound, seems more fitting. Question Mark
       details: {
@@ -2696,7 +2696,7 @@ export const mapLabels = {
       },
     },
     {
-      name: "Greenteeth Swamp", // Not sure about the name, just thought it needed one. Question Mark
+      name: "Greenteeth Swamp", // Not sure about the name, just thought it needed one.
       fontSize: 20,
       region: "Darkwoods", 
       details: {
@@ -2888,7 +2888,7 @@ export const mapLabels = {
     },
     {
       name: "Lake Kallon",
-      alias: "Arda Pond", // Added an alias for a quest that calls it Arda Pond. Question mark
+      alias: "Arda Pond", // Added an alias for a quest that calls it Arda Pond.
       fontSize: 20,
       region: "Highlands",
       details: {

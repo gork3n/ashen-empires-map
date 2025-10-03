@@ -770,13 +770,12 @@ input:checked + .slider:before {
 /* --- Mobile Filters Button --- */
 .mobile-filters-btn {
     display: flex;
-    position: fixed;
-    bottom: 15em; /* Positioned higher to avoid overlapping zoom controls */
-    right: 2em;
+    position: relative; /* Change to relative for pseudo-element positioning */
+    bottom: 72px; /* Default position: above the 32px footer + 20px padding */
+    right: 20px;
     width: 56px;
     height: 56px;
     background-color: #F5D76E;
-    color: #111;
     border-radius: 50%;
     border: none;
     cursor: pointer;
@@ -784,8 +783,30 @@ input:checked + .slider:before {
     z-index: 1002; /* Above footer, below menu */
     justify-content: center;
     align-items: center;
-    transition: transform 0.2s;
-    display: flex; /* Always visible */
+    transition: transform 0.2s, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    position: fixed; /* Re-add fixed positioning */
+}
+
+.mobile-filters-btn.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.8);
+}
+
+/* Use a pseudo-element to display and color the icon */
+.mobile-filters-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../icons/toggles.svg') no-repeat center center;
+    background-size: 60%;
+    /* Invert the color of the SVG to make it black */
+    filter: invert(100%);
+    /* For Webkit browsers */
+    -webkit-filter: invert(100%);
 }
 .mobile-filters-btn:hover {
     transform: scale(1.05);
@@ -806,6 +827,24 @@ input:checked + .slider:before {
 
 /* --- Desktop and Tablet Styles --- */
 @media (min-width: 769px) {
+    /* On desktop, transform the filter menu into a right-side panel */
+    .filter-menu {
+        left: auto; /* Unset the left position */
+        right: 0; /* Anchor to the right */
+        width: 400px; /* Set a fixed width for the panel */
+        height: 100%;
+        transform: translateX(100%); /* Start off-screen to the right */
+        transition: transform 0.4s ease-in-out;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.3); /* Add a shadow for depth */
+    }
+
+    .filter-menu.open {
+        transform: translateX(0); /* Slide into view */
+    }
+
+    .filter-menu-content {
+        background-color: transparent; /* The parent already has the background */
+    }
     /* On desktop, center the inner content, not the whole panel */
     .filter-menu-content-inner {
         width: 100%;
@@ -821,10 +860,6 @@ input:checked + .slider:before {
     /* Use a 4-column grid for labels on desktop */
     #label-toggles {
         grid-template-columns: repeat(4, 1fr);
-    }
-
-    /* The floating button is for mobile only */
-    .mobile-filters-btn {
     }
 
     /* The header toggle button is also mobile-only */
@@ -866,12 +901,6 @@ input:checked + .slider:before {
     .quick-tips-container .material-symbols-outlined {
         margin-right: 0;
         font-size: 24px; /* Make icon slightly larger to fill the circle */
-    }
-
-    /* Position the mobile filter button */
-    .mobile-filters-btn {
-        bottom: 6.5em;
-        right: 1.5em;
     }
 }
 
