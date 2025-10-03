@@ -88,6 +88,18 @@ export const markerStyles = {
     icon: "icons/scroll-unfurled.svg",
     color: "#32CD32", // LimeGreen
   },
+  shop_scrolls: {
+    icon: "icons/tied-scroll.svg",
+    color: "#32CD32", // LimeGreen
+  },
+  shop_shipyard: {
+    icon: "icons/sailboat.svg",
+    color: "#32CD32", // LimeGreen
+  },
+  shop_storage: {
+    icon: "icons/chest.svg",
+    color: "#32CD32", // LimeGreen
+  },
 
   // Trainers
   trainer: {
@@ -97,6 +109,10 @@ export const markerStyles = {
   town_steward: {
     icon: "icons/elf-helmet.svg",
     color: "#4169E1", // RoyalBlue
+  },
+  town_guard: {
+    icon: "icons/guards.svg",
+    color: "#c9b128ff", // GoldenRod
   },
 
   // Spawns
@@ -187,11 +203,11 @@ export const markerStyles = {
   },
   information: {
     icon: "icons/info.svg",
-    color: "#00BFFF", // DeepSkyBlue
+    color: "#00BFFF", // DeepSkyBlue,
   },
-  event: {
+  event_ticket: {
     icon: "icons/ticket.svg",
-    color: "#FF1493", // DeepPink
+    color: "#C0C0C0", // Silver - a bright, neutral color
   },
   event_judge: {
     icon: "icons/gavel.svg",
@@ -569,12 +585,12 @@ export const mapMarkers = {
 
     /* Mainland Portals */
 
-    // Darkwoods Forest Portals
+    // Darkwoods Portals
     {
       type: "portal_blue",
       tooltip: "Portal to Krythan Island (West of New Korelth)",
       region: "Mainland",
-      place: "Darkwoods Forest",
+      place: "Darkwoods",
       details: {
         title: "Portal to Krythan Island (West of New Korelth)",
         coordinates: { x: 1350, y: 2438 },
@@ -588,7 +604,7 @@ export const mapMarkers = {
       type: "portal_housing",
       tooltip: "Portal to House Realm",
       region: "Mainland",
-      place: "Darkwoods Forest",
+      place: "Darkwoods",
       details: {
         title: "Portal to House Realm",
         coordinates: { x: 1270, y: 2511 },
@@ -602,7 +618,7 @@ export const mapMarkers = {
       type: "portal_lsp",
       tooltip: "Portal to Lotor's Summer Palace",
       region: "Mainland",
-      place: "Darkwoods Forest",
+      place: "Darkwoods",
       details: {
         title: "Portal to Lotor's Summer Palace",
         coordinates: { x: 1253, y: 2517 },
@@ -616,7 +632,7 @@ export const mapMarkers = {
       type: "portal_blue",
       tooltip: "Portal to Highlands (Southeast of Parian)",
       region: "Mainland",
-      place: "Darkwoods Forest",
+      place: "Darkwoods",
       details: {
         title: "Portal to Highlands (Southeast of Parian)",
         coordinates: { x: 807, y: 2837 },
@@ -630,7 +646,7 @@ export const mapMarkers = {
       type: "portal_small",
       tooltip: "Portal to Mnemmon",
       region: "Mainland",
-      place: "Darkwoods Forest",
+      place: "Darkwoods",
       details: {
         title: "Portal to Mnemmon",
         coordinates: { x: 866, y: 3416 },
@@ -644,7 +660,7 @@ export const mapMarkers = {
       type: "portal_small",
       tooltip: "Portal to Mnemmon Gaol",
       region: "Mainland",
-      place: "Darkwoods Forest",
+      place: "Darkwoods",
       details: {
         title: "Portal to Mnemmon Gaol",
         coordinates: { x: 908, y: 3258 },
@@ -658,7 +674,7 @@ export const mapMarkers = {
       type: "portal_lsp",
       tooltip: "Portal to Lotor's Summer Palace",
       region: "Mainland",
-      place: "Darkwoods Forest",
+      place: "Darkwoods",
       details: {
         title: "Portal to Lotor's Summer Palace",
         coordinates: { x: 471, y: 3479 },
@@ -713,23 +729,9 @@ export const mapMarkers = {
       },
     },
 
-    // Black Swamp Portals
+    // Region: Black Swamp Portals
 
-    // Highlands Portals
-    {
-      type: "portal_lsp",
-      tooltip: "Portal to Lotor's Summer Palace",
-      region: "Mainland",
-      place: "Highlands",
-      details: {
-        title: "Portal to Lotor's Summer Palace",
-        coordinates: { x: 3414, y: 2917 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Portal to Lotor's Summer Palace is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
+    // Region: Highlands Portals    
     {
       type: "portal_small",
       tooltip: "Portal to Southern Highlands (Northeast of Grell)",
@@ -760,14 +762,43 @@ export const mapMarkers = {
     },
     {
       type: "portal_blue",
-      tooltip: "Portal to Darkwoods Forest (East of Redwake)",
+      tooltip: "Portal to Darkwoods (East of Redwake)",
       region: "Mainland",
       place: "Highlands",
       details: {
-        title: "Portal to Darkwoods Forest (East of Redwake)",
+        title: "Portal to Darkwoods (East of Redwake)",
         coordinates: { x: 3767, y: 3238 },
         image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Portal to Darkwoods Forest (East of Redwake) is coming soon.",
+        lore: "More information about Portal to Darkwoods (East of Redwake) is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "portal_blue",
+      tooltip: "Portal to Krythan Island (West of New Korelth)",
+      region: "Mainland",
+      place: "Highlands",
+      details: {
+        title: "Portal to Krythan Island (West of New Korelth)",
+        coordinates: { x: 3303, y: 3014 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Portal to Krythan Island (West of New Korelth) is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    // City: Parian Portals
+    {
+      type: "portal_lsp",
+      tooltip: "Portal to Lotor's Summer Palace",
+      region: "Mainland",
+      place: "Highlands",
+      details: {
+        title: "Portal to Lotor's Summer Palace",
+        coordinates: { x: 3414, y: 2917 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Portal to Lotor's Summer Palace is coming soon.",
         npcs: [],
         links: [],
       },
@@ -1294,12 +1325,12 @@ export const mapMarkers = {
 
     /* Mainland Docks */
 
-    // Darkwoods Forest Docks
+    // Darkwoods Docks
     {
       type: "dock",
       tooltip: "Josody Dock",
       region: "Mainland",
-      place: "Darkwoods Forest",
+      place: "Darkwoods",
       details: {
         title: "Josody Dock",
         coordinates: { x: 1405, y: 2517 },
@@ -1313,7 +1344,7 @@ export const mapMarkers = {
       type: "dock",
       tooltip: "Redwake Dock",
       region: "Mainland",
-      place: "Darkwoods Forest",
+      place: "Darkwoods",
       details: {
         title: "Redwake Dock",
         coordinates: { x: 403, y: 2866 },
@@ -1327,7 +1358,7 @@ export const mapMarkers = {
       type: "dock",
       tooltip: "Dragoon Dock",
       region: "Mainland",
-      place: "Darkwoods Forest",
+      place: "Darkwoods",
       details: {
         title: "Dragoon Dock",
         coordinates: { x: 402, y: 3220 },
@@ -1341,7 +1372,7 @@ export const mapMarkers = {
       type: "dock",
       tooltip: "Whisperdale Dock",
       region: "Mainland",
-      place: "Darkwoods Forest",
+      place: "Darkwoods",
       details: {
         title: "Whisperdale Dock",
         coordinates: { x: 342, y: 3490 },
@@ -1355,7 +1386,7 @@ export const mapMarkers = {
       type: "dock",
       tooltip: "Darkfell Dock",
       region: "Mainland",
-      place: "Darkwoods Forest",
+      place: "Darkwoods",
       details: {
         title: "Darkfell Dock",
         coordinates: { x: 911, y: 3120 },
@@ -1369,7 +1400,7 @@ export const mapMarkers = {
       type: "dock",
       tooltip: "Dunmarrow Dock",
       region: "Mainland",
-      place: "Darkwoods Forest",
+      place: "Darkwoods",
       details: {
         title: "Dunmarrow Dock",
         coordinates: { x: 1363, y: 3246 },
@@ -2080,20 +2111,6 @@ export const mapMarkers = {
     },
     {
       type: "quest",
-      tooltip: "Captain of the Guard",
-      region: "Valinor Island",
-      place: "Valinor",
-      details: {
-        title: "Captain of the Guard",
-        coordinates: { x: 760, y: 147 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Captain of the Guard is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "quest",
       tooltip: "Kumba Northern (Wanders)",
       region: "Valinor Island",
       place: "Valinor",
@@ -2714,7 +2731,7 @@ export const mapMarkers = {
       },
     },
     {
-      type: "shop_generic",
+      type: "shop_shipyard",
       tooltip: "Larson Davide's Shipyard Shop",
       region: "Krythan",
       place: "Lotor's Summer Palace",
@@ -2728,7 +2745,7 @@ export const mapMarkers = {
       },
     },
     {
-      type: "shop_generic",
+      type: "shop_shipyard",
       tooltip: "Tides of Fate Raft Offer",
       region: "Krythan",
       place: "Lotor's Summer Palace",
@@ -3156,6 +3173,160 @@ export const mapMarkers = {
 
     // Region: Highlands Shops
     // City: Parian Shops
+    {
+      type: "shop_weapon",
+      tooltip: "Rhonidd's Weapon Shop",
+      region: "Highlands",
+      place: "Parian",
+      details: {
+        title: "Rhonidd's Weapon Shop",
+        coordinates: { x: 3473, y: 3073 },
+        image: "images/npcs/Rohnidd_Weapon_Shop.png",
+        lore: "More information about Rhonidd's Weapon Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_blacksmith",
+      tooltip: "Hemos' Blacksmith Shop",
+      region: "Highlands",
+      place: "Parian",
+      details: {
+        title: "Hemos' Blacksmith Shop",
+        coordinates: { x: 3472, y: 3063 },
+        image: "images/npcs/Hemos_Blacksmith_Shop.png",
+        lore: "More information about Hemos' Blacksmith Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_scrolls",
+      tooltip: "Sage Rauth's Scrolls Shop",
+      region: "Highlands",
+      place: "Parian",
+      details: {
+        title: "Sage Rauth's Scrolls Shop",
+        coordinates: { x: 3479, y: 3072 },
+        image: "images/npcs/Sage_Rauth_Scrolls_Shop.png",
+        lore: "More information about Sage Rauth's Scrolls Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_magic",
+      tooltip: "Tragos' Magic Shop",
+      region: "Highlands",
+      place: "Parian",
+      details: {
+        title: "Tragos' Magic Shop",
+        coordinates: { x: 3479, y: 3075 },
+        image: "images/npcs/Tragos_Magic_Shop.png",
+        lore: "More information about Tragos' Magic Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_provisioner",
+      tooltip: "Thodonna's Provisioner Shop",
+      region: "Highlands",
+      place: "Parian",
+      details: {
+        title: "Thodonna's Provisioner Shop",
+        coordinates: { x: 3473, y: 3085 },
+        image: "images/npcs/Thodonna_Provisioner_Shop.png",
+        lore: "More information about Thodonna's Provisioner Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_jewelry",
+      tooltip: "Maggie Hobson's Jewelry Shop",
+      region: "Highlands",
+      place: "Parian",
+      details: {
+        title: "Maggie Hobson's Jewelry Shop",
+        coordinates: { x: 3494, y: 3067 },
+        image: "images/npcs/Maggie_Hobson_Jewelry_Shop.png",
+        lore: "More information about Maggie Hobson's Jewelry Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_provisioner",
+      tooltip: "Theiseth's Provisioner Shop",
+      region: "Highlands",
+      place: "Parian",
+      details: {
+        title: "Theiseth's Provisioner Shop",
+        coordinates: { x: 3500, y: 3062 },
+        image: "images/npcs/Theiseth_Provisioner_Shop.png",
+        lore: "More information about Theiseth's Provisioner Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_shipyard",
+      tooltip: "Arthuren's Ship Yard Shop",
+      region: "Highlands",
+      place: "Parian",
+      details: {
+        title: "Arthuren's Ship Yard Shop",
+        coordinates: { x: 3514, y: 3070 },
+        image: "images/npcs/Arthuren_Ship_Yard_Shop.png",
+        lore: "More information about Arthuren's Ship Yard Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_magic",
+      tooltip: "Theard's Magic Shop",
+      region: "Highlands",
+      place: "Parian",
+      details: {
+        title: "Theard's Magic Shop",
+        coordinates: { x: 3499, y: 3047 },
+        image: "images/npcs/Theard_Magic_Shop.png",
+        lore: "More information about Theard's Magic Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_pub",
+      tooltip: "Loeband's Pub",
+      region: "Highlands",
+      place: "Parian",
+      details: {
+        title: "Loeband's Pub",
+        coordinates: { x: 3506, y: 3032 },
+        image: "images/npcs/Loeband_Pub.png",
+        lore: "More information about Loeband's Pub is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_storage",
+      tooltip: "Rella's Storage Shop",
+      region: "Highlands",
+      place: "Parian",
+      details: {
+        title: "Rella's Storage Shop",
+        coordinates: { x: 3506, y: 3035 },
+        image: "images/npcs/Rella_Storage_Shop.png",
+        lore: "Rella sells storage crates for 50,000 gold each. These are essential for expanding your bank space.",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // City: Arda Shops
     {
@@ -3646,34 +3817,6 @@ export const mapMarkers = {
       },
     },
     {
-      type: "event_judge",
-      tooltip: "Fishing Event Judge",
-      region: "Krythan",
-      place: "Lotor's Summer Palace",
-      details: {
-        title: "Fishing Event Judge",
-        coordinates: { x: 793, y: 621 },
-        image: "images/npcs/Fishing_Event_Judge.png",
-        lore: "More information about Fishing Event Judge is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "event_judge",
-      tooltip: "Mining Event Judge",
-      region: "Krythan",
-      place: "Lotor's Summer Palace",
-      details: {
-        title: "Mining Event Judge",
-        coordinates: { x: 814, y: 708 },
-        image: "images/npcs/Mining_Event_Judge.png",
-        lore: "More information about Mining Event Judge is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
       type: "trainer",
       tooltip: "Lotor's Steward",
       region: "Krythan",
@@ -3742,7 +3885,8 @@ export const mapMarkers = {
         npcs: [],
         links: [],
       },
-    },{
+    },
+    {
       type: "trainer",
       tooltip: "Farming Taskmaster",
       region: "Krythan",
@@ -3757,11 +3901,65 @@ export const mapMarkers = {
       },
     },
 
-    // Krythan Island Trainers
+    // Mainlands Trainers
+
+    // Region: Darkwoods Trainers
+
+    // Region: Battle Plains Trainers
+
+    // Region: Black Swamp Trainers
+
+    // Region: Highlands Trainers
+    // City: Parian Trainers
+    {
+      type: "trainer",
+      tooltip: "Warlord Isbraen (Archery Trainer)",
+      region: "Krythan",
+      place: "Lotor's Summer Palace",
+      details: {
+        title: "Warlord Isbraen",
+        coordinates: { x: 3431, y: 3049 },
+        image: "images/npcs/Warlord_Isbraen.png",
+        lore: "Warlord Isbraen is an Archery Trainer located in Parian in the Government building.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "trainer",
+      tooltip: "Warlord Uerog (Warrior Trainer)",
+      region: "Krythan",
+      place: "Lotor's Summer Palace",
+      details: {
+        title: "Warlord Isbraen",
+        coordinates: { x: 3429, y: 3043 },
+        image: "images/npcs/Warlord_Uerog.png",
+        lore: "Warlord Uerog is a Warrior Trainer located in Parian in the Government building.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "trainer",
+      tooltip: "Warlord Cheroth (Mage Trainer)",
+      region: "Krythan",
+      place: "Lotor's Summer Palace",
+      details: {
+        title: "Warlord Cheroth",
+        coordinates: { x: 3434, y: 3041 },
+        image: "images/npcs/Warlord_Uerog.png",
+        lore: "Warlord Uerog is a Mage Trainer located in Parian in the Government building.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+
+    // Region: Krythan Trainers
 
     // Silvest Valley Trainers
 
-    // Krythan Trainers
+    // Region: Western Isles Trainers
 
     // Scarab Island Trainers
     // Lopal Trainers
@@ -4230,6 +4428,49 @@ export const mapMarkers = {
     // Region: Black Swamp Banks
 
     // Region: Highlands Banks
+    // City: Parian Banks
+    {
+      type: "bank",
+      tooltip: "North Bank",
+      region: "Highlands",
+      place: "Parian",
+      details: {
+        title: "North Bank",
+        coordinates: { x: 3440, y: 2955 },
+        image: "images/npcs/Parian_North_Bank.png",
+        lore: "More information about North Bank is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "bank",
+      tooltip: "East Bank",
+      region: "Highlands",
+      place: "Parian",
+      details: {
+        title: "East Bank",
+        coordinates: { x: 3496, y: 3023 },
+        image: "images/npcs/Parian_North_Bank.png",
+        lore: "More information about East Bank is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "bank",
+      tooltip: "South Bank",
+      region: "Highlands",
+      place: "Parian",
+      details: {
+        title: "South Bank",
+        coordinates: { x: 3450, y: 3071 },
+        image: "images/npcs/Parian_North_Bank.png",
+        lore: "More information about South Bank is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
     // City: Arda Banks
     {
       type: "bank",
@@ -4602,7 +4843,7 @@ export const mapMarkers = {
       },
     },
     {
-      type: "underground_stairs",
+      type: "underground_ladder",
       tooltip: "Gideon's Trapdoor",
       region: "Krythan",
       place: "Monk Island",
@@ -4846,12 +5087,12 @@ export const mapMarkers = {
 
     /* Mainland Undergrounds */
 
-    // Darkwoods Forest Region Undergrounds
+    // Region: Darkwoods Undergrounds
     {
       type: "underground_spider",
       tooltip: "Shadow Spider Cave",
       region: "Mainland",
-      place: "Darkwoods Forest",
+      place: "Darkwoods",
       details: {
         title: "Shadow Spider Cave",
         coordinates: { x: 1462, y: 2674 },
@@ -4865,7 +5106,7 @@ export const mapMarkers = {
       type: "underground_cave",
       tooltip: "Swamp Beast Cave",
       region: "Mainland",
-      place: "Darkwoods Forest",
+      place: "Darkwoods",
       details: {
         title: "Swamp Beast Cave",
         coordinates: { x: 1653, y: 2677 },
@@ -4879,7 +5120,7 @@ export const mapMarkers = {
       type: "underground_cave",
       tooltip: "Swamp Beast Cave",
       region: "Mainland",
-      place: "Darkwoods Forest",
+      place: "Darkwoods",
       details: {
         title: "Swamp Beast Cave",
         coordinates: { x: 1571, y: 2656 },
@@ -4893,7 +5134,7 @@ export const mapMarkers = {
       type: "underground_scorpion",
       tooltip: "Scorpion Pit",
       region: "Mainland",
-      place: "Darkwoods Forest",
+      place: "Darkwoods",
       details: {
         title: "Scorpion Pit",
         coordinates: { x: 836, y: 3268 },
@@ -4907,7 +5148,7 @@ export const mapMarkers = {
       type: "underground_termigon",
       tooltip: "Termigon Pit",
       region: "Mainland",
-      place: "Darkwoods Forest",
+      place: "Darkwoods",
       details: {
         title: "Termigon Pit",
         coordinates: { x: 758, y: 3321 },
@@ -4921,7 +5162,7 @@ export const mapMarkers = {
       type: "underground_mine",
       tooltip: "South Astari Rune Shelter",
       region: "Mainland",
-      place: "Darkwoods Forest",
+      place: "Darkwoods",
       details: {
         title: "South Astari Rune Shelter",
         coordinates: { x: 798, y: 3334 },
@@ -4935,7 +5176,7 @@ export const mapMarkers = {
       type: "underground_snake",
       tooltip: "Whisperdale Snake Pit",
       region: "Mainland",
-      place: "Darkwoods Forest",
+      place: "Darkwoods",
       details: {
         title: "Whisperdale Snake Pit",
         coordinates: { x: 472, y: 3430 },
@@ -4949,7 +5190,7 @@ export const mapMarkers = {
       type: "underground_ant",
       tooltip: "Dunmarrow Fire Ant Pit",
       region: "Mainland",
-      place: "Darkwoods Forest",
+      place: "Darkwoods",
       details: {
         title: "Dunmarrow Fire Ant Pit",
         coordinates: { x: 1270, y: 3030 },
@@ -4963,7 +5204,7 @@ export const mapMarkers = {
       type: "underground_crypt",
       tooltip: "McKelsky Crypt",
       region: "Mainland",
-      place: "Darkwoods Forest",
+      place: "Darkwoods",
       details: {
         title: "McKelsky Crypt",
         coordinates: { x: 1429, y: 3044 },
@@ -4977,7 +5218,7 @@ export const mapMarkers = {
       type: "underground_dungeon",
       tooltip: "Marsh Dungeon",
       region: "Mainland",
-      place: "Darkwoods Forest",
+      place: "Darkwoods",
       details: {
         title: "Marsh Dungeon",
         coordinates: { x: 481, y: 3505 },
@@ -4991,7 +5232,7 @@ export const mapMarkers = {
       type: "underground_dungeon",
       tooltip: "Cathedral of Joyous Afterlife (North Entrance)",
       region: "Mainland",
-      place: "Darkwoods Forest",
+      place: "Darkwoods",
       details: {
         title: "Cathedral of Joyous Afterlife (North Entrance)",
         coordinates: { x: 632, y: 3186 },
@@ -5005,7 +5246,7 @@ export const mapMarkers = {
       type: "underground_dungeon",
       tooltip: "Cathedral of Joyous Afterlife (South Entrance)",
       region: "Mainland",
-      place: "Darkwoods Forest",
+      place: "Darkwoods",
       details: {
         title: "Cathedral of Joyous Afterlife (South Entrance)",
         coordinates: { x: 679, y: 3318 },
@@ -5016,10 +5257,10 @@ export const mapMarkers = {
       },
     },
 
-    // Highlands Region Undergrounds
+    // Region: Highlands Undergrounds
     {
       type: "underground_closed",
-      tooltip: "Cave (CLOSED)",
+      tooltip: "Cave (CLOSED)", // Used to be Astari Cave but it's closed now and Astari Cave moved south
       region: "Mainland",
       place: "Highlands",
       details: {
@@ -5030,7 +5271,38 @@ export const mapMarkers = {
         npcs: [],
         links: [],
       },
-    }, // Used to be Astari Cave but it's closed now
+    }, 
+    // City: Parian Undergrounds
+    {
+      type: "underground_ladder",
+      tooltip: "West Entrance to Parian Tunnels", // Name found in in-game book
+      region: "Mainland",
+      place: "Highlands",
+      details: {
+        title: "West Entrance to Parian Tunnels",
+        coordinates: { x: 3449, y: 3036 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about West Entrance to Parian Tunnels is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "underground_ladder",
+      tooltip: "East Entrance to Parian Tunnels", // Name found in in-game book
+      region: "Mainland",
+      place: "Highlands",
+      details: {
+        title: "East Entrance to Parian Tunnels",
+        coordinates: { x: 3506, y: 3026 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about East Entrance to Parian Tunnels is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // City: Grell Undergrounds
     {
       type: "underground_cave",
       tooltip: "Grell",
@@ -5060,7 +5332,7 @@ export const mapMarkers = {
       },
     },
     {
-      type: "underground_stairs",
+      type: "underground_cave",
       tooltip: "Badlands Cave",
       region: "Mainland",
       place: "Highlands",
@@ -5074,7 +5346,7 @@ export const mapMarkers = {
       },
     }, // I'm adding this to Highlands but it could be a part of Battle Plains
     {
-      type: "underground_stairs",
+      type: "underground_ladder",
       tooltip: "Badlands Entrance",
       region: "Mainland",
       place: "Highlands",
@@ -5134,7 +5406,7 @@ export const mapMarkers = {
       },
     },
 
-    // Battle Plains Region Undergrounds
+    // Region: Battle Plains Undergrounds
     {
       type: "underground_stairs",
       tooltip: "Chlera Catacombs",
@@ -5838,6 +6110,123 @@ export const mapMarkers = {
     },
   ],
 
+  events: [
+    /*Lotor's Summer Palace Events*/
+    {
+      type: "event_judge",
+      tooltip: "Fishing Event Judge",
+      region: "Krythan",
+      place: "Lotor's Summer Palace",
+      details: {
+        title: "Fishing Event Judge",
+        coordinates: { x: 793, y: 621 },
+        image: "images/npcs/Fishing_Event_Judge.png",
+        lore: "More information about Fishing Event Judge is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "event_judge",
+      tooltip: "Mining Event Judge",
+      region: "Krythan",
+      place: "Lotor's Summer Palace",
+      details: {
+        title: "Mining Event Judge",
+        coordinates: { x: 814, y: 708 },
+        image: "images/npcs/Mining_Event_Judge.png",
+        lore: "More information about Mining Event Judge is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // Krythan Island Events
+    // Silvest Valley Events
+
+    // Krythan Events
+
+    // Mainland Events
+    // Darkwoods Events
+
+    // Highlands Events
+    // City: Parian Events
+    {
+      type: "event_ticket",
+      tooltip: "Armsmaster (The Guantlet Challenge)",
+      region: "Krythan",
+      place: "Lotor's Summer Palace",
+      details: {
+        title: "Armsmaster",
+        coordinates: { x: 3469, y: 3075 },
+        image: "images/npcs/Armsmaster.png",
+        lore: "More information about Armsmaster is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // City: Grell Undergrounds Events
+
+    // Region: Battle Plains Events
+
+    // Region: Black Swamp Events
+
+    // Region: Heartwood Coast Events
+
+    // Region: Tundria Events
+
+    // Region: Western Isles Events
+  ],
+
+
+  guards: [
+    // Krythan Island Guards
+    // Region: Silvest Valley Guards
+
+    // Region: Krythan Guards
+
+    // Mainland Guards
+    // Region: Darkwoods Guards
+
+    // Region: Highlands Guards
+    // City: Parian Guards
+    {
+      type: "town_guard",
+      tooltip: "Town Guardian (Parian)",
+      region: "Valinor Island",
+      place: "Valinor",
+      details: {
+        title: "Town Guardian",
+        coordinates: { x: 3433, y: 3029 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "The Town Guardian in Parian.",
+        npcs: [],
+        links: [],
+      },
+    },
+  ],
+
+    // Region: Battle Plains Guards
+
+    // Region: Black Swamp Guards
+
+    // Region: Heartwood Coast Guards
+
+    // Region: Tundria Guards
+
+    // Western Isles Guards
+
+    // Sands of Creation Region Guards
+    // Ruhura Side Guards
+
+    // Khafra Side Guards
+
+    // Breakwater Region Guards
+
+    // Broken Finger Region Guards
+    
+
   games_of_chance: [
     /*Lotor's Summer Palace Games*/
     {
@@ -5858,9 +6247,43 @@ export const mapMarkers = {
     // Krythan Island Games of Chance
     // Silvest Valley Games of Chance
 
-    // Krythan Games of Chance
+    // Krythan Island Games of Chance
 
-    // Scarab Island Games of Chance
+    // Mainland Games of Chance
+    // Region: Darkwoods Games of Chance
+
+    // Region: Battle Plains Games of Chance
+
+    // Region: Highlands Games of Chance
+    // City: Parian Games of Chance
+    {
+      type: "game_of_chance",
+      tooltip: "Trinde's Demon Eye Game",
+      region: "Krythan",
+      place: "Parian",
+      details: {
+        title: "Trinde's Demon Eye Game",
+        coordinates: { x: 3515, y: 3039 },
+        image: "images/placeholders/Trinde_Demon_Eye_Game.png",
+        lore: "More information about Trinde's Demon Eye Game is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // Region: Tundria Games of Chance
+
+    // Region: Breakwater Games of Chance
+
+    // Region: Broken Finger Games of Chance
+
+    // Region: Sands of Creation Games of Chance
+    // Khafra Games of Chance
+
+    // Ruhura Games of Chance
+
+    // Regoin: Western Isles Games of Chance
+    // City: Lopal Games of Chance
     {
       type: "game_of_chance",
       tooltip: "Lopal Demon Eye",
@@ -5973,12 +6396,12 @@ export const mapMarkers = {
 
     // Mainland Information
 
-    // Darkwoods Forest Region Information
+    // Region: Darkwood Information
     {
       type: "information",
       tooltip: "The Utopia Shard",
       region: "Mainland",
-      place: "Darkwoods Forest",
+      place: "Darkwoods",
       details: {
         title: "The Utopia Shard",
         coordinates: { x: 1192, y: 2903 },
@@ -5989,7 +6412,7 @@ export const mapMarkers = {
       },
     },
 
-    // Battle Plains Region Information
+    // Region: Battle Plains Information
 
     // Highlands Region Information
 

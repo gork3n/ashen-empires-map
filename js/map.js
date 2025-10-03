@@ -206,6 +206,8 @@ document.addEventListener('DOMContentLoaded', function() {
         // Preload and tint icons, then initialize the map. This ensures that
         // custom colors can be applied to SVGs that have hardcoded fill colors.
         preloadIcons().then(() => {
+            // Dispatch a custom event to notify other scripts that the icons are ready.
+            document.dispatchEvent(new CustomEvent('icons-ready'));
             initializeMap();
             // Dispatch a custom event to notify other scripts that the map and icons are ready.
             document.dispatchEvent(new CustomEvent('map-ready'));
@@ -251,7 +253,7 @@ function initializeMap() {
     // --- Set Initial Map View ---
     // Define the center of the map using in-game (4096x4096) coordinates.
     // This makes it easy to change the starting location.
-    const initialCenterGameCoords = { x: 776, y: 668, }; // Default View is { x: 776, y: 668, } (Showing Lotor's Summer Palace) Centers LSP on smaller screens.
+    const initialCenterGameCoords = { x: 3429, y: 3018, }; // Default View is { x: 776, y: 668, } (Showing Lotor's Summer Palace) Centers LSP on smaller screens.
 
     const mapSize = 32768;
     const scaleFactor = mapSize / 4096; // New scaling factor
@@ -801,12 +803,20 @@ function addMapMarkers(map) {
         const markerLayer = new VectorLayer({
             source: markerSource,
             title: category + ' Markers',
-            visible: true, // Set to 0 to ensure markers are always visible when zoomed in.
+             visible: true, // Set to 0 to ensure markers are always visible when zoomed in.
             style: function(feature, resolution) {
                 const type = feature.get('type');
+
+                // Check if the subtype button is active
+                const subtypeButton = document.querySelector(`.marker-subtype-btn[data-subtype="${type}"]`);
+                if (subtypeButton && !subtypeButton.classList.contains('active')) {
+                    return null; // Hide the feature if its subtype is toggled off
+                }
+
                 const style = createMarkerStyle(type);
 
                 // Resolutions are [128, 64, 32, 16, 8, 4, 2, 1].
+
                 // Zoom 7 is resolution 1. Zoom 8 is resolution 0.5.
                 // We want 100% scale at zoom 8 (resolution 0.5) and below.
                 // We want 75% scale at zoom 7 (resolution 1).
@@ -1054,7 +1064,7 @@ function setupMarkerTooltips(map) {
 //         return 'X: ' + Math.round(coord[0]) + ' | Y: ' + Math.round(4096 - coord[1]); // Adjust Y if needed
 //     },
 //     projection: 'EPSG:3857', // Or whatever projection you're using
-//     className: 'custom-mouse-position'osition'), // Keep using the sidebar's mouse-position div
+//     className: 'custom-mouse-position'), // Keep using the sidebar's mouse-position div
 //     undefinedHTML: 'X: --- | Y: ---'
 // });
 //

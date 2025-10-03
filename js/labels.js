@@ -67,8 +67,19 @@ export const mapLabels = {
         links: [],
       },
     },
-
-    // Valley of Giants Region Landmarks
+    {
+      name: "Rock Troll Coast",
+      fontSize: 30,
+      region: "Highlands",
+      details: {
+        title: "Rock Troll Coast",
+        coordinates: { x: 3744, y: 3502 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Rock Troll Coast is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
     {
       name: "Valley of Giants",
       fontSize: 30,
@@ -3020,7 +3031,9 @@ export const mapLabels = {
         title: "Medosk Mountains",
         coordinates: [
           { x: 2979, y: 3531 },
-          { x: 3149, y: 3845 }, // Added a second coordinate for the same label
+          { x: 3149, y: 3845 }, // Added more coordinates to better represent the range
+          { x: 3481, y: 3652 },
+          { x: 3763, y: 3415 },
         ],
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Medosk Mountains is coming soon.",
@@ -3030,6 +3043,25 @@ export const mapLabels = {
     },
 
     // Mountains - Region: Highlands
+    {
+      name: "Eastern Mountains",
+      fontSize: 20,
+      region: "Highlands",
+      details: {
+        title: "Eastern Mountains",
+        coordinates: [
+          { x: 3133, y: 2569 },
+          { x: 3529, y: 2877 },
+          { x: 3240, y: 2061 }, // Added a second coordinate for the same label
+          { x: 3481, y: 1764 },
+          { x: 3692, y: 3074 },
+        ],
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Eastern Mountains is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // Mountains - Region: Valley of Giants
 

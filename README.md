@@ -122,7 +122,7 @@ This is the simplest method. It gives you the full experience with the interacti
 1. Clone or download the repository.
 2. Ensure you have the following files and folders in your project:
     - `openlayers.html`
-    - `/js/` (containing `map.js`, `markers.js`, `labels.js`, `filter-menu.js`, `tips.js`)
+    - `/js/` (containing `map.js`, `markers.js`, `labels.js`, `filter-menu.js`, and `tips.js`)
     - `/css/` (containing `map-styles.css`)
     - `/tiles/` (containing all map tile images)
     - `/images/` (containing background images)

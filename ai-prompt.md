@@ -17,3 +17,5 @@ When generating or modifying JavaScript code for this project, please adhere to 
 -   **DOM Manipulation**: When creating new UI elements, use modern DOM APIs. When adding event listeners, use `element.addEventListener()`.
 -   **Styling**: Keep all styling within the `.css` files. Avoid inline styles in JavaScript unless absolutely necessary for dynamic properties (e.g., canvas rendering, element positioning).
 -   **OpenLayers API**: Utilize the current OpenLayers API best practices.
+
+

@@ -11,7 +11,7 @@ Thumbs.db
 
 # Ignore migration and troubleshooting logs
 MIGRATION_GUIDE.md
-troubleshooting-log.md
+filter-troubleshooting.md
 
 # Ignore archived tile sets
 archive-tiles/*/
@@ -19,6 +19,3 @@ archive-tiles/*/
 # Ignore AI-related files
 .aiexclude
 .ai-prompt.md
-
-# Ignore leaflet files from previous map versions
-leaflet-files/
