@@ -1,5 +1,5 @@
 .aiexclude
-ai-prompt.md
+.ai-prompt.md
 .vscode/
 .idea/
 .DS_Store
