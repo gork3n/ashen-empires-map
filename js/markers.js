@@ -873,7 +873,7 @@ export const mapMarkers = {
     {
       type: "portal_lsp",
       tooltip: "Portal to Lotor's Summer Palace",
-      region: "Mainland",
+      region: "Heartwood Coast",
       place: "Heartwood Coast",
       details: {
         title: "Portal to Lotor's Summer Palace",
@@ -1158,7 +1158,7 @@ export const mapMarkers = {
     {
       type: "portal_whirlpool",
       tooltip: "Whirlpool to Scarab Island",
-      region: "Mainland",
+      region: "Tundria",
       place: "Tundria", // Near Duremar Dock
       details: {
         title: "Whirlpool to Scarab Island",
@@ -2100,7 +2100,7 @@ export const mapMarkers = {
     {
       type: "dock",
       tooltip: "Valmond East Dock",
-      region: "Mainland",
+      region: "Heartwood Coast",
       place: "Heartwood Coast",
       details: {
         title: "Valmond East Dock",
@@ -2114,7 +2114,7 @@ export const mapMarkers = {
     {
       type: "dock",
       tooltip: "Valmond East Dock",
-      region: "Mainland",
+      region: "Heartwood Coast",
       place: "Heartwood Coast",
       details: {
         title: "Valmond East Dock",
@@ -2128,7 +2128,7 @@ export const mapMarkers = {
     {
       type: "dock",
       tooltip: "Valmond North Dock",
-      region: "Mainland",
+      region: "Heartwood Coast",
       place: "Heartwood Coast",
       details: {
         title: "Valmond North Dock",
@@ -2142,7 +2142,7 @@ export const mapMarkers = {
     {
       type: "dock",
       tooltip: "Valmond North Dock",
-      region: "Mainland",
+      region: "Heartwood Coast",
       place: "Heartwood Coast",
       details: {
         title: "Valmond North Dock",
@@ -2156,7 +2156,7 @@ export const mapMarkers = {
     {
       type: "dock",
       tooltip: "Valmond North Dock",
-      region: "Mainland",
+      region: "Heartwood Coast",
       place: "Heartwood Coast",
       details: {
         title: "Valmond North Dock",
@@ -2170,7 +2170,7 @@ export const mapMarkers = {
     {
       type: "dock",
       tooltip: "Teylan Dock",
-      region: "Mainland",
+      region: "Heartwood Coast",
       place: "Heartwood Coast",
       details: {
         title: "Teylan Dock",
@@ -2184,7 +2184,7 @@ export const mapMarkers = {
     {
       type: "dock",
       tooltip: "Heartwood North Dock (Northeast of Syldural)",
-      region: "Mainland",
+      region: "Heartwood Coast",
       place: "Heartwood Coast",
       details: {
         title: "Heartwood North Dock (Northeast of Syldural)",
@@ -2200,7 +2200,7 @@ export const mapMarkers = {
     {
       type: "dock",
       tooltip: "Duremar Dock",
-      region: "Mainland",
+      region: "Tundria",
       place: "Tundria",
       details: {
         title: "Duremar Dock",
@@ -2214,7 +2214,7 @@ export const mapMarkers = {
     {
       type: "dock",
       tooltip: "Southeast Tundria Dock",
-      region: "Mainland",
+      region: "Tundria",
       place: "Tundria",
       details: {
         title: "Southeast Tundria Dock",
@@ -2228,7 +2228,7 @@ export const mapMarkers = {
     {
       type: "dock",
       tooltip: "Bridge Dock",
-      region: "Mainland",
+      region: "Tundria",
       place: "Tundria",
       details: {
         title: "Bridge Dock",
@@ -3071,7 +3071,7 @@ export const mapMarkers = {
     {
       type: "obelisk",
       tooltip: "Hammerfist Obelisk",
-      region: "Mainland",
+      region: "Tundria",
       place: "Tundria",
       details: {
         title: "Hammerfist Obelisk",
@@ -3086,7 +3086,7 @@ export const mapMarkers = {
       type: "obelisk",
       tooltip: "Tundria Rune Spire",
       region: "Tundria",
-      place: "West of Trapdoor to Hammerfist Mine",
+      place: "West of Trapdoor to Hammerfist",
       details: {
         title: "Hammerfist Obelisk",
         coordinates: { x: 2965, y: 647 },
@@ -6355,7 +6355,7 @@ export const mapMarkers = {
     {
       type: "underground_crypt",
       tooltip: "Gnobol Mauseleum Crypt",
-      region: "Mainland",
+      region: "Heartwood Coast",
       place: "Heartwood Coast",
       details: {
         title: "Gnobol Mauseleum Crypt",
@@ -6369,7 +6369,7 @@ export const mapMarkers = {
     {
       type: "underground_cave",
       tooltip: "Syldural",
-      region: "Mainland",
+      region: "Heartwood Coast",
       place: "Heartwood Coast",
       details: {
         title: "Syldural",
@@ -6383,7 +6383,7 @@ export const mapMarkers = {
     {
       type: "underground_cave",
       tooltip: "Zanock's Mine (West)",
-      region: "Mainland",
+      region: "Heartwood Coast",
       place: "Heartwood Coast",
       details: {
         title: "Zanock's Mine (West)",
@@ -6397,7 +6397,7 @@ export const mapMarkers = {
     {
       type: "underground_snake",
       tooltip: "Valmond Skeleton Pit",
-      region: "Mainland",
+      region: "Heartwood Coast",
       place: "Heartwood Coast",
       details: {
         title: "Valmond Skeleton Pit",
@@ -6455,11 +6455,11 @@ export const mapMarkers = {
     {
       type: "underground_dungeon",
       tooltip: "Hammerfist Mine Entrance",
-      region: "Mainland",
+      region: "Tundria",
       place: "Tundria",
       details: {
         title: "Hammerfist Mine Entrance",
-        coordinates: { x: 2775, y: 593 },
+        coordinates: { x: 2776, y: 598 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Hammerfist Mine Entrance is coming soon.",
         npcs: [],
@@ -6469,7 +6469,7 @@ export const mapMarkers = {
     {
       type: "underground_cave",
       tooltip: "Web Spinner Spider Cave",
-      region: "Mainland",
+      region: "Tundria",
       place: "Tundria",
       details: {
         title: "Web Spinner Spider Cave",
@@ -6483,7 +6483,7 @@ export const mapMarkers = {
     {
       type: "underground_crypt",
       tooltip: "Duremar Tomb",
-      region: "Mainland",
+      region: "Tundria",
       place: "Tundria",
       details: {
         title: "Duremar Tomb",
@@ -6497,7 +6497,7 @@ export const mapMarkers = {
     {
       type: "underground_crypt",
       tooltip: "Unknown Crypt", // A Crypt with Greater Skeletons
-      region: "Mainland",
+      region: "Tundria",
       place: "Tundria",
       details: {
         title: "Unknown Crypt",
@@ -6511,7 +6511,7 @@ export const mapMarkers = {
     {
       type: "underground_dungeon",
       tooltip: "Frieda's Dungeon",
-      region: "Mainland",
+      region: "Tundria",
       place: "Tundria",
       details: {
         title: "Frieda's Dungeon",
@@ -6525,7 +6525,7 @@ export const mapMarkers = {
     {
       type: "underground_dungeon",
       tooltip: "Artraxis Dungeon",
-      region: "Mainland",
+      region: "Tundria",
       place: "Tundria",
       details: {
         title: "Artraxis Dungeon",
@@ -6539,7 +6539,7 @@ export const mapMarkers = {
     {
       type: "underground_dungeon",
       tooltip: "Darok the Banished's Jail",
-      region: "Mainland",
+      region: "Tundria",
       place: "Tundria",
       details: {
         title: "Artraxis Dungeon",
@@ -6553,7 +6553,7 @@ export const mapMarkers = {
     {
       type: "underground_dungeon",
       tooltip: "Darok the Banished's Jail",
-      region: "Mainland",
+      region: "Tundria",
       place: "Tundria",
       details: {
         title: "Artraxis Dungeon",
@@ -6566,14 +6566,14 @@ export const mapMarkers = {
     },
     {
       type: "underground_dungeon",
-      tooltip: "Trap Door to Hammerfist Mine",
+      tooltip: "Trapdoor to Hammerfist Mine",
       region: "Tundria",
       place: "Tundria Northeast Coast",
       details: {
         title: "Artraxis Dungeon",
         coordinates: { x: 2837, y: 612 },
         image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Trap Door to Hammerfist Mine is coming soon.",
+        lore: "More information about Trapdoor to Hammerfist Mine is coming soon.",
         npcs: [],
         links: [],
       },

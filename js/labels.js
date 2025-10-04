@@ -2116,14 +2116,14 @@ export const mapLabels = {
       },
     },
     {
-      name: "Hammerfist Mine",
+      name: "Hammerfist Mine Camp",
       fontSize: 20,
       region: "Tundria",
       details: {
-        title: "Hammerfist Mine",
-        coordinates: { x: 2775, y: 593 },
+        title: "Hammerfist Mine Camp",
+        coordinates: { x: 2760, y: 613 },
         image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Hammerfist Mine is coming soon.",
+        lore: "More information about Hammerfist Mine Base Camp is coming soon.",
         npcs: [],
         links: [],
       },
