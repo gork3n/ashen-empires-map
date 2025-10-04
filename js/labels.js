@@ -788,7 +788,7 @@ export const mapLabels = {
     {
       name: "Lotor's Summer Palace",
       fontSize: 30,
-      region: "Special",
+      region: "Western Isles",
       details: {
         title: "Lotor's Summer Palace",
         coordinates: { x: 773, y: 569 },
@@ -816,7 +816,7 @@ export const mapLabels = {
     {
       name: "Real Estate Island",
       fontSize: 30,
-      region: "Special",
+      region: "Western Isles",
       details: {
         title: "Real Estate Island",
         coordinates: { x: 661, y: 628 },
@@ -855,7 +855,7 @@ export const mapLabels = {
     {
       name: "Krythan Island",
       fontSize: 35,
-      region: "Special",
+      region: "Krythan Island",
       details: {
         title: "Krythan Island",
         coordinates: { x: 1088, y: 990 },
@@ -921,7 +921,7 @@ export const mapLabels = {
     {
       name: "Deserted Island",
       fontSize: 20,
-      region: "Special",
+      region: "Western Isles",
       details: {
         title: "Deserted Island",
         coordinates: { x: 221, y: 423 },

@@ -14,7 +14,7 @@ export const markerStyles = {
   },
   portal_housing: {
     icon: "icons/house.svg",
-    color: "#32CD32", // LimeGreen
+    color: "#00BFFF", // DeepSkyBlue
   },
   portal_ancient: {
     icon: "icons/ancient-portal.svg", // Using rune spire for ancient stone portals
@@ -24,6 +24,8 @@ export const markerStyles = {
     icon: "icons/whirlwind.svg", // Using vortex for whirlpool portals
     color: "#00CADD", // LightSkyBlue
   },
+
+  // Docks
   dock: {
     icon: "icons/anchor.svg",
     color: "#1E90FF", // DodgerBlue
@@ -54,6 +56,10 @@ export const markerStyles = {
   },
   shop_pub: {
     icon: "icons/beer-stein.svg",
+    color: "#32CD32", // LimeGreen
+  },
+  shop_bakery: {
+    icon: "icons/cook.svg",
     color: "#32CD32", // LimeGreen
   },
   shop_jewelry: {
@@ -104,6 +110,10 @@ export const markerStyles = {
   // Services and NPCs
   services_npcs: {
     icon: "icons/guards.svg",
+    color: "#4682B4", // SteelBlue
+  },
+  inn_keeper: {
+    icon: "icons/candle-holder.svg",
     color: "#4682B4", // SteelBlue
   },
 
@@ -223,11 +233,11 @@ export const markerStyles = {
 
 export const mapMarkers = {
   portals: [
-    /* Party Island Portals */
+    // Island: Party Island Portals
     {
       type: "portal_lsp",
       tooltip: "Portal to Lotor's Summer Palace",
-      region: "Krythan",
+      region: "Western Isles",
       place: "Party Island",
       details: {
         title: "Portal to Lotor's Summer Palace",
@@ -240,13 +250,12 @@ export const mapMarkers = {
     },
     //Done
 
-    /* Valinor Island Portals */
-
-    // Valinor Region Portals
+    // Island: Valinor Island
+    // Region: Valinor Region Portals
     {
       type: "portal_lsp",
       tooltip: "Portal to Leave Valinor",
-      region: "Valinor Island",
+      region: "Valinor",
       place: "Valinor",
       details: {
         title: "Portal to Leave Valinor",
@@ -260,7 +269,7 @@ export const mapMarkers = {
     {
       type: "portal_small",
       tooltip: "Portal to Arena Viewing Area",
-      region: "Valinor Island",
+      region: "Valinor",
       place: "Valinor",
       details: {
         title: "Portal to Arena Viewing Area",
@@ -272,28 +281,14 @@ export const mapMarkers = {
       },
     },
     //Done
-    // Housing Realm Portals
-    // Lotor's Summer Palace Housing Realm Portal
-    {
-      type: "portal_housing",
-      tooltip: "Portal to Housing Realm",
-      region: "Krythan",
-      place: "Lotor's Summer Palace",
-      details: {
-        title: "Portal to Housing Realm",
-        coordinates: { x: 768, y: 613 },
-        image: "images/portals/LSP_Housing_Realm_Portal.png",
-        lore: "More information about Portal to Housing Realm is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    // Parian Housing Realm Portal
+    // Mainlands Housing Realm Portals
+    // Region: Highlands
+    // City: Parian Housing Realm Portal
     {
       type: "portal_housing",
       tooltip: "Portal to Housing Realm",
       region: "Highlands",
-      place: "Lotor's Summer Palace",
+      place: "Parian",
       details: {
         title: "Portal to Housing Realm",
         coordinates: { x: 3464, y: 3131 },
@@ -304,13 +299,26 @@ export const mapMarkers = {
       },
     },
 
-    /* Lotor's Summer Palace Portals */
-
-    // Lotor's Summer Palace Portals
+    // Region: Western Isles Housing Realm Portal
+    // Island: Lotor's Summer Palace Housing Realm Portal
+    {
+      type: "portal_housing",
+      tooltip: "Portal to Housing Realm",
+      region: "Western Isles",
+      place: "Lotor's Summer Palace",
+      details: {
+        title: "Portal to Housing Realm",
+        coordinates: { x: 768, y: 613 },
+        image: "images/portals/LSP_Housing_Realm_Portal.png",
+        lore: "More information about Portal to Housing Realm is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
     {
       type: "portal_small",
       tooltip: "Portal to Party Island",
-      region: "Krythan",
+      region: "Western Isles",
       place: "Lotor's Summer Palace",
       details: {
         title: "Portal to Party Island",
@@ -324,7 +332,7 @@ export const mapMarkers = {
     {
       type: "portal_small",
       tooltip: "Portal to PvP Island",
-      region: "Krythan",
+      region: "Western Isles",
       place: "Lotor's Summer Palace",
       details: {
         title: "Portal to PvP Island",
@@ -338,7 +346,7 @@ export const mapMarkers = {
     {
       type: "portal_lsp",
       tooltip: "Valmond Portal",
-      region: "Krythan",
+      region: "Western Isles",
       place: "Lotor's Summer Palace",
       details: {
         title: "Valmond Portal",
@@ -352,7 +360,7 @@ export const mapMarkers = {
     {
       type: "portal_lsp",
       tooltip: "Krog Portal",
-      region: "Krythan",
+      region: "Western Isles",
       place: "Lotor's Summer Palace",
       details: {
         title: "Krog Portal",
@@ -366,7 +374,7 @@ export const mapMarkers = {
     {
       type: "portal_lsp",
       tooltip: "Khafra or Ruhura Portal",
-      region: "Krythan",
+      region: "Western Isles",
       place: "Lotor's Summer Palace",
       details: {
         title: "Khafra or Ruhura Portal",
@@ -380,7 +388,7 @@ export const mapMarkers = {
     {
       type: "portal_lsp",
       tooltip: "Silvest Portal",
-      region: "Krythan",
+      region: "Western Isles",
       place: "Lotor's Summer Palace",
       details: {
         title: "Silvest Portal",
@@ -394,7 +402,7 @@ export const mapMarkers = {
     {
       type: "portal_lsp",
       tooltip: "VIP Portal",
-      region: "Krythan",
+      region: "Western Isles",
       place: "Lotor's Summer Palace",
       details: {
         title: "VIP Portal",
@@ -408,7 +416,7 @@ export const mapMarkers = {
     {
       type: "portal_lsp",
       tooltip: "Whisperdale Portal",
-      region: "Krythan",
+      region: "Western Isles",
       place: "Lotor's Summer Palace",
       details: {
         title: "Whisperdale Portal",
@@ -422,7 +430,7 @@ export const mapMarkers = {
     {
       type: "portal_lsp",
       tooltip: "Parian Portal",
-      region: "Krythan",
+      region: "Western Isles",
       place: "Lotor's Summer Palace",
       details: {
         title: "Parian Portal",
@@ -436,7 +444,7 @@ export const mapMarkers = {
     {
       type: "portal_lsp",
       tooltip: "Josody Portal",
-      region: "Krythan",
+      region: "Western Isles",
       place: "Lotor's Summer Palace",
       details: {
         title: "Josody Portal",
@@ -449,7 +457,7 @@ export const mapMarkers = {
     },
     //Done
 
-    // Real Estate Island Portals
+    // Island: Real Estate Island Portals
     {
       type: "portal_lsp",
       tooltip: "Portal to Lotor's Summer Palace",
@@ -465,7 +473,7 @@ export const mapMarkers = {
       },
     },
 
-    /* Minotaur Island Portals */
+    // Island: Minotaur Island Portals
     {
       type: "portal_blue",
       tooltip: "Portal to Highlands",
@@ -481,7 +489,7 @@ export const mapMarkers = {
       },
     },
 
-    /* Scorched Island Portals */
+    // Island: Scorched Island
     {
       type: "portal_small",
       tooltip: "Portal to Battle Plains",
@@ -511,9 +519,9 @@ export const mapMarkers = {
       },
     },
 
-    /* Krythan Island Portals */
+    // Island: Krythan Island
 
-    // Krythan Region Portals
+    // Region: Krythan Portals
     {
       type: "portal_blue",
       tooltip: "Portal to Highlands West of Parian",
@@ -571,13 +579,13 @@ export const mapMarkers = {
       },
     },
 
-    // Silvest Valley Region Portals
+    // Region: Silvest Valley Portals
 
-    // Scarab Island Portals
+    // Island: Scarab Island Portals
     {
       type: "portal_small",
       tooltip: "Portal to Krythan Region",
-      region: "Krythan",
+      region: "Western Isles",
       place: "Scarab Island",
       details: {
         title: "Portal to Krythan Region",
@@ -588,23 +596,7 @@ export const mapMarkers = {
         links: [],
       },
     },
-    //Done
-
-    /* Lotor's Prison Portals */
-    {
-      type: "portal_small",
-      tooltip: "Portal to Lotor's Castle",
-      region: "Krythan",
-      place: "Lotor's Prison",
-      details: {
-        title: "Portal to Lotor's Castle",
-        coordinates: { x: 1484, y: 630 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Portal to Lotor's Castle is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
+    //Done   
 
     /* Mainland Portals */
 
@@ -829,7 +821,23 @@ export const mapMarkers = {
 
     // Western Isles Portals
 
-    // Hell Portals
+    // Island: Lotor's Prison
+    {
+      type: "portal_small",
+      tooltip: "Portal to Lotor's Castle",
+      region: "Krythan",
+      place: "Lotor's Prison",
+      details: {
+        title: "Portal to Lotor's Castle",
+        coordinates: { x: 1484, y: 630 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Portal to Lotor's Castle is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // Island: Hell Portals
     {
       type: "portal_small",
       tooltip: "Portal to Scorched Island",
@@ -859,7 +867,7 @@ export const mapMarkers = {
       },
     },
 
-    // Valley of Giants Portals
+    // Region: Valley of Giants Portals
 
     // Heartwood Coast Portals
     {
@@ -877,7 +885,7 @@ export const mapMarkers = {
       },
     },
 
-    // Tundria Portals
+    // Region: Tundria Portals
     {
       type: "portal_lsp",
       tooltip: "Portal to Northern Frost Giant Island",
@@ -893,14 +901,8 @@ export const mapMarkers = {
       },
     },
 
-    // Sands of Creation Portals
-
-    // Breakwater
-
-    // Broken Finger
-
-    /* Sands of Creation Portals */
-    // Ruhura Side Portals
+    // Region: Sands of Creation Portals
+    // City: Ruhura Side Portals
     {
       type: "portal_lsp",
       tooltip: "Portal to Lotor's Summer Palace",
@@ -930,7 +932,7 @@ export const mapMarkers = {
       },
     },
 
-    // Khafra Side Portals
+    // City: Khafra Side Portals
 
     {
       type: "portal_lsp",
@@ -974,6 +976,12 @@ export const mapMarkers = {
         links: [],
       },
     },
+
+    // Region: Breakwater
+
+    // Region: Broken Finger
+
+    
 
     // Whirlpool Portals
     // Near Broken Finger
@@ -1086,7 +1094,7 @@ export const mapMarkers = {
     {
       type: "portal_whirlpool",
       tooltip: "Whirlpool to Tundria East of Duremar",
-      region: "Krythan",
+      region: "Western Isles",
       place: "Scarab Island", // Near Lopal and Khafra Fishing Outpost Dock
       details: {
         title: "Whirlpool to Tundria East of Duremar",
@@ -1165,11 +1173,12 @@ export const mapMarkers = {
 
   services_npcs: [
     // Sub-Category Quests NPCs
-    // Valinor Island Quests
+    // Island: Valinor Island Quests
+    // Region: Valinor Quests
     {
       type: "quest",
       tooltip: "Sandre (Wanders)",
-      region: "Valinor Island",
+      region: "Valinor",
       place: "Valinor",
       details: {
         title: "Sandre (Wanders)",
@@ -1183,7 +1192,7 @@ export const mapMarkers = {
     {
       type: "quest",
       tooltip: "Kumba Northern (Wanders)",
-      region: "Valinor Island",
+      region: "Valinor",
       place: "Valinor",
       details: {
         title: "Kumba Northern (Wanders)",
@@ -1197,7 +1206,7 @@ export const mapMarkers = {
     {
       type: "quest",
       tooltip: "Mary Locksley (Wanders)",
-      region: "Valinor Island",
+      region: "Valinor",
       place: "Valinor",
       details: {
         title: "Mary Locksley (Wanders)",
@@ -1211,7 +1220,7 @@ export const mapMarkers = {
     {
       type: "quest",
       tooltip: "Davey Logan (Wanders)",
-      region: "Valinor Island",
+      region: "Valinor",
       place: "Valinor",
       details: {
         title: "Davey Logan (Wanders)",
@@ -1225,7 +1234,7 @@ export const mapMarkers = {
     {
       type: "quest",
       tooltip: "Imica (Wanders)",
-      region: "Valinor Island",
+      region: "Valinor",
       place: "Valinor",
       details: {
         title: "Imica (Wanders)",
@@ -1239,7 +1248,7 @@ export const mapMarkers = {
     {
       type: "quest",
       tooltip: "Timothy Jager (Wanders)",
-      region: "Valinor Island",
+      region: "Valinor",
       place: "Valinor",
       details: {
         title: "Timothy Jager (Wanders)",
@@ -1253,7 +1262,7 @@ export const mapMarkers = {
     {
       type: "quest",
       tooltip: "Sandre (Wanders)",
-      region: "Valinor Island",
+      region: "Valinor",
       place: "Valinor",
       details: {
         title: "Sandre (Wanders)",
@@ -1267,7 +1276,7 @@ export const mapMarkers = {
     {
       type: "quest",
       tooltip: "Hereward (Wanders)",
-      region: "Valinor Island",
+      region: "Valinor",
       place: "Valinor",
       details: {
         title: "Hereward (Wanders)",
@@ -1281,7 +1290,7 @@ export const mapMarkers = {
     {
       type: "quest",
       tooltip: "Topacia (Wanders)",
-      region: "Valinor Island",
+      region: "Valinor",
       place: "Valinor",
       details: {
         title: "Topacia (Wanders)",
@@ -1295,7 +1304,7 @@ export const mapMarkers = {
     {
       type: "quest",
       tooltip: "Alchemist Baki",
-      region: "Valinor Island",
+      region: "Valinor",
       place: "Valinor",
       details: {
         title: "Alchemist Baki",
@@ -1309,7 +1318,7 @@ export const mapMarkers = {
     {
       type: "quest",
       tooltip: "Sarah Bent",
-      region: "Valinor Island",
+      region: "Valinor",
       place: "Valinor",
       details: {
         title: "Sarah Bent",
@@ -1323,7 +1332,7 @@ export const mapMarkers = {
     {
       type: "quest",
       tooltip: "Serina Wilcut",
-      region: "Valinor Island",
+      region: "Valinor",
       place: "Valinor",
       details: {
         title: "Serina Wilcut",
@@ -1337,7 +1346,7 @@ export const mapMarkers = {
     {
       type: "quest",
       tooltip: "Knight Bastrop",
-      region: "Valinor Island",
+      region: "Valinor",
       place: "Valinor",
       details: {
         title: "Knight Bastrop",
@@ -1351,7 +1360,7 @@ export const mapMarkers = {
     {
       type: "quest",
       tooltip: "Eustacius (Wanders)",
-      region: "Valinor Island",
+      region: "Valinor",
       place: "Valinor",
       details: {
         title: "Eustacius (Wanders)",
@@ -1365,7 +1374,7 @@ export const mapMarkers = {
     {
       type: "quest",
       tooltip: "Curtis Leabu (Wanders)",
-      region: "Valinor Island",
+      region: "Valinor",
       place: "Valinor",
       details: {
         title: "Curtis Leabu (Wanders)",
@@ -1379,7 +1388,7 @@ export const mapMarkers = {
     {
       type: "quest",
       tooltip: "Hasculf (Wanders)",
-      region: "Valinor Island",
+      region: "Valinor",
       place: "Valinor",
       details: {
         title: "Hasculf (Wanders)",
@@ -1393,7 +1402,7 @@ export const mapMarkers = {
     {
       type: "quest",
       tooltip: "A Young Maid (Wanders)",
-      region: "Valinor Island",
+      region: "Valinor",
       place: "Valinor",
       details: {
         title: "A Young Maid (Wanders)",
@@ -1407,7 +1416,7 @@ export const mapMarkers = {
     {
       type: "quest",
       tooltip: "Eastern Gate Lieutenant",
-      region: "Valinor Island",
+      region: "Valinor",
       place: "Valinor",
       details: {
         title: "Eastern Gate Lieutenant",
@@ -1421,7 +1430,7 @@ export const mapMarkers = {
     {
       type: "quest",
       tooltip: "Roger Duncan",
-      region: "Valinor Island",
+      region: "Valinor",
       place: "Valinor",
       details: {
         title: "Roger Duncan",
@@ -1435,7 +1444,7 @@ export const mapMarkers = {
     {
       type: "quest",
       tooltip: "Paula Duncan",
-      region: "Valinor Island",
+      region: "Valinor",
       place: "Valinor",
       details: {
         title: "Paula Duncan",
@@ -1447,13 +1456,129 @@ export const mapMarkers = {
       },
     },
 
-    // Krythan Island Quests
+
+    // Region: Highlands
+    // City: Parian Quests
+    {
+      type: "quest",
+      tooltip: "Basil",
+      region: "Highlands",
+      place: "Parian",
+      details: {
+        title: "Basil",
+        coordinates: { x: 3463, y: 2996 },
+        image: "images/npcs/Basil_Quest.png",
+        lore: "Basil is part of the Fine Land Quest.",
+        npcs: [],
+        links: [{ text: "Ashen Empires Wiki (Fine Land)", url: "https://ashenempires.fandom.com/wiki/Fine_Land#Part_10" }], 
+      },
+    },
+    {
+      type: "quest",
+      tooltip: "Claricia Forence",
+      region: "Highlands",
+      place: "Parian",
+      details: {
+        title: "Claricia Forence",
+        coordinates: { x: 3429, y: 2955 },
+        image: "images/npcs/Claricia_Forence_Quest.png",
+        lore: "Claricia Forence is part of the Lotorian Quest.",
+        npcs: [],
+        links: [{ text: "Ashen Empires Wiki (Lotorian Quest)", url: "https://ashenempires.fandom.com/wiki/Faction_Quests#Lotorian_Quest" }], 
+      },
+    },
+    {
+      type: "quest",
+      tooltip: "Warlord Isbraen (Archery Trainer)",
+      region: "Highlands",
+      place: "Parian",
+      details: {
+        title: "Warlord Isbraen",
+        coordinates: { x: 3431, y: 3049 },
+        image: "images/npcs/Warlord_Isbraen_Quest.png",
+        lore: "Warlord Isbraen is an Archery Trainer located in Parian in the Government building.",
+        npcs: [],
+        links: [{ text: "Ashen Empires Wiki (Lotorian Quest)", url: "https://ashenempires.fandom.com/wiki/Parian_Warlords" }],
+      },
+    },
+    {
+      type: "quest",
+      tooltip: "Warlord Uerog (Warrior Trainer)",
+      region: "Highlands",
+      place: "Parian",
+      details: {
+        title: "Warlord Isbraen",
+        coordinates: { x: 3429, y: 3043 },
+        image: "images/npcs/Warlord_Uerog_Quest.png",
+        lore: "Warlord Uerog is a Warrior Trainer located in Parian in the Government building.",
+        npcs: [],
+        links: [{ text: "Ashen Empires Wiki (Lotorian Quest)", url: "https://ashenempires.fandom.com/wiki/Parian_Warlords" }],
+      },
+    },
+    {
+      type: "quest",
+      tooltip: "Warlord Cheroth (Mage Trainer)",
+      region: "Highlands",
+      place: "Parian",
+      details: {
+        title: "Warlord Cheroth",
+        coordinates: { x: 3434, y: 3041 },
+        image: "images/npcs/Warlord_Uerog_Quest.png",
+        lore: "Warlord Uerog is a Mage Trainer located in Parian in the Government building.",
+        npcs: [],
+        links: [{ text: "Ashen Empires Wiki (Parian Warlords)", url: "https://ashenempires.fandom.com/wiki/Parian_Warlords" }],
+      },
+    },
+    {
+      type: "quest",
+      tooltip: "Lloyd Dogen (Wanders)",
+      region: "Highlands",
+      place: "Parian",
+      details: {
+        title: "Lloyd Dogen",
+        coordinates: { x: 3606, y: 2999 },
+        image: "images/npcs/Lloyd_Dogen_Quest.png",
+        lore: "Warlord Uerog is a Mage Trainer located in Parian in the Government building.",
+        npcs: [],
+        links: [{ text: "Ashen Empires Wiki (Lloyd Dogen)", url: "https://ashenempires.fandom.com/wiki/Lloyd_Dogen" }],
+      },
+    },
+    {
+      type: "quest",
+      tooltip: "Chadwell",
+      region: "Highlands",
+      place: "Parian",
+      details: {
+        title: "Chadwell",
+        coordinates: { x: 3512, y: 3050 },
+        image: "images/npcs/Chadwell_Quest.png",
+        lore: "Chadwell is part of the Fishing for Friends Part 4 Trials",
+        npcs: [],
+        links: [{ text: "Ashen Empires Wiki (Fishing for Friends Part 4 Trials)", url: "https://ashenempires.fandom.com/wiki/Fishing_for_Friends#Part_4._Trials" }],
+      },
+    },
+    {
+      type: "quest",
+      tooltip: "Heudekka",
+      region: "Highlands",
+      place: "Parian",
+      details: {
+        title: "Heudekka",
+        coordinates: { x: 3432, y: 3030},
+        image: "images/npcs/Heudekka_Quest.png",
+        lore: "Heudekka is part of the Fine Land - Trade Must Flourish.",
+        npcs: [],
+        links: [{ text: "Ashen Empires Wiki (Fine Land - Trade Must Flourish)", url: "https://ashenempires.fandom.com/wiki/Fine_Land_(complete_guide)#Trade_Must_Flourish" }],
+      },
+    },
+
+    // Region: Western Isles Quests
 
     // Lotor's Summer Palace Quests
     {
       type: "quest",
       tooltip: "Captain Renwood",
-      region: "Krythan",
+      region: "Western Isles",
       place: "Lotor's Summer Palace",
       details: {
         title: "Captain Renwood",
@@ -1467,7 +1592,7 @@ export const mapMarkers = {
     {
       type: "quest",
       tooltip: "Donkeo",
-      region: "Krythan",
+      region: "Western Isles",
       place: "Lotor's Summer Palace",
       details: {
         title: "Donkeo",
@@ -1481,7 +1606,7 @@ export const mapMarkers = {
     {
       type: "quest",
       tooltip: "Rodald (Wanders) - Rock Trolls Near Josody",
-      region: "Krythan",
+      region: "Western Isles",
       place: "Lotor's Summer Palace",
       details: {
         title: "Rodald (Wanders) - Rock Trolls Near Josody",
@@ -1495,7 +1620,7 @@ export const mapMarkers = {
     {
       type: "quest",
       tooltip: "Estiban (Wanders) - Sand Golems",
-      region: "Krythan",
+      region: "Western Isles",
       place: "Lotor's Summer Palace",
       details: {
         title: "Estiban (Wanders) - Sand Golems",
@@ -1510,11 +1635,36 @@ export const mapMarkers = {
 
     // Add more quests NPCs as needed
 
+    // Sub-Category Innkeepers
+    // Island: Valinor Island Innkeepers
+
+    // Region: Krythan Island Innkeepers
+    // Region: Silvest Valley Innkeepers
+
+    // Region: Krythan Innkeepers
+
+    // Region: Highlands Innkeepers
+    // City: Parian Innkeepers
+    {
+      type: "inn_keeper",
+      tooltip: "Parian Innkeeper",
+      region: "Highlands",
+      place: "Parian",
+      details: {
+        title: "Parian Innkeeper",
+        coordinates: { x: 3474, y: 3004 },
+        image: "images/placeholders/Parian_Innkeeper.png",
+        lore: "More information about Parian Innkeeper is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+
     // Sub-Category Docks
     /* Valinor Island Docks */
     // No active docks on Valinor Island as of now
 
-    // Krythan Island Docks
+    // Region: Krythan Island Docks
     {
       type: "dock",
       tooltip: "Silvest Northern Island Dock",
@@ -1661,7 +1811,7 @@ export const mapMarkers = {
     {
       type: "dock",
       tooltip: "Palace Dock",
-      region: "Krythan",
+      region: "Western Isles",
       place: "Lotor's Summer Palace",
       details: {
         title: "Palace Dock",
@@ -1675,7 +1825,7 @@ export const mapMarkers = {
     {
       type: "dock",
       tooltip: "LSP Dock",
-      region: "Krythan",
+      region: "Western Isles",
       place: "Lotor's Summer Palace",
       details: {
         title: "LSP Dock",
@@ -1943,7 +2093,7 @@ export const mapMarkers = {
       },
     },
 
-    // Valley of Giants Docks
+    // Region: Valley of Giants Docks
     // No Docks here to see
 
     // Heartwood Coast Docks
@@ -2046,7 +2196,7 @@ export const mapMarkers = {
       },
     },
 
-    // Tundria Docks
+    // Region: Tundria Docks
     {
       type: "dock",
       tooltip: "Duremar Dock",
@@ -2174,11 +2324,11 @@ export const mapMarkers = {
       },
     },
 
-    // Scarab Island Docks
+    // Island: Scarab Island Docks
     {
       type: "dock",
       tooltip: "Lopal Dock",
-      region: "Krythan",
+      region: "Western Isles",
       place: "Scarab Island",
       details: {
         title: "Lopal Dock",
@@ -2194,8 +2344,8 @@ export const mapMarkers = {
     // Werewolf Island Docks
     // No active docks on Werewolf Island as of now
 
-    // Sands of Creation Docks
-    // Ruhura Side Docks
+    // Region: Sands of Creation Docks
+    // City: Ruhura Side Docks
     {
       type: "dock",
       tooltip: "Ruhura Dock",
@@ -2227,7 +2377,7 @@ export const mapMarkers = {
       },
     },
 
-    // Khafra Side Docks
+    // City: Khafra Side Docks
     {
       type: "dock",
       tooltip: "Khafra Fishing Outpost Dock",
@@ -2257,7 +2407,7 @@ export const mapMarkers = {
       },
     },
 
-    // Breakwater Region Docks
+    // Region: Breakwater Region Docks
     // New Town Island Docks
     {
       type: "dock",
@@ -2432,7 +2582,7 @@ export const mapMarkers = {
       },
     },
 
-    // Broken Finger Region Docks
+    // Region: Broken Finger Region Docks
     {
       type: "dock",
       tooltip: "Broken Finger Town Dock",
@@ -2470,7 +2620,7 @@ export const mapMarkers = {
     {
       type: "information",
       tooltip: "Fallen Warriors Memorial",
-      region: "Krythan",
+      region: "Western Isles",
       place: "Lotor's Summer Palace",
       details: {
         title: "Fallen Warriors Memorial",
@@ -2484,7 +2634,7 @@ export const mapMarkers = {
     {
       type: "information",
       tooltip: "Memorial to the Lost Sons",
-      region: "Krythan",
+      region: "Western Isles",
       place: "Lotor's Summer Palace",
       details: {
         title: "Memorial to the Lost Sons",
@@ -2497,7 +2647,7 @@ export const mapMarkers = {
     },{
       type: "information",
       tooltip: "Brain Smith Memorial",
-      region: "Krythan",
+      region: "Western Isles",
       place: "Lotor's Summer Palace",
       details: {
         title: "Brain Smith Memorial",
@@ -2511,7 +2661,7 @@ export const mapMarkers = {
     {
       type: "information",
       tooltip: "Jamoal the Sage (Wanders)",
-      region: "Krythan",
+      region: "Western Isles",
       place: "Lotor's Summer Palace",
       details: {
         title: "Jamoal the Sage (Wanders)",
@@ -2525,7 +2675,7 @@ export const mapMarkers = {
     {
       type: "information",
       tooltip: "PvP Island Information",
-      region: "Krythan",
+      region: "Western Isles",
       place: "Lotor's Summer Palace",
       details: {
         title: "PvP Island",
@@ -2537,11 +2687,11 @@ export const mapMarkers = {
       },
     },
 
-    // Krythan Island Information
-    // Silvest Valley Region Information
+    // Region: Krythan Island Information
+    // Region: Silvest Valley Information
 
-    // Krythan Region Information
-    // Verthpool Information
+    // Region: Krythan Information
+    // City: Verthpool Information
     {
       type: "information",
       tooltip: "Grim Demonhunter",
@@ -2577,32 +2727,30 @@ export const mapMarkers = {
 
     // Region: Battle Plains Information
 
-    // Highlands Region Information
+    // Region: Highlands Information
 
-    // Tundria Region Information
+    // Region: Tundria Region Information
 
-    // Western Isles Information
+    // Region: Western Isles Information
 
-    // Valley of Giants Information
+    // Region: Valley of Giants Information
 
     // Heartwood Coast Information
 
-    /* Desert Lands (Not sure what to call these)*/
+    // Region: Sands of Creation Region Information
 
-    // Sands of Creation Region Information
+    // City: Khafra Information
 
-    // Khafra Information
+    // City: Ruhura Information
 
-    // Ruhura Information
+    // Region: Breakwater Region Information
 
-    // Breakwater Region Information
-
-    // Broken Finger Region Information
+    // Region: Broken Finger Region Information
 
     // Sub-Category Town Stewards
     // Town Stewards
 
-    // Krythan Island Town Stewards
+    // Island: Krythan Island Town Stewards
     // Region: Silvest Valley Town Stewards
     {
       type: "town_steward",
@@ -2620,7 +2768,7 @@ export const mapMarkers = {
     },
     // Region: Krythan Town Stewards
 
-    //Mainland Town Stewards
+    // Mainland Town Stewards
     // Region: Darkwoods Town Stewards
 
     {
@@ -2674,7 +2822,7 @@ export const mapMarkers = {
     // Add more trainers
 
     // Sub-Category Town Guardians
-    // Krythan Island Guards
+    // Island: Krythan Island Guards
     // Region: Silvest Valley Guards
 
     // Region: Krythan Guards
@@ -2687,7 +2835,7 @@ export const mapMarkers = {
     {
       type: "town_guard",
       tooltip: "Town Guardian (Parian)",
-      region: "Valinor Island",
+      region: "Valinor",
       place: "Valinor",
       details: {
         title: "Town Guardian",
@@ -2709,21 +2857,21 @@ export const mapMarkers = {
 
     // Western Isles Guards
 
-    // Sands of Creation Region Guards
-    // Ruhura Side Guards
+    // Region: Sands of Creation Region Guards
+    // City: Ruhura Side Guards
 
-    // Khafra Side Guards
+    // City: Khafra Side Guards
 
-    // Breakwater Region Guards
+    // Region: Breakwater Region Guards
 
-    // Broken Finger Region Guards
+    // Region: Broken Finger Region Guards
 
     // Sub-Category Game of Chance
-    /*Lotor's Summer Palace Games*/
+    // Island: Lotor's Summer Palace Game of Chance
     {
       type: "game_of_chance",
       tooltip: "Malson's Demon's Eye Game",
-      region: "Krythan",
+      region: "Western Isles",
       place: "Lotor's Summer Palace",
       details: {
         title: "Malson's Demon's Eye Game",
@@ -2735,10 +2883,10 @@ export const mapMarkers = {
       },
     },
 
-    // Krythan Island Games of Chance
-    // Silvest Valley Games of Chance
+    // Island: Krythan Island Games of Chance
+    // Region: Silvest Valley Games of Chance
 
-    // Krythan Island Games of Chance
+    // Region: Krythan Games of Chance
 
     // Mainland Games of Chance
     // Region: Darkwoods Games of Chance
@@ -2761,6 +2909,20 @@ export const mapMarkers = {
         links: [],
       },
     },
+    {
+      type: "game_of_chance",
+      tooltip: "Baldrus's Demon Eye Game (Wanders)",
+      region: "Krythan",
+      place: "Parian",
+      details: {
+        title: "Baldrus's Demon Eye Game",
+        coordinates: { x: 3477, y: 3013 },
+        image: "images/placeholders/Baldrus_Demon_Eye_Game.png",
+        lore: "More information about Baldrus's Demon Eye Game is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // Region: Tundria Games of Chance
 
@@ -2769,16 +2931,16 @@ export const mapMarkers = {
     // Region: Broken Finger Games of Chance
 
     // Region: Sands of Creation Games of Chance
-    // Khafra Games of Chance
+    // City: Khafra Games of Chance
 
-    // Ruhura Games of Chance
+    // City: Ruhura Games of Chance
 
     // Regoin: Western Isles Games of Chance
     // City: Lopal Games of Chance
     {
       type: "game_of_chance",
       tooltip: "Lopal Demon Eye",
-      region: "Krythan",
+      region: "Western Isles",
       place: "Scarab Island",
       details: {
         title: "Lopal Demon Eye",
@@ -2791,11 +2953,11 @@ export const mapMarkers = {
     },
 
     // Sub-Category Events
-    /*Lotor's Summer Palace Events*/
+    // Island: Lotor's Summer Palace
     {
       type: "event_judge",
       tooltip: "Fishing Event Judge",
-      region: "Krythan",
+      region: "Western Isles",
       place: "Lotor's Summer Palace",
       details: {
         title: "Fishing Event Judge",
@@ -2809,7 +2971,7 @@ export const mapMarkers = {
     {
       type: "event_judge",
       tooltip: "Mining Event Judge",
-      region: "Krythan",
+      region: "Western Isles",
       place: "Lotor's Summer Palace",
       details: {
         title: "Mining Event Judge",
@@ -2821,10 +2983,10 @@ export const mapMarkers = {
       },
     },
 
-    // Krythan Island Events
-    // Silvest Valley Events
+    // Island: Krythan Island Events
+    // Region: Silvest Valley Events
 
-    // Krythan Events
+    // Region: Krythan Events
 
     // Mainland Events
     // Darkwoods Events
@@ -2834,7 +2996,7 @@ export const mapMarkers = {
     {
       type: "event_ticket",
       tooltip: "Armsmaster (The Guantlet Challenge)",
-      region: "Krythan",
+      region: "Western Isles",
       place: "Lotor's Summer Palace",
       details: {
         title: "Armsmaster",
@@ -2957,7 +3119,7 @@ export const mapMarkers = {
     {
       type: "bank",
       tooltip: "Bank",
-      region: "Valinor Island",
+      region: "Valinor",
       place: "Valinor",
       details: {
         title: "Bank",
@@ -2972,7 +3134,7 @@ export const mapMarkers = {
     {
       type: "bank",
       tooltip: "Bank",
-      region: "Krythan",
+      region: "Western Isles",
       place: "Lotor's Summer Palace",
       details: {
         title: "Bank",
@@ -2984,7 +3146,7 @@ export const mapMarkers = {
       },
     },
 
-    // Krythan Island Banks
+    // Region: Krythan Island Banks
 
     // Region: Silvest Valley Banks
     // City: Fort Eastwatch
@@ -3136,7 +3298,7 @@ export const mapMarkers = {
     {
       type: "bank",
       tooltip: "Bank",
-      region: "Krythan",
+      region: "Western Isles",
       place: "Scarab Island",
       details: {
         title: "Bank",
@@ -3159,12 +3321,12 @@ export const mapMarkers = {
 
     //
     // Sub-Category Trainers
-    // Valinor Island Trainers
+    // Island: Valinor Island Trainers
 
     {
       type: "trainer",
       tooltip: "Tradeskill Trainers",
-      region: "Valinor Island",
+      region: "Valinor",
       place: "Valinor",
       details: {
         title: "Tradeskill Trainers",
@@ -3178,7 +3340,7 @@ export const mapMarkers = {
     {
       type: "trainer",
       tooltip: "Weapon Trainers",
-      region: "Valinor Island",
+      region: "Valinor",
       place: "Valinor",
       details: {
         title: "Weapon Trainers",
@@ -3192,7 +3354,7 @@ export const mapMarkers = {
     {
       type: "trainer",
       tooltip: "Leadership Trainers",
-      region: "Valinor Island",
+      region: "Valinor",
       place: "Valinor",
       details: {
         title: "Leadership Trainers",
@@ -3206,7 +3368,7 @@ export const mapMarkers = {
     {
       type: "trainer",
       tooltip: "Tailoring Trainer",
-      region: "Valinor Island",
+      region: "Valinor",
       place: "Valinor",
       details: {
         title: "Tailoring Trainer",
@@ -3220,7 +3382,7 @@ export const mapMarkers = {
     {
       type: "trainer",
       tooltip: "Farming Trainer",
-      region: "Valinor Island",
+      region: "Valinor",
       place: "Valinor",
       details: {
         title: "Farming Trainer",
@@ -3234,7 +3396,7 @@ export const mapMarkers = {
     {
       type: "trainer",
       tooltip: "Ralnaka (Farming Information)",
-      region: "Valinor Island",
+      region: "Valinor",
       place: "Valinor",
       details: {
         title: "Ralnaka (Farming Information)",
@@ -3248,7 +3410,7 @@ export const mapMarkers = {
     {
       type: "trainer",
       tooltip: "Valinor Orb Reset",
-      region: "Valinor Island",
+      region: "Valinor",
       place: "Valinor",
       details: {
         title: "Valinor Orb Reset",
@@ -3262,7 +3424,7 @@ export const mapMarkers = {
     {
       type: "trainer",
       tooltip: "Island Steward",
-      region: "Valinor Island",
+      region: "Valinor",
       place: "Valinor",
       details: {
         title: "Island Steward",
@@ -3276,7 +3438,7 @@ export const mapMarkers = {
     {
       type: "trainer",
       tooltip: "Osalka Farming Expert (Wanders)",
-      region: "Valinor Island",
+      region: "Valinor",
       place: "Valinor",
       details: {
         title: "Osalka Farming Expert (Wanders)",
@@ -3288,13 +3450,13 @@ export const mapMarkers = {
       },
     },
 
-    // Krythan Island Trainers
+    // Region: Krythan Island Trainers
 
     // Lotor's Summer Palace Trainers
     {
       type: "trainer",
       tooltip: "Master Draftsman",
-      region: "Krythan",
+      region: "Western Isles",
       place: "Lotor's Summer Palace",
       details: {
         title: "Master Draftsman",
@@ -3308,7 +3470,7 @@ export const mapMarkers = {
     {
       type: "trainer",
       tooltip: "Henchman Trainer",
-      region: "Krythan",
+      region: "Western Isles",
       place: "Lotor's Summer Palace",
       details: {
         title: "Henchman Trainer",
@@ -3322,7 +3484,7 @@ export const mapMarkers = {
     {
       type: "trainer",
       tooltip: "Real Estate Agent",
-      region: "Krythan",
+      region: "Western Isles",
       place: "Lotor's Summer Palace",
       details: {
         title: "Real Estate Agent",
@@ -3336,7 +3498,7 @@ export const mapMarkers = {
     {
       type: "trainer",
       tooltip: "Lotorian Faction Officer",
-      region: "Krythan",
+      region: "Western Isles",
       place: "Lotor's Summer Palace",
       details: {
         title: "Lotorian Faction Officer",
@@ -3350,7 +3512,7 @@ export const mapMarkers = {
     {
       type: "trainer",
       tooltip: "Champion of Lotor",
-      region: "Krythan",
+      region: "Western Isles",
       place: "Lotor's Summer Palace",
       details: {
         title: "Champion of Lotor",
@@ -3364,7 +3526,7 @@ export const mapMarkers = {
     {
       type: "trainer",
       tooltip: "Advanced Skill Trainer",
-      region: "Krythan",
+      region: "Western Isles",
       place: "Lotor's Summer Palace",
       details: {
         title: "Advanced Skill Trainer",
@@ -3378,7 +3540,7 @@ export const mapMarkers = {
     {
       type: "trainer",
       tooltip: "Lotor's Steward",
-      region: "Krythan",
+      region: "Western Isles",
       place: "Lotor's Summer Palace",
       details: {
         title: "Lotor's Steward",
@@ -3392,7 +3554,7 @@ export const mapMarkers = {
     {
       type: "trainer",
       tooltip: "Alchemy Taskmaster",
-      region: "Krythan",
+      region: "Western Isles",
       place: "Lotor's Summer Palace",
       details: {
         title: "Alchemy Taskmaster",
@@ -3406,7 +3568,7 @@ export const mapMarkers = {
     {
       type: "trainer",
       tooltip: "Brewing Taskmaster",
-      region: "Krythan",
+      region: "Western Isles",
       place: "Lotor's Summer Palace",
       details: {
         title: "Brewing Taskmaster",
@@ -3420,7 +3582,7 @@ export const mapMarkers = {
     {
       type: "trainer",
       tooltip: "Carpentry Taskmaster",
-      region: "Krythan",
+      region: "Western Isles",
       place: "Lotor's Summer Palace",
       details: {
         title: "Carpentry Taskmaster",
@@ -3434,7 +3596,7 @@ export const mapMarkers = {
     {
       type: "trainer",
       tooltip: "Neutral Faction Officer",
-      region: "Krythan",
+      region: "Western Isles",
       place: "Lotor's Summer Palace",
       details: {
         title: "Neutral Faction Officer",
@@ -3448,7 +3610,7 @@ export const mapMarkers = {
     {
       type: "trainer",
       tooltip: "Farming Taskmaster",
-      region: "Krythan",
+      region: "Western Isles",
       place: "Lotor's Summer Palace",
       details: {
         title: "Farming Taskmaster",
@@ -3470,62 +3632,21 @@ export const mapMarkers = {
 
     // Region: Highlands Trainers
     // City: Parian Trainers
-    {
-      type: "trainer",
-      tooltip: "Warlord Isbraen (Archery Trainer)",
-      region: "Krythan",
-      place: "Lotor's Summer Palace",
-      details: {
-        title: "Warlord Isbraen",
-        coordinates: { x: 3431, y: 3049 },
-        image: "images/npcs/Warlord_Isbraen.png",
-        lore: "Warlord Isbraen is an Archery Trainer located in Parian in the Government building.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "trainer",
-      tooltip: "Warlord Uerog (Warrior Trainer)",
-      region: "Krythan",
-      place: "Lotor's Summer Palace",
-      details: {
-        title: "Warlord Isbraen",
-        coordinates: { x: 3429, y: 3043 },
-        image: "images/npcs/Warlord_Uerog.png",
-        lore: "Warlord Uerog is a Warrior Trainer located in Parian in the Government building.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "trainer",
-      tooltip: "Warlord Cheroth (Mage Trainer)",
-      region: "Krythan",
-      place: "Lotor's Summer Palace",
-      details: {
-        title: "Warlord Cheroth",
-        coordinates: { x: 3434, y: 3041 },
-        image: "images/npcs/Warlord_Uerog.png",
-        lore: "Warlord Uerog is a Mage Trainer located in Parian in the Government building.",
-        npcs: [],
-        links: [],
-      },
-    },
+    
 
 
     // Region: Krythan Trainers
 
-    // Silvest Valley Trainers
+    // Region: Silvest Valley Trainers
 
     // Region: Western Isles Trainers
 
-    // Scarab Island Trainers
-    // Lopal Trainers
+    // Island: Scarab Island Trainers
+    // City: Lopal Trainers
     {
       type: "trainer",
       tooltip: "Carpentry Taskmaster",
-      region: "Krythan",
+      region: "Western Isles",
       place: "Scarab Island",
       details: {
         title: "Carpentry Taskmaster",
@@ -3539,7 +3660,7 @@ export const mapMarkers = {
     {
       type: "trainer",
       tooltip: "Farming Taskmaster",
-      region: "Krythan",
+      region: "Western Isles",
       place: "Scarab Island",
       details: {
         title: "Farming Taskmaster",
@@ -3553,7 +3674,7 @@ export const mapMarkers = {
     {
       type: "trainer",
       tooltip: "Tailoring Taskmaster",
-      region: "Krythan",
+      region: "Western Isles",
       place: "Scarab Island",
       details: {
         title: "Tailoring Taskmaster",
@@ -3567,7 +3688,7 @@ export const mapMarkers = {
     {
       type: "trainer",
       tooltip: "Brewing Taskmaster",
-      region: "Krythan",
+      region: "Western Isles",
       place: "Scarab Island",
       details: {
         title: "Brewing Taskmaster",
@@ -3581,7 +3702,7 @@ export const mapMarkers = {
     {
       type: "trainer",
       tooltip: "Blacksmith Taskmaster",
-      region: "Krythan",
+      region: "Western Isles",
       place: "Scarab Island",
       details: {
         title: "Blacksmith Taskmaster",
@@ -3595,7 +3716,7 @@ export const mapMarkers = {
     {
       type: "trainer",
       tooltip: "Leatherworking Taskmaster",
-      region: "Krythan",
+      region: "Western Isles",
       place: "Scarab Island",
       details: {
         title: "Leatherworking Taskmaster",
@@ -3609,7 +3730,7 @@ export const mapMarkers = {
     {
       type: "trainer",
       tooltip: "Alchemy Taskmaster",
-      region: "Krythan",
+      region: "Western Isles",
       place: "Scarab Island",
       details: {
         title: "Alchemy Taskmaster",
@@ -3624,11 +3745,11 @@ export const mapMarkers = {
   ],
 
   shops: [
-    /*Party Island Shops*/
+    // Island: Party Island
     {
       type: "shop_pub",
       tooltip: "Dalgo's Tavern",
-      region: "Krythan",
+      region: "Western Isles",
       place: "Party Island",
       details: {
         title: "Dalgo's Tavern",
@@ -3640,11 +3761,12 @@ export const mapMarkers = {
       },
     },
 
-    /* Valinor Shops */
+    // Island: Valinor Island Shops
+    // Region: Valinor
     {
       type: "shop_pub",
       tooltip: "Larodeth Lywelyn's Pub and Grub Tavern",
-      region: "Valinor Island",
+      region: "Valinor",
       place: "Valinor",
       details: {
         title: "Larodeth Lywelyn's Pub and Grub Tavern",
@@ -3658,7 +3780,7 @@ export const mapMarkers = {
     {
       type: "shop_weapon",
       tooltip: "Micheal Vonda's Weapon Shop",
-      region: "Valinor Island",
+      region: "Valinor",
       place: "Valinor",
       details: {
         title: "Micheal Vonda's Weapon Shop",
@@ -3672,7 +3794,7 @@ export const mapMarkers = {
     {
       type: "shop_armory",
       tooltip: "Thomas Blackstone's Armory Shop",
-      region: "Valinor Island",
+      region: "Valinor",
       place: "Valinor",
       details: {
         title: "Thomas Blackstone's Armory Shop",
@@ -3686,7 +3808,7 @@ export const mapMarkers = {
     {
       type: "shop_provisioner",
       tooltip: "Whiliam Rosen's Provisioner Shop",
-      region: "Valinor Island",
+      region: "Valinor",
       place: "Valinor",
       details: {
         title: "Whiliam Rosen's Provisioner Shop",
@@ -3700,7 +3822,7 @@ export const mapMarkers = {
     {
       type: "shop_provisioner",
       tooltip: "Leon Elias's Provisioner Shop",
-      region: "Valinor Island",
+      region: "Valinor",
       place: "Valinor",
       details: {
         title: "Leon Elias's Provisioner Shop",
@@ -3714,7 +3836,7 @@ export const mapMarkers = {
     {
       type: "shop_magic",
       tooltip: "Cladius Zamilus's Magic Shop",
-      region: "Valinor Island",
+      region: "Valinor",
       place: "Valinor",
       details: {
         title: "Cladius Zamilus's Magic Shop",
@@ -3728,7 +3850,7 @@ export const mapMarkers = {
     {
       type: "shop_carpentry",
       tooltip: "Linus Houson's Carpentry Store",
-      region: "Valinor Island",
+      region: "Valinor",
       place: "Valinor",
       details: {
         title: "Linus Houson's Carpentry Store",
@@ -3742,7 +3864,7 @@ export const mapMarkers = {
     {
       type: "shop_blacksmith",
       tooltip: "Kerry Thomas' Blacksmith Shop ",
-      region: "Valinor Island",
+      region: "Valinor",
       place: "Valinor",
       details: {
         title: "Kerry Thomas' Blacksmith Shop ",
@@ -3756,7 +3878,7 @@ export const mapMarkers = {
     {
       type: "shop_leather",
       tooltip: "Tina Florence's Leather Shop",
-      region: "Valinor Island",
+      region: "Valinor",
       place: "Valinor",
       details: {
         title: "Tina Florence's Leather Shop",
@@ -3771,275 +3893,7 @@ export const mapMarkers = {
 
     
 
-    // Region: Lotor's Summer Palace Shops
-    {
-      type: "shop_weapon",
-      tooltip: "O'riles Weaponry Shop",
-      region: "Krythan",
-      place: "Lotor's Summer Palace",
-      details: {
-        title: "O'riles Weapon Shop",
-        coordinates: { x: 810, y: 674 },
-        image: "images/npcs/Oriles_Weaponry_Shop.png",
-        lore: "More information about O'riles Weaponry Shop is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "shop_armory",
-      tooltip: "Colleen Franks' Armory Shop",
-      region: "Krythan",
-      place: "Lotor's Summer Palace",
-      details: {
-        title: "Colleen Franks' Armory Shop",
-        coordinates: { x: 809, y: 681 },
-        image: "images/npcs/Colleen_Franks_Armory_Shop.png",
-        lore: "More information about Colleen Franks' Armory Shop is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "shop_farming",
-      tooltip: "Garius' Farming Shop",
-      region: "Krythan",
-      place: "Lotor's Summer Palace",
-      details: {
-        title: "Garius' Farming Shop",
-        coordinates: { x: 860, y: 713 },
-        image: "images/npcs/Garius_Farming_Shop.png",
-        lore: "More information about Garius' Farming Shop is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "shop_carpentry",
-      tooltip: "Tom Uslak Carpenter Shop",
-      region: "Krythan",
-      place: "Lotor's Summer Palace",
-      details: {
-        title: "Tom Uslak Carpenter Shop",
-        coordinates: { x: 852, y: 709 },
-        image: "images/npcs/Tom_Uslak_Carpenter_Shop.png",
-        lore: "More information about Tom Uslak Carpenter Shop is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "shop_survey",
-      tooltip: "Blueprint Sales",
-      region: "Krythan",
-      place: "Lotor's Summer Palace",
-      details: {
-        title: "Blueprint Sales",
-        coordinates: { x: 768, y: 621 },
-        image: "images/npcs/Blueprint_Sales_Shop.png",
-        lore: "More information about Blueprint Sales is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "shop_survey",
-      tooltip: "Surveying and Tools Sales",
-      region: "Krythan",
-      place: "Lotor's Summer Palace",
-      details: {
-        title: "Surveying and Tools Sales",
-        coordinates: { x: 770, y: 621 },
-        image: "images/npcs/Surveying_and_Tools_Sales_Shop.png",
-        lore: "More information about Surveying and Tools Sales is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "shop_magic",
-      tooltip: "Wizard Swishwhich's Shop",
-      region: "Krythan",
-      place: "Lotor's Summer Palace",
-      details: {
-        title: "Wizard Swishwhich's Shop",
-        coordinates: { x: 770, y: 599 },
-        image: "images/npcs/Wizard_Swishwhich_Shop.png", 
-        lore: "More information about Wizard Swishwhich's Shop is coming soon.",
-        currency: "Rune Fragment",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "shop_magic",
-      tooltip: "Wizard Blunderstone",
-      region: "Krythan",
-      place: "Lotor's Summer Palace",
-      details: {
-        title: "Wizard Blunderstone",
-        coordinates: { x: 769, y: 600 },
-        image: "images/npcs/Wizard_Blunderstone_Shop.png",
-        lore: "More information about Wizard Blunderstone is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "shop_generic",
-      tooltip: "VIP Store",
-      region: "Krythan",
-      place: "Lotor's Summer Palace",
-      details: {
-        title: "VIP Store",
-        coordinates: { x: 763, y: 604 },
-        image: "images/npcs/VIP_Store.png",
-        lore: "More information about VIP Store is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "shop_generic",
-      tooltip: "Lotor's Gardener's Shop",
-      region: "Krythan",
-      place: "Lotor's Summer Palace",
-      details: {
-        title: "Lotor's Gardener's Shop",
-        coordinates: { x: 762, y: 598 },
-        image: "images/npcs/Lotors_Gardener_Shop.png",
-        lore: "More information about Lotor's Gardener's Shop is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "shop_shipyard",
-      tooltip: "Larson Davide's Shipyard Shop",
-      region: "Krythan",
-      place: "Lotor's Summer Palace",
-      details: {
-        title: "Larson Davide's Shipyard Shop",
-        coordinates: { x: 790, y: 593 },
-        image: "images/npcs/Larson_Davide_Shop.png",
-        lore: "More information about Larson Davide's Shipyard Shop is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "shop_shipyard",
-      tooltip: "Tides of Fate Raft Offer",
-      region: "Krythan",
-      place: "Lotor's Summer Palace",
-      details: {
-        title: "Tides of Fate Raft Offer",
-        coordinates: { x: 792, y: 593 },
-        image: "images/npcs/Tides_of_Fate_Raft_Offer.png",
-        lore: "More information about Tides of Fate Raft Offer is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "shop_magic",
-      tooltip: "Doyle Trobush's Magic Shop",
-      region: "Krythan",
-      place: "Lotor's Summer Palace",
-      details: {
-        title: "Doyle Trobush's Magic Shop",
-        coordinates: { x: 756, y: 676 },
-        image: "images/npcs/Doyle_Trobush_Magic_Shop.png",
-        lore: "More information about Doyle Trobush's Magic Shop is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "shop_runecrafting",
-      tooltip: "Panteo's Jewelry Shop",
-      region: "Krythan",
-      place: "Lotor's Summer Palace",
-      details: {
-        title: "Panteo's Runecrafting Shop",
-        coordinates: { x: 789, y: 660 },
-        image: "images/npcs/Panteo_Jewelry_Shop.png",
-        lore: "More information about Panteo's Jewelry Shop is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "shop_jewelry",
-      tooltip: "Canuelle's Jewelry Shop",
-      region: "Krythan",
-      place: "Lotor's Summer Palace",
-      details: {
-        title: "Canuelle's Jewelry Shop",
-        coordinates: { x: 789, y: 690 },
-        image: "images/npcs/Canuelle_Jewelry_Shop.png",
-        lore: "More information about Canuelle's Jewelry Shop is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "shop_leather",
-      tooltip: "Mongor's Leatherworking Shop",
-      region: "Krythan",
-      place: "Lotor's Summer Palace",
-      details: {
-        title: "Mongor's Leatherworking Shop",
-        coordinates: { x: 802, y: 703 },
-        image: "images/npcs/Mongor_Leatherworking_Shop.png",
-        lore: "More information about Mongor's Leatherworking Shop is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "shop_blacksmith",
-      tooltip: "Kaleic's Blacksmith Shop",
-      region: "Krythan",
-      place: "Lotor's Summer Palace",
-      details: {
-        title: "Kaleic's Blacksmith Shop",
-        coordinates: { x: 799, y: 699 },
-        image: "images/npcs/Kaleic_Blacksmith_Shop.png",
-        lore: "More information about Kaleic's Blacksmith Shop is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "shop_provisioner",
-      tooltip: "Mace Gurban's Provisioner Shop",
-      region: "Krythan",
-      place: "Lotor's Summer Palace",
-      details: {
-        title: "Mace Gurban's Provisioner Shop",
-        coordinates: { x: 811, y: 697 },
-        image: "images/npcs/Mace_Gurban_Provisioner_Shop.png",
-        lore: "More information about Mace Gurban's Provisioner Shop is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "shop_pub",
-      tooltip: "Docale's Pub",
-      region: "Krythan",
-      place: "Lotor's Summer Palace",
-      details: {
-        title: "Docale's Pub",
-        coordinates: { x: 845, y: 727 },
-        image: "images/npcs/Docale_Pub.png",
-        lore: "More information about Docale's Pub is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    //Done
+    
     // Island: Krythan Island Shops
     // Region: Silvest Valley Shops
     // City: Cliffside Shops
@@ -4503,9 +4357,163 @@ export const mapMarkers = {
       place: "Parian",
       details: {
         title: "Rella's Storage Shop",
-        coordinates: { x: 3506, y: 3035 },
+        coordinates: { x: 3479, y: 3021 },
         image: "images/npcs/Rella_Storage_Shop.png",
         lore: "Rella sells storage crates for 50,000 gold each. These are essential for expanding your bank space.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_carpentry",
+      tooltip: "Welatrem's Carpenter Shop",
+      region: "Highlands",
+      place: "Parian",
+      details: {
+        title: "Rella's Storage Shop",
+        coordinates: { x: 3479, y: 3027 },
+        image: "images/npcs/Welatrem_Carpentry_Shop.png",
+        lore: "More information about Rella's Storage Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_leather",
+      tooltip: "Draga's Leather Shop",
+      region: "Highlands",
+      place: "Parian",
+      details: {
+        title: "Draga's Leather Shop",
+        coordinates: { x: 3494, y: 3002 },
+        image: "images/npcs/Draga_Leather_Shop.png",
+        lore: "More information about Draga's Leather Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_armory",
+      tooltip: "Kedardogan's Armory Shop",
+      region: "Highlands",
+      place: "Parian",
+      details: {
+        title: "Kedardogan's Armory Shop",
+        coordinates: { x: 3478, y: 3005 },
+        image: "images/npcs/Kedardogan_Armory_Shop.png",
+        lore: "More information about Kedardogan's Armory Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_blacksmith",
+      tooltip: "Afedriwyr's Blacksmith Shop",
+      region: "Highlands",
+      place: "Parian",
+      details: {
+        title: "Afedriwyr's Blacksmith Shop",
+        coordinates: { x: 3486, y: 3005 },
+        image: "images/npcs/Afedriwyr_Blacksmith_Shop.png",
+        lore: "More information about Afedriwyr's Blacksmith Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_pub",
+      tooltip: "Malinnor's Pub",
+      region: "Highlands",
+      place: "Parian",
+      details: {
+        title: "Malinnor's Pub",
+        coordinates: { x: 3459, y: 2994 },
+        image: "images/npcs/Malinnor_Provisioner_Shop.png",
+        lore: "More information about Malinnor's Pub is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_farming",
+      tooltip: "Melisandria's Farming Shop",
+      region: "Highlands",
+      place: "Parian",
+      details: {
+        title: "Melisandria's Farming Shop",
+        coordinates: { x: 3446, y: 3004 },
+        image: "images/npcs/Melisandria_Farming_Shop.png",
+        lore: "More information about Melisandria's Farming Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_carpentry",
+      tooltip: "Oloatlan's Carpentry Shop",
+      region: "Highlands",
+      place: "Parian",
+      details: {
+        title: "Oloatlan's Carpentry Shop",
+        coordinates: { x: 3444, y: 2983 },
+        image: "images/npcs/Oloatlan_Carpentry_Shop.png",
+        lore: "More information about Oloatlan's Carpentry Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_weapon",
+      tooltip: "Hailey Brown's Weapon Shop",
+      region: "Highlands",
+      place: "Parian",
+      details: {
+        title: "Hailey Brown's Weapon Shop",
+        coordinates: { x: 3442, y: 2983 },
+        image: "images/npcs/Hailey_Brown_Weapon_Shop.png",
+        lore: "More information about Hailey Brown's Weapon Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_provisioner",
+      tooltip: "Jeralif's Provisioner Shop",
+      region: "Highlands",
+      place: "Parian",
+      details: {
+        title: "Jeralif's Provisioner Shop",
+        coordinates: { x: 3444, y: 2970 },
+        image: "images/npcs/Jeralif_Provisioner_Shop.png",
+        lore: "More information about Jeralif's Provisioner Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_magic",
+      tooltip: "Zaetlan's Magic Shop",
+      region: "Highlands",
+      place: "Parian",
+      details: {
+        title: "Zaetlan's Magic Shop",
+        coordinates: { x: 3421, y: 2976 },
+        image: "images/npcs/Zaetlan_Magic_Shop.png",
+        lore: "More information about Zaetlan's Magic Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_weapon",
+      tooltip: "Ereld's Weapon Shop",
+      region: "Highlands",
+      place: "Parian",
+      details: {
+        title: "Ereld's Weapon Shop",
+        coordinates: { x: 3425, y: 2960 },
+        image: "images/npcs/Ereld_Weapon_Shop.png",
+        lore: "More information about Ereld's Weapon Shop is coming soon.",
         npcs: [],
         links: [],
       },
@@ -4641,17 +4649,288 @@ export const mapMarkers = {
     // Done
 
     // City: Grell Shops
+    // This is on the Underground map.
 
     // City: Ethera Palace Shops
 
+    // Region: Black Swamps Shops
+    
     // Region: Western Isles Shops
-    // Western Isles - being islands that are a part of Non-Expansion Content in Ashen Empires. This doesn't include Sands of Creation or Tides of Fate (expansions) content.
+    // Island: Lotor's Summer Palace Shops
+    {
+      type: "shop_weapon",
+      tooltip: "O'riles Weaponry Shop",
+      region: "Western Isles",
+      place: "Lotor's Summer Palace",
+      details: {
+        title: "O'riles Weapon Shop",
+        coordinates: { x: 810, y: 674 },
+        image: "images/npcs/Oriles_Weaponry_Shop.png",
+        lore: "More information about O'riles Weaponry Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_armory",
+      tooltip: "Colleen Franks' Armory Shop",
+      region: "Western Isles",
+      place: "Lotor's Summer Palace",
+      details: {
+        title: "Colleen Franks' Armory Shop",
+        coordinates: { x: 809, y: 681 },
+        image: "images/npcs/Colleen_Franks_Armory_Shop.png",
+        lore: "More information about Colleen Franks' Armory Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_farming",
+      tooltip: "Garius' Farming Shop",
+      region: "Western Isles",
+      place: "Lotor's Summer Palace",
+      details: {
+        title: "Garius' Farming Shop",
+        coordinates: { x: 860, y: 713 },
+        image: "images/npcs/Garius_Farming_Shop.png",
+        lore: "More information about Garius' Farming Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_carpentry",
+      tooltip: "Tom Uslak Carpenter Shop",
+      region: "Western Isles",
+      place: "Lotor's Summer Palace",
+      details: {
+        title: "Tom Uslak Carpenter Shop",
+        coordinates: { x: 852, y: 709 },
+        image: "images/npcs/Tom_Uslak_Carpenter_Shop.png",
+        lore: "More information about Tom Uslak Carpenter Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_survey",
+      tooltip: "Blueprint Sales",
+      region: "Western Isles",
+      place: "Lotor's Summer Palace",
+      details: {
+        title: "Blueprint Sales",
+        coordinates: { x: 768, y: 621 },
+        image: "images/npcs/Blueprint_Sales_Shop.png",
+        lore: "More information about Blueprint Sales is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_survey",
+      tooltip: "Surveying and Tools Sales",
+      region: "Western Isles",
+      place: "Lotor's Summer Palace",
+      details: {
+        title: "Surveying and Tools Sales",
+        coordinates: { x: 770, y: 621 },
+        image: "images/npcs/Surveying_and_Tools_Sales_Shop.png",
+        lore: "More information about Surveying and Tools Sales is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_magic",
+      tooltip: "Wizard Swishwhich's Shop",
+      region: "Western Isles",
+      place: "Lotor's Summer Palace",
+      details: {
+        title: "Wizard Swishwhich's Shop",
+        coordinates: { x: 770, y: 599 },
+        image: "images/npcs/Wizard_Swishwhich_Shop.png", 
+        lore: "More information about Wizard Swishwhich's Shop is coming soon.",
+        currency: "Rune Fragment",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_magic",
+      tooltip: "Wizard Blunderstone",
+      region: "Western Isles",
+      place: "Lotor's Summer Palace",
+      details: {
+        title: "Wizard Blunderstone",
+        coordinates: { x: 769, y: 600 },
+        image: "images/npcs/Wizard_Blunderstone_Shop.png",
+        lore: "More information about Wizard Blunderstone is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_generic",
+      tooltip: "VIP Store",
+      region: "Western Isles",
+      place: "Lotor's Summer Palace",
+      details: {
+        title: "VIP Store",
+        coordinates: { x: 763, y: 604 },
+        image: "images/npcs/VIP_Store.png",
+        lore: "More information about VIP Store is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_generic",
+      tooltip: "Lotor's Gardener's Shop",
+      region: "Western Isles",
+      place: "Lotor's Summer Palace",
+      details: {
+        title: "Lotor's Gardener's Shop",
+        coordinates: { x: 762, y: 598 },
+        image: "images/npcs/Lotors_Gardener_Shop.png",
+        lore: "More information about Lotor's Gardener's Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_shipyard",
+      tooltip: "Larson Davide's Shipyard Shop",
+      region: "Western Isles",
+      place: "Lotor's Summer Palace",
+      details: {
+        title: "Larson Davide's Shipyard Shop",
+        coordinates: { x: 790, y: 593 },
+        image: "images/npcs/Larson_Davide_Shop.png",
+        lore: "More information about Larson Davide's Shipyard Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_shipyard",
+      tooltip: "Tides of Fate Raft Offer",
+      region: "Western Isles",
+      place: "Lotor's Summer Palace",
+      details: {
+        title: "Tides of Fate Raft Offer",
+        coordinates: { x: 792, y: 593 },
+        image: "images/npcs/Tides_of_Fate_Raft_Offer.png",
+        lore: "More information about Tides of Fate Raft Offer is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_magic",
+      tooltip: "Doyle Trobush's Magic Shop",
+      region: "Western Isles",
+      place: "Lotor's Summer Palace",
+      details: {
+        title: "Doyle Trobush's Magic Shop",
+        coordinates: { x: 756, y: 676 },
+        image: "images/npcs/Doyle_Trobush_Magic_Shop.png",
+        lore: "More information about Doyle Trobush's Magic Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_runecrafting",
+      tooltip: "Panteo's Jewelry Shop",
+      region: "Western Isles",
+      place: "Lotor's Summer Palace",
+      details: {
+        title: "Panteo's Runecrafting Shop",
+        coordinates: { x: 789, y: 660 },
+        image: "images/npcs/Panteo_Jewelry_Shop.png",
+        lore: "More information about Panteo's Jewelry Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_jewelry",
+      tooltip: "Canuelle's Jewelry Shop",
+      region: "Western Isles",
+      place: "Lotor's Summer Palace",
+      details: {
+        title: "Canuelle's Jewelry Shop",
+        coordinates: { x: 789, y: 690 },
+        image: "images/npcs/Canuelle_Jewelry_Shop.png",
+        lore: "More information about Canuelle's Jewelry Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_leather",
+      tooltip: "Mongor's Leatherworking Shop",
+      region: "Western Isles",
+      place: "Lotor's Summer Palace",
+      details: {
+        title: "Mongor's Leatherworking Shop",
+        coordinates: { x: 802, y: 703 },
+        image: "images/npcs/Mongor_Leatherworking_Shop.png",
+        lore: "More information about Mongor's Leatherworking Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_blacksmith",
+      tooltip: "Kaleic's Blacksmith Shop",
+      region: "Western Isles",
+      place: "Lotor's Summer Palace",
+      details: {
+        title: "Kaleic's Blacksmith Shop",
+        coordinates: { x: 799, y: 699 },
+        image: "images/npcs/Kaleic_Blacksmith_Shop.png",
+        lore: "More information about Kaleic's Blacksmith Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_provisioner",
+      tooltip: "Mace Gurban's Provisioner Shop",
+      region: "Western Isles",
+      place: "Lotor's Summer Palace",
+      details: {
+        title: "Mace Gurban's Provisioner Shop",
+        coordinates: { x: 811, y: 697 },
+        image: "images/npcs/Mace_Gurban_Provisioner_Shop.png",
+        lore: "More information about Mace Gurban's Provisioner Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_pub",
+      tooltip: "Docale's Pub",
+      region: "Western Isles",
+      place: "Lotor's Summer Palace",
+      details: {
+        title: "Docale's Pub",
+        coordinates: { x: 845, y: 727 },
+        image: "images/npcs/Docale_Pub.png",
+        lore: "More information about Docale's Pub is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    //Done
     // Island: Scarab Island Shops
     // City: Lopal Shops
     {
       type: "shop_carpentry",
       tooltip: "Ricbert's Carpentry Shop",
-      region: "Krythan",
+      region: "Western Isles",
       place: "Scarab Island",
       details: {
         title: "Ricbert's Carpentry Shop",
@@ -4665,7 +4944,7 @@ export const mapMarkers = {
     {
       type: "shop_farming",
       tooltip: "Berctuald's Farming Shop",
-      region: "Krythan",
+      region: "Western Isles",
       place: "Scarab Island",
       details: {
         title: "Berctuald's Farming Shop",
@@ -4690,13 +4969,10 @@ export const mapMarkers = {
         links: [],
       },
     },
-
-    // City: Grell Shops
-
     {
       type: "shop_pub",
       tooltip: "Osric's Pub",
-      region: "Krythan",
+      region: "Western Isles",
       place: "Scarab Island",
       details: {
         title: "Osric's Pub",
@@ -4710,7 +4986,7 @@ export const mapMarkers = {
     {
       type: "shop_provisioner",
       tooltip: "Wulfhere's Provisioner Shop",
-      region: "Krythan",
+      region: "Western Isles",
       place: "Scarab Island",
       details: {
         title: "Wulfhere's Provisioner Shop",
@@ -4724,7 +5000,7 @@ export const mapMarkers = {
     {
       type: "shop_weapon",
       tooltip: "Killjoy's Weaponry Shop",
-      region: "Krythan",
+      region: "Western Isles",
       place: "Scarab Island",
       details: {
         title: "Killjoy's Weaponry Shop",
@@ -4738,7 +5014,7 @@ export const mapMarkers = {
     {
       type: "shop_armory",
       tooltip: "Harkyn's Armory Shop",
-      region: "Krythan",
+      region: "Western Isles",
       place: "Scarab Island",
       details: {
         title: "Harkyn's Armory Shop",
@@ -4752,7 +5028,7 @@ export const mapMarkers = {
     {
       type: "shop_magic",
       tooltip: "Aldulf's Magic Shop",
-      region: "Krythan",
+      region: "Western Isles",
       place: "Scarab Island",
       details: {
         title: "Aldulf's Magic Shop",
@@ -4785,7 +5061,7 @@ export const mapMarkers = {
     {
       type: "spawn_good",
       tooltip: "Spawn Gate",
-      region: "Valinor Island",
+      region: "Valinor",
       place: "Valinor",
       details: {
         title: "Spawn Gate",
@@ -4797,7 +5073,7 @@ export const mapMarkers = {
       },
     },
 
-    // Krythan Island Spawns
+    // Island: Krythan Island Spawns
     // Region: Silvest Valley Spawns
     // City: Silvest Spawns
     {
@@ -4864,15 +5140,15 @@ export const mapMarkers = {
       },
     },    
 
-    // Region: Krythan Spawns
+    // Region: Highlands Spawns
 
     // Region: Western Isles Spawns
 
-    // Scarab Island Spawns
+    // Island: Scarab Island Spawns
     {
       type: "spawn_good",
       tooltip: "Good Spawn Gate",
-      region: "Krythan",
+      region: "Western Isles",
       place: "Scarab Island",
       details: {
         title: "Good Spawn Gate",
@@ -4884,8 +5160,24 @@ export const mapMarkers = {
       },
     },
 
+    // City: Parian
+    {
+      type: "spawn_good",
+      tooltip: "Good Spawn Gate",
+      region: "Western Isles",
+      place: "Parian",
+      details: {
+        title: "Good Spawn Gate",
+        coordinates: { x: 3468, y: 3024 },
+        image: "images/placeholders/Parian_Spawn_Gate.png",
+        lore: "More information about Parian Good Spawn Gate is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+
     // Region: Sands of Creation Spawns
-    // Ruhura Side Spawns
+    // City: Ruhura Side Spawns
     {
       type: "spawn_good",
       tooltip: "Good Spawn Gate",
@@ -4900,16 +5192,16 @@ export const mapMarkers = {
         links: [],
       },
     },
-    // Khafra Side Spawns
+    // City: Khafra Side Spawns
   ],
 
   undergrounds: [
-    // Valinor Island Undergrounds
+    // Island: Valinor Island Undergrounds
     // Region: Valinor Undergrounds
     {
       type: "underground_dungeon",
       tooltip: "Frump's Lair",
-      region: "Valinor Island",
+      region: "Valinor",
       place: "Valinor",
       details: {
         title: "Frump's Lair",
@@ -4923,7 +5215,7 @@ export const mapMarkers = {
     {
       type: "underground_dungeon",
       tooltip: "Bonesnarl's Lair",
-      region: "Valinor Island",
+      region: "Valinor",
       place: "Valinor",
       details: {
         title: "Bonesnarl's Lair",
@@ -4937,7 +5229,7 @@ export const mapMarkers = {
     {
       type: "underground_stairs",
       tooltip: "Stairs to Mage Trainers",
-      region: "Valinor Island",
+      region: "Valinor",
       place: "Valinor",
       details: {
         title: "Stairs to Mage Trainers",
@@ -4949,37 +5241,9 @@ export const mapMarkers = {
       },
     },
 
-    // Lotor's Summer Palace Undergrounds
-    {
-      type: "underground_stairs",
-      tooltip: "Sewer Entrance",
-      region: "Krythan",
-      place: "Lotor's Summer Palace",
-      details: {
-        title: "Sewer Entrance",
-        coordinates: { x: 763, y: 751 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Sewer Entrance is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "underground_stairs",
-      tooltip: "Leather and Armory Shop Basement",
-      region: "Krythan",
-      place: "Lotor's Summer Palace",
-      details: {
-        title: "Leather and Armory Shop Basement",
-        coordinates: { x: 797, y: 704 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Leather and Armory Shop Basement is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
+    
 
-    // Krythan Island Undergrounds
+    // Region: Krythan Island Undergrounds
 
     // Region: Silvest Valley Undergrounds
     {
@@ -5304,11 +5568,11 @@ export const mapMarkers = {
       },
     },
 
-    // Scarab Island Undergrounds
+    // Island: Scarab Island Undergrounds
     {
       type: "underground_crypt",
       tooltip: "Lopal Crypt", // Something very strange about this crypt.
-      region: "Krythan",
+      region: "Western Isles",
       place: "Scarab Island",
       details: {
         title: "Lopal Crypt",
@@ -5322,7 +5586,7 @@ export const mapMarkers = {
     {
       type: "underground_mine",
       tooltip: "Scarab Island Mine",
-      region: "Krythan",
+      region: "Western Isles",
       place: "Scarab Island",
       details: {
         title: "Scarab Island Mine",
@@ -5336,7 +5600,7 @@ export const mapMarkers = {
     {
       type: "underground_ladder",
       tooltip: "Lopal Catacombs",
-      region: "Krythan",
+      region: "Western Isles",
       place: "Scarab Island",
       details: {
         title: "Lopal Catacombs",
@@ -5623,21 +5887,7 @@ export const mapMarkers = {
         npcs: [],
         links: [],
       },
-    },
-    {
-      type: "underground_cave",
-      tooltip: "Badlands Cave",
-      region: "Mainland",
-      place: "Highlands",
-      details: {
-        title: "Badlands Cave",
-        coordinates: { x: 2887, y: 2881 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Badlands Cave is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    }, // I'm adding this to Highlands but it could be a part of Battle Plains
+    }, 
     {
       type: "underground_ladder",
       tooltip: "Badlands Entrance",
@@ -5667,6 +5917,8 @@ export const mapMarkers = {
       },
     },
 
+
+    // Region: Darkwoods Undergrounds
     // Necropolis Undergrounds
     {
       type: "underground_stairs",
@@ -5700,6 +5952,21 @@ export const mapMarkers = {
     },
 
     // Region: Battle Plains Undergrounds
+    
+    {
+      type: "underground_cave",
+      tooltip: "Badlands Cave",
+      region: "Mainland",
+      place: "Battle Plains",
+      details: {
+        title: "Badlands Cave",
+        coordinates: { x: 2887, y: 2881 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Badlands Cave is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
     {
       type: "underground_stairs",
       tooltip: "Chlera Catacombs",
@@ -5771,7 +6038,7 @@ export const mapMarkers = {
       },
     },
 
-    // Black Swamp Region Undergrounds
+    // Region: Black Swamp Undergrounds
     {
       type: "underground_sewer",
       tooltip: "Krog Sewer",
@@ -5871,9 +6138,39 @@ export const mapMarkers = {
       },
     },
 
-    // Highlands Region Undergrounds
+    // Region: Highlands Undergrounds
 
-    // Western Isles Undergrounds
+    // Region: Western Isles Undergrounds
+
+    // Island: Lotor's Summer Palace Undergrounds
+    {
+      type: "underground_stairs",
+      tooltip: "Sewer Entrance",
+      region: "Western Isles",
+      place: "Lotor's Summer Palace",
+      details: {
+        title: "Sewer Entrance",
+        coordinates: { x: 763, y: 751 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Sewer Entrance is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "underground_stairs",
+      tooltip: "Leather and Armory Shop Basement",
+      region: "Western Isles",
+      place: "Lotor's Summer Palace",
+      details: {
+        title: "Leather and Armory Shop Basement",
+        coordinates: { x: 797, y: 704 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Leather and Armory Shop Basement is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
     {
       type: "underground_stairs",
       tooltip: "Shadow Temple South Entrance",
@@ -5888,9 +6185,9 @@ export const mapMarkers = {
         links: [],
       },
     },
-    // Valley of Giants Undergrounds
+    // Region: Valley of Giants Undergrounds
 
-    // Heartwood Coast Undergrounds
+    // Region: Heartwood Coast Undergrounds
     {
       type: "underground_crypt",
       tooltip: "Gnobol Mauseleum Crypt",
@@ -5934,7 +6231,7 @@ export const mapMarkers = {
       },
     },
 
-    // Tundria Region Undergrounds
+    // Region: Tundria Region Undergrounds
     {
       type: "underground_cave",
       tooltip: "Icebane's Cavern Entrance",
@@ -6104,7 +6401,7 @@ export const mapMarkers = {
       },
     },
 
-    // Hell Undergrounds
+    // Island: Hell Undergrounds
     {
       type: "underground_dungeon",
       tooltip: "Lotorian Dungeon",
@@ -6148,8 +6445,8 @@ export const mapMarkers = {
       },
     },
 
-    // Sands of Creation Region
-    // Ruhura Side Undergrounds
+    // Region: Sands of Creation Region
+    // City: Ruhura Side Undergrounds
     {
       type: "underground_cave",
       tooltip: "Ruhura Elemental Cave",
@@ -6221,7 +6518,7 @@ export const mapMarkers = {
       },
     },
 
-    // Greater Dragon Island Undergrounds
+    // Island: Greater Dragon Island Undergrounds
     {
       type: "underground_cave",
       tooltip: "Greater Dragon Island Cave",
@@ -6237,7 +6534,7 @@ export const mapMarkers = {
       },
     },
 
-    // Khafra Side Undergrounds
+    // City: Khafra Side Undergrounds
     {
       type: "underground_cave",
       tooltip: "Khafra Elemental Cave",
@@ -6253,8 +6550,8 @@ export const mapMarkers = {
       },
     },
 
-    // Breakwater Region Undergrounds
-    // New Town Island Undergrounds
+    // Region: Breakwater Region Undergrounds
+    // City: New Town Island Undergrounds
     {
       type: "underground_crypt",
       tooltip: "Darkwing's Lair Entrance",
@@ -6271,7 +6568,7 @@ export const mapMarkers = {
     },
     {
       type: "underground_dungeon",
-      tooltip: "Cyclops and Lion Cave",
+      tooltip: "Cyclops and Lion Cave", // I was thinking of changing the name to New Town Mine but haven't found any info on that
       region: "Breakwater",
       place: "New Town Island",
       details: {
@@ -6282,7 +6579,7 @@ export const mapMarkers = {
         npcs: [],
         links: [],
       },
-    }, // I was thinking of changing the name to New Town Mine but haven't found any info on that
+    }, 
     {
       type: "underground_mine",
       tooltip: "Zule's Cave Entrance",
@@ -6298,7 +6595,7 @@ export const mapMarkers = {
       },
     },
 
-    // Roycroft Island Undergrounds
+    // City: Roycroft Island Undergrounds
     {
       type: "underground_stairs",
       tooltip: "Son of Scalo's Hideout",
@@ -6356,9 +6653,9 @@ export const mapMarkers = {
       },
     },
 
-    // New Royale Island Undergrounds
+    // City: New Royale Island Undergrounds
 
-    // Broken Finger Region Undergrounds
+    // Region: Broken Finger Region Undergrounds
     {
       type: "underground_dungeon",
       tooltip: "Broken Finger Dungeon",
