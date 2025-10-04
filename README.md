@@ -33,20 +33,20 @@ An interactive map for Ashen Empires with pixel-perfect coordinates and multiple
 
 The map is designed to be easily configurable. Here are the key files and settings you can adjust:
 
--   **Marker Size & Appearance**:
-    -   **File**: `js/map.js`
-    -   **Function**: `createMarkerStyle()`
-    -   **Settings**: Adjust `backgroundDiameter`, `iconSize`, `border`, and `shadowBlur` to change the base size and look of all markers.
+- **Marker Size & Appearance**:
+  - **File**: `js/map.js`
+  - **Function**: `createMarkerStyle()`
+  - **Settings**: Adjust `backgroundDiameter`, `iconSize`, `border`, and `shadowBlur` to change the base size and look of all markers.
 
--   **Marker Scaling at Different Zooms**:
-    -   **File**: `js/map.js`
-    -   **Function**: `addMapMarkers()`
-    -   **Settings**: In the `style` function for the `markerLayer`, modify the `scale` variable's logic to control how large markers appear at different `resolution` (zoom) levels.
+- **Marker Scaling at Different Zooms**:
+  - **File**: `js/map.js`
+  - **Function**: `addMapMarkers()`
+  - **Settings**: In the `style` function for the `markerLayer`, modify the `scale` variable's logic to control how large markers appear at different `resolution` (zoom) levels.
 
--   **Initial Map View**:
-    -   **File**: `js/map.js`
-    -   **Variable**: `initialCenterGameCoords`
-    -   **Settings**: Change the `x` and `y` values to set the default location the map centers on when it first loads.
+- **Initial Map View**:
+  - **File**: `js/map.js`
+  - **Variable**: `initialCenterGameCoords`
+  - **Settings**: Change the `x` and `y` values to set the default location the map centers on when it first loads.
 
 ## Features
 
@@ -186,8 +186,9 @@ One of the best ways to contribute to this project is by adding or correcting th
 ### How to Add or Edit Information
 
 All data for the pop-up information panels is located in two files:
--   `js/markers.js`: Contains data for all icon-based markers (shops, quests, portals, etc.).
--   `js/labels.js`: Contains data for all text-based labels (cities, dungeons, landmarks, etc.).
+
+- `js/markers.js`: Contains data for all icon-based markers (shops, quests, portals, etc.).
+- `js/labels.js`: Contains data for all text-based labels (cities, dungeons, landmarks, etc.).
 
 To add or edit information, find the relevant entry in one of these files and modify its `details` object.
 
@@ -216,21 +217,22 @@ The `details` object holds all the information displayed in the flyout panel. He
 
 **Breakdown of `details` properties:**
 
--   `title` (string): The main title shown at the top of the flyout panel.
--   `coordinates` (object): The in-game `{x, y}` coordinates. This is displayed near the top.
--   `image` (string, optional): The path to an image that will be displayed. The path is relative to the project's root directory (e.g., `images/locations/valinor.png`).
--   `lore` (string, optional): A paragraph of text providing general information or history.
--   `npcs` (array, optional): A list of important NPCs or sub-locations. Each item in the list is an object with a `name` and `info`.
--   `links` (array, optional): A list of external links, such as to a wiki page. Each item is an object with `text` (the clickable text) and `url` (the web address).
+- `title` (string): The main title shown at the top of the flyout panel.
+- `coordinates` (object): The in-game `{x, y}` coordinates. This is displayed near the top.
+- `image` (string, optional): The path to an image that will be displayed. The path is relative to the project's root directory (e.g., `images/locations/valinor.png`).
+- `lore` (string, optional): A paragraph of text providing general information or history.
+- `npcs` (array, optional): A list of important NPCs or sub-locations. Each item in the list is an object with a `name` and `info`.
+- `links` (array, optional): A list of external links, such as to a wiki page. Each item is an object with `text` (the clickable text) and `url` (the web address).
 
 You don't need to include every property. If a property like `image` or `links` is omitted, its section simply won't appear in the panel.
 
 ### Submitting Your Changes
 
 The easiest way to contribute is to:
-1.  **Fork** the repository on GitHub.
-2.  **Edit** the `js/markers.js` or `js/labels.js` file in your fork.
-3.  **Submit a Pull Request** with your changes.
+
+1. **Fork** the repository on GitHub.
+2. **Edit** the `js/markers.js` or `js/labels.js` file in your fork.
+3. **Submit a Pull Request** with your changes.
 
 Your contributions will help make this map an even more valuable resource for the Ashen Empires community!
 
