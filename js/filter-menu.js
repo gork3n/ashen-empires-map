@@ -202,7 +202,7 @@ function createMarkerToggleButtons() {
     const markerCategories = [
         { id: 'portals', name: 'Portals', type: 'portal_lsp' },
         { id: 'shops', name: 'Shops', type: 'shop_generic' },
-        { id: 'services_npcs', name: 'Services & NPCs', type: 'services_npcs' },
+        { id: 'services_npcs', name: 'Other Services & NPCs', type: 'services_npcs' },
         { id: 'spawns', name: 'Spawns', type: 'spawn_good' },
         { id: 'undergrounds', name: 'Undergrounds', type: 'underground_cave' },
         
@@ -296,6 +296,9 @@ function createMarkerToggleButtons() {
             // Special case for 'lsp'
             if (subtypeName.toLowerCase() === 'lsp') {
                 subtypeName = 'LSP';
+            }
+            if (subtype.toLowerCase() === 'town_guard') {
+                subtypeName = 'Town Guardian';
             }
 
             const subtypeText = document.createElement('span');

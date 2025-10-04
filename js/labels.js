@@ -19,9 +19,9 @@ export const mapLabels = {
       },
     },
 
-    /* Mainland Landmarks */
+    // Mainlands Landmarks
 
-    // Darkwood Forest Region Landmarks
+    // Darkwoods Region Landmarks
 
     // Battle Plains Region Landmarks
     {
@@ -43,7 +43,7 @@ export const mapLabels = {
     // Highlands Region Landmarks
     {
       name: "Death Tyrant Valley",
-      fontSize: 30,
+      fontSize: 35,
       region: "Highlands",
       details: {
         title: "Death Tyrant Valley",
@@ -56,11 +56,11 @@ export const mapLabels = {
     },
     {
       name: "Resource Valley",
-      fontSize: 30,
+      fontSize: 35,
       region: "Highlands",
       details: {
         title: "Resource Valley",
-        coordinates: { x: 3415, y: 3169 },
+        coordinates: { x: 3410, y: 3257 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Resource Valley is coming soon.",
         npcs: [],
@@ -82,7 +82,7 @@ export const mapLabels = {
     },
     {
       name: "Valley of Giants",
-      fontSize: 30,
+      fontSize: 35,
       region: "Valley of Giants",
       details: {
         title: "Valley of Giants",
@@ -97,11 +97,11 @@ export const mapLabels = {
     // Badlands Region Landmarks
     {
       name: "Badlands",
-      fontSize: 30,
+      fontSize: 35,
       region: "Badlands",
       details: {
         title: "Badlands",
-        coordinates: { x: 2823, y: 2668 },
+        coordinates: { x: 2784, y: 2763 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Badlands is coming soon.",
         npcs: [],
@@ -318,7 +318,7 @@ export const mapLabels = {
 
     /* Mainland Cities */
 
-    // Darkwood Forest Region Cities
+    // Darkwoods Region Cities
     {
       name: "Redwake",
       fontSize: 30,
@@ -960,7 +960,7 @@ export const mapLabels = {
     {
       name: "Dragoon Island",
       fontSize: 25,
-      region: "Darkwoods", // I think this is correct because of proximity to Darkwood Forest and the bridge, but it could be Western Isles. Question Mark
+      region: "Darkwoods", // I think this is correct because of proximity to Darkwoods and the bridge, but it could be Western Isles. Question Mark
       details: {
         title: "Dragoon Island",
         coordinates: { x: 348, y: 3236 },
@@ -1242,21 +1242,8 @@ export const mapLabels = {
 
     /* Mainland Caves */
 
-    // Darkwood Forest Caves
+    // Region: Darkwoods Caves
     // Region: Battle Plains
-    {
-      name: "Fungoid Cave",
-      fontSize: 20,
-      region: "Battle Plains",
-      details: {
-        title: "Fungoid Cave",
-        coordinates: { x: 1959, y: 3760 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Fungoid Cave is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
 
     // Region: Black Swamp
     {
@@ -1272,51 +1259,9 @@ export const mapLabels = {
         links: [],
       },
     },
-
-    // Region: Highlands
-    {
-      name: "Zanock's Mine (East) ",
-      fontSize: 20,
-      region: "Highlands",
-      details: {
-        title: "Zanock's Mine (East) ",
-        coordinates: { x: 3097, y: 2388 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Zanock's Mine (East)  is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      name: "Termigon Mine",
-      fontSize: 20,
-      region: "Highlands",
-      details: {
-        title: "Termigon Mine",
-        coordinates: { x: 3622, y: 3594 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Termigon Mine is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-
     // Region: Valley of Giants
 
     // Heartwood Coast Caves
-    {
-      name: "Zanock's Mine (West)",
-      fontSize: 20,
-      region: "Heartwood Coast",
-      details: {
-        title: "Zanock's Mine (West)",
-        coordinates: { x: 2869, y: 2356 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Zanock's Mine (West) is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
 
     // Tundria Caves
 
@@ -1598,7 +1543,7 @@ export const mapLabels = {
     },
 
     /* Mainland Places of Interest */
-    // Darkwood Forest Places of Interest
+    // Darkwoods Places of Interest
     {
       name: "Josody Theif Fort",
       fontSize: 18,
@@ -1931,45 +1876,6 @@ export const mapLabels = {
       },
     },
     {
-      name: "Darushk Mine",
-      fontSize: 20,
-      region: "Highlands",
-      details: {
-        title: "Darushk Mine",
-        coordinates: { x: 3601, y: 2773 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Darushk Mine is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      name: "Astari Cave",
-      fontSize: 20,
-      region: "Highlands",
-      details: {
-        title: "Astari Cave",
-        coordinates: { x: 3607, y: 2993 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Astari Cave is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      name: "Arllandah's Lair",
-      fontSize: 20,
-      region: "Highlands",
-      details: {
-        title: "Arllandah's Lair",
-        coordinates: { x: 3204, y: 2627 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Arllandah's Lair is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
       name: "Third Book Temple",
       fontSize: 20,
       region: "Highlands",
@@ -1991,19 +1897,6 @@ export const mapLabels = {
         coordinates: { x: 3466, y: 2641 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Horibus's Camp is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      name: "Zanock's Mine (East) ",
-      fontSize: 20,
-      region: "Highlands",
-      details: {
-        title: "Zanock's Mine (East) ",
-        coordinates: { x: 3097, y: 2388 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Zanock's Mine (East)  is coming soon.",
         npcs: [],
         links: [],
       },
@@ -2960,7 +2853,7 @@ export const mapLabels = {
       region: "Broken Finger",
       details: {
         title: "Broken Lake",
-        coordinates: { x: 1118, y: 3658 },
+        coordinates: { x: 1446, y: 3751 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Broken Lake is coming soon.",
         npcs: [],

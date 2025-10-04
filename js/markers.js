@@ -538,14 +538,14 @@ export const mapMarkers = {
     },
     {
       type: "portal_blue",
-      tooltip: "Portal to Darkwoods North of Josody",
+      tooltip: "Portal to Darkwood North of Josody",
       region: "Krythan",
       place: "Krythan Fields",
       details: {
-        title: "Portal to Darkwoods North of Josody",
+        title: "Portal to Darkwood North of Josody",
         coordinates: { x: 183, y: 1464 },
         image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Portal to Darkwoods North of Josody is coming soon.",
+        lore: "More information about Portal to Darkwood North of Josody is coming soon.",
         npcs: [],
         links: [],
       },
@@ -600,12 +600,12 @@ export const mapMarkers = {
 
     /* Mainland Portals */
 
-    // Darkwoods Portals
+    // Darkwood Portals
     {
       type: "portal_blue",
       tooltip: "Portal to Krythan Island (West of New Korelth)",
       region: "Mainland",
-      place: "Darkwoods",
+      place: "Darkwood",
       details: {
         title: "Portal to Krythan Island (West of New Korelth)",
         coordinates: { x: 1350, y: 2438 },
@@ -619,7 +619,7 @@ export const mapMarkers = {
       type: "portal_housing",
       tooltip: "Portal to House Realm",
       region: "Mainland",
-      place: "Darkwoods",
+      place: "Darkwood",
       details: {
         title: "Portal to House Realm",
         coordinates: { x: 1270, y: 2511 },
@@ -633,7 +633,7 @@ export const mapMarkers = {
       type: "portal_lsp",
       tooltip: "Portal to Lotor's Summer Palace",
       region: "Mainland",
-      place: "Darkwoods",
+      place: "Darkwood",
       details: {
         title: "Portal to Lotor's Summer Palace",
         coordinates: { x: 1253, y: 2517 },
@@ -647,7 +647,7 @@ export const mapMarkers = {
       type: "portal_blue",
       tooltip: "Portal to Highlands (Southeast of Parian)",
       region: "Mainland",
-      place: "Darkwoods",
+      place: "Darkwood",
       details: {
         title: "Portal to Highlands (Southeast of Parian)",
         coordinates: { x: 807, y: 2837 },
@@ -661,7 +661,7 @@ export const mapMarkers = {
       type: "portal_small",
       tooltip: "Portal to Mnemmon",
       region: "Mainland",
-      place: "Darkwoods",
+      place: "Darkwood",
       details: {
         title: "Portal to Mnemmon",
         coordinates: { x: 866, y: 3416 },
@@ -675,7 +675,7 @@ export const mapMarkers = {
       type: "portal_small",
       tooltip: "Portal to Mnemmon Gaol",
       region: "Mainland",
-      place: "Darkwoods",
+      place: "Darkwood",
       details: {
         title: "Portal to Mnemmon Gaol",
         coordinates: { x: 908, y: 3258 },
@@ -689,7 +689,7 @@ export const mapMarkers = {
       type: "portal_lsp",
       tooltip: "Portal to Lotor's Summer Palace",
       region: "Mainland",
-      place: "Darkwoods",
+      place: "Darkwood",
       details: {
         title: "Portal to Lotor's Summer Palace",
         coordinates: { x: 471, y: 3479 },
@@ -777,14 +777,14 @@ export const mapMarkers = {
     },
     {
       type: "portal_blue",
-      tooltip: "Portal to Darkwoods (East of Redwake)",
+      tooltip: "Portal to Darkwood (East of Redwake)",
       region: "Mainland",
       place: "Highlands",
       details: {
-        title: "Portal to Darkwoods (East of Redwake)",
+        title: "Portal to Darkwood (East of Redwake)",
         coordinates: { x: 3767, y: 3238 },
         image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Portal to Darkwoods (East of Redwake) is coming soon.",
+        lore: "More information about Portal to Darkwood (East of Redwake) is coming soon.",
         npcs: [],
         links: [],
       },
@@ -1845,12 +1845,12 @@ export const mapMarkers = {
 
     /* Mainland Docks */
 
-    // Darkwoods Docks
+    // Darkwood Docks
     {
       type: "dock",
       tooltip: "Josody Dock",
       region: "Mainland",
-      place: "Darkwoods",
+      place: "Darkwood",
       details: {
         title: "Josody Dock",
         coordinates: { x: 1405, y: 2517 },
@@ -1864,7 +1864,7 @@ export const mapMarkers = {
       type: "dock",
       tooltip: "Redwake Dock",
       region: "Mainland",
-      place: "Darkwoods",
+      place: "Darkwood",
       details: {
         title: "Redwake Dock",
         coordinates: { x: 403, y: 2866 },
@@ -1878,7 +1878,7 @@ export const mapMarkers = {
       type: "dock",
       tooltip: "Dragoon Dock",
       region: "Mainland",
-      place: "Darkwoods",
+      place: "Darkwood",
       details: {
         title: "Dragoon Dock",
         coordinates: { x: 402, y: 3220 },
@@ -1892,7 +1892,7 @@ export const mapMarkers = {
       type: "dock",
       tooltip: "Whisperdale Dock",
       region: "Mainland",
-      place: "Darkwoods",
+      place: "Darkwood",
       details: {
         title: "Whisperdale Dock",
         coordinates: { x: 342, y: 3490 },
@@ -1906,7 +1906,7 @@ export const mapMarkers = {
       type: "dock",
       tooltip: "Darkfell Dock",
       region: "Mainland",
-      place: "Darkwoods",
+      place: "Darkwood",
       details: {
         title: "Darkfell Dock",
         coordinates: { x: 911, y: 3120 },
@@ -1920,7 +1920,7 @@ export const mapMarkers = {
       type: "dock",
       tooltip: "Dunmarrow Dock",
       region: "Mainland",
-      place: "Darkwoods",
+      place: "Darkwood",
       details: {
         title: "Dunmarrow Dock",
         coordinates: { x: 1363, y: 3246 },
@@ -2714,7 +2714,7 @@ export const mapMarkers = {
       type: "information",
       tooltip: "The Utopia Shard",
       region: "Mainland",
-      place: "Darkwoods",
+      place: "Darkwood",
       details: {
         title: "The Utopia Shard",
         coordinates: { x: 1192, y: 2903 },
@@ -2769,12 +2769,12 @@ export const mapMarkers = {
     // Region: Krythan Town Stewards
 
     // Mainland Town Stewards
-    // Region: Darkwoods Town Stewards
+    // Region: Darkwood Town Stewards
 
     {
       type: "town_steward",
       tooltip: "Town Steward (Whisperdale)",
-      region: "Darkwoods",
+      region: "Darkwood",
       place: "Whisperdale",
       details: {
         title: "Town Steward (Whisperdale)",
@@ -2828,7 +2828,7 @@ export const mapMarkers = {
     // Region: Krythan Guards
 
     // Mainland Guards
-    // Region: Darkwoods Guards
+    // Region: Darkwood Guards
 
     // Region: Highlands Guards
     // City: Parian Guards
@@ -2889,7 +2889,7 @@ export const mapMarkers = {
     // Region: Krythan Games of Chance
 
     // Mainland Games of Chance
-    // Region: Darkwoods Games of Chance
+    // Region: Darkwood Games of Chance
 
     // Region: Battle Plains Games of Chance
 
@@ -2989,7 +2989,7 @@ export const mapMarkers = {
     // Region: Krythan Events
 
     // Mainland Events
-    // Darkwoods Events
+    // Darkwood Events
 
     // Highlands Events
     // City: Parian Events
@@ -3228,7 +3228,7 @@ export const mapMarkers = {
 
     //Mainland Banks
 
-    // Region: Darkwoods Banks
+    // Region: Darkwood Banks
 
     // Region: Battle Plains Banks
 
@@ -3624,7 +3624,7 @@ export const mapMarkers = {
 
     // Mainlands Trainers
 
-    // Region: Darkwoods Trainers
+    // Region: Darkwood Trainers
 
     // Region: Battle Plains Trainers
 
@@ -4202,7 +4202,7 @@ export const mapMarkers = {
 
     // Mainland Shops
 
-    // Region: Darkwoods Shops
+    // Region: Darkwood Shops
 
     // Region: Battle Plains Shops
 
@@ -5143,6 +5143,20 @@ export const mapMarkers = {
     // Region: Highlands Spawns
 
     // Region: Western Isles Spawns
+    {
+      type: "spawn_evil",
+      tooltip: "Evil Spawn Gate",
+      region: "Krythan",
+      place: "Eastern Highlands",
+      details: {
+        title: "Evil Spawn Gate",
+        coordinates: { x: 3798, y: 2646 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Evil Spawn Gate is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // Island: Scarab Island Spawns
     {
@@ -5644,12 +5658,12 @@ export const mapMarkers = {
 
     /* Mainland Undergrounds */
 
-    // Region: Darkwoods Undergrounds
+    // Region: Darkwood Undergrounds
     {
       type: "underground_spider",
       tooltip: "Shadow Spider Cave",
       region: "Mainland",
-      place: "Darkwoods",
+      place: "Darkwood",
       details: {
         title: "Shadow Spider Cave",
         coordinates: { x: 1462, y: 2674 },
@@ -5663,7 +5677,7 @@ export const mapMarkers = {
       type: "underground_cave",
       tooltip: "Swamp Beast Cave",
       region: "Mainland",
-      place: "Darkwoods",
+      place: "Darkwood",
       details: {
         title: "Swamp Beast Cave",
         coordinates: { x: 1653, y: 2677 },
@@ -5677,7 +5691,7 @@ export const mapMarkers = {
       type: "underground_cave",
       tooltip: "Swamp Beast Cave",
       region: "Mainland",
-      place: "Darkwoods",
+      place: "Darkwood",
       details: {
         title: "Swamp Beast Cave",
         coordinates: { x: 1571, y: 2656 },
@@ -5691,7 +5705,7 @@ export const mapMarkers = {
       type: "underground_scorpion",
       tooltip: "Scorpion Pit",
       region: "Mainland",
-      place: "Darkwoods",
+      place: "Darkwood",
       details: {
         title: "Scorpion Pit",
         coordinates: { x: 836, y: 3268 },
@@ -5705,7 +5719,7 @@ export const mapMarkers = {
       type: "underground_termigon",
       tooltip: "Termigon Pit",
       region: "Mainland",
-      place: "Darkwoods",
+      place: "Darkwood",
       details: {
         title: "Termigon Pit",
         coordinates: { x: 758, y: 3321 },
@@ -5719,7 +5733,7 @@ export const mapMarkers = {
       type: "underground_mine",
       tooltip: "South Astari Rune Shelter",
       region: "Mainland",
-      place: "Darkwoods",
+      place: "Darkwood",
       details: {
         title: "South Astari Rune Shelter",
         coordinates: { x: 798, y: 3334 },
@@ -5733,7 +5747,7 @@ export const mapMarkers = {
       type: "underground_snake",
       tooltip: "Whisperdale Snake Pit",
       region: "Mainland",
-      place: "Darkwoods",
+      place: "Darkwood",
       details: {
         title: "Whisperdale Snake Pit",
         coordinates: { x: 472, y: 3430 },
@@ -5747,7 +5761,7 @@ export const mapMarkers = {
       type: "underground_ant",
       tooltip: "Dunmarrow Fire Ant Pit",
       region: "Mainland",
-      place: "Darkwoods",
+      place: "Darkwood",
       details: {
         title: "Dunmarrow Fire Ant Pit",
         coordinates: { x: 1270, y: 3030 },
@@ -5761,7 +5775,7 @@ export const mapMarkers = {
       type: "underground_crypt",
       tooltip: "McKelsky Crypt",
       region: "Mainland",
-      place: "Darkwoods",
+      place: "Darkwood",
       details: {
         title: "McKelsky Crypt",
         coordinates: { x: 1429, y: 3044 },
@@ -5775,7 +5789,7 @@ export const mapMarkers = {
       type: "underground_dungeon",
       tooltip: "Marsh Dungeon",
       region: "Mainland",
-      place: "Darkwoods",
+      place: "Darkwood",
       details: {
         title: "Marsh Dungeon",
         coordinates: { x: 481, y: 3505 },
@@ -5789,7 +5803,7 @@ export const mapMarkers = {
       type: "underground_dungeon",
       tooltip: "Cathedral of Joyous Afterlife (North Entrance)",
       region: "Mainland",
-      place: "Darkwoods",
+      place: "Darkwood",
       details: {
         title: "Cathedral of Joyous Afterlife (North Entrance)",
         coordinates: { x: 632, y: 3186 },
@@ -5803,7 +5817,7 @@ export const mapMarkers = {
       type: "underground_dungeon",
       tooltip: "Cathedral of Joyous Afterlife (South Entrance)",
       region: "Mainland",
-      place: "Darkwoods",
+      place: "Darkwood",
       details: {
         title: "Cathedral of Joyous Afterlife (South Entrance)",
         coordinates: { x: 679, y: 3318 },
@@ -5829,6 +5843,64 @@ export const mapMarkers = {
         links: [],
       },
     }, 
+    {
+      type: "underground_cave",
+      tooltip: "Zanock's Mine (East)", // This was the former Astari Cave, which has since moved south.
+      region: "Mainland",
+      place: "Highlands",
+      details: {
+        title: "Zanock's Mine (East)",
+        coordinates: { x: 3097, y: 2391 },
+        image: "images/placeholders/Zanock_Mine_East.png",
+        lore: "More information about Zanock's Mine (East) is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    // Region: Valley of Giants Underground
+    {
+      type: "underground_dungeon",
+      tooltip: "Arllandah's Lair", // This was the former Astari Cave, which has since moved south.
+      region: "Mainland",
+      place: "Highlands",
+      details: {
+        title: "Arllandah's Lair",
+        coordinates: { x: 3204, y: 2627 },
+        image: "images/placeholders/Arllandah_Lair.png",
+        lore: "More information about Arllandah's Lair is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    }, 
+    // City: Darushk Undergrounds
+    {
+      type: "underground_mine",
+      tooltip: "Darushk Entrance",
+      region: "Mainland",
+      place: "Highlands",
+      details: {
+        title: "Darushk Entrance",
+        coordinates: { x: 3745, y: 2711 },
+        image: "images/placeholders/Darushk_Entrance.png",
+        lore: "More information about Darushk Entrance is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "underground_mine",
+      tooltip: "Darushk Mine",
+      region: "Mainland",
+      place: "Highlands",
+      details: {
+        title: "Darushk Mine",
+        coordinates: { x: 3601, y: 2773 },
+        image: "images/placeholders/Darushk_Mine.png",
+        lore: "More information about Darushk Mine is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
     // City: Parian Undergrounds
     {
       type: "underground_ladder",
@@ -5858,6 +5930,8 @@ export const mapMarkers = {
         links: [],
       },
     },
+
+    // City: Arda Undergrounds
 
     // City: Grell Undergrounds
     {
@@ -5910,15 +5984,45 @@ export const mapMarkers = {
       details: {
         title: "Vel Dran Cave",
         coordinates: { x: 3286, y: 3299 },
-        image: "images/placeholders/image_coming_soon.png",
+        image: "images/placeholders/Vel_Dran_Cave.png",
         lore: "More information about Vel Dran Cave is coming soon.",
         npcs: [],
         links: [],
       },
     },
 
+    // City: Ethera Palace
+    {
+      type: "underground_mine",
+      tooltip: "Ethera Mine",
+      region: "Mainland",
+      place: "Highlands",
+      details: {
+        title: "Ethera Mine",
+        coordinates: { x: 3623, y: 3596 },
+        image: "images/placeholders/Ethera_Mine.png",
+        lore: "More information about Ethera Mine is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "underground_mine",
+      tooltip: "Ethera Mine",
+      region: "Mainland",
+      place: "Highlands",
+      details: {
+        title: "Ethera Mine",
+        coordinates: { x: 3655, y: 3620 },
+        image: "images/placeholders/Ethera_Mine_Second.png",
+        lore: "More information about Ethera Mine is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
 
-    // Region: Darkwoods Undergrounds
+
+    // Region: Darkwood Undergrounds
     // Necropolis Undergrounds
     {
       type: "underground_stairs",
@@ -6024,6 +6128,22 @@ export const mapMarkers = {
       },
     },
     {
+      type: "underground_cave",
+      tooltip: "Fungoid Cave",
+      region: "Mainland",
+      place: "Battle Plains",
+      details: {
+        title: "Fungiod Cave",
+        coordinates: { x: 1960, y: 3762 },
+        image: "images/placeholders/Fungiod_Cave.png",
+        lore: "More information about Fungiod Cave is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // Region: Black Swamp Undergrounds
+    {
       type: "underground_snake",
       tooltip: "Krog Snake Pit",
       region: "Mainland",
@@ -6037,8 +6157,6 @@ export const mapMarkers = {
         links: [],
       },
     },
-
-    // Region: Black Swamp Undergrounds
     {
       type: "underground_sewer",
       tooltip: "Krog Sewer",
@@ -6140,7 +6258,53 @@ export const mapMarkers = {
 
     // Region: Highlands Undergrounds
 
+   
+
     // Region: Western Isles Undergrounds
+
+     // Island: Hell Undergrounds
+    {
+      type: "underground_dungeon",
+      tooltip: "Lotorian Dungeon",
+      region: "Western Isles",
+      place: "Hell",
+      details: {
+        title: "Lotorian Dungeon",
+        coordinates: { x: 1207, y: 3347 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Lotorian Dungeon is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "underground_cave",
+      tooltip: "The Den of Baylor",
+      region: "Western Isles",
+      place: "Hell",
+      details: {
+        title: "The Den of Baylor",
+        coordinates: { x: 1125, y: 3392 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about The Den of Baylor is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "underground_cave",
+      tooltip: "Horned One Cave",
+      region: "Western Isles",
+      place: "Hell",
+      details: {
+        title: "Horned One Cave",
+        coordinates: { x: 1306, y: 3384 },
+        image: "images/placeholders/image_coming_soon.png",
+        lore: "More information about Horned One Cave is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // Island: Lotor's Summer Palace Undergrounds
     {
@@ -6212,6 +6376,20 @@ export const mapMarkers = {
         coordinates: { x: 3272, y: 1632 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Syldural is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "underground_cave",
+      tooltip: "Zanock's Mine (West)",
+      region: "Mainland",
+      place: "Heartwood Coast",
+      details: {
+        title: "Zanock's Mine (West)",
+        coordinates: { x: 2871, y: 2359 },
+        image: "images/placeholders/Zanock_Mine_West.png",
+        lore: "More information about Zanock's Mine (West) is coming soon.",
         npcs: [],
         links: [],
       },
@@ -6401,51 +6579,9 @@ export const mapMarkers = {
       },
     },
 
-    // Island: Hell Undergrounds
-    {
-      type: "underground_dungeon",
-      tooltip: "Lotorian Dungeon",
-      region: "Western Isles",
-      place: "Hell",
-      details: {
-        title: "Lotorian Dungeon",
-        coordinates: { x: 1207, y: 3347 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Lotorian Dungeon is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "underground_cave",
-      tooltip: "The Den of Baylor",
-      region: "Western Isles",
-      place: "Hell",
-      details: {
-        title: "The Den of Baylor",
-        coordinates: { x: 1125, y: 3392 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about The Den of Baylor is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "underground_cave",
-      tooltip: "Horned One Cave",
-      region: "Western Isles",
-      place: "Hell",
-      details: {
-        title: "Horned One Cave",
-        coordinates: { x: 1306, y: 3384 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Horned One Cave is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
+    
 
-    // Region: Sands of Creation Region
+    // Region: Sands of Creation Underground
     // City: Ruhura Side Undergrounds
     {
       type: "underground_cave",
@@ -6462,7 +6598,7 @@ export const mapMarkers = {
       },
     },
     {
-      type: "underground_stairs",
+      type: "underground_ladder",
       tooltip: "Artonian Pass to Ruhura Side",
       region: "Sands of Creation",
       place: "Ruhura",
@@ -6476,7 +6612,7 @@ export const mapMarkers = {
       },
     },
     {
-      type: "underground_stairs",
+      type: "underground_ladder",
       tooltip: "Artonian Pass to Greater Dragon Island",
       region: "Sands of Creation",
       place: "Ruhura",
@@ -6550,7 +6686,7 @@ export const mapMarkers = {
       },
     },
 
-    // Region: Breakwater Region Undergrounds
+    // Region: Breakwater Undergrounds
     // City: New Town Island Undergrounds
     {
       type: "underground_crypt",
@@ -6655,7 +6791,7 @@ export const mapMarkers = {
 
     // City: New Royale Island Undergrounds
 
-    // Region: Broken Finger Region Undergrounds
+    // Region: Broken Finger Undergrounds
     {
       type: "underground_dungeon",
       tooltip: "Broken Finger Dungeon",
@@ -6663,7 +6799,7 @@ export const mapMarkers = {
       place: "Broken Finger",
       details: {
         title: "Broken Finger Dungeon",
-        coordinates: { x: 1144, y: 3658 },
+        coordinates: { x: 1143, y: 3658 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Broken Finger Dungeon is coming soon.",
         npcs: [],

@@ -1,21 +1,11 @@
-# IDE and editor directories
+.aiexclude
+ai-prompt.md
+.ai-prompt.md
 .vscode/
 .idea/
-
-# OS-generated files
 .DS_Store
 Thumbs.db
-
-# Project-specific ignores
-# =========================
-
-# Ignore migration and troubleshooting logs
 MIGRATION_GUIDE.md
 filter-troubleshooting.md
-
-# Ignore archived tile sets
 archive-tiles/*/
 
-# Ignore AI-related files
-.aiexclude
-.ai-prompt.md
