@@ -3779,6 +3779,20 @@ export const mapMarkers = {
     },
     {
       type: "trainer",
+      tooltip: "Warrior Apprentice (Wanders)",
+      region: "Valinor",
+      place: "Valinor",
+      details: {
+        title: "Warrior Apprentice",
+        coordinates: { x: 765, y: 116 },
+        image: "images/placeholders/Warrior_Apprentice.png",
+        lore: "More information about Warrior Apprentice is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "trainer",
       tooltip: "Leadership Trainers",
       region: "Valinor",
       place: "Valinor",
