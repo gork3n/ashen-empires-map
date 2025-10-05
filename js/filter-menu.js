@@ -202,7 +202,7 @@ function createMarkerToggleButtons() {
     const markerCategories = [
         { id: 'portals', name: 'Portals', type: 'portal_lsp' },
         { id: 'shops', name: 'Shops', type: 'shop_generic' },
-        { id: 'services_npcs', name: 'Other Services & NPCs', type: 'services_npcs' },
+        { id: 'services_npcs', name: 'Other Services & NPCs' }, // Removed type to hide header icon
         { id: 'spawns', name: 'Spawns', type: 'spawn_good' },
         { id: 'undergrounds', name: 'Undergrounds', type: 'underground_cave' },
         
@@ -221,22 +221,21 @@ function createMarkerToggleButtons() {
 
         // Use the same canvas-based icon creation as the subtypes for consistency and correctness.
         // CRITICAL: If the representative type for a category doesn't have a style, we can't create an icon.
-        if (!markerStyles[category.type]) {
-            console.error(`[Filter Menu] ❌ FAILED to create main button for category '${category.id}'. The type '${category.type}' is missing from markerStyles in markers.js.`);
-            mainButton.disabled = true;
-            mainButton.classList.replace('active', 'inactive');
-            // Continue to next category
+        if (category.type && markerStyles[category.type]) {
+            console.log(`[Filter Menu] -> Creating main button icon for type: '${category.type}'`);
+            const mainIcon = createUIMarkerIcon(category.type);
+            mainIcon.className = 'toggle-btn-icon-canvas';
+            mainButton.appendChild(mainIcon);
         } else {
-        console.log(`[Filter Menu] -> Creating main button icon for type: '${category.type}'`);
-        const mainIcon = createUIMarkerIcon(category.type);
-        mainIcon.className = 'toggle-btn-icon-canvas';
-        mainButton.appendChild(mainIcon);
+            if (category.type) { // Only log an error if a type was specified but not found
+                console.error(`[Filter Menu] ❌ FAILED to create main button for category '${category.id}'. The type '${category.type}' is missing from markerStyles in markers.js.`);
+            }
+        }
 
         // Text for the master button
         const mainText = document.createElement('span');
         mainText.textContent = category.name;
         mainButton.appendChild(mainText);
-        }
 
         // Disable if the category is empty
         const isCategoryEmpty = !mapMarkers[category.id] || mapMarkers[category.id].length === 0;
@@ -266,6 +265,32 @@ function createMarkerToggleButtons() {
         const subtypes = [...new Set(categoryData?.map(marker => marker.type) || [])];
         console.log(`[Filter Menu] -> Found ${subtypes.length} unique subtypes for '${category.id}':`, subtypes);
 
+        // Custom sort to order buttons logically
+        if (category.id === 'services_npcs') {
+            const sortOrder = [
+                'dock',
+                'altar',
+                'inn_keeper',
+                'town_guardian',
+                'town_wizard_of_insight',
+                'event_judge',
+                'event_ticket',
+                'game_of_chance',
+                'quest',
+                'obelisk',
+                'town_steward'
+            ];
+            subtypes.sort((a, b) => {
+                const indexA = sortOrder.indexOf(a);
+                const indexB = sortOrder.indexOf(b);
+                if (indexA !== -1 && indexB !== -1) return indexA - indexB; // Both in sort list
+                if (indexA !== -1) return -1; // a is in list, b is not
+                if (indexB !== -1) return 1;  // b is in list, a is not
+                return a.localeCompare(b); // Alphabetical for the rest
+            });
+        }
+
+
         // --- 3. Create individual sub-type toggle buttons ---
         subtypes.forEach(subtype => {
             console.log(`[Filter Menu]   -> Processing subtype: '${subtype}'`);
@@ -292,12 +317,15 @@ function createMarkerToggleButtons() {
             // e.g., 'underground_cave' -> 'Cave'
             let subtypeName = subtype.replace(/^(shop|portal|underground|town)_/, ''); // Remove common prefixes
             subtypeName = subtypeName.replace(/_/g, ' '); // Replace underscores with spaces
+            if (subtype.toLowerCase() === 'town_wizard_of_insight') {
+                subtypeName = 'Town Wizard of Insight';
+            }
             
             // Special case for 'lsp'
             if (subtypeName.toLowerCase() === 'lsp') {
                 subtypeName = 'LSP';
             }
-            if (subtype.toLowerCase() === 'town_guard') {
+            if (subtype.toLowerCase() === 'town_guardian') {
                 subtypeName = 'Town Guardian';
             }
 

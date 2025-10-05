@@ -34,7 +34,11 @@ export const markerStyles = {
   // Quests
   quest: {
     icon: "icons/scroll-unfurled.svg",
-    color: "#FFD700", // Gold
+    color: "#ccae03ff", // Goldend Ochre
+  },
+  dynamic_quests: {
+    icon: "icons/jeweled-chalice.svg",
+    color: "#ccae03ff", // Goldend Ochre
   },
 
   // Shops
@@ -83,7 +87,7 @@ export const markerStyles = {
     color: "#32CD32", // LimeGreen
   },
   shop_magic: {
-    icon: "icons/wizard-staff.svg",
+    icon: "icons/potion-ball.svg",
     color: "#32CD32", // LimeGreen
   },
   shop_runecrafting: {
@@ -109,11 +113,19 @@ export const markerStyles = {
 
   // Services and NPCs
   services_npcs: {
+    icon: "icons/info.svg",
+    color: "#4682B4", // SteelBlue
+  },
+  town_guardian: {
     icon: "icons/guards.svg",
     color: "#4682B4", // SteelBlue
   },
   inn_keeper: {
     icon: "icons/candle-holder.svg",
+    color: "#5ba8e7ff", // Light SteelBlue
+  },
+  town_wizard_of_insight: {
+    icon: "icons/wizard-staff.svg",
     color: "#4682B4", // SteelBlue
   },
 
@@ -122,14 +134,13 @@ export const markerStyles = {
     icon: "icons/white-book.svg",
     color: "#FF8C00", // DarkOrange
   },
+
+  // Town Stewards
   town_steward: {
     icon: "icons/elf-helmet.svg",
     color: "#4169E1", // RoyalBlue
   },
-  town_guard: {
-    icon: "icons/guards.svg",
-    color: "#c9b128ff", // GoldenRod
-  },
+  
 
   // Spawns
   spawn_good: {
@@ -217,7 +228,7 @@ export const markerStyles = {
     icon: "icons/perspective-dice-six-faces.svg",
     color: "#32CD32", // LimeGreen
   },
-  information: {
+  information_npc: {
     icon: "icons/info.svg",
     color: "#00BFFF", // DeepSkyBlue,
   },
@@ -1177,6 +1188,34 @@ export const mapMarkers = {
     // Region: Valinor Quests
     {
       type: "quest",
+      tooltip: "Lord Trembley",
+      region: "Valinor",
+      place: "Valinor",
+      details: {
+        title: "Lord Trembley",
+        coordinates: { x: 759, y: 74 },
+        image: "images/placeholders/Lord_Trembley_Quest.png",
+        lore: "More information about Lord Trembley is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "quest",
+      tooltip: "Duke Randolf",
+      region: "Valinor",
+      place: "Valinor",
+      details: {
+        title: "Duke Randolf",
+        coordinates: { x: 750, y: 76 },
+        image: "images/placeholders/Duke_Randolf_Quest.png",
+        lore: "More information about Duke Randolfis coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "quest",
       tooltip: "Sandre (Wanders)",
       region: "Valinor",
       place: "Valinor",
@@ -1230,7 +1269,7 @@ export const mapMarkers = {
         npcs: [],
         links: [],
       },
-    },
+    },    
     {
       type: "quest",
       tooltip: "Imica (Wanders)",
@@ -1451,6 +1490,147 @@ export const mapMarkers = {
         coordinates: { x: 646, y: 187 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Paula Duncan is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    // City: Valinor Dynamic Quests
+    {
+      type: "dynamic_quests",
+      tooltip: "Thurstan (Wanders)",
+      region: "Valinor",
+      place: "Valinor",
+      details: {
+        title: "Thurstan (Dynamic Quest)",
+        coordinates: { x: 722, y: 91 },
+        image: "images/placeholders/Thurstan_Dynamic_Quest.png",
+        lore: "More information about Thurstan (Wanders) is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "dynamic_quests",
+      tooltip: "Philipus (Wanders)",
+      region: "Valinor",
+      place: "Valinor",
+      details: {
+        title: "Philipus (Dynamic Quest)",
+        coordinates: { x: 746, y: 101 },
+        image: "images/placeholders/Philipus_Dynamic_Quest.png",
+        lore: "More information about Philipus (Wanders) is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "dynamic_quests",
+      tooltip: "Alard (Wanders)",
+      region: "Valinor",
+      place: "Valinor",
+      details: {
+        title: "Alard (Dynamic Quest)",
+        coordinates: { x: 737, y: 104 },
+        image: "images/placeholders/Alard_Dynamic_Quest.png",
+        lore: "More information about Alard (Wanders) is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "dynamic_quests",
+      tooltip: "Basilus (Wanders)",
+      region: "Valinor",
+      place: "Valinor",
+      details: {
+        title: "Basilus (Dynamic Quest)",
+        coordinates: { x: 749, y: 142 },
+        image: "images/placeholders/Basilus_Dynamic_Quest.png",
+        lore: "More information about Basilus (Wanders) is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "dynamic_quests",
+      tooltip: "Ailward (Wanders)",
+      region: "Valinor",
+      place: "Valinor",
+      details: {
+        title: "Ailward (Dynamic Quest)",
+        coordinates: { x: 735, y: 131 },
+        image: "images/placeholders/Ailward_Dynamic_Quest.png",
+        lore: "More information about Ailward (Wanders) is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "dynamic_quests",
+      tooltip: "Sperling (Wanders)",
+      region: "Valinor",
+      place: "Valinor",
+      details: {
+        title: "Sperling (Dynamic Quest)",
+        coordinates: { x: 748, y: 133 },
+        image: "images/placeholders/Sperling_Dynamic_Quest.png",
+        lore: "More information about Sperling (Wanders) is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "dynamic_quests",
+      tooltip: "Wimund (Wanders)",
+      region: "Valinor",
+      place: "Valinor",
+      details: {
+        title: "Wimund (Dynamic Quest)",
+        coordinates: { x: 731, y: 147 },
+        image: "images/placeholders/Wimund_Dynamic_Quest.png",
+        lore: "More information about Wimund (Wanders) is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "dynamic_quests",
+      tooltip: "Seman (Wanders)",
+      region: "Valinor",
+      place: "Valinor",
+      details: {
+        title: "Seman (Dynamic Quest)",
+        coordinates: { x: 781, y: 101 },
+        image: "images/placeholders/Seman_Dynamic_Quest.png",
+        lore: "More information about Seman (Wanders) is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "dynamic_quests",
+      tooltip: "Wymare (Wanders)",
+      region: "Valinor",
+      place: "Valinor",
+      details: {
+        title: "Wymare (Dynamic Quest)",
+        coordinates: { x: 723, y: 158 },
+        image: "images/placeholders/Wymare_Dynamic_Quest.png",
+        lore: "More information about Wymare (Wanders) is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "dynamic_quests",
+      tooltip: "Byota (Wanders)",
+      region: "Valinor",
+      place: "Valinor",
+      details: {
+        title: "Byota (Dynamic Quest)",
+        coordinates: { x: 769, y: 92 },
+        image: "images/placeholders/Byota_Dynamic_Quest.png",
+        lore: "More information about Byota (Wanders) is coming soon.",
         npcs: [],
         links: [],
       },
@@ -2614,11 +2794,27 @@ export const mapMarkers = {
 
 
     // Sub-Category Information
-    /* Valinor Island Information */
+    // Valinor Island Information
+    // Region: Valinor
+    // City: Valinor
+    {
+      type: "information_npc",
+      tooltip: "Sage Haritod",
+      region: "Valinor",
+      place: "Valinor",
+      details: {
+        title: "Sage Haritod",
+        coordinates: { x: 757, y: 99 },
+        image: "images/npcs/Sage_Haritod_Information.png",
+        lore: "More information about Sage Haritod is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
 
     /*Lotor's Summer Palace Information*/
     {
-      type: "information",
+      type: "information_npc",
       tooltip: "Fallen Warriors Memorial",
       region: "Western Isles",
       place: "Lotor's Summer Palace",
@@ -2632,7 +2828,7 @@ export const mapMarkers = {
       },
     },
     {
-      type: "information",
+      type: "information_npc",
       tooltip: "Memorial to the Lost Sons",
       region: "Western Isles",
       place: "Lotor's Summer Palace",
@@ -2645,7 +2841,7 @@ export const mapMarkers = {
         links: [],
       },
     },{
-      type: "information",
+      type: "information_npc",
       tooltip: "Brain Smith Memorial",
       region: "Western Isles",
       place: "Lotor's Summer Palace",
@@ -2659,7 +2855,7 @@ export const mapMarkers = {
       },
     },
     {
-      type: "information",
+      type: "information_npc",
       tooltip: "Jamoal the Sage (Wanders)",
       region: "Western Isles",
       place: "Lotor's Summer Palace",
@@ -2673,7 +2869,7 @@ export const mapMarkers = {
       },
     },
     {
-      type: "information",
+      type: "information_npc",
       tooltip: "PvP Island Information",
       region: "Western Isles",
       place: "Lotor's Summer Palace",
@@ -2693,7 +2889,7 @@ export const mapMarkers = {
     // Region: Krythan Information
     // City: Verthpool Information
     {
-      type: "information",
+      type: "information_npc",
       tooltip: "Grim Demonhunter",
       region: "Krythan",
       place: "Vrethpool",
@@ -2711,7 +2907,7 @@ export const mapMarkers = {
 
     // Region: Darkwood Information
     {
-      type: "information",
+      type: "information_npc",
       tooltip: "The Utopia Shard",
       region: "Mainland",
       place: "Darkwood",
@@ -2833,7 +3029,7 @@ export const mapMarkers = {
     // Region: Highlands Guards
     // City: Parian Guards
     {
-      type: "town_guard",
+      type: "town_guardian",
       tooltip: "Town Guardian (Parian)",
       region: "Valinor",
       place: "Valinor",
@@ -2865,6 +3061,40 @@ export const mapMarkers = {
     // Region: Breakwater Region Guards
 
     // Region: Broken Finger Region Guards
+
+    // Sub-Category Town Wizard of Insight
+    // Island: Krythan Island Town Wizard of Insight
+    // Region: Silvest Valley Town Wizard of Insight
+    
+    // Region: Krythan Town Wizard of Insight
+
+    // Region: Darkwood Town Wizard of Insight
+
+    // Region: Battle Plains Town Wizard of Insight
+
+    // Region: Highlands Town Wizard of Insight
+    // City: Parian Town Wizard of Insight
+
+    // City: Arda Town Wizard of Insight
+
+    // City: Grell Town Wizard of Insight - Grell information will be in the underground marker file
+
+    // City: Ethera Palace Town Wizard of Insight
+    {
+      type: "town_wizard_of_insight",
+      tooltip: "Town Wizard of Insight (Ethera Palace)",
+      region: "Highlands",
+      place: "Ethera Palace",
+      details: {
+        title: "Town Wizard of Insight",
+        coordinates: { x: 3542, y: 3695 },
+        image: "images/npcs/Town_Wizard_of_Insight.png",
+        lore: "More information about Town Wizard of Insight is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+
 
     // Sub-Category Game of Chance
     // Island: Lotor's Summer Palace Game of Chance
@@ -3325,28 +3555,224 @@ export const mapMarkers = {
 
     {
       type: "trainer",
-      tooltip: "Tradeskill Trainers",
+      tooltip: "Cooking Trainers",
       region: "Valinor",
       place: "Valinor",
       details: {
-        title: "Tradeskill Trainers",
-        coordinates: { x: 754, y: 111 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Tradeskill Trainers is coming soon.",
+        title: "Cooking Trainers",
+        coordinates: { x: 752, y: 103 },
+        image: "images/placeholders/Cooking_Trainer.png",
+        lore: "More information about Cooking Trainers is coming soon.",
         npcs: [],
         links: [],
       },
     },
     {
       type: "trainer",
-      tooltip: "Weapon Trainers",
+      tooltip: "Visdel",
       region: "Valinor",
       place: "Valinor",
       details: {
-        title: "Weapon Trainers",
-        coordinates: { x: 763, y: 111 },
-        image: "images/placeholders/image_coming_soon.png",
-        lore: "More information about Weapon Trainers is coming soon.",
+        title: "Visdel",
+        coordinates: { x: 752, y: 105 },
+        image: "images/placeholders/Visdel_Trainer.png",
+        lore: "More information about Visdel is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "trainer",
+      tooltip: "Leatherworking Trainer",
+      region: "Valinor",
+      place: "Valinor",
+      details: {
+        title: "Leatherworking Trainer",
+        coordinates: { x: 752, y: 107 },
+        image: "images/placeholders/Leatherworking_Trainer.png",
+        lore: "More information about Leatherworking Trainer is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "trainer",
+      tooltip: "Dalembert",
+      region: "Valinor",
+      place: "Valinor",
+      details: {
+        title: "Dalembert",
+        coordinates: { x: 752, y: 109 },
+        image: "images/placeholders/Dalembert_Trainer.png",
+        lore: "More information about Dalembert Trainer is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "trainer",
+      tooltip: "Blacksmith Trainer",
+      region: "Valinor",
+      place: "Valinor",
+      details: {
+        title: "Blacksmith Trainer",
+        coordinates: { x: 752, y: 111 },
+        image: "images/placeholders/Blacksmith_Trainer.png",
+        lore: "More information about Blacksmith Trainer is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "trainer",
+      tooltip: "Zach",
+      region: "Valinor",
+      place: "Valinor",
+      details: {
+        title: "Zach Trainer",
+        coordinates: { x: 752, y: 113 },
+        image: "images/placeholders/Zach_Trainer.png",
+        lore: "More information about Zach Trainer is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "trainer",
+      tooltip: "Carpentry Trainer",
+      region: "Valinor",
+      place: "Valinor",
+      details: {
+        title: "Carpentry Trainer",
+        coordinates: { x: 752, y: 115 },
+        image: "images/placeholders/Carpentry_Trainer.png",
+        lore: "More information about Carpentry Trainer is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "trainer",
+      tooltip: "Aylesha",
+      region: "Valinor",
+      place: "Valinor",
+      details: {
+        title: "Aylesha Trainer",
+        coordinates: { x: 752, y: 117 },
+        image: "images/placeholders/Aylesha_Trainer.png",
+        lore: "More information about Aylesha Trainer is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "trainer",
+      tooltip: "Thrown Weapons Trainers",
+      region: "Valinor",
+      place: "Valinor",
+      details: {
+        title: "Thrown Weapons Trainers",
+        coordinates: { x: 765, y: 102 },
+        image: "images/placeholders/Thrown_Weapons_Trainer.png",
+        lore: "More information about Thrown Weapons Trainers is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "trainer",
+      tooltip: "Large Blades Trainer",
+      region: "Valinor",
+      place: "Valinor",
+      details: {
+        title: "Large Blades Trainer",
+        coordinates: { x: 765, y: 104 },
+        image: "images/placeholders/Large_Blades_Trainer.png",
+        lore: "More information about Large Blades Trainer is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "trainer",
+      tooltip: "Small Blades Trainer",
+      region: "Valinor",
+      place: "Valinor",
+      details: {
+        title: "Small Blades Trainer",
+        coordinates: { x: 765, y: 106 },
+        image: "images/placeholders/Small_Blades_Trainer.png",
+        lore: "More information about Small Blades Trainer is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "trainer",
+      tooltip: "Archery Trainer",
+      region: "Valinor",
+      place: "Valinor",
+      details: {
+        title: "Archery Trainer",
+        coordinates: { x: 765, y: 108 },
+        image: "images/placeholders/Archery_Trainer.png",
+        lore: "More information about Archery Trainer is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "trainer",
+      tooltip: "Crossbow Trainer",
+      region: "Valinor",
+      place: "Valinor",
+      details: {
+        title: "Crossbow Trainer",
+        coordinates: { x: 765, y: 110 },
+        image: "images/placeholders/Crossbow_Trainer.png",
+        lore: "More information about Crossbow Trainer is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "trainer",
+      tooltip: "Axe Trainer",
+      region: "Valinor",
+      place: "Valinor",
+      details: {
+        title: "Axe Trainer",
+        coordinates: { x: 765, y: 112 },
+        image: "images/placeholders/Axe_Trainer.png",
+        lore: "More information about Axe Trainer is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "trainer",
+      tooltip: "Polearms Trainer",
+      region: "Valinor",
+      place: "Valinor",
+      details: {
+        title: "Polearms Trainer",
+        coordinates: { x: 765, y: 114 },
+        image: "images/placeholders/Polearms_Trainer.png",
+        lore: "More information about Polearms Trainer is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "trainer",
+      tooltip: "Blunt Weapon Trainer",
+      region: "Valinor",
+      place: "Valinor",
+      details: {
+        title: "Blunt Weapon Trainer",
+        coordinates: { x: 765, y: 116 },
+        image: "images/placeholders/Blunt_Weapon_Trainer.png",
+        lore: "More information about Blunt Weapon Trainer is coming soon.",
         npcs: [],
         links: [],
       },
@@ -3854,7 +4280,7 @@ export const mapMarkers = {
       place: "Valinor",
       details: {
         title: "Linus Houson's Carpentry Store",
-        coordinates: { x: 750, y: 150 },
+        coordinates: { x: 749, y: 149 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Linus Houson's Carpentry Store is coming soon.",
         npcs: [],
@@ -3868,7 +4294,7 @@ export const mapMarkers = {
       place: "Valinor",
       details: {
         title: "Kerry Thomas' Blacksmith Shop ",
-        coordinates: { x: 750, y: 151 },
+        coordinates: { x: 749, y: 150 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Kerry Thomas' Blacksmith Shop  is coming soon.",
         npcs: [],
@@ -3882,7 +4308,7 @@ export const mapMarkers = {
       place: "Valinor",
       details: {
         title: "Tina Florence's Leather Shop",
-        coordinates: { x: 750, y: 152 },
+        coordinates: { x: 749, y: 151 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Tina Florence's Leather Shop is coming soon.",
         npcs: [],
@@ -4652,6 +5078,20 @@ export const mapMarkers = {
     // This is on the Underground map.
 
     // City: Ethera Palace Shops
+    {
+      type: "shop_magic",
+      tooltip: "Janus Laruis' Magic Shop",
+      region: "Highlands",
+      place: "Arda",
+      details: {
+        title: "Janus Laruis' Magic Shop",
+        coordinates: { x: 3381, y: 3470 },
+        image: "images/npcs/Janus_Laruis_Magic_Shop.png",
+        lore: "More information about Janus Laruis' Magic Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // Region: Black Swamps Shops
     
@@ -5240,6 +5680,91 @@ export const mapMarkers = {
         links: [],
       },
     }, 
+    // City: Valinor
+    {
+      type: "underground_stairs",
+      tooltip: "Stairs to Valinor Basement (Top Left)",
+      region: "Valinor",
+      place: "Valinor",
+      details: {
+        title: "Stairs to Valinor Basement",
+        coordinates: { x: 752, y: 97 },
+        image: "images/placeholders/Valinor_Basement_Top_Left_Stairs.png",
+        lore: "More information about Stairs to Valinor Basement is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "underground_stairs",
+      tooltip: "Stairs to Valinor Basement (Top Right)",
+      region: "Valinor",
+      place: "Valinor",
+      details: {
+        title: "Stairs to Valinor Basement",
+        coordinates: { x: 764, y: 97 },
+        image: "images/placeholders/Valinor_Basement_Top_Right_Stairs.png",
+        lore: "More information about Stairs to Valinor Basement is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "underground_stairs",
+      tooltip: "Stairs to Valinor Basement (Bottom Left)",
+      region: "Valinor",
+      place: "Valinor",
+      details: {
+        title: "Stairs to Valinor Basement",
+        coordinates: { x: 751, y: 127 },
+        image: "images/placeholders/Valinor_Basement_Bottom_Right_Stairs.png",
+        lore: "More information about Stairs to Valinor Basement is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "underground_stairs",
+      tooltip: "Stairs to Valinor Basement (Bottom Right)",
+      region: "Valinor",
+      place: "Valinor",
+      details: {
+        title: "Stairs to Valinor Basement",
+        coordinates: { x: 765, y: 127 },
+        image: "images/placeholders/Valinor_Basement_Bottom_Left_Stairs.png",
+        lore: "More information about Stairs to Valinor Basement is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "underground_ladder",
+      tooltip: "Ladder to Valinor Basement (Left)",
+      region: "Valinor",
+      place: "Valinor",
+      details: {
+        title: "Ladder to Valinor Basement",
+        coordinates: { x: 749, y: 154 },
+        image: "images/placeholders/Valinor_Basement_Left_Ladder.png",
+        lore: "More information about Stairs to Ladder Basement is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "underground_ladder",
+      tooltip: "Ladder to Valinor Basement (Right)",
+      region: "Valinor",
+      place: "Valinor",
+      details: {
+        title: "Ladder to Valinor Basement",
+        coordinates: { x: 767, y: 154 },
+        image: "images/placeholders/Valinor_Basement_Right_Ladder.png",
+        lore: "More information about Stairs to Ladder Basement is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
     {
       type: "underground_stairs",
       tooltip: "Stairs to Mage Trainers",
@@ -5247,7 +5772,7 @@ export const mapMarkers = {
       place: "Valinor",
       details: {
         title: "Stairs to Mage Trainers",
-        coordinates: { x: 761, y: 116 },
+        coordinates: { x: 762, y: 117 },
         image: "images/placeholders/image_coming_soon.png",
         lore: "More information about Stairs to Mage Trainers is coming soon.",
         npcs: [],
