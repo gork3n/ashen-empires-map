@@ -240,8 +240,13 @@ input:checked + .slider:before {
     box-sizing: border-box;
     white-space: nowrap; /* Keep tooltip content on a single line */
     display: flex;
+    flex-direction: column; /* Stack text and info vertically by default for labels */
     align-items: center;
     color: #ffffff;
+}
+
+.marker-tooltip.flex-row {
+    flex-direction: row;
 }
 
 .tooltip-icon {
@@ -253,6 +258,19 @@ input:checked + .slider:before {
 
 .tooltip-text {
     flex: 1;
+    text-align: center; /* Center the main text */
+}
+
+.tooltip-info {
+    font-size: 0.9em;
+    color: #F5D76E; /* Gold color to match other UI elements */
+    margin-top: 4px;
+    text-align: center; /* Center the info text */
+    white-space: normal; /* Allow info text to wrap if needed */
+    /* Set a width to control wrapping for longer text */
+    min-width: 200px;
+    max-width: 300px;
+    line-height: 1.2;
 }
 
 /* Toggle Buttons */

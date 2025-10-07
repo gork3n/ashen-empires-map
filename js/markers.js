@@ -549,14 +549,14 @@ export const mapMarkers = {
     },
     {
       type: "portal_blue",
-      tooltip: "Portal to Darkwood North of Josody",
+      tooltip: "Portal to Darkwoods North of Josody",
       region: "Krythan",
       place: "Krythan Fields",
       details: {
-        title: "Portal to Darkwood North of Josody",
+        title: "Portal to Darkwoods North of Josody",
         coordinates: { x: 183, y: 1464 },
         image: "images/markers/image_coming_soon.png",
-        lore: "More information about Portal to Darkwood North of Josody is coming soon.",
+        lore: "More information about Portal to Darkwoods North of Josody is coming soon.",
         npcs: [],
         links: [],
       },
@@ -611,12 +611,12 @@ export const mapMarkers = {
 
     /* Mainland Portals */
 
-    // Darkwood Portals
+    // Darkwoods Portals
     {
       type: "portal_blue",
       tooltip: "Portal to Krythan Island (West of New Korelth)",
       region: "Mainland",
-      place: "Darkwood",
+      place: "Darkwoods",
       details: {
         title: "Portal to Krythan Island (West of New Korelth)",
         coordinates: { x: 1350, y: 2438 },
@@ -630,7 +630,7 @@ export const mapMarkers = {
       type: "portal_housing",
       tooltip: "Portal to House Realm",
       region: "Mainland",
-      place: "Darkwood",
+      place: "Darkwoods",
       details: {
         title: "Portal to House Realm",
         coordinates: { x: 1270, y: 2511 },
@@ -644,7 +644,7 @@ export const mapMarkers = {
       type: "portal_lsp",
       tooltip: "Portal to Lotor's Summer Palace",
       region: "Mainland",
-      place: "Darkwood",
+      place: "Darkwoods",
       details: {
         title: "Portal to Lotor's Summer Palace",
         coordinates: { x: 1253, y: 2517 },
@@ -658,7 +658,7 @@ export const mapMarkers = {
       type: "portal_blue",
       tooltip: "Portal to Highlands (Southeast of Parian)",
       region: "Mainland",
-      place: "Darkwood",
+      place: "Darkwoods",
       details: {
         title: "Portal to Highlands (Southeast of Parian)",
         coordinates: { x: 807, y: 2837 },
@@ -672,7 +672,7 @@ export const mapMarkers = {
       type: "portal_small",
       tooltip: "Portal to Mnemmon",
       region: "Mainland",
-      place: "Darkwood",
+      place: "Darkwoods",
       details: {
         title: "Portal to Mnemmon",
         coordinates: { x: 866, y: 3416 },
@@ -686,7 +686,7 @@ export const mapMarkers = {
       type: "portal_small",
       tooltip: "Portal to Mnemmon Gaol",
       region: "Mainland",
-      place: "Darkwood",
+      place: "Darkwoods",
       details: {
         title: "Portal to Mnemmon Gaol",
         coordinates: { x: 908, y: 3258 },
@@ -700,7 +700,7 @@ export const mapMarkers = {
       type: "portal_lsp",
       tooltip: "Portal to Lotor's Summer Palace",
       region: "Mainland",
-      place: "Darkwood",
+      place: "Darkwoods",
       details: {
         title: "Portal to Lotor's Summer Palace",
         coordinates: { x: 471, y: 3479 },
@@ -788,14 +788,14 @@ export const mapMarkers = {
     },
     {
       type: "portal_blue",
-      tooltip: "Portal to Darkwood (East of Redwake)",
+      tooltip: "Portal to Darkwoods (East of Redwake)",
       region: "Mainland",
       place: "Highlands",
       details: {
-        title: "Portal to Darkwood (East of Redwake)",
+        title: "Portal to Darkwoods (East of Redwake)",
         coordinates: { x: 3767, y: 3238 },
         image: "images/markers/image_coming_soon.png",
-        lore: "More information about Portal to Darkwood (East of Redwake) is coming soon.",
+        lore: "More information about Portal to Darkwoods (East of Redwake) is coming soon.",
         npcs: [],
         links: [],
       },
@@ -1494,148 +1494,236 @@ export const mapMarkers = {
         links: [],
       },
     },
-    // City: Valinor Dynamic Quests
-    {
-      type: "dynamic_quests",
-      tooltip: "Thurstan (Wanders)",
-      region: "Valinor",
-      place: "Valinor",
-      details: {
-        title: "Thurstan (Dynamic Quest)",
-        coordinates: { x: 722, y: 91 },
-        image: "images/markers/Thurstan_Dynamic_Quest.png",
-        lore: "More information about Thurstan (Wanders) is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "dynamic_quests",
-      tooltip: "Philipus (Wanders)",
-      region: "Valinor",
-      place: "Valinor",
-      details: {
-        title: "Philipus (Dynamic Quest)",
-        coordinates: { x: 746, y: 101 },
-        image: "images/markers/Philipus_Dynamic_Quest.png",
-        lore: "More information about Philipus (Wanders) is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "dynamic_quests",
-      tooltip: "Alard (Wanders)",
-      region: "Valinor",
-      place: "Valinor",
-      details: {
-        title: "Alard (Dynamic Quest)",
-        coordinates: { x: 737, y: 104 },
-        image: "images/markers/Alard_Dynamic_Quest.png",
-        lore: "More information about Alard (Wanders) is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "dynamic_quests",
-      tooltip: "Basilus (Wanders)",
-      region: "Valinor",
-      place: "Valinor",
-      details: {
-        title: "Basilus (Dynamic Quest)",
-        coordinates: { x: 749, y: 142 },
-        image: "images/markers/Basilus_Dynamic_Quest.png",
-        lore: "More information about Basilus (Wanders) is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "dynamic_quests",
-      tooltip: "Ailward (Wanders)",
-      region: "Valinor",
-      place: "Valinor",
-      details: {
-        title: "Ailward (Dynamic Quest)",
-        coordinates: { x: 735, y: 131 },
-        image: "images/markers/Ailward_Dynamic_Quest.png",
-        lore: "More information about Ailward (Wanders) is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "dynamic_quests",
-      tooltip: "Sperling (Wanders)",
-      region: "Valinor",
-      place: "Valinor",
-      details: {
-        title: "Sperling (Dynamic Quest)",
-        coordinates: { x: 748, y: 133 },
-        image: "images/markers/Sperling_Dynamic_Quest.png",
-        lore: "More information about Sperling (Wanders) is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "dynamic_quests",
-      tooltip: "Wimund (Wanders)",
-      region: "Valinor",
-      place: "Valinor",
-      details: {
-        title: "Wimund (Dynamic Quest)",
-        coordinates: { x: 731, y: 147 },
-        image: "images/markers/Wimund_Dynamic_Quest.png",
-        lore: "More information about Wimund (Wanders) is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "dynamic_quests",
-      tooltip: "Seman (Wanders)",
-      region: "Valinor",
-      place: "Valinor",
-      details: {
-        title: "Seman (Dynamic Quest)",
-        coordinates: { x: 781, y: 101 },
-        image: "images/markers/Seman_Dynamic_Quest.png",
-        lore: "More information about Seman (Wanders) is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "dynamic_quests",
-      tooltip: "Wymare (Wanders)",
-      region: "Valinor",
-      place: "Valinor",
-      details: {
-        title: "Wymare (Dynamic Quest)",
-        coordinates: { x: 723, y: 158 },
-        image: "images/markers/Wymare_Dynamic_Quest.png",
-        lore: "More information about Wymare (Wanders) is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      type: "dynamic_quests",
-      tooltip: "Byota (Wanders)",
-      region: "Valinor",
-      place: "Valinor",
-      details: {
-        title: "Byota (Dynamic Quest)",
-        coordinates: { x: 769, y: 92 },
-        image: "images/markers/Byota_Dynamic_Quest.png",
-        lore: "More information about Byota (Wanders) is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
+    // City: Valinor Dynamic Quests - These change based on time of day - I may remove these later
+    // {
+    //   type: "dynamic_quests",
+    //   tooltip: "Thurstan (Wanders)",
+    //   region: "Valinor",
+    //   place: "Valinor",
+    //   details: {
+    //     title: "Thurstan (Dynamic Quest)",
+    //     coordinates: { x: 722, y: 91 },
+    //     image: "images/markers/Thurstan_Dynamic_Quest.png",
+    //     lore: "More information about Thurstan (Wanders) is coming soon.",
+    //     npcs: [],
+    //     links: [],
+    //   },
+    // },
+    // {
+    //   type: "dynamic_quests",
+    //   tooltip: "Philipus (Wanders)",
+    //   region: "Valinor",
+    //   place: "Valinor",
+    //   details: {
+    //     title: "Philipus (Dynamic Quest)",
+    //     coordinates: { x: 746, y: 101 },
+    //     image: "images/markers/Philipus_Dynamic_Quest.png",
+    //     lore: "More information about Philipus (Wanders) is coming soon.",
+    //     npcs: [],
+    //     links: [],
+    //   },
+    // },
+    // {
+    //   type: "dynamic_quests",
+    //   tooltip: "Alard (Wanders)",
+    //   region: "Valinor",
+    //   place: "Valinor",
+    //   details: {
+    //     title: "Alard (Dynamic Quest)",
+    //     coordinates: { x: 737, y: 104 },
+    //     image: "images/markers/Alard_Dynamic_Quest.png",
+    //     lore: "More information about Alard (Wanders) is coming soon.",
+    //     npcs: [],
+    //     links: [],
+    //   },
+    // },
+    // {
+    //   type: "dynamic_quests",
+    //   tooltip: "Basilus (Wanders)",
+    //   region: "Valinor",
+    //   place: "Valinor",
+    //   details: {
+    //     title: "Basilus (Dynamic Quest)",
+    //     coordinates: { x: 749, y: 142 },
+    //     image: "images/markers/Basilus_Dynamic_Quest.png",
+    //     lore: "More information about Basilus (Wanders) is coming soon.",
+    //     npcs: [],
+    //     links: [],
+    //   },
+    // },
+    // {
+    //   type: "dynamic_quests",
+    //   tooltip: "Ailward (Wanders)",
+    //   region: "Valinor",
+    //   place: "Valinor",
+    //   details: {
+    //     title: "Ailward (Dynamic Quest)",
+    //     coordinates: { x: 735, y: 131 },
+    //     image: "images/markers/Ailward_Dynamic_Quest.png",
+    //     lore: "More information about Ailward (Wanders) is coming soon.",
+    //     npcs: [],
+    //     links: [],
+    //   },
+    // },
+    // {
+    //   type: "dynamic_quests",
+    //   tooltip: "Sperling (Wanders)",
+    //   region: "Valinor",
+    //   place: "Valinor",
+    //   details: {
+    //     title: "Sperling (Dynamic Quest)",
+    //     coordinates: { x: 748, y: 133 },
+    //     image: "images/markers/Sperling_Dynamic_Quest.png",
+    //     lore: "More information about Sperling (Wanders) is coming soon.",
+    //     npcs: [],
+    //     links: [],
+    //   },
+    // },
+    // {
+    //   type: "dynamic_quests",
+    //   tooltip: "Wimund (Wanders)",
+    //   region: "Valinor",
+    //   place: "Valinor",
+    //   details: {
+    //     title: "Wimund (Dynamic Quest)",
+    //     coordinates: { x: 731, y: 147 },
+    //     image: "images/markers/Wimund_Dynamic_Quest.png",
+    //     lore: "More information about Wimund (Wanders) is coming soon.",
+    //     npcs: [],
+    //     links: [],
+    //   },
+    // },
+    // {
+    //   type: "dynamic_quests",
+    //   tooltip: "Seman (Wanders)",
+    //   region: "Valinor",
+    //   place: "Valinor",
+    //   details: {
+    //     title: "Seman (Dynamic Quest)",
+    //     coordinates: { x: 781, y: 101 },
+    //     image: "images/markers/Seman_Dynamic_Quest.png",
+    //     lore: "More information about Seman (Wanders) is coming soon.",
+    //     npcs: [],
+    //     links: [],
+    //   },
+    // },
+    // {
+    //   type: "dynamic_quests",
+    //   tooltip: "Wymare (Wanders)",
+    //   region: "Valinor",
+    //   place: "Valinor",
+    //   details: {
+    //     title: "Wymare (Dynamic Quest)",
+    //     coordinates: { x: 723, y: 158 },
+    //     image: "images/markers/Wymare_Dynamic_Quest.png",
+    //     lore: "More information about Wymare (Wanders) is coming soon.",
+    //     npcs: [],
+    //     links: [],
+    //   },
+    // },
+    // {
+    //   type: "dynamic_quests",
+    //   tooltip: "Byota (Wanders)",
+    //   region: "Valinor",
+    //   place: "Valinor",
+    //   details: {
+    //     title: "Byota (Dynamic Quest)",
+    //     coordinates: { x: 769, y: 92 },
+    //     image: "images/markers/Byota_Dynamic_Quest.png",
+    //     lore: "More information about Byota (Wanders) is coming soon.",
+    //     npcs: [],
+    //     links: [],
+    //   },
+    // },
 
+    // Mainland Quests
+
+    // Region: Darkwoods
+    // City: Darkwood Quests
+    {
+      type: "quest",
+      tooltip: "Corgeryn",
+      region: "Darkwoods",
+      place: "Darkwood",
+      details: {
+        title: "Corgeryn Quest",
+        coordinates: { x: 1387, y: 3180 },
+        image: "images/markers/Corgeryn_Quest.png",
+        lore: "Corgeryn is part of a quest line for The Trouble With Pirates.",
+        npcs: [],
+        links: [{ text: "Ashen Empires Wiki (The Trouble With Pirates)", url: "https://ashenempires.fandom.com/wiki/Fishing_for_Friends#Part_4._Trials" }],
+      },
+    },
+    {
+      type: "quest",
+      tooltip: "Bonden",
+      region: "Darkwoods",
+      place: "Darkwood",
+      details: {
+        title: "Bonden Quest",
+        coordinates: { x: 1373, y: 3225 },
+        image: "images/markers/Bonden_Quest.png",
+        lore: "Bonden is part of a quest line for The Trouble With Pirates.",
+        npcs: [],
+        links: [{ text: "Ashen Empires Wiki (The Trouble With Pirates)", url: "https://ashenempires.fandom.com/wiki/The_Trouble_With_Pirates" }],
+      },
+    },
+    {
+      type: "quest",
+      tooltip: "Henian",
+      region: "Darkwoods",
+      place: "Darkwood",
+      details: {
+        title: "Henian Quest",
+        coordinates: { x: 1371, y: 3196 },
+        image: "images/markers/Henian_Quest.png",
+        lore: "The Henian Quest takes you deep into the heart of the Darkwoods.",  // Need to update this lore
+        npcs: [],
+        links: [{ text: "Ashen Empires Wiki (Henian)", url: "https://ashenempires.fandom.com/wiki/Henian" }],
+      },
+    },
+    {
+      type: "quest",
+      tooltip: "Lord Malgoth",
+      region: "Darkwoods",
+      place: "Darkwood",
+      details: {
+        title: "Lord Malgoth Quest",
+        coordinates: { x: 1378, y: 3180 },
+        image: "images/markers/Lord_Malgoth_Quest.png",
+        lore: "The Lord Malgoth is part of the Fine Land quest line - Ring of Mistlake.",  // Need to update this lore
+        npcs: [],
+        links: [{ text: "Ashen Empires Wiki (Fine Land)", url: "https://ashenempires.fandom.com/wiki/Fine_Land_(complete_guide)#Ring_of_Mistlake" }],
+      },
+    },
+    {
+      type: "quest",
+      tooltip: "Lady Belarafyn",
+      region: "Darkwoods",
+      place: "Darkwood",
+      details: {
+        title: "Lady Belarafyn Quest",
+        coordinates: { x: 1372, y: 3182 },
+        image: "images/markers/Lady_Belarafyn_Quest.png",
+        lore: "The Lady Belarafyn is part of the Fine Land quest line - Ring of Mistlake.",  // Need to update this lore
+        npcs: [],
+        links: [{ text: "Ashen Empires Wiki (Fine Land)", url: "https://ashenempires.fandom.com/wiki/Fine_Land_(complete_guide)#Ring_of_Mistlake" }],
+      },
+    },
+    {
+      type: "quest",
+      tooltip: "Gabryll",
+      region: "Darkwoods",
+      place: "Darkwood",
+      details: {
+        title: "Gabryll Quest",
+        coordinates: { x: 1419, y: 3219 },
+        image: "images/markers/Gabryll_Quest.png",
+        lore: "Gabryll is part of the Parian Warlords quest line.",
+        npcs: [],
+        links: [{ text: "Ashen Empires Wiki (Parian Warlords)", url: "https://ashenempires.fandom.com/wiki/Parian_Warlords" }],
+      },
+    },
 
     // Region: Highlands
     // City: Parian Quests
@@ -1749,6 +1837,53 @@ export const mapMarkers = {
         lore: "Heudekka is part of the Fine Land - Trade Must Flourish.",
         npcs: [],
         links: [{ text: "Ashen Empires Wiki (Fine Land - Trade Must Flourish)", url: "https://ashenempires.fandom.com/wiki/Fine_Land_(complete_guide)#Trade_Must_Flourish" }],
+      },
+    },
+    // City: Arda Quests
+
+    // City: Grell Quests - Located in underground-markers.js
+
+    // City: Ethera Palace Quests
+    {
+      type: "quest",
+      tooltip: "Pegi",
+      region: "Highlands",
+      place: "Ethera Palace",
+      details: {
+        title: "Pegi",
+        coordinates: { x: 3537, y: 3697 },
+        image: "images/markers/Pegi_Quest.png",
+        lore: "Pegi is a quest-giving NPC located in Ethera Palace. She is looking for heroes to assist with various tasks.",
+        npcs: [],
+        links: [{ text: "Ashen Empires Wiki (Pegi's Picnic)", url: "https://ashenempires.fandom.com/wiki/Pegis_Picnic" }],
+      },
+    },
+    {
+      type: "quest",
+      tooltip: "Eldrid",
+      region: "Highlands",
+      place: "Ethera Palace",
+      details: {
+        title: "Eldrid",
+        coordinates: { x: 3609, y: 3638 },
+        image: "images/markers/Eldrid_Quest.png",
+        lore: "Eldrid is a quest-giving NPC located in Ethera Palace. He is looking for heroes to assist with various tasks.",
+        npcs: [],
+        links: [{ text: "Ashen Empires Wiki (Fishing for Friends Part 4 Trials)", url: "https://ashenempires.fandom.com/wiki/Fishing_for_Friends#Part_4._Trials" }],
+      },
+    },
+    {
+      type: "quest",
+      tooltip: "Lord Belski",
+      region: "Highlands",
+      place: "Ethera Palace",
+      details: {
+        title: "Lord Belski",
+        coordinates: { x: 3550, y: 3651 },
+        image: "images/markers/Lord_Belski_Quest.png",
+        lore: "Lord Belski is a information NPC located in Ethera Palace. He is part of Lavish Gifts quest line for Fine Land.",
+        npcs: [],
+        links: [{ text: "Ashen Empires Wiki (Fine Land - Lavish Gifts)", url: "https://ashenempires.fandom.com/wiki/Fine_Land_(complete_guide)#Lavish_Gifts" }],
       },
     },
 
@@ -2042,12 +2177,12 @@ export const mapMarkers = {
 
     /* Mainland Docks */
 
-    // Darkwood Docks
+    // Darkwoods Docks
     {
       type: "dock",
       tooltip: "Josody Dock",
       region: "Mainland",
-      place: "Darkwood",
+      place: "Darkwoods",
       details: {
         title: "Josody Dock",
         coordinates: { x: 1405, y: 2517 },
@@ -2061,7 +2196,7 @@ export const mapMarkers = {
       type: "dock",
       tooltip: "Redwake Dock",
       region: "Mainland",
-      place: "Darkwood",
+      place: "Darkwoods",
       details: {
         title: "Redwake Dock",
         coordinates: { x: 403, y: 2866 },
@@ -2075,7 +2210,7 @@ export const mapMarkers = {
       type: "dock",
       tooltip: "Dragoon Dock",
       region: "Mainland",
-      place: "Darkwood",
+      place: "Darkwoods",
       details: {
         title: "Dragoon Dock",
         coordinates: { x: 402, y: 3220 },
@@ -2089,7 +2224,7 @@ export const mapMarkers = {
       type: "dock",
       tooltip: "Whisperdale Dock",
       region: "Mainland",
-      place: "Darkwood",
+      place: "Darkwoods",
       details: {
         title: "Whisperdale Dock",
         coordinates: { x: 342, y: 3490 },
@@ -2103,7 +2238,7 @@ export const mapMarkers = {
       type: "dock",
       tooltip: "Darkfell Dock",
       region: "Mainland",
-      place: "Darkwood",
+      place: "Darkwoods",
       details: {
         title: "Darkfell Dock",
         coordinates: { x: 911, y: 3120 },
@@ -2117,7 +2252,7 @@ export const mapMarkers = {
       type: "dock",
       tooltip: "Dunmarrow Dock",
       region: "Mainland",
-      place: "Darkwood",
+      place: "Darkwoods",
       details: {
         title: "Dunmarrow Dock",
         coordinates: { x: 1363, y: 3246 },
@@ -2922,12 +3057,12 @@ export const mapMarkers = {
 
     // Mainland Information
 
-    // Region: Darkwood Information
+    // Region: Darkwoods Information
     {
       type: "information_npc",
       tooltip: "The Utopia Shard",
       region: "Mainland",
-      place: "Darkwood",
+      place: "Darkwoods",
       details: {
         title: "The Utopia Shard",
         coordinates: { x: 1192, y: 2903 },
@@ -2982,12 +3117,12 @@ export const mapMarkers = {
     // Region: Krythan Town Stewards
 
     // Mainland Town Stewards
-    // Region: Darkwood Town Stewards
+    // Region: Darkwoods Town Stewards
 
     {
       type: "town_steward",
       tooltip: "Town Steward (Whisperdale)",
-      region: "Darkwood",
+      region: "Darkwoods",
       place: "Whisperdale",
       details: {
         title: "Town Steward (Whisperdale)",
@@ -3041,7 +3176,34 @@ export const mapMarkers = {
     // Region: Krythan Guards
 
     // Mainland Guards
-    // Region: Darkwood Guards
+    // Region: Darkwoods Guards
+    // City: Josody Guards
+    
+    // City: Gulley Guards
+
+    // City: Redwake Guards
+
+    // City: Darkfell Guards
+
+    // City: Dunmarrow Guards
+    {
+      type: "town_guardian",
+      tooltip: "Town Guardian (Dunmarrow)",
+      region: "Darkwoods",
+      place: "Dunmarrow",
+      details: {
+        title: "Town Guardian",
+        coordinates: { x: 1369, y: 3183 },
+        image: "images/markers/Dunmarrow_Town_Guardian.png",
+        lore: "The Town Guardian in Dunmarrow.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // City: Autumn Guards
+
+    // City: Whisperdale Guards
 
     // Region: Highlands Guards
     // City: Parian Guards
@@ -3060,6 +3222,20 @@ export const mapMarkers = {
       },
     },
     // City: Arda Town Guardians
+    {
+      type: "town_guardian",
+      tooltip: "Town Guardian (Arda)",
+      region: "Highlands",
+      place: "Arda",
+      details: {
+        title: "Town Guardian",
+        coordinates: { x: 3388, y: 3468 },
+        image: "images/markers/Arda_Town_Guardian.png",
+        lore: "The Town Guardian in Arda.",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // City: Grell Town Guardians - This is located in the underground_markers.js
 
@@ -3104,7 +3280,7 @@ export const mapMarkers = {
     
     // Region: Krythan Town Wizard of Insight
 
-    // Region: Darkwood Town Wizard of Insight
+    // Region: Darkwoods Town Wizard of Insight
 
     // Region: Battle Plains Town Wizard of Insight
 
@@ -3112,6 +3288,20 @@ export const mapMarkers = {
     // City: Parian Town Wizard of Insight
 
     // City: Arda Town Wizard of Insight
+    {
+      type: "town_wizard_of_insight",
+      tooltip: "Town Wizard of Insight (Arda)",
+      region: "Highlands",
+      place: "Arda",
+      details: {
+        title: "Town Wizard of Insight",
+        coordinates: { x: 3418, y: 3473 },
+        image: "images/markers/Arda_Town_Wizard_of_Insight.png",
+        lore: "More information about Arda Town Wizard of Insight is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // City: Grell Town Wizard of Insight - Grell information will be in the underground marker file
 
@@ -3124,13 +3314,41 @@ export const mapMarkers = {
       details: {
         title: "Town Wizard of Insight",
         coordinates: { x: 3542, y: 3695 },
-        image: "images/markers/Town_Wizard_of_Insight.png",
-        lore: "More information about Town Wizard of Insight is coming soon.",
+        image: "images/markers/Ethera_Palace_Town_Wizard_of_Insight.png",
+        lore: "More information about Ethera Palace Town Wizard of Insight is coming soon.",
         npcs: [],
         links: [],
       },
     },
 
+    // Region: Darkwoods Town Wizard of Insight
+    // City: Josody Town Wizard of Insight
+
+    // City: Gulley Town Wizard of Insight
+
+    // City: Redwake Town Wizard of Insight
+
+    // City: Darkfell Town Wizard of Insight
+
+    // City: Dunmarrow Town Wizard of Insight
+
+    // City: Autumn Town Wizard of Insight
+
+    // City: Whisperdale Town Wizard of Insight
+    {
+      type: "town_wizard_of_insight",
+      tooltip: "Town Wizard of Insight (Dunmarrow)",
+      region: "Darkwoods",
+      place: "Dunmarrow",
+      details: {
+        title: "Town Wizard of Insight",
+        coordinates: { x: 1343, y: 3199 },
+        image: "images/markers/Dunmarrow_Town_Wizard_of_Insight.png",
+        lore: "More information about Dunmarrow Town Wizard of Insight is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // Sub-Category Game of Chance
     // Island: Lotor's Summer Palace Game of Chance
@@ -3155,7 +3373,7 @@ export const mapMarkers = {
     // Region: Krythan Games of Chance
 
     // Mainland Games of Chance
-    // Region: Darkwood Games of Chance
+    // Region: Darkwoods Games of Chance
 
     // Region: Battle Plains Games of Chance
 
@@ -3255,7 +3473,7 @@ export const mapMarkers = {
     // Region: Krythan Events
 
     // Mainland Events
-    // Darkwood Events
+    // Darkwoods Events
 
     // Highlands Events
     // City: Parian Events
@@ -3379,8 +3597,8 @@ export const mapMarkers = {
         links: [],
       },
     },
-    // Sub-Category Banks
-    //Valinor Island Banks
+    // Sub-Category Bank
+    //Valinor Island Bank
 
     {
       type: "bank",
@@ -3396,7 +3614,7 @@ export const mapMarkers = {
         links: [],
       },
     },
-    //Lotor's Summer Palace Banks
+    //Lotor's Summer Palace Bank
     {
       type: "bank",
       tooltip: "Bank",
@@ -3412,9 +3630,9 @@ export const mapMarkers = {
       },
     },
 
-    // Region: Krythan Island Banks
+    // Region: Krythan Island Bank
 
-    // Region: Silvest Valley Banks
+    // Region: Silvest Valley Bank
     // City: Fort Eastwatch
     {
       type: "bank",
@@ -3430,7 +3648,7 @@ export const mapMarkers = {
         links: [],
       },
     },
-    // City: Silvest Banks
+    // City: Silvest Bank
     {
       type: "bank",
       tooltip: "Bank",
@@ -3445,24 +3663,24 @@ export const mapMarkers = {
         links: [],
       },
     },
-    // City: Cliffside Banks
+    // City: Cliffside Bank
     {
       type: "bank",
       tooltip: "Bank",
-      region: "Silvest Valley",
+      region: "Krythan",
       place: "Cliffside",
       details: {
         title: "Bank",
         coordinates: { x: 1057, y: 1153 },
-        image: "images/markers/Varg_Bank.png",
+        image: "images/markers/Cliffside_Bank.png",
         lore: "More information about Cliffside Bank is coming soon.",
         npcs: [],
         links: [],
       },
     },
 
-    // Region: Krythan Banks
-    // City: Varg Banks
+    // Region: Krythan Bank
+    // City: Varg Bank
     {
       type: "bank",
       tooltip: "Bank",
@@ -3477,31 +3695,57 @@ export const mapMarkers = {
         links: [],
       },
     },
+
+    //Mainland Bank
+
+    // Region: Darkwoods Bank
+    // City: Josody Bank
+
+    // City: Gulley Bank
+
+    // City: Redwake Bank
+
+    // City: Darkfell Bank
+
+    // City: Dunmarrow Bank
     {
       type: "bank",
       tooltip: "Bank",
-      region: "Krythan",
-      place: "Cliffside",
+      region: "Highlands",
+      place: "Dunmarrow",
       details: {
-        title: "Bank",
-        coordinates: { x: 1057, y: 1153 },
-        image: "images/markers/Varg_Bank.png",
-        lore: "More information about Bank is coming soon.",
+        title: "Dunmarrow Bank",
+        coordinates: { x: 1401, y: 3200 },
+        image: "images/markers/Dunmarrow_Bank.png",
+        lore: "More information about Dunmarrow Bank is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "bank",
+      tooltip: "Wythwyvn's Bank",
+      region: "Highlands",
+      place: "Dunmarrow",
+      details: {
+        title: "Dunmarrow Bank",
+        coordinates: { x: 1392, y: 3206 },
+        image: "images/markers/Wythwyvn_Dunmarrow_Bank.png",
+        lore: "More information about Dunmarrow Wythwyvn's Bank is coming soon.",
         npcs: [],
         links: [],
       },
     },
 
-    //Mainland Banks
+    // City: Autumn Bank
 
-    // Region: Darkwood Banks
+    // City: Whisperdale Bank
+    // Region: Battle Plains Bank
 
-    // Region: Battle Plains Banks
+    // Region: Black Swamp Bank
 
-    // Region: Black Swamp Banks
-
-    // Region: Highlands Banks
-    // City: Parian Banks
+    // Region: Highlands Bank
+    // City: Parian Bank
     {
       type: "bank",
       tooltip: "North Bank",
@@ -3544,7 +3788,7 @@ export const mapMarkers = {
         links: [],
       },
     },
-    // City: Arda Banks
+    // City: Arda Bank
     {
       type: "bank",
       tooltip: "Bank",
@@ -3559,7 +3803,7 @@ export const mapMarkers = {
         links: [],
       },
     },
-    //City: Ethera Palace Banks
+    //City: Ethera Palace Bank
     {
       type: "bank",
       tooltip: "Bank",
@@ -3575,7 +3819,7 @@ export const mapMarkers = {
       },
     },
 
-    // City: Lopal Banks
+    // City: Lopal Bank
     {
       type: "bank",
       tooltip: "Bank",
@@ -3592,13 +3836,13 @@ export const mapMarkers = {
     },
 
 
-    // Region: Western Isles Banks
+    // Region: Western Isles Bank
 
-    // Region: Valley of Giants Banks
+    // Region: Valley of Giants Bank
 
-    // Region: Heartwood Coast Banks
+    // Region: Heartwood Coast Bank
 
-    // Region: Tundria Banks
+    // Region: Tundria Bank
 
     //
     // Sub-Category Trainers
@@ -4115,7 +4359,7 @@ export const mapMarkers = {
 
     // Mainlands Trainers
 
-    // Region: Darkwood Trainers
+    // Region: Darkwoods Trainers
 
     // Region: Battle Plains Trainers
 
@@ -4688,12 +4932,162 @@ export const mapMarkers = {
       },
     },
 
-    
-    //Done
-
     // Mainland Shops
 
-    // Region: Darkwood Shops
+    // Region: Darkwoods Shops
+    // City: Josody Shops
+
+    // City: Gulley Shops
+
+    // City: Redwake Shops
+
+    // City: Darkfell Shops
+
+    // City: Dunmarrow Shops
+    {
+      type: "shop_carpentry",
+      tooltip: "Elvryn's Carpentery Shop",
+      region: "Darkwoods",
+      place: "Dunmarrow",
+      details: {
+        title: "Elvryn's Carpentery Shop",
+        coordinates: { x: 1354, y: 3193 },
+        image: "images/markers/Elvryn_Carpentery_Shop.png",
+        lore: "More information about Elvryn's Carpentery Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_leather",
+      tooltip: "Lominar's Taxidermy Shop",
+      region: "Darkwoods",
+      place: "Dunmarrow",
+      details: {
+        title: "Lominar's Taxidermy Shop",
+        coordinates: { x: 1351, y: 3200 },
+        image: "images/markers/Lominar_Taxidermy_Shop.png",
+        lore: "More information about Lominar's Taxidermy Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_shipyard",
+      tooltip: "Calidor Reitmsa's Ship Yard",
+      region: "Darkwoods",
+      place: "Dunmarrow",
+      details: {
+        title: "Calidor Reitmsa's Ship Yard",
+        coordinates: { x: 1362, y: 3227 },
+        image: "images/markers/Calidor_Reitmsa_Ship_Yard.png",
+        lore: "More information about Calidor Reitmsa's Ship Yard is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_pub",
+      tooltip: "Charyne's Tavern",
+      region: "Darkwoods",
+      place: "Dunmarrow",
+      details: {
+        title: "Charyne's Tavern",
+        coordinates: { x: 1377, y: 3224 },
+        image: "images/markers/Charyne_Tavern.png",
+        lore: "More information about Charyne's Tavern is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_pub",
+      tooltip: "Charyne's Tavern",
+      region: "Darkwoods",
+      place: "Dunmarrow",
+      details: {
+        title: "Charyne's Tavern",
+        coordinates: { x: 1377, y: 3224 },
+        image: "images/markers/Charyne_Tavern.png",
+        lore: "More information about Charyne's Tavern is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_provisioner",
+      tooltip: "Keile Joargo's Provisioner Shop",
+      region: "Darkwoods",
+      place: "Dunmarrow",
+      details: {
+        title: "Keile Joargo's Provisioner Shop",
+        coordinates: { x: 1391, y: 3230 },
+        image: "images/markers/Keile_Joargo_Provisioner_Shop.png",
+        lore: "More information about Keile Joargo's Provisioner Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_weapon",
+      tooltip: "Xulfax's Weaponry Shop",
+      region: "Darkwoods",
+      place: "Dunmarrow",
+      details: {
+        title: "Xulfax's Weaponry Shop",
+        coordinates: { x: 1391, y: 3220 },
+        image: "images/markers/Xulfax_Weaponry_Shop.png",
+        lore: "More information about Xulfax's Weaponry Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_armory",
+      tooltip: "Hertzel's Armory Shop",
+      region: "Darkwoods",
+      place: "Dunmarrow",
+      details: {
+        title: "Hertzel's Armory Shop",
+        coordinates: { x: 1391, y: 3208 },
+        image: "images/markers/Hertzel_Armory_Shop.png",
+        lore: "More information about Hertzel's Armory Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_blacksmith",
+      tooltip: "Calonar's Blacksmith Shop",
+      region: "Darkwoods",
+      place: "Dunmarrow",
+      details: {
+        title: "Calonar's Blacksmith Shop",
+        coordinates: { x: 1400, y: 3211 },
+        image: "images/markers/Calonar_Blacksmith_Shop.png",
+        lore: "More information about Calonar's Blacksmith Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      type: "shop_magic",
+      tooltip: "Saldizor's Magic Shop",
+      region: "Darkwoods",
+      place: "Dunmarrow",
+      details: {
+        title: "Saldizor's Magic Shop",
+        coordinates: { x: 1412, y: 3183 },
+        image: "images/markers/Saldizor_Magic_Shop.png",
+        lore: "More information about Saldizor's Magic Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // City: Autumn
+
+    // City: Whisperdale
 
     // Region: Battle Plains Shops
 
@@ -5783,9 +6177,73 @@ export const mapMarkers = {
         npcs: [],
         links: [],
       },
-    },    
+    },
+
+    // Region: Darkwoods Spawns
+    // City: Josody Spawns
+
+    // City: Gulley Spawns
+
+    // City: Redwake Spawns
+
+    // City: Darkfell Spawns
+
+    // City: Dunmarrow Spawns
+    {
+      type: "spawn_good",
+      tooltip: "Good Spawn Gate",
+      region: "Darkwoods",
+      place: "Dunmarrow",
+      details: {
+        title: "Good Spawn Gate",
+        coordinates: { x: 1384, y: 3186 },
+        image: "images/markers/Dunmarrow_Spawn_Gate.png",
+        lore: "More information about Dunmarrow Good Spawn Gate is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // City: Autumn Spawns
+
+    // City: Whisperdale Spawns
+
 
     // Region: Highlands Spawns
+    // City: Parian
+    {
+      type: "spawn_good",
+      tooltip: "Good Spawn Gate",
+      region: "Western Isles",
+      place: "Parian",
+      details: {
+        title: "Good Spawn Gate",
+        coordinates: { x: 3468, y: 3024 },
+        image: "images/markers/Parian_Spawn_Gate.png",
+        lore: "More information about Parian Good Spawn Gate is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    // City: Arda
+
+    // City: Grell - This is on the Underground map.
+
+    // City: Ethera Palace
+    {
+      type: "spawn_good",
+      tooltip: "Good Spawn Gate",
+      region: "Western Isles",
+      place: "Ethera Palace",
+      details: {
+        title: "Good Spawn Gate",
+        coordinates: { x: 3526, y: 3669 },
+        image: "images/markers/Ethera_Palace_Spawn_Gate.png",
+        lore: "More information about Ethera Palace Good Spawn Gate is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // Region: Western Isles Spawns
     {
@@ -5819,21 +6277,7 @@ export const mapMarkers = {
       },
     },
 
-    // City: Parian
-    {
-      type: "spawn_good",
-      tooltip: "Good Spawn Gate",
-      region: "Western Isles",
-      place: "Parian",
-      details: {
-        title: "Good Spawn Gate",
-        coordinates: { x: 3468, y: 3024 },
-        image: "images/markers/Parian_Spawn_Gate.png",
-        lore: "More information about Parian Good Spawn Gate is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
+    
 
     // Region: Sands of Creation Spawns
     // City: Ruhura Side Spawns
@@ -6388,12 +6832,12 @@ export const mapMarkers = {
 
     /* Mainland Undergrounds */
 
-    // Region: Darkwood Undergrounds
+    // Region: Darkwoods Undergrounds
     {
       type: "underground_spider",
       tooltip: "Shadow Spider Cave",
       region: "Mainland",
-      place: "Darkwood",
+      place: "Darkwoods",
       details: {
         title: "Shadow Spider Cave",
         coordinates: { x: 1462, y: 2674 },
@@ -6407,7 +6851,7 @@ export const mapMarkers = {
       type: "underground_cave",
       tooltip: "Swamp Beast Cave",
       region: "Mainland",
-      place: "Darkwood",
+      place: "Darkwoods",
       details: {
         title: "Swamp Beast Cave",
         coordinates: { x: 1653, y: 2677 },
@@ -6421,7 +6865,7 @@ export const mapMarkers = {
       type: "underground_cave",
       tooltip: "Swamp Beast Cave",
       region: "Mainland",
-      place: "Darkwood",
+      place: "Darkwoods",
       details: {
         title: "Swamp Beast Cave",
         coordinates: { x: 1571, y: 2656 },
@@ -6435,7 +6879,7 @@ export const mapMarkers = {
       type: "underground_scorpion",
       tooltip: "Scorpion Pit",
       region: "Mainland",
-      place: "Darkwood",
+      place: "Darkwoods",
       details: {
         title: "Scorpion Pit",
         coordinates: { x: 836, y: 3268 },
@@ -6449,7 +6893,7 @@ export const mapMarkers = {
       type: "underground_termigon",
       tooltip: "Termigon Pit",
       region: "Mainland",
-      place: "Darkwood",
+      place: "Darkwoods",
       details: {
         title: "Termigon Pit",
         coordinates: { x: 758, y: 3321 },
@@ -6463,7 +6907,7 @@ export const mapMarkers = {
       type: "underground_mine",
       tooltip: "South Astari Rune Shelter",
       region: "Mainland",
-      place: "Darkwood",
+      place: "Darkwoods",
       details: {
         title: "South Astari Rune Shelter",
         coordinates: { x: 798, y: 3334 },
@@ -6477,7 +6921,7 @@ export const mapMarkers = {
       type: "underground_snake",
       tooltip: "Whisperdale Snake Pit",
       region: "Mainland",
-      place: "Darkwood",
+      place: "Darkwoods",
       details: {
         title: "Whisperdale Snake Pit",
         coordinates: { x: 472, y: 3430 },
@@ -6491,7 +6935,7 @@ export const mapMarkers = {
       type: "underground_ant",
       tooltip: "Dunmarrow Fire Ant Pit",
       region: "Mainland",
-      place: "Darkwood",
+      place: "Darkwoods",
       details: {
         title: "Dunmarrow Fire Ant Pit",
         coordinates: { x: 1270, y: 3030 },
@@ -6505,7 +6949,7 @@ export const mapMarkers = {
       type: "underground_crypt",
       tooltip: "McKelsky Crypt",
       region: "Mainland",
-      place: "Darkwood",
+      place: "Darkwoods",
       details: {
         title: "McKelsky Crypt",
         coordinates: { x: 1429, y: 3044 },
@@ -6519,7 +6963,7 @@ export const mapMarkers = {
       type: "underground_dungeon",
       tooltip: "Marsh Dungeon",
       region: "Mainland",
-      place: "Darkwood",
+      place: "Darkwoods",
       details: {
         title: "Marsh Dungeon",
         coordinates: { x: 481, y: 3505 },
@@ -6533,7 +6977,7 @@ export const mapMarkers = {
       type: "underground_dungeon",
       tooltip: "Cathedral of Joyous Afterlife (North Entrance)",
       region: "Mainland",
-      place: "Darkwood",
+      place: "Darkwoods",
       details: {
         title: "Cathedral of Joyous Afterlife (North Entrance)",
         coordinates: { x: 632, y: 3186 },
@@ -6547,7 +6991,7 @@ export const mapMarkers = {
       type: "underground_dungeon",
       tooltip: "Cathedral of Joyous Afterlife (South Entrance)",
       region: "Mainland",
-      place: "Darkwood",
+      place: "Darkwoods",
       details: {
         title: "Cathedral of Joyous Afterlife (South Entrance)",
         coordinates: { x: 679, y: 3318 },
@@ -6752,7 +7196,7 @@ export const mapMarkers = {
     },
 
 
-    // Region: Darkwood Undergrounds
+    // Region: Darkwoods Undergrounds
     // Necropolis Undergrounds
     {
       type: "underground_stairs",
@@ -7536,20 +7980,20 @@ export const mapMarkers = {
         links: [],
       },
     },
-    {
-      type: "underground_stairs",
-      tooltip: "Trap Door to Gulley Portal ",
-      region: "Broken Finger",
-      place: "Broken Finger",
-      details: {
-        title: "Trap Door to Gulley Portal ",
-        coordinates: { x: 1292, y: 3714 },
-        image: "images/markers/image_coming_soon.png",
-        lore: "More information about Trap Door to Gulley Portal  is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
+    // {
+    //   type: "underground_stairs",
+    //   tooltip: "Trap Door to Gulley Portal ",
+    //   region: "Broken Finger",
+    //   place: "Broken Finger",
+    //   details: {
+    //     title: "Trap Door to Gulley Portal ",
+    //     coordinates: { x: 1292, y: 3714 },
+    //     image: "images/markers/image_coming_soon.png",
+    //     lore: "More information about Trap Door to Gulley Portal  is coming soon.",
+    //     npcs: [],
+    //     links: [],
+    //   },
+    // },
     {
       type: "underground_stairs",
       tooltip: "Entrance to Horned Ones Cave",

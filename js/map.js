@@ -259,7 +259,7 @@ function initializeMap() {
     // --- Set Initial Map View ---
     // Define the center of the map using in-game (4096x4096) coordinates.
     // This makes it easy to change the starting location.
-    const initialCenterGameCoords = { x: 3529, y: 3701, }; // Default View is { x: 776, y: 668, } (Showing Lotor's Summer Palace) Centers LSP on smaller screens.
+    const initialCenterGameCoords = { x: 1382, y: 3193, }; // Default View is { x: 776, y: 668, } (Showing Lotor's Summer Palace) Centers LSP on smaller screens.
 
     const mapSize = 32768;
     const scaleFactor = mapSize / 4096; // New scaling factor
@@ -1028,29 +1028,47 @@ function setupMarkerTooltips(map) {
         }
         const feature = currentMap.forEachFeatureAtPixel(evt.pixel, f => f);
 
-        const markerTooltipText = feature ? feature.get('tooltip') : null;
-        const labelTooltipText = feature ? feature.get('labelTooltip') : null;
+        // Default cursor state
+        currentMap.getTargetElement().style.cursor = '';
+        markerTooltipElement.style.display = 'none';
 
-        if (markerTooltipText) {
+        if (!feature) {
+            return;
+        }
+
+        // --- Marker Tooltip Logic (Icons) ---
+        if (feature.get('tooltip')) {
+            const markerTooltipText = feature.get('tooltip');
             const markerType = feature.get('type');
             const style = markerStyles[markerType] || { icon: 'icons/information.svg', color: '#FF0000' };
+            
             markerTooltipElement.innerHTML = `
                 <div class="tooltip-icon">
                     <img src="${style.icon}" alt="${markerType}" style="width: 20px; height: 20px; vertical-align: middle;">
                 </div>
                 <div class="tooltip-text">${markerTooltipText}</div>
             `;
+            markerTooltipElement.classList.add('flex-row'); // Ensure horizontal layout for markers
             markerTooltipOverlay.setPosition(feature.getGeometry().getCoordinates());
             markerTooltipElement.style.display = 'flex';
             currentMap.getTargetElement().style.cursor = 'pointer';
-        } else if (labelTooltipText) {
-            markerTooltipElement.innerHTML = `<div class="tooltip-text">${labelTooltipText}</div>`;
+        // --- Label Tooltip Logic (Cities, Landmarks, Islands) ---
+        } else if (feature.get('labelTooltip')) {
+            const labelTooltipText = feature.get('labelTooltip');
+            const details = feature.get('details');
+            const information = details ? details.information : null;
+
+            let tooltipHtml = `<div class="tooltip-text">${labelTooltipText}</div>`;
+            if (information && information.length > 0) {
+                const infoText = Array.isArray(information) ? information.join('<br>') : information;
+                tooltipHtml += `<div class="tooltip-info">${infoText}</div>`;
+            }
+
+            markerTooltipElement.innerHTML = tooltipHtml;
+            markerTooltipElement.classList.remove('flex-row'); // Ensure vertical layout for labels
             markerTooltipOverlay.setPosition(feature.getGeometry().getCoordinates());
             markerTooltipElement.style.display = 'flex';
             currentMap.getTargetElement().style.cursor = 'pointer';
-        } else {
-            markerTooltipElement.style.display = 'none';
-            currentMap.getTargetElement().style.cursor = currentMap.hasFeatureAtPixel(evt.pixel) ? 'pointer' : '';
         }
     };
     
