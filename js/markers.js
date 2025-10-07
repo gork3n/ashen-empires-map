@@ -1,5 +1,5 @@
 export const markerStyles = {
-  // Portals & Docks
+  // Portals
   portal_lsp: {
     icon: "icons/lsp-portal.svg",
     color: "#B8860B", // DarkGoldenrod - for better contrast on desert
@@ -30,7 +30,7 @@ export const markerStyles = {
     icon: "icons/anchor.svg",
     color: "#1E90FF", // DodgerBlue
   },
-
+  // NPCS
   // Quests
   quest: {
     icon: "icons/scroll-unfurled.svg",
@@ -140,7 +140,34 @@ export const markerStyles = {
     icon: "icons/elf-helmet.svg",
     color: "#4169E1", // RoyalBlue
   },
-  
+  // Banks
+  bank: {
+    icon: "icons/knapsack.svg",
+    color: "#c9b128ff", // GoldenRod
+  },
+
+  // Places of Interest
+  game_of_chance: {
+    icon: "icons/perspective-dice-six-faces.svg",
+    color: "#32CD32", // LimeGreen
+  },
+  information_npc: {
+    icon: "icons/info.svg",
+    color: "#00BFFF", // DeepSkyBlue,
+  },
+  event_ticket: {
+    icon: "icons/ticket.svg",
+    color: "#963a3aff", // Dark Sienna
+  },
+  event_judge: {
+    icon: "icons/gavel.svg",
+    color: "#6A5ACD", // SlateBlue
+  },
+  // Altars
+  altar: {
+    icon: "icons/ancient-portal.svg",
+    color: "#20B2AA", // LightSeaGreen
+  },
 
   // Spawns
   spawn_good: {
@@ -150,18 +177,7 @@ export const markerStyles = {
   spawn_evil: {
     icon: "icons/death-spawn.svg",
     color: "#8B0000", // DarkRed (Blood Red)
-  },
-
-  // Bank
-  bank: {
-    icon: "icons/knapsack.svg",
-    color: "#c9b128ff", // GoldenRod
-  },
-
-  altar: {
-    icon: "icons/ancient-portal.svg",
-    color: "#20B2AA", // LightSeaGreen
-  },
+  },  
 
   // Crafting
   obelisk: {
@@ -222,30 +238,13 @@ export const markerStyles = {
     icon: "icons/mite.svg",
     color: "#d36517ff", // SaddleBrown
   },
-
-  // Places of Interest
-  game_of_chance: {
-    icon: "icons/perspective-dice-six-faces.svg",
-    color: "#32CD32", // LimeGreen
-  },
-  information_npc: {
-    icon: "icons/info.svg",
-    color: "#00BFFF", // DeepSkyBlue,
-  },
-  event_ticket: {
-    icon: "icons/ticket.svg",
-    color: "#963a3aff", // Dark Sienna
-  },
-  event_judge: {
-    icon: "icons/gavel.svg",
-    color: "#6A5ACD", // SlateBlue
-  },
 };
 
 export const mapMarkers = {
   portals: [
     // Island: Party Island Portals
     {
+      category: "portals",
       type: "portal_lsp",
       tooltip: "Portal to Lotor's Summer Palace",
       region: "Western Isles",
@@ -264,6 +263,7 @@ export const mapMarkers = {
     // Island: Valinor Island
     // Region: Valinor Region Portals
     {
+      category: "portals",
       type: "portal_lsp",
       tooltip: "Portal to Leave Valinor",
       region: "Valinor",
@@ -278,6 +278,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "portals",
       type: "portal_small",
       tooltip: "Portal to Arena Viewing Area",
       region: "Valinor",
@@ -296,6 +297,7 @@ export const mapMarkers = {
     // Region: Highlands
     // City: Parian Housing Realm Portal
     {
+      category: "portals",
       type: "portal_housing",
       tooltip: "Portal to Housing Realm",
       region: "Highlands",
@@ -313,6 +315,7 @@ export const mapMarkers = {
     // Region: Western Isles Housing Realm Portal
     // Island: Lotor's Summer Palace Housing Realm Portal
     {
+      category: "portals",
       type: "portal_housing",
       tooltip: "Portal to Housing Realm",
       region: "Western Isles",
@@ -327,6 +330,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "portals",
       type: "portal_small",
       tooltip: "Portal to Party Island",
       region: "Western Isles",
@@ -341,6 +345,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "portals",
       type: "portal_small",
       tooltip: "Portal to PvP Island",
       region: "Western Isles",
@@ -355,6 +360,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "portals",
       type: "portal_lsp",
       tooltip: "Valmond Portal",
       region: "Western Isles",
@@ -369,6 +375,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "portals",
       type: "portal_lsp",
       tooltip: "Krog Portal",
       region: "Western Isles",
@@ -383,6 +390,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "portals",
       type: "portal_lsp",
       tooltip: "Khafra or Ruhura Portal",
       region: "Western Isles",
@@ -397,6 +405,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "portals",
       type: "portal_lsp",
       tooltip: "Silvest Portal",
       region: "Western Isles",
@@ -411,6 +420,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "portals",
       type: "portal_lsp",
       tooltip: "VIP Portal",
       region: "Western Isles",
@@ -425,6 +435,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "portals",
       type: "portal_lsp",
       tooltip: "Whisperdale Portal",
       region: "Western Isles",
@@ -439,6 +450,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "portals",
       type: "portal_lsp",
       tooltip: "Parian Portal",
       region: "Western Isles",
@@ -453,6 +465,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "portals",
       type: "portal_lsp",
       tooltip: "Josody Portal",
       region: "Western Isles",
@@ -470,6 +483,7 @@ export const mapMarkers = {
 
     // Island: Real Estate Island Portals
     {
+      category: "portals",
       type: "portal_lsp",
       tooltip: "Portal to Lotor's Summer Palace",
       region: "Krythan",
@@ -486,15 +500,16 @@ export const mapMarkers = {
 
     // Island: Minotaur Island Portals
     {
+      category: "portals",
       type: "portal_blue",
-      tooltip: "Portal to Highlands",
-      region: "Krythan",
+      tooltip: "Portal to Ancient Site of Minos",
+      region: "Western Isles",
       place: "Minotaur Island",
       details: {
-        title: "Portal to Highlands",
+        title: "Portal to Ancient Site of Minos",
         coordinates: { x: 135, y: 246 },
         image: "images/markers/image_coming_soon.png",
-        lore: "More information about Portal to Highlands is coming soon.",
+        lore: "More information about Portal to Ancient Site of Minos is coming soon.",
         npcs: [],
         links: [],
       },
@@ -502,6 +517,7 @@ export const mapMarkers = {
 
     // Island: Scorched Island
     {
+      category: "portals",
       type: "portal_small",
       tooltip: "Portal to Battle Plains",
       region: "Western Isles",
@@ -516,6 +532,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "portals",
       type: "portal_small",
       tooltip: "Portal to Hell",
       region: "Western Isles",
@@ -534,6 +551,7 @@ export const mapMarkers = {
 
     // Region: Krythan Portals
     {
+      category: "portals",
       type: "portal_blue",
       tooltip: "Portal to Highlands West of Parian",
       region: "Krythan",
@@ -548,6 +566,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "portals",
       type: "portal_blue",
       tooltip: "Portal to Darkwoods North of Josody",
       region: "Krythan",
@@ -562,6 +581,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "portals",
       type: "portal_small",
       tooltip: "Portal to Hell",
       region: "Krythan",
@@ -576,6 +596,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "portals",
       type: "portal_small",
       tooltip: "Portal to Scarab Island",
       region: "Krythan",
@@ -594,6 +615,7 @@ export const mapMarkers = {
 
     // Island: Scarab Island Portals
     {
+      category: "portals",
       type: "portal_small",
       tooltip: "Portal to Krythan Region",
       region: "Western Isles",
@@ -613,9 +635,10 @@ export const mapMarkers = {
 
     // Darkwoods Portals
     {
+      category: "portals",
       type: "portal_blue",
       tooltip: "Portal to Krythan Island (West of New Korelth)",
-      region: "Mainland",
+      region: "Darkwoods",
       place: "Darkwoods",
       details: {
         title: "Portal to Krythan Island (West of New Korelth)",
@@ -627,9 +650,10 @@ export const mapMarkers = {
       },
     },
     {
+      category: "portals",
       type: "portal_housing",
       tooltip: "Portal to House Realm",
-      region: "Mainland",
+      region: "Darkwoods",
       place: "Darkwoods",
       details: {
         title: "Portal to House Realm",
@@ -641,10 +665,11 @@ export const mapMarkers = {
       },
     },
     {
+      category: "portals",
       type: "portal_lsp",
       tooltip: "Portal to Lotor's Summer Palace",
-      region: "Mainland",
-      place: "Darkwoods",
+      region: "Darkwoods",
+      place: "Josody",
       details: {
         title: "Portal to Lotor's Summer Palace",
         coordinates: { x: 1253, y: 2517 },
@@ -655,9 +680,10 @@ export const mapMarkers = {
       },
     },
     {
+      category: "portals",
       type: "portal_blue",
       tooltip: "Portal to Highlands (Southeast of Parian)",
-      region: "Mainland",
+      region: "Darkwoods",
       place: "Darkwoods",
       details: {
         title: "Portal to Highlands (Southeast of Parian)",
@@ -669,10 +695,11 @@ export const mapMarkers = {
       },
     },
     {
+      category: "portals",
       type: "portal_small",
       tooltip: "Portal to Mnemmon",
-      region: "Mainland",
-      place: "Darkwoods",
+      region: "Darkwoods",
+      place: "Mnemmon Gaol",
       details: {
         title: "Portal to Mnemmon",
         coordinates: { x: 866, y: 3416 },
@@ -683,10 +710,11 @@ export const mapMarkers = {
       },
     },
     {
+      category: "portals",
       type: "portal_small",
       tooltip: "Portal to Mnemmon Gaol",
-      region: "Mainland",
-      place: "Darkwoods",
+      region: "Darkwoods",
+      place: "Mnemmon",
       details: {
         title: "Portal to Mnemmon Gaol",
         coordinates: { x: 908, y: 3258 },
@@ -697,10 +725,11 @@ export const mapMarkers = {
       },
     },
     {
+      category: "portals",
       type: "portal_lsp",
       tooltip: "Portal to Lotor's Summer Palace",
-      region: "Mainland",
-      place: "Darkwoods",
+      region: "Darkwoods",
+      place: "Whisperdale",
       details: {
         title: "Portal to Lotor's Summer Palace",
         coordinates: { x: 471, y: 3479 },
@@ -713,9 +742,10 @@ export const mapMarkers = {
 
     // Battle Plains Portals
     {
+      category: "portals",
       type: "portal_small",
       tooltip: "Portal to Scorched Island",
-      region: "Mainland",
+      region: "Battle Plains",
       place: "Battle Plains",
       details: {
         title: "Portal to Scorched Island",
@@ -727,9 +757,10 @@ export const mapMarkers = {
       },
     },
     {
+      category: "portals",
       type: "portal_lsp",
       tooltip: "Portal to Proudblood Valley",
-      region: "Mainland",
+      region: "Battle Plains",
       place: "Battle Plains",
       details: {
         title: "Portal to Proudblood Valley",
@@ -741,10 +772,11 @@ export const mapMarkers = {
       },
     },
     {
+      category: "portals",
       type: "portal_small",
       tooltip: "Exit Proudblood Valley",
-      region: "Mainland",
-      place: "Battle Plains",
+      region: "Battle Plains",
+      place: "Proudblood Valley",
       details: {
         title: "Exit Proudblood Valley",
         coordinates: { x: 1962, y: 3650 },
@@ -759,9 +791,10 @@ export const mapMarkers = {
 
     // Region: Highlands Portals    
     {
+      category: "portals",
       type: "portal_small",
       tooltip: "Portal to Southern Highlands (Northeast of Grell)",
-      region: "Mainland",
+      region: "Highlands",
       place: "Highlands",
       details: {
         title: "Portal to Southern Highlands (Northeast of Grell)",
@@ -773,9 +806,10 @@ export const mapMarkers = {
       },
     },
     {
+      category: "portals",
       type: "portal_small",
       tooltip: "Portal to Highlands (North of Parian)",
-      region: "Mainland",
+      region: "Highlands",
       place: "Highlands",
       details: {
         title: "Portal to Highlands (North of Parian)",
@@ -787,9 +821,10 @@ export const mapMarkers = {
       },
     },
     {
+      category: "portals",
       type: "portal_blue",
       tooltip: "Portal to Darkwoods (East of Redwake)",
-      region: "Mainland",
+      region: "Highlands",
       place: "Highlands",
       details: {
         title: "Portal to Darkwoods (East of Redwake)",
@@ -801,9 +836,10 @@ export const mapMarkers = {
       },
     },
     {
+      category: "portals",
       type: "portal_blue",
       tooltip: "Portal to Krythan Island (West of New Korelth)",
-      region: "Mainland",
+      region: "Highlands",
       place: "Highlands",
       details: {
         title: "Portal to Krythan Island (West of New Korelth)",
@@ -816,10 +852,11 @@ export const mapMarkers = {
     },
     // City: Parian Portals
     {
+      category: "portals",
       type: "portal_lsp",
       tooltip: "Portal to Lotor's Summer Palace",
-      region: "Mainland",
-      place: "Highlands",
+      region: "Highlands",
+      place: "Parian",
       details: {
         title: "Portal to Lotor's Summer Palace",
         coordinates: { x: 3414, y: 2917 },
@@ -834,9 +871,10 @@ export const mapMarkers = {
 
     // Island: Lotor's Prison
     {
+      category: "portals",
       type: "portal_small",
       tooltip: "Portal to Lotor's Castle",
-      region: "Krythan",
+      region: "Western Isles",
       place: "Lotor's Prison",
       details: {
         title: "Portal to Lotor's Castle",
@@ -850,6 +888,7 @@ export const mapMarkers = {
 
     // Island: Hell Portals
     {
+      category: "portals",
       type: "portal_small",
       tooltip: "Portal to Scorched Island",
       region: "Hell",
@@ -864,6 +903,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "portals",
       type: "portal_small",
       tooltip: "Portal to Krythan Island",
       region: "Hell",
@@ -882,10 +922,11 @@ export const mapMarkers = {
 
     // Heartwood Coast Portals
     {
+      category: "portals",
       type: "portal_lsp",
       tooltip: "Portal to Lotor's Summer Palace",
       region: "Heartwood Coast",
-      place: "Heartwood Coast",
+      place: "Valmond",
       details: {
         title: "Portal to Lotor's Summer Palace",
         coordinates: { x: 2787, y: 2134 },
@@ -898,6 +939,7 @@ export const mapMarkers = {
 
     // Region: Tundria Portals
     {
+      category: "portals",
       type: "portal_lsp",
       tooltip: "Portal to Northern Frost Giant Island",
       region: "Tundria",
@@ -915,6 +957,7 @@ export const mapMarkers = {
     // Region: Sands of Creation Portals
     // City: Ruhura Side Portals
     {
+      category: "portals",
       type: "portal_lsp",
       tooltip: "Portal to Lotor's Summer Palace",
       region: "Sands of Creation",
@@ -929,6 +972,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "portals",
       type: "portal_blue",
       tooltip: "Portal to Dragon Lair (Blue Dragons)",
       region: "Sands of Creation",
@@ -946,6 +990,7 @@ export const mapMarkers = {
     // City: Khafra Side Portals
 
     {
+      category: "portals",
       type: "portal_lsp",
       tooltip: "Portal to Lotor's Summer Palace",
       region: "Sands of Creation",
@@ -960,6 +1005,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "portals",
       type: "portal_lsp",
       tooltip: "Portal to Artonian Island",
       region: "Sands of Creation",
@@ -974,6 +1020,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "portals",
       type: "portal_lsp",
       tooltip: "Portal to Khafra Side",
       region: "Sands of Creation",
@@ -997,6 +1044,7 @@ export const mapMarkers = {
     // Whirlpool Portals
     // Near Broken Finger
     {
+      category: "portals",
       type: "portal_whirlpool",
       tooltip: "Whirlpool to Obsidian Lake",
       region: "Broken Finger",
@@ -1011,6 +1059,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "portals",
       type: "portal_whirlpool",
       tooltip: "Whirlpool to Broken Lake",
       region: "Broken Finger",
@@ -1025,6 +1074,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "portals",
       type: "portal_whirlpool",
       tooltip: "Whirlpool to Proudblood Sound",
       region: "Broken Finger",
@@ -1041,9 +1091,10 @@ export const mapMarkers = {
 
     // Near Chlera
     {
+      category: "portals",
       type: "portal_whirlpool",
       tooltip: "Whirlpool to Obsidian Lake",
-      region: "Mainland",
+      region: "Battle Plains",
       place: "Chlera Bay", // Near Chlera Dock
       details: {
         title: "Whirlpool to Obsidian Lake",
@@ -1055,9 +1106,10 @@ export const mapMarkers = {
       },
     },
     {
+      category: "portals",
       type: "portal_whirlpool",
       tooltip: "Whirlpool to Lotor's Prison",
-      region: "Mainland",
+      region: "Battle Plains",
       place: "Chlera Bay", // Near Chlera Dock
       details: {
         title: "Whirlpool to Lotor's Prison",
@@ -1071,6 +1123,7 @@ export const mapMarkers = {
 
     // Near Test Island
     {
+      category: "portals",
       type: "portal_whirlpool",
       tooltip: "Whirlpool to Jeel Docks",
       region: "Western Isles",
@@ -1087,6 +1140,7 @@ export const mapMarkers = {
 
     // Near PVP Island
     {
+      category: "portals",
       type: "portal_whirlpool",
       tooltip: "Whirlpool to Silvest Bay",
       region: "Western Isles",
@@ -1103,6 +1157,7 @@ export const mapMarkers = {
 
     // Near Scarab Island
     {
+      category: "portals",
       type: "portal_whirlpool",
       tooltip: "Whirlpool to Tundria East of Duremar",
       region: "Western Isles",
@@ -1119,6 +1174,7 @@ export const mapMarkers = {
 
     // Near Silvest Valley
     {
+      category: "portals",
       type: "portal_whirlpool",
       tooltip: "Whirlpool to East Highlands of Death Tyrant Valley",
       region: "Krythan",
@@ -1135,6 +1191,7 @@ export const mapMarkers = {
 
     // Near Guild Arena Island
     {
+      category: "portals",
       type: "portal_whirlpool",
       tooltip: "Whirlpool to South of Test Island",
       region: "Krythan",
@@ -1151,6 +1208,7 @@ export const mapMarkers = {
 
     // Near Lotor's Prison
     {
+      category: "portals",
       type: "portal_whirlpool",
       tooltip: "Whirlpool to Chlera Bay",
       region: "Krythan",
@@ -1167,6 +1225,7 @@ export const mapMarkers = {
 
     // Near Duremar
     {
+      category: "portals",
       type: "portal_whirlpool",
       tooltip: "Whirlpool to Scarab Island",
       region: "Tundria",
@@ -1187,6 +1246,7 @@ export const mapMarkers = {
     // Island: Valinor Island Quests
     // Region: Valinor Quests
     {
+      category: "npc",
       type: "quest",
       tooltip: "Lord Trembley",
       region: "Valinor",
@@ -1201,6 +1261,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "quest",
       tooltip: "Duke Randolf",
       region: "Valinor",
@@ -1215,6 +1276,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "quest",
       tooltip: "Sandre (Wanders)",
       region: "Valinor",
@@ -1229,6 +1291,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "quest",
       tooltip: "Kumba Northern (Wanders)",
       region: "Valinor",
@@ -1243,6 +1306,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "quest",
       tooltip: "Mary Locksley (Wanders)",
       region: "Valinor",
@@ -1257,6 +1321,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "quest",
       tooltip: "Davey Logan (Wanders)",
       region: "Valinor",
@@ -1271,6 +1336,7 @@ export const mapMarkers = {
       },
     },    
     {
+      category: "npc",
       type: "quest",
       tooltip: "Imica (Wanders)",
       region: "Valinor",
@@ -1285,6 +1351,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "quest",
       tooltip: "Timothy Jager (Wanders)",
       region: "Valinor",
@@ -1299,6 +1366,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "quest",
       tooltip: "Sandre (Wanders)",
       region: "Valinor",
@@ -1313,6 +1381,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "quest",
       tooltip: "Hereward (Wanders)",
       region: "Valinor",
@@ -1327,6 +1396,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "quest",
       tooltip: "Topacia (Wanders)",
       region: "Valinor",
@@ -1341,6 +1411,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "quest",
       tooltip: "Alchemist Baki",
       region: "Valinor",
@@ -1355,6 +1426,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "quest",
       tooltip: "Sarah Bent",
       region: "Valinor",
@@ -1369,6 +1441,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "quest",
       tooltip: "Serina Wilcut",
       region: "Valinor",
@@ -1383,6 +1456,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "quest",
       tooltip: "Knight Bastrop",
       region: "Valinor",
@@ -1397,6 +1471,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "quest",
       tooltip: "Eustacius (Wanders)",
       region: "Valinor",
@@ -1411,6 +1486,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "quest",
       tooltip: "Curtis Leabu (Wanders)",
       region: "Valinor",
@@ -1425,6 +1501,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "quest",
       tooltip: "Hasculf (Wanders)",
       region: "Valinor",
@@ -1439,6 +1516,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "quest",
       tooltip: "A Young Maid (Wanders)",
       region: "Valinor",
@@ -1453,6 +1531,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "quest",
       tooltip: "Eastern Gate Lieutenant",
       region: "Valinor",
@@ -1467,6 +1546,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "quest",
       tooltip: "Roger Duncan",
       region: "Valinor",
@@ -1481,6 +1561,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "quest",
       tooltip: "Paula Duncan",
       region: "Valinor",
@@ -1639,12 +1720,13 @@ export const mapMarkers = {
     // Mainland Quests
 
     // Region: Darkwoods
-    // City: Darkwood Quests
+    // City: Dunmarrow Quests
     {
+      category: "npc",
       type: "quest",
       tooltip: "Corgeryn",
       region: "Darkwoods",
-      place: "Darkwood",
+      place: "Dunmarrow",
       details: {
         title: "Corgeryn Quest",
         coordinates: { x: 1387, y: 3180 },
@@ -1655,10 +1737,11 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "quest",
       tooltip: "Bonden",
       region: "Darkwoods",
-      place: "Darkwood",
+      place: "Dunmarrow",
       details: {
         title: "Bonden Quest",
         coordinates: { x: 1373, y: 3225 },
@@ -1669,10 +1752,11 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "quest",
       tooltip: "Henian",
       region: "Darkwoods",
-      place: "Darkwood",
+      place: "Dunmarrow",
       details: {
         title: "Henian Quest",
         coordinates: { x: 1371, y: 3196 },
@@ -1683,10 +1767,11 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "quest",
       tooltip: "Lord Malgoth",
       region: "Darkwoods",
-      place: "Darkwood",
+      place: "Dunmarrow",
       details: {
         title: "Lord Malgoth Quest",
         coordinates: { x: 1378, y: 3180 },
@@ -1697,10 +1782,11 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "quest",
       tooltip: "Lady Belarafyn",
       region: "Darkwoods",
-      place: "Darkwood",
+      place: "Dunmarrow",
       details: {
         title: "Lady Belarafyn Quest",
         coordinates: { x: 1372, y: 3182 },
@@ -1711,10 +1797,11 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "quest",
       tooltip: "Gabryll",
       region: "Darkwoods",
-      place: "Darkwood",
+      place: "Dunmarrow",
       details: {
         title: "Gabryll Quest",
         coordinates: { x: 1419, y: 3219 },
@@ -1728,6 +1815,7 @@ export const mapMarkers = {
     // Region: Highlands
     // City: Parian Quests
     {
+      category: "npc",
       type: "quest",
       tooltip: "Basil",
       region: "Highlands",
@@ -1742,6 +1830,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "quest",
       tooltip: "Claricia Forence",
       region: "Highlands",
@@ -1756,6 +1845,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "quest",
       tooltip: "Warlord Isbraen (Archery Trainer)",
       region: "Highlands",
@@ -1770,6 +1860,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "quest",
       tooltip: "Warlord Uerog (Warrior Trainer)",
       region: "Highlands",
@@ -1784,6 +1875,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "quest",
       tooltip: "Warlord Cheroth (Mage Trainer)",
       region: "Highlands",
@@ -1798,6 +1890,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "quest",
       tooltip: "Lloyd Dogen (Wanders)",
       region: "Highlands",
@@ -1812,6 +1905,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "quest",
       tooltip: "Chadwell",
       region: "Highlands",
@@ -1826,6 +1920,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "quest",
       tooltip: "Heudekka",
       region: "Highlands",
@@ -1845,6 +1940,7 @@ export const mapMarkers = {
 
     // City: Ethera Palace Quests
     {
+      category: "npc",
       type: "quest",
       tooltip: "Pegi",
       region: "Highlands",
@@ -1859,6 +1955,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "quest",
       tooltip: "Eldrid",
       region: "Highlands",
@@ -1873,6 +1970,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "quest",
       tooltip: "Lord Belski",
       region: "Highlands",
@@ -1891,6 +1989,7 @@ export const mapMarkers = {
 
     // Lotor's Summer Palace Quests
     {
+      category: "npc",
       type: "quest",
       tooltip: "Captain Renwood",
       region: "Western Isles",
@@ -1905,6 +2004,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "quest",
       tooltip: "Donkeo",
       region: "Western Isles",
@@ -1919,6 +2019,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "quest",
       tooltip: "Rodald (Wanders) - Rock Trolls Near Josody",
       region: "Western Isles",
@@ -1933,6 +2034,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "quest",
       tooltip: "Estiban (Wanders) - Sand Golems",
       region: "Western Isles",
@@ -1958,9 +2060,41 @@ export const mapMarkers = {
 
     // Region: Krythan Innkeeper
 
+    // Region: Darkwoods Innkeeper
+    // City: Josody Innkeeper
+
+    // City: Gulley Innkeeper
+
+    // City: Redwake Innkeeper
+
+    // City: Darkfell Innkeeper
+
+    // City: Dunmarrow Innkeeper
+    {
+      category: "npc",
+      type: "inn_keeper",
+      tooltip: "Dunmarrow Innkeeper",
+      region: "Darkwoods",
+      place: "Dunmarrow",
+      details: {
+        title: "Dunmarrow Innkeeper",
+        coordinates: { x: 1372, y: 3218 },
+        image: "images/markers/Dunmarrow_Innkeeper.png",
+        lore: "More information about Dunmarrow Innkeeper is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // City: Autumn Innkeeper
+
+    // City: Whisperdale Innkeeper
+
+
     // Region: Highlands Innkeeper
     // City: Parian Innkeeper
     {
+      category: "npc",
       type: "inn_keeper",
       tooltip: "Parian Innkeeper",
       region: "Highlands",
@@ -1978,6 +2112,7 @@ export const mapMarkers = {
     // City: Grell - Located in underground-markers.js
     // City: Ethera Palace Innkeeper
     {
+      category: "npc",
       type: "inn_keeper",
       tooltip: "Ethera Palace Innkeeper",
       region: "Highlands",
@@ -1998,6 +2133,7 @@ export const mapMarkers = {
 
     // Region: Krythan Island Docks
     {
+      category: "dock",
       type: "dock",
       tooltip: "Silvest Northern Island Dock",
       region: "Krythan",
@@ -2012,6 +2148,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "dock",
       type: "dock",
       tooltip: "Jeel Dock",
       region: "Krythan",
@@ -2026,6 +2163,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "dock",
       type: "dock",
       tooltip: "Lotor's Castle Dock",
       region: "Krythan",
@@ -2040,6 +2178,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "dock",
       type: "dock",
       tooltip: "New Korelth Dock",
       region: "Krythan",
@@ -2054,6 +2193,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "dock",
       type: "dock",
       tooltip: "Tallem'im House Dock",
       region: "Krythan",
@@ -2068,6 +2208,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "dock",
       type: "dock",
       tooltip: "Karzak Cove Dock",
       region: "Krythan",
@@ -2082,6 +2223,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "dock",
       type: "dock",
       tooltip: "Karzak Cove Dock",
       region: "Krythan",
@@ -2096,6 +2238,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "dock",
       type: "dock",
       tooltip: "Fort Eastwatch Dock",
       region: "Krythan",
@@ -2110,6 +2253,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "dock",
       type: "dock",
       tooltip: "Silvest Dock",
       region: "Krythan",
@@ -2124,6 +2268,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "dock",
       type: "dock",
       tooltip: "Silvest Island Dock",
       region: "Krythan",
@@ -2141,6 +2286,7 @@ export const mapMarkers = {
 
     // Lotor's Summer Palace Docks
     {
+      category: "dock",
       type: "dock",
       tooltip: "Palace Dock",
       region: "Western Isles",
@@ -2155,6 +2301,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "dock",
       type: "dock",
       tooltip: "LSP Dock",
       region: "Western Isles",
@@ -2179,9 +2326,10 @@ export const mapMarkers = {
 
     // Darkwoods Docks
     {
+      category: "dock",
       type: "dock",
       tooltip: "Josody Dock",
-      region: "Mainland",
+      region: "Darkwoods",
       place: "Darkwoods",
       details: {
         title: "Josody Dock",
@@ -2193,9 +2341,10 @@ export const mapMarkers = {
       },
     },
     {
+      category: "dock",
       type: "dock",
       tooltip: "Redwake Dock",
-      region: "Mainland",
+      region: "Darkwoods",
       place: "Darkwoods",
       details: {
         title: "Redwake Dock",
@@ -2207,9 +2356,10 @@ export const mapMarkers = {
       },
     },
     {
+      category: "dock",
       type: "dock",
       tooltip: "Dragoon Dock",
-      region: "Mainland",
+      region: "Darkwoods",
       place: "Darkwoods",
       details: {
         title: "Dragoon Dock",
@@ -2221,9 +2371,10 @@ export const mapMarkers = {
       },
     }, // Just gave it a name, not sure if it's correct
     {
+      category: "dock",
       type: "dock",
       tooltip: "Whisperdale Dock",
-      region: "Mainland",
+      region: "Darkwoods",
       place: "Darkwoods",
       details: {
         title: "Whisperdale Dock",
@@ -2235,9 +2386,10 @@ export const mapMarkers = {
       },
     },
     {
+      category: "dock",
       type: "dock",
       tooltip: "Darkfell Dock",
-      region: "Mainland",
+      region: "Darkwoods",
       place: "Darkwoods",
       details: {
         title: "Darkfell Dock",
@@ -2249,9 +2401,10 @@ export const mapMarkers = {
       },
     }, // This is the ruins next to Dunmarrow Dock but I'm not sure what it's called Question
     {
+      category: "dock",
       type: "dock",
       tooltip: "Dunmarrow Dock",
-      region: "Mainland",
+      region: "Darkwoods",
       place: "Darkwoods",
       details: {
         title: "Dunmarrow Dock",
@@ -2265,9 +2418,10 @@ export const mapMarkers = {
 
     // Battle Plains Docks
     {
+      category: "dock",
       type: "dock",
       tooltip: "Wandering Spirit Dock",
-      region: "Mainland",
+      region: "Battle Plains",
       place: "Battle Plains",
       details: {
         title: "Wandering Spirit Dock",
@@ -2279,9 +2433,10 @@ export const mapMarkers = {
       },
     }, // This is above Shadow Temple Entrance I'm not sure what the ruins are called Question
     {
+      category: "dock",
       type: "dock",
       tooltip: "Chlera Dock",
-      region: "Mainland",
+      region: "Battle Plains",
       place: "Battle Plains",
       details: {
         title: "Chlera Dock",
@@ -2293,9 +2448,10 @@ export const mapMarkers = {
       },
     },
     {
+      category: "dock",
       type: "dock",
       tooltip: "Battle Plains Dock",
-      region: "Mainland",
+      region: "Battle Plains",
       place: "Battle Plains",
       details: {
         title: "Battle Plains Dock",
@@ -2307,9 +2463,10 @@ export const mapMarkers = {
       },
     },
     {
+      category: "dock",
       type: "dock",
       tooltip: "Maraket Dock",
-      region: "Mainland",
+      region: "Battle Plains",
       place: "Battle Plains",
       details: {
         title: "Maraket Dock",
@@ -2323,10 +2480,11 @@ export const mapMarkers = {
 
     // Black Swamp Docks
     {
+      category: "dock",
       type: "dock",
       tooltip: "Samad Dock",
-      region: "Mainland",
-      place: "Black Swamp",
+      region: "Black Swamp",
+      place: "Samad",
       details: {
         title: "Samad Dock",
         coordinates: { x: 2611, y: 3510 },
@@ -2339,9 +2497,10 @@ export const mapMarkers = {
 
     // Highlands Docks
     {
+      category: "dock",
       type: "dock",
       tooltip: "Ethera Palace Dock",
-      region: "Mainland",
+      region: "Highlands",
       place: "Highlands",
       details: {
         title: "Ethera Palace Dock",
@@ -2353,9 +2512,10 @@ export const mapMarkers = {
       },
     },
     {
+      category: "dock",
       type: "dock",
       tooltip: "Ethera Mining Company Dock",
-      region: "Mainland",
+      region: "Highlands",
       place: "Highlands",
       details: {
         title: "Ethera Mining Company Dock",
@@ -2367,9 +2527,10 @@ export const mapMarkers = {
       },
     },
     {
+      category: "dock",
       type: "dock",
       tooltip: "Highlands East Dock - East of Parian",
-      region: "Mainland",
+      region: "Highlands",
       place: "Highlands",
       details: {
         title: "Highlands East Dock - East of Parian",
@@ -2381,9 +2542,10 @@ export const mapMarkers = {
       },
     },
     {
+      category: "dock",
       type: "dock",
       tooltip: "Glamara McPlum's Dock",
-      region: "Mainland",
+      region: "Highlands",
       place: "Highlands",
       details: {
         title: "Glamara McPlum's Dock",
@@ -2395,9 +2557,10 @@ export const mapMarkers = {
       },
     },
     {
+      category: "dock",
       type: "dock",
       tooltip: "North Highlands Dock",
-      region: "Mainland",
+      region: "Highlands",
       place: "Highlands",
       details: {
         title: "North Highlands Dock",
@@ -2411,6 +2574,7 @@ export const mapMarkers = {
 
     // Western Isles Docks
     {
+      category: "dock",
       type: "dock",
       tooltip: "Ettin Island Dock",
       region: "Western Isles",
@@ -2430,10 +2594,11 @@ export const mapMarkers = {
 
     // Heartwood Coast Docks
     {
+      category: "dock",
       type: "dock",
       tooltip: "Valmond East Dock",
       region: "Heartwood Coast",
-      place: "Heartwood Coast",
+      place: "Valmond",
       details: {
         title: "Valmond East Dock",
         coordinates: { x: 2590, y: 2182 },
@@ -2444,10 +2609,11 @@ export const mapMarkers = {
       },
     },
     {
+      category: "dock",
       type: "dock",
       tooltip: "Valmond East Dock",
       region: "Heartwood Coast",
-      place: "Heartwood Coast",
+      place: "Valmond",
       details: {
         title: "Valmond East Dock",
         coordinates: { x: 2590, y: 2194 },
@@ -2458,10 +2624,11 @@ export const mapMarkers = {
       },
     },
     {
+      category: "dock",
       type: "dock",
       tooltip: "Valmond North Dock",
       region: "Heartwood Coast",
-      place: "Heartwood Coast",
+      place: "Valmond",
       details: {
         title: "Valmond North Dock",
         coordinates: { x: 2653, y: 2115 },
@@ -2472,10 +2639,11 @@ export const mapMarkers = {
       },
     },
     {
+      category: "dock",
       type: "dock",
       tooltip: "Valmond North Dock",
       region: "Heartwood Coast",
-      place: "Heartwood Coast",
+      place: "Valmond",
       details: {
         title: "Valmond North Dock",
         coordinates: { x: 2661, y: 2129 },
@@ -2486,10 +2654,11 @@ export const mapMarkers = {
       },
     },
     {
+      category: "dock",
       type: "dock",
       tooltip: "Valmond North Dock",
       region: "Heartwood Coast",
-      place: "Heartwood Coast",
+      place: "Valmond",
       details: {
         title: "Valmond North Dock",
         coordinates: { x: 2676, y: 2129 },
@@ -2500,10 +2669,11 @@ export const mapMarkers = {
       },
     },
     {
+      category: "dock",
       type: "dock",
       tooltip: "Teylan Dock",
       region: "Heartwood Coast",
-      place: "Heartwood Coast",
+      place: "Teylan",
       details: {
         title: "Teylan Dock",
         coordinates: { x: 2422, y: 1640 },
@@ -2514,6 +2684,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "dock",
       type: "dock",
       tooltip: "Heartwood North Dock (Northeast of Syldural)",
       region: "Heartwood Coast",
@@ -2530,6 +2701,7 @@ export const mapMarkers = {
 
     // Region: Tundria Docks
     {
+      category: "dock",
       type: "dock",
       tooltip: "Duremar Dock",
       region: "Tundria",
@@ -2544,6 +2716,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "dock",
       type: "dock",
       tooltip: "Southeast Tundria Dock",
       region: "Tundria",
@@ -2558,6 +2731,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "dock",
       type: "dock",
       tooltip: "Bridge Dock",
       region: "Tundria",
@@ -2572,6 +2746,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "dock",
       type: "dock",
       tooltip: "Maroven North Dock",
       region: "Tundria",
@@ -2586,6 +2761,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "dock",
       type: "dock",
       tooltip: "Maroven Dock",
       region: "Tundria",
@@ -2600,6 +2776,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "dock",
       type: "dock",
       tooltip: "Maroven Dock",
       region: "Tundria",
@@ -2614,6 +2791,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "dock",
       type: "dock",
       tooltip: "Maroven Dock",
       region: "Tundria",
@@ -2628,6 +2806,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "dock",
       type: "dock",
       tooltip: "Ruins of Osgarl Dock",
       region: "Tundria",
@@ -2642,6 +2821,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "dock",
       type: "dock",
       tooltip: "Tundria Northern Dock", // Temporary name until official name is known
       region: "Tundria",
@@ -2658,6 +2838,7 @@ export const mapMarkers = {
 
     // Island: Scarab Island Docks
     {
+      category: "dock",
       type: "dock",
       tooltip: "Lopal Dock",
       region: "Western Isles",
@@ -2679,6 +2860,7 @@ export const mapMarkers = {
     // Region: Sands of Creation Docks
     // City: Ruhura Side Docks
     {
+      category: "dock",
       type: "dock",
       tooltip: "Ruhura Dock",
       region: "Sands of Creation",
@@ -2695,6 +2877,7 @@ export const mapMarkers = {
 
     // Greater Dragon Island Docks
     {
+      category: "dock",
       type: "dock",
       tooltip: "Greater Dragon Island Dock",
       region: "Sands of Creation",
@@ -2711,6 +2894,7 @@ export const mapMarkers = {
 
     // City: Khafra Side Docks
     {
+      category: "dock",
       type: "dock",
       tooltip: "Khafra Fishing Outpost Dock",
       region: "Sands of Creation",
@@ -2725,6 +2909,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "dock",
       type: "dock",
       tooltip: "Khafra Dock",
       region: "Sands of Creation",
@@ -2742,6 +2927,7 @@ export const mapMarkers = {
     // Region: Breakwater Region Docks
     // New Town Island Docks
     {
+      category: "dock",
       type: "dock",
       tooltip: "New Town Dock",
       region: "Breakwater",
@@ -2756,6 +2942,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "dock",
       type: "dock",
       tooltip: "Undead Dwarven Dock",
       region: "Breakwater",
@@ -2770,6 +2957,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "dock",
       type: "dock",
       tooltip: "Deadman Island Dock",
       region: "Breakwater",
@@ -2786,6 +2974,7 @@ export const mapMarkers = {
 
     // Roycroft Island Docks
     {
+      category: "dock",
       type: "dock",
       tooltip: "Roycroft North Dock",
       region: "Breakwater",
@@ -2800,6 +2989,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "dock",
       type: "dock",
       tooltip: "Roycroft South Dock",
       region: "Breakwater",
@@ -2814,6 +3004,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "dock",
       type: "dock",
       tooltip: "Roycroft South Dock",
       region: "Breakwater",
@@ -2828,6 +3019,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "dock",
       type: "dock",
       tooltip: "Roycroft South Dock",
       region: "Breakwater",
@@ -2844,6 +3036,7 @@ export const mapMarkers = {
 
     // New Royale Island Docks
     {
+      category: "dock",
       type: "dock",
       tooltip: "Pirate Raider's Dock",
       region: "Breakwater",
@@ -2858,6 +3051,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "dock",
       type: "dock",
       tooltip: "New Royal North Dock",
       region: "Breakwater",
@@ -2872,6 +3066,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "dock",
       type: "dock",
       tooltip: "New Royal South Dock",
       region: "Breakwater",
@@ -2886,6 +3081,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "dock",
       type: "dock",
       tooltip: "New Royal Island South Dock",
       region: "Breakwater",
@@ -2900,6 +3096,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "dock",
       type: "dock",
       tooltip: "Crab Island Dock",
       region: "Breakwater",
@@ -2916,6 +3113,7 @@ export const mapMarkers = {
 
     // Region: Broken Finger Region Docks
     {
+      category: "dock",
       type: "dock",
       tooltip: "Broken Finger Town Dock",
       region: "Broken Finger",
@@ -2930,6 +3128,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "dock",
       type: "dock",
       tooltip: "Broken Finger Island Dock",
       region: "Broken Finger",
@@ -2950,6 +3149,7 @@ export const mapMarkers = {
     // Region: Valinor
     // City: Valinor
     {
+      category: "npc",
       type: "information_npc",
       tooltip: "Sage Haritod",
       region: "Valinor",
@@ -2966,6 +3166,7 @@ export const mapMarkers = {
 
     /*Lotor's Summer Palace Information*/
     {
+      category: "npc",
       type: "information_npc",
       tooltip: "Fallen Warriors Memorial",
       region: "Western Isles",
@@ -2980,6 +3181,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "information_npc",
       tooltip: "Memorial to the Lost Sons",
       region: "Western Isles",
@@ -2993,6 +3195,7 @@ export const mapMarkers = {
         links: [],
       },
     },{
+      category: "npc",
       type: "information_npc",
       tooltip: "Brain Smith Memorial",
       region: "Western Isles",
@@ -3007,6 +3210,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "information_npc",
       tooltip: "Jamoal the Sage (Wanders)",
       region: "Western Isles",
@@ -3021,6 +3225,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "information_npc",
       tooltip: "PvP Island Information",
       region: "Western Isles",
@@ -3041,6 +3246,7 @@ export const mapMarkers = {
     // Region: Krythan Information
     // City: Verthpool Information
     {
+      category: "npc",
       type: "information_npc",
       tooltip: "Grim Demonhunter",
       region: "Krythan",
@@ -3059,9 +3265,10 @@ export const mapMarkers = {
 
     // Region: Darkwoods Information
     {
+      category: "npc",
       type: "information_npc",
       tooltip: "The Utopia Shard",
-      region: "Mainland",
+      region: "Darkwoods",
       place: "Darkwoods",
       details: {
         title: "The Utopia Shard",
@@ -3101,6 +3308,7 @@ export const mapMarkers = {
     // Island: Krythan Island Town Stewards
     // Region: Silvest Valley Town Stewards
     {
+      category: "npc",
       type: "town_steward",
       tooltip: "Town Steward (Silvest)",
       region: "Silvest Valley",
@@ -3120,6 +3328,7 @@ export const mapMarkers = {
     // Region: Darkwoods Town Stewards
 
     {
+      category: "npc",
       type: "town_steward",
       tooltip: "Town Steward (Whisperdale)",
       region: "Darkwoods",
@@ -3137,6 +3346,7 @@ export const mapMarkers = {
 
     // Region: Black Swamp Town Stewards
     {
+      category: "npc",
       type: "town_steward",
       tooltip: "Town Steward (Krog)",
       region: "Black Swamp",
@@ -3187,6 +3397,7 @@ export const mapMarkers = {
 
     // City: Dunmarrow Guards
     {
+      category: "npc",
       type: "town_guardian",
       tooltip: "Town Guardian (Dunmarrow)",
       region: "Darkwoods",
@@ -3208,6 +3419,7 @@ export const mapMarkers = {
     // Region: Highlands Guards
     // City: Parian Guards
     {
+      category: "npc",
       type: "town_guardian",
       tooltip: "Town Guardian (Parian)",
       region: "Highlands",
@@ -3223,6 +3435,7 @@ export const mapMarkers = {
     },
     // City: Arda Town Guardians
     {
+      category: "npc",
       type: "town_guardian",
       tooltip: "Town Guardian (Arda)",
       region: "Highlands",
@@ -3241,6 +3454,7 @@ export const mapMarkers = {
 
     // City: Ethera Palace Town Guardians
     {
+      category: "npc",
       type: "town_guardian",
       tooltip: "Town Guardian (Ethera Palace)",
       region: "Highlands",
@@ -3289,6 +3503,7 @@ export const mapMarkers = {
 
     // City: Arda Town Wizard of Insight
     {
+      category: "npc",
       type: "town_wizard_of_insight",
       tooltip: "Town Wizard of Insight (Arda)",
       region: "Highlands",
@@ -3307,6 +3522,7 @@ export const mapMarkers = {
 
     // City: Ethera Palace Town Wizard of Insight
     {
+      category: "npc",
       type: "town_wizard_of_insight",
       tooltip: "Town Wizard of Insight (Ethera Palace)",
       region: "Highlands",
@@ -3336,6 +3552,7 @@ export const mapMarkers = {
 
     // City: Whisperdale Town Wizard of Insight
     {
+      category: "npc",
       type: "town_wizard_of_insight",
       tooltip: "Town Wizard of Insight (Dunmarrow)",
       region: "Darkwoods",
@@ -3353,6 +3570,7 @@ export const mapMarkers = {
     // Sub-Category Game of Chance
     // Island: Lotor's Summer Palace Game of Chance
     {
+      category: "npc",
       type: "game_of_chance",
       tooltip: "Malson's Demon's Eye Game",
       region: "Western Isles",
@@ -3380,6 +3598,7 @@ export const mapMarkers = {
     // Region: Highlands Games of Chance
     // City: Parian Games of Chance
     {
+      category: "npc",
       type: "game_of_chance",
       tooltip: "Trinde's Demon Eye Game",
       region: "Krythan",
@@ -3394,6 +3613,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "game_of_chance",
       tooltip: "Baldrus's Demon Eye Game (Wanders)",
       region: "Krythan",
@@ -3422,6 +3642,7 @@ export const mapMarkers = {
     // Regoin: Western Isles Games of Chance
     // City: Lopal Games of Chance
     {
+      category: "npc",
       type: "game_of_chance",
       tooltip: "Lopal Demon Eye",
       region: "Western Isles",
@@ -3439,6 +3660,7 @@ export const mapMarkers = {
     // Sub-Category Events
     // Island: Lotor's Summer Palace
     {
+      category: "npc",
       type: "event_judge",
       tooltip: "Fishing Event Judge",
       region: "Western Isles",
@@ -3453,6 +3675,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "event_judge",
       tooltip: "Mining Event Judge",
       region: "Western Isles",
@@ -3478,6 +3701,7 @@ export const mapMarkers = {
     // Highlands Events
     // City: Parian Events
     {
+      category: "npc",
       type: "event_ticket",
       tooltip: "Armsmaster (The Guantlet Challenge)",
       region: "Western Isles",
@@ -3509,20 +3733,22 @@ export const mapMarkers = {
     /* Mainland Crafting Locations */
     // Region Western Isles
     {
+      category: "crafting",
       type: "obelisk",
-      tooltip: "Desprail Island Obelisk",
+      tooltip: "Obelisk Island Obelisk",
       region: "Western Isles",
-      place: "Desprail Island",
+      place: "Obelisk Island",
       details: {
-        title: "Desprail Island Obelisk",
+        title: "Obelisk Island Obelisk",
         coordinates: { x: 2107, y: 2732 },
-        image: "images/markers/image_coming_soon.png",
-        lore: "More information about Desprail Island Obelisk is coming soon.",
+        image: "images/markers/Obelisk_Island_Obelisk.png",
+        lore: "More information about Obelisk Island Obelisk is coming soon.",
         npcs: [],
         links: [],
       },
     },
     {
+      category: "crafting",
       type: "obelisk",
       tooltip: "Hell Rune Spire",
       region: "Hell",
@@ -3539,6 +3765,7 @@ export const mapMarkers = {
 
     // Crafting Region: Tundria
     {
+      category: "crafting",
       type: "obelisk",
       tooltip: "Northwest Tundria Obelisk",
       region: "Tundria",
@@ -3553,6 +3780,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "crafting",
       type: "obelisk",
       tooltip: "Hammerfist Obelisk",
       region: "Tundria",
@@ -3567,6 +3795,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "crafting",
       type: "obelisk",
       tooltip: "Tundria Rune Spire",
       region: "Tundria",
@@ -3584,6 +3813,7 @@ export const mapMarkers = {
 
     // Sub-Category Altar
     {
+      category: "altar",
       type: "altar",
       tooltip: "Evil Altar",
       region: "Western Isles",
@@ -3601,6 +3831,7 @@ export const mapMarkers = {
     //Valinor Island Bank
 
     {
+      category: "npc",
       type: "bank",
       tooltip: "Bank",
       region: "Valinor",
@@ -3616,6 +3847,7 @@ export const mapMarkers = {
     },
     //Lotor's Summer Palace Bank
     {
+      category: "npc",
       type: "bank",
       tooltip: "Bank",
       region: "Western Isles",
@@ -3635,6 +3867,7 @@ export const mapMarkers = {
     // Region: Silvest Valley Bank
     // City: Fort Eastwatch
     {
+      category: "npc",
       type: "bank",
       tooltip: "Bank",
       region: "Silvest Valley",
@@ -3650,6 +3883,7 @@ export const mapMarkers = {
     },
     // City: Silvest Bank
     {
+      category: "npc",
       type: "bank",
       tooltip: "Bank",
       region: "Silvest Valley",
@@ -3665,6 +3899,7 @@ export const mapMarkers = {
     },
     // City: Cliffside Bank
     {
+      category: "npc",
       type: "bank",
       tooltip: "Bank",
       region: "Krythan",
@@ -3682,6 +3917,7 @@ export const mapMarkers = {
     // Region: Krythan Bank
     // City: Varg Bank
     {
+      category: "npc",
       type: "bank",
       tooltip: "Bank",
       region: "Krythan",
@@ -3709,9 +3945,10 @@ export const mapMarkers = {
 
     // City: Dunmarrow Bank
     {
+      category: "npc",
       type: "bank",
       tooltip: "Bank",
-      region: "Highlands",
+      region: "Darkwoods",
       place: "Dunmarrow",
       details: {
         title: "Dunmarrow Bank",
@@ -3723,9 +3960,10 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "bank",
       tooltip: "Wythwyvn's Bank",
-      region: "Highlands",
+      region: "Darkwoods",
       place: "Dunmarrow",
       details: {
         title: "Dunmarrow Bank",
@@ -3747,6 +3985,7 @@ export const mapMarkers = {
     // Region: Highlands Bank
     // City: Parian Bank
     {
+      category: "npc",
       type: "bank",
       tooltip: "North Bank",
       region: "Highlands",
@@ -3761,6 +4000,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "bank",
       tooltip: "East Bank",
       region: "Highlands",
@@ -3775,6 +4015,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "bank",
       tooltip: "South Bank",
       region: "Highlands",
@@ -3790,6 +4031,7 @@ export const mapMarkers = {
     },
     // City: Arda Bank
     {
+      category: "npc",
       type: "bank",
       tooltip: "Bank",
       region: "Highlands",
@@ -3805,6 +4047,7 @@ export const mapMarkers = {
     },
     //City: Ethera Palace Bank
     {
+      category: "npc",
       type: "bank",
       tooltip: "Bank",
       region: "Highlands",
@@ -3821,6 +4064,7 @@ export const mapMarkers = {
 
     // City: Lopal Bank
     {
+      category: "npc",
       type: "bank",
       tooltip: "Bank",
       region: "Western Isles",
@@ -3849,6 +4093,7 @@ export const mapMarkers = {
     // Island: Valinor Island Trainers
 
     {
+      category: "npc",
       type: "trainer",
       tooltip: "Cooking Trainers",
       region: "Valinor",
@@ -3863,6 +4108,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "trainer",
       tooltip: "Visdel",
       region: "Valinor",
@@ -3877,6 +4123,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "trainer",
       tooltip: "Leatherworking Trainer",
       region: "Valinor",
@@ -3891,6 +4138,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "trainer",
       tooltip: "Dalembert",
       region: "Valinor",
@@ -3905,6 +4153,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "trainer",
       tooltip: "Blacksmith Trainer",
       region: "Valinor",
@@ -3919,6 +4168,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "trainer",
       tooltip: "Zach",
       region: "Valinor",
@@ -3933,6 +4183,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "trainer",
       tooltip: "Carpentry Trainer",
       region: "Valinor",
@@ -3947,6 +4198,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "trainer",
       tooltip: "Aylesha",
       region: "Valinor",
@@ -3961,6 +4213,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "trainer",
       tooltip: "Thrown Weapons Trainers",
       region: "Valinor",
@@ -3975,6 +4228,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "trainer",
       tooltip: "Large Blades Trainer",
       region: "Valinor",
@@ -3989,6 +4243,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "trainer",
       tooltip: "Small Blades Trainer",
       region: "Valinor",
@@ -4003,6 +4258,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "trainer",
       tooltip: "Archery Trainer",
       region: "Valinor",
@@ -4017,6 +4273,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "trainer",
       tooltip: "Crossbow Trainer",
       region: "Valinor",
@@ -4031,6 +4288,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "trainer",
       tooltip: "Axe Trainer",
       region: "Valinor",
@@ -4045,6 +4303,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "trainer",
       tooltip: "Polearms Trainer",
       region: "Valinor",
@@ -4059,6 +4318,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "trainer",
       tooltip: "Blunt Weapon Trainer",
       region: "Valinor",
@@ -4073,6 +4333,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "trainer",
       tooltip: "Warrior Apprentice (Wanders)",
       region: "Valinor",
@@ -4087,6 +4348,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "trainer",
       tooltip: "Leadership Trainers",
       region: "Valinor",
@@ -4101,6 +4363,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "trainer",
       tooltip: "Tailoring Trainer",
       region: "Valinor",
@@ -4115,6 +4378,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "trainer",
       tooltip: "Farming Trainer",
       region: "Valinor",
@@ -4129,6 +4393,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "trainer",
       tooltip: "Ralnaka (Farming Information)",
       region: "Valinor",
@@ -4143,6 +4408,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "trainer",
       tooltip: "Valinor Orb Reset",
       region: "Valinor",
@@ -4157,6 +4423,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "trainer",
       tooltip: "Island Steward",
       region: "Valinor",
@@ -4171,6 +4438,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "trainer",
       tooltip: "Osalka Farming Expert (Wanders)",
       region: "Valinor",
@@ -4189,6 +4457,7 @@ export const mapMarkers = {
 
     // Lotor's Summer Palace Trainers
     {
+      category: "npc",
       type: "trainer",
       tooltip: "Master Draftsman",
       region: "Western Isles",
@@ -4203,6 +4472,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "trainer",
       tooltip: "Henchman Trainer",
       region: "Western Isles",
@@ -4217,6 +4487,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "trainer",
       tooltip: "Real Estate Agent",
       region: "Western Isles",
@@ -4231,6 +4502,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "trainer",
       tooltip: "Lotorian Faction Officer",
       region: "Western Isles",
@@ -4245,6 +4517,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "trainer",
       tooltip: "Champion of Lotor",
       region: "Western Isles",
@@ -4259,6 +4532,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "trainer",
       tooltip: "Advanced Skill Trainer",
       region: "Western Isles",
@@ -4273,6 +4547,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "trainer",
       tooltip: "Lotor's Steward",
       region: "Western Isles",
@@ -4287,6 +4562,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "trainer",
       tooltip: "Alchemy Taskmaster",
       region: "Western Isles",
@@ -4301,6 +4577,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "trainer",
       tooltip: "Brewing Taskmaster",
       region: "Western Isles",
@@ -4315,6 +4592,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "trainer",
       tooltip: "Carpentry Taskmaster",
       region: "Western Isles",
@@ -4329,6 +4607,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "trainer",
       tooltip: "Neutral Faction Officer",
       region: "Western Isles",
@@ -4343,6 +4622,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "trainer",
       tooltip: "Farming Taskmaster",
       region: "Western Isles",
@@ -4379,6 +4659,7 @@ export const mapMarkers = {
     // Island: Scarab Island Trainers
     // City: Lopal Trainers
     {
+      category: "npc",
       type: "trainer",
       tooltip: "Carpentry Taskmaster",
       region: "Western Isles",
@@ -4393,6 +4674,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "trainer",
       tooltip: "Farming Taskmaster",
       region: "Western Isles",
@@ -4407,6 +4689,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "trainer",
       tooltip: "Tailoring Taskmaster",
       region: "Western Isles",
@@ -4421,6 +4704,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "trainer",
       tooltip: "Brewing Taskmaster",
       region: "Western Isles",
@@ -4435,6 +4719,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "trainer",
       tooltip: "Blacksmith Taskmaster",
       region: "Western Isles",
@@ -4449,6 +4734,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "trainer",
       tooltip: "Leatherworking Taskmaster",
       region: "Western Isles",
@@ -4463,6 +4749,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "trainer",
       tooltip: "Alchemy Taskmaster",
       region: "Western Isles",
@@ -4482,6 +4769,7 @@ export const mapMarkers = {
   shops: [
     // Island: Party Island
     {
+      category: "npc",
       type: "shop_pub",
       tooltip: "Dalgo's Tavern",
       region: "Western Isles",
@@ -4499,6 +4787,7 @@ export const mapMarkers = {
     // Island: Valinor Island Shops
     // Region: Valinor
     {
+      category: "npc",
       type: "shop_pub",
       tooltip: "Larodeth Lywelyn's Pub and Grub Tavern",
       region: "Valinor",
@@ -4513,6 +4802,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_weapon",
       tooltip: "Micheal Vonda's Weapon Shop",
       region: "Valinor",
@@ -4527,6 +4817,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_armory",
       tooltip: "Thomas Blackstone's Armory Shop",
       region: "Valinor",
@@ -4541,6 +4832,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_provisioner",
       tooltip: "Whiliam Rosen's Provisioner Shop",
       region: "Valinor",
@@ -4555,6 +4847,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_provisioner",
       tooltip: "Leon Elias's Provisioner Shop",
       region: "Valinor",
@@ -4569,6 +4862,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_magic",
       tooltip: "Cladius Zamilus's Magic Shop",
       region: "Valinor",
@@ -4583,6 +4877,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_carpentry",
       tooltip: "Linus Houson's Carpentry Store",
       region: "Valinor",
@@ -4597,6 +4892,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_blacksmith",
       tooltip: "Kerry Thomas' Blacksmith Shop ",
       region: "Valinor",
@@ -4611,6 +4907,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_leather",
       tooltip: "Tina Florence's Leather Shop",
       region: "Valinor",
@@ -4633,6 +4930,7 @@ export const mapMarkers = {
     // Region: Silvest Valley Shops
     // City: Cliffside Shops
     {
+      category: "npc",
       type: "shop_pub",
       tooltip: "Folger's Pub",
       region: "Silvest Valley",
@@ -4647,6 +4945,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_provisioner",
       tooltip: "Stedwyck's Provisioner Shop",
       region: "Silvest Valley",
@@ -4661,6 +4960,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_leather",
       tooltip: "Glover's Leather Shop",
       region: "Silvest Valley",
@@ -4675,6 +4975,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_carpentry",
       tooltip: "Peake's Carpentry Shop",
       region: "Silvest Valley",
@@ -4691,6 +4992,7 @@ export const mapMarkers = {
 
     // City: Silvest Shops
     {
+      category: "npc",
       type: "shop_weapon",
       tooltip: "Bertwald's Weapon Shop",
       region: "Silvest Valley",
@@ -4705,6 +5007,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_armory",
       tooltip: "Oswyn's Armory Shop",
       region: "Silvest Valley",
@@ -4719,6 +5022,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_blacksmith",
       tooltip: "Eadwyn's Blacksmith Shop",
       region: "Silvest Valley",
@@ -4733,6 +5037,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_pub",
       tooltip: "Cearl's Pub",
       alias: "Triddle's Tavern",
@@ -4748,6 +5053,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_farming",
       tooltip: "Bunker's Farming Shop",
       region: "Silvest Valley",
@@ -4762,6 +5068,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_leather",
       tooltip: "Vessik's Leather Shop",
       region: "Silvest Valley",
@@ -4776,6 +5083,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_carpentry",
       tooltip: "Bunden's Carpentry Shop",
       region: "Silvest Valley",
@@ -4790,6 +5098,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_magic",
       tooltip: "Thyrdwulf's Magic Shop",
       region: "Silvest Valley",
@@ -4804,6 +5113,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_provisioner",
       tooltip: "Coenred's Provisioner Shop",
       region: "Silvest Valley",
@@ -4820,6 +5130,7 @@ export const mapMarkers = {
 
     // City: Fort Eastwatch Shops
     {
+      category: "npc",
       type: "shop_weapon",
       tooltip: "Sgt. Stykler's Weapon Shop",
       region: "Silvest Valley",
@@ -4834,6 +5145,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_armory",
       tooltip: "Sgt. Brayce's Armory Shop",
       region: "Silvest Valley",
@@ -4848,6 +5160,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_armory",
       tooltip: "Keppler's Provisioner Shop",
       region: "Silvest Valley",
@@ -4862,6 +5175,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_pub",
       tooltip: "Timison's Pub",
       region: "Silvest Valley",
@@ -4890,6 +5204,7 @@ export const mapMarkers = {
 
     // City: Varg Shops
     {
+      category: "npc",
       type: "shop_magic",
       tooltip: "Aedelwald's Magic Shop",
       region: "Krythan",
@@ -4904,6 +5219,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_provisioner",
       tooltip: "Trondhere's Provisioner Shop",
       region: "Krythan",
@@ -4918,6 +5234,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_pub",
       tooltip: "Egbert's Pub",
       region: "Krythan",
@@ -4945,6 +5262,7 @@ export const mapMarkers = {
 
     // City: Dunmarrow Shops
     {
+      category: "npc",
       type: "shop_carpentry",
       tooltip: "Elvryn's Carpentery Shop",
       region: "Darkwoods",
@@ -4959,6 +5277,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_leather",
       tooltip: "Lominar's Taxidermy Shop",
       region: "Darkwoods",
@@ -4973,6 +5292,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_shipyard",
       tooltip: "Calidor Reitmsa's Ship Yard",
       region: "Darkwoods",
@@ -4987,6 +5307,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_pub",
       tooltip: "Charyne's Tavern",
       region: "Darkwoods",
@@ -5001,6 +5322,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_pub",
       tooltip: "Charyne's Tavern",
       region: "Darkwoods",
@@ -5015,6 +5337,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_provisioner",
       tooltip: "Keile Joargo's Provisioner Shop",
       region: "Darkwoods",
@@ -5029,6 +5352,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_weapon",
       tooltip: "Xulfax's Weaponry Shop",
       region: "Darkwoods",
@@ -5043,6 +5367,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_armory",
       tooltip: "Hertzel's Armory Shop",
       region: "Darkwoods",
@@ -5057,6 +5382,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_blacksmith",
       tooltip: "Calonar's Blacksmith Shop",
       region: "Darkwoods",
@@ -5071,6 +5397,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_magic",
       tooltip: "Saldizor's Magic Shop",
       region: "Darkwoods",
@@ -5096,6 +5423,7 @@ export const mapMarkers = {
     // Region: Highlands Shops
     // City: Parian Shops
     {
+      category: "npc",
       type: "shop_weapon",
       tooltip: "Rhonidd's Weapon Shop",
       region: "Highlands",
@@ -5110,6 +5438,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_blacksmith",
       tooltip: "Hemos' Blacksmith Shop",
       region: "Highlands",
@@ -5124,6 +5453,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_scrolls",
       tooltip: "Sage Rauth's Scrolls Shop",
       region: "Highlands",
@@ -5138,6 +5468,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_magic",
       tooltip: "Tragos' Magic Shop",
       region: "Highlands",
@@ -5152,6 +5483,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_provisioner",
       tooltip: "Thodonna's Provisioner Shop",
       region: "Highlands",
@@ -5166,6 +5498,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_jewelry",
       tooltip: "Maggie Hobson's Jewelry Shop",
       region: "Highlands",
@@ -5180,6 +5513,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_provisioner",
       tooltip: "Theiseth's Provisioner Shop",
       region: "Highlands",
@@ -5194,6 +5528,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_shipyard",
       tooltip: "Arthuren's Ship Yard Shop",
       region: "Highlands",
@@ -5208,6 +5543,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_magic",
       tooltip: "Theard's Magic Shop",
       region: "Highlands",
@@ -5222,6 +5558,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_pub",
       tooltip: "Loeband's Pub",
       region: "Highlands",
@@ -5236,6 +5573,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_storage",
       tooltip: "Rella's Storage Shop",
       region: "Highlands",
@@ -5250,6 +5588,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_carpentry",
       tooltip: "Welatrem's Carpenter Shop",
       region: "Highlands",
@@ -5264,6 +5603,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_leather",
       tooltip: "Draga's Leather Shop",
       region: "Highlands",
@@ -5278,6 +5618,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_armory",
       tooltip: "Kedardogan's Armory Shop",
       region: "Highlands",
@@ -5292,6 +5633,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_blacksmith",
       tooltip: "Afedriwyr's Blacksmith Shop",
       region: "Highlands",
@@ -5306,6 +5648,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_pub",
       tooltip: "Malinnor's Pub",
       region: "Highlands",
@@ -5320,6 +5663,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_farming",
       tooltip: "Melisandria's Farming Shop",
       region: "Highlands",
@@ -5334,6 +5678,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_carpentry",
       tooltip: "Oloatlan's Carpentry Shop",
       region: "Highlands",
@@ -5348,6 +5693,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_weapon",
       tooltip: "Hailey Brown's Weapon Shop",
       region: "Highlands",
@@ -5362,6 +5708,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_provisioner",
       tooltip: "Jeralif's Provisioner Shop",
       region: "Highlands",
@@ -5376,6 +5723,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_magic",
       tooltip: "Zaetlan's Magic Shop",
       region: "Highlands",
@@ -5390,6 +5738,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_weapon",
       tooltip: "Ereld's Weapon Shop",
       region: "Highlands",
@@ -5406,6 +5755,7 @@ export const mapMarkers = {
 
     // City: Arda Shops
     {
+      category: "npc",
       type: "shop_weapon",
       tooltip: "Kedalel's Weapon Shop",
       region: "Highlands",
@@ -5420,6 +5770,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_weapon",
       tooltip: "Adie's Weapon Shop",
       region: "Highlands",
@@ -5434,6 +5785,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_leather",
       tooltip: "Mo's Leather Shop",
       region: "Highlands",
@@ -5448,6 +5800,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_carpentry",
       tooltip: "Delawyth's Carpentry Shop",
       region: "Highlands",
@@ -5462,6 +5815,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_armory",
       tooltip: "Edelassa's Armory Shop",
       region: "Highlands",
@@ -5476,6 +5830,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_blacksmith",
       tooltip: "Edelbram's Blacksmith Shop",
       region: "Highlands",
@@ -5490,6 +5845,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_generic",
       tooltip: "Lothath's Provisioner Shop",
       region: "Highlands",
@@ -5504,6 +5860,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_pub",
       tooltip: "Grimlock's Pub",
       region: "Highlands",
@@ -5518,6 +5875,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_magic",
       tooltip: "Janus Laruis' Magic Shop",
       region: "Highlands",
@@ -5538,6 +5896,7 @@ export const mapMarkers = {
 
     // City: Ethera Palace Shops
     {
+      category: "npc",
       type: "shop_bakery",
       tooltip: "Kryiel's Bakery Shop",
       region: "Highlands",
@@ -5552,6 +5911,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_magic",
       tooltip: "Astaeg's Magic Shop",
       region: "Highlands",
@@ -5566,6 +5926,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_farming",
       tooltip: "Dugos' Farming Shop",
       region: "Highlands",
@@ -5580,6 +5941,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_shipyard",
       tooltip: "Adrekor's Ship Yard",
       region: "Highlands",
@@ -5594,6 +5956,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_armory",
       tooltip: "Sevililoth's Armory Shop",
       region: "Highlands",
@@ -5608,6 +5971,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_leather",
       tooltip: "Zathras' Leather Shop",
       region: "Highlands",
@@ -5622,6 +5986,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_provisioner",
       tooltip: "Ethialin's Provisioner Shop",
       region: "Highlands",
@@ -5636,6 +6001,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_blacksmith",
       tooltip: "Cadenad's Blacksmith Shop",
       region: "Highlands",
@@ -5650,6 +6016,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_weapon",
       tooltip: "Lothannon's Weapon Shop",
       region: "Highlands",
@@ -5664,6 +6031,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_weapon",
       tooltip: "Desdemona's Provisioner Shop",
       region: "Highlands",
@@ -5678,6 +6046,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_carpentry",
       tooltip: "Larelikor's Carpentry Shop",
       region: "Highlands",
@@ -5697,6 +6066,7 @@ export const mapMarkers = {
     // Region: Western Isles Shops
     // Island: Lotor's Summer Palace Shops
     {
+      category: "npc",
       type: "shop_weapon",
       tooltip: "O'riles Weaponry Shop",
       region: "Western Isles",
@@ -5711,6 +6081,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_armory",
       tooltip: "Colleen Franks' Armory Shop",
       region: "Western Isles",
@@ -5725,6 +6096,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_farming",
       tooltip: "Garius' Farming Shop",
       region: "Western Isles",
@@ -5739,6 +6111,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_carpentry",
       tooltip: "Tom Uslak Carpenter Shop",
       region: "Western Isles",
@@ -5753,6 +6126,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_survey",
       tooltip: "Blueprint Sales",
       region: "Western Isles",
@@ -5767,6 +6141,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_survey",
       tooltip: "Surveying and Tools Sales",
       region: "Western Isles",
@@ -5781,6 +6156,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_magic",
       tooltip: "Wizard Swishwhich's Shop",
       region: "Western Isles",
@@ -5796,6 +6172,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_magic",
       tooltip: "Wizard Blunderstone",
       region: "Western Isles",
@@ -5810,6 +6187,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_generic",
       tooltip: "VIP Store",
       region: "Western Isles",
@@ -5824,6 +6202,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_generic",
       tooltip: "Lotor's Gardener's Shop",
       region: "Western Isles",
@@ -5838,6 +6217,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_shipyard",
       tooltip: "Larson Davide's Shipyard Shop",
       region: "Western Isles",
@@ -5852,6 +6232,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_shipyard",
       tooltip: "Tides of Fate Raft Offer",
       region: "Western Isles",
@@ -5866,6 +6247,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_magic",
       tooltip: "Doyle Trobush's Magic Shop",
       region: "Western Isles",
@@ -5880,6 +6262,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_runecrafting",
       tooltip: "Panteo's Jewelry Shop",
       region: "Western Isles",
@@ -5894,6 +6277,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_jewelry",
       tooltip: "Canuelle's Jewelry Shop",
       region: "Western Isles",
@@ -5908,6 +6292,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_leather",
       tooltip: "Mongor's Leatherworking Shop",
       region: "Western Isles",
@@ -5922,6 +6307,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_blacksmith",
       tooltip: "Kaleic's Blacksmith Shop",
       region: "Western Isles",
@@ -5936,6 +6322,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_provisioner",
       tooltip: "Mace Gurban's Provisioner Shop",
       region: "Western Isles",
@@ -5950,6 +6337,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_pub",
       tooltip: "Docale's Pub",
       region: "Western Isles",
@@ -5967,6 +6355,7 @@ export const mapMarkers = {
     // Island: Scarab Island Shops
     // City: Lopal Shops
     {
+      category: "npc",
       type: "shop_carpentry",
       tooltip: "Ricbert's Carpentry Shop",
       region: "Western Isles",
@@ -5981,6 +6370,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_farming",
       tooltip: "Berctuald's Farming Shop",
       region: "Western Isles",
@@ -5995,6 +6385,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_farming",
       tooltip: "Sevyd's Farming Shop",
       region: "Highlands",
@@ -6009,6 +6400,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_pub",
       tooltip: "Osric's Pub",
       region: "Western Isles",
@@ -6023,6 +6415,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_provisioner",
       tooltip: "Wulfhere's Provisioner Shop",
       region: "Western Isles",
@@ -6037,6 +6430,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_weapon",
       tooltip: "Killjoy's Weaponry Shop",
       region: "Western Isles",
@@ -6051,6 +6445,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_armory",
       tooltip: "Harkyn's Armory Shop",
       region: "Western Isles",
@@ -6065,6 +6460,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "npc",
       type: "shop_magic",
       tooltip: "Aldulf's Magic Shop",
       region: "Western Isles",
@@ -6098,6 +6494,7 @@ export const mapMarkers = {
   spawns: [      
     //Valinor Island Spawns
     {
+      category: "spawn",
       type: "spawn_good",
       tooltip: "Spawn Gate",
       region: "Valinor",
@@ -6116,6 +6513,7 @@ export const mapMarkers = {
     // Region: Silvest Valley Spawns
     // City: Silvest Spawns
     {
+      category: "spawn",
       type: "spawn_good",
       tooltip: "Silvest Spawn Gate",
       region: "Silvest Valley",
@@ -6131,6 +6529,7 @@ export const mapMarkers = {
     },
     // City: Varg Spawns
     {
+      category: "spawn",
       type: "spawn_good",
       tooltip: "Varg Spawn Gate",
       region: "Silvest Valley",
@@ -6149,6 +6548,7 @@ export const mapMarkers = {
 
     // City: Fort Eastwatch Spawns
     {
+      category: "spawn",
       type: "spawn_good",
       tooltip: "Fort Eastwatch Spawn Gate",
       region: "Silvest Valley",
@@ -6165,6 +6565,7 @@ export const mapMarkers = {
 
     // Region: Krythan Spawns
     {
+      category: "spawn",
       type: "spawn_evil",
       tooltip: "Evil Spawn Gate",
       region: "Krythan",
@@ -6190,6 +6591,7 @@ export const mapMarkers = {
 
     // City: Dunmarrow Spawns
     {
+      category: "spawn",
       type: "spawn_good",
       tooltip: "Good Spawn Gate",
       region: "Darkwoods",
@@ -6210,8 +6612,9 @@ export const mapMarkers = {
 
 
     // Region: Highlands Spawns
-    // City: Parian
+    // City: Parian Spawns
     {
+      category: "spawn",
       type: "spawn_good",
       tooltip: "Good Spawn Gate",
       region: "Western Isles",
@@ -6225,15 +6628,16 @@ export const mapMarkers = {
         links: [],
       },
     },
-    // City: Arda
+    // City: Arda Spawns
 
-    // City: Grell - This is on the Underground map.
+    // City: Grell Spawns - This is on the Underground map.
 
-    // City: Ethera Palace
+    // City: Ethera Palace Spawns
     {
+      category: "spawn",
       type: "spawn_good",
       tooltip: "Good Spawn Gate",
-      region: "Western Isles",
+      region: "Highlands",
       place: "Ethera Palace",
       details: {
         title: "Good Spawn Gate",
@@ -6247,9 +6651,10 @@ export const mapMarkers = {
 
     // Region: Western Isles Spawns
     {
+      category: "spawn",
       type: "spawn_evil",
       tooltip: "Evil Spawn Gate",
-      region: "Krythan",
+      region: "Highlands",
       place: "Eastern Highlands",
       details: {
         title: "Evil Spawn Gate",
@@ -6263,6 +6668,7 @@ export const mapMarkers = {
 
     // Island: Scarab Island Spawns
     {
+      category: "spawn",
       type: "spawn_good",
       tooltip: "Good Spawn Gate",
       region: "Western Isles",
@@ -6282,6 +6688,7 @@ export const mapMarkers = {
     // Region: Sands of Creation Spawns
     // City: Ruhura Side Spawns
     {
+      category: "spawn",
       type: "spawn_good",
       tooltip: "Good Spawn Gate",
       region: "Sands of Creation",
@@ -6302,6 +6709,7 @@ export const mapMarkers = {
     // Island: Valinor Island Undergrounds
     // Region: Valinor Undergrounds
     {
+      category: "underground",
       type: "underground_dungeon",
       tooltip: "Frump's Lair",
       region: "Valinor",
@@ -6316,6 +6724,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_dungeon",
       tooltip: "Bonesnarl's Lair",
       region: "Valinor",
@@ -6331,6 +6740,7 @@ export const mapMarkers = {
     }, 
     // City: Valinor
     {
+      category: "underground",
       type: "underground_stairs",
       tooltip: "Stairs to Valinor Basement (Top Left)",
       region: "Valinor",
@@ -6345,6 +6755,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_stairs",
       tooltip: "Stairs to Valinor Basement (Top Right)",
       region: "Valinor",
@@ -6359,6 +6770,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_stairs",
       tooltip: "Stairs to Valinor Basement (Bottom Left)",
       region: "Valinor",
@@ -6373,6 +6785,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_stairs",
       tooltip: "Stairs to Valinor Basement (Bottom Right)",
       region: "Valinor",
@@ -6387,6 +6800,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_ladder",
       tooltip: "Ladder to Valinor Basement (Left)",
       region: "Valinor",
@@ -6401,6 +6815,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_ladder",
       tooltip: "Ladder to Valinor Basement (Right)",
       region: "Valinor",
@@ -6415,6 +6830,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_stairs",
       tooltip: "Stairs to Mage Trainers",
       region: "Valinor",
@@ -6435,6 +6851,7 @@ export const mapMarkers = {
 
     // Region: Silvest Valley Undergrounds
     {
+      category: "underground",
       type: "underground_snake",
       tooltip: "Cultist Lair's Underground",
       region: "Silvest Valley",
@@ -6449,6 +6866,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_snake",
       tooltip: "Snake Pit",
       region: "Silvest Valley",
@@ -6464,6 +6882,7 @@ export const mapMarkers = {
     },
     
     {
+      category: "underground",
       type: "underground_mine",
       tooltip: "Cliffside Mines",
       region: "Silvest Valley",
@@ -6478,6 +6897,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_stairs",
       tooltip: "Provisioner's Basement",
       region: "Silvest Valley",
@@ -6492,6 +6912,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_cave",
       tooltip: "Galen's Hideout",
       region: "Silvest Valley",
@@ -6510,6 +6931,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_cave",
       tooltip: "Sozal's Cave",
       region: "Silvest Valley",
@@ -6528,6 +6950,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_cave",
       tooltip: "Kozak Cove's Underground",
       region: "Silvest Valley",
@@ -6542,6 +6965,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_cave",
       tooltip: "Sozal's Cave",
       region: "Silvest Valley",
@@ -6556,6 +6980,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_ladder",
       tooltip: "Entrance to Silvest Mine",
       region: "Silvest Valley",
@@ -6574,6 +6999,7 @@ export const mapMarkers = {
 
     // Region: Krythan Undergrounds
     {
+      category: "underground",
       type: "underground_snake",
       tooltip: "Krythan Crypt",
       region: "Krythan",
@@ -6588,6 +7014,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_ladder",
       tooltip: "Gideon's Trapdoor",
       region: "Krythan",
@@ -6602,6 +7029,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_ladder",
       tooltip: "Mirthik's Underground Passage",
       region: "Krythan",
@@ -6616,6 +7044,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_ladder",
       tooltip: "Mirthik's Underground",
       region: "Krythan",
@@ -6630,6 +7059,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_snake",
       tooltip: "Snake pit",
       region: "Krythan",
@@ -6644,6 +7074,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_ladder",
       tooltip: "Holendar's Mansion Basement",
       region: "Krythan",
@@ -6658,6 +7089,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_stairs",
       tooltip: "Trap Door to LSP",
       region: "Krythan",
@@ -6672,6 +7104,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_ladder",
       tooltip: "Ladder to LSP Sewer (Away from evil spawn gate)",
       region: "Krythan",
@@ -6686,6 +7119,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_ladder",
       tooltip: "Orc Fort Tunnels",
       region: "Krythan",
@@ -6700,6 +7134,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_ladder",
       tooltip: "Orc Fort Tunnels",
       region: "Krythan",
@@ -6714,6 +7149,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_dungeon",
       tooltip: "Talazarian Dungeon",
       region: "Krythan",
@@ -6728,6 +7164,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_ladder",
       tooltip: "Krythan Swamp Backdoor",
       region: "Krythan",
@@ -6742,6 +7179,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_ladder",
       tooltip: "Krythan Swamp Backdoor",
       region: "Krythan",
@@ -6758,6 +7196,7 @@ export const mapMarkers = {
 
     // Island: Scarab Island Undergrounds
     {
+      category: "underground",
       type: "underground_crypt",
       tooltip: "Lopal Crypt", // Something very strange about this crypt.
       region: "Western Isles",
@@ -6772,6 +7211,7 @@ export const mapMarkers = {
       },
     }, 
     {
+      category: "underground",
       type: "underground_mine",
       tooltip: "Scarab Island Mine",
       region: "Western Isles",
@@ -6786,6 +7226,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_ladder",
       tooltip: "Lopal Catacombs",
       region: "Western Isles",
@@ -6802,6 +7243,7 @@ export const mapMarkers = {
 
     // Werewolf Island Undergrounds
     {
+      category: "underground",
       type: "underground_cave",
       tooltip: "Werewolf Cave",
       region: "Krythan",
@@ -6816,6 +7258,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_stairs",
       tooltip: "Lycanth Crypt",
       region: "Krythan",
@@ -6834,9 +7277,10 @@ export const mapMarkers = {
 
     // Region: Darkwoods Undergrounds
     {
+      category: "underground",
       type: "underground_spider",
       tooltip: "Shadow Spider Cave",
-      region: "Mainland",
+      region: "Darkwoods",
       place: "Darkwoods",
       details: {
         title: "Shadow Spider Cave",
@@ -6848,9 +7292,10 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_cave",
       tooltip: "Swamp Beast Cave",
-      region: "Mainland",
+      region: "Darkwoods",
       place: "Darkwoods",
       details: {
         title: "Swamp Beast Cave",
@@ -6862,9 +7307,10 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_cave",
       tooltip: "Swamp Beast Cave",
-      region: "Mainland",
+      region: "Darkwoods",
       place: "Darkwoods",
       details: {
         title: "Swamp Beast Cave",
@@ -6876,9 +7322,10 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_scorpion",
       tooltip: "Scorpion Pit",
-      region: "Mainland",
+      region: "Darkwoods",
       place: "Darkwoods",
       details: {
         title: "Scorpion Pit",
@@ -6890,9 +7337,10 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_termigon",
       tooltip: "Termigon Pit",
-      region: "Mainland",
+      region: "Darkwoods",
       place: "Darkwoods",
       details: {
         title: "Termigon Pit",
@@ -6904,9 +7352,10 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_mine",
       tooltip: "South Astari Rune Shelter",
-      region: "Mainland",
+      region: "Darkwoods",
       place: "Darkwoods",
       details: {
         title: "South Astari Rune Shelter",
@@ -6918,9 +7367,10 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_snake",
       tooltip: "Whisperdale Snake Pit",
-      region: "Mainland",
+      region: "Darkwoods",
       place: "Darkwoods",
       details: {
         title: "Whisperdale Snake Pit",
@@ -6932,9 +7382,10 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_ant",
       tooltip: "Dunmarrow Fire Ant Pit",
-      region: "Mainland",
+      region: "Darkwoods",
       place: "Darkwoods",
       details: {
         title: "Dunmarrow Fire Ant Pit",
@@ -6946,9 +7397,10 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_crypt",
       tooltip: "McKelsky Crypt",
-      region: "Mainland",
+      region: "Darkwoods",
       place: "Darkwoods",
       details: {
         title: "McKelsky Crypt",
@@ -6960,9 +7412,10 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_dungeon",
       tooltip: "Marsh Dungeon",
-      region: "Mainland",
+      region: "Darkwoods",
       place: "Darkwoods",
       details: {
         title: "Marsh Dungeon",
@@ -6974,9 +7427,10 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_dungeon",
       tooltip: "Cathedral of Joyous Afterlife (North Entrance)",
-      region: "Mainland",
+      region: "Darkwoods",
       place: "Darkwoods",
       details: {
         title: "Cathedral of Joyous Afterlife (North Entrance)",
@@ -6988,9 +7442,10 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_dungeon",
       tooltip: "Cathedral of Joyous Afterlife (South Entrance)",
-      region: "Mainland",
+      region: "Darkwoods",
       place: "Darkwoods",
       details: {
         title: "Cathedral of Joyous Afterlife (South Entrance)",
@@ -7004,9 +7459,10 @@ export const mapMarkers = {
 
     // Region: Highlands Undergrounds
     {
+      category: "underground",
       type: "underground_closed",
       tooltip: "Cave (CLOSED)", // This was the former Astari Cave, which has since moved south.
-      region: "Mainland",
+      region: "Highlands",
       place: "Highlands",
       details: {
         title: "Cave (CLOSED)",
@@ -7018,10 +7474,11 @@ export const mapMarkers = {
       },
     }, 
     {
+      category: "underground",
       type: "underground_cave",
       tooltip: "Zanock's Mine (East)", // This was the former Astari Cave, which has since moved south.
-      region: "Mainland",
-      place: "Highlands",
+      region: "Highlands",
+      place: "Zanock's Mine",
       details: {
         title: "Zanock's Mine (East)",
         coordinates: { x: 3097, y: 2391 },
@@ -7033,9 +7490,10 @@ export const mapMarkers = {
     },
     // Region: Valley of Giants Underground
     {
+      category: "underground",
       type: "underground_dungeon",
       tooltip: "Arllandah's Lair", // This was the former Astari Cave, which has since moved south.
-      region: "Mainland",
+      region: "Highlands",
       place: "Highlands",
       details: {
         title: "Arllandah's Lair",
@@ -7048,9 +7506,10 @@ export const mapMarkers = {
     }, 
     // City: Darushk Undergrounds
     {
+      category: "underground",
       type: "underground_mine",
       tooltip: "Darushk Entrance",
-      region: "Mainland",
+      region: "Highlands",
       place: "Highlands",
       details: {
         title: "Darushk Entrance",
@@ -7062,9 +7521,10 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_mine",
       tooltip: "Darushk Mine",
-      region: "Mainland",
+      region: "Highlands",
       place: "Highlands",
       details: {
         title: "Darushk Mine",
@@ -7077,9 +7537,10 @@ export const mapMarkers = {
     },
     // City: Parian Undergrounds
     {
+      category: "underground",
       type: "underground_ladder",
       tooltip: "West Entrance to Parian Tunnels", // Name found in in-game book
-      region: "Mainland",
+      region: "Highlands",
       place: "Highlands",
       details: {
         title: "West Entrance to Parian Tunnels",
@@ -7091,9 +7552,10 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_ladder",
       tooltip: "East Entrance to Parian Tunnels", // Name found in in-game book
-      region: "Mainland",
+      region: "Highlands",
       place: "Highlands",
       details: {
         title: "East Entrance to Parian Tunnels",
@@ -7109,9 +7571,10 @@ export const mapMarkers = {
 
     // City: Grell Undergrounds
     {
+      category: "underground",
       type: "underground_cave",
       tooltip: "Grell",
-      region: "Mainland",
+      region: "Highlands",
       place: "Highlands",
       details: {
         title: "Grell",
@@ -7123,9 +7586,10 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_stairs",
       tooltip: "Grell Tunnels",
-      region: "Mainland",
+      region: "Highlands",
       place: "Highlands",
       details: {
         title: "Grell Tunnels",
@@ -7137,9 +7601,10 @@ export const mapMarkers = {
       },
     }, 
     {
+      category: "underground",
       type: "underground_ladder",
       tooltip: "Badlands Entrance",
-      region: "Mainland",
+      region: "Highlands",
       place: "Highlands",
       details: {
         title: "Badlands Entrance",
@@ -7151,9 +7616,10 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_cave",
       tooltip: "Vel Dran Cave",
-      region: "Mainland",
+      region: "Highlands",
       place: "Highlands",
       details: {
         title: "Vel Dran Cave",
@@ -7167,9 +7633,10 @@ export const mapMarkers = {
 
     // City: Ethera Palace
     {
+      category: "underground",
       type: "underground_mine",
       tooltip: "Ethera Mine",
-      region: "Mainland",
+      region: "Highlands",
       place: "Highlands",
       details: {
         title: "Ethera Mine",
@@ -7181,9 +7648,10 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_mine",
       tooltip: "Ethera Mine",
-      region: "Mainland",
+      region: "Highlands",
       place: "Highlands",
       details: {
         title: "Ethera Mine",
@@ -7199,10 +7667,11 @@ export const mapMarkers = {
     // Region: Darkwoods Undergrounds
     // Necropolis Undergrounds
     {
+      category: "underground",
       type: "underground_stairs",
       tooltip:
         "Trap Door to Necropolis Magic and Farm Shops (They do not work)",
-      region: "Mainland",
+      region: "Darkwoods",
       place: "Necropolis",
       details: {
         title:
@@ -7215,9 +7684,10 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_ladder",
       tooltip: "Ladder to inside Necropolis",
-      region: "Mainland",
+      region: "Darkwoods",
       place: "Necropolis",
       details: {
         title: "Ladder to inside Necropolis",
@@ -7232,9 +7702,10 @@ export const mapMarkers = {
     // Region: Battle Plains Undergrounds
     
     {
+      category: "underground",
       type: "underground_cave",
       tooltip: "Badlands Cave",
-      region: "Mainland",
+      region: "Battle Plains",
       place: "Battle Plains",
       details: {
         title: "Badlands Cave",
@@ -7246,10 +7717,11 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_stairs",
       tooltip: "Chlera Catacombs",
-      region: "Mainland",
-      place: "Battle Plains",
+      region: "Battle Plains",
+      place: "Chlera",
       details: {
         title: "Chlera Catacombs",
         coordinates: { x: 2328, y: 3618 },
@@ -7260,9 +7732,10 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_cave",
       tooltip: "Desprail Cave",
-      region: "Mainland",
+      region: "Battle Plains",
       place: "Battle Plains",
       details: {
         title: "Desprail Cave",
@@ -7274,9 +7747,10 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_cave",
       tooltip: "Badlands Cave",
-      region: "Mainland",
+      region: "Battle Plains",
       place: "Battle Plains",
       details: {
         title: "Badlands Cave",
@@ -7288,9 +7762,10 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_dungeon",
       tooltip: "Deep Shadow Temple",
-      region: "Mainland",
+      region: "Battle Plains",
       place: "Battle Plains",
       details: {
         title: "Deep Shadow Temple",
@@ -7302,9 +7777,10 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_cave",
       tooltip: "Fungoid Cave",
-      region: "Mainland",
+      region: "Battle Plains",
       place: "Battle Plains",
       details: {
         title: "Fungiod Cave",
@@ -7318,10 +7794,11 @@ export const mapMarkers = {
 
     // Region: Black Swamp Undergrounds
     {
+      category: "underground",
       type: "underground_snake",
       tooltip: "Krog Snake Pit",
-      region: "Mainland",
-      place: "Battle Plains",
+      region: "Black Swamp",
+      place: "Krog",
       details: {
         title: "Krog Snake Pit",
         coordinates: { x: 3271, y: 3989 },
@@ -7332,9 +7809,10 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_sewer",
       tooltip: "Krog Sewer",
-      region: "Mainland",
+      region: "Black Swamp",
       place: "Black Swamp",
       details: {
         title: "Krog Sewer",
@@ -7346,9 +7824,10 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_sewer",
       tooltip: "Krog Sewer",
-      region: "Mainland",
+      region: "Black Swamp",
       place: "Black Swamp",
       details: {
         title: "Krog Sewer",
@@ -7360,9 +7839,10 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_crypt",
       tooltip: "Drakkan Crypt",
-      region: "Mainland",
+      region: "Black Swamp",
       place: "Black Swamp",
       details: {
         title: "Drakkan Crypt",
@@ -7374,9 +7854,10 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_sewer",
       tooltip: "Waste Tunnels",
-      region: "Mainland",
+      region: "Black Swamp",
       place: "Black Swamp",
       details: {
         title: "Waste Tunnels",
@@ -7388,9 +7869,10 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_ant",
       tooltip: "Ant Hill",
-      region: "Mainland",
+      region: "Black Swamp",
       place: "Black Swamp",
       details: {
         title: "Ant Hill",
@@ -7402,9 +7884,10 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_scorpion",
       tooltip: "Scorpion",
-      region: "Mainland",
+      region: "Black Swamp",
       place: "Black Swamp",
       details: {
         title: "Scorpion",
@@ -7416,9 +7899,10 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_dungeon",
       tooltip: "Valekar's Fortress Dungeon",
-      region: "Mainland",
+      region: "Black Swamp",
       place: "Black Swamp",
       details: {
         title: "Valekar's Fortress Dungeon",
@@ -7438,6 +7922,7 @@ export const mapMarkers = {
 
      // Island: Hell Undergrounds
     {
+      category: "underground",
       type: "underground_dungeon",
       tooltip: "Lotorian Dungeon",
       region: "Western Isles",
@@ -7452,6 +7937,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_cave",
       tooltip: "The Den of Baylor",
       region: "Western Isles",
@@ -7466,6 +7952,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_cave",
       tooltip: "Horned One Cave",
       region: "Western Isles",
@@ -7482,6 +7969,7 @@ export const mapMarkers = {
 
     // Island: Lotor's Summer Palace Undergrounds
     {
+      category: "underground",
       type: "underground_stairs",
       tooltip: "Sewer Entrance",
       region: "Western Isles",
@@ -7496,6 +7984,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_stairs",
       tooltip: "Leather and Armory Shop Basement",
       region: "Western Isles",
@@ -7510,6 +7999,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_stairs",
       tooltip: "Shadow Temple South Entrance",
       region: "Western Isles",
@@ -7527,10 +8017,11 @@ export const mapMarkers = {
 
     // Region: Heartwood Coast Undergrounds
     {
+      category: "underground",
       type: "underground_crypt",
       tooltip: "Gnobol Mauseleum Crypt",
       region: "Heartwood Coast",
-      place: "Heartwood Coast",
+      place: "Gnobol Mauseleum",
       details: {
         title: "Gnobol Mauseleum Crypt",
         coordinates: { x: 3078, y: 1606 },
@@ -7541,10 +8032,11 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_cave",
       tooltip: "Syldural",
       region: "Heartwood Coast",
-      place: "Heartwood Coast",
+      place: "Syldural Cave",
       details: {
         title: "Syldural",
         coordinates: { x: 3272, y: 1632 },
@@ -7555,10 +8047,11 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_cave",
       tooltip: "Zanock's Mine (West)",
       region: "Heartwood Coast",
-      place: "Heartwood Coast",
+      place: "Zanock's Mine",
       details: {
         title: "Zanock's Mine (West)",
         coordinates: { x: 2871, y: 2359 },
@@ -7569,10 +8062,11 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_snake",
       tooltip: "Valmond Skeleton Pit",
       region: "Heartwood Coast",
-      place: "Heartwood Coast",
+      place: "Valmond",
       details: {
         title: "Valmond Skeleton Pit",
         coordinates: { x: 3191, y: 1880 },
@@ -7585,6 +8079,7 @@ export const mapMarkers = {
 
     // Region: Tundria Region Undergrounds
     {
+      category: "underground",
       type: "underground_cave",
       tooltip: "Icebane's Cavern Entrance",
       region: "Tundria",
@@ -7599,6 +8094,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_crypt",
       tooltip: "Maroven Crypt",
       region: "Tundria",
@@ -7613,6 +8109,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_crypt",
       tooltip: "Maroven Crypt",
       region: "Tundria",
@@ -7627,6 +8124,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_dungeon",
       tooltip: "Hammerfist Mine Entrance",
       region: "Tundria",
@@ -7641,6 +8139,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_cave",
       tooltip: "Web Spinner Spider Cave",
       region: "Tundria",
@@ -7655,6 +8154,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_crypt",
       tooltip: "Duremar Tomb",
       region: "Tundria",
@@ -7669,6 +8169,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_crypt",
       tooltip: "Unknown Crypt", // A Crypt with Greater Skeletons
       region: "Tundria",
@@ -7683,6 +8184,7 @@ export const mapMarkers = {
       },
     }, 
     {
+      category: "underground",
       type: "underground_dungeon",
       tooltip: "Frieda's Dungeon",
       region: "Tundria",
@@ -7697,6 +8199,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_dungeon",
       tooltip: "Artraxis Dungeon",
       region: "Tundria",
@@ -7711,6 +8214,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_dungeon",
       tooltip: "Darok the Banished's Jail",
       region: "Tundria",
@@ -7725,6 +8229,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_dungeon",
       tooltip: "Darok the Banished's Jail",
       region: "Tundria",
@@ -7739,6 +8244,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_dungeon",
       tooltip: "Trapdoor to Hammerfist Mine",
       region: "Tundria",
@@ -7758,6 +8264,7 @@ export const mapMarkers = {
     // Region: Sands of Creation Underground
     // City: Ruhura Side Undergrounds
     {
+      category: "underground",
       type: "underground_cave",
       tooltip: "Ruhura Elemental Cave",
       region: "Sands of Creation",
@@ -7772,6 +8279,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_ladder",
       tooltip: "Artonian Pass to Ruhura Side",
       region: "Sands of Creation",
@@ -7786,6 +8294,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_ladder",
       tooltip: "Artonian Pass to Greater Dragon Island",
       region: "Sands of Creation",
@@ -7800,6 +8309,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_cave",
       tooltip: "Elemental Cave",
       region: "Sands of Creation",
@@ -7814,6 +8324,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_dungeon",
       tooltip: "Mukarramma Dungeon",
       region: "Sands of Creation",
@@ -7830,6 +8341,7 @@ export const mapMarkers = {
 
     // Island: Greater Dragon Island Undergrounds
     {
+      category: "underground",
       type: "underground_cave",
       tooltip: "Greater Dragon Island Cave",
       region: "Sands of Creation",
@@ -7846,6 +8358,7 @@ export const mapMarkers = {
 
     // City: Khafra Side Undergrounds
     {
+      category: "underground",
       type: "underground_cave",
       tooltip: "Khafra Elemental Cave",
       region: "Sands of Creation",
@@ -7863,6 +8376,7 @@ export const mapMarkers = {
     // Region: Breakwater Undergrounds
     // City: New Town Island Undergrounds
     {
+      category: "underground",
       type: "underground_crypt",
       tooltip: "Darkwing's Lair Entrance",
       region: "Breakwater",
@@ -7877,6 +8391,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_dungeon",
       tooltip: "Cyclops and Lion Cave", // I was thinking of changing the name to New Town Mine but haven't found any info on that
       region: "Breakwater",
@@ -7891,6 +8406,7 @@ export const mapMarkers = {
       },
     }, 
     {
+      category: "underground",
       type: "underground_mine",
       tooltip: "Zule's Cave Entrance",
       region: "Breakwater",
@@ -7907,6 +8423,7 @@ export const mapMarkers = {
 
     // City: Roycroft Island Undergrounds
     {
+      category: "underground",
       type: "underground_stairs",
       tooltip: "Son of Scalo's Hideout",
       region: "Breakwater",
@@ -7921,6 +8438,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_stairs",
       tooltip: "Warehouse Basement",
       region: "Breakwater",
@@ -7935,6 +8453,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_stairs",
       tooltip: "Underground Pass to Northern Roycroft Island",
       region: "Breakwater",
@@ -7949,6 +8468,7 @@ export const mapMarkers = {
       },
     },
     {
+      category: "underground",
       type: "underground_stairs",
       tooltip: "Underground Pass to Southern Roycroft Island",
       region: "Breakwater",
@@ -7967,6 +8487,7 @@ export const mapMarkers = {
 
     // Region: Broken Finger Undergrounds
     {
+      category: "underground",
       type: "underground_dungeon",
       tooltip: "Broken Finger Dungeon",
       region: "Broken Finger",
@@ -7995,6 +8516,7 @@ export const mapMarkers = {
     //   },
     // },
     {
+      category: "underground",
       type: "underground_stairs",
       tooltip: "Entrance to Horned Ones Cave",
       region: "Broken Finger",

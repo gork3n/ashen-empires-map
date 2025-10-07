@@ -432,7 +432,7 @@ function showInfoFlyout(data) {
 
     // Lore/Info
     if (data.place || data.region || details.lore) {
-        textHtml += `<h4>Information</h4>`;
+        textHtml += `<h4>Lore</h4>`;
         if (data.place) {
             textHtml += `<p>${data.place}<br>`;
             if (data.region) {
@@ -1056,12 +1056,12 @@ function setupMarkerTooltips(map) {
         } else if (feature.get('labelTooltip')) {
             const labelTooltipText = feature.get('labelTooltip');
             const details = feature.get('details');
-            const information = details ? details.information : null;
+            const bonus = details ? details.bonus : null;
 
             let tooltipHtml = `<div class="tooltip-text">${labelTooltipText}</div>`;
-            if (information && information.length > 0) {
-                const infoText = Array.isArray(information) ? information.join('<br>') : information;
-                tooltipHtml += `<div class="tooltip-info">${infoText}</div>`;
+            if (bonus && bonus.length > 0) {
+                const bonusText = Array.isArray(bonus) ? bonus.join('<br>') : bonus;
+                tooltipHtml += `<div class="tooltip-info">${bonusText}</div>`;
             }
 
             markerTooltipElement.innerHTML = tooltipHtml;
