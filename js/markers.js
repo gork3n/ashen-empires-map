@@ -90,6 +90,10 @@ export const markerStyles = {
     icon: "icons/potion-ball.svg",
     color: "#32CD32", // LimeGreen
   },
+  shop_evil_trinket: {
+    icon: "icons/evil-book.svg",
+    color: "#9370DB", // MediumPurple
+  },
   shop_runecrafting: {
     icon: "icons/rupee.svg",
     color: "#32CD32", // LimeGreen
@@ -293,6 +297,65 @@ export const mapMarkers = {
       },
     },
     //Done
+    // Island: Krythan Island Portals
+    // Region: Silvest Valley Portals
+
+    // Region: Krythan Portals
+    // City: Varg Portals
+
+    // City: Hothbra Portals
+
+    // City: Jeel Portals
+
+    // City: Lotor's Castle Portals
+    {
+      category: "portals",
+      type: "portal_small",
+      tooltip: "Portal to Lotor's Jail",
+      region: "Krythan",
+      place: "Lotor's Castle",
+      details: {
+        title: "Portal to Lotor's Jail",
+        coordinates: { x: 262, y: 1180 },
+        image: "images/portals/Lotors_Jail_Portal.png",
+        lore: "More information about Portal to Lotor's Jail is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "portals",
+      type: "portal_small",
+      tooltip: "Portal to Outside Lotor's Castle",
+      region: "Krythan",
+      place: "Lotor's Castle",
+      details: {
+        title: "Portal to Outside Lotor's Castle",
+        coordinates: { x: 231, y: 1160 },
+        image: "images/portals/Lotors_Jail_Portal.png",
+        lore: "More information about Portal to Outside Lotor's Castle is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "portals",
+      type: "portal_small",
+      tooltip: "Portal to Outside Lotor's Prison",
+      region: "Krythan",
+      place: "Lotor's Castle",
+      details: {
+        title: "Portal to Outside Lotor's Prison",
+        coordinates: { x: 234, y: 1149 },
+        image: "images/portals/Lotors_Prison_Portal.png",
+        lore: "More information about Portal to Outside Lotor's Prison is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // City: Vrethpool Portals
+
     // Mainlands Housing Realm Portals
     // Region: Highlands
     // City: Parian Housing Realm Portal
@@ -873,14 +936,14 @@ export const mapMarkers = {
     {
       category: "portals",
       type: "portal_small",
-      tooltip: "Portal to Lotor's Castle",
+      tooltip: "Portal to Lotor's Castle Jail",
       region: "Western Isles",
       place: "Lotor's Prison",
       details: {
-        title: "Portal to Lotor's Castle",
+        title: "Portal to Lotor's Castle Jail",
         coordinates: { x: 1484, y: 630 },
-        image: "images/markers/image_coming_soon.png",
-        lore: "More information about Portal to Lotor's Castle is coming soon.",
+        image: "images/markers/Lotors_Castle_Jail_Portal.png",
+        lore: "More information about Portal to Lotor's Castle Jail is coming soon.",
         npcs: [],
         links: [],
       },
@@ -1243,6 +1306,7 @@ export const mapMarkers = {
 
   services_npcs: [
     // Sub-Category Quests NPCs
+    // Quests that are not in a city will still have a place property value of the nearest city.
     // Island: Valinor Island Quests
     // Region: Valinor Quests
     {
@@ -1717,6 +1781,85 @@ export const mapMarkers = {
     //   },
     // },
 
+    // Island: Krythan Island Quests
+    // Region: Silvest Valley Quests
+    // City: Silvest Valley Quests
+
+    // City: Fort Eastwatch Quests
+
+    // City: Cliffside Quests
+
+    // Region: Krythan Quests
+    // City: Varg Quests
+
+    // City: Hothbra Quests
+
+    // City: Jeel Quests
+
+    // City: Lotor's Castle Quests
+
+    // City: Vrethpool Quests
+    {
+      category: "npc",
+      type: "quest",
+      tooltip: "Mose",
+      region: "Krythan",
+      place: "Vrethpool",
+      details: {
+        title: "Mose Quest",
+        coordinates: { x: 659, y: 1670 },
+        image: "images/markers/Mose_Quest.png",
+        lore: "Mose is part of a quest line for The Save the Family Farm.",
+        npcs: [],
+        links: [{ text: "Ashen Empires Wiki (The Save the Family Farm)", url: "https://ashenempires.fandom.com/wiki/Save_the_Family_Farm" }],
+      },
+    },
+    {
+      category: "npc",
+      type: "quest",
+      tooltip: "Cliff Brown",
+      region: "Krythan",
+      place: "Vrethpool",
+      details: {
+        title: "Cliff Brown Quest",
+        coordinates: { x: 659, y: 1696 },
+        image: "images/markers/Cliff_Brown_Quest.png",
+        lore: "Cliff Brown is part of a quest line for Clear the Room.",
+        npcs: [],
+        links: [{ text: "Ashen Empires Wiki (Clear the Room)", url: "https://ashenempires.fandom.com/wiki/Clear_the_Room" }],
+      },
+    },
+    {
+      category: "npc",
+      type: "quest",
+      tooltip: "Gareth Demonhunter",
+      region: "Krythan",
+      place: "Vrethpool",
+      details: {
+        title: "Gareth Demonhunter Quest",
+        coordinates: { x: 652, y: 1707 },
+        image: "images/markers/Gareth_Demonhunter_Quest.png",
+        lore: "Gareth Demonhunter is part of a quest line for Return to Hell.",
+        npcs: [],
+        links: [{ text: "Ashen Empires Wiki (Return to Hell)", url: "https://ashenempires.fandom.com/wiki/Return_to_Hell" }],
+      },
+    },
+    {
+      category: "npc",
+      type: "quest",
+      tooltip: "Mukk",
+      region: "Krythan",
+      place: "Vrethpool",
+      details: {
+        title: "Mukk Quest",
+        coordinates: { x: 520, y: 1639 },
+        image: "images/markers/Mukk_Quest.png",
+        lore: "Mukk is part of a quest line for Mukk The Lumberjack.",
+        npcs: [],
+        links: [{ text: "Ashen Empires Wiki (Mukk The Lumberjack)", url: "https://ashenempires.fandom.com/wiki/Mukk_The_Lumberjack" }],
+      },
+    },
+
     // Mainland Quests
 
     // Region: Darkwoods
@@ -2055,12 +2198,53 @@ export const mapMarkers = {
     // Sub-Category Innkeepers
     // Island: Valinor Island Innkeeper
 
-    // Region: Krythan Island Innkeeper
+    // Island: Krythan Island Innkeeper
     // Region: Silvest Valley Innkeeper
 
     // Region: Krythan Innkeeper
+    // City: Varg Innkeeper
+
+    // City: Hothbra Innkeeper
+
+    // City: Jeel Innkeeper
+
+    // City: Lotor's Castle Innkeeper
+    {
+      category: "npc",
+      type: "inn_keeper",
+      tooltip: "Lotor's Castle Innkeeper",
+      region: "Krythan",
+      place: "Lotor's Castle",
+      details: {
+        title: "Lotor's Castle Innkeeper",
+        coordinates: { x: 233, y: 1135 },
+        image: "images/markers/Lotor's_Castle_Innkeeper.png",
+        lore: "More information about Lotor's Castle Innkeeper is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // Vrethpool Innkeeper
+    {
+      category: "npc",
+      type: "inn_keeper",
+      tooltip: "Vrethpool Innkeeper",
+      region: "Krythan",
+      place: "Vrethpool",
+      details: {
+        title: "Vrethpool Innkeeper",
+        coordinates: { x: 667, y: 1673 },
+        image: "images/markers/Verthpool_Innkeeper.png",
+        lore: "More information about Vrethpool Innkeeper is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // Region: Darkwoods Innkeeper
+    // City Silvest Innkeeper    
+
     // City: Josody Innkeeper
 
     // City: Gulley Innkeeper
@@ -3244,7 +3428,7 @@ export const mapMarkers = {
     // Region: Silvest Valley Information
 
     // Region: Krythan Information
-    // City: Verthpool Information
+    // City: Vrethpool Information
     {
       category: "npc",
       type: "information_npc",
@@ -3380,22 +3564,47 @@ export const mapMarkers = {
     // Add more trainers
 
     // Sub-Category Town Guardians
-    // Island: Krythan Island Guards
-    // Region: Silvest Valley Guards
+    // Island: Krythan Island Town Guardians
+    // Region: Silvest Valley Town Guardians
 
-    // Region: Krythan Guards
+    // Region: Krythan Town Guardians
 
-    // Mainland Guards
-    // Region: Darkwoods Guards
-    // City: Josody Guards
+    // City: Varg Town Guardians
+
+    // City: Hothbra Town Guardians
+
+    // City: Jeel Town Guardians
+
+    // City: Lotor's Castle Town Guardians
+
+    // City: Vrethpool Town Guardians
+    {
+      category: "npc",
+      type: "town_guardian",
+      tooltip: "Town Guardian (Vrethpool)",
+      region: "Darkwoods",
+      place: "Vrethpool",
+      details: {
+        title: "Town Guardian",
+        coordinates: { x: 657, y: 1699 },
+        image: "images/markers/Verthpool_Town_Guardian.png",
+        lore: "The Town Guardian in Vrethpool.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // Mainland Town Guardians
+    // Region: Darkwoods Town Guardians
+    // City: Josody Town Guardians
     
-    // City: Gulley Guards
+    // City: Gulley Town Guardians
 
-    // City: Redwake Guards
+    // City: Redwake Town Guardians
 
-    // City: Darkfell Guards
+    // City: Darkfell Town Guardians
 
-    // City: Dunmarrow Guards
+    // City: Dunmarrow Town Guardians
     {
       category: "npc",
       type: "town_guardian",
@@ -3412,12 +3621,12 @@ export const mapMarkers = {
       },
     },
 
-    // City: Autumn Guards
+    // City: Autumn Town Guardians
 
-    // City: Whisperdale Guards
+    // City: Whisperdale Town Guardians
 
-    // Region: Highlands Guards
-    // City: Parian Guards
+    // Region: Highlands Town Guardians
+    // City: Parian Town Guardians
     {
       category: "npc",
       type: "town_guardian",
@@ -3469,32 +3678,72 @@ export const mapMarkers = {
       },
     },
 
-    // Region: Battle Plains Guards
+    // Region: Battle Plains Town Guardians
 
-    // Region: Black Swamp Guards
+    // Region: Black Swamp Town Guardians
 
-    // Region: Heartwood Coast Guards
+    // Region: Heartwood Coast Town Guardians
 
-    // Region: Tundria Guards
+    // Region: Tundria Town Guardians
 
-    // Western Isles Guards
+    // Western Isles Town Guardians
 
-    // Region: Sands of Creation Region Guards
-    // City: Ruhura Side Guards
+    // Region: Sands of Creation Region Town Guardians
+    // City: Ruhura Side Town Guardians
 
-    // City: Khafra Side Guards
+    // City: Khafra Side Town Guardians
 
-    // Region: Breakwater Region Guards
+    // Region: Breakwater Region Town Guardians
 
-    // Region: Broken Finger Region Guards
+    // Region: Broken Finger Region Town Guardians
 
     // Sub-Category Town Wizard of Insight
     // Island: Krythan Island Town Wizard of Insight
     // Region: Silvest Valley Town Wizard of Insight
     
     // Region: Krythan Town Wizard of Insight
+    // City: Varg Town Wizard of Insight
+
+    // City: Hothbra Town Wizard of Insight
+
+    // City: Jeel Town Wizard of Insight
+
+    // City: Lotor's Castle Town Wizard of Insight
+
+    // City: Vrethpool Town Wizard of Insight
+    {
+      category: "npc",
+      type: "town_wizard_of_insight",
+      tooltip: "Town Wizard of Insight (Vrethpool)",
+      region: "Darkwoods",
+      place: "Vrethpool",
+      details: {
+        title: "Town Wizard of Insight",
+        coordinates: { x: 663, y: 1672 },
+        image: "images/markers/Verthpool_Town_Wizard_of_Insight.png",
+        lore: "The Town Wizard of Insight in Vrethpool.",
+        npcs: [],
+        links: [],
+      },
+    },
+    
+
+
 
     // Region: Darkwoods Town Wizard of Insight
+    // City: Josody Town Wizard of Insight
+
+    // City: Gulley Town Wizard of Insight
+
+    // City: Redwake Town Wizard of Insight
+
+    // City: Darkfell Town Wizard of Insight
+
+    // City: Dunmarrow Town Wizard of Insight
+
+    // City: Autumn Town Wizard of Insight
+
+    // City: Whisperdale Town Wizard of Insight
 
     // Region: Battle Plains Town Wizard of Insight
 
@@ -3715,7 +3964,7 @@ export const mapMarkers = {
         links: [],
       },
     },
-
+    
     // City: Grell Undergrounds Events
 
     // Region: Battle Plains Events
@@ -3863,6 +4112,30 @@ export const mapMarkers = {
     },
 
     // Region: Krythan Island Bank
+    // City: Varg Bank
+
+    // City: Hothbra Bank
+
+    // City: Jeel Bank
+
+    // City: Lotor's Castle Bank
+
+    // City: Vrethpool Bank
+    {
+      category: "npc",
+      type: "bank",
+      tooltip: "Bank",
+      region: "Krythan",
+      place: "Lotor's Castle",
+      details: {
+        title: "Bank",
+        coordinates: { x: 261, y: 1151 },
+        image: "images/markers/Lotors_Castle_Bank.png",
+        lore: "More information about Lotor's Castle Bank is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // Region: Silvest Valley Bank
     // City: Fort Eastwatch
@@ -3914,6 +4187,7 @@ export const mapMarkers = {
       },
     },
 
+    // Region: Silvest Valley Bank
     // Region: Krythan Bank
     // City: Varg Bank
     {
@@ -3927,6 +4201,27 @@ export const mapMarkers = {
         coordinates: { x: 802, y: 1175 },
         image: "images/markers/Varg_Bank.png",
         lore: "More information about Varg Bank is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // City: Jeel Bank
+
+    // City: Lotor's Castle Bank
+
+    // City: Vrethpool Bank
+    {
+      category: "npc",
+      type: "bank",
+      tooltip: "Bank",
+      region: "Krythan",
+      place: "Vrethpool",
+      details: {
+        title: "Bank",
+        coordinates: { x: 671, y: 1700 },
+        image: "images/markers/Vrethpool_Bank.png",
+        lore: "More information about Vrethpool Bank is coming soon.",
         npcs: [],
         links: [],
       },
@@ -4455,22 +4750,88 @@ export const mapMarkers = {
 
     // Region: Krythan Island Trainers
 
-    // Lotor's Summer Palace Trainers
+    // Region: Silvest Valley Trainers
+
+    // City: Silvest Trainers
+
+    // City: Fort Eastwatch Trainers
+
+    // City: Cliffside Trainers
+
+    // Region: Krythan Trainers
+    // City: Varg Trainers
+
+    // City: Hothbra Trainers
+
+    // City: Jeel Trainers
+
+    // City: Lotor's Castle Trainers
     {
       category: "npc",
       type: "trainer",
-      tooltip: "Master Draftsman",
-      region: "Western Isles",
-      place: "Lotor's Summer Palace",
+      tooltip: "Lotor's Steward",
+      region: "Krythan",
+      place: "Lotor's Castle",
       details: {
-        title: "Master Draftsman",
-        coordinates: { x: 773, y: 618 },
-        image: "images/markers/Master_Draftsman.png",
-        lore: "More information about Master Draftsman is coming soon.",
+        title: "Lotor's Steward",
+        coordinates: { x: 243, y: 1128 },
+        image: "images/markers/Lotors_Steward.png",
+        lore: "More information about Lotor's Steward is coming soon.",
         npcs: [],
         links: [],
       },
     },
+    {
+      category: "npc",
+      type: "trainer",
+      tooltip: "Champion of Lotor",
+      region: "Krythan",
+      place: "Lotor's Castle",
+      details: {
+        title: "Champion of Lotor",
+        coordinates: { x: 245, y: 1122 },
+        image: "images/markers/Lotors_Castle_Champion_of_Lotor.png",
+        lore: "More information about Champion of Lotor is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "trainer",
+      tooltip: "Laurel the Royal Cartographer",
+      region: "Krythan",
+      place: "Lotor's Castle",
+      details: {
+        title: "Laurel the Royal Cartographer",
+        coordinates: { x: 239, y: 1133 },
+        image: "images/markers/Lotors_Castle_Laurel_the_Royal_Cartographer.png",
+        lore: "More information about Laurel the Royal Cartographer is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "trainer",
+      tooltip: "Lotorian Knight",
+      region: "Krythan",
+      place: "Lotor's Castle",
+      details: {
+        title: "Lotorian Knight",
+        coordinates: { x: 238, y: 1139 },
+        image: "images/markers/Lotors_Castle_Lotorian_Knight.png",
+        lore: "More information about Lotorian Knight is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // City: Vrethpool Trainers
+
+
+    // Lotor's Summer Palace Trainers
+    
     {
       category: "npc",
       type: "trainer",
@@ -5194,13 +5555,254 @@ export const mapMarkers = {
     // City: Jeel Shops
 
     // City: Lotor's Castle Shops
+    {
+      category: "npc",
+      type: "shop_pub",
+      tooltip: "Brewmaster Idmun's Pub",
+      region: "Krythan",
+      place: "Lotor's Castle",
+      details: {
+        title: "Brewmaster Idmun's Pub",
+        coordinates: { x: 252, y: 1132 },
+        image: "images/markers/Brewmaster_Idmun_Pub.png",
+        lore: "More information about Brewmaster Idmun's Pub is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "shop_magic",
+      tooltip: "Hlothere's Magic Shop",
+      region: "Krythan",
+      place: "Lotor's Castle",
+      details: {
+        title: "Hlothere's Magic Shop",
+        coordinates: { x: 256, y: 1136 },
+        image: "images/markers/Hlothere_Magic_Shop.png",
+        lore: "More information about Hlothere's Magic Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "shop_scrolls",
+      tooltip: "Flannig Scroll Shop",
+      region: "Krythan",
+      place: "Lotor's Castle",
+      details: {
+        title: "Flannig Scroll Shop",
+        coordinates: { x: 252, y: 1137 },
+        image: "images/markers/Flannig_Scroll_Shop.png",
+        lore: "More information about Flannig Scroll Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "shop_generic",
+      tooltip: "Lotor's Castle VIP Store",
+      region: "Krythan",
+      place: "Lotor's Castle",
+      details: {
+        title: "VIP Store",
+        coordinates: { x: 252, y: 1139 },
+        image: "images/markers/Lotors_Castle_VIP_Store.png",
+        lore: "More information about Lotor's Castle VIP Store is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "shop_jewelry",
+      tooltip: "Ricardo Sardi's Jewelry Shop",
+      region: "Krythan",
+      place: "Lotor's Castle",
+      details: {
+        title: "Ricardo Sardi's Jewelry Shop",
+        coordinates: { x: 257, y: 1138 },
+        image: "images/markers/Ricardo_Sardis_Jewelry_Shop.png",
+        lore: "More information about Ricardo Sardi's Jewelry Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "shop_weapon",
+      tooltip: "Hale's Weaponry Shop",
+      region: "Krythan",
+      place: "Lotor's Castle",
+      details: {
+        title: "Hale's Weaponry Shop",
+        coordinates: { x: 254, y: 1155 },
+        image: "images/markers/Hales_Weaponry_Shop.png",
+        lore: "More information about Hale's Weaponry Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "shop_armory",
+      tooltip: "Bercthun's Armory Shop",
+      region: "Krythan",
+      place: "Lotor's Castle",
+      details: {
+        title: "Bercthun's Armory Shop",
+        coordinates: { x: 252, y: 1155 },
+        image: "images/markers/Bercthuns_Armory_Shop.png",
+        lore: "More information about Bercthun's Armory Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "shop_blacksmith",
+      tooltip: "Swidhelm's Blacksmith Shop",
+      region: "Krythan",
+      place: "Lotor's Castle",
+      details: {
+        title: "Swidhelm's Blacksmith Shop",
+        coordinates: { x: 261, y: 1154 },
+        image: "images/markers/Swidhelms_Blacksmith_Shop.png",
+        lore: "More information about Swidhelm's Blacksmith Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "shop_farming",
+      tooltip: "Merchant's Farm Shop",
+      region: "Krythan",
+      place: "Lotor's Castle",
+      details: {
+        title: "Merchant's Farm Shop",
+        coordinates: { x: 212, y: 1145 },
+        image: "images/markers/Merchants_Farm_Shop.png",
+        lore: "More information about Merchant's Farm Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    
 
     // City: Hothbra Shops
 
     // City: New Korelth Shops
     // It was toast, no shops here.
 
-    // City: Verthpool Shops
+    // City: Vrethpool Shops
+    {
+      category: "npc",
+      type: "shop_provisioner",
+      tooltip: "Kevin Larcon's Provisioner Shop",
+      region: "Krythan",
+      place: "Vrethpool",
+      details: {
+        title: "Kevin Larcon's Provisioner Shop",
+        coordinates: { x: 649, y: 1675 },
+        image: "images/markers/Kevin_Larcon_Provisioner_Shop.png",
+        lore: "More information about Kevin Larcon's Provisioner Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "shop_pub",
+      tooltip: "Aedelred's Pub",
+      region: "Krythan",
+      place: "Vrethpool",
+      details: {
+        title: "Aedelred's Pub",
+        coordinates: { x: 677, y: 1680 },
+        image: "images/markers/Aedelred_Pub.png",
+        lore: "More information about Aedelred's Pub is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "shop_armory",
+      tooltip: "David's Armory Shop",
+      region: "Krythan",
+      place: "Vrethpool",
+      details: {
+        title: "David's Armory Shop",
+        coordinates: { x: 688, y: 1681 },
+        image: "images/markers/Davids_Armory_Shop.png",
+        lore: "More information about David's Armory Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "shop_blacksmith",
+      tooltip: "Dubois' Blacksmith Shop",
+      region: "Krythan",
+      place: "Vrethpool",
+      details: {
+        title: "Dubois' Blacksmith Shop",
+        coordinates: { x: 683, y: 1679 },
+        image: "images/markers/Dubois_Blacksmith_Shop.png",
+        lore: "More information about Dubois' Blacksmith Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "shop_weapon",
+      tooltip: "Andhun's Weaponry Shop",
+      region: "Krythan",
+      place: "Vrethpool",
+      details: {
+        title: "Andhun's Weaponry Shop",
+        coordinates: { x: 690, y: 1697 },
+        image: "images/markers/Andhuns_Weaponry_Shop.png",
+        lore: "More information about Andhun's Weaponry Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "shop_evil_trinket",
+      tooltip: "Gallos' Evil Trinket Shop",
+      region: "Krythan",
+      place: "Vrethpool",
+      details: {
+        title: "Gallos' Evil Trinket Shop",
+        coordinates: { x: 650, y: 1705 },
+        image: "images/markers/Gallos_Evil_Trinket_Shop.png",
+        lore: "More information about Gallos' Evil Trinket Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "shop_magic",
+      tooltip: "Rygor's Magic Shop",
+      region: "Krythan",
+      place: "Vrethpool",
+      details: {
+        title: "Rygor's Magic Shop",
+        coordinates: { x: 682, y: 1704 },
+        image: "images/markers/Rygors_Magic_Shop.png",
+        lore: "More information about Rygor's Magic Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // City: Varg Shops
     {
@@ -6527,22 +7129,7 @@ export const mapMarkers = {
         links: [],
       },
     },
-    // City: Varg Spawns
-    {
-      category: "spawn",
-      type: "spawn_good",
-      tooltip: "Varg Spawn Gate",
-      region: "Silvest Valley",
-      place: "Varg",
-      details: {
-        title: "Spawn Gate",
-        coordinates: { x: 760, y: 1174 },
-        image: "images/spawns/Varg_Spawn_Gate.png",
-        lore: "More information about Varg Spawn Gate is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
+    
     // City: Cliffside Spawns
     // No good spawns in Cliffside as of now
 
@@ -6564,6 +7151,22 @@ export const mapMarkers = {
     },
 
     // Region: Krythan Spawns
+    // City: Varg Spawns
+    {
+      category: "spawn",
+      type: "spawn_good",
+      tooltip: "Varg Spawn Gate",
+      region: "Krythan",
+      place: "Varg",
+      details: {
+        title: "Spawn Gate",
+        coordinates: { x: 760, y: 1174 },
+        image: "images/spawns/Varg_Spawn_Gate.png",
+        lore: "More information about Varg Spawn Gate is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
     {
       category: "spawn",
       type: "spawn_evil",
@@ -6579,6 +7182,59 @@ export const mapMarkers = {
         links: [],
       },
     },
+    // City: Hothbra Spawns
+
+    // City: Jeel Spawns
+
+    // City: Lotor's Castle Spawns
+    {
+      category: "spawn",
+      type: "spawn_good",
+      tooltip: "Lotor's Castle Spawn Gate",
+      region: "Krythan",
+      place: "Lotor's Castle",
+      details: {
+        title: "Spawn Gate",
+        coordinates: { x:264, y: 1193 },
+        image: "images/spawns/Lotors_Castle_Spawn_Gate.png",
+        lore: "More information about Lotor's Castle Spawn Gate is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // City: Vrethpool Spawns
+    {
+      category: "spawn",
+      type: "spawn_good",
+      tooltip: "Vrethpool Spawn Gate",
+      region: "Krythan",
+      place: "Vrethpool",
+      details: {
+        title: "Spawn Gate",
+        coordinates: { x: 646, y: 1720 },
+        image: "images/spawns/Vrethpool_Spawn_Gate.png",
+        lore: "More information about Vrethpool Spawn Gate is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "spawn",
+      type: "spawn_good",
+      tooltip: "Vrethpool Spawn Gate",
+      region: "Krythan",
+      place: "Vrethpool",
+      details: {
+        title: "Spawn Gate",
+        coordinates: { x: 470, y: 1641 },
+        image: "images/spawns/Vrethpool_Spawn_Gate.png",
+        lore: "More information about Vrethpool Spawn Gate is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    
 
     // Region: Darkwoods Spawns
     // City: Josody Spawns
@@ -6848,6 +7504,45 @@ export const mapMarkers = {
     
 
     // Region: Krythan Island Undergrounds
+    // City: Varg Undergrounds
+
+    // City: Hothbra Undergrounds
+
+    // City: Jeel Undergrounds
+
+    // City: Lotor's Castle Undergrounds
+    {
+      category: "underground",
+      type: "underground_stairs",
+      tooltip: "Lotor's Castle Arena Basement",
+      region: "Krythan",
+      place: "Lotor's Castle",
+      details: {
+        title: "Lotor's Castle Arena Basement",
+        coordinates: { x: 214, y: 1182 },
+        image: "images/markers/Lotor_Castle_Arena_Basement.png",
+        lore: "More information about Lotor's Castle Arena Basement is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "underground",
+      type: "underground_stairs",
+      tooltip: "Lotor's Castle Arena Basement",
+      region: "Krythan",
+      place: "Lotor's Castle",
+      details: {
+        title: "Lotor's Castle Arena Basement",
+        coordinates: { x: 212, y: 1182 },
+        image: "images/markers/Lotor_Castle_Arena_Basement.png",
+        lore: "More information about Lotor's Castle Arena Basement is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // City: Vrethpool Undergrounds
 
     // Region: Silvest Valley Undergrounds
     {
