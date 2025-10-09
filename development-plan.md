@@ -11,7 +11,7 @@ This section is migrated from the main README to consolidate all planning detail
   - ✅ Master toggles for labels and markers.
   - ✅ State-aware buttons with active/inactive styles.
 - 🚧 **Custom Markers & Icons**
-  - 🚧 Custom SVG icons for all marker categories.
+  - 🚧 Custom SVG icons for all marker and label categories.
   - ✅ Markers are rendered on a colored circular background, which is drawn dynamically.
   - ✅ Markers are scaled down at far zoom levels to reduce clutter.
 - ✅ **Modular Codebase**
