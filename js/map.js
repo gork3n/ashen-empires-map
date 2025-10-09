@@ -13,6 +13,7 @@ import TileGrid from 'ol/tilegrid/TileGrid.js';
 // Import local data modules
 import { mapLabels } from './labels.js';
 import { mapMarkers, markerStyles } from './markers.js';
+import { undergroundMapMarkers } from './underground-markers.js';
 import { initializeFilterMenu } from './filter-menu.js';
 
 // Global variables
@@ -23,6 +24,10 @@ let markerTooltipOverlay;
 const styleCache = {};
 const markerImageCache = {};
 let markerLayers = {};
+let undergroundMarkerLayers = {};
+let overworldTileLayer;
+let undergroundTileLayer;
+let currentMap = 'overworld'; // 'overworld' or 'underground'
 
 // Define custom styles for different label categories
 const labelStyles = {
@@ -204,7 +209,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // The `document.fonts.ready` promise resolves when all fonts are loaded.
     document.fonts.ready.then(function () {
         // Preload and tint icons, then initialize the map. This ensures that
-        // custom colors can be applied to SVGs that have hardcoded fill colors.
+        // custom colors can be applied to SVGs that have hard-coded fill colors.
         preloadIcons().then(() => {
             // Dispatch a custom event to notify other scripts that the icons are ready.
             document.dispatchEvent(new CustomEvent('icons-ready'));
@@ -273,23 +278,39 @@ function initializeMap() {
         -(initialCenterGameCoords.y * scaleFactor)
     ];
 
+    // Define the overworld and underground tile layers
+    overworldTileLayer = new TileLayer({
+        source: new XYZ({
+            attributions: '<span style="color: white;">Map tiles by Sir Chris via GDAL2Tiles</span>',
+            preload: 0,
+            url: 'tiles/{z}/{x}/{y}.png',
+            tileGrid: new TileGrid({
+                extent: [0, -32768, 32768, 0],
+                origin: [0, 0],
+                resolutions: [128, 64, 32, 16, 8, 4, 2, 1],
+                tileSize: [256, 256]
+            })
+        })
+    });
+
+    undergroundTileLayer = new TileLayer({
+        visible: false, // Initially hidden
+        source: new XYZ({
+            attributions: '<span style="color: white;">Map tiles by Sir Chris via GDAL2Tiles</span>',
+            preload: 0,
+            url: 'underground/{z}/{x}/{y}.png', // Path to underground tiles
+            tileGrid: new TileGrid({
+                extent: [0, -32768, 32768, 0],
+                origin: [0, 0],
+                resolutions: [128, 64, 32, 16, 8, 4, 2, 1],
+                tileSize: [256, 256]
+            })
+        })
+    });
+
     map = new Map({ // Initialize the map
         target: 'map',
-        layers: [
-            new TileLayer({
-                source: new XYZ({
-                    attributions: '<span style="color: white;">Map tiles by Sir Chris via GDAL2Tiles</span>',
-                    preload: 0, // Disable preloading to reduce memory usage and improve performance.
-                    url: 'tiles/{z}/{x}/{y}.png',
-                    tileGrid: new TileGrid({
-                        extent: [0, -32768, 32768, 0], // The full extent of your map
-                        origin: [0, 0], // Top-left corner
-                        resolutions: [128, 64, 32, 16, 8, 4, 2, 1], // Resolutions for each zoom level
-                        tileSize: [256, 256] // The size of your tiles
-                    })
-                })
-            })
-        ],
+        layers: [overworldTileLayer, undergroundTileLayer],
         view: new View({
             center: initialCenterOlCoords, // Use your calculated center
             resolution: 2, // Set to 8 for zoom level 4
@@ -303,6 +324,9 @@ function initializeMap() {
     
     // Add markers to the map
     addMapMarkers(map);
+
+    // Add underground markers (they will be hidden by default)
+    addUndergroundMapMarkers(map);
     
     // Add labels to the map after markers so they appear on top
     addMapLabels(map);
@@ -329,6 +353,10 @@ function initializeMap() {
     // Set up the new info flyout panel
     setupInfoFlyout();
 
+    // Set up the map toggle buttons in the footer
+    setupMapToggleButtons();
+
+
     // --- Add click listener for features ---
     map.on('click', function(evt) {
         // Set cursor to default first
@@ -343,6 +371,10 @@ function initializeMap() {
             const featureData = feature.getProperties();
 
             if (featureData.details) {
+                // Check if this marker is a map switcher
+                if (featureData.details.switchTo) {
+                    switchMap(featureData.details.switchTo);
+                }
                 // Pass the entire data object to the flyout function
                 showInfoFlyout(featureData);
             }
@@ -351,6 +383,85 @@ function initializeMap() {
 }
 
 /**
+ * Sets up the event listeners for the overworld/underground toggle buttons.
+ */
+function setupMapToggleButtons() {
+    const overworldBtn = document.getElementById('toggle-overworld');
+    const undergroundBtn = document.getElementById('toggle-underground');
+
+    if (overworldBtn) {
+        overworldBtn.addEventListener('click', () => {
+            switchMap('overworld');
+        });
+    }
+
+    if (undergroundBtn) {
+        undergroundBtn.addEventListener('click', () => {
+            switchMap('underground');
+        });
+    }
+}
+
+/**
+ * Switches the map view between 'overworld' and 'underground'.
+ * @param {string} targetMap - The map to switch to ('overworld' or 'underground').
+ */
+function switchMap(targetMap) {
+    if (targetMap === currentMap) return; // No change needed
+
+    const isSwitchingToUnderground = targetMap === 'underground';
+    const mapElement = document.getElementById('map');
+
+    // Toggle the background class on the map container
+    if (mapElement) {
+        mapElement.classList.toggle('underground-active', isSwitchingToUnderground);
+    }
+
+    // Toggle tile layer visibility
+    overworldTileLayer.setVisible(!isSwitchingToUnderground);
+    undergroundTileLayer.setVisible(isSwitchingToUnderground);
+
+    // Toggle overworld marker layers
+    Object.values(markerLayers).forEach(layer => {
+        layer.setVisible(!isSwitchingToUnderground);
+    });
+
+    // Toggle underground marker layers
+    Object.values(undergroundMarkerLayers).forEach(layer => {
+        layer.setVisible(isSwitchingToUnderground);
+    });
+
+    // Toggle label layers (assuming labels are for overworld only for now)
+    Object.values(labelLayers).forEach(layer => {
+        layer.setVisible(!isSwitchingToUnderground);
+    });
+
+    // Update the filter menu to show/hide relevant sections
+    const markerToggles = document.getElementById('marker-toggles');
+    const undergroundMarkerToggles = document.getElementById('underground-marker-toggles'); // Assuming a new container
+    if (markerToggles) markerToggles.style.display = isSwitchingToUnderground ? 'none' : '';
+    if (undergroundMarkerToggles) undergroundMarkerToggles.style.display = isSwitchingToUnderground ? '' : 'none';
+
+    // You might want to hide all filter sections related to the non-visible map
+    // For now, we just log the switch.
+    console.log(`Switched map to: ${targetMap}`);
+    currentMap = targetMap;
+
+    // Hide the info flyout on map switch to avoid confusion
+    hideInfoFlyout();
+
+    // Update the active state of the toggle buttons
+    const overworldBtn = document.getElementById('toggle-overworld');
+    const undergroundBtn = document.getElementById('toggle-underground');
+    if (overworldBtn && undergroundBtn) {
+        overworldBtn.classList.toggle('active', !isSwitchingToUnderground);
+        undergroundBtn.classList.toggle('active', isSwitchingToUnderground);
+    }
+}
+
+
+/**
+
  * Creates and appends the info flyout panel to the DOM and sets up its close event.
  */
 function setupInfoFlyout() {
@@ -861,6 +972,56 @@ function addMapMarkers(map) {
             categories: categories
         }
     }));
+}
+
+/**
+ * Add underground map markers by category.
+ * This function mirrors `addMapMarkers` but for the underground data.
+ * @param {Map} map - The OpenLayers map
+ */
+function addUndergroundMapMarkers(map) {
+    const categories = Object.keys(undergroundMapMarkers);
+
+    categories.forEach(category => {
+        const markerSource = new VectorSource();
+
+        const markerLayer = new VectorLayer({
+            source: markerSource,
+            title: `underground_${category}_markers`,
+            visible: false, // All underground layers are initially hidden
+            style: function(feature, resolution) {
+                const type = feature.get('type');
+                // NOTE: This currently relies on the main filter menu.
+                // A separate filter UI for the underground map might be needed later.
+                const subtypeButton = document.querySelector(`.marker-subtype-btn[data-subtype="${type}"]`);
+                if (subtypeButton && !subtypeButton.classList.contains('active')) {
+                    return null;
+                }
+
+                const style = createMarkerStyle(type);
+                style.getImage().setScale(resolution < 1 ? 1.0 : (resolution < 2 ? 0.85 : 0.65));
+                return style;
+            }
+        });
+
+        undergroundMarkerLayers[category] = markerLayer;
+        map.addLayer(markerLayer);
+
+        if (undergroundMapMarkers[category] && undergroundMapMarkers[category].length) {
+            undergroundMapMarkers[category].forEach(marker => {
+                addMarkerFeature(
+                    markerSource,
+                    marker.details.coordinates.x,
+                    marker.details.coordinates.y,
+                    marker.type,
+                    marker.tooltip,
+                    marker.details,
+                    marker.place,
+                    marker.region
+                );
+            });
+        }
+    });
 }
 
 /**

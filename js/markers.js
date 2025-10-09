@@ -1797,6 +1797,21 @@ export const mapMarkers = {
     // City: Jeel Quests
 
     // City: Lotor's Castle Quests
+    {
+      category: "npc",
+      type: "quest",
+      tooltip: "Klaresh",
+      region: "Krythan",
+      place: "Lotor's Castle",
+      details: {
+        title: "Klaresh Quest",
+        coordinates: { x: 257, y: 1150 },
+        image: "images/markers/Klaresh_Quest.png",
+        lore: "Klaresh is part of a quest line for Fellow Archer.",
+        npcs: [],
+        links: [{ text: "Ashen Empires Wiki (Fellow Archer)", url: "https://ashenempires.fandom.com/wiki/Fellow_Archer" }],
+      },
+    },
 
     // City: Vrethpool Quests
     {
@@ -8273,6 +8288,7 @@ export const mapMarkers = {
       place: "Highlands",
       details: {
         title: "Grell",
+        switchTo: "underground", // This will trigger the map switch
         coordinates: { x: 3238, y: 3605 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Grell is coming soon.",

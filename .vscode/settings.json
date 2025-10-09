@@ -28,5 +28,6 @@
         "Varg",
         "Vrethpool",
         "wght"
-    ]
+    ],
+    "git.ignoreLimitWarning": true
 }
