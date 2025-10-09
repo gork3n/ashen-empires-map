@@ -18,6 +18,10 @@ This section is migrated from the main README to consolidate all planning detail
   - ✅ Separation of concerns into `map.js`, `filter-menu.js`, `tips.js`.
   - ✅ Data-driven design using `labels.js` and `markers.js`.
 - ✅ **Location Information Panel**
+- 🚧 **Multi-Layer Map Support**
+  - ✅ **Underground Map Layer**: A separate tile layer for the underground map has been integrated, with a UI to toggle between it and the overworld.
+  - 🚧 **Underground Markers & Labels**: The filter menu is now context-aware for the underground map. Data for underground-specific markers and labels is currently being added, while work on overworld markers and labels continues.
+  - ⬜ **Housing Realm Map**: A dedicated map layer for the Housing Realm, with its own labels and markers. This is a long-term goal pending the creation of the map tiles (stitching, upscaling, and tiling).
 - 🚧 **Responsive & Mobile-Optimized UI**
   - 🚧 Fluid layout for all screen sizes.
   - ✅ Responsive filter menu: a full-screen overlay on mobile and a side panel on desktop.
@@ -79,13 +83,16 @@ This section is migrated from the main README to consolidate all planning detail
   - ⬜ Overlays will be off by default but can be set to appear automatically when zoomed out (e.g., to level 2).
   - ⬜ Polygons will be clickable and have a central label, opening the info center with details about the region.
 - ⬜ **Detailed Sub-Maps**
-  - ⬜ Create dedicated, high-resolution map layers (16384x16384) for major underground dungeons.
+  - ⬜ Create dedicated, high-resolution map layers for major underground dungeons.
   - ⬜ When a user clicks a dungeon entrance marker, a sub-map canvas will appear, showing the dungeon map centered at the corresponding coordinates.
 - ⬜ **Housing Realm Map**
   - ⬜ A dedicated map layer for the Housing Realm.
   - ⬜ When a user clicks a housing realm portal, the map will switch to the housing realm layer and center on the corresponding spawn location.
 - 🚧 **Finalize UI/UX and Styling**
   - 🚧 Replace all remaining Google Material Symbols with custom-designed SVG icons for a fully unique visual identity.
+- ⬜ **Code Quality & Documentation**
+  - ⬜ **Code Cleanup**: Remove temporary testing logic, and refactor any unused or redundant code to improve maintainability.
+  - ⬜ **Demo & Documentation Site**: Create a dedicated site to showcase different implementation examples (e.g., standalone, embedded) and provide comprehensive documentation on how to use different map tile versions (e.g., no-scale, 4x scale, 8x scale) and integrate the map into various projects.
 
 ---
 

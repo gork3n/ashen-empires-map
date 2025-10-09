@@ -117,10 +117,13 @@ html, body {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.75); /* Same transparency as the header */
-    overflow-y: auto; /* The entire content area scrolls */
+    overflow-y: scroll; /* Always show scrollbar to prevent layout shift */
+    box-sizing: border-box; /* Include padding in the element's total width */
+    padding-right: 10px; /* Create space for the scrollbar */
 }
 
 .filter-menu-content-inner {
+    /* Padding is now on the parent, just add the base padding here */
     padding: 15px;
 }
 
@@ -333,7 +336,9 @@ input:checked + .slider:before {
 
 /* Style the master toggle buttons to span the width of the 3-column grid below them */
 #show-all-labels,
+#show-all-underground-labels,
 #show-all-markers,
+#show-all-underground-markers,
 #show-all-monsters {
     grid-column: 1 / -1; /* Span all columns of the grid */
     width: auto; /* Let the grid handle the width */
@@ -363,6 +368,7 @@ input:checked + .slider:before {
 
 /* --- Masonry Grid Layout for Toggles --- */
 #label-toggles,
+#underground-label-toggles,
 #marker-toggles,
 #monster-toggles {
     display: flex;
@@ -377,6 +383,7 @@ input:checked + .slider:before {
 
 /* --- Marker Category Rows --- */
 .marker-category-row {
+    /* This style applies to both overworld and underground marker rows */
     display: flex;
     flex-direction: column;
     background-color: rgba(0, 0, 0, 0.2);
@@ -421,16 +428,18 @@ input:checked + .slider:before {
     font-weight: 600;
 }
 
-.marker-subtype-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    justify-content: center; /* Center the buttons within the container */
-    padding-top: 10px; /* Added padding from main button */
+.marker-subtype-container,
+#underground-marker-toggles .marker-subtype-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4-column grid */
+    gap: 10px;
+    justify-items: center;
+    padding-top: 10px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.marker-subtype-btn {
+.marker-subtype-btn,
+#underground-marker-toggles .marker-subtype-btn {
     flex-direction: column;
     height: 95px; /* Reduced height for smaller icon */
     width: 95px; /* Reduced width for smaller icon */
@@ -442,14 +451,16 @@ input:checked + .slider:before {
     gap: 5px; /* Reduced space between icon and text */
 }
 
-.marker-subtype-btn .toggle-btn-icon-canvas {
+.marker-subtype-btn .toggle-btn-icon-canvas,
+#underground-marker-toggles .marker-subtype-btn .toggle-btn-icon-canvas {
     /* Style the canvas element directly for full control */
     width: 50px;
     height: 50px;
     /* margin-right is not needed as canvas doesn't inherit it like the img did */
 }
 
-.marker-subtype-btn span:not(.material-symbols-outlined) {
+.marker-subtype-btn span:not(.material-symbols-outlined),
+#underground-marker-toggles .marker-subtype-btn span:not(.material-symbols-outlined) {
     font-size: 12px;
     white-space: normal; /* Allow text to wrap */
     line-height: 1.2;
@@ -459,13 +470,15 @@ input:checked + .slider:before {
 }
 
 /* Add yellow bottom border to active subtype buttons */
-.marker-subtype-container .marker-subtype-btn.active {
+.marker-subtype-container .marker-subtype-btn.active,
+#underground-marker-toggles .marker-subtype-container .marker-subtype-btn.active {
     border-left: none; /* Reset the left border completely */
     border-bottom: 3px solid #F5D76E; /* Apply only the bottom border */
 }
 
 /* Keep label toggles as they were */
 #monster-toggles .toggle-btn {
+/* This style is not used, but kept for reference */
     flex-direction: column;
     height: 90px;
     justify-content: center;
@@ -477,19 +490,22 @@ input:checked + .slider:before {
 }
 
 #label-toggles .toggle-btn.active,
+#underground-label-toggles .toggle-btn.active,
 #monster-toggles .toggle-btn.active {
     border-left-color: transparent;
     border-bottom-color: #F5D76E;
 }
 
 /* --- New Grid Layout for Label Toggles --- */
-#label-toggles {
+#label-toggles,
+#underground-label-toggles {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Create a 2-column grid */
     gap: 10px;
 }
 
-#label-toggles .toggle-btn {
+#label-toggles .toggle-btn,
+#underground-label-toggles .toggle-btn {
     flex-direction: column;
     height: 80px; /* Adjusted height for a more compact look */
     justify-content: center;
@@ -500,12 +516,24 @@ input:checked + .slider:before {
     text-align: center;
 }
 
-#label-toggles .toggle-btn .material-symbols-outlined {
+#label-toggles .toggle-btn .material-symbols-outlined,
+#underground-label-toggles .toggle-btn .material-symbols-outlined {
     margin: 0 0 5px 0;
     font-size: 28px;
 }
 
-#label-toggles .toggle-btn span:not(.material-symbols-outlined) {
+/* Style for custom SVG icons used in label toggles */
+.toggle-btn-icon-svg {
+    width: 28px;
+    height: 28px;
+    margin: 0 0 5px 0;
+    object-fit: contain;
+    /* The SVGs are white, so no filter is needed */
+}
+
+
+#label-toggles .toggle-btn span:not(.material-symbols-outlined),
+#underground-label-toggles .toggle-btn span:not(.material-symbols-outlined) {
     font-size: 12px;
     white-space: normal;
 }
@@ -893,7 +921,7 @@ input:checked + .slider:before {
     .filter-menu {
         left: auto; /* Unset the left position */
         right: 0; /* Anchor to the right */
-        width: 400px; /* Set a fixed width for the panel */
+        width: 450px; /* Increased width for 4-column marker grid */
         height: 100%;
         transform: translateX(100%); /* Start off-screen to the right */
         transition: transform 0.4s ease-in-out;
@@ -920,8 +948,9 @@ input:checked + .slider:before {
     }
 
     /* Use a 4-column grid for labels on desktop */
-    #label-toggles {
-        grid-template-columns: repeat(4, 1fr);
+    #label-toggles,
+    #underground-label-toggles {
+        grid-template-columns: repeat(4, 1fr); /* 4 columns on desktop */
     }
 
     /* The header toggle button is also mobile-only */

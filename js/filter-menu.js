@@ -1,19 +1,23 @@
-let mapMarkers, markerStyles, markerLayers, createUIMarkerIcon;
+let mapMarkers, undergroundMapMarkers, markerStyles, markerLayers, undergroundMarkerLayers, createUIMarkerIcon;
 
 /**
  * Initialize filter menu functionality. This is the main entry point for this module.
  * @param {object} data - The data object from map.js.
  * @param {object} data.mapMarkers - The marker data.
+ * @param {object} data.undergroundMapMarkers - The underground marker data.
  * @param {object} data.markerStyles - The marker style definitions.
  * @param {object} data.markerLayers - The marker layer references. 
+ * @param {object} data.undergroundMarkerLayers - The underground marker layer references.
  * @param {Function} data.createUIMarkerIcon - The function to create UI icons.
  */
 export function initializeFilterMenu(data) {
     console.log('[Filter Menu] Initializing with data from map.js...');
     // Receive data directly from the function call
     mapMarkers = data.mapMarkers;
+    undergroundMapMarkers = data.undergroundMapMarkers;
     markerStyles = data.markerStyles;
     markerLayers = data.markerLayers;
+    undergroundMarkerLayers = data.undergroundMarkerLayers;
     createUIMarkerIcon = data.createUIMarkerIcon;
 
     const filterMenu = document.getElementById('filter-menu');
@@ -49,7 +53,9 @@ export function initializeFilterMenu(data) {
 
     // Create individual toggle buttons for each section
     createLabelToggleButtons();
+    createUndergroundLabelToggleButtons();
     createMarkerToggleButtons();
+    createUndergroundMarkerToggleButtons();
     setupMasterToggleButtons();
 }
 
@@ -59,62 +65,40 @@ export function initializeFilterMenu(data) {
 function setupMasterToggleButtons() {
     console.log('[Filter Menu] Setting up master toggle buttons...');
     // Show All Labels button
-    const showAllLabelsBtn = document.getElementById('show-all-labels');
-    if (showAllLabelsBtn) {
-        showAllLabelsBtn.addEventListener('click', function() {
-            const isActive = this.classList.contains('active');
-            const newState = !isActive;
-            
-            // Toggle the button state
-            if (isActive) {
-                this.classList.remove('active');
-                this.classList.add('inactive');
-            } else {
-                this.classList.remove('inactive');
-                this.classList.add('active');
+    setupMasterToggle('show-all-labels', '#label-toggles .toggle-btn');
+    setupMasterToggle('show-all-underground-labels', '#underground-label-toggles .toggle-btn');
+    setupMasterToggle('show-all-markers', '#marker-toggles .toggle-btn');
+    setupMasterToggle('show-all-underground-markers', '#underground-marker-toggles .toggle-btn');
+}
+
+/**
+ * Helper function to set up a "Show All" toggle button.
+ * @param {string} masterButtonId - The ID of the master "Show All" button.
+ * @param {string} childButtonSelector - The CSS selector for the child toggle buttons.
+ */
+function setupMasterToggle(masterButtonId, childButtonSelector) {
+    const masterButton = document.getElementById(masterButtonId);
+    if (!masterButton) return;
+
+    masterButton.addEventListener('click', function() {
+        const isActive = this.classList.contains('active');
+        const newState = !isActive;
+
+        // Toggle the button state
+        this.classList.toggle('active', newState);
+        this.classList.toggle('inactive', !newState);
+
+        // Toggle all child buttons to match the new state
+        const childButtons = document.querySelectorAll(childButtonSelector);
+        childButtons.forEach(button => {
+            if (button.disabled) return;
+            const buttonIsActive = button.classList.contains('active');
+            // Only click buttons that don't match the new state
+            if (buttonIsActive !== newState) {
+                button.click(); // This will trigger the button's own click handler
             }
-            
-            // Toggle all label buttons to match this state
-            const labelButtons = document.querySelectorAll('#label-toggles .toggle-btn');
-            labelButtons.forEach(button => {
-                const buttonIsActive = button.classList.contains('active');
-                
-                // Only change buttons that don't match the new state
-                if (buttonIsActive !== newState) {
-                    button.click(); // This will trigger the button's click handler
-                }
-            });
         });
-    }
-    
-    // Show All Markers button
-    const showAllMarkersBtn = document.getElementById('show-all-markers');
-    if (showAllMarkersBtn) {
-        showAllMarkersBtn.addEventListener('click', function() {
-            const isActive = this.classList.contains('active');
-            const newState = !isActive;
-            
-            // Toggle the button state
-            if (isActive) {
-                this.classList.remove('active');
-                this.classList.add('inactive');
-            } else {
-                this.classList.remove('inactive');
-                this.classList.add('active');
-            }
-            
-            // Toggle all marker buttons to match this state
-            const markerButtons = document.querySelectorAll('#marker-toggles .toggle-btn');
-            markerButtons.forEach(button => {
-                const buttonIsActive = button.classList.contains('active');
-                
-                // Only change buttons that don't match the new state
-                if (buttonIsActive !== newState) {
-                    button.click(); // This will trigger the button's click handler
-                }
-            });
-        });
-    }
+    });
 }
 
 /**
@@ -132,7 +116,7 @@ function createLabelToggleButtons() {
         { id: 'landmarks', name: 'Landmarks', icon: 'tour' },
         { id: 'cities', name: 'Cities', icon: 'location_city' },
         { id: 'islands', name: 'Islands', icon: 'park' },
-        { id: 'dungeons', name: 'Dungeons', icon: 'fort' },
+        { id: 'dungeons', name: 'Dungeons', icon: 'dungeon' },
         { id: 'caves', name: 'Caves', icon: 'landscape' },
         { id: 'interests', name: 'Places of Interest', icon: 'pin_drop' },
         { id: 'waterBodies', name: 'Bodies of Water', icon: 'water' },
@@ -182,6 +166,75 @@ function createLabelToggleButtons() {
         });
         
         // Add to container
+        container.appendChild(button);
+    });
+}
+
+/**
+ * Create underground label toggle buttons.
+ */
+function createUndergroundLabelToggleButtons() {
+    const container = document.getElementById('underground-label-toggles');
+    if (!container) return;
+
+    container.innerHTML = '';
+
+    // Define the specific categories for the underground map
+    const undergroundLabelCategories = [
+        { id: 'cities', name: 'Cities', icon: 'icons/medieval-village-01.svg' }, // SVG Icon
+        { id: 'dungeons', name: 'Dungeons', icon: 'icons/dungeon-gate.svg' }, // SVG Icon
+        { id: 'caves', name: 'Caves', icon: 'icons/cave-entrance.svg' }, // SVG Icon
+        { id: 'basements', name: 'Basements', icon: 'icons/crypt-entrance.svg' }, // SVG Icon
+        { id: 'sewers', name: 'Sewers', icon: 'icons/rat.svg' }, // SVG Icon
+        { id: 'tunnels', name: 'Tunnels', icon: 'icons/dolmen.svg' }, // SVG Icon
+        { id: 'grottos', name: 'Grottos', icon: 'icons/waterfall.svg' }, // SVG Icon
+        { id: 'pits', name: 'Pits', icon: 'vertical_align_bottom' },
+        { id: 'passages', name: 'Passages', icon: 'double_arrow' }
+    ];
+
+    undergroundLabelCategories.forEach(category => {
+        const button = document.createElement('button');
+        button.className = 'toggle-btn active';
+        button.dataset.category = category.id;
+
+        // Check if the icon is an SVG path or a Material Symbol
+        if (category.icon.includes('.svg')) {
+            const iconImg = document.createElement('img');
+            iconImg.className = 'toggle-btn-icon-svg'; // New class for styling SVG icons
+            iconImg.src = category.icon;
+            button.appendChild(iconImg);
+        } else {
+            const iconSpan = document.createElement('span');
+            iconSpan.className = 'material-symbols-outlined';
+            iconSpan.textContent = category.icon;
+            button.appendChild(iconSpan);
+        }
+
+        const textSpan = document.createElement('span');
+        textSpan.textContent = category.name;
+        button.appendChild(textSpan);
+
+        // For now, these buttons are for UI display only.
+        // The actual layer toggling logic for underground labels needs to be implemented
+        // if you have separate underground label layers.
+        button.addEventListener('click', function() {
+            const isActive = button.classList.toggle('active');
+            button.classList.toggle('inactive', !isActive);
+
+            // Placeholder for future functionality
+            console.log(`Toggled underground label '${category.id}' to ${isActive}`);
+
+            // Update "Show All" button state
+            updateShowAllUndergroundLabelsState();
+        });
+
+        // For now, disable buttons that don't have corresponding data yet.
+        // This is a placeholder for when you add underground labels.
+        // if (!mapLabels[category.id]) { // This check will need to be updated for underground labels
+        //     button.disabled = true;
+        //     button.classList.replace('active', 'inactive');
+        // }
+
         container.appendChild(button);
     });
 }
@@ -405,6 +458,148 @@ function createMarkerToggleButtons() {
 }
 
 /**
+ * Create underground marker toggle buttons.
+ */
+function createUndergroundMarkerToggleButtons() {
+    console.log('[Filter Menu] Starting createUndergroundMarkerToggleButtons...');
+    const container = document.getElementById('underground-marker-toggles');
+    if (!container || typeof undergroundMapMarkers === 'undefined') {
+        console.error('[Filter Menu] ABORT: Container #underground-marker-toggles not found or undergroundMapMarkers is not defined.');
+        return;
+    }
+
+    container.innerHTML = '';
+
+    const markerCategories = [
+        { id: 'portals', name: 'Portals', type: 'portal_lsp' },
+        { id: 'shops', name: 'Shops', type: 'shop_generic' },
+        { id: 'services_npcs', name: 'Other Services & NPCs' },
+        { id: 'spawns', name: 'Spawns', type: 'spawn_good' },
+        { id: 'undergrounds', name: 'Undergrounds', type: 'underground_cave' },
+    ];
+
+    markerCategories.forEach(category => {
+        const categoryRow = document.createElement('div');
+        categoryRow.className = 'marker-category-row';
+
+        const mainButton = document.createElement('button');
+        mainButton.className = 'toggle-btn active';
+        mainButton.dataset.category = category.id;
+
+        if (category.type && markerStyles[category.type]) {
+            const mainIcon = createUIMarkerIcon(category.type);
+            mainIcon.className = 'toggle-btn-icon-canvas';
+            mainButton.appendChild(mainIcon);
+        }
+
+        const mainText = document.createElement('span');
+        mainText.textContent = category.name;
+        mainButton.appendChild(mainText);
+
+        const isCategoryEmpty = !undergroundMapMarkers[category.id] || undergroundMapMarkers[category.id].length === 0;
+        if (isCategoryEmpty) {
+            mainButton.disabled = true;
+            mainButton.classList.replace('active', 'inactive');
+        }
+
+        const subtypeContainer = document.createElement('div');
+        subtypeContainer.className = 'marker-subtype-container';
+
+        const categoryData = undergroundMapMarkers[category.id];
+        if (!categoryData) {
+            mainButton.disabled = true;
+            mainButton.classList.replace('active', 'inactive');
+            container.appendChild(categoryRow);
+            return;
+        }
+
+        const subtypes = [...new Set(categoryData?.map(marker => marker.type) || [])];
+
+        subtypes.forEach(subtype => {
+            const subtypeButton = document.createElement('button');
+            subtypeButton.className = 'toggle-btn active marker-subtype-btn';
+            subtypeButton.dataset.subtype = subtype;
+            subtypeButton.dataset.category = category.id;
+
+            if (!markerStyles[subtype]) {
+                console.warn(`[Filter Menu] Skipping underground subtype button for '${subtype}' because it is missing from markerStyles.`);
+                return;
+            }
+
+            const subtypeIconCanvas = createUIMarkerIcon(subtype);
+            subtypeIconCanvas.className = 'toggle-btn-icon-canvas';
+            subtypeButton.appendChild(subtypeIconCanvas);
+
+            let subtypeName = subtype.replace(/^(shop|portal|underground|town)_/, '');
+            subtypeName = subtypeName.replace(/_/g, ' ');
+            if (subtype.toLowerCase() === 'town_wizard_of_insight') {
+                subtypeName = 'Town Wizard of Insight';
+            }
+            if (subtype.toLowerCase() === 'lsp') {
+                subtypeName = 'LSP';
+            }
+            if (subtype.toLowerCase() === 'town_guardian') {
+                subtypeName = 'Town Guardian';
+            }
+
+            const subtypeText = document.createElement('span');
+            subtypeText.textContent = subtypeName.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+            subtypeButton.appendChild(subtypeText);
+
+            subtypeButton.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const isActive = this.classList.toggle('active');
+                this.classList.toggle('inactive', !isActive);
+
+                if (undergroundMarkerLayers[category.id]) {
+                    undergroundMarkerLayers[category.id].getSource().changed();
+                }
+
+                const anySubtypeActive = Array.from(subtypeContainer.children).some(btn => btn.classList.contains('active'));
+                mainButton.classList.toggle('active', anySubtypeActive);
+                mainButton.classList.toggle('inactive', !anySubtypeActive);
+
+                updateShowAllUndergroundMarkersState();
+            });
+
+            subtypeContainer.appendChild(subtypeButton);
+        });
+
+        mainButton.addEventListener('click', function() {
+            if (isCategoryEmpty) return;
+
+            const wasActive = this.classList.contains('active');
+            const newActiveState = !wasActive;
+
+            this.classList.toggle('active', newActiveState);
+            this.classList.toggle('inactive', !newActiveState);
+
+            // This event needs a listener that can handle underground layers
+            // For now, we'll just toggle the layer directly if it exists.
+            if (undergroundMarkerLayers[category.id]) {
+                undergroundMarkerLayers[category.id].setVisible(newActiveState);
+            }
+
+            subtypeContainer.querySelectorAll('.marker-subtype-btn').forEach(subBtn => {
+                const isSubBtnActive = subBtn.classList.contains('active');
+                if (isSubBtnActive !== newActiveState) {
+                    subBtn.click();
+                }
+            });
+
+            updateShowAllUndergroundMarkersState();
+        });
+
+        categoryRow.appendChild(mainButton);
+        if (subtypes.length > 0) {
+            categoryRow.appendChild(subtypeContainer);
+        }
+        container.appendChild(categoryRow);
+    });
+    console.log('[Filter Menu] Finished createUndergroundMarkerToggleButtons.');
+}
+
+/**
  * Update "Show All Labels" button state based on individual button states
  */
 function updateShowAllLabelsState() {
@@ -425,6 +620,26 @@ function updateShowAllLabelsState() {
 }
 
 /**
+ * Update "Show All Underground Labels" button state.
+ */
+function updateShowAllUndergroundLabelsState() {
+    const allButtons = document.querySelectorAll('#underground-label-toggles .toggle-btn');
+    const showAllButton = document.getElementById('show-all-underground-labels');
+    if (!showAllButton) return;
+
+    const allActive = Array.from(allButtons).every(button => button.disabled || button.classList.contains('active'));
+
+    if (allActive) {
+        showAllButton.classList.remove('inactive');
+        showAllButton.classList.add('active');
+    } else {
+        showAllButton.classList.remove('active');
+        showAllButton.classList.add('inactive');
+    }
+}
+
+
+/**
  * Update "Show All Markers" button state based on individual button states
  */
 function updateShowAllMarkersState() {
@@ -439,6 +654,27 @@ function updateShowAllMarkersState() {
     });
     
     // Update "Show All" button state
+    if (allActive) {
+        showAllButton.classList.remove('inactive');
+        showAllButton.classList.add('active');
+    } else {
+        showAllButton.classList.remove('active');
+        showAllButton.classList.add('inactive');
+    }
+}
+
+/**
+ * Update "Show All Underground Markers" button state.
+ */
+function updateShowAllUndergroundMarkersState() {
+    const allButtons = document.querySelectorAll('#underground-marker-toggles .toggle-btn');
+    const showAllButton = document.getElementById('show-all-underground-markers');
+    if (!showAllButton) return;
+
+    const allActive = Array.from(allButtons).every(button => {
+        return button.disabled || button.classList.contains('active');
+    });
+
     if (allActive) {
         showAllButton.classList.remove('inactive');
         showAllButton.classList.add('active');

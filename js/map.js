@@ -218,8 +218,10 @@ document.addEventListener('DOMContentLoaded', function() {
             // and pass the necessary data directly.
             initializeFilterMenu({
                 mapMarkers: mapMarkers,
+                undergroundMapMarkers: undergroundMapMarkers,
                 markerStyles: markerStyles,
                 markerLayers: markerLayers,
+                undergroundMarkerLayers: undergroundMarkerLayers,
                 createUIMarkerIcon: createUIMarkerIcon // Pass the function directly
             });
         });
@@ -437,10 +439,10 @@ function switchMap(targetMap) {
     });
 
     // Update the filter menu to show/hide relevant sections
-    const markerToggles = document.getElementById('marker-toggles');
-    const undergroundMarkerToggles = document.getElementById('underground-marker-toggles'); // Assuming a new container
-    if (markerToggles) markerToggles.style.display = isSwitchingToUnderground ? 'none' : '';
-    if (undergroundMarkerToggles) undergroundMarkerToggles.style.display = isSwitchingToUnderground ? '' : 'none';
+    const overworldFilters = document.getElementById('overworld-filters');
+    const undergroundFilters = document.getElementById('underground-filters');
+    if (overworldFilters) overworldFilters.style.display = isSwitchingToUnderground ? 'none' : 'block';
+    if (undergroundFilters) undergroundFilters.style.display = isSwitchingToUnderground ? 'block' : 'none';
 
     // You might want to hide all filter sections related to the non-visible map
     // For now, we just log the switch.
