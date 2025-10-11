@@ -1,4 +1,4 @@
-let mapMarkers, undergroundMapMarkers, markerStyles, markerLayers, undergroundMarkerLayers, createUIMarkerIcon;
+let mapMarkers, undergroundMapMarkers, markerStyles, markerLayers, labelLayers, undergroundMarkerLayers, createUIMarkerIcon;
 
 /**
  * Initialize filter menu functionality. This is the main entry point for this module.
@@ -6,17 +6,18 @@ let mapMarkers, undergroundMapMarkers, markerStyles, markerLayers, undergroundMa
  * @param {object} data.mapMarkers - The marker data.
  * @param {object} data.undergroundMapMarkers - The underground marker data.
  * @param {object} data.markerStyles - The marker style definitions.
- * @param {object} data.markerLayers - The marker layer references. 
+ * @param {object} data.markerLayers - The marker layer references.
+ * @param {object} data.labelLayers - The label layer references.
  * @param {object} data.undergroundMarkerLayers - The underground marker layer references.
  * @param {Function} data.createUIMarkerIcon - The function to create UI icons.
  */
 export function initializeFilterMenu(data) {
-    console.log('[Filter Menu] Initializing with data from map.js...');
     // Receive data directly from the function call
     mapMarkers = data.mapMarkers;
     undergroundMapMarkers = data.undergroundMapMarkers;
     markerStyles = data.markerStyles;
     markerLayers = data.markerLayers;
+    labelLayers = data.labelLayers;
     undergroundMarkerLayers = data.undergroundMarkerLayers;
     createUIMarkerIcon = data.createUIMarkerIcon;
 
@@ -28,25 +29,22 @@ export function initializeFilterMenu(data) {
     if (mobileFiltersBtn) {
         mobileFiltersBtn.addEventListener('click', () => {
             const isOpen = filterMenu.classList.toggle('open');
-            mobileFiltersBtn.classList.toggle('hidden', isOpen);
         });
     }
 
     // The header toggle button always closes the menu
     if (filterMenuToggle && filterMenu) {
         filterMenuToggle.addEventListener('click', function() {
-            const isOpen = filterMenu.classList.remove('open');
-            mobileFiltersBtn.classList.remove('hidden', !isOpen);
+            filterMenu.classList.remove('open');
         });
     }
 
     // Add a listener to the whole window to close the menu when clicking outside
     window.addEventListener('click', function(event) {
         // Check if the menu is open and the click was outside the menu and not on the toggle button itself
-        // This prevents the menu from closing immediately when the toggle button is clicked.
-        if (filterMenu.classList.contains('open') && !filterMenu.contains(event.target) && event.target !== mobileFiltersBtn && !mobileFiltersBtn.contains(event.target)) {
+        // This prevents the menu from closing immediately when one of the FABs is clicked.
+        if (filterMenu.classList.contains('open') && !filterMenu.contains(event.target) && !event.target.closest('.fab-container')) {
             filterMenu.classList.remove('open');
-            mobileFiltersBtn.classList.remove('hidden');
         }
     });
 
@@ -63,7 +61,6 @@ export function initializeFilterMenu(data) {
  * Set up "Show All" toggle buttons
  */
 function setupMasterToggleButtons() {
-    console.log('[Filter Menu] Setting up master toggle buttons...');
     // Show All Labels button
     setupMasterToggle('show-all-labels', '#label-toggles .toggle-btn');
     setupMasterToggle('show-all-underground-labels', '#underground-label-toggles .toggle-btn');
@@ -116,7 +113,7 @@ function createLabelToggleButtons() {
         { id: 'landmarks', name: 'Landmarks', icon: 'tour' },
         { id: 'cities', name: 'Cities', icon: 'location_city' },
         { id: 'islands', name: 'Islands', icon: 'park' },
-        { id: 'dungeons', name: 'Dungeons', icon: 'dungeon' },
+        { id: 'dungeons', name: 'Dungeons', icon: 'fort' },
         { id: 'caves', name: 'Caves', icon: 'landscape' },
         { id: 'interests', name: 'Places of Interest', icon: 'pin_drop' },
         { id: 'waterBodies', name: 'Bodies of Water', icon: 'water' },
@@ -243,26 +240,23 @@ function createUndergroundLabelToggleButtons() {
  * Create marker toggle buttons
  */
 function createMarkerToggleButtons() {
-    console.log('[Filter Menu] Starting createMarkerToggleButtons...');
     const container = document.getElementById('marker-toggles');
     if (!container || typeof mapMarkers === 'undefined') {
-        console.error('[Filter Menu] ABORT: Container #marker-toggles not found or mapMarkers is not defined.');
         return;
     }
     
     container.innerHTML = '';
     
     const markerCategories = [
-        { id: 'portals', name: 'Portals', type: 'portal_lsp' },
-        { id: 'shops', name: 'Shops', type: 'shop_generic' },
+        { id: 'portals', name: 'Portals', type: 'category_portal' },
+        { id: 'shops', name: 'Shops', type: 'category_shop' },
         { id: 'services_npcs', name: 'Other Services & NPCs' }, // Removed type to hide header icon
-        { id: 'spawns', name: 'Spawns', type: 'spawn_good' },
-        { id: 'undergrounds', name: 'Undergrounds', type: 'underground_cave' },
+        { id: 'spawns', name: 'Spawns', type: 'category_spawn' },
+        { id: 'undergrounds', name: 'Undergrounds', type: 'category_underground' },
         
     ];
 
     markerCategories.forEach(category => {
-        console.log(`[Filter Menu] =======================================\n[Filter Menu] Processing Category: ${category.name.toUpperCase()}`);
         // Create the main container for this category row
         const categoryRow = document.createElement('div');
         categoryRow.className = 'marker-category-row';
@@ -275,14 +269,9 @@ function createMarkerToggleButtons() {
         // Use the same canvas-based icon creation as the subtypes for consistency and correctness.
         // CRITICAL: If the representative type for a category doesn't have a style, we can't create an icon.
         if (category.type && markerStyles[category.type]) {
-            console.log(`[Filter Menu] -> Creating main button icon for type: '${category.type}'`);
             const mainIcon = createUIMarkerIcon(category.type);
             mainIcon.className = 'toggle-btn-icon-canvas';
             mainButton.appendChild(mainIcon);
-        } else {
-            if (category.type) { // Only log an error if a type was specified but not found
-                console.error(`[Filter Menu] ❌ FAILED to create main button for category '${category.id}'. The type '${category.type}' is missing from markerStyles in markers.js.`);
-            }
         }
 
         // Text for the master button
@@ -292,10 +281,8 @@ function createMarkerToggleButtons() {
 
         // Disable if the category is empty
         const isCategoryEmpty = !mapMarkers[category.id] || mapMarkers[category.id].length === 0;
-        console.log(`[Filter Menu] -> Checking if category '${category.id}' is empty: ${isCategoryEmpty}`);
         if (isCategoryEmpty) {
             mainButton.disabled = true;
-            console.warn(`[Filter Menu] -> Disabling main button for empty category '${category.id}'.`);
             mainButton.classList.replace('active', 'inactive');
         }
 
@@ -306,17 +293,14 @@ function createMarkerToggleButtons() {
         // Get all unique marker types within this category
         const categoryData = mapMarkers[category.id];
         if (!categoryData) {
-            console.warn(`[Filter Menu] 🟡 No data found in mapMarkers for id: '${category.id}'. Skipping subtypes for this category.`);
             // Disable the main button if there's no data at all
             mainButton.disabled = true;
             mainButton.classList.replace('active', 'inactive');
             container.appendChild(categoryRow); // Append the disabled row and continue
-            console.log(`[Filter Menu] Appending disabled row for '${category.id}' and stopping.`);
             return;
         }
 
         const subtypes = [...new Set(categoryData?.map(marker => marker.type) || [])];
-        console.log(`[Filter Menu] -> Found ${subtypes.length} unique subtypes for '${category.id}':`, subtypes);
 
         // Custom sort to order buttons logically
         if (category.id === 'services_npcs') {
@@ -346,7 +330,6 @@ function createMarkerToggleButtons() {
 
         // --- 3. Create individual sub-type toggle buttons ---
         subtypes.forEach(subtype => {
-            console.log(`[Filter Menu]   -> Processing subtype: '${subtype}'`);
             const subtypeButton = document.createElement('button');
             subtypeButton.className = 'toggle-btn active marker-subtype-btn';
             subtypeButton.dataset.subtype = subtype;
@@ -354,7 +337,6 @@ function createMarkerToggleButtons() {
 
             // CRITICAL: If a subtype doesn't have a style defined, skip it to prevent crashing.
             if (!markerStyles[subtype]) {
-                console.warn(`[Filter Menu]   -> 🟡 Skipping subtype button for '${subtype}' because it is missing from markerStyles in markers.js.`);
                 return; // Skips this iteration of the forEach loop
             }
 
@@ -411,19 +393,16 @@ function createMarkerToggleButtons() {
             });
 
             subtypeContainer.appendChild(subtypeButton);
-            console.log(`[Filter Menu]   -> ✅ Successfully created and appended button for subtype: '${subtype}'`);
         });
         
         // --- 4. Add Event Listener to the Master Category Button ---
         mainButton.addEventListener('click', function() {
             if (isCategoryEmpty) {
-                console.log(`[Filter Menu] Main button for '${category.id}' clicked, but it's disabled.`);
                 return;
             }
 
             const wasActive = this.classList.contains('active');
             const newActiveState = !wasActive;
-            console.log(`[Filter Menu] Main button for '${category.id}' clicked. New state: ${newActiveState ? 'ACTIVE' : 'INACTIVE'}`);
 
             this.classList.toggle('active', newActiveState);
             this.classList.toggle('inactive', !newActiveState);
@@ -449,33 +428,28 @@ function createMarkerToggleButtons() {
         categoryRow.appendChild(mainButton);
         if (subtypes.length > 0) { // Show subtype container if there are any subtypes, even just one.
             categoryRow.appendChild(subtypeContainer);
-            console.log(`[Filter Menu] -> Appending subtype container for '${category.id}'.`);
         }
         container.appendChild(categoryRow);
-        console.log(`[Filter Menu] ✅ Finished processing and appended row for category: ${category.name.toUpperCase()}`);
     });
-    console.log('[Filter Menu] Finished createMarkerToggleButtons.');
 }
 
 /**
  * Create underground marker toggle buttons.
  */
 function createUndergroundMarkerToggleButtons() {
-    console.log('[Filter Menu] Starting createUndergroundMarkerToggleButtons...');
     const container = document.getElementById('underground-marker-toggles');
     if (!container || typeof undergroundMapMarkers === 'undefined') {
-        console.error('[Filter Menu] ABORT: Container #underground-marker-toggles not found or undergroundMapMarkers is not defined.');
         return;
     }
 
     container.innerHTML = '';
 
     const markerCategories = [
-        { id: 'portals', name: 'Portals', type: 'portal_lsp' },
-        { id: 'shops', name: 'Shops', type: 'shop_generic' },
+        { id: 'portals', name: 'Portals', type: 'category_portal' },
+        { id: 'shops', name: 'Shops', type: 'category_shop' },
         { id: 'services_npcs', name: 'Other Services & NPCs' },
-        { id: 'spawns', name: 'Spawns', type: 'spawn_good' },
-        { id: 'undergrounds', name: 'Undergrounds', type: 'underground_cave' },
+        { id: 'spawns', name: 'Spawns', type: 'category_spawn' },
+        { id: 'undergrounds', name: 'Undergrounds', type: 'category_underground' },
     ];
 
     markerCategories.forEach(category => {
@@ -522,7 +496,6 @@ function createUndergroundMarkerToggleButtons() {
             subtypeButton.dataset.category = category.id;
 
             if (!markerStyles[subtype]) {
-                console.warn(`[Filter Menu] Skipping underground subtype button for '${subtype}' because it is missing from markerStyles.`);
                 return;
             }
 
@@ -596,7 +569,6 @@ function createUndergroundMarkerToggleButtons() {
         }
         container.appendChild(categoryRow);
     });
-    console.log('[Filter Menu] Finished createUndergroundMarkerToggleButtons.');
 }
 
 /**

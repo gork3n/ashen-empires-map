@@ -48,6 +48,9 @@ html, body {
     font-weight: 400;
     /* Move attribution above the fixed footer */
     bottom: calc(32px + 0.5em);
+    /* Move to the left side */
+    right: auto;
+    left: 0.5em;
 }
 
 .ol-attribution a {
@@ -181,45 +184,6 @@ html, body {
     line-height: 20px; /* Helps with vertical alignment */
     flex-shrink: 0; /* Prevent coordinates from being squished */
     white-space: nowrap;
-}
-
-.footer-right {
-    flex-shrink: 0;
-}
-
-/* --- Map Toggle Buttons in Footer --- */
-.map-toggle-buttons {
-    display: flex;
-    gap: 5px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
-    padding: 3px;
-}
-
-.map-toggle-btn {
-    background: none;
-    border: none;
-    color: #ccc;
-    cursor: pointer;
-    padding: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
-    transition: background-color 0.2s, color 0.2s;
-}
-
-.map-toggle-btn:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    color: white;
-}
-
-.map-toggle-btn.active {
-    background-color: #F5D76E;
-    color: #111;
-}
-.map-toggle-btn.active:hover {
-    background-color: #f7e08b;
 }
 
 /* Switch control styles */
@@ -857,34 +821,58 @@ input:checked + .slider:before {
     background-color: #777; /* Lighter on hover */
 }
 
-/* --- Mobile Filters Button --- */
-.mobile-filters-btn {
-    display: flex;
-    position: relative; /* Change to relative for pseudo-element positioning */
-    bottom: 72px; /* Default position: above the 32px footer + 20px padding */
+/* --- Floating Action Button (FAB) Container --- */
+.fab-container {
+    position: fixed;
+    bottom: 72px; /* Position above the 32px footer + 20px padding */
     right: 20px;
+    z-index: 1002; /* Above footer, below menu */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+/* --- Generic FAB Styles --- */
+.fab-btn {
     width: 56px;
     height: 56px;
-    background-color: #F5D76E;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #ccc;
     border-radius: 50%;
     border: none;
     cursor: pointer;
     box-shadow: 0 3px 8px rgba(0,0,0,0.4);
-    z-index: 1002; /* Above footer, below menu */
+    display: flex;
     justify-content: center;
     align-items: center;
-    transition: transform 0.2s, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-    position: fixed; /* Re-add fixed positioning */
+    transition: transform 0.2s, background-color 0.2s, color 0.2s, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    position: relative; /* For pseudo-elements if needed */
 }
 
-.mobile-filters-btn.hidden {
-    opacity: 0;
-    visibility: hidden;
-    transform: scale(0.8);
+.fab-btn:hover {
+    transform: scale(1.05);
 }
 
+.fab-btn.active {
+    background-color: #F5D76E;
+    color: #111;
+}
+
+.fab-btn.active:hover {
+    background-color: #f7e08b;
+}
+
+.fab-btn:disabled {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #666;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* --- Specific FAB Styles --- */
 /* Use a pseudo-element to display and color the icon */
-.mobile-filters-btn::before {
+#mobile-filters-btn::before {
     content: '';
     position: absolute;
     top: 0;
@@ -898,8 +886,14 @@ input:checked + .slider:before {
     /* For Webkit browsers */
     -webkit-filter: invert(100%);
 }
-.mobile-filters-btn:hover {
-    transform: scale(1.05);
+
+/* Primary FAB style for the main action (filters) */
+.fab-btn.fab-btn-primary {
+    background-color: #F5D76E;
+    color: #111;
+}
+.fab-btn.fab-btn-primary:hover {
+    background-color: #f7e08b;
 }
 
 .desktop-filters-btn {
@@ -917,6 +911,12 @@ input:checked + .slider:before {
 
 /* --- Desktop and Tablet Styles --- */
 @media (min-width: 769px) {
+    :root {
+        --fab-width: 56px;
+        --fab-right-offset: 20px;
+        --fab-gap: 20px; /* The desired space between the menu and the FABs */
+    }
+
     /* On desktop, transform the filter menu into a right-side panel */
     .filter-menu {
         left: auto; /* Unset the left position */
@@ -929,7 +929,9 @@ input:checked + .slider:before {
     }
 
     .filter-menu.open {
-        transform: translateX(0); /* Slide into view */
+        /* When open, slide it fully into view */
+        transform: translateX(0);
+        right: calc(var(--fab-width) + var(--fab-right-offset) + var(--fab-gap));
     }
 
     .filter-menu-content {

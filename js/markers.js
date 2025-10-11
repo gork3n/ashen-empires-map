@@ -1,4 +1,23 @@
 export const markerStyles = {
+  // --- Representative Category Icons (for Filter Menu Headers) ---
+  // These are not assigned to individual markers, only used to generate the header icon.
+  category_portal: {
+    icon: "icons/lsp-portal.svg",
+    color: "#B8860B",
+  },
+  category_shop: {
+    icon: "icons/hanging-sign.svg",
+    color: "#32CD32",
+  },
+  category_spawn: {
+    icon: "icons/death-spawn.svg",
+    color: "#28a745",
+  },
+  category_underground: {
+    icon: "icons/cave-entrance.svg",
+    color: "#d36517ff",
+  },
+
   // Portals
   portal_lsp: {
     icon: "icons/lsp-portal.svg",
@@ -41,7 +60,6 @@ export const markerStyles = {
     color: "#ccae03ff", // Goldend Ochre
   },
 
-  // Shops
   shop_weapon: {
     icon: "icons/crossed-swords.svg",
     color: "#32CD32", // LimeGreen
@@ -7387,6 +7405,8 @@ export const mapMarkers = {
       place: "Valinor",
       details: {
         title: "Frump's Lair",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 607, y: 357 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Frump's Lair is coming soon.",
@@ -7402,6 +7422,8 @@ export const mapMarkers = {
       place: "Valinor",
       details: {
         title: "Bonesnarl's Lair",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 873, y: 309 }, //I need to verify this location
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Bonesnarl's Lair is coming soon.",
@@ -7418,6 +7440,8 @@ export const mapMarkers = {
       place: "Valinor",
       details: {
         title: "Stairs to Valinor Basement",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 752, y: 97 },
         image: "images/markers/Valinor_Basement_Top_Left_Stairs.png",
         lore: "More information about Stairs to Valinor Basement is coming soon.",
@@ -7433,6 +7457,8 @@ export const mapMarkers = {
       place: "Valinor",
       details: {
         title: "Stairs to Valinor Basement",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 764, y: 97 },
         image: "images/markers/Valinor_Basement_Top_Right_Stairs.png",
         lore: "More information about Stairs to Valinor Basement is coming soon.",
@@ -7448,6 +7474,8 @@ export const mapMarkers = {
       place: "Valinor",
       details: {
         title: "Stairs to Valinor Basement",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 751, y: 127 },
         image: "images/markers/Valinor_Basement_Bottom_Right_Stairs.png",
         lore: "More information about Stairs to Valinor Basement is coming soon.",
@@ -7463,6 +7491,8 @@ export const mapMarkers = {
       place: "Valinor",
       details: {
         title: "Stairs to Valinor Basement",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 765, y: 127 },
         image: "images/markers/Valinor_Basement_Bottom_Left_Stairs.png",
         lore: "More information about Stairs to Valinor Basement is coming soon.",
@@ -7478,6 +7508,8 @@ export const mapMarkers = {
       place: "Valinor",
       details: {
         title: "Ladder to Valinor Basement",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 749, y: 154 },
         image: "images/markers/Valinor_Basement_Left_Ladder.png",
         lore: "More information about Stairs to Ladder Basement is coming soon.",
@@ -7493,6 +7525,8 @@ export const mapMarkers = {
       place: "Valinor",
       details: {
         title: "Ladder to Valinor Basement",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 767, y: 154 },
         image: "images/markers/Valinor_Basement_Right_Ladder.png",
         lore: "More information about Stairs to Ladder Basement is coming soon.",
@@ -7508,6 +7542,8 @@ export const mapMarkers = {
       place: "Valinor",
       details: {
         title: "Stairs to Mage Trainers",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 762, y: 117 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Stairs to Mage Trainers is coming soon.",
@@ -7524,6 +7560,23 @@ export const mapMarkers = {
     // City: Hothbra Undergrounds
 
     // City: Jeel Undergrounds
+    {
+      category: "underground",
+      type: "underground_ladder",
+      tooltip: "Jeel Catacombs",
+      region: "Krythan",
+      place: "Jeel",
+      details: {
+        title: "Jeel Catacombs",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
+        coordinates: { x: 293, y: 833 },
+        image: "images/markers/Jeel_Catacombs.png",
+        lore: "More information about Jeel Catacombs is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // City: Lotor's Castle Undergrounds
     {
@@ -7534,6 +7587,8 @@ export const mapMarkers = {
       place: "Lotor's Castle",
       details: {
         title: "Lotor's Castle Arena Basement",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 214, y: 1182 },
         image: "images/markers/Lotor_Castle_Arena_Basement.png",
         lore: "More information about Lotor's Castle Arena Basement is coming soon.",
@@ -7549,6 +7604,8 @@ export const mapMarkers = {
       place: "Lotor's Castle",
       details: {
         title: "Lotor's Castle Arena Basement",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 212, y: 1182 },
         image: "images/markers/Lotor_Castle_Arena_Basement.png",
         lore: "More information about Lotor's Castle Arena Basement is coming soon.",
@@ -7568,6 +7625,8 @@ export const mapMarkers = {
       place: "Cultist Lair's Underground",
       details: {
         title: "Snake Pit",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 965, y: 1346 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Cultist Lair's Underground is coming soon.",
@@ -7583,6 +7642,8 @@ export const mapMarkers = {
       place: "Silvest Valley",
       details: {
         title: "Snake Pit",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 965, y: 1346 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Snake Pit is coming soon.",
@@ -7599,6 +7660,8 @@ export const mapMarkers = {
       place: "Cliffside Pass",
       details: {
         title: "Cliffside Mines",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 1096, y: 1182 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Cliffside Mines is coming soon.",
@@ -7614,6 +7677,8 @@ export const mapMarkers = {
       place: "Silvest",
       details: {
         title: "Provisioner's Basement",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 1122, y: 1361 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Provisioner's Basement is coming soon.",
@@ -7629,6 +7694,8 @@ export const mapMarkers = {
       place: "Galen's Hideout",
       details: {
         title: "Provisioner's Basement",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 1303, y: 1111 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Galen's Hideout is coming soon.",
@@ -7648,6 +7715,8 @@ export const mapMarkers = {
       place: "Sozal's Cave",
       details: {
         title: "Provisioner's Basement",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 1125, y: 1154 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Sozal's Cave is coming soon.",
@@ -7667,6 +7736,8 @@ export const mapMarkers = {
       place: "Kozak Cove",
       details: {
         title: "Kozak Cove's Underground",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 1377, y: 1105 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Kozak Cove's Underground is coming soon.",
@@ -7682,6 +7753,8 @@ export const mapMarkers = {
       place: "Near Silvest Valley North Coast",
       details: {
         title: "Sozal's Cave",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 1161, y: 1175 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Sozal's Cave is coming soon.",
@@ -7697,6 +7770,8 @@ export const mapMarkers = {
       place: "Kobold Castle",
       details: {
         title: "Sozal's Cave",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 1291, y: 1121 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Sozal's Cave is coming soon.",
@@ -7716,6 +7791,8 @@ export const mapMarkers = {
       place: "Krythan Cemetary",
       details: {
         title: "Krythan Crypt",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 905, y: 1029 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Krythan Crypt is coming soon.",
@@ -7731,6 +7808,8 @@ export const mapMarkers = {
       place: "Monk Island",
       details: {
         title: "Gideon's Trapdoor",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 508, y: 582 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Gideon's Trapdoor is coming soon.",
@@ -7746,6 +7825,8 @@ export const mapMarkers = {
       place: "Mirthik's Underground Passage",
       details: {
         title: "Gideon's Trapdoor",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 508, y: 607 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Mirthik's Underground is coming soon.",
@@ -7761,6 +7842,8 @@ export const mapMarkers = {
       place: "Monk Island",
       details: {
         title: "Mirthik's Underground",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 503, y: 642 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Mirthik's Trapdoor is coming soon.",
@@ -7776,6 +7859,8 @@ export const mapMarkers = {
       place: "Krythan Fields",
       details: {
         title: "Snake pit",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 325, y: 740 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Snake pit is coming soon.",
@@ -7791,6 +7876,8 @@ export const mapMarkers = {
       place: "Krythan Fields",
       details: {
         title: "Holendar's Mansion Basement",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 818, y: 1042 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Holendar's Mansion Basement is coming soon.",
@@ -7806,6 +7893,8 @@ export const mapMarkers = {
       place: "Krythan Fields",
       details: {
         title: "Trap Door to LSP",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 779, y: 861 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Trap Door to LSP is coming soon.",
@@ -7821,6 +7910,8 @@ export const mapMarkers = {
       place: "Krythan Fields",
       details: {
         title: "Ladder to LSP Sewer (Away from evil spawn gate)",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 789, y: 916 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Ladder to LSP Sewer (Away from evil spawn gate) is coming soon.",
@@ -7836,6 +7927,8 @@ export const mapMarkers = {
       place: "Krythan Fields",
       details: {
         title: "Orc Fort Tunnels",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 792, y: 1574 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Orc Fort Tunnels is coming soon.",
@@ -7851,6 +7944,8 @@ export const mapMarkers = {
       place: "Krythan Fields",
       details: {
         title: "Orc Fort Tunnels",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 753, y: 1538 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Orc Fort Tunnels is coming soon.",
@@ -7866,6 +7961,8 @@ export const mapMarkers = {
       place: "Krythan Fields",
       details: {
         title: "Talazarian Dungeon",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 361, y: 1463 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Talazarian Dungeon is coming soon.",
@@ -7881,6 +7978,8 @@ export const mapMarkers = {
       place: "South West Krythan",
       details: {
         title: "Krythan Swamp Backdoor",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 145, y: 1614 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Ladder to Krythan Swamp Backdoor is coming soon.",
@@ -7896,6 +7995,8 @@ export const mapMarkers = {
       place: "Krythan Swamp",
       details: {
         title: "Krythan Swamp Backdoor",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 119, y: 1640 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Ladder to Krythan Swamp Backdoor is coming soon.",
@@ -7913,6 +8014,8 @@ export const mapMarkers = {
       place: "Scarab Island",
       details: {
         title: "Lopal Crypt",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 271, y: 2200 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Lopal Crypt is coming soon.",
@@ -7928,6 +8031,8 @@ export const mapMarkers = {
       place: "Scarab Island",
       details: {
         title: "Scarab Island Mine",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 342, y: 2135 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Scarab Island Mine is coming soon.",
@@ -7943,6 +8048,8 @@ export const mapMarkers = {
       place: "Scarab Island",
       details: {
         title: "Lopal Catacombs",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 406, y: 2230 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Lopal Catacombs is coming soon.",
@@ -7960,6 +8067,8 @@ export const mapMarkers = {
       place: "Werewolf Island",
       details: {
         title: "Werewolf Cave",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 317, y: 2602 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Werewolf Cave is coming soon.",
@@ -7975,6 +8084,8 @@ export const mapMarkers = {
       place: "Werewolf Island",
       details: {
         title: "Lycanth Crypt",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 296, y: 2616 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Lycanth Crypt is coming soon.",
@@ -7994,6 +8105,8 @@ export const mapMarkers = {
       place: "Darkwoods",
       details: {
         title: "Shadow Spider Cave",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 1462, y: 2674 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Shadow Spider Cave is coming soon.",
@@ -8009,6 +8122,8 @@ export const mapMarkers = {
       place: "Darkwoods",
       details: {
         title: "Swamp Beast Cave",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 1653, y: 2677 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Swamp Beast Cave is coming soon.",
@@ -8024,6 +8139,8 @@ export const mapMarkers = {
       place: "Darkwoods",
       details: {
         title: "Swamp Beast Cave",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 1571, y: 2656 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Swamp Beast Cave is coming soon.",
@@ -8039,6 +8156,8 @@ export const mapMarkers = {
       place: "Darkwoods",
       details: {
         title: "Scorpion Pit",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 836, y: 3268 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Scorpion Pit is coming soon.",
@@ -8054,6 +8173,8 @@ export const mapMarkers = {
       place: "Darkwoods",
       details: {
         title: "Termigon Pit",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 758, y: 3321 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Termigon Pit is coming soon.",
@@ -8069,6 +8190,8 @@ export const mapMarkers = {
       place: "Darkwoods",
       details: {
         title: "South Astari Rune Shelter",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 798, y: 3334 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about South Astari Rune Shelter is coming soon.",
@@ -8084,6 +8207,8 @@ export const mapMarkers = {
       place: "Darkwoods",
       details: {
         title: "Whisperdale Snake Pit",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 472, y: 3430 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Whisperdale Snake Pit is coming soon.",
@@ -8099,6 +8224,8 @@ export const mapMarkers = {
       place: "Darkwoods",
       details: {
         title: "Dunmarrow Fire Ant Pit",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 1270, y: 3030 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Dunmarrow Fire Ant Pit is coming soon.",
@@ -8114,6 +8241,8 @@ export const mapMarkers = {
       place: "Darkwoods",
       details: {
         title: "McKelsky Crypt",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 1429, y: 3044 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about McKelsky Crypt is coming soon.",
@@ -8129,6 +8258,8 @@ export const mapMarkers = {
       place: "Darkwoods",
       details: {
         title: "Marsh Dungeon",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 481, y: 3505 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Marsh Dungeon is coming soon.",
@@ -8144,6 +8275,8 @@ export const mapMarkers = {
       place: "Darkwoods",
       details: {
         title: "Cathedral of Joyous Afterlife (North Entrance)",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 632, y: 3186 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Cathedral of Joyous Afterlife (North Entrance) is coming soon.",
@@ -8159,6 +8292,8 @@ export const mapMarkers = {
       place: "Darkwoods",
       details: {
         title: "Cathedral of Joyous Afterlife (South Entrance)",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 679, y: 3318 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Cathedral of Joyous Afterlife (South Entrance) is coming soon.",
@@ -8176,6 +8311,8 @@ export const mapMarkers = {
       place: "Highlands",
       details: {
         title: "Cave (CLOSED)",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 3560, y: 1926 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Cave (CLOSED) is coming soon.",
@@ -8191,6 +8328,8 @@ export const mapMarkers = {
       place: "Zanock's Mine",
       details: {
         title: "Zanock's Mine (East)",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 3097, y: 2391 },
         image: "images/markers/Zanock_Mine_East.png",
         lore: "More information about Zanock's Mine (East) is coming soon.",
@@ -8207,6 +8346,8 @@ export const mapMarkers = {
       place: "Highlands",
       details: {
         title: "Arllandah's Lair",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 3204, y: 2627 },
         image: "images/markers/Arllandah_Lair.png",
         lore: "More information about Arllandah's Lair is coming soon.",
@@ -8223,6 +8364,8 @@ export const mapMarkers = {
       place: "Highlands",
       details: {
         title: "Darushk Entrance",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 3745, y: 2711 },
         image: "images/markers/Darushk_Entrance.png",
         lore: "More information about Darushk Entrance is coming soon.",
@@ -8238,6 +8381,8 @@ export const mapMarkers = {
       place: "Highlands",
       details: {
         title: "Darushk Mine",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 3601, y: 2773 },
         image: "images/markers/Darushk_Mine.png",
         lore: "More information about Darushk Mine is coming soon.",
@@ -8254,6 +8399,8 @@ export const mapMarkers = {
       place: "Highlands",
       details: {
         title: "West Entrance to Parian Tunnels",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 3449, y: 3036 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about West Entrance to Parian Tunnels is coming soon.",
@@ -8269,6 +8416,8 @@ export const mapMarkers = {
       place: "Highlands",
       details: {
         title: "East Entrance to Parian Tunnels",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 3506, y: 3026 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about East Entrance to Parian Tunnels is coming soon.",
@@ -8282,28 +8431,31 @@ export const mapMarkers = {
     // City: Grell Undergrounds
     {
       category: "underground",
-      type: "underground_cave",
-      tooltip: "Grell",
+      type: "underground_ladder",
+      tooltip: "Grell Entrance<br><small>(Ctrl+Click for details)</small>",
       region: "Highlands",
-      place: "Highlands",
+      place: "Grell",
       details: {
-        title: "Grell",
+        title: "Grell Entrance",
         switchTo: "underground", // This will trigger the map switch
-        coordinates: { x: 3238, y: 3605 },
-        image: "images/markers/image_coming_soon.png",
-        lore: "More information about Grell is coming soon.",
+        flyTo: { x: 2918, y: 3365 }, // The coordinates to center on after switching
+        coordinates: { x: 3240, y: 3607 },
+        image: "images/markers/Grell_Entrance.png",
+        lore: "More information about Grell Entrance is coming soon.",
         npcs: [],
         links: [],
       },
     },
     {
       category: "underground",
-      type: "underground_stairs",
+      type: "underground_ladder",
       tooltip: "Grell Tunnels",
       region: "Highlands",
       place: "Highlands",
       details: {
         title: "Grell Tunnels",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 3334, y: 3594 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Grell Tunnels is coming soon.",
@@ -8319,6 +8471,8 @@ export const mapMarkers = {
       place: "Highlands",
       details: {
         title: "Badlands Entrance",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2708, y: 2886 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Badlands Entrance is coming soon.",
@@ -8334,6 +8488,8 @@ export const mapMarkers = {
       place: "Highlands",
       details: {
         title: "Vel Dran Cave",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 3286, y: 3299 },
         image: "images/markers/Vel_Dran_Cave.png",
         lore: "More information about Vel Dran Cave is coming soon.",
@@ -8351,6 +8507,8 @@ export const mapMarkers = {
       place: "Highlands",
       details: {
         title: "Ethera Mine",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 3623, y: 3596 },
         image: "images/markers/Ethera_Mine.png",
         lore: "More information about Ethera Mine is coming soon.",
@@ -8366,6 +8524,8 @@ export const mapMarkers = {
       place: "Highlands",
       details: {
         title: "Ethera Mine",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 3655, y: 3620 },
         image: "images/markers/Ethera_Mine_Second.png",
         lore: "More information about Ethera Mine is coming soon.",
@@ -8387,6 +8547,8 @@ export const mapMarkers = {
       details: {
         title:
           "Trap Door to Necropolis Magic and Farm Shops (They do not work)",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 1361, y: 2887 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Trap Door to Necropolis Magic and Farm Shops (They do not work) is coming soon.",
@@ -8402,6 +8564,8 @@ export const mapMarkers = {
       place: "Necropolis",
       details: {
         title: "Ladder to inside Necropolis",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 1347, y: 2931 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Ladder to inside Necropolis is coming soon.",
@@ -8420,6 +8584,8 @@ export const mapMarkers = {
       place: "Battle Plains",
       details: {
         title: "Badlands Cave",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2887, y: 2881 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Badlands Cave is coming soon.",
@@ -8435,6 +8601,8 @@ export const mapMarkers = {
       place: "Chlera",
       details: {
         title: "Chlera Catacombs",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2328, y: 3618 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Chlera Catacombs is coming soon.",
@@ -8450,6 +8618,8 @@ export const mapMarkers = {
       place: "Battle Plains",
       details: {
         title: "Desprail Cave",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2135, y: 3154 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Desprail Cave is coming soon.",
@@ -8465,6 +8635,8 @@ export const mapMarkers = {
       place: "Battle Plains",
       details: {
         title: "Badlands Cave",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2289, y: 2778 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Badlands Cave is coming soon.",
@@ -8480,6 +8652,8 @@ export const mapMarkers = {
       place: "Battle Plains",
       details: {
         title: "Deep Shadow Temple",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2008, y: 2674 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Deep Shadow Temple is coming soon.",
@@ -8495,6 +8669,8 @@ export const mapMarkers = {
       place: "Battle Plains",
       details: {
         title: "Fungiod Cave",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 1960, y: 3762 },
         image: "images/markers/Fungiod_Cave.png",
         lore: "More information about Fungiod Cave is coming soon.",
@@ -8512,6 +8688,8 @@ export const mapMarkers = {
       place: "Krog",
       details: {
         title: "Krog Snake Pit",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 3271, y: 3989 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Krog Snake Pit is coming soon.",
@@ -8527,6 +8705,8 @@ export const mapMarkers = {
       place: "Black Swamp",
       details: {
         title: "Krog Sewer",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2822, y: 3622 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Krog Sewer is coming soon.",
@@ -8542,6 +8722,8 @@ export const mapMarkers = {
       place: "Black Swamp",
       details: {
         title: "Krog Sewer",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 3017, y: 3813 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Krog Sewer is coming soon.",
@@ -8557,6 +8739,8 @@ export const mapMarkers = {
       place: "Black Swamp",
       details: {
         title: "Drakkan Crypt",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2791, y: 3832 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Drakkan Crypt is coming soon.",
@@ -8572,6 +8756,8 @@ export const mapMarkers = {
       place: "Black Swamp",
       details: {
         title: "Waste Tunnels",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 3243, y: 3833 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Waste Tunnels is coming soon.",
@@ -8587,6 +8773,8 @@ export const mapMarkers = {
       place: "Black Swamp",
       details: {
         title: "Ant Hill",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 3094, y: 3864 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Ant Hill is coming soon.",
@@ -8602,6 +8790,8 @@ export const mapMarkers = {
       place: "Black Swamp",
       details: {
         title: "Scorpion",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 3129, y: 3659 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Scorpion is coming soon.",
@@ -8617,6 +8807,8 @@ export const mapMarkers = {
       place: "Black Swamp",
       details: {
         title: "Valekar's Fortress Dungeon",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 3078, y: 3515 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Valekar's Fortress Dungeon is coming soon.",
@@ -8640,6 +8832,8 @@ export const mapMarkers = {
       place: "Hell",
       details: {
         title: "Lotorian Dungeon",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 1207, y: 3347 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Lotorian Dungeon is coming soon.",
@@ -8655,6 +8849,8 @@ export const mapMarkers = {
       place: "Hell",
       details: {
         title: "The Den of Baylor",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 1125, y: 3392 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about The Den of Baylor is coming soon.",
@@ -8670,6 +8866,8 @@ export const mapMarkers = {
       place: "Hell",
       details: {
         title: "Horned One Cave",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 1306, y: 3384 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Horned One Cave is coming soon.",
@@ -8687,6 +8885,8 @@ export const mapMarkers = {
       place: "Lotor's Summer Palace",
       details: {
         title: "Sewer Entrance",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 763, y: 751 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Sewer Entrance is coming soon.",
@@ -8702,6 +8902,8 @@ export const mapMarkers = {
       place: "Lotor's Summer Palace",
       details: {
         title: "Leather and Armory Shop Basement",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 797, y: 704 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Leather and Armory Shop Basement is coming soon.",
@@ -8717,6 +8919,8 @@ export const mapMarkers = {
       place: "Western Isles",
       details: {
         title: "Shadow Temple South Entrance",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2109, y: 2764 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Shadow Temple South Entrance is coming soon.",
@@ -8735,6 +8939,8 @@ export const mapMarkers = {
       place: "Gnobol Mauseleum",
       details: {
         title: "Gnobol Mauseleum Crypt",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 3078, y: 1606 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Gnobol Mauseleum Crypt is coming soon.",
@@ -8750,6 +8956,8 @@ export const mapMarkers = {
       place: "Syldural Cave",
       details: {
         title: "Syldural",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 3272, y: 1632 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Syldural is coming soon.",
@@ -8765,6 +8973,8 @@ export const mapMarkers = {
       place: "Zanock's Mine",
       details: {
         title: "Zanock's Mine (West)",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2871, y: 2359 },
         image: "images/markers/Zanock_Mine_West.png",
         lore: "More information about Zanock's Mine (West) is coming soon.",
@@ -8780,6 +8990,8 @@ export const mapMarkers = {
       place: "Valmond",
       details: {
         title: "Valmond Skeleton Pit",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 3191, y: 1880 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Valmond Skeleton Pit is coming soon.",
@@ -8797,6 +9009,8 @@ export const mapMarkers = {
       place: "Tundria",
       details: {
         title: "Icebane's Cavern Entrance",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2304, y: 1367 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Icebane's Cavern Entrance is coming soon.",
@@ -8812,6 +9026,8 @@ export const mapMarkers = {
       place: "Tundria",
       details: {
         title: "Maroven Crypt",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2040, y: 1392 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Maroven Crypt is coming soon.",
@@ -8827,6 +9043,8 @@ export const mapMarkers = {
       place: "Maroven",
       details: {
         title: "Maroven Crypt",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 1990, y: 1208 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Maroven Crypt is coming soon.",
@@ -8842,6 +9060,8 @@ export const mapMarkers = {
       place: "Tundria",
       details: {
         title: "Hammerfist Mine Entrance",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2776, y: 598 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Hammerfist Mine Entrance is coming soon.",
@@ -8857,6 +9077,8 @@ export const mapMarkers = {
       place: "Tundria",
       details: {
         title: "Web Spinner Spider Cave",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2872, y: 963 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Web Spinner Spider Cave is coming soon.",
@@ -8872,6 +9094,8 @@ export const mapMarkers = {
       place: "Tundria",
       details: {
         title: "Duremar Tomb",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 3524, y: 1263 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Duremar Tomb is coming soon.",
@@ -8887,6 +9111,8 @@ export const mapMarkers = {
       place: "Tundria",
       details: {
         title: "Unknown Crypt",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 3783, y: 985 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Unknown Crypt is coming soon.",
@@ -8902,6 +9128,8 @@ export const mapMarkers = {
       place: "Tundria",
       details: {
         title: "Frieda's Dungeon",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2550, y: 438 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Frieda's Dungeon is coming soon.",
@@ -8917,6 +9145,8 @@ export const mapMarkers = {
       place: "Tundria",
       details: {
         title: "Artraxis Dungeon",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2887, y: 425 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Artraxis Dungeon is coming soon. Note: This coordinate is off by a few pixels from the actual dungeon entrance. x:2888, y:423 is correct.",
@@ -8932,6 +9162,8 @@ export const mapMarkers = {
       place: "Tundria",
       details: {
         title: "Artraxis Dungeon",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2919, y: 408 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Artraxis Dungeon is coming soon.",
@@ -8947,6 +9179,8 @@ export const mapMarkers = {
       place: "Tundria",
       details: {
         title: "Artraxis Dungeon",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2895, y: 442 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Artraxis Dungeon is coming soon.",
@@ -8962,6 +9196,8 @@ export const mapMarkers = {
       place: "Tundria Northeast Coast",
       details: {
         title: "Artraxis Dungeon",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2837, y: 612 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Trapdoor to Hammerfist Mine is coming soon.",
@@ -8982,6 +9218,8 @@ export const mapMarkers = {
       place: "Ruhura",
       details: {
         title: "Ruhura Elemental Cave",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 544, y: 3837 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Ruhura Elemental Cave is coming soon.",
@@ -8997,6 +9235,8 @@ export const mapMarkers = {
       place: "Ruhura",
       details: {
         title: "Artonian Pass to Ruhura Side",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 307, y: 3908 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Artonian Pass to Ruhura Side is coming soon.",
@@ -9012,6 +9252,8 @@ export const mapMarkers = {
       place: "Ruhura",
       details: {
         title: "Artonian Pass to Greater Dragon Island",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 400, y: 3792 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Artonian Pass to Greater Dragon Island is coming soon.",
@@ -9027,6 +9269,8 @@ export const mapMarkers = {
       place: "Ruhura",
       details: {
         title: "Elemental Cave",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 453, y: 3717 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Elemental Cave is coming soon.",
@@ -9042,6 +9286,8 @@ export const mapMarkers = {
       place: "Ruhura",
       details: {
         title: "Mukarramma Dungeon",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 949, y: 4005 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Mukarramma Dungeon is coming soon.",
@@ -9059,6 +9305,8 @@ export const mapMarkers = {
       place: "Greater Dragon Island",
       details: {
         title: "Greater Dragon Island Cave",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 300, y: 3772 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Greater Dragon Island Cave is coming soon.",
@@ -9076,6 +9324,8 @@ export const mapMarkers = {
       place: "Khafra",
       details: {
         title: "Khafra Elemental Cave",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 78, y: 3354 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Khafra Elemental Cave is coming soon.",
@@ -9094,6 +9344,8 @@ export const mapMarkers = {
       place: "New Town Island",
       details: {
         title: "Darkwing's Lair Entrance",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 1944, y: 1695 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Darkwing's Lair Entrance is coming soon.",
@@ -9109,6 +9361,8 @@ export const mapMarkers = {
       place: "New Town Island",
       details: {
         title: "Cyclops and Lion Cave",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2038, y: 1832 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Cyclops and Lion Cave is coming soon.",
@@ -9124,6 +9378,8 @@ export const mapMarkers = {
       place: "New Town Island",
       details: {
         title: "Zule's Cave Entrance",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2174, y: 1517 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Zule's Cave Entrance is coming soon.",
@@ -9141,6 +9397,8 @@ export const mapMarkers = {
       place: "Roycroft Island",
       details: {
         title: "Son of Scalo's Hideout",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2215, y: 2260 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Son of Scalo's Hideout is coming soon.",
@@ -9156,6 +9414,8 @@ export const mapMarkers = {
       place: "Roycroft Island",
       details: {
         title: "Warehouse Basement",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2458, y: 2357 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Warehouse Basement is coming soon.",
@@ -9171,6 +9431,8 @@ export const mapMarkers = {
       place: "Roycroft Island",
       details: {
         title: "Underground Pass to Northern Roycroft Island",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2310, y: 2198 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Underground Pass to Northern Roycroft Island is coming soon.",
@@ -9186,6 +9448,8 @@ export const mapMarkers = {
       place: "Roycroft Island",
       details: {
         title: "Underground Pass to Southern Roycroft Island",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2310, y: 2184 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Underground Pass to Southern Roycroft Island is coming soon.",
@@ -9205,6 +9469,8 @@ export const mapMarkers = {
       place: "Broken Finger",
       details: {
         title: "Broken Finger Dungeon",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 1143, y: 3658 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Broken Finger Dungeon is coming soon.",
@@ -9220,6 +9486,8 @@ export const mapMarkers = {
       place: "Broken Finger",
       details: {
         title: "Trap Door to Gulley Portal ",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 1292, y: 3714 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Trap Door to Gulley Portal  is coming soon.",
@@ -9235,6 +9503,8 @@ export const mapMarkers = {
       place: "Broken Finger",
       details: {
         title: "Entrance to Horned Ones Cave",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 1212, y: 3557 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Entrance to Horned Ones Cave is coming soon.",

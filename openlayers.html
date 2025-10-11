@@ -35,6 +35,7 @@
     <link rel="preload" href="fonts/KJV1611.woff2" as="font" type="font/woff2" crossorigin>
 
     <!-- Define Custom Fonts -->
+    <!-- This is defined here so that the font will be loaded before any text is rendered -->
     <style>
         @font-face {
             font-family: 'KJV1611';
@@ -144,23 +145,25 @@
         <span id="quick-tips-text"></span>
     </div>
 
-    <!-- Mobile Filters Button -->
-    <button id="mobile-filters-btn" class="mobile-filters-btn">
-    </button>
+    <!-- Floating Action Buttons -->
+    <div id="fab-container" class="fab-container">
+        <button id="toggle-overworld" class="fab-btn active" title="Show Overworld Map">
+            <span class="material-symbols-outlined">public</span>
+        </button>
+        <button id="toggle-underground" class="fab-btn" title="Show Underground Map">
+            <span class="material-symbols-outlined">layers</span>
+        </button>
+        <button id="toggle-housing" class="fab-btn" title="Show Housing Realm Map (Coming Soon)" disabled>
+            <span class="material-symbols-outlined">home</span>
+        </button>
+        <button id="mobile-filters-btn" class="fab-btn fab-btn-primary" title="Toggle Filters">
+            <!-- Icon is added via CSS -->
+        </button>
+    </div>
 
     <!-- Page Footer -->
     <div class="page-footer">
         <div id="mouse-position"></div>
-        <div class="footer-right">
-            <div id="map-toggle-buttons" class="map-toggle-buttons">
-                <button id="toggle-overworld" class="map-toggle-btn active" title="Show Overworld Map">
-                    <span class="material-symbols-outlined">public</span>
-                </button>
-                <button id="toggle-underground" class="map-toggle-btn" title="Show Underground Map">
-                    <span class="material-symbols-outlined">layers</span>
-                </button>
-            </div>
-        </div>
     </div>
     
     <!-- Load your custom JavaScript -->

@@ -12,12 +12,14 @@ import TileGrid from 'ol/tilegrid/TileGrid.js';
 
 // Import local data modules
 import { mapLabels } from './labels.js';
+import { mapLabels as undergroundMapLabels } from './underground-labels.js';
 import { mapMarkers, markerStyles } from './markers.js';
 import { undergroundMapMarkers } from './underground-markers.js';
 import { initializeFilterMenu } from './filter-menu.js';
 
 // Global variables
 let labelLayers = {};
+let undergroundLabelLayers = {};
 let map;
 let markerTooltipElement;
 let markerTooltipOverlay;
@@ -28,6 +30,10 @@ let undergroundMarkerLayers = {};
 let overworldTileLayer;
 let undergroundTileLayer;
 let currentMap = 'overworld'; // 'overworld' or 'underground'
+
+// Variables for long-press detection
+let longPressTimeout;
+const longPressDuration = 500; // 500ms for a long press
 
 // Define custom styles for different label categories
 const labelStyles = {
@@ -221,6 +227,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 undergroundMapMarkers: undergroundMapMarkers,
                 markerStyles: markerStyles,
                 markerLayers: markerLayers,
+                labelLayers: labelLayers,
                 undergroundMarkerLayers: undergroundMarkerLayers,
                 createUIMarkerIcon: createUIMarkerIcon // Pass the function directly
             });
@@ -266,7 +273,7 @@ function initializeMap() {
     // --- Set Initial Map View ---
     // Define the center of the map using in-game (4096x4096) coordinates.
     // This makes it easy to change the starting location.
-    const initialCenterGameCoords = { x: 246, y: 1146, }; // Default View is { x: 776, y: 668, } (Showing Lotor's Summer Palace) Centers LSP on smaller screens.
+    const initialCenterGameCoords = { x: 3240, y: 3607, }; // Default View is { x: 776, y: 668, } (Showing Lotor's Summer Palace) Centers LSP on smaller screens.
 
     const mapSize = 32768;
     const scaleFactor = mapSize / 4096; // New scaling factor
@@ -315,7 +322,7 @@ function initializeMap() {
         layers: [overworldTileLayer, undergroundTileLayer],
         view: new View({
             center: initialCenterOlCoords, // Use your calculated center
-            resolution: 2, // Set to 8 for zoom level 4
+            resolution: 8, // Set to 8 for zoom level 4
             minResolution: 0.1, // Corresponds to the most zoomed-in level
             maxResolution: 128, // Corresponds to the most zoomed-out level
             constrainResolution: true, // Snap to integer zoom levels
@@ -333,6 +340,9 @@ function initializeMap() {
     // Add labels to the map after markers so they appear on top
     addMapLabels(map);
     
+    // Add underground labels (they will be hidden by default)
+    addUndergroundMapLabels(map);
+
     // Listen for toggle events from the sidebar
     document.addEventListener('toggle-label-category', function(e) {
         if (e.detail && e.detail.category && labelLayers[e.detail.category]) {
@@ -344,6 +354,13 @@ function initializeMap() {
     document.addEventListener('toggle-marker-category', function(e) {
         if (e.detail && e.detail.category && markerLayers[e.detail.category]) {
             markerLayers[e.detail.category].setVisible(e.detail.visible);
+        }
+    });
+
+    // Listen for toggle events for underground labels
+    document.addEventListener('toggle-underground-label-category', function(e) {
+        if (e.detail && e.detail.category && undergroundLabelLayers[e.detail.category]) {
+            undergroundLabelLayers[e.detail.category].setVisible(e.detail.visible);
         }
     });
     
@@ -359,28 +376,56 @@ function initializeMap() {
     setupMapToggleButtons();
 
 
-    // --- Add click listener for features ---
-    map.on('click', function(evt) {
-        // Set cursor to default first
-        map.getTargetElement().style.cursor = '';
-        const feature = map.forEachFeatureAtPixel(evt.pixel, function(f) {
-            map.getTargetElement().style.cursor = 'pointer'; // Set pointer if a feature is found
-            return f;
-        });
+    // --- Custom Interaction Handling (Tap, Long Press, Ctrl+Click) ---
 
-        if (feature) {
-            // Get all properties from the feature, which includes details, place, region, etc.
+    map.on('pointerdown', function(evt) {
+        // If dragging, do nothing.
+        if (evt.dragging) {
+            return;
+        }
+
+        // Start a timer for long press
+        longPressTimeout = setTimeout(() => {
+            const feature = map.forEachFeatureAtPixel(evt.pixel, f => f);
+            if (feature && feature.get('details')) {
+                // Long press detected, show info flyout
+                showInfoFlyout(feature.getProperties());
+            }
+            // Clear the timeout to indicate it has fired
+            longPressTimeout = null;
+        }, longPressDuration);
+    });
+
+    map.on('pointerup', function(evt) {
+        // If the long press timer is still active, it means it was a short tap.
+        if (longPressTimeout) {
+            clearTimeout(longPressTimeout);
+
+            const feature = map.forEachFeatureAtPixel(evt.pixel, f => f);
+            if (!feature || !feature.get('details')) return;
+
             const featureData = feature.getProperties();
+            const isCtrlClick = evt.originalEvent.ctrlKey;
 
-            if (featureData.details) {
-                // Check if this marker is a map switcher
-                if (featureData.details.switchTo) {
-                    switchMap(featureData.details.switchTo);
-                }
-                // Pass the entire data object to the flyout function
+            if (isCtrlClick) {
+                // On Ctrl+Click, always show the info flyout.
                 showInfoFlyout(featureData);
+            } else {
+                // On a normal single click/tap...
+                if (featureData.details.switchTo) {
+                    // ...if it's a map switcher, perform the switch.
+                    switchMap(featureData.details.switchTo, featureData.details.flyTo);
+                } else {
+                    // ...if it's NOT a map switcher, just show the info flyout as the default action.
+                    showInfoFlyout(featureData);
+                }
             }
         }
+    });
+
+    map.on('pointerdrag', function() {
+        // If the user starts dragging, cancel the long press timer.
+        clearTimeout(longPressTimeout);
     });
 }
 
@@ -407,10 +452,11 @@ function setupMapToggleButtons() {
 /**
  * Switches the map view between 'overworld' and 'underground'.
  * @param {string} targetMap - The map to switch to ('overworld' or 'underground').
+ * @param {object} [flyToCoords=null] - Optional coordinates {x, y} to fly to after switching.
  */
-function switchMap(targetMap) {
+function switchMap(targetMap, flyToCoords = null) {
     if (targetMap === currentMap) return; // No change needed
-
+    
     const isSwitchingToUnderground = targetMap === 'underground';
     const mapElement = document.getElementById('map');
 
@@ -438,6 +484,11 @@ function switchMap(targetMap) {
         layer.setVisible(!isSwitchingToUnderground);
     });
 
+    // Toggle underground label layers
+    Object.values(undergroundLabelLayers).forEach(layer => {
+        layer.setVisible(isSwitchingToUnderground);
+    });
+
     // Update the filter menu to show/hide relevant sections
     const overworldFilters = document.getElementById('overworld-filters');
     const undergroundFilters = document.getElementById('underground-filters');
@@ -458,6 +509,24 @@ function switchMap(targetMap) {
     if (overworldBtn && undergroundBtn) {
         overworldBtn.classList.toggle('active', !isSwitchingToUnderground);
         undergroundBtn.classList.toggle('active', isSwitchingToUnderground);
+    }
+
+    // If flyToCoords are provided, animate the view to the new center.
+    if (flyToCoords && flyToCoords.x && flyToCoords.y) {
+        const mapSize = 32768;
+        const scaleFactor = mapSize / 4096;
+        const offset = scaleFactor / 2;
+
+        const olCoords = [
+            flyToCoords.x * scaleFactor + offset,
+            -(flyToCoords.y * scaleFactor) - offset
+        ];
+
+        map.getView().animate({
+            center: olCoords,
+            duration: 1000, // Animation duration in milliseconds
+            zoom: map.getView().getZoom() < 5 ? 5 : map.getView().getZoom() // Zoom in if too far out
+        });
     }
 }
 
@@ -1155,6 +1224,78 @@ function addMapLabels(map) {
     
     // Notify the sidebar that labels are loaded with available categories
     document.dispatchEvent(new CustomEvent('labels-loaded', {
+        detail: {
+            categories: categories
+        }
+    }));
+}
+
+/**
+ * Add all underground map labels. This function is similar to addMapLabels but
+ * uses the underground label data and creates initially hidden layers.
+ * @param {Map} map - The OpenLayers map object
+ */
+function addUndergroundMapLabels(map) {
+    const categories = Object.keys(undergroundMapLabels);
+
+    categories.forEach(category => {
+        const labelSource = new VectorSource();
+
+        const layerOptions = {
+            source: labelSource,
+            title: `underground_${category}_labels`,
+            visible: false, // Underground labels are hidden by default
+            renderBuffer: 100,
+            style: function(feature, resolution) {
+                const text = feature.get('name');
+                const category = feature.get('category');
+                const baseFontSize = feature.get('baseFontSize');
+
+                if (!baseFontSize) return null;
+
+                const scaleFactor = Math.pow(2 / resolution, 0.415);
+                const newFontSize = Math.max(8, Math.round(baseFontSize * scaleFactor));
+
+                return createLabelImageStyle(text, category, newFontSize);
+            }
+        };
+
+        const labelLayer = new VectorLayer(layerOptions);
+        undergroundLabelLayers[category] = labelLayer;
+        map.addLayer(labelLayer);
+
+        if (undergroundMapLabels[category] && undergroundMapLabels[category].length) {
+            undergroundMapLabels[category].forEach((label) => {
+                const coords = label.details.coordinates;
+
+                if (Array.isArray(coords)) {
+                    coords.forEach((coord) => {
+                        addLabelFeature(
+                            labelSource,
+                            coord.x,
+                            coord.y,
+                            label.name,
+                            label.fontSize,
+                            category,
+                            label.details
+                        );
+                    });
+                } else {
+                    addLabelFeature(
+                        labelSource,
+                        coords.x,
+                        coords.y,
+                        label.name,
+                        label.fontSize,
+                        category,
+                        label.details
+                    );
+                }
+            });
+        }
+    });
+
+    document.dispatchEvent(new CustomEvent('underground-labels-loaded', {
         detail: {
             categories: categories
         }

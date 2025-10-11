@@ -26,6 +26,7 @@ This section is migrated from the main README to consolidate all planning detail
   - 🚧 Fluid layout for all screen sizes.
   - ✅ Responsive filter menu: a full-screen overlay on mobile and a side panel on desktop.
   - ✅ Reverted zoom controls to default top-left position to avoid overlap with filter button on mobile.
+  - 🚧 **Unified Navigation Controls**: Implemented a unified control scheme for all devices. A single click/tap triggers map transitions, while a long-press on mobile or `Ctrl+Click` on desktop opens the information panel.
 - 🚧 **Complete Labeling System**
   - 🚧 Dynamic font scaling for legibility at all zoom levels.
   - 🚧 Ongoing verification and addition of all location labels.
