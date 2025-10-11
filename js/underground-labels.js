@@ -23,7 +23,7 @@ export const mapLabels = {
       region: "Highlands",
       details: {
         title: "Grell",
-        coordinates: { x: 2868, y: 3414 },
+        coordinates: { x: 2859, y: 3474 },
         image: "",
         lore: "More information about Grell is coming soon.",
         information: "",

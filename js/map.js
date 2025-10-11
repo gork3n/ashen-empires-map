@@ -386,10 +386,14 @@ function initializeMap() {
 
         // Start a timer for long press
         longPressTimeout = setTimeout(() => {
+            // Long press detected. This is the mobile equivalent of Ctrl+Click.
             const feature = map.forEachFeatureAtPixel(evt.pixel, f => f);
-            if (feature && feature.get('details')) {
-                // Long press detected, show info flyout
-                showInfoFlyout(feature.getProperties());
+            if (feature) {
+                const featureData = feature.getProperties();
+                // Check if this marker is a map switcher and perform the switch.
+                if (featureData.details && featureData.details.switchTo) {
+                    switchMap(featureData.details.switchTo, featureData.details.flyTo);
+                }
             }
             // Clear the timeout to indicate it has fired
             longPressTimeout = null;
@@ -397,7 +401,7 @@ function initializeMap() {
     });
 
     map.on('pointerup', function(evt) {
-        // If the long press timer is still active, it means it was a short tap.
+        // If the long press timer is still active, it means it was a short tap/click.
         if (longPressTimeout) {
             clearTimeout(longPressTimeout);
 
@@ -405,20 +409,16 @@ function initializeMap() {
             if (!feature || !feature.get('details')) return;
 
             const featureData = feature.getProperties();
-            const isCtrlClick = evt.originalEvent.ctrlKey;
+            const isCtrlClick = evt.originalEvent.ctrlKey || evt.originalEvent.metaKey; // Also check for Cmd key on Mac
 
             if (isCtrlClick) {
-                // On Ctrl+Click, always show the info flyout.
-                showInfoFlyout(featureData);
-            } else {
-                // On a normal single click/tap...
+                // On Ctrl+Click, perform the map switch if available.
                 if (featureData.details.switchTo) {
-                    // ...if it's a map switcher, perform the switch.
                     switchMap(featureData.details.switchTo, featureData.details.flyTo);
-                } else {
-                    // ...if it's NOT a map switcher, just show the info flyout as the default action.
-                    showInfoFlyout(featureData);
                 }
+            } else {
+                // On a normal single click/tap, just show the info flyout.
+                showInfoFlyout(featureData);
             }
         }
     });

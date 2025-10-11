@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Array of tips to cycle through, excluding the initial one.
     const cyclingTips = [
         "Use the sidebar toggles to show or hide different categories of markers and labels, helping you declutter the map.",
+        "Single-click a marker for info. To use a map-switching marker (like a dungeon entrance), Ctrl+Click on desktop or long-press on mobile.",
         "The coordinates in the bottom-left corner match the in-game X/Y positions, perfect for finding your way.",
         "Hover over any icon on the map to see a tooltip with its name and type.",
         "Banks are shared across your characters on the same server. Use them to transfer items between your characters. VIP subscription is required to use shared banks.",
@@ -15,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const allTips = {
         "Map Tips": [
             "Click on location labels like 'Valinor' or 'Lotor's Summer Palace' to open an information panel about that area.",
+            "Single-click a marker for info. To use a map-switching marker (like a dungeon entrance), Ctrl+Click on desktop or long-press on mobile.",
             "Use the filter menu toggles to show or hide different categories of markers and labels, helping you declutter the map.",
             "The coordinates in the bottom-left corner match the in-game X/Y positions, perfect for finding your way.",
             "Hover over any icon on the map to see a tooltip with its name and type."
