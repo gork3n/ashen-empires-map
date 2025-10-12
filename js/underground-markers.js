@@ -4,6 +4,53 @@
  * will be unique to the underground layer.
  */
 
+export const undergroundMarkerStyles = {
+  // Portals
+  underworld_portal_ancient: {
+    icon: "icons/ancient-portal.svg",
+    color: "#A9A9A9", // DarkGray
+  },
+
+  // Shops
+  underworld_shop_generic: {
+    icon: "icons/hanging-sign.svg",
+    color: "#32CD32", // LimeGreen
+  },
+
+  // Services and NPCs
+  underworld_inn_keeper: {
+    icon: "icons/candle-holder.svg",
+    color: "#5ba8e7ff", // Light SteelBlue
+  },
+  underworld_town_guardian: {
+    icon: "icons/guards.svg",
+    color: "#4682B4", // SteelBlue
+  },
+  underworld_town_wizard_of_insight: {
+    icon: "icons/wizard-staff.svg",
+    color: "#4682B4", // SteelBlue
+  },
+  underworld_bank: {
+    icon: "icons/knapsack.svg",
+    color: "#c9b128ff", // GoldenRod
+  },
+
+  // Underground Entrances/Exits
+  underworld_stairs: {
+    icon: "icons/3d-stairs.svg",
+    color: "#d36517ff", // SaddleBrown
+  },
+  underworld_ladder: {
+    icon: "icons/ladder.svg",
+    color: "#d36517ff", // SaddleBrown
+  },
+};
+/**
+ * This file contains the marker data specifically for the underground map.
+ * The structure is identical to markers.js, but the coordinates and markers
+ * will be unique to the underground layer.
+ */
+
 export const undergroundMapMarkers = {
   portals: [
     // Add underground portal markers here
@@ -12,18 +59,63 @@ export const undergroundMapMarkers = {
     // Add underground shop markers here
   ],
   services_npcs: [
-    // Add underground service/NPC markers here
+    // Region: Highlands Undergrounds
+    // Grell Tunnels
+    {
+      category: "npc",
+      type: "underworld_inn_keeper",
+      tooltip: "Grell Innkeeper",
+      region: "Highlands",
+      place: "Grell",
+      details: {
+        title: "Grell Innkeeper",
+        coordinates: { x: 2860, y: 3481 },
+        image: "images/markers/image_coming_soon.png",
+        lore: "An innkeeper deep within the Grell tunnels.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "underworld_town_guardian",
+      tooltip: "Town Guardian (Grell)",
+      region: "Highlands",
+      place: "Grell",
+      details: {
+        title: "Town Guardian",
+        coordinates: { x: 2860, y: 3460 },
+        image: "images/markers/image_coming_soon.png",
+        lore: "The Town Guardian in Grell.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "underworld_town_wizard_of_insight",
+      tooltip: "Town Wizard of Insight (Grell)",
+      region: "Highlands",
+      place: "Grell",
+      details: {
+        title: "Town Wizard of Insight",
+        coordinates: { x: 2860, y: 3465 },
+        image: "images/markers/image_coming_soon.png",
+        lore: "The Town Wizard of Insight in Grell.",
+        npcs: [],
+        links: [],
+      },
+    },
   ],
   interests: [
     
   ],
   undergrounds: [
-
     // Region: Highlands Undergrounds
     // Grell Tunnels
     {
       category: "underground",
-      type: "underground_ladder",
+      type: "underworld_ladder",
       tooltip: "Grell Tunnels Exit<br><small>(Ctrl+Click for details)</small>",
       region: "Highlands",
       place: "Grell",

@@ -74,7 +74,7 @@ export const mapLabels = {
       region: "Highlands",
       details: {
         title: "Ethera Palace Mine",
-        coordinates: { x: 3653, y: 3551 },
+        coordinates: { x: 3687, y: 3554 },
         image: "",
         lore: "More information about Ethera Palace Mine is coming soon.",
         information: "",
@@ -89,7 +89,7 @@ export const mapLabels = {
       region: "Highlands",
       details: {
         title: "Ethera Palace Mine (Level 2)",
-        coordinates: { x: 3710, y: 3753 },
+        coordinates: { x: 3710, y: 3759 },
         image: "",
         lore: "More information about Ethera Palace Mine (Level 2) is coming soon.",
         information: "",

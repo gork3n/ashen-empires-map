@@ -76,10 +76,13 @@ html, body {
     color: white;
     z-index: 1000;
     overflow: hidden;
-    display: none;
+    /* Use transform to hide/show, not display, to allow for animations */
+    /* and to keep child elements like the FAB visible. */
+    transform: translateX(100%); /* Default to hidden off-screen */
 }
 
 .filter-menu-header {
+    flex-shrink: 0; /* Prevent header from shrinking */
     padding: 15px;
     display: flex;
     justify-content: space-between;
@@ -97,7 +100,7 @@ html, body {
 
 /* When the menu is open, bring it into view */
 .filter-menu.open {
-    display: flex;
+    transform: translateX(0);
 }
 
 .filter-menu-toggle {
@@ -127,7 +130,7 @@ html, body {
 
 .filter-menu-content-inner {
     /* Padding is now on the parent, just add the base padding here */
-    padding: 15px;
+    padding: 15px 25px 15px 15px; /* Added extra right padding for scrollbar */
 }
 
 .filter-menu-section {
@@ -174,6 +177,7 @@ html, body {
     align-items: center;
     justify-content: space-between;
 }
+
 
 #mouse-position {
     color: #F5D76E;
@@ -459,6 +463,16 @@ input:checked + .slider:before {
     border-left-color: transparent;
     border-bottom-color: #F5D76E;
 }
+
+/* --- New Padded Container for Label Grids --- */
+/* This ensures the label grids have the same inset padding as the marker rows. */
+.label-grid-container {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
 
 /* --- New Grid Layout for Label Toggles --- */
 #label-toggles,
@@ -758,9 +772,7 @@ input:checked + .slider:before {
     border-radius: 4px;
 }
 
-.flyout-text-column {
-    /* No special styling needed for mobile, it will just be a content block */
-}
+
 
 .info-flyout-image-container img {
     /* Default (small view): Scale image to fit container while maintaining aspect ratio */
@@ -802,6 +814,57 @@ input:checked + .slider:before {
     }
 }
 
+/* --- Flyout Layout for Map Previews (Desktop) --- */
+@media (min-width: 769px) {
+    /* For map previews, make the parent container fill the flyout's height */
+    .flyout-main-content.map-layout {
+        height: 100%;
+    }
+
+    /* Make the map column take up the full height of its container */
+    .flyout-main-content.map-layout .flyout-image-column {
+        height: 100%;
+    }
+}
+
+/* --- Flyout Map Preview Styles --- */
+.flyout-map-preview-container {
+    position: relative; /* Needed for absolute positioning of the button */
+    width: 100%;
+    height: 100%;
+    min-height: 200px; /* Ensure it has a minimum size */
+    border-radius: 4px;
+    overflow: hidden; /* Clip the map corners */
+    background-color: #000; /* Black background while map loads */
+}
+
+.flyout-minimap {
+    width: 100%;
+    height: 100%;
+}
+
+.flyout-go-btn {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    width: 48px;
+    height: 48px;
+    background-color: #F5D76E;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    transition: transform 0.2s, background-color 0.2s;
+    z-index: 10; /* Ensure it's above the map canvas */
+}
+
+.flyout-go-btn::before {
+    content: '→'; /* Simple arrow as a fallback */
+    font-size: 28px;
+    color: #111;
+    line-height: 48px; /* Vertically center the arrow */
+}
+
 /* --- Dark Mode Scrollbar for Filter Menu --- */
 .filter-menu-content::-webkit-scrollbar {
     width: 10px;
@@ -819,18 +882,6 @@ input:checked + .slider:before {
 }
 .filter-menu-content::-webkit-scrollbar-thumb:hover {
     background-color: #777; /* Lighter on hover */
-}
-
-/* --- Floating Action Button (FAB) Container --- */
-.fab-container {
-    position: fixed;
-    bottom: 72px; /* Position above the 32px footer + 20px padding */
-    right: 20px;
-    z-index: 1002; /* Above footer, below menu */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
 }
 
 /* --- Generic FAB Styles --- */
@@ -887,19 +938,33 @@ input:checked + .slider:before {
     -webkit-filter: invert(100%);
 }
 
+/* The container for the floating action buttons */
+.fab-container {
+    position: fixed;
+    bottom: 52px; /* Above footer + some margin */
+    right: 20px;
+    z-index: 1002; /* Above map, below modals */
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Add vertical space between the buttons */
+}
+
 /* Primary FAB style for the main action (filters) */
 .fab-btn.fab-btn-primary {
     background-color: #F5D76E;
     color: #111;
 }
 .fab-btn.fab-btn-primary:hover {
-    background-color: #f7e08b;
+    background-color: #F5D76E; /* Keep the background color the same on hover */
+    transform: scale(1); /* Disable the hover scaling effect */
 }
 
 .desktop-filters-btn {
     display: none; /* Hidden by default, shown on desktop */
 }
 /* The close button in the header is always an 'X' */
+
+
 .filter-menu-toggle .material-symbols-outlined {
     transform: none !important; /* Override desktop rotation */
     font-size: 0; /* Hide the original 'chevron_left' icon text */
@@ -945,29 +1010,26 @@ input:checked + .slider:before {
     }
 
     /* Increase marker sub-type button width on desktop */
-    .marker-subtype-btn {
-        /* Reverted to base size, no override needed */
-    }
+   
 
     /* Use a 4-column grid for labels on desktop */
     #label-toggles,
     #underground-label-toggles {
         grid-template-columns: repeat(4, 1fr); /* 4 columns on desktop */
     }
-
-    /* The header toggle button is also mobile-only */
-    .filter-menu-toggle {
-    }
+    
 
     /* Add a dedicated desktop button */
     .desktop-filters-btn {
+        display: flex; /* Show the desktop button */
     }
 }
 
 /* --- Mobile and Tablet Styles --- */
 @media (max-width: 768px) {
     /* On mobile, the menu is a full-screen slide-up panel */
-    .filter-menu-content {
+    
+    .filter-menu {
         height: 90vh; /* Take up 90% of the screen height */
         border-top-left-radius: 12px;
         border-top-right-radius: 12px;

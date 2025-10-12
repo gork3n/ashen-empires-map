@@ -6,7 +6,8 @@ import { Point } from 'ol/geom.js';
 import TileLayer from 'ol/layer/Tile.js';
 import VectorLayer from 'ol/layer/Vector.js';
 import XYZ from 'ol/source/XYZ.js';
-import VectorSource from 'ol/source/Vector.js';
+import VectorSource from 'ol/source/Vector.js'; 
+import { DoubleClickZoom } from 'ol/interaction.js';
 import { Style, Icon } from 'ol/style.js';
 import TileGrid from 'ol/tilegrid/TileGrid.js';
 
@@ -14,7 +15,7 @@ import TileGrid from 'ol/tilegrid/TileGrid.js';
 import { mapLabels } from './labels.js';
 import { mapLabels as undergroundMapLabels } from './underground-labels.js';
 import { mapMarkers, markerStyles } from './markers.js';
-import { undergroundMapMarkers } from './underground-markers.js';
+import { undergroundMapMarkers, undergroundMarkerStyles } from './underground-markers.js';
 import { initializeFilterMenu } from './filter-menu.js';
 
 // Global variables
@@ -30,10 +31,10 @@ let undergroundMarkerLayers = {};
 let overworldTileLayer;
 let undergroundTileLayer;
 let currentMap = 'overworld'; // 'overworld' or 'underground'
+let flyoutMapInstance = null; // To hold the mini-map instance
 
-// Variables for long-press detection
-let longPressTimeout;
-const longPressDuration = 500; // 500ms for a long press
+// Combine marker styles from both files into a single object for easy lookup
+Object.assign(markerStyles, undergroundMarkerStyles);
 
 // Define custom styles for different label categories
 const labelStyles = {
@@ -229,6 +230,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 markerLayers: markerLayers,
                 labelLayers: labelLayers,
                 undergroundMarkerLayers: undergroundMarkerLayers,
+                undergroundLabelLayers: undergroundLabelLayers,
                 createUIMarkerIcon: createUIMarkerIcon // Pass the function directly
             });
         });
@@ -250,7 +252,8 @@ function preloadIcons() {
                 resolve();
             };
             img.onerror = function() {
-                console.error(`Failed to load icon: ${styleProps.icon}.`);
+                // Use a more detailed error log
+                console.error(`[Preload Error] Failed to load icon for type '${type}' from path: ${styleProps.icon}. Check if the file exists and the path is correct.`);
                 markerImageCache[type] = null; // Mark as failed
                 resolve();
             };
@@ -329,6 +332,23 @@ function initializeMap() {
         })
     });
 
+    // --- Custom DoubleClickZoom Interaction ---
+    // Now that the map is created, we can get its default interactions.
+    const interactions = map.getInteractions().getArray();
+    const doubleClickZoomInteraction = interactions.find(interaction => interaction instanceof DoubleClickZoom);
+    
+    // Remove the default double-click zoom interaction.
+    if (doubleClickZoomInteraction) {
+        map.removeInteraction(doubleClickZoomInteraction);
+    }
+
+    // Create and add our new DoubleClickZoom interaction with a custom condition.
+    const customDoubleClickZoom = new DoubleClickZoom({
+        condition: (mapBrowserEvent) => !map.forEachFeatureAtPixel(mapBrowserEvent.pixel, f => f)
+    });
+    map.addInteraction(customDoubleClickZoom);
+
+
 
     
     // Add markers to the map
@@ -352,8 +372,13 @@ function initializeMap() {
     
     // Listen for toggle events for markers
     document.addEventListener('toggle-marker-category', function(e) {
-        if (e.detail && e.detail.category && markerLayers[e.detail.category]) {
-            markerLayers[e.detail.category].setVisible(e.detail.visible);
+        if (!e.detail || !e.detail.category) return;
+
+        const targetLayerGroup = e.detail.isUnderground ? undergroundMarkerLayers : markerLayers;
+        const layer = targetLayerGroup[e.detail.category];
+
+        if (layer) {
+            layer.setVisible(e.detail.visible);
         }
     });
 
@@ -372,60 +397,29 @@ function initializeMap() {
     // Set up the new info flyout panel
     setupInfoFlyout();
 
+    // Set the initial state of the filter menu titles
+    updateFilterMenuTitles();
     // Set up the map toggle buttons in the footer
     setupMapToggleButtons();
 
 
-    // --- Custom Interaction Handling (Tap, Long Press, Ctrl+Click) ---
+    // --- Custom Interaction Handling (Tap, Double Tap, Click, Ctrl+Click) ---
 
-    map.on('pointerdown', function(evt) {
-        // If dragging, do nothing.
-        if (evt.dragging) {
-            return;
-        }
-
-        // Start a timer for long press
-        longPressTimeout = setTimeout(() => {
-            // Long press detected. This is the mobile equivalent of Ctrl+Click.
-            const feature = map.forEachFeatureAtPixel(evt.pixel, f => f);
-            if (feature) {
-                const featureData = feature.getProperties();
-                // Check if this marker is a map switcher and perform the switch.
-                if (featureData.details && featureData.details.switchTo) {
-                    switchMap(featureData.details.switchTo, featureData.details.flyTo);
-                }
-            }
-            // Clear the timeout to indicate it has fired
-            longPressTimeout = null;
-        }, longPressDuration);
-    });
-
-    map.on('pointerup', function(evt) {
-        // If the long press timer is still active, it means it was a short tap/click.
-        if (longPressTimeout) {
-            clearTimeout(longPressTimeout);
-
-            const feature = map.forEachFeatureAtPixel(evt.pixel, f => f);
-            if (!feature || !feature.get('details')) return;
-
-            const featureData = feature.getProperties();
-            const isCtrlClick = evt.originalEvent.ctrlKey || evt.originalEvent.metaKey; // Also check for Cmd key on Mac
-
-            if (isCtrlClick) {
-                // On Ctrl+Click, perform the map switch if available.
-                if (featureData.details.switchTo) {
-                    switchMap(featureData.details.switchTo, featureData.details.flyTo);
-                }
-            } else {
-                // On a normal single click/tap, just show the info flyout.
-                showInfoFlyout(featureData);
-            }
+    map.on('singleclick', function(evt) {
+        // Check if a feature was clicked.
+        const feature = map.forEachFeatureAtPixel(evt.pixel, f => f);
+        if (feature && feature.get('details')) {
+            // On any single click or tap, always show the info flyout.
+            // Map switching is now handled exclusively by the button inside the flyout.
+            showInfoFlyout(feature.getProperties());
         }
     });
 
-    map.on('pointerdrag', function() {
-        // If the user starts dragging, cancel the long press timer.
-        clearTimeout(longPressTimeout);
+    // The double-click handler is no longer needed as single-click now
+    // consistently opens the flyout on all devices.
+    map.on('dblclick', function(evt) {
+        // This function is now empty to prevent any double-click actions on features.
+        // The customDoubleClickZoom interaction will still handle zooming on the map background.
     });
 }
 
@@ -448,6 +442,24 @@ function setupMapToggleButtons() {
         });
     }
 }
+
+/**
+ * Updates the titles in the filter menu based on the current map view.
+ */
+function updateFilterMenuTitles() {
+    const isUnderground = currentMap === 'underground';
+    const overworldLabelsTitle = document.querySelector('#overworld-filters .filter-menu-section:nth-child(1) h3');
+    const overworldMarkersTitle = document.querySelector('#overworld-filters .filter-menu-section:nth-child(2) h3');
+
+    // Dynamically change titles for a cleaner UI
+    if (overworldLabelsTitle) {
+        overworldLabelsTitle.textContent = isUnderground ? 'Overworld Labels' : 'Labels';
+    }
+    if (overworldMarkersTitle) {
+        overworldMarkersTitle.textContent = isUnderground ? 'Overworld Markers' : 'Markers';
+    }
+}
+
 
 /**
  * Switches the map view between 'overworld' and 'underground'.
@@ -489,9 +501,10 @@ function switchMap(targetMap, flyToCoords = null) {
         layer.setVisible(isSwitchingToUnderground);
     });
 
-    // Update the filter menu to show/hide relevant sections
+    // --- Update Filter Menu UI ---
     const overworldFilters = document.getElementById('overworld-filters');
     const undergroundFilters = document.getElementById('underground-filters');
+    
     if (overworldFilters) overworldFilters.style.display = isSwitchingToUnderground ? 'none' : 'block';
     if (undergroundFilters) undergroundFilters.style.display = isSwitchingToUnderground ? 'block' : 'none';
 
@@ -499,6 +512,9 @@ function switchMap(targetMap, flyToCoords = null) {
     // For now, we just log the switch.
     console.log(`Switched map to: ${targetMap}`);
     currentMap = targetMap;
+
+    // Update the titles after the switch
+    updateFilterMenuTitles();
 
     // Hide the info flyout on map switch to avoid confusion
     hideInfoFlyout();
@@ -579,6 +595,28 @@ function setupInfoFlyout() {
  * @param {object} data - The details object from the clicked feature.
  */
 function showInfoFlyout(data) {
+    const flyout = document.getElementById('info-flyout');
+    const transitionDuration = 400; // Must match the CSS transition duration
+
+    // If the flyout is already visible, hide it first, then show the new one.
+    if (flyout.classList.contains('visible')) {
+        hideInfoFlyout();
+
+        // Wait for the hide animation to complete before showing the new content.
+        setTimeout(() => {
+            populateAndShowFlyout(data);
+        }, transitionDuration);
+    } else {
+        // If it's not visible, just show it immediately.
+        populateAndShowFlyout(data);
+    }
+}
+
+/**
+ * Populates the flyout with content and makes it visible.
+ * @param {object} data - The feature data.
+ */
+function populateAndShowFlyout(data) {
     // The data object now contains everything, but the core info is in `details`.
     const details = data.details;
     if (!details) return;
@@ -587,13 +625,27 @@ function showInfoFlyout(data) {
     const title = document.getElementById('info-flyout-title');
     const content = document.getElementById('info-flyout-content');
 
+    const isMapPreview = details.switchTo && details.flyTo;
+    // First, ensure any previous mini-map is destroyed to prevent memory leaks
+    destroyFlyoutMap();
+
     title.textContent = details.title;
 
     let imageHtml = '';
     let textHtml = '';
 
     // Image
-    if (details.image) {
+    if (isMapPreview) {
+        // For map-switching markers, show a mini-map preview instead of a static image.
+        imageHtml = `
+            <div class="flyout-image-column">
+                <div class="flyout-map-preview-container">
+                    <div id="flyout-minimap" class="flyout-minimap"></div>
+                    <button id="flyout-go-btn" class="flyout-go-btn" title="Go to location"></button>
+                </div>
+            </div>
+        `;
+    } else if (details.image) {
         imageHtml = `
             <div class="flyout-image-column">
                 <div class="info-flyout-image-container">
@@ -646,10 +698,11 @@ function showInfoFlyout(data) {
 
     // --- Combine and Render ---
     // If there's an image, wrap the text in its own column. Otherwise, the text can be standalone.
+    const layoutClass = isMapPreview ? 'map-layout' : '';
     let finalHtml;
     if (imageHtml) {
         finalHtml = `
-            <div class="flyout-main-content">
+            <div class="flyout-main-content ${layoutClass}">
                 ${imageHtml}
                 <div class="flyout-text-column">${textHtml}</div>
             </div>`;
@@ -658,6 +711,33 @@ function showInfoFlyout(data) {
     }
 
     content.innerHTML = finalHtml;
+
+    if (details.switchTo && details.flyTo) {
+        // --- Pre-warm the Mini-Map ---
+        // Initialize the map immediately but keep it hidden. This allows OpenLayers
+        // to start rendering in the background.
+        const minimapContainer = document.getElementById('flyout-minimap');
+        minimapContainer.style.visibility = 'hidden';
+
+        // Use a setTimeout to ensure the DOM has updated after the old map was destroyed.
+        // This prevents a race condition where the new map initializes without interactions.
+        setTimeout(() => {
+            initializeFlyoutMap(details.switchTo, details.flyTo);
+        }, 0);
+
+        const goButton = document.getElementById('flyout-go-btn');
+        if (goButton) {
+            goButton.addEventListener('click', () => {
+                switchMap(details.switchTo, details.flyTo);
+                hideInfoFlyout(); // Close the flyout after clicking
+            });
+        }
+
+        // Reveal the map only after the flyout transition is complete.
+        flyout.addEventListener('transitionend', () => {
+            minimapContainer.style.visibility = 'visible';
+        }, { once: true });
+    }
 
     flyout.classList.add('visible');
 }
@@ -669,6 +749,9 @@ function hideInfoFlyout() {
     const flyout = document.getElementById('info-flyout');
     flyout.classList.remove('visible');
 
+    // Clean up the mini-map instance to prevent memory leaks
+    destroyFlyoutMap();
+
     // Also remove fullscreen class and reset icon when closing
     if (flyout.classList.contains('fullscreen')) {
         flyout.classList.remove('fullscreen');
@@ -676,6 +759,84 @@ function hideInfoFlyout() {
         if (fullscreenButton) {
             fullscreenButton.querySelector('.material-symbols-outlined').textContent = 'fullscreen';
         }
+    }
+}
+
+/**
+ * Initializes a small, non-interactive map inside the flyout panel.
+ * @param {string} targetMap - The map to display ('overworld' or 'underground').
+ * @param {object} flyToCoords - The coordinates {x, y} to center the mini-map on.
+ */
+function initializeFlyoutMap(targetMap, flyToCoords) {
+    const mapSize = 32768;
+    const scaleFactor = mapSize / 4096;
+    const offset = scaleFactor / 2;
+
+    const olCoords = [
+        flyToCoords.x * scaleFactor + offset,
+        -(flyToCoords.y * scaleFactor) - offset
+    ];
+
+    // --- 1. Get the Tile Layer ---
+    // Get the SOURCE from the main map's layer to ensure we show the correct map (overworld/underground).
+    const targetSource = targetMap === 'underground' ? undergroundTileLayer.getSource() : overworldTileLayer.getSource();
+    const miniMapTileLayer = new TileLayer({
+        source: targetSource
+    });
+
+    // --- 2. Get the Marker Layers ---
+    // Get the sources from the main map's layers. This is the correct way to share
+    // data between maps without sharing layer state (like visibility).
+    const targetLayerObjects = targetMap === 'underground' ? undergroundMarkerLayers : markerLayers;
+
+    // Create a new, independent style function for the mini-map.
+    // This is CRITICAL to prevent the mini-map from interfering with the main map's style cache.
+    const miniMapStyleFunction = function(feature, resolution) {
+        const type = feature.get('type');
+        // We don't need to check for active subtype buttons on the mini-map.
+        const style = createMarkerStyle(type);
+        // Use a simpler scaling logic for the mini-map.
+        style.getImage().setScale(resolution < 4 ? 0.85 : 0.65);
+        return style;
+    };
+
+    const targetMarkerLayers = Object.values(targetLayerObjects).map(layer => {
+        return new VectorLayer({
+            source: layer.getSource(),
+            style: miniMapStyleFunction, // Use the new, isolated style function
+            visible: true // Ensure the layer is visible on the mini-map
+        });
+    });
+
+
+    // --- 4. Assemble All Layers for the Mini-Map ---
+    // Start with the base tile layer, then add all the marker layers from the target map,
+    const allLayers = [miniMapTileLayer, ...targetMarkerLayers];
+
+    flyoutMapInstance = new Map({
+        target: 'flyout-minimap',
+        layers: allLayers,
+        // By not specifying controls or interactions, we get the defaults (pan, zoom, etc.)
+        view: new View({
+            center: olCoords,
+            // The main map's resolutions are [128, 64, 32, 16, 8, 4, 2, 1].
+            // Resolution 8 corresponds to zoom level 4, which is a good starting overview.
+            resolution: 8,
+            // Set the same zoom constraints as the main map for a consistent feel.
+            minResolution: 1, // Corresponds to zoom level 7
+            maxResolution: 128, // Corresponds to zoom level 0
+            constrainResolution: true,
+        })
+    });
+}
+
+/**
+ * Properly disposes of the mini-map instance to prevent memory leaks.
+ */
+function destroyFlyoutMap() {
+    if (flyoutMapInstance) {
+        flyoutMapInstance.setTarget(null);
+        flyoutMapInstance = null;
     }
 }
 
@@ -995,7 +1156,7 @@ function addMapMarkers(map) {
                 const type = feature.get('type');
 
                 // Check if the subtype button is active
-                const subtypeButton = document.querySelector(`.marker-subtype-btn[data-subtype="${type}"]`);
+                const subtypeButton = document.querySelector(`#marker-toggles .marker-subtype-btn[data-subtype="${type}"]`);
                 if (subtypeButton && !subtypeButton.classList.contains('active')) {
                     return null; // Hide the feature if its subtype is toggled off
                 }
@@ -1062,9 +1223,8 @@ function addUndergroundMapMarkers(map) {
             visible: false, // All underground layers are initially hidden
             style: function(feature, resolution) {
                 const type = feature.get('type');
-                // NOTE: This currently relies on the main filter menu.
-                // A separate filter UI for the underground map might be needed later.
-                const subtypeButton = document.querySelector(`.marker-subtype-btn[data-subtype="${type}"]`);
+                // Check the subtype button within the #underground-marker-toggles container
+                const subtypeButton = document.querySelector(`#underground-marker-toggles .marker-subtype-btn[data-subtype="${type}"]`);
                 if (subtypeButton && !subtypeButton.classList.contains('active')) {
                     return null;
                 }
