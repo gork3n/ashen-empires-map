@@ -787,7 +787,13 @@ function initializeFlyoutMap(targetMap, flyToCoords) {
     // --- 2. Get the Marker Layers ---
     // Get the sources from the main map's layers. This is the correct way to share
     // data between maps without sharing layer state (like visibility).
-    const targetLayerObjects = targetMap === 'underground' ? undergroundMarkerLayers : markerLayers;
+    let targetLayerObjects;
+    if (targetMap === 'underground') {
+        targetLayerObjects = undergroundMarkerLayers;
+    } else {
+        // For the overworld, we need all its layers, including the 'undergrounds' layer.
+        targetLayerObjects = markerLayers;
+    }
 
     // Create a new, independent style function for the mini-map.
     // This is CRITICAL to prevent the mini-map from interfering with the main map's style cache.
