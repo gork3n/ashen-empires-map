@@ -639,7 +639,7 @@ function populateAndShowFlyout(data) {
         // For map-switching markers, show a mini-map preview instead of a static image.
         imageHtml = `
             <div class="flyout-image-column">
-                <div class="flyout-map-preview-container">
+                <div class="flyout-map-preview-container ${details.switchTo}-preview">
                     <div id="flyout-minimap" class="flyout-minimap"></div>
                     <button id="flyout-go-btn" class="flyout-go-btn" title="Go to location"></button>
                 </div>
@@ -712,30 +712,22 @@ function populateAndShowFlyout(data) {
 
     content.innerHTML = finalHtml;
 
+    // --- Mini-Map Initialization Logic ---
     if (details.switchTo && details.flyTo) {
-        // --- Pre-warm the Mini-Map ---
-        // Initialize the map immediately but keep it hidden. This allows OpenLayers
-        // to start rendering in the background.
-        const minimapContainer = document.getElementById('flyout-minimap');
-        minimapContainer.style.visibility = 'hidden';
-
-        // Use a setTimeout to ensure the DOM has updated after the old map was destroyed.
-        // This prevents a race condition where the new map initializes without interactions.
-        setTimeout(() => {
-            initializeFlyoutMap(details.switchTo, details.flyTo);
-        }, 0);
-
-        const goButton = document.getElementById('flyout-go-btn');
-        if (goButton) {
-            goButton.addEventListener('click', () => {
-                switchMap(details.switchTo, details.flyTo);
-                hideInfoFlyout(); // Close the flyout after clicking
-            });
-        }
-
-        // Reveal the map only after the flyout transition is complete.
+        // The map must be initialized AFTER the flyout's transition ends,
+        // so that OpenLayers can correctly calculate the size of the map div.
         flyout.addEventListener('transitionend', () => {
-            minimapContainer.style.visibility = 'visible';
+            // Initialize the map now that the container is visible and has dimensions.
+            initializeFlyoutMap(details.switchTo, details.flyTo);
+
+            // Set up the "Go" button listener after the map is created.
+            const goButton = document.getElementById('flyout-go-btn');
+            if (goButton) {
+                goButton.addEventListener('click', () => {
+                    switchMap(details.switchTo, details.flyTo);
+                    hideInfoFlyout(); // Close the flyout after clicking
+                });
+            }
         }, { once: true });
     }
 
@@ -1218,10 +1210,10 @@ function addMapMarkers(map) {
  * @param {Map} map - The OpenLayers map
  */
 function addUndergroundMapMarkers(map) {
-    const categories = Object.keys(undergroundMapMarkers);
+    const categories = Object.keys(undergroundMapMarkers); // e.g., ['portals', 'shops', 'services_npcs', ...]
 
     categories.forEach(category => {
-        const markerSource = new VectorSource();
+        const markerSource = new VectorSource(); // A source for each category
 
         const markerLayer = new VectorLayer({
             source: markerSource,
@@ -1241,20 +1233,22 @@ function addUndergroundMapMarkers(map) {
             }
         });
 
-        undergroundMarkerLayers[category] = markerLayer;
+        // Store the layer reference using the category name as the key
+        undergroundMarkerLayers[category] = markerLayer; 
         map.addLayer(markerLayer);
 
+        // The markers for this category are in undergroundMapMarkers[category]
         if (undergroundMapMarkers[category] && undergroundMapMarkers[category].length) {
             undergroundMapMarkers[category].forEach(marker => {
                 addMarkerFeature(
                     markerSource,
                     marker.details.coordinates.x,
                     marker.details.coordinates.y,
-                    marker.type,
-                    marker.tooltip,
-                    marker.details,
-                    marker.place,
-                    marker.region
+                    marker.type, // e.g., 'underworld_stairs'
+                    marker.tooltip, // e.g., "Grell Tunnels Exit"
+                    marker.details, // The full details object
+                    marker.place, // e.g., "Grell"
+                    marker.region // e.g., "Highlands"
                 );
             });
         }

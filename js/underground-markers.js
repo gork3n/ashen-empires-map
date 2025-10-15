@@ -129,7 +129,7 @@ export const undergroundMapMarkers = {
       details: {
         title: "Jeel Catacombs Exit",
         switchTo: "overworld",
-        flyTo: { x: 300, y: 858 },        
+        flyTo: { x: 293, y: 833 },        
         coordinates: { x: 293, y: 833 },// The coordinates for the Ladder inside the Jeel Catacombs underground area.
         image: "images/markers/Jeel_Catacombs_Ladder_Exit.png",
         lore: "Exit to Jeel above Jeel Catacombs.",
@@ -146,7 +146,7 @@ export const undergroundMapMarkers = {
       details: {
         title: "Krythan Crypt Exit",
         switchTo: "overworld",
-        flyTo: { x: 300, y: 858 },        
+        flyTo: { x: 435, y: 851 },        
         coordinates: { x: 435, y: 851 },// The coordinates for the Ladder inside the Jeel Catacombs underground area.
         image: "images/markers/Krythan_Crypt_Ladder_Exit.png",
         lore: "Exit to Krythan above Krythan Crypt.",

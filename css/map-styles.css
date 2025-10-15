@@ -88,6 +88,7 @@ html, body {
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #444;
+    z-index: 1; /* Ensure header is below the main menu container for stacking */
     background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -130,7 +131,7 @@ html, body {
 
 .filter-menu-content-inner {
     /* Padding is now on the parent, just add the base padding here */
-    padding: 15px 25px 15px 15px; /* Added extra right padding for scrollbar */
+    padding: 15px; /* Symmetrical padding */
 }
 
 .filter-menu-section {
@@ -399,8 +400,8 @@ input:checked + .slider:before {
 .marker-subtype-container,
 #underground-marker-toggles .marker-subtype-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4-column grid */
-    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr)); /* Responsive grid */
+    gap: 8px; /* Reduced gap for more space */
     justify-items: center;
     padding-top: 10px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -409,8 +410,8 @@ input:checked + .slider:before {
 .marker-subtype-btn,
 #underground-marker-toggles .marker-subtype-btn {
     flex-direction: column;
-    height: 95px; /* Reduced height for smaller icon */
-    width: 95px; /* Reduced width for smaller icon */
+    height: 90px; /* Adjusted height */
+    width: 90px; /* Adjusted width to fit grid */
     justify-content: center;
     align-items: center; 
     padding: 5px;
@@ -475,15 +476,21 @@ input:checked + .slider:before {
 
 
 /* --- New Grid Layout for Label Toggles --- */
-#label-toggles,
-#underground-label-toggles {
+#label-toggles {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Create a 2-column grid */
     gap: 10px;
 }
 
-#label-toggles .toggle-btn,
-#underground-label-toggles .toggle-btn {
+/* Underground labels get a 3-column grid */
+#underground-label-toggles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Create a 3-column grid */
+    gap: 10px;
+}
+
+#label-toggles .toggle-btn, 
+#underground-label-toggles-grid .toggle-btn {
     flex-direction: column;
     height: 80px; /* Adjusted height for a more compact look */
     justify-content: center;
@@ -495,7 +502,7 @@ input:checked + .slider:before {
 }
 
 #label-toggles .toggle-btn .material-symbols-outlined,
-#underground-label-toggles .toggle-btn .material-symbols-outlined {
+#underground-label-toggles-grid .toggle-btn .material-symbols-outlined {
     margin: 0 0 5px 0;
     font-size: 28px;
 }
@@ -511,7 +518,7 @@ input:checked + .slider:before {
 
 
 #label-toggles .toggle-btn span:not(.material-symbols-outlined),
-#underground-label-toggles .toggle-btn span:not(.material-symbols-outlined) {
+#underground-label-toggles-grid .toggle-btn span:not(.material-symbols-outlined) {
     font-size: 12px;
     white-space: normal;
 }
@@ -755,7 +762,7 @@ input:checked + .slider:before {
 }
 .info-flyout-content .flyout-main-content {
     display: flex;
-    flex-direction: column-reverse; /* Reverse order for mobile: text on top, image on bottom */
+    flex-direction: column; /* Standard order for mobile: image on top, text on bottom */
     gap: 20px; /* Increased gap for better separation */
 }
 
@@ -831,11 +838,16 @@ input:checked + .slider:before {
 .flyout-map-preview-container {
     position: relative; /* Needed for absolute positioning of the button */
     width: 100%;
-    height: 100%;
+    height: 100%; /* Fill available height by default (for desktop) */
     min-height: 200px; /* Ensure it has a minimum size */
     border-radius: 4px;
     overflow: hidden; /* Clip the map corners */
     background-color: #000; /* Black background while map loads */
+}
+
+/* When the mini-map is showing the overworld, use the overworld background */
+.flyout-map-preview-container.overworld-preview {
+    background: #002131 url('../images/bg.png');
 }
 
 .flyout-minimap {
@@ -993,12 +1005,6 @@ input:checked + .slider:before {
         box-shadow: -5px 0 15px rgba(0,0,0,0.3); /* Add a shadow for depth */
     }
 
-    .filter-menu.open {
-        /* When open, slide it fully into view */
-        transform: translateX(0);
-        right: calc(var(--fab-width) + var(--fab-right-offset) + var(--fab-gap));
-    }
-
     .filter-menu-content {
         background-color: transparent; /* The parent already has the background */
     }
@@ -1009,12 +1015,18 @@ input:checked + .slider:before {
         margin: 0 auto; /* Center the inner container */
     }
 
+    .filter-menu.open {
+        /* When open, slide it into view from the right, leaving space for the FABs */
+        transform: translateX(0);
+        right: calc(var(--fab-width) + var(--fab-right-offset) + var(--fab-gap));
+    }
+
     /* Increase marker sub-type button width on desktop */
    
 
     /* Use a 4-column grid for labels on desktop */
     #label-toggles,
-    #underground-label-toggles {
+    #underground-label-toggles-grid {
         grid-template-columns: repeat(4, 1fr); /* 4 columns on desktop */
     }
     
@@ -1029,16 +1041,22 @@ input:checked + .slider:before {
 @media (max-width: 768px) {
     /* On mobile, the menu is a full-screen slide-up panel */
     
-    .filter-menu {
+    .filter-menu { /* Anchor to the bottom for slide-up behavior */
+        top: auto;
+        bottom: 0;
         height: 90vh; /* Take up 90% of the screen height */
         border-top-left-radius: 12px;
         border-top-right-radius: 12px;
         /* Animation setup */
         transform: translateY(100%);
         transition: transform 0.4s ease-in-out;
-    }
-    .filter-menu.open .filter-menu-content {
+    }.filter-menu.open {
         transform: translateY(0);
+    }
+
+    /* On mobile, give the map preview a fixed height like the static images */
+    .flyout-map-preview-container {
+        height: 250px;
     }
 
     /* Transform the quick tips bar into a simple icon button */
