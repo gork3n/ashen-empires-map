@@ -657,11 +657,15 @@ function populateAndShowFlyout(data) {
 
     // --- Build Text Column ---
     // Coordinates
-    if (details.coordinates) {
-        textHtml += `<p><strong>Coordinates:</strong> X: ${details.coordinates.x}, Y: ${details.coordinates.y}</p><hr>`;
-    } else if (data.x !== undefined && data.y !== undefined) {
+    let coords = details.coordinates;
+    if (!coords && (data.x !== undefined && data.y !== undefined)) {
+        // Fallback for older data structures
+        coords = { x: data.x, y: data.y };
+    }
+
+    if (coords) {
         // Fallback for markers where coordinates are at the top level of the details object
-        textHtml += `<p><strong>Coordinates:</strong> X: ${data.x}, Y: ${data.y}</p><hr>`;
+        textHtml += `<p><strong>Coordinates:</strong> X: ${coords.x}, Y: ${coords.y}</p><hr>`;
     }
 
     // Lore/Info
@@ -1112,11 +1116,11 @@ function createUIMarkerIcon(markerType) {
 function addMarkerFeature(source, x, y, type, tooltip, details, place, region) {
     const mapSize = 32768;
     const scaleFactor = mapSize / 4096;
-    const offset = scaleFactor / 2;
-        // Scale coordinates for the new map size and convert to OpenLayers coordinate system (y is inverted)
-    // Add the offset to place the anchor in the center of the scaled pixel block
-    const scaledX = x * scaleFactor + offset;
-    const olY = -(y * scaleFactor) - offset;
+
+    // To center the marker in the 8x8 pixel block, we find the top-left corner (x * 8)
+    // and add half the block size (4). Then we subtract 1 pixel as requested.
+    const scaledX = (x * scaleFactor) - (scaleFactor / 2);
+    const olY = -(y * scaleFactor) + (scaleFactor / 2);
     const coordinates = [scaledX, olY];
     
     // Create a feature for the marker
@@ -1268,12 +1272,11 @@ function addUndergroundMapMarkers(map) {
 function addLabelFeature(source, x, y, text, fontSize, category, details) {
     const mapSize = 32768;
     const scaleFactor = mapSize / 4096;
-    const offset = scaleFactor / 2; // Half of the scale factor to center the label
 
-    // Scale coordinates for the new map size and convert to OpenLayers coordinate system (y is inverted)
-    // Add the offset to place the anchor in the center of the scaled pixel block
-    const scaledX = x * scaleFactor + offset;
-    const olY = -(y * scaleFactor) - offset;
+    // To center the label in the 8x8 pixel block, we find the top-left corner (x * 8)
+    // and add half the block size (4). Then we subtract 1 pixel as requested.
+    const scaledX = (x * scaleFactor) - (scaleFactor / 2);
+    const olY = -(y * scaleFactor) + (scaleFactor / 2);
     
     // Create a point feature at this location
     const feature = new Feature({
@@ -1582,8 +1585,8 @@ function initializeCoordinateDisplay() {
         map.on('pointerdown', function(evt) {
             const coord = evt.coordinate;
             if (coord) {
-                lastX = Math.round(coord[0] / scaleFactor);
-                lastY = Math.round(-coord[1] / scaleFactor); // Invert Y coordinate and scale down
+                lastX = Math.floor(coord[0] / scaleFactor);
+                lastY = Math.floor(-coord[1] / scaleFactor);
                 updateDisplay();
             }
         });
@@ -1592,8 +1595,8 @@ function initializeCoordinateDisplay() {
         map.on('pointermove', function(evt) {
             const coord = evt.coordinate;
             if (coord) {
-                const newX = Math.round(coord[0] / scaleFactor);
-                const newY = Math.round(-coord[1] / scaleFactor); // Invert Y coordinate and scale down
+                const newX = Math.floor(coord[0] / scaleFactor);
+                const newY = Math.floor(-coord[1] / scaleFactor);
                 if (newX !== lastX || newY !== lastY) {
                     lastX = newX;
                     lastY = newY;

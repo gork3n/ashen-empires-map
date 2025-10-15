@@ -11,7 +11,7 @@ export const mapLabels = {
       region: "Krythan",
       details: {
         title: "Valley of the Dead",
-        coordinates: { x: 1372, y: 1433 },
+        coordinates: { x: 1373, y: 1434 },
         image: "",
         lore: "More information about Valley of the Dead is coming soon.",
         information: "",
@@ -32,7 +32,7 @@ export const mapLabels = {
       region: "Battle Plains",
       details: {
         title: "Proudblood Valley",
-        coordinates: { x: 1750, y: 3402 },
+        coordinates: { x: 1751, y: 3403 },
         image: "",
         lore: "More information about Proudblood Valley is coming soon.",
         information: "",
@@ -51,7 +51,7 @@ export const mapLabels = {
       region: "Highlands",
       details: {
         title: "Death Tyrant Valley",
-        coordinates: { x: 3595, y: 2451 },
+        coordinates: { x: 3596, y: 2452 },
         image: "",
         lore: "More information about Death Tyrant Valley is coming soon.",
         information: "",
@@ -66,7 +66,7 @@ export const mapLabels = {
       region: "Highlands",
       details: {
         title: "Resource Valley",
-        coordinates: { x: 3410, y: 3257 },
+        coordinates: { x: 3411, y: 3258 },
         image: "",
         lore: "More information about Resource Valley is coming soon.",
         information: "",
@@ -81,7 +81,7 @@ export const mapLabels = {
       region: "Highlands",
       details: {
         title: "Rock Troll Coast",
-        coordinates: { x: 3744, y: 3502 },
+        coordinates: { x: 3745, y: 3503 },
         image: "",
         lore: "More information about Rock Troll Coast is coming soon.",
         information: "",
@@ -96,7 +96,7 @@ export const mapLabels = {
       region: "Valley of Giants",
       details: {
         title: "Valley of Giants",
-        coordinates: { x: 3065, y: 2941 },
+        coordinates: { x: 3066, y: 2942 },
         image: "",
         lore: "More information about Valley of Giants is coming soon.",
         information: "",
@@ -113,7 +113,7 @@ export const mapLabels = {
       region: "Badlands",
       details: {
         title: "Badlands",
-        coordinates: { x: 2784, y: 2763 },
+        coordinates: { x: 2785, y: 2764 },
         image: "",
         lore: "More information about Badlands is coming soon.",
         information: "",
@@ -142,7 +142,7 @@ export const mapLabels = {
       region: "Valinor",
       details: {
         title: "Valinor",
-        coordinates: { x: 757, y: 63 },
+        coordinates: { x: 758, y: 64 },
         image: "images/Valinor_Island-600x.png",
         lore: "Valinor is the starting city for new players, providing essential services and introductory quests to help them begin their journey in the world of Ashen Empires.",
         information: "",
@@ -174,7 +174,7 @@ export const mapLabels = {
       region: "Krythan",
       details: {
         title: "Jeel",
-        coordinates: { x: 288, y: 805 },
+        coordinates: { x: 289, y: 806 },
         image: "",
         lore: "More information about Jeel is coming soon.",
         information: "",
@@ -189,7 +189,7 @@ export const mapLabels = {
       region: "Krythan",
       details: {
         title: "Hothbra",
-        coordinates: { x: 520, y: 1056 },
+        coordinates: { x: 521, y: 1057 },
         image: "",
         lore: "More information about Hothbra is coming soon.",
         information: "",
@@ -204,7 +204,7 @@ export const mapLabels = {
       region: "Krythan",
       details: {
         title: "Varg",
-        coordinates: { x: 786, y: 1169 },
+        coordinates: { x: 787, y: 1170 },
         image: "",
         lore: "More information about Varg is coming soon.",
         information: "",
@@ -219,7 +219,7 @@ export const mapLabels = {
       region: "Krythan",
       details: {
         title: "New Korelth",
-        coordinates: { x: 340, y: 1438 },
+        coordinates: { x: 341, y: 1439 },
         image: "",
         lore: "<p>Once a vital travel nexus for the kingdom, the town of New Korelth has fallen. It now stands as the primary bastion and operational headquarters for the demonic Talazarian faction. Its original identity has been annihilated, its spirit conquered and corrupted to serve the forces of the fallen hero, Talazar. For loyal followers of King Lotor II, this is hostile and occupied territory.</p><p>The town's fate is steeped in tragic irony. In a bygone era, the mines near New Korelth housed the Shrine of Talazar, a monument built to honor his heroic deeds before his corruption. Now, the very land that once held his honor sacred has been desecrated, serving as the command center for his campaign of terror. The fall of New Korelth is the physical manifestation of the fall of Talazar himself—a brutal overwriting of his own noble legacy.</p><p>Today, the town's sole purpose is to advance the Talazarian war effort. Followers of the fallen hero are summoned here to speak with the Digmaster, who grants them access to the faction's high-level dungeon. This fortress, the heart of the corrupted town, bears a paradoxical name: the Ghost of Lotor. This name suggests that even in his demonic state, Talazar and his followers are haunted by the legacy—the \"ghost\"—of the king he betrayed, turning this bastion of power into a monument of his inescapable past.</p>",
         information: "",
@@ -234,7 +234,7 @@ export const mapLabels = {
       region: "Krythan",
       details: {
         title: "Vrethpool",
-        coordinates: { x: 668, y: 1668 },
+        coordinates: { x: 669, y: 1669 },
         image: "",
         lore: "More information about Vrethpool is coming soon.",
         information: "",
@@ -249,7 +249,7 @@ export const mapLabels = {
       region: "Silvest Valley",
       details: {
         title: "Lotor's Castle",
-        coordinates: { x: 245, y: 1114 },
+        coordinates: { x: 246, y: 1115 },
         image: "",
         lore: "More information about Lotor's Castle is coming soon.",
         information: "",
@@ -265,7 +265,7 @@ export const mapLabels = {
       region: "Silvest Valley",
       details: {
         title: "Cliffside",
-        coordinates: { x: 1064, y: 1149 },
+        coordinates: { x: 1065, y: 1150 },
         image: "",
         lore: "More information about Cliffside is coming soon.",
         information: "",
@@ -280,7 +280,7 @@ export const mapLabels = {
       region: "Silvest Valley",
       details: {
         title: "Silvest",
-        coordinates: { x: 1084, y: 1343 },
+        coordinates: { x: 1085, y: 1344 },
         image: "",
         lore: "More information about Silvest is coming soon.",
         information: "",
@@ -295,7 +295,7 @@ export const mapLabels = {
       region: "Silvest Valley",
       details: {
         title: "Fort Eastwatch",
-        coordinates: { x: 1342, y: 1280 },
+        coordinates: { x: 1343, y: 1281 },
         image: "",
         lore: "More information about Fort Eastwatch is coming soon.",
         information: "",
@@ -313,7 +313,7 @@ export const mapLabels = {
       region: "Darkwoods",
       details: {
         title: "Redwake",
-        coordinates: { x: 454, y: 2823 },
+        coordinates: { x: 455, y: 2824 },
         image: "",
         lore: "More information about Redwake is coming soon.",
         information: "",
@@ -328,7 +328,7 @@ export const mapLabels = {
       region: "Darkwoods",
       details: {
         title: "Whisperdale",
-        coordinates: { x: 403, y: 3416 },
+        coordinates: { x: 404, y: 3417 },
         image: "",
         lore: "More information about Whisperdale is coming soon.",
         information: "",
@@ -343,7 +343,7 @@ export const mapLabels = {
       region: "Darkwoods",
       details: {
         title: "Autumn",
-        coordinates: { x: 590, y: 3387 },
+        coordinates: { x: 591, y: 3388 },
         image: "",
         lore: "More information about Autumn is coming soon.",
         information: "",
@@ -358,7 +358,7 @@ export const mapLabels = {
       region: "Darkwoods",
       details: {
         title: "Darkfell",
-        coordinates: { x: 899, y: 3062 },
+        coordinates: { x: 900, y: 3063 },
         image: "",
         lore: "More information about Darkfell is coming soon.",
         information: "",
@@ -373,7 +373,7 @@ export const mapLabels = {
       region: "Darkwoods",
       details: {
         title: "Dunmarrow",
-        coordinates: { x: 1382, y: 3149 },
+        coordinates: { x: 1383, y: 3150 },
         image: "",
         lore: "More information about Dunmarrow is coming soon.",
         information: "",
@@ -388,7 +388,7 @@ export const mapLabels = {
       region: "Darkwoods",
       details: {
         title: "Josody",
-        coordinates: { x: 1319, y: 2475 },
+        coordinates: { x: 1320, y: 2476 },
         image: "",
         lore: "More information about Josody is coming soon.",
         information: "",
@@ -403,7 +403,7 @@ export const mapLabels = {
       region: "Darkwoods",
       details: {
         title: "Gulley",
-        coordinates: { x: 1106, y: 2753 },
+        coordinates: { x: 1107, y: 3672 },
         image: "",
         lore: "More information about Gulley is coming soon.",
         information: "",
@@ -420,7 +420,7 @@ export const mapLabels = {
       region: "Highlands",
       details: {
         title: "Grell",
-        coordinates: { x: 3238, y: 3605 },
+        coordinates: { x: 3239, y: 3606 },
         image: "",
         lore: "More information about Grell is coming soon.",
         bonus: "City Bonus: +1.5 Stamina Regen, +3% Body",
@@ -434,7 +434,7 @@ export const mapLabels = {
       region: "Highlands",
       details: {
         title: "Arda",
-        coordinates: { x: 3399, y: 3442 },
+        coordinates: { x: 3400, y: 3443 },
         image: "",
         lore: "More information about Arda is coming soon.",
         bonus: "City Bonus: +6 pct Blunt, +5 Strength",
@@ -448,7 +448,7 @@ export const mapLabels = {
       region: "Highlands",
       details: {
         title: "Parian",
-        coordinates: { x: 3460, y: 2937 },
+        coordinates: { x: 3461, y: 2938 },
         image: "",
         lore: "More information about Parian is coming soon.",
         information: "",
@@ -463,7 +463,7 @@ export const mapLabels = {
       region: "Highlands",
       details: {
         title: "Ethera Palace",
-        coordinates: { x: 3534, y: 3641 },
+        coordinates: { x: 3535, y: 3642 },
         image: "",
         lore: "More information about Ethera Palace is coming soon.",
         bonus: "City Bonus: +7% Magic Missile, +5 Intelligence",
@@ -477,7 +477,7 @@ export const mapLabels = {
       region: "Highlands",
       details: {
         title: "Darushk",
-        coordinates: { x: 3744, y: 2709 },
+        coordinates: { x: 3745, y: 2710 },
         image: "",
         lore: "More information about Darushk is coming soon.",
         information: "",
@@ -494,7 +494,7 @@ export const mapLabels = {
       region: "Battle Plains",
       details: {
         title: "Desprail",
-        coordinates: { x: 2218, y: 3233 },
+        coordinates: { x: 2219, y: 3234 },
         image: "",
         lore: "More information about Desprail is coming soon.",
         information: "",
@@ -509,7 +509,7 @@ export const mapLabels = {
       region: "Battle Plains",
       details: {
         title: "Chlera",
-        coordinates: { x: 2401, y: 3546 },
+        coordinates: { x: 2402, y: 3547 },
         image: "",
         lore: "More information about Chlera is coming soon.",
         information: "",
@@ -524,7 +524,7 @@ export const mapLabels = {
       region: "Battle Plains",
       details: {
         title: "Chaos Island",
-        coordinates: { x: 1821, y: 3053 },
+        coordinates: { x: 1822, y: 3054 },
         image: "",
         lore: "More information about Chaos Island is coming soon.",
         information: "",
@@ -541,7 +541,7 @@ export const mapLabels = {
       region: "Black Swamp",
       details: {
         title: "Samad",
-        coordinates: { x: 2634, y: 3495 },
+        coordinates: { x: 2635, y: 3496 },
         image: "",
         lore: "More information about Samad is coming soon.",
         information: "",
@@ -556,7 +556,7 @@ export const mapLabels = {
       region: "Black Swamp",
       details: {
         title: "Dawat",
-        coordinates: { x: 3086, y: 3354 },
+        coordinates: { x: 3087, y: 3355 },
         image: "",
         lore: "More information about Dawat is coming soon.",
         information: "",
@@ -571,7 +571,7 @@ export const mapLabels = {
       region: "Black Swamp",
       details: {
         title: "Krog",
-        coordinates: { x: 3113, y: 3708 },
+        coordinates: { x: 3114, y: 3709 },
         image: "",
         lore: "More information about Krog is coming soon.",
         information: "",
@@ -586,7 +586,7 @@ export const mapLabels = {
       region: "Black Swamp",
       details: {
         title: "Maraket",
-        coordinates: { x: 3062, y: 3976 },
+        coordinates: { x: 3063, y: 3977 },
         image: "",
         lore: "More information about Maraket is coming soon.",
         information: "",
@@ -606,7 +606,7 @@ export const mapLabels = {
       region: "Tundria",
       details: {
         title: "Hammerfist",
-        coordinates: { x: 2791, y: 847 },
+        coordinates: { x: 2792, y: 848 },
         image: "",
         lore: "More information about Hammerfist is coming soon.",
         information: "",
@@ -621,7 +621,7 @@ export const mapLabels = {
       region: "Tundria",
       details: {
         title: "Duremar",
-        coordinates: { x: 3647, y: 928 },
+        coordinates: { x: 3648, y: 929 },
         image: "",
         lore: "More information about Duremar is coming soon.",
         information: "",
@@ -636,7 +636,7 @@ export const mapLabels = {
       region: "Tundria",
       details: {
         title: "Maroven",
-        coordinates: { x: 1941, y: 1239 },
+        coordinates: { x: 1942, y: 1240 },
         image: "",
         lore: "More information about Maroven is coming soon.",
         information: "",
@@ -651,7 +651,7 @@ export const mapLabels = {
       region: "Tundria",
       details: {
         title: "Ringhaven Citadel",
-        coordinates: { x: 2196, y: 1204 },
+        coordinates: { x: 2197, y: 1205 },
         image: "",
         lore: "More information about Ringhaven Citadel is coming soon.",
         information: "",
@@ -666,7 +666,7 @@ export const mapLabels = {
       region: "Tundria",
       details: {
         title: "Farstead Keep",
-        coordinates: { x: 2820, y: 1252 },
+        coordinates: { x: 2821, y: 1253 },
         image: "",
         lore: "More information about Farstead Keep is coming soon.",
         information: "",
@@ -683,7 +683,7 @@ export const mapLabels = {
       region: "Heartwood Coast",
       details: {
         title: "Valmond",
-        coordinates: { x: 2624, y: 2104 },
+        coordinates: { x: 2625, y: 2105 },
         image: "",
         lore: "More information about Valmond is coming soon.",
         information: "",
@@ -698,7 +698,7 @@ export const mapLabels = {
       region: "Heartwood Coast",
       details: {
         title: "Teylan",
-        coordinates: { x: 2495, y: 1614 },
+        coordinates: { x: 2496, y: 1615 },
         image: "",
         lore: "More information about Teylan is coming soon.",
         information: "",
@@ -713,7 +713,7 @@ export const mapLabels = {
       region: "Heartwood Coast",
       details: {
         title: "Syldural",
-        coordinates: { x: 3275, y: 1635 },
+        coordinates: { x: 3276, y: 1636 },
         image: "",
         lore: "More information about Syldural is coming soon.",
         information: "",
@@ -730,7 +730,7 @@ export const mapLabels = {
       region: "Sands of Creation",
       details: {
         title: "Khafra",
-        coordinates: { x: 246, y: 2742 },
+        coordinates: { x: 247, y: 2743 },
         image: "",
         lore: "More information about Khafra is coming soon.",
         information: "",
@@ -745,7 +745,7 @@ export const mapLabels = {
       region: "Sands of Creation",
       details: {
         title: "Ruhura",
-        coordinates: { x: 379, y: 3977 },
+        coordinates: { x: 380, y: 3978 },
         image: "",
         lore: "More information about Ruhura is coming soon.",
         information: "",
@@ -762,7 +762,7 @@ export const mapLabels = {
       region: "Breakwater",
       details: {
         title: "Roycroft",
-        coordinates: { x: 2446, y: 2334 },
+        coordinates: { x: 2447, y: 2335 },
         image: "",
         lore: "More information about Roycroft is coming soon.",
         information: "",
@@ -777,7 +777,7 @@ export const mapLabels = {
       region: "Breakwater",
       details: {
         title: "New Town",
-        coordinates: { x: 1959, y: 1883 },
+        coordinates: { x: 1960, y: 1884 },
         image: "",
         lore: "More information about New Town is coming soon.",
         information: "",
@@ -792,7 +792,7 @@ export const mapLabels = {
       region: "Breakwater",
       details: {
         title: "New Royale",
-        coordinates: { x: 1391, y: 1896 },
+        coordinates: { x: 1392, y: 1897 },
         image: "",
         lore: "More information about New Royale is coming soon.",
         information: "",
@@ -809,7 +809,7 @@ export const mapLabels = {
       region: "Broken Finger",
       details: {
         title: "Broken Finger Town",
-        coordinates: { x: 1151, y: 3710 },
+        coordinates: { x: 1152, y: 3711 },
         image: "",
         lore: "More information about Broken Finger Town is coming soon.",
         information: "",
@@ -828,7 +828,7 @@ export const mapLabels = {
       region: "Special",
       details: {
         title: "GM Island",
-        coordinates: { x: 148, y: 68 },
+        coordinates: { x: 149, y: 69 },
         image: "",
         lore: "More information about GM Island is coming soon.",
         information: "",
@@ -843,7 +843,7 @@ export const mapLabels = {
       region: "Western Isles",
       details: {
         title: "Minotaur Island",
-        coordinates: { x: 135, y: 228 },
+        coordinates: { x: 136, y: 229 },
         image: "",
         lore: "More information about Minotaur Island is coming soon.",
         information: "",
@@ -858,7 +858,7 @@ export const mapLabels = {
       region: "Western Isles",
       details: {
         title: "Party Island",
-        coordinates: { x: 419, y: 67 },
+        coordinates: { x: 420, y: 68 },
         image: "images/Party_Island.png",
         lore: "A festive island known for celebrations. It holds the main portal to access Lotor's Summer Palace.",
         information: "",
@@ -879,7 +879,7 @@ export const mapLabels = {
       region: "Western Isles",
       details: {
         title: "Lotor's Prison",
-        coordinates: { x: 1543, y: 544 },
+        coordinates: { x: 1544, y: 545 },
         image: "",
         lore: "More information about Lotor's Prison is coming soon.",
         information: "",
@@ -894,7 +894,7 @@ export const mapLabels = {
       region: "Western Isles",
       details: {
         title: "Lotor's Summer Palace",
-        coordinates: { x: 773, y: 569 },
+        coordinates: { x: 774, y: 570 },
         image: "images/LSP.png",
         lore: "Lotor's Summer Palace is a central hub for players, offering access to various islands, housing realms, and a wide array of shops and services. It's a safe zone bustling with activity.",
         information: "",
@@ -924,7 +924,7 @@ export const mapLabels = {
       region: "Western Isles",
       details: {
         title: "Real Estate Island",
-        coordinates: { x: 661, y: 628 },
+        coordinates: { x: 662, y: 629 },
         image: "",
         lore: "More information about Real Estate Island is coming soon.",
         information: "",
@@ -939,7 +939,7 @@ export const mapLabels = {
       region: "Western Isles",
       details: {
         title: "Guild Arena Island",
-        coordinates: { x: 86, y: 940 },
+        coordinates: { x: 87, y: 941 },
         image: "",
         lore: "More information about Guild Arena Island is coming soon.",
         information: "",
@@ -954,7 +954,7 @@ export const mapLabels = {
       region: "Valinor",
       details: {
         title: "Valinor Island",
-        coordinates: { x: 938, y: 58 },
+        coordinates: { x: 939, y: 59 },
         image: "",
         lore: "More information about Valinor Island is coming soon.",
         information: "",
@@ -969,7 +969,7 @@ export const mapLabels = {
       region: "Krythan Island",
       details: {
         title: "Krythan Island",
-        coordinates: { x: 1088, y: 990 },
+        coordinates: { x: 1089, y: 991 },
         image: "",
         lore: "More information about Krythan Island is coming soon.",
         information: "",
@@ -987,7 +987,7 @@ export const mapLabels = {
       region: "Western Isles",
       details: {
         title: "Lycanth",
-        coordinates: { x: 258, y: 2631 },
+        coordinates: { x: 259, y: 2632 },
         image: "",
         lore: "More information about Lycanth is coming soon.",
         information: "",
@@ -1002,7 +1002,7 @@ export const mapLabels = {
       region: "Western Isles", // I think this is correct because of proximity to Krythan Island, but it could be Western Isles. Question Mark
       details: {
         title: "Monk Island",
-        coordinates: { x: 559, y: 655 },
+        coordinates: { x: 560, y: 656 },
         image: "",
         lore: "More information about Monk Island is coming soon.",
         information: "",
@@ -1017,7 +1017,7 @@ export const mapLabels = {
       region: "Western Isles",
       details: {
         title: "Lopal",
-        coordinates: { x: 388, y: 2181 },
+        coordinates: { x: 389, y: 2182 },
         image: "",
         lore: "More information about Lopal is coming soon.",
         information: "",
@@ -1032,7 +1032,7 @@ export const mapLabels = {
       region: "Western Isles",
       details: {
         title: "Scorched Island",
-        coordinates: { x: 793, y: 2090 },
+        coordinates: { x: 794, y: 2091 },
         image: "",
         lore: "More information about Scorched Island is coming soon.",
         information: "",
@@ -1047,7 +1047,7 @@ export const mapLabels = {
       region: "Western Isles",
       details: {
         title: "Hell",
-        coordinates: { x: 1128, y: 3193 },
+        coordinates: { x: 1129, y: 3194 },
         image: "",
         lore: "More information about Hell is coming soon.",
         information: "",
@@ -1063,7 +1063,7 @@ export const mapLabels = {
       region: "Western Isles",
       details: {
         title: "Deserted Island",
-        coordinates: { x: 221, y: 423 },
+        coordinates: { x: 222, y: 424 },
         image: "",
         lore: "More information about Deserted Island is coming soon.",
         information: "",
@@ -1078,7 +1078,7 @@ export const mapLabels = {
       region: "Western Isles",
       details: {
         title: "Scarab Island",
-        coordinates: { x: 257, y: 2046 },
+        coordinates: { x: 258, y: 2047 },
         image: "",
         lore: "More information about Scarab Island is coming soon.",
         information: "",
@@ -1093,7 +1093,7 @@ export const mapLabels = {
       region: "Western Isles",
       details: {
         title: "Werewolf Island",
-        coordinates: { x: 461, y: 2493 },
+        coordinates: { x: 462, y: 2494 },
         image: "",
         lore: "More information about Werewolf Island is coming soon.",
         information: "",
@@ -1108,7 +1108,7 @@ export const mapLabels = {
       region: "Western Isles", // I think this is correct because of proximity to Darkwoods and the bridge, but it could be Western Isles. Question Mark
       details: {
         title: "Dragoon Island",
-        coordinates: { x: 348, y: 3236 },
+        coordinates: { x: 349, y: 3237 },
         image: "",
         lore: "More information about Dragoon Island is coming soon.",
         information: "",
@@ -1123,7 +1123,7 @@ export const mapLabels = {
       region: "Western Isles",
       details: {
         title: "Obelisk Island",
-        coordinates: { x: 2115, y: 2702 },
+        coordinates: { x: 2116, y: 2703 },
         image: "",
         lore: "More information about Obelisk Island is coming soon.",
         information: "",
@@ -1138,7 +1138,7 @@ export const mapLabels = {
       region: "Western Isles",
       details: {
         title: "Ettin Island",
-        coordinates: { x: 1670, y: 1679 },
+        coordinates: { x: 1671, y: 1680 },
         image: "",
         lore: "More information about Ettin Island is coming soon.",
         information: "",
@@ -1154,7 +1154,7 @@ export const mapLabels = {
       region: "Western Isles",
       details: {
         title: "PvP Island",
-        coordinates: { x: 3891, y: 1686 },
+        coordinates: { x: 3892, y: 1687 },
         image: "",
         lore: "More information about PvP Island is coming soon.",
         information: "",
@@ -1169,7 +1169,7 @@ export const mapLabels = {
       region: "Sands of Creation",
       details: {
         title: "Greater Dragon Island",
-        coordinates: { x: 158, y: 3790 },
+        coordinates: { x: 159, y: 3791 },
         image: "",
         lore: "More information about Greater Dragon Island is coming soon.",
         information: "",
@@ -1184,7 +1184,7 @@ export const mapLabels = {
       region: "Tundria",
       details: {
         title: "Northern Frost Giant Island",
-        coordinates: { x: 3329, y: 252 },
+        coordinates: { x: 3330, y: 253 },
         image: "",
         lore: "More information about Northern Frost Giant Island is coming soon.",
         information: "",
@@ -1199,7 +1199,7 @@ export const mapLabels = {
       region: "Sands of Creation",
       details: {
         title: "Artonian Island",
-        coordinates: { x: 246, y: 3374 },
+        coordinates: { x: 247, y: 3375 },
         image: "",
         lore: "More information about Artonian Island is coming soon.",
         information: "",
@@ -1214,7 +1214,7 @@ export const mapLabels = {
       region: "Highlands",
       details: {
         title: "Vel Dran",
-        coordinates: { x: 3151, y: 3190 },
+        coordinates: { x: 3152, y: 3191 },
         image: "",
         lore: "More information about Vel Dran is coming soon.",
         information: "",
@@ -1230,7 +1230,7 @@ export const mapLabels = {
       region: "Western Isles",
       details: {
         title: "Test Island",
-        coordinates: { x: 3921, y: 3726 },
+        coordinates: { x: 3922, y: 3727 },
         image: "",
         lore: "More information about Test Island is coming soon.",
         information: "",
@@ -1245,7 +1245,7 @@ export const mapLabels = {
       region: "Tundria",
       details: {
         title: "Unnamed Island",
-        coordinates: { x: 3797, y: 973 },
+        coordinates: { x: 3798, y: 974 },
         image: "",
         lore: "More information about Unnamed Island is coming soon.",
         information: "",
@@ -1260,7 +1260,7 @@ export const mapLabels = {
       region: "Breakwater",
       details: {
         title: "Crab Island",
-        coordinates: { x: 1061, y: 1949 },
+        coordinates: { x: 1062, y: 1950 },
         image: "",
         lore: "More information about Crab Island is coming soon.",
         information: "",
@@ -1284,7 +1284,7 @@ export const mapLabels = {
       region: "Krythan",
       details: {
         title: "Cultist Lair",
-        coordinates: { x: 872, y: 1375 },
+        coordinates: { x: 873, y: 1376 },
         image: "",
         lore: "More information about Cultist Lair is coming soon.",
         information: "",
@@ -1301,7 +1301,7 @@ export const mapLabels = {
       region: "Valinor",
       details: {
         title: "Bonesnarl's Lair",
-        coordinates: { x: 864, y: 300 },
+        coordinates: { x: 865, y: 301 },
         image: "",
         lore: "More information about Bonesnarl's Lair is coming soon.",
         information: "",
@@ -1325,7 +1325,7 @@ export const mapLabels = {
       region: "Krythan",
       details: {
         title: "Minion Cave",
-        coordinates: { x: 502, y: 683 },
+        coordinates: { x: 503, y: 684 },
         image: "",
         lore: "More information about Minion Cave is coming soon.",
         information: "",
@@ -1340,7 +1340,7 @@ export const mapLabels = {
       region: "Krythan",
       details: {
         title: "Minion Cave",
-        coordinates: { x: 438, y: 759 },
+        coordinates: { x: 439, y: 760 },
         image: "",
         lore: "More information about Minion Cave is coming soon.",
         information: "",
@@ -1355,7 +1355,7 @@ export const mapLabels = {
       region: "Krythan",
       details: {
         title: "Flataga Mines",
-        coordinates: { x: 389, y: 1316 },
+        coordinates: { x: 390, y: 1317 },
         image: "",
         lore: "More information about Flataga Mines is coming soon.",
         information: "",
@@ -1371,7 +1371,7 @@ export const mapLabels = {
       region: "Silvest Valley",
       details: {
         title: "Silvest Mines",
-        coordinates: { x: 1015, y: 1107 },
+        coordinates: { x: 1016, y: 1108 },
         image: "",
         lore: "More information about Silvest Mines is coming soon.",
         information: "",
@@ -1386,7 +1386,7 @@ export const mapLabels = {
       region: "Silvest Valley",
       details: {
         title: "Dalvon Mines",
-        coordinates: { x: 1431, y: 1377 },
+        coordinates: { x: 1432, y: 1378 },
         image: "",
         lore: "More information about Dalvon Mines is coming soon.",
         information: "",
@@ -1401,7 +1401,7 @@ export const mapLabels = {
       region: "Silvest Valley",
       details: {
         title: "Orc Cave",
-        coordinates: { x: 1179, y: 1299 },
+        coordinates: { x: 1180, y: 1300 },
         image: "",
         lore: "More information about Orc Cave is coming soon.",
         information: "",
@@ -1424,7 +1424,7 @@ export const mapLabels = {
       region: "Black Swamp",
       details: {
         title: "Ivogur's Mine",
-        coordinates: { x: 2961, y: 3908 },
+        coordinates: { x: 2962, y: 3909 },
         image: "",
         lore: "More information about Ivogur's Mine is coming soon.",
         information: "",
@@ -1456,7 +1456,7 @@ export const mapLabels = {
       region: "Valinor",
       details: {
         title: "Duncan's Cottage",
-        coordinates: { x: 649, y: 172 },
+        coordinates: { x: 650, y: 173 },
         image: "",
         lore: "More information about Duncan's Cottage is coming soon.",
         information: "",
@@ -1471,7 +1471,7 @@ export const mapLabels = {
       region: "Valinor",
       details: {
         title: "Ruined Temple",
-        coordinates: { x: 568, y: 311 },
+        coordinates: { x: 569, y: 312 },
         image: "",
         lore: "More information about Ruined Temple is coming soon.",
         information: "",
@@ -1486,7 +1486,7 @@ export const mapLabels = {
       region: "Valinor",
       details: {
         title: "Lanore",
-        coordinates: { x: 639, y: 360 },
+        coordinates: { x: 640, y: 361 },
         image: "",
         lore: "More information about Lanore is coming soon.",
         information: "",
@@ -1501,7 +1501,7 @@ export const mapLabels = {
       region: "Valinor",
       details: {
         title: "Ecclain's Caravan",
-        coordinates: { x: 1081, y: 466 },
+        coordinates: { x: 1082, y: 467 },
         image: "",
         lore: "More information about Ecclain's Caravan is coming soon.",
         information: "",
@@ -1516,7 +1516,7 @@ export const mapLabels = {
       region: "Valinor",
       details: {
         title: "Valinor Ant Hill",
-        coordinates: { x: 1041, y: 280 },
+        coordinates: { x: 1042, y: 281 },
         image: "",
         lore: "More information about Valinor Ant Hill is coming soon.",
         information: "",
@@ -1531,7 +1531,7 @@ export const mapLabels = {
       region: "Valinor",
       details: {
         title: "Hermit's Hut",
-        coordinates: { x: 963, y: 121 },
+        coordinates: { x: 964, y: 122 },
         image: "",
         lore: "More information about Hermit's Hut is coming soon.",
         information: "",
@@ -1548,7 +1548,7 @@ export const mapLabels = {
       region: "Krythan",
       details: {
         title: "Gideon Cottage",
-        coordinates: { x: 507, y: 572 },
+        coordinates: { x: 508, y: 573 },
         image: "",
         lore: "More information about Gideon Cottage is coming soon.",
         information: "",
@@ -1563,7 +1563,7 @@ export const mapLabels = {
       region: "Krythan",
       details: {
         title: "Mirthik's Dwelling",
-        coordinates: { x: 506, y: 638 },
+        coordinates: { x: 507, y: 639 },
         image: "",
         lore: "More information about Mirthik's Dwelling is coming soon.",
         information: "",
@@ -1578,7 +1578,7 @@ export const mapLabels = {
       region: "Krythan",
       details: {
         title: "Jeel Ruins",
-        coordinates: { x: 502, y: 751 },
+        coordinates: { x: 503, y: 752 },
         image: "",
         lore: "More information about Jeel Ruins is coming soon.",
         information: "",
@@ -1593,7 +1593,7 @@ export const mapLabels = {
       region: "Krythan",
       details: {
         title: "Crypt of Kargoth",
-        coordinates: { x: 434, y: 848 },
+        coordinates: { x: 435, y: 849 },
         image: "",
         lore: "More information about Crypt of Kargoth is coming soon.",
         information: "",
@@ -1608,7 +1608,7 @@ export const mapLabels = {
       region: "Krythan",
       details: {
         title: "Ruins of Tal S'kar",
-        coordinates: { x: 188, y: 987 },
+        coordinates: { x: 189, y: 988 },
         image: "",
         lore: "More information about Ruins of Tal S'kar is coming soon.",
         information: "",
@@ -1623,7 +1623,7 @@ export const mapLabels = {
       region: "Krythan",
       details: {
         title: "Holendar's Mansion",
-        coordinates: { x: 830, y: 1033 },
+        coordinates: { x: 831, y: 1034 },
         image: "",
         lore: "More information about Holendar's Mansion is coming soon.",
         information: "",
@@ -1638,7 +1638,7 @@ export const mapLabels = {
       region: "Krythan",
       details: {
         title: "Krythan Cemetary",
-        coordinates: { x: 893, y: 1021 },
+        coordinates: { x: 894, y: 1022 },
         image: "",
         lore: "More information about Krythan Cemetary is coming soon.",
         information: "",
@@ -1653,7 +1653,7 @@ export const mapLabels = {
       region: "Krythan",
       details: {
         title: "Scalo's Den",
-        coordinates: { x: 834, y: 1277 },
+        coordinates: { x: 835, y: 1278 },
         image: "",
         lore: "More information about Scalo's Den is coming soon.",
         information: "",
@@ -1668,7 +1668,7 @@ export const mapLabels = {
       region: "Krythan",
       details: {
         title: "Kobold Castle",
-        coordinates: { x: 1277, y: 1121 },
+        coordinates: { x: 1278, y: 1122 },
         image: "",
         lore: "More information about Kobold Castle is coming soon.",
         information: "",
@@ -1683,7 +1683,7 @@ export const mapLabels = {
       region: "Krythan",
       details: {
         title: "Karzak Cove",
-        coordinates: { x: 1374, y: 1075 },
+        coordinates: { x: 1375, y: 1076 },
         image: "",
         lore: "More information about Karzak Cove is coming soon.",
         information: "",
@@ -1698,7 +1698,7 @@ export const mapLabels = {
       region: "Krythan",
       details: {
         title: "Tallem'im house",
-        coordinates: { x: 86, y: 1501 },
+        coordinates: { x: 87, y: 1502 },
         image: "",
         lore: "More information about Tallem'im house is coming soon.",
         information: "",
@@ -1713,7 +1713,7 @@ export const mapLabels = {
       region: "Krythan",
       details: {
         title: "Wasp Hive",
-        coordinates: { x: 514, y: 1300 },
+        coordinates: { x: 515, y: 1301 },
         image: "",
         lore: "More information about Wasp Hive is coming soon.",
         information: "",
@@ -1728,7 +1728,7 @@ export const mapLabels = {
       region: "Krythan",
       details: {
         title: "Orc Fort",
-        coordinates: { x: 780, y: 1530 },
+        coordinates: { x: 781, y: 1531 },
         image: "",
         lore: "More information about Orc Fort is coming soon.",
         information: "",
@@ -1746,7 +1746,7 @@ export const mapLabels = {
       region: "Hell",
       details: {
         title: "Minion's of Talazar's Stronghold",
-        coordinates: { x: 1198, y: 3339 },
+        coordinates: { x: 1199, y: 3340 },
         image: "",
         lore: "More information about Minion's of Talazar's Stronghold is coming soon.",
         information: "",
@@ -1764,7 +1764,7 @@ export const mapLabels = {
       region: "Darkwoods",
       details: {
         title: "Josody Theif Fort",
-        coordinates: { x: 934, y: 2574 },
+        coordinates: { x: 935, y: 2575 },
         image: "",
         lore: "More information about Josody Theif Fort is coming soon.",
         information: "",
@@ -1779,7 +1779,7 @@ export const mapLabels = {
       region: "Darkwoods",
       details: {
         title: "Crypt of Ryonkah",
-        coordinates: { x: 1028, y: 2975 },
+        coordinates: { x: 1029, y: 2976 },
         image: "",
         lore: "More information about Crypt of Ryonkah is coming soon.",
         information: "",
@@ -1794,7 +1794,7 @@ export const mapLabels = {
       region: "Darkwoods",
       details: {
         title: "Lord Vezryl's Estate",
-        coordinates: { x: 553, y: 3156 },
+        coordinates: { x: 554, y: 3157 },
         image: "",
         lore: "More information about Lord Vezryl's Estate is coming soon.",
         information: "",
@@ -1809,7 +1809,7 @@ export const mapLabels = {
       region: "Darkwoods",
       details: {
         title: "Burslord's Hunting Lodge",
-        coordinates: { x: 681, y: 3387 },
+        coordinates: { x: 682, y: 3388 },
         image: "",
         lore: "More information about Burslord's Hunting Lodge is coming soon.",
         information: "",
@@ -1824,7 +1824,7 @@ export const mapLabels = {
       region: "Darkwoods",
       details: {
         title: "Mnemmon",
-        coordinates: { x: 909, y: 3214 },
+        coordinates: { x: 910, y: 3215 },
         image: "",
         lore: "More information about Mnemmon is coming soon.",
         information: "",
@@ -1839,7 +1839,7 @@ export const mapLabels = {
       region: "Darkwoods",
       details: {
         title: "Mnemmon Gaol",
-        coordinates: { x: 879, y: 3388 },
+        coordinates: { x: 880, y: 3389 },
         image: "",
         lore: "More information about Mnemmon Gaol is coming soon.",
         information: "",
@@ -1854,7 +1854,7 @@ export const mapLabels = {
       region: "Necropolis",
       details: {
         title: "Necropolis",
-        coordinates: { x: 1356, y: 2906 },
+        coordinates: { x: 1357, y: 2907 },
         image: "",
         lore: "More information about Necropolis is coming soon.",
         information: "",
@@ -1869,7 +1869,7 @@ export const mapLabels = {
       region: "Darkwoods",
       details: {
         title: "Astari Ruin Shelter",
-        coordinates: { x: 813, y: 3221 },
+        coordinates: { x: 814, y: 3222 },
         image: "",
         lore: "More information about Astari Ruin Shelter is coming soon.",
         information: "",
@@ -1884,7 +1884,7 @@ export const mapLabels = {
       region: "Darkwoods", // I'm not sure if this is the Name of the place or the name of the NPC that lives there. Question Mark
       details: {
         title: "Tuvok",
-        coordinates: { x: 1030, y: 2889 },
+        coordinates: { x: 1031, y: 2890 },
         image: "",
         lore: "More information about Tuvok is coming soon.",
         information: "",
@@ -1899,7 +1899,7 @@ export const mapLabels = {
       region: "Darkwoods",
       details: {
         title: "Warg Pen",
-        coordinates: { x: 1367, y: 2735 },
+        coordinates: { x: 1368, y: 2736 },
         image: "",
         lore: "More information about Warg Pen is coming soon.",
         information: "",
@@ -1914,7 +1914,7 @@ export const mapLabels = {
       region: "Darkwoods",
       details: {
         title: "Gadros Ruins",
-        coordinates: { x: 1487, y: 2479 },
+        coordinates: { x: 1488, y: 2480 },
         image: "",
         lore: "More information about Gadros Ruins is coming soon.",
         information: "",
@@ -1929,7 +1929,7 @@ export const mapLabels = {
       region: "Darkwoods", 
       details: {
         title: "Shadow Forest",
-        coordinates: { x: 1461, y: 2708 },
+        coordinates: { x: 1462, y: 2709 },
         image: "",
         lore: "More information about Shadow Forest is coming soon.",
         information: "",
@@ -1944,7 +1944,7 @@ export const mapLabels = {
       region: "Darkwoods", // Changed the name from Termigon Hive to Termigon Mound, seems more fitting. Question Mark
       details: {
         title: "Termigon Mound",
-        coordinates: { x: 675, y: 3518 },
+        coordinates: { x: 676, y: 3519 },
         image: "",
         lore: "More information about Termigon Mound is coming soon.",
         information: "",
@@ -1961,7 +1961,7 @@ export const mapLabels = {
       region: "Battle Plains",
       details: {
         title: "Wasp Hive",
-        coordinates: { x: 1655, y: 2957 },
+        coordinates: { x: 1656, y: 2958 },
         image: "",
         lore: "More information about Wasp Hive is coming soon.",
         information: "",
@@ -1978,7 +1978,7 @@ export const mapLabels = {
       region: "Black Swamp",
       details: {
         title: "Drakkan",
-        coordinates: { x: 2804, y: 3805 },
+        coordinates: { x: 2805, y: 3806 },
         image: "",
         lore: "More information about Drakkan is coming soon.",
         information: "",
@@ -1993,7 +1993,7 @@ export const mapLabels = {
       region: "Black Swamp",
       details: {
         title: "Kobold Outpost",
-        coordinates: { x: 3246, y: 3816 },
+        coordinates: { x: 3247, y: 3817 },
         image: "",
         lore: "More information about Kobold Outpost is coming soon.",
         information: "",
@@ -2008,7 +2008,7 @@ export const mapLabels = {
       region: "Black Swamp",
       details: {
         title: "Kobold Village",
-        coordinates: { x: 2831, y: 3923 },
+        coordinates: { x: 2832, y: 3924 },
         image: "",
         lore: "More information about Kobold Village is coming soon.",
         information: "",
@@ -2023,7 +2023,7 @@ export const mapLabels = {
       region: "Black Swamp",
       details: {
         title: "Temple of Agon",
-        coordinates: { x: 3116, y: 3631 },
+        coordinates: { x: 3117, y: 3632 },
         image: "",
         lore: "More information about Temple of Agon is coming soon.",
         information: "",
@@ -2038,7 +2038,7 @@ export const mapLabels = {
       region: "Black Swamp",
       details: {
         title: "Old Ale Warehouse\n(Closed)",
-        coordinates: { x: 2815, y: 3259 },
+        coordinates: { x: 2816, y: 3260 },
         image: "",
         lore: "More information about Old Ale Warehouse\n(Closed) is coming soon.",
         information: "",
@@ -2053,7 +2053,7 @@ export const mapLabels = {
       region: "Black Swamp",
       details: {
         title: "Valekar's Fortress",
-        coordinates: { x: 3099, y: 3486 },
+        coordinates: { x: 3100, y: 3487 },
         image: "",
         lore: "More information about Valekar's Fortress is coming soon.",
         information: "",
@@ -2070,7 +2070,7 @@ export const mapLabels = {
       region: "Highlands",
       details: {
         title: "Emporium Abbey",
-        coordinates: { x: 2767, y: 3164 },
+        coordinates: { x: 2768, y: 3165 },
         image: "",
         lore: "More information about Emporium Abbey is coming soon.",
         information: "",
@@ -2085,7 +2085,7 @@ export const mapLabels = {
       region: "Highlands",
       details: {
         title: "Ancient Site of Minos",
-        coordinates: { x: 2928, y: 3167 },
+        coordinates: { x: 2929, y: 3168 },
         image: "",
         lore: "More information about Ancient Site of Minos is coming soon.",
         information: "",
@@ -2100,7 +2100,7 @@ export const mapLabels = {
       region: "Highlands",
       details: {
         title: "Minotaur Maze",
-        coordinates: { x: 2999, y: 3038 },
+        coordinates: { x: 3000, y: 3039 },
         image: "",
         lore: "More information about Minotaur Maze is coming soon.",
         information: "",
@@ -2115,7 +2115,7 @@ export const mapLabels = {
       region: "Highlands",
       details: {
         title: "Thief Fort",
-        coordinates: { x: 3175, y: 3067 },
+        coordinates: { x: 3176, y: 3068 },
         image: "",
         lore: "More information about Thief Fort is coming soon.",
         information: "",
@@ -2130,7 +2130,7 @@ export const mapLabels = {
       region: "Highlands",
       details: {
         title: "Supply Shelter",
-        coordinates: { x: 3366, y: 2956 },
+        coordinates: { x: 3367, y: 2957 },
         image: "",
         lore: "More information about Supply Shelter is coming soon.",
         information: "",
@@ -2145,7 +2145,7 @@ export const mapLabels = {
       region: "Highlands",
       details: {
         title: "Third Book Temple",
-        coordinates: { x: 2982, y: 2699 },
+        coordinates: { x: 2983, y: 2700 },
         image: "",
         lore: "More information about Third Book Temple is coming soon.",
         information: "",
@@ -2160,7 +2160,7 @@ export const mapLabels = {
       region: "Highlands",
       details: {
         title: "Horibus's Camp",
-        coordinates: { x: 3466, y: 2641 },
+        coordinates: { x: 3467, y: 2642 },
         image: "",
         lore: "More information about Horibus's Camp is coming soon.",
         information: "",
@@ -2175,7 +2175,7 @@ export const mapLabels = {
       region: "Highlands",
       details: {
         title: "Cave\n(NO ENTRY)",
-        coordinates: { x: 3560, y: 1922 },
+        coordinates: { x: 3561, y: 1923 },
         image: "",
         lore: "More information about Cave\n(NO ENTRY) is coming soon.",
         information: "",
@@ -2190,7 +2190,7 @@ export const mapLabels = {
       region: "Highlands",
       details: {
         title: "Ethera Mining Company",
-        coordinates: { x: 3608, y: 3619 },
+        coordinates: { x: 3609, y: 3620 },
         image: "",
         lore: "More information about Ethera Mining Company is coming soon.",
         information: "",
@@ -2205,7 +2205,7 @@ export const mapLabels = {
       region: "Highlands",
       details: {
         title: "Warg Pen",
-        coordinates: { x: 3334, y: 3732 },
+        coordinates: { x: 3335, y: 3733 },
         image: "",
         lore: "More information about Warg Pen is coming soon.",
         information: "",
@@ -2224,7 +2224,7 @@ export const mapLabels = {
       region: "Heartwood Coast",
       details: {
         title: "Infiltrator Camp",
-        coordinates: { x: 2470, y: 1504 },
+        coordinates: { x: 2471, y: 1505 },
         image: "",
         lore: "More information about Infiltrator Camp is coming soon.",
         information: "",
@@ -2239,7 +2239,7 @@ export const mapLabels = {
       region: "Heartwood Coast",
       details: {
         title: "Gnobol Manor",
-        coordinates: { x: 3094, y: 1473 },
+        coordinates: { x: 3095, y: 1474 },
         image: "",
         lore: "More information about Gnobol Manor is coming soon.",
         information: "",
@@ -2254,7 +2254,7 @@ export const mapLabels = {
       region: "Heartwood Coast",
       details: {
         title: "Gnobol Mauseleum",
-        coordinates: { x: 3094, y: 1567 },
+        coordinates: { x: 3095, y: 1568 },
         image: "",
         lore: "More information about Gnobol Mauseleum is coming soon.",
         information: "",
@@ -2269,7 +2269,7 @@ export const mapLabels = {
       region: "Heartwood Coast",
       details: {
         title: "Hunter's Lodge",
-        coordinates: { x: 2937, y: 1843 },
+        coordinates: { x: 2938, y: 1844 },
         image: "",
         lore: "More information about Hunter's Lodge is coming soon.",
         information: "",
@@ -2284,7 +2284,7 @@ export const mapLabels = {
       region: "Heartwood Coast",
       details: {
         title: "Talazarian Fort",
-        coordinates: { x: 2917, y: 2255 },
+        coordinates: { x: 2918, y: 2256 },
         image: "",
         lore: "More information about Talazarian Fort is coming soon.",
         information: "",
@@ -2299,7 +2299,7 @@ export const mapLabels = {
       region: "Heartwood Coast",
       details: {
         title: "Temple of Kuthos",
-        coordinates: { x: 2757, y: 2395 },
+        coordinates: { x: 2758, y: 2396 },
         image: "",
         lore: "More information about Temple of Kuthos is coming soon.",
         information: "",
@@ -2316,7 +2316,7 @@ export const mapLabels = {
       region: "Tundria",
       details: {
         title: "Orc Raider Camp",
-        coordinates: { x: 2943, y: 1222 },
+        coordinates: { x: 2944, y: 1223 },
         image: "",
         lore: "More information about Orc Raider Camp is coming soon.",
         information: "",
@@ -2331,7 +2331,7 @@ export const mapLabels = {
       region: "Tundria",
       details: {
         title: "Elsinea Manor",
-        coordinates: { x: 2614, y: 1247 },
+        coordinates: { x: 2615, y: 1248 },
         image: "",
         lore: "More information about Elsinea Manor is coming soon.",
         information: "",
@@ -2346,7 +2346,7 @@ export const mapLabels = {
       region: "Tundria",
       details: {
         title: "Frost Troll Coast",
-        coordinates: { x: 2573, y: 1127 },
+        coordinates: { x: 2574, y: 1128 },
         image: "",
         lore: "More information about Frost Troll Coast is coming soon.",
         information: "",
@@ -2361,7 +2361,7 @@ export const mapLabels = {
       region: "Tundria",
       details: {
         title: "Trapper Grayth's Dwelling",
-        coordinates: { x: 3398, y: 817 },
+        coordinates: { x: 3399, y: 818 },
         image: "",
         lore: "More information about Trapper Grayth's Dwelling is coming soon.",
         information: "",
@@ -2376,7 +2376,7 @@ export const mapLabels = {
       region: "Tundria",
       details: {
         title: "Infiltrator Camp",
-        coordinates: { x: 3606, y: 1037 },
+        coordinates: { x: 3607, y: 1038 },
         image: "",
         lore: "More information about Infiltrator Camp is coming soon.",
         information: "",
@@ -2391,7 +2391,7 @@ export const mapLabels = {
       region: "Tundria",
       details: {
         title: "Altargrade",
-        coordinates: { x: 3237, y: 753 },
+        coordinates: { x: 3238, y: 754 },
         image: "",
         lore: "More information about Altargrade is coming soon.",
         information: "",
@@ -2406,7 +2406,7 @@ export const mapLabels = {
       region: "Tundria",
       details: {
         title: "Orc Raider Fort",
-        coordinates: { x: 3109, y: 859 },
+        coordinates: { x: 3110, y: 860 },
         image: "",
         lore: "More information about Orc Raider Fort is coming soon.",
         information: "",
@@ -2421,7 +2421,7 @@ export const mapLabels = {
       region: "Tundria",
       details: {
         title: "Hammerfist Mine Camp",
-        coordinates: { x: 2760, y: 613 },
+        coordinates: { x: 2761, y: 614 },
         image: "",
         lore: "More information about Hammerfist Mine Base Camp is coming soon.",
         information: "",
@@ -2436,7 +2436,7 @@ export const mapLabels = {
       region: "Tundria",
       details: {
         title: "Stormholde",
-        coordinates: { x: 2561, y: 927 },
+        coordinates: { x: 2562, y: 928 },
         image: "",
         lore: "More information about Stormholde is coming soon.",
         information: "",
@@ -2451,7 +2451,7 @@ export const mapLabels = {
       region: "Tundria",
       details: {
         title: "Ruins of Osgarl",
-        coordinates: { x: 2541, y: 412 },
+        coordinates: { x: 2542, y: 413 },
         image: "",
         lore: "More information about Ruins of Osgarl is coming soon.",
         information: "",
@@ -2466,7 +2466,7 @@ export const mapLabels = {
       region: "Tundria",
       details: {
         title: "Castle of Artraxis",
-        coordinates: { x: 2877, y: 411 },
+        coordinates: { x: 2878, y: 412 },
         image: "",
         lore: "More information about Castle of Artraxis is coming soon.",
         information: "",
@@ -2484,7 +2484,7 @@ export const mapLabels = {
       region: "Breakwater",
       details: {
         title: "Pirate Raider's Camp",
-        coordinates: { x: 1349, y: 1760 },
+        coordinates: { x: 1350, y: 1761 },
         image: "",
         lore: "More information about Pirate Raider's Camp is coming soon.",
         information: "",
@@ -2499,7 +2499,7 @@ export const mapLabels = {
       region: "Breakwater",
       details: {
         title: "Athropiniax's Temple",
-        coordinates: { x: 1782, y: 2429 },
+        coordinates: { x: 1783, y: 2430 },
         image: "",
         lore: "More information about Athropiniax's Temple is coming soon.",
         information: "",
@@ -2516,7 +2516,7 @@ export const mapLabels = {
       region: "Breakwater",
       details: {
         title: "Undead Dwarven Fort",
-        coordinates: { x: 1922, y: 1730 },
+        coordinates: { x: 1923, y: 1731 },
         image: "",
         lore: "More information about Undead Dwarven Fort is coming soon.",
         information: "",
@@ -2531,7 +2531,7 @@ export const mapLabels = {
       region: "Breakwater",
       details: {
         title: "Deadwing's Lair",
-        coordinates: { x: 1943, y: 1690 },
+        coordinates: { x: 1944, y: 1691 },
         image: "",
         lore: "More information about Deadwing's Lair is coming soon.",
         information: "",
@@ -2546,7 +2546,7 @@ export const mapLabels = {
       region: "Breakwater",
       details: {
         title: "Dwarf Fortress",
-        coordinates: { x: 2171, y: 1508 },
+        coordinates: { x: 2172, y: 1509 },
         image: "",
         lore: "More information about Dwarf Fortress is coming soon.",
         information: "",
@@ -2563,7 +2563,7 @@ export const mapLabels = {
       region: "Breakwater",
       details: {
         title: "Sea Pirate Shack",
-        coordinates: { x: 2213, y: 2251 },
+        coordinates: { x: 2214, y: 2252 },
         image: "",
         lore: "More information about Sea Pirate Shack is coming soon.",
         information: "",
@@ -2580,7 +2580,7 @@ export const mapLabels = {
       region: "Western Isles",
       details: {
         title: "Talazar's Castle",
-        coordinates: { x: 1102, y: 3290 },
+        coordinates: { x: 1103, y: 3291 },
         image: "",
         lore: "More information about Talazar's Castle is coming soon.",
         information: "",
@@ -2600,7 +2600,7 @@ export const mapLabels = {
       region: "Sands of Creation",
       details: {
         title: "Ruhura Outpost",
-        coordinates: { x: 941, y: 3985 },
+        coordinates: { x: 942, y: 3986 },
         image: "",
         lore: "More information about Ruhura Outpost is coming soon.",
         information: "",
@@ -2615,7 +2615,7 @@ export const mapLabels = {
       region: "Sands of Creation",
       details: {
         title: "Sand Golem Crypt",
-        coordinates: { x: 840, y: 3922 },
+        coordinates: { x: 841, y: 3923 },
         image: "",
         lore: "More information about Sand Golem Crypt is coming soon.",
         information: "",
@@ -2630,7 +2630,7 @@ export const mapLabels = {
       region: "Sands of Creation",
       details: {
         title: "Lupinsix's Lair",
-        coordinates: { x: 791, y: 3836 },
+        coordinates: { x: 792, y: 3837 },
         image: "",
         lore: "More information about Lupinsix's Lair is coming soon.",
         information: "",
@@ -2645,7 +2645,7 @@ export const mapLabels = {
       region: "Sands of Creation",
       details: {
         title: "Tomna's House",
-        coordinates: { x: 718, y: 3680 },
+        coordinates: { x: 719, y: 3681 },
         image: "",
         lore: "More information about Tomna's House is coming soon.",
         information: "",
@@ -2660,7 +2660,7 @@ export const mapLabels = {
       region: "Sands of Creation",
       details: {
         title: "Artonian Fort",
-        coordinates: { x: 554, y: 3666 },
+        coordinates: { x: 555, y: 3667 },
         image: "",
         lore: "More information about Artonian Fort is coming soon.",
         information: "",
@@ -2675,7 +2675,7 @@ export const mapLabels = {
       region: "Sands of Creation",
       details: {
         title: "Artonian Cave",
-        coordinates: { x: 488, y: 3650 },
+        coordinates: { x: 489, y: 3651 },
         image: "",
         lore: "More information about Artonian Cave is coming soon.",
         information: "",
@@ -2690,7 +2690,7 @@ export const mapLabels = {
       region: "Sands of Creation",
       details: {
         title: "The GateKeeper",
-        coordinates: { x: 420, y: 3684 },
+        coordinates: { x: 421, y: 3685 },
         image: "",
         lore: "More information about The GateKeeper is coming soon.",
         information: "",
@@ -2705,7 +2705,7 @@ export const mapLabels = {
       region: "Sands of Creation",
       details: {
         title: "Dragon Lair",
-        coordinates: { x: 112, y: 3467 },
+        coordinates: { x: 113, y: 3468 },
         image: "",
         lore: "More information about Dragon Lair is coming soon.",
         information: "",
@@ -2723,7 +2723,7 @@ export const mapLabels = {
       region: "Sands of Creation",
       details: {
         title: "Khafra Fishing Outpost",
-        coordinates: { x: 86, y: 2724 },
+        coordinates: { x: 87, y: 2725 },
         image: "",
         lore: "More information about Khafra Fishing Outpost is coming soon.",
         information: "",
@@ -2738,7 +2738,7 @@ export const mapLabels = {
       region: "Sands of Creation",
       details: {
         title: "Baniti's Family Crypt",
-        coordinates: { x: 311, y: 2977 },
+        coordinates: { x: 312, y: 2978 },
         image: "",
         lore: "More information about Baniti's Family Crypt is coming soon.",
         information: "",
@@ -2753,7 +2753,7 @@ export const mapLabels = {
       region: "Sands of Creation",
       details: {
         title: "Blacktail's Crypt",
-        coordinates: { x: 54, y: 3024 },
+        coordinates: { x: 55, y: 3025 },
         image: "",
         lore: "More information about Blacktail's Crypt is coming soon.",
         information: "",
@@ -2768,7 +2768,7 @@ export const mapLabels = {
       region: "Sands of Creation",
       details: {
         title: "The Guardian",
-        coordinates: { x: 167, y: 3156 },
+        coordinates: { x: 168, y: 3157 },
         image: "",
         lore: "More information about The Guardian is coming soon.",
         information: "",
@@ -2783,7 +2783,7 @@ export const mapLabels = {
       region: "Sands of Creation",
       details: {
         title: "Undead Artonian Crypt",
-        coordinates: { x: 261, y: 3248 },
+        coordinates: { x: 262, y: 3249 },
         image: "",
         lore: "More information about Undead Artonian Crypt is coming soon.",
         information: "",
@@ -2798,7 +2798,7 @@ export const mapLabels = {
       region: "Sands of Creation",
       details: {
         title: "Ancient Artonian Swordsman Dungeon",
-        coordinates: { x: 140, y: 3327 },
+        coordinates: { x: 141, y: 3328 },
         image: "",
         lore: "More information about Ancient Artonian Swordsman Dungeon is coming soon.",
         information: "",
@@ -2818,7 +2818,7 @@ export const mapLabels = {
       region: "Valinor",
       details: {
         title: "Gut Rot Swamp",
-        coordinates: { x: 1175, y: 411 },
+        coordinates: { x: 1176, y: 412 },
         image: "",
         lore: "More information about Gut Rot Swamp is coming soon.",
         information: "",
@@ -2837,7 +2837,7 @@ export const mapLabels = {
       region: "Krythan",
       details: {
         title: "Lake Silvest",
-        coordinates: { x: 1265, y: 1218 },
+        coordinates: { x: 1266, y: 1219 },
         image: "",
         lore: "More information about Lake Silvest is coming soon.",
         information: "",
@@ -2852,7 +2852,7 @@ export const mapLabels = {
       region: "Krythan",
       details: {
         title: "Chokecherry Pond",
-        coordinates: { x: 1038, y: 1216 },
+        coordinates: { x: 1039, y: 1217 },
         image: "",
         lore: "More information about Chokecherry Pond is coming soon.",
         information: "",
@@ -2869,7 +2869,7 @@ export const mapLabels = {
       region: "Krythan",
       details: {
         title: "Queen's Lake",
-        coordinates: { x: 388, y: 1088 },
+        coordinates: { x: 389, y: 1089 },
         image: "",
         lore: "More information about Queen's Lake is coming soon.",
         information: "",
@@ -2884,7 +2884,7 @@ export const mapLabels = {
       region: "Krythan",
       details: {
         title: "Crow Lake",
-        coordinates: { x: 847, y: 1154 },
+        coordinates: { x: 848, y: 1155 },
         image: "",
         lore: "More information about Crow Lake is coming soon.",
         information: "",
@@ -2899,7 +2899,7 @@ export const mapLabels = {
       region: "Krythan",
       details: {
         title: "Krythan Swamp",
-        coordinates: { x: 188, y: 1764 },
+        coordinates: { x: 189, y: 1765 },
         image: "",
         lore: "More information about Krythan Swamp is coming soon.",
         information: "",
@@ -2917,7 +2917,7 @@ export const mapLabels = {
       region: "Darkwoods",
       details: {
         title: "Cairn Lake",
-        coordinates: { x: 1013, y: 2867 },
+        coordinates: { x: 1014, y: 2868 },
         image: "",
         lore: "More information about Cairn Lake is coming soon.",
         information: "",
@@ -2932,7 +2932,7 @@ export const mapLabels = {
       region: "Darkwoods",
       details: {
         title: "Lake Mraya",
-        coordinates: { x: 776, y: 2986 },
+        coordinates: { x: 777, y: 2987 },
         image: "",
         lore: "More information about Lake Mraya is coming soon.",
         information: "",
@@ -2947,7 +2947,7 @@ export const mapLabels = {
       region: "Darkwoods",
       details: {
         title: "Josody Swamp",
-        coordinates: { x: 1127, y: 2674 },
+        coordinates: { x: 1128, y: 2675 },
         image: "",
         lore: "More information about Josody Swamp is coming soon.",
         information: "",
@@ -2962,7 +2962,7 @@ export const mapLabels = {
       region: "Darkwoods", 
       details: {
         title: "Greenteeth Swamp",
-        coordinates: { x: 1638, y: 2598 },
+        coordinates: { x: 1639, y: 2599 },
         image: "",
         lore: "More information about Greenteeth Swamp is coming soon.",
         information: "",
@@ -2977,7 +2977,7 @@ export const mapLabels = {
       region: "Darkwoods",
       details: {
         title: "Darkfell Marsh",
-        coordinates: { x: 1009, y: 3090 },
+        coordinates: { x: 1010, y: 3091 },
         image: "",
         lore: "More information about Darkfell Marsh is coming soon.",
         information: "",
@@ -2994,7 +2994,7 @@ export const mapLabels = {
       region: "Battle Plains",
       details: {
         title: "Proudblood Sound",
-        coordinates: { x: 2270, y: 3768 },
+        coordinates: { x: 2271, y: 3769 },
         image: "",
         lore: "More information about Proudblood Sound is coming soon.",
         information: "",
@@ -3009,7 +3009,7 @@ export const mapLabels = {
       region: "Battle Plains",
       details: {
         title: "Chlera Bay",
-        coordinates: { x: 2556, y: 3711 },
+        coordinates: { x: 2557, y: 3712 },
         image: "",
         lore: "More information about Chlera Bay is coming soon.",
         information: "",
@@ -3029,7 +3029,7 @@ export const mapLabels = {
       region: "Black Swamp",
       details: {
         title: "Vorda Swamp",
-        coordinates: { x: 2785, y: 3680 },
+        coordinates: { x: 2786, y: 3681 },
         image: "",
         lore: "More information about Vorda Swamp is coming soon.",
         information: "",
@@ -3044,7 +3044,7 @@ export const mapLabels = {
       region: "Black Swamp",
       details: {
         title: "Canis Lake",
-        coordinates: { x: 2828, y: 3507 },
+        coordinates: { x: 2829, y: 3508 },
         image: "",
         lore: "More information about Canis Lake is coming soon.",
         information: "",
@@ -3059,7 +3059,7 @@ export const mapLabels = {
       region: "Black Swamp",
       details: {
         title: "Lake Dresta",
-        coordinates: { x: 2917, y: 3648 },
+        coordinates: { x: 2918, y: 3649 },
         image: "",
         lore: "More information about Lake Dresta is coming soon.",
         information: "",
@@ -3074,7 +3074,7 @@ export const mapLabels = {
       region: "Black Swamp",
       details: {
         title: "Key Marsh",
-        coordinates: { x: 3397, y: 3922 },
+        coordinates: { x: 3398, y: 3923 },
         image: "",
         lore: "More information about Key Marsh is coming soon.",
         information: "",
@@ -3091,7 +3091,7 @@ export const mapLabels = {
       region: "Highlands",
       details: {
         title: "West Lake",
-        coordinates: { x: 3375, y: 2978 },
+        coordinates: { x: 3376, y: 2979 },
         image: "",
         lore: "More information about West Lake is coming soon.",
         information: "",
@@ -3106,7 +3106,7 @@ export const mapLabels = {
       region: "Highlands",
       details: {
         title: "Parian Lake",
-        coordinates: { x: 3510, y: 2949 },
+        coordinates: { x: 3511, y: 2950 },
         image: "",
         lore: "More information about Parian Lake is coming soon.",
         information: "",
@@ -3121,7 +3121,7 @@ export const mapLabels = {
       region: "Highlands",
       details: {
         title: "Town Lake",
-        coordinates: { x: 3585, y: 3113 },
+        coordinates: { x: 3586, y: 3114 },
         image: "",
         lore: "More information about Town Lake is coming soon.",
         information: "",
@@ -3136,7 +3136,7 @@ export const mapLabels = {
       region: "Highlands",
       details: {
         title: "Kor's Lake",
-        coordinates: { x: 3574, y: 3232 },
+        coordinates: { x: 3575, y: 3233 },
         image: "",
         lore: "More information about Kor's Lake is coming soon.",
         information: "",
@@ -3151,7 +3151,7 @@ export const mapLabels = {
       region: "Highlands",
       details: {
         title: "Lake Ulthien",
-        coordinates: { x: 3031, y: 3227 },
+        coordinates: { x: 3032, y: 3228 },
         image: "",
         lore: "More information about Lake Ulthien is coming soon.",
         information: "",
@@ -3166,7 +3166,7 @@ export const mapLabels = {
       region: "Highlands",
       details: {
         title: "Glutton Lake",
-        coordinates: { x: 3459, y: 2700 },
+        coordinates: { x: 3460, y: 2701 },
         image: "",
         lore: "More information about Glutton Lake is coming soon.",
         information: "",
@@ -3182,7 +3182,7 @@ export const mapLabels = {
       region: "Highlands",
       details: {
         title: "Lake Kallon",
-        coordinates: { x: 3544, y: 3410 },
+        coordinates: { x: 3545, y: 3411 },
         image: "",
         lore: "More information about Lake Kallon is coming soon.",
         information: "",
@@ -3197,7 +3197,7 @@ export const mapLabels = {
       region: "Highlands",
       details: {
         title: "Orc Pond",
-        coordinates: { x: 3181, y: 3599 },
+        coordinates: { x: 3182, y: 3600 },
         image: "",
         lore: "More information about Orc Pond is coming soon.",
         information: "",
@@ -3214,7 +3214,7 @@ export const mapLabels = {
       region: "Valley of Giants",
       details: {
         title: "Greenmead Lake",
-        coordinates: { x: 3110, y: 2842 },
+        coordinates: { x: 3111, y: 2843 },
         image: "",
         lore: "More information about Greenmead Lake is coming soon.",
         information: "",
@@ -3238,7 +3238,7 @@ export const mapLabels = {
       region: "Breakwater",
       details: {
         title: "The Choke",
-        coordinates: { x: 2268, y: 2175 },
+        coordinates: { x: 2269, y: 2176 },
         image: "",
         lore: "More information about The Choke is coming soon.",
         information: "",
@@ -3257,7 +3257,7 @@ export const mapLabels = {
       region: "Broken Finger",
       details: {
         title: "Broken Lake",
-        coordinates: { x: 1446, y: 3751 },
+        coordinates: { x: 1447, y: 3752 },
         image: "",
         lore: "More information about Broken Lake is coming soon.",
         information: "",
@@ -3272,7 +3272,7 @@ export const mapLabels = {
       region: "Broken Finger",
       details: {
         title: "Obsidian Lake",
-        coordinates: { x: 1352, y: 3511 },
+        coordinates: { x: 1353, y: 3512 },
         image: "",
         lore: "More information about Obsidian Lake is coming soon.",
         information: "",
@@ -3291,7 +3291,7 @@ export const mapLabels = {
       region: "Sands of Creation",
       details: {
         title: "Khafra Oasis",
-        coordinates: { x: 216, y: 3014 },
+        coordinates: { x: 217, y: 3015 },
         image: "",
         lore: "More information about Khafra Oasis is coming soon.",
         information: "",
@@ -3306,7 +3306,7 @@ export const mapLabels = {
       region: "Sands of Creation",
       details: {
         title: "Chomper's Oasis",
-        coordinates: { x: 89, y: 3265 },
+        coordinates: { x: 90, y: 3266 },
         image: "",
         lore: "More information about Chomper's Oasis is coming soon.",
         information: "",
@@ -3335,10 +3335,10 @@ export const mapLabels = {
       details: {
         title: "Medosk Mountains",
         coordinates: [
-          { x: 2979, y: 3531 },
-          { x: 3149, y: 3845 }, // Added more coordinates to better represent the range
-          { x: 3481, y: 3652 },
-          { x: 3763, y: 3415 },
+          { x: 2980, y: 3532 },
+          { x: 3150, y: 3846 }, // Added more coordinates to better represent the range
+          { x: 3482, y: 3653 },
+          { x: 3764, y: 3416 },
         ],
         image: "",
         lore: "More information about Medosk Mountains is coming soon.",
@@ -3357,11 +3357,11 @@ export const mapLabels = {
       details: {
         title: "Eastern Mountains",
         coordinates: [
-          { x: 3133, y: 2569 },
-          { x: 3529, y: 2877 },
-          { x: 3240, y: 2061 }, // Added a second coordinate for the same label
-          { x: 3481, y: 1764 },
-          { x: 3692, y: 3074 },
+          { x: 3134, y: 2570 },
+          { x: 3530, y: 2878 },
+          { x: 3241, y: 2062 }, // Added a second coordinate for the same label
+          { x: 3482, y: 1765 },
+          { x: 3693, y: 3075 },
         ],
         image: "",
         lore: "More information about Eastern Mountains is coming soon.",
