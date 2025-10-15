@@ -50,6 +50,23 @@ export const mapLabels = {
   dungeons: [
     // Add underground dungeon labels here
   ],
+  crypts: [
+    {
+      name: "Krythan Crypt",
+      fontSize: 30,
+      region: "Krythan",
+      details: {
+        title: "Krythan Crypt",
+        coordinates: { x: 435, y: 847 },
+        image: "",
+        lore: "More information about Krythan Crypt is coming soon.",
+        information: "",
+        bonus: "",
+        npcs: [],
+        links: [],
+      },
+    },
+  ],
   caves: [
     // Add underground cave labels here
   ],
@@ -114,6 +131,23 @@ export const mapLabels = {
   basements: [
     // Add underground basement labels here
   ],
+  catacombs: [
+    {
+      name: "Jeel Catacombs",
+      fontSize: 30,
+      region: "Krythan",
+      details: {
+        title: "Jeel Catacombs",
+        coordinates: { x: 292, y: 806 },
+        image: "",
+        lore: "More information about Jeel Catacombs is coming soon.",
+        information: "",
+        bonus: "",
+        npcs: [],
+        links: [],
+      },
+    },
+  ],
   sewers: [
     // Add underground sewer labels here
   ],
@@ -128,5 +162,23 @@ export const mapLabels = {
   ],
   passages: [
     // Add underground passage labels here
+  ],
+  question: [ // Underground places that I haven't found an entrance for yet and I don't know what it's called. There may not be accessible from the overworld or at all.
+    // Region: Krythan Undergrounds
+    {
+      name: "Unknown Underground Place",
+      fontSize: 15,
+      region: "Krythan",
+      details: {
+        title: "Unknown Underground Place",
+        coordinates: { x: 214, y: 846 },
+        image: "",
+        lore: "More information about Unknown Underground Place is coming soon.",
+        information: "This is new as far as I know. I've tried putting my mouse over it above ground and seeing aroundabout where it is but couldn't find an entrance. If you know where this is or how to get there, please let me know.",
+        bonus: "",
+        npcs: [],
+        links: [],
+      },
+    },
   ],
 };

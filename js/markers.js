@@ -208,55 +208,55 @@ export const markerStyles = {
   },
 
   // s
-  overworld__stairs: {
+  overworld_stairs: {
     icon: "icons/3d-stairs.svg",
     color: "#d36517ff", // SaddleBrown
   },
-  overworld__ladder: {
+  overworld_ladder: {
     icon: "icons/ladder.svg",
     color: "#d36517ff", // SaddleBrown
   },
-  overworld__cave: {
+  overworld_cave: {
     icon: "icons/cave-entrance.svg",
     color: "#d36517ff", // SaddleBrown
   },
-  overworld__crypt: {
+  overworld_crypt: {
     icon: "icons/crypt-entrance.svg",
     color: "#d36517ff", // SaddleBrown
   },
-  overworld__dungeon: {
+  overworld_dungeon: {
     icon: "icons/dungeon-gate.svg",
     color: "#d36517ff", // SaddleBrown
   },
-  overworld__mine: {
+  overworld_mine: {
     icon: "icons/mine.svg",
     color: "#d36517ff", // SaddleBrown
   },
-  overworld__sewer: {
+  overworld_sewer: {
     icon: "icons/trash-can.svg",
     color: "#d36517ff", // SaddleBrown
   },
-  overworld__closed: {
+  overworld_closed: {
     icon: "icons/closed-door-tape.svg",
     color: "#d36517ff", // SaddleBrown
   },
-  overworld__ant: {
+  overworld_ant: {
     icon: "icons/ant.svg",
     color: "#d36517ff", // SaddleBrown
   },
-  overworld__scorpion: {
+  overworld_scorpion: {
     icon: "icons/scorpion.svg",
     color: "#d36517ff", // SaddleBrown
   },
-  overworld__spider: {
+  overworld_spider: {
     icon: "icons/long-legged-spider.svg",
     color: "#d36517ff", // SaddleBrown
   },
-  overworld__snake: {
+  overworld_snake: {
     icon: "icons/snake.svg",
     color: "#d36517ff", // SaddleBrown
   },
-  overworld__termigon: {
+  overworld_termigon: {
     icon: "icons/mite.svg",
     color: "#d36517ff", // SaddleBrown
   },
@@ -2240,6 +2240,21 @@ export const mapMarkers = {
     // City: Hothbra Innkeeper
 
     // City: Jeel Innkeeper
+    {
+      category: "npc",
+      type: "overworld_inn_keeper",
+      tooltip: "Jeel Innkeeper",
+      region: "Krythan",
+      place: "Jeel",
+      details: {
+        title: "Jeel Innkeeper",
+        coordinates: { x: 300, y: 858 },
+        image: "images/markers/Jeel_Innkeeper.png",
+        lore: "More information about Jeel Innkeeper is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // City: Lotor's Castle Innkeeper
     {
@@ -3607,6 +3622,21 @@ export const mapMarkers = {
     // City: Hothbra Town Guardians
 
     // City: Jeel Town Guardians
+    {
+      category: "npc",
+      type: "overworld_town_guardian",
+      tooltip: "Town Guardian (Jeel)",
+      region: "Krythan",
+      place: "Jeel",
+      details: {
+        title: "Town Guardian",
+        coordinates: { x: 330, y: 861 },
+        image: "images/markers/Jeel_Town_Guardian.png",
+        lore: "The Town Guardian in Jeel.",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // City: Lotor's Castle Town Guardians
 
@@ -4150,6 +4180,21 @@ export const mapMarkers = {
     // City: Hothbra Bank
 
     // City: Jeel Bank
+    {
+      category: "npc",
+      type: "overworld_bank",
+      tooltip: "Bank",
+      region: "Krythan",
+      place: "Jeel",
+      details: {
+        title: "Bank",
+        coordinates: { x: 280, y: 869 },
+        image: "images/markers/Jeel_Bank.png",
+        lore: "More information about Jeel Bank is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // City: Lotor's Castle Bank
 
@@ -5586,6 +5631,156 @@ export const mapMarkers = {
 
     // Region: Krythan Shops
     // City: Jeel Shops
+    {
+      category: "npc",
+      type: "overworld_shop_carpentry",
+      tooltip: "Caedmon's Capenter Shop",
+      region: "Krythan",
+      place: "Jeel",
+      details: {
+        title: "Caedmon's Capenter Shop",
+        coordinates: { x: 329, y: 846 },
+        image: "images/markers/Caedmon_Carpenter_Shop.png",
+        lore: "More information about Caedmon's Capenter Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_magic",
+      tooltip: "Candor's Magic Shop",
+      region: "Krythan",
+      place: "Jeel",
+      details: {
+        title: "Candor's Magic Shop",
+        coordinates: { x: 313, y: 829 },
+        image: "images/markers/Candor_Magic_Shop.png",
+        lore: "More information about Candor's Magic Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_weapon",
+      tooltip: "Tolar's Weapon Shop",
+      region: "Krythan",
+      place: "Jeel",
+      details: {
+        title: "Tolar's Weapon Shop",
+        coordinates: { x: 296, y: 840 },
+        image: "images/markers/Tolar_Weapon_Shop.png",
+        lore: "Tolar's sell armor and weapon goods.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_blacksmith",
+      tooltip: "Aelli's Blacksmith Shop",
+      region: "Krythan",
+      place: "Jeel",
+      details: {
+        title: "Aelli's Blacksmith Shop",
+        coordinates: { x: 299, y: 835 },
+        image: "images/markers/Aelli_Blacksmith_Shop.png",
+        lore: "More information about Aelli's Blacksmith Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_provisioner",
+      tooltip: "Merchant's Provisioner Shop",
+      region: "Krythan",
+      place: "Jeel",
+      details: {
+        title: "Merchant's Provisioner Shop",
+        coordinates: { x: 297, y: 835 },
+        image: "images/markers/Merchant_Provisioner_Shop.png",
+        lore: "More information about Merchant's Provisioner Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_pub",
+      tooltip: "Terry O'Doul's Pub",
+      region: "Krythan",
+      place: "Jeel",
+      details: {
+        title: "Terry O'Doul's Pub",
+        coordinates: { x: 291, y: 841 },
+        image: "images/markers/Terry_O_Doul_Pub.png",
+        lore: "More information about Terry O'Doul's Pub is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_shipyard",
+      tooltip: "Locket Kirchkin's Ship Yard",
+      region: "Krythan",
+      place: "Jeel",
+      details: {
+        title: "Locket Kirchkin's Ship Yard",
+        coordinates: { x: 275, y: 820 },
+        image: "images/markers/Locket_Kirchkin_Ship_Yard.png",
+        lore: "More information about Locket Kirchkin's Ship Yard is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_leather",
+      tooltip: "Archos' Leather Shop",
+      region: "Krythan",
+      place: "Jeel",
+      details: {
+        title: "Archos' Leather Shop",
+        coordinates: { x: 261, y: 846 },
+        image: "images/markers/Archos_Leather_Shop.png",
+        lore: "More information about Archos' Leather Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_provisioner",
+      tooltip: "Tondbert's Provisioner Shop",
+      region: "Krythan",
+      place: "Jeel",
+      details: {
+        title: "Tondbert's Provisioner Shop",
+        coordinates: { x: 262, y: 872 },
+        image: "images/markers/Tondbert_Provisioner_Shop.png",
+        lore: "More information about Tondbert's Provisioner Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_farming",
+      tooltip: "Osuald's Farming Shop",
+      region: "Krythan",
+      place: "Jeel",
+      details: {
+        title: "Osuald's Farming Shop",
+        coordinates: { x: 241, y: 882 },
+        image: "images/markers/Osuald_Farming_Shop.png",
+        lore: "More information about Osuald's Farming Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // City: Lotor's Castle Shops
     {
@@ -7218,6 +7413,21 @@ export const mapMarkers = {
     // City: Hothbra Spawns
 
     // City: Jeel Spawns
+    {
+      category: "spawn",
+      type: "overworld_spawn_good",
+      tooltip: "Good Spawn Gate",
+      region: "Krythan",
+      place: "Jeel",
+      details: {
+        title: "Good Spawn Gate",
+        coordinates: { x: 283, y: 857 },
+        image: "images/markers/Jeel_Spawn_Gate.png",
+        lore: "More information about Good Spawn Gate is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // City: Lotor's Castle Spawns
     {
@@ -7394,18 +7604,18 @@ export const mapMarkers = {
     // City: Khafra Side Spawns
   ],
 
-  s: [
+  undergrounds: [
     // Island: Valinor Island s
     // Region: Valinor s
     {
-      category: "",
-      type: "overworld__dungeon",
+      category: "undergrounds",
+      type: "overworld_dungeon",
       tooltip: "Frump's Lair",
       region: "Valinor",
       place: "Valinor",
       details: {
         title: "Frump's Lair",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 607, y: 357 },
         image: "images/markers/image_coming_soon.png",
@@ -7415,14 +7625,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__dungeon",
+      category: "undergrounds",
+      type: "overworld_dungeon",
       tooltip: "Bonesnarl's Lair",
       region: "Valinor",
       place: "Valinor",
       details: {
         title: "Bonesnarl's Lair",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 873, y: 309 }, //I need to verify this location
         image: "images/markers/image_coming_soon.png",
@@ -7433,14 +7643,14 @@ export const mapMarkers = {
     }, 
     // City: Valinor
     {
-      category: "",
-      type: "overworld__stairs",
+      category: "undergrounds",
+      type: "overworld_stairs",
       tooltip: "Stairs to Valinor Basement (Top Left)",
       region: "Valinor",
       place: "Valinor",
       details: {
         title: "Stairs to Valinor Basement",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 752, y: 97 },
         image: "images/markers/Valinor_Basement_Top_Left_Stairs.png",
@@ -7450,14 +7660,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__stairs",
+      category: "undergrounds",
+      type: "overworld_stairs",
       tooltip: "Stairs to Valinor Basement (Top Right)",
       region: "Valinor",
       place: "Valinor",
       details: {
         title: "Stairs to Valinor Basement",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 764, y: 97 },
         image: "images/markers/Valinor_Basement_Top_Right_Stairs.png",
@@ -7467,14 +7677,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__stairs",
+      category: "undergrounds",
+      type: "overworld_stairs",
       tooltip: "Stairs to Valinor Basement (Bottom Left)",
       region: "Valinor",
       place: "Valinor",
       details: {
         title: "Stairs to Valinor Basement",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 751, y: 127 },
         image: "images/markers/Valinor_Basement_Bottom_Right_Stairs.png",
@@ -7484,14 +7694,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__stairs",
+      category: "undergrounds",
+      type: "overworld_stairs",
       tooltip: "Stairs to Valinor Basement (Bottom Right)",
       region: "Valinor",
       place: "Valinor",
       details: {
         title: "Stairs to Valinor Basement",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 765, y: 127 },
         image: "images/markers/Valinor_Basement_Bottom_Left_Stairs.png",
@@ -7501,14 +7711,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__ladder",
+      category: "undergrounds",
+      type: "overworld_ladder",
       tooltip: "Ladder to Valinor Basement (Left)",
       region: "Valinor",
       place: "Valinor",
       details: {
         title: "Ladder to Valinor Basement",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 749, y: 154 },
         image: "images/markers/Valinor_Basement_Left_Ladder.png",
@@ -7518,14 +7728,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__ladder",
+      category: "undergrounds",
+      type: "overworld_ladder",
       tooltip: "Ladder to Valinor Basement (Right)",
       region: "Valinor",
       place: "Valinor",
       details: {
         title: "Ladder to Valinor Basement",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 767, y: 154 },
         image: "images/markers/Valinor_Basement_Right_Ladder.png",
@@ -7535,14 +7745,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__stairs",
+      category: "undergrounds",
+      type: "overworld_stairs",
       tooltip: "Stairs to Mage Trainers",
       region: "Valinor",
       place: "Valinor",
       details: {
         title: "Stairs to Mage Trainers",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 762, y: 117 },
         image: "images/markers/image_coming_soon.png",
@@ -7561,15 +7771,15 @@ export const mapMarkers = {
 
     // City: Jeel s
     {
-      category: "",
-      type: "overworld__ladder",
+      category: "undergrounds",
+      type: "overworld_ladder",
       tooltip: "Jeel Catacombs",
       region: "Krythan",
       place: "Jeel",
       details: {
         title: "Jeel Catacombs",
-        switchTo: "", // This will trigger the map switch
-        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 293, y: 833 }, // The coordinates to center on after switching
         coordinates: { x: 293, y: 833 },
         image: "images/markers/Jeel_Catacombs.png",
         lore: "More information about Jeel Catacombs is coming soon.",
@@ -7577,17 +7787,34 @@ export const mapMarkers = {
         links: [],
       },
     },
+    {
+      category: "undergrounds",
+      type: "overworld_ladder",
+      tooltip: "Krythan Crypt Entrance",
+      region: "Krythan",
+      place: "Krythan Crypt",
+      details: {
+        title: "Krythan Crypt",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 435, y: 851 }, // The coordinates to center on after switching
+        coordinates: { x: 435, y: 851 },
+        image: "images/markers/Krythan_Crypt.png",
+        lore: "More information about Krythan Crypt is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // City: Lotor's Castle s
     {
-      category: "",
-      type: "overworld__stairs",
+      category: "undergrounds",
+      type: "overworld_stairs",
       tooltip: "Lotor's Castle Arena Basement",
       region: "Krythan",
       place: "Lotor's Castle",
       details: {
         title: "Lotor's Castle Arena Basement",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 214, y: 1182 },
         image: "images/markers/Lotor_Castle_Arena_Basement.png",
@@ -7597,14 +7824,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__stairs",
+      category: "undergrounds",
+      type: "overworld_stairs",
       tooltip: "Lotor's Castle Arena Basement",
       region: "Krythan",
       place: "Lotor's Castle",
       details: {
         title: "Lotor's Castle Arena Basement",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 212, y: 1182 },
         image: "images/markers/Lotor_Castle_Arena_Basement.png",
@@ -7618,14 +7845,14 @@ export const mapMarkers = {
 
     // Region: Silvest Valley s
     {
-      category: "",
-      type: "overworld__snake",
+      category: "undergrounds",
+      type: "overworld_snake",
       tooltip: "Cultist Lair's ",
       region: "Silvest Valley",
       place: "Cultist Lair's ",
       details: {
         title: "Snake Pit",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 965, y: 1346 },
         image: "images/markers/image_coming_soon.png",
@@ -7635,14 +7862,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__snake",
+      category: "undergrounds",
+      type: "overworld_snake",
       tooltip: "Snake Pit",
       region: "Silvest Valley",
       place: "Silvest Valley",
       details: {
         title: "Snake Pit",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 965, y: 1346 },
         image: "images/markers/image_coming_soon.png",
@@ -7653,14 +7880,14 @@ export const mapMarkers = {
     },
     
     {
-      category: "",
-      type: "overworld__mine",
+      category: "undergrounds",
+      type: "overworld_mine",
       tooltip: "Cliffside Mines",
       region: "Silvest Valley",
       place: "Cliffside Pass",
       details: {
         title: "Cliffside Mines",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 1096, y: 1182 },
         image: "images/markers/image_coming_soon.png",
@@ -7670,14 +7897,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__stairs",
+      category: "undergrounds",
+      type: "overworld_stairs",
       tooltip: "Provisioner's Basement",
       region: "Silvest Valley",
       place: "Silvest",
       details: {
         title: "Provisioner's Basement",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 1122, y: 1361 },
         image: "images/markers/image_coming_soon.png",
@@ -7687,14 +7914,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__cave",
+      category: "undergrounds",
+      type: "overworld_cave",
       tooltip: "Galen's Hideout",
       region: "Silvest Valley",
       place: "Galen's Hideout",
       details: {
         title: "Provisioner's Basement",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 1303, y: 1111 },
         image: "images/markers/image_coming_soon.png",
@@ -7708,14 +7935,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__cave",
+      category: "undergrounds",
+      type: "overworld_cave",
       tooltip: "Sozal's Cave",
       region: "Silvest Valley",
       place: "Sozal's Cave",
       details: {
         title: "Provisioner's Basement",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 1125, y: 1154 },
         image: "images/markers/image_coming_soon.png",
@@ -7729,14 +7956,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__cave",
+      category: "undergrounds",
+      type: "overworld_cave",
       tooltip: "Kozak Cove's ",
       region: "Silvest Valley",
       place: "Kozak Cove",
       details: {
         title: "Kozak Cove's ",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 1377, y: 1105 },
         image: "images/markers/image_coming_soon.png",
@@ -7746,14 +7973,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__cave",
+      category: "undergrounds",
+      type: "overworld_cave",
       tooltip: "Sozal's Cave",
       region: "Silvest Valley",
       place: "Near Silvest Valley North Coast",
       details: {
         title: "Sozal's Cave",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 1161, y: 1175 },
         image: "images/markers/image_coming_soon.png",
@@ -7763,14 +7990,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__ladder",
+      category: "undergrounds",
+      type: "overworld_ladder",
       tooltip: "Entrance to Silvest Mine",
       region: "Silvest Valley",
       place: "Kobold Castle",
       details: {
         title: "Sozal's Cave",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 1291, y: 1121 },
         image: "images/markers/image_coming_soon.png",
@@ -7784,14 +8011,14 @@ export const mapMarkers = {
 
     // Region: Krythan s
     {
-      category: "",
-      type: "overworld__snake",
+      category: "undergrounds",
+      type: "overworld_snake",
       tooltip: "Krythan Crypt",
       region: "Krythan",
       place: "Krythan Cemetary",
       details: {
         title: "Krythan Crypt",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 905, y: 1029 },
         image: "images/markers/image_coming_soon.png",
@@ -7801,14 +8028,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__ladder",
+      category: "undergrounds",
+      type: "overworld_ladder",
       tooltip: "Gideon's Trapdoor",
       region: "Krythan",
       place: "Monk Island",
       details: {
         title: "Gideon's Trapdoor",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 508, y: 582 },
         image: "images/markers/image_coming_soon.png",
@@ -7818,14 +8045,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__ladder",
+      category: "undergrounds",
+      type: "overworld_ladder",
       tooltip: "Mirthik's  Passage",
       region: "Krythan",
       place: "Mirthik's  Passage",
       details: {
         title: "Gideon's Trapdoor",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 508, y: 607 },
         image: "images/markers/image_coming_soon.png",
@@ -7835,14 +8062,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__ladder",
+      category: "undergrounds",
+      type: "overworld_ladder",
       tooltip: "Mirthik's ",
       region: "Krythan",
       place: "Monk Island",
       details: {
         title: "Mirthik's ",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 503, y: 642 },
         image: "images/markers/image_coming_soon.png",
@@ -7852,14 +8079,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__snake",
+      category: "undergrounds",
+      type: "overworld_snake",
       tooltip: "Snake pit",
       region: "Krythan",
       place: "Krythan Fields",
       details: {
         title: "Snake pit",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 325, y: 740 },
         image: "images/markers/image_coming_soon.png",
@@ -7869,14 +8096,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__ladder",
+      category: "undergrounds",
+      type: "overworld_ladder",
       tooltip: "Holendar's Mansion Basement",
       region: "Krythan",
       place: "Krythan Fields",
       details: {
         title: "Holendar's Mansion Basement",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 818, y: 1042 },
         image: "images/markers/image_coming_soon.png",
@@ -7886,14 +8113,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__stairs",
+      category: "undergrounds",
+      type: "overworld_stairs",
       tooltip: "Trap Door to LSP",
       region: "Krythan",
       place: "Krythan Fields",
       details: {
         title: "Trap Door to LSP",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 779, y: 861 },
         image: "images/markers/image_coming_soon.png",
@@ -7903,14 +8130,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__ladder",
+      category: "undergrounds",
+      type: "overworld_ladder",
       tooltip: "Ladder to LSP Sewer (Away from evil spawn gate)",
       region: "Krythan",
       place: "Krythan Fields",
       details: {
         title: "Ladder to LSP Sewer (Away from evil spawn gate)",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 789, y: 916 },
         image: "images/markers/image_coming_soon.png",
@@ -7920,14 +8147,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__ladder",
+      category: "undergrounds",
+      type: "overworld_ladder",
       tooltip: "Orc Fort Tunnels",
       region: "Krythan",
       place: "Krythan Fields",
       details: {
         title: "Orc Fort Tunnels",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 792, y: 1574 },
         image: "images/markers/image_coming_soon.png",
@@ -7937,14 +8164,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__ladder",
+      category: "undergrounds",
+      type: "overworld_ladder",
       tooltip: "Orc Fort Tunnels",
       region: "Krythan",
       place: "Krythan Fields",
       details: {
         title: "Orc Fort Tunnels",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 753, y: 1538 },
         image: "images/markers/image_coming_soon.png",
@@ -7954,14 +8181,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__dungeon",
+      category: "undergrounds",
+      type: "overworld_dungeon",
       tooltip: "Talazarian Dungeon",
       region: "Krythan",
       place: "Krythan Fields",
       details: {
         title: "Talazarian Dungeon",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 361, y: 1463 },
         image: "images/markers/image_coming_soon.png",
@@ -7971,14 +8198,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__ladder",
+      category: "undergrounds",
+      type: "overworld_ladder",
       tooltip: "Krythan Swamp Backdoor",
       region: "Krythan",
       place: "South West Krythan",
       details: {
         title: "Krythan Swamp Backdoor",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 145, y: 1614 },
         image: "images/markers/image_coming_soon.png",
@@ -7988,14 +8215,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__ladder",
+      category: "undergrounds",
+      type: "overworld_ladder",
       tooltip: "Krythan Swamp Backdoor",
       region: "Krythan",
       place: "Krythan Swamp",
       details: {
         title: "Krythan Swamp Backdoor",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 119, y: 1640 },
         image: "images/markers/image_coming_soon.png",
@@ -8007,14 +8234,14 @@ export const mapMarkers = {
 
     // Island: Scarab Island s
     {
-      category: "",
-      type: "overworld__crypt",
+      category: "undergrounds",
+      type: "overworld_crypt",
       tooltip: "Lopal Crypt", // Something very strange about this crypt.
       region: "Western Isles",
       place: "Scarab Island",
       details: {
         title: "Lopal Crypt",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 271, y: 2200 },
         image: "images/markers/image_coming_soon.png",
@@ -8024,14 +8251,14 @@ export const mapMarkers = {
       },
     }, 
     {
-      category: "",
-      type: "overworld__mine",
+      category: "undergrounds",
+      type: "overworld_mine",
       tooltip: "Scarab Island Mine",
       region: "Western Isles",
       place: "Scarab Island",
       details: {
         title: "Scarab Island Mine",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 342, y: 2135 },
         image: "images/markers/image_coming_soon.png",
@@ -8041,14 +8268,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__ladder",
+      category: "undergrounds",
+      type: "overworld_ladder",
       tooltip: "Lopal Catacombs",
       region: "Western Isles",
       place: "Scarab Island",
       details: {
         title: "Lopal Catacombs",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 406, y: 2230 },
         image: "images/markers/image_coming_soon.png",
@@ -8060,14 +8287,14 @@ export const mapMarkers = {
 
     // Werewolf Island s
     {
-      category: "",
-      type: "overworld__cave",
+      category: "undergrounds",
+      type: "overworld_cave",
       tooltip: "Werewolf Cave",
       region: "Krythan",
       place: "Werewolf Island",
       details: {
         title: "Werewolf Cave",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 317, y: 2602 },
         image: "images/markers/image_coming_soon.png",
@@ -8077,14 +8304,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__stairs",
+      category: "undergrounds",
+      type: "overworld_stairs",
       tooltip: "Lycanth Crypt",
       region: "Krythan",
       place: "Werewolf Island",
       details: {
         title: "Lycanth Crypt",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 296, y: 2616 },
         image: "images/markers/image_coming_soon.png",
@@ -8098,14 +8325,14 @@ export const mapMarkers = {
 
     // Region: Darkwoods s
     {
-      category: "",
-      type: "overworld__spider",
+      category: "undergrounds",
+      type: "overworld_spider",
       tooltip: "Shadow Spider Cave",
       region: "Darkwoods",
       place: "Darkwoods",
       details: {
         title: "Shadow Spider Cave",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 1462, y: 2674 },
         image: "images/markers/image_coming_soon.png",
@@ -8115,14 +8342,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__cave",
+      category: "undergrounds",
+      type: "overworld_cave",
       tooltip: "Swamp Beast Cave",
       region: "Darkwoods",
       place: "Darkwoods",
       details: {
         title: "Swamp Beast Cave",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 1653, y: 2677 },
         image: "images/markers/image_coming_soon.png",
@@ -8132,14 +8359,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__cave",
+      category: "undergrounds",
+      type: "overworld_cave",
       tooltip: "Swamp Beast Cave",
       region: "Darkwoods",
       place: "Darkwoods",
       details: {
         title: "Swamp Beast Cave",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 1571, y: 2656 },
         image: "images/markers/image_coming_soon.png",
@@ -8149,14 +8376,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__scorpion",
+      category: "undergrounds",
+      type: "overworld_scorpion",
       tooltip: "Scorpion Pit",
       region: "Darkwoods",
       place: "Darkwoods",
       details: {
         title: "Scorpion Pit",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 836, y: 3268 },
         image: "images/markers/image_coming_soon.png",
@@ -8166,14 +8393,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__termigon",
+      category: "undergrounds",
+      type: "overworld_termigon",
       tooltip: "Termigon Pit",
       region: "Darkwoods",
       place: "Darkwoods",
       details: {
         title: "Termigon Pit",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 758, y: 3321 },
         image: "images/markers/image_coming_soon.png",
@@ -8183,14 +8410,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__mine",
+      category: "undergrounds",
+      type: "overworld_mine",
       tooltip: "South Astari Rune Shelter",
       region: "Darkwoods",
       place: "Darkwoods",
       details: {
         title: "South Astari Rune Shelter",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 798, y: 3334 },
         image: "images/markers/image_coming_soon.png",
@@ -8200,14 +8427,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__snake",
+      category: "undergrounds",
+      type: "overworld_snake",
       tooltip: "Whisperdale Snake Pit",
       region: "Darkwoods",
       place: "Darkwoods",
       details: {
         title: "Whisperdale Snake Pit",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 472, y: 3430 },
         image: "images/markers/image_coming_soon.png",
@@ -8217,14 +8444,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__ant",
+      category: "undergrounds",
+      type: "overworld_ant",
       tooltip: "Dunmarrow Fire Ant Pit",
       region: "Darkwoods",
       place: "Darkwoods",
       details: {
         title: "Dunmarrow Fire Ant Pit",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 1270, y: 3030 },
         image: "images/markers/image_coming_soon.png",
@@ -8234,14 +8461,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__crypt",
+      category: "undergrounds",
+      type: "overworld_crypt",
       tooltip: "McKelsky Crypt",
       region: "Darkwoods",
       place: "Darkwoods",
       details: {
         title: "McKelsky Crypt",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 1429, y: 3044 },
         image: "images/markers/image_coming_soon.png",
@@ -8251,14 +8478,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__dungeon",
+      category: "undergrounds",
+      type: "overworld_dungeon",
       tooltip: "Marsh Dungeon",
       region: "Darkwoods",
       place: "Darkwoods",
       details: {
         title: "Marsh Dungeon",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 481, y: 3505 },
         image: "images/markers/image_coming_soon.png",
@@ -8268,14 +8495,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__dungeon",
+      category: "undergrounds",
+      type: "overworld_dungeon",
       tooltip: "Cathedral of Joyous Afterlife (North Entrance)",
       region: "Darkwoods",
       place: "Darkwoods",
       details: {
         title: "Cathedral of Joyous Afterlife (North Entrance)",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 632, y: 3186 },
         image: "images/markers/image_coming_soon.png",
@@ -8285,14 +8512,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__dungeon",
+      category: "undergrounds",
+      type: "overworld_dungeon",
       tooltip: "Cathedral of Joyous Afterlife (South Entrance)",
       region: "Darkwoods",
       place: "Darkwoods",
       details: {
         title: "Cathedral of Joyous Afterlife (South Entrance)",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 679, y: 3318 },
         image: "images/markers/image_coming_soon.png",
@@ -8304,14 +8531,14 @@ export const mapMarkers = {
 
     // Region: Highlands s
     {
-      category: "",
-      type: "overworld__closed",
+      category: "undergrounds",
+      type: "overworld_closed",
       tooltip: "Cave (CLOSED)", // This was the former Astari Cave, which has since moved south.
       region: "Highlands",
       place: "Highlands",
       details: {
         title: "Cave (CLOSED)",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 3560, y: 1926 },
         image: "images/markers/image_coming_soon.png",
@@ -8321,14 +8548,14 @@ export const mapMarkers = {
       },
     }, 
     {
-      category: "",
-      type: "overworld__cave",
+      category: "undergrounds",
+      type: "overworld_cave",
       tooltip: "Zanock's Mine (East)", // This was the former Astari Cave, which has since moved south.
       region: "Highlands",
       place: "Zanock's Mine",
       details: {
         title: "Zanock's Mine (East)",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 3097, y: 2391 },
         image: "images/markers/Zanock_Mine_East.png",
@@ -8339,14 +8566,14 @@ export const mapMarkers = {
     },
     // Region: Valley of Giants 
     {
-      category: "",
-      type: "overworld__dungeon",
+      category: "undergrounds",
+      type: "overworld_dungeon",
       tooltip: "Arllandah's Lair", // This was the former Astari Cave, which has since moved south.
       region: "Highlands",
       place: "Highlands",
       details: {
         title: "Arllandah's Lair",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 3204, y: 2627 },
         image: "images/markers/Arllandah_Lair.png",
@@ -8357,14 +8584,14 @@ export const mapMarkers = {
     }, 
     // City: Darushk s
     {
-      category: "",
-      type: "overworld__mine",
+      category: "undergrounds",
+      type: "overworld_mine",
       tooltip: "Darushk Entrance",
       region: "Highlands",
       place: "Highlands",
       details: {
         title: "Darushk Entrance",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 3745, y: 2711 },
         image: "images/markers/Darushk_Entrance.png",
@@ -8374,14 +8601,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__mine",
+      category: "undergrounds",
+      type: "overworld_mine",
       tooltip: "Darushk Mine",
       region: "Highlands",
       place: "Highlands",
       details: {
         title: "Darushk Mine",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 3601, y: 2773 },
         image: "images/markers/Darushk_Mine.png",
@@ -8392,14 +8619,14 @@ export const mapMarkers = {
     },
     // City: Parian s
     {
-      category: "",
-      type: "overworld__ladder",
+      category: "undergrounds",
+      type: "overworld_ladder",
       tooltip: "West Entrance to Parian Tunnels", // Name found in in-game book
       region: "Highlands",
       place: "Highlands",
       details: {
         title: "West Entrance to Parian Tunnels",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 3449, y: 3036 },
         image: "images/markers/image_coming_soon.png",
@@ -8409,14 +8636,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__ladder",
+      category: "undergrounds",
+      type: "overworld_ladder",
       tooltip: "East Entrance to Parian Tunnels", // Name found in in-game book
       region: "Highlands",
       place: "Highlands",
       details: {
         title: "East Entrance to Parian Tunnels",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 3506, y: 3026 },
         image: "images/markers/image_coming_soon.png",
@@ -8430,14 +8657,14 @@ export const mapMarkers = {
 
     // City: Grell s
     {
-      category: "",
-      type: "overworld__ladder",
+      category: "undergrounds",
+      type: "overworld_ladder",
       tooltip: "Grell Entrance<br><small>(Ctrl+Click for details)</small>",
       region: "Highlands",
       place: "Grell",
       details: {
         title: "Grell Entrance",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 2918, y: 3365 }, // The coordinates to center on after switching
         coordinates: { x: 3240, y: 3607 },
         image: "images/markers/Grell_Entrance.png",
@@ -8447,14 +8674,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__ladder",
+      category: "undergrounds",
+      type: "overworld_ladder",
       tooltip: "Grell Tunnels",
       region: "Highlands",
       place: "Highlands",
       details: {
         title: "Grell Tunnels",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 3334, y: 3594 },
         image: "images/markers/image_coming_soon.png",
@@ -8464,14 +8691,14 @@ export const mapMarkers = {
       },
     }, 
     {
-      category: "",
-      type: "overworld__ladder",
+      category: "undergrounds",
+      type: "overworld_ladder",
       tooltip: "Badlands Entrance",
       region: "Highlands",
       place: "Highlands",
       details: {
         title: "Badlands Entrance",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2708, y: 2886 },
         image: "images/markers/image_coming_soon.png",
@@ -8481,14 +8708,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__cave",
+      category: "undergrounds",
+      type: "overworld_cave",
       tooltip: "Vel Dran Cave",
       region: "Highlands",
       place: "Highlands",
       details: {
         title: "Vel Dran Cave",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 3286, y: 3299 },
         image: "images/markers/Vel_Dran_Cave.png",
@@ -8500,14 +8727,14 @@ export const mapMarkers = {
 
     // City: Ethera Palace
     {
-      category: "",
-      type: "overworld__mine",
+      category: "undergrounds",
+      type: "overworld_mine",
       tooltip: "Ethera Mine",
       region: "Highlands",
       place: "Highlands",
       details: {
         title: "Ethera Mine",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 3623, y: 3596 },
         image: "images/markers/Ethera_Mine.png",
@@ -8517,14 +8744,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__mine",
+      category: "undergrounds",
+      type: "overworld_mine",
       tooltip: "Ethera Mine",
       region: "Highlands",
       place: "Highlands",
       details: {
         title: "Ethera Mine",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 3655, y: 3620 },
         image: "images/markers/Ethera_Mine_Second.png",
@@ -8539,7 +8766,7 @@ export const mapMarkers = {
     // Necropolis s
     {
       category: "",
-      type: "overworld__stairs",
+      type: "overworld_stairs",
       tooltip:
         "Trap Door to Necropolis Magic and Farm Shops (They do not work)",
       region: "Darkwoods",
@@ -8558,7 +8785,7 @@ export const mapMarkers = {
     },
     {
       category: "",
-      type: "overworld__ladder",
+      type: "overworld_ladder",
       tooltip: "Ladder to inside Necropolis",
       region: "Darkwoods",
       place: "Necropolis",
@@ -8578,7 +8805,7 @@ export const mapMarkers = {
     
     {
       category: "",
-      type: "overworld__cave",
+      type: "overworld_cave",
       tooltip: "Badlands Cave",
       region: "Battle Plains",
       place: "Battle Plains",
@@ -8595,7 +8822,7 @@ export const mapMarkers = {
     },
     {
       category: "",
-      type: "overworld__stairs",
+      type: "overworld_stairs",
       tooltip: "Chlera Catacombs",
       region: "Battle Plains",
       place: "Chlera",
@@ -8612,7 +8839,7 @@ export const mapMarkers = {
     },
     {
       category: "",
-      type: "overworld__cave",
+      type: "overworld_cave",
       tooltip: "Desprail Cave",
       region: "Battle Plains",
       place: "Battle Plains",
@@ -8629,7 +8856,7 @@ export const mapMarkers = {
     },
     {
       category: "",
-      type: "overworld__cave",
+      type: "overworld_cave",
       tooltip: "Badlands Cave",
       region: "Battle Plains",
       place: "Battle Plains",
@@ -8646,7 +8873,7 @@ export const mapMarkers = {
     },
     {
       category: "",
-      type: "overworld__dungeon",
+      type: "overworld_dungeon",
       tooltip: "Deep Shadow Temple",
       region: "Battle Plains",
       place: "Battle Plains",
@@ -8663,7 +8890,7 @@ export const mapMarkers = {
     },
     {
       category: "",
-      type: "overworld__cave",
+      type: "overworld_cave",
       tooltip: "Fungoid Cave",
       region: "Battle Plains",
       place: "Battle Plains",
@@ -8682,7 +8909,7 @@ export const mapMarkers = {
     // Region: Black Swamp s
     {
       category: "",
-      type: "overworld__snake",
+      type: "overworld_snake",
       tooltip: "Krog Snake Pit",
       region: "Black Swamp",
       place: "Krog",
@@ -8699,7 +8926,7 @@ export const mapMarkers = {
     },
     {
       category: "",
-      type: "overworld__sewer",
+      type: "overworld_sewer",
       tooltip: "Krog Sewer",
       region: "Black Swamp",
       place: "Black Swamp",
@@ -8716,7 +8943,7 @@ export const mapMarkers = {
     },
     {
       category: "",
-      type: "overworld__sewer",
+      type: "overworld_sewer",
       tooltip: "Krog Sewer",
       region: "Black Swamp",
       place: "Black Swamp",
@@ -8733,7 +8960,7 @@ export const mapMarkers = {
     },
     {
       category: "",
-      type: "overworld__crypt",
+      type: "overworld_crypt",
       tooltip: "Drakkan Crypt",
       region: "Black Swamp",
       place: "Black Swamp",
@@ -8750,7 +8977,7 @@ export const mapMarkers = {
     },
     {
       category: "",
-      type: "overworld__sewer",
+      type: "overworld_sewer",
       tooltip: "Waste Tunnels",
       region: "Black Swamp",
       place: "Black Swamp",
@@ -8767,7 +8994,7 @@ export const mapMarkers = {
     },
     {
       category: "",
-      type: "overworld__ant",
+      type: "overworld_ant",
       tooltip: "Ant Hill",
       region: "Black Swamp",
       place: "Black Swamp",
@@ -8784,7 +9011,7 @@ export const mapMarkers = {
     },
     {
       category: "",
-      type: "overworld__scorpion",
+      type: "overworld_scorpion",
       tooltip: "Scorpion",
       region: "Black Swamp",
       place: "Black Swamp",
@@ -8801,7 +9028,7 @@ export const mapMarkers = {
     },
     {
       category: "",
-      type: "overworld__dungeon",
+      type: "overworld_dungeon",
       tooltip: "Valekar's Fortress Dungeon",
       region: "Black Swamp",
       place: "Black Swamp",
@@ -8825,14 +9052,14 @@ export const mapMarkers = {
 
      // Island: Hell s
     {
-      category: "",
-      type: "overworld__dungeon",
+      category: "undergrounds",
+      type: "overworld_dungeon",
       tooltip: "Lotorian Dungeon",
       region: "Western Isles",
       place: "Hell",
       details: {
         title: "Lotorian Dungeon",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 1207, y: 3347 },
         image: "images/markers/image_coming_soon.png",
@@ -8842,14 +9069,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__cave",
+      category: "undergrounds",
+      type: "overworld_cave",
       tooltip: "The Den of Baylor",
       region: "Western Isles",
       place: "Hell",
       details: {
         title: "The Den of Baylor",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 1125, y: 3392 },
         image: "images/markers/image_coming_soon.png",
@@ -8859,14 +9086,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__cave",
+      category: "undergrounds",
+      type: "overworld_cave",
       tooltip: "Horned One Cave",
       region: "Western Isles",
       place: "Hell",
       details: {
         title: "Horned One Cave",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 1306, y: 3384 },
         image: "images/markers/image_coming_soon.png",
@@ -8878,14 +9105,14 @@ export const mapMarkers = {
 
     // Island: Lotor's Summer Palace s
     {
-      category: "",
-      type: "overworld__stairs",
+      category: "undergrounds",
+      type: "overworld_stairs",
       tooltip: "Sewer Entrance",
       region: "Western Isles",
       place: "Lotor's Summer Palace",
       details: {
         title: "Sewer Entrance",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 763, y: 751 },
         image: "images/markers/image_coming_soon.png",
@@ -8895,14 +9122,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__stairs",
+      category: "undergrounds",
+      type: "overworld_stairs",
       tooltip: "Leather and Armory Shop Basement",
       region: "Western Isles",
       place: "Lotor's Summer Palace",
       details: {
         title: "Leather and Armory Shop Basement",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 797, y: 704 },
         image: "images/markers/image_coming_soon.png",
@@ -8912,14 +9139,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__stairs",
+      category: "undergrounds",
+      type: "overworld_stairs",
       tooltip: "Shadow Temple South Entrance",
       region: "Western Isles",
       place: "Western Isles",
       details: {
         title: "Shadow Temple South Entrance",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2109, y: 2764 },
         image: "images/markers/image_coming_soon.png",
@@ -8932,14 +9159,14 @@ export const mapMarkers = {
 
     // Region: Heartwood Coast s
     {
-      category: "",
-      type: "overworld__crypt",
+      category: "undergrounds",
+      type: "overworld_crypt",
       tooltip: "Gnobol Mauseleum Crypt",
       region: "Heartwood Coast",
       place: "Gnobol Mauseleum",
       details: {
         title: "Gnobol Mauseleum Crypt",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 3078, y: 1606 },
         image: "images/markers/image_coming_soon.png",
@@ -8949,14 +9176,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__cave",
+      category: "undergrounds",
+      type: "overworld_cave",
       tooltip: "Syldural",
       region: "Heartwood Coast",
       place: "Syldural Cave",
       details: {
         title: "Syldural",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 3272, y: 1632 },
         image: "images/markers/image_coming_soon.png",
@@ -8966,14 +9193,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__cave",
+      category: "undergrounds",
+      type: "overworld_cave",
       tooltip: "Zanock's Mine (West)",
       region: "Heartwood Coast",
       place: "Zanock's Mine",
       details: {
         title: "Zanock's Mine (West)",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2871, y: 2359 },
         image: "images/markers/Zanock_Mine_West.png",
@@ -8983,14 +9210,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__snake",
+      category: "undergrounds",
+      type: "overworld_snake",
       tooltip: "Valmond Skeleton Pit",
       region: "Heartwood Coast",
       place: "Valmond",
       details: {
         title: "Valmond Skeleton Pit",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 3191, y: 1880 },
         image: "images/markers/image_coming_soon.png",
@@ -9002,14 +9229,14 @@ export const mapMarkers = {
 
     // Region: Tundria Region s
     {
-      category: "",
-      type: "overworld__cave",
+      category: "undergrounds",
+      type: "overworld_cave",
       tooltip: "Icebane's Cavern Entrance",
       region: "Tundria",
       place: "Tundria",
       details: {
         title: "Icebane's Cavern Entrance",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2304, y: 1367 },
         image: "images/markers/image_coming_soon.png",
@@ -9019,14 +9246,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__crypt",
+      category: "undergrounds",
+      type: "overworld_crypt",
       tooltip: "Maroven Crypt",
       region: "Tundria",
       place: "Tundria",
       details: {
         title: "Maroven Crypt",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2040, y: 1392 },
         image: "images/markers/image_coming_soon.png",
@@ -9036,14 +9263,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__crypt",
+      category: "undergrounds",
+      type: "overworld_crypt",
       tooltip: "Maroven Crypt",
       region: "Tundria",
       place: "Maroven",
       details: {
         title: "Maroven Crypt",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 1990, y: 1208 },
         image: "images/markers/image_coming_soon.png",
@@ -9053,14 +9280,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__dungeon",
+      category: "undergrounds",
+      type: "overworld_dungeon",
       tooltip: "Hammerfist Mine Entrance",
       region: "Tundria",
       place: "Tundria",
       details: {
         title: "Hammerfist Mine Entrance",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2776, y: 598 },
         image: "images/markers/image_coming_soon.png",
@@ -9070,14 +9297,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__cave",
+      category: "undergrounds",
+      type: "overworld_cave",
       tooltip: "Web Spinner Spider Cave",
       region: "Tundria",
       place: "Tundria",
       details: {
         title: "Web Spinner Spider Cave",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2872, y: 963 },
         image: "images/markers/image_coming_soon.png",
@@ -9087,14 +9314,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__crypt",
+      category: "undergrounds",
+      type: "overworld_crypt",
       tooltip: "Duremar Tomb",
       region: "Tundria",
       place: "Tundria",
       details: {
         title: "Duremar Tomb",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 3524, y: 1263 },
         image: "images/markers/image_coming_soon.png",
@@ -9104,14 +9331,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__crypt",
+      category: "undergrounds",
+      type: "overworld_crypt",
       tooltip: "Unknown Crypt", // A Crypt with Greater Skeletons
       region: "Tundria",
       place: "Tundria",
       details: {
         title: "Unknown Crypt",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 3783, y: 985 },
         image: "images/markers/image_coming_soon.png",
@@ -9121,14 +9348,14 @@ export const mapMarkers = {
       },
     }, 
     {
-      category: "",
-      type: "overworld__dungeon",
+      category: "undergrounds",
+      type: "overworld_dungeon",
       tooltip: "Frieda's Dungeon",
       region: "Tundria",
       place: "Tundria",
       details: {
         title: "Frieda's Dungeon",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2550, y: 438 },
         image: "images/markers/image_coming_soon.png",
@@ -9138,14 +9365,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__dungeon",
+      category: "undergrounds",
+      type: "overworld_dungeon",
       tooltip: "Artraxis Dungeon",
       region: "Tundria",
       place: "Tundria",
       details: {
         title: "Artraxis Dungeon",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2887, y: 425 },
         image: "images/markers/image_coming_soon.png",
@@ -9155,14 +9382,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__dungeon",
+      category: "undergrounds",
+      type: "overworld_dungeon",
       tooltip: "Darok the Banished's Jail",
       region: "Tundria",
       place: "Tundria",
       details: {
         title: "Artraxis Dungeon",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2919, y: 408 },
         image: "images/markers/image_coming_soon.png",
@@ -9172,14 +9399,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__dungeon",
+      category: "undergrounds",
+      type: "overworld_dungeon",
       tooltip: "Darok the Banished's Jail",
       region: "Tundria",
       place: "Tundria",
       details: {
         title: "Artraxis Dungeon",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2895, y: 442 },
         image: "images/markers/image_coming_soon.png",
@@ -9189,14 +9416,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__dungeon",
+      category: "undergrounds",
+      type: "overworld_dungeon",
       tooltip: "Trapdoor to Hammerfist Mine",
       region: "Tundria",
       place: "Tundria Northeast Coast",
       details: {
         title: "Artraxis Dungeon",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2837, y: 612 },
         image: "images/markers/image_coming_soon.png",
@@ -9211,14 +9438,14 @@ export const mapMarkers = {
     // Region: Sands of Creation 
     // City: Ruhura Side s
     {
-      category: "",
-      type: "overworld__cave",
+      category: "undergrounds",
+      type: "overworld_cave",
       tooltip: "Ruhura Elemental Cave",
       region: "Sands of Creation",
       place: "Ruhura",
       details: {
         title: "Ruhura Elemental Cave",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 544, y: 3837 },
         image: "images/markers/image_coming_soon.png",
@@ -9228,14 +9455,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__ladder",
+      category: "undergrounds",
+      type: "overworld_ladder",
       tooltip: "Artonian Pass to Ruhura Side",
       region: "Sands of Creation",
       place: "Ruhura",
       details: {
         title: "Artonian Pass to Ruhura Side",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 307, y: 3908 },
         image: "images/markers/image_coming_soon.png",
@@ -9245,14 +9472,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__ladder",
+      category: "undergrounds",
+      type: "overworld_ladder",
       tooltip: "Artonian Pass to Greater Dragon Island",
       region: "Sands of Creation",
       place: "Ruhura",
       details: {
         title: "Artonian Pass to Greater Dragon Island",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 400, y: 3792 },
         image: "images/markers/image_coming_soon.png",
@@ -9262,14 +9489,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__cave",
+      category: "undergrounds",
+      type: "overworld_cave",
       tooltip: "Elemental Cave",
       region: "Sands of Creation",
       place: "Ruhura",
       details: {
         title: "Elemental Cave",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 453, y: 3717 },
         image: "images/markers/image_coming_soon.png",
@@ -9279,14 +9506,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__dungeon",
+      category: "undergrounds",
+      type: "overworld_dungeon",
       tooltip: "Mukarramma Dungeon",
       region: "Sands of Creation",
       place: "Ruhura",
       details: {
         title: "Mukarramma Dungeon",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 949, y: 4005 },
         image: "images/markers/image_coming_soon.png",
@@ -9298,14 +9525,14 @@ export const mapMarkers = {
 
     // Island: Greater Dragon Island s
     {
-      category: "",
-      type: "overworld__cave",
+      category: "undergrounds",
+      type: "overworld_cave",
       tooltip: "Greater Dragon Island Cave",
       region: "Sands of Creation",
       place: "Greater Dragon Island",
       details: {
         title: "Greater Dragon Island Cave",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 300, y: 3772 },
         image: "images/markers/image_coming_soon.png",
@@ -9317,14 +9544,14 @@ export const mapMarkers = {
 
     // City: Khafra Side s
     {
-      category: "",
-      type: "overworld__cave",
+      category: "undergrounds",
+      type: "overworld_cave",
       tooltip: "Khafra Elemental Cave",
       region: "Sands of Creation",
       place: "Khafra",
       details: {
         title: "Khafra Elemental Cave",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 78, y: 3354 },
         image: "images/markers/image_coming_soon.png",
@@ -9337,14 +9564,14 @@ export const mapMarkers = {
     // Region: Breakwater s
     // City: New Town Island s
     {
-      category: "",
-      type: "overworld__crypt",
+      category: "undergrounds",
+      type: "overworld_crypt",
       tooltip: "Darkwing's Lair Entrance",
       region: "Breakwater",
       place: "New Town Island",
       details: {
         title: "Darkwing's Lair Entrance",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 1944, y: 1695 },
         image: "images/markers/image_coming_soon.png",
@@ -9354,14 +9581,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__dungeon",
+      category: "undergrounds",
+      type: "overworld_dungeon",
       tooltip: "Cyclops and Lion Cave", // I was thinking of changing the name to New Town Mine but haven't found any info on that
       region: "Breakwater",
       place: "New Town Island",
       details: {
         title: "Cyclops and Lion Cave",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2038, y: 1832 },
         image: "images/markers/image_coming_soon.png",
@@ -9371,14 +9598,14 @@ export const mapMarkers = {
       },
     }, 
     {
-      category: "",
-      type: "overworld__mine",
+      category: "undergrounds",
+      type: "overworld_mine",
       tooltip: "Zule's Cave Entrance",
       region: "Breakwater",
       place: "New Town Island",
       details: {
         title: "Zule's Cave Entrance",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2174, y: 1517 },
         image: "images/markers/image_coming_soon.png",
@@ -9390,14 +9617,14 @@ export const mapMarkers = {
 
     // City: Roycroft Island s
     {
-      category: "",
-      type: "overworld__stairs",
+      category: "undergrounds",
+      type: "overworld_stairs",
       tooltip: "Son of Scalo's Hideout",
       region: "Breakwater",
       place: "Roycroft Island",
       details: {
         title: "Son of Scalo's Hideout",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2215, y: 2260 },
         image: "images/markers/image_coming_soon.png",
@@ -9407,14 +9634,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__stairs",
+      category: "undergrounds",
+      type: "overworld_stairs",
       tooltip: "Warehouse Basement",
       region: "Breakwater",
       place: "Roycroft Island",
       details: {
         title: "Warehouse Basement",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2458, y: 2357 },
         image: "images/markers/image_coming_soon.png",
@@ -9424,14 +9651,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__stairs",
+      category: "undergrounds",
+      type: "overworld_stairs",
       tooltip: " Pass to Northern Roycroft Island",
       region: "Breakwater",
       place: "Roycroft Island",
       details: {
         title: " Pass to Northern Roycroft Island",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2310, y: 2198 },
         image: "images/markers/image_coming_soon.png",
@@ -9441,14 +9668,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__stairs",
+      category: "undergrounds",
+      type: "overworld_stairs",
       tooltip: " Pass to Southern Roycroft Island",
       region: "Breakwater",
       place: "Roycroft Island",
       details: {
         title: " Pass to Southern Roycroft Island",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2310, y: 2184 },
         image: "images/markers/image_coming_soon.png",
@@ -9462,14 +9689,14 @@ export const mapMarkers = {
 
     // Region: Broken Finger s
     {
-      category: "",
-      type: "overworld__dungeon",
+      category: "undergrounds",
+      type: "overworld_dungeon",
       tooltip: "Broken Finger Dungeon",
       region: "Broken Finger",
       place: "Broken Finger",
       details: {
         title: "Broken Finger Dungeon",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 1143, y: 3658 },
         image: "images/markers/image_coming_soon.png",
@@ -9479,14 +9706,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__stairs",
+      category: "undergrounds",
+      type: "overworld_stairs",
       tooltip: "Trap Door to Gulley Portal ",
       region: "Broken Finger",
       place: "Broken Finger",
       details: {
         title: "Trap Door to Gulley Portal ",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 1292, y: 3714 },
         image: "images/markers/image_coming_soon.png",
@@ -9496,14 +9723,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
-      type: "overworld__stairs",
+      category: "undergrounds",
+      type: "overworld_stairs",
       tooltip: "Entrance to Horned Ones Cave",
       region: "Broken Finger",
       place: "Broken Finger",
       details: {
         title: "Entrance to Horned Ones Cave",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 1212, y: 3557 },
         image: "images/markers/image_coming_soon.png",

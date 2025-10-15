@@ -44,6 +44,10 @@ export const undergroundMarkerStyles = {
     icon: "icons/ladder.svg",
     color: "#d36517ff", // SaddleBrown
   },
+  underworld_crypt: {
+    icon: "icons/crypt-entrance.svg",
+    color: "#d36517ff", // SaddleBrown
+  },
 };
 /**
  * This file contains the marker data specifically for the underground map.
@@ -111,6 +115,49 @@ export const undergroundMapMarkers = {
     
   ],
   undergrounds: [
+    // Region: Valinor Undergrounds
+
+    // Region: Silvest Valley Undergrounds
+
+    // Region: Krythan Undergrounds
+    {
+      category: "underground",
+      type: "underworld_ladder",
+      tooltip: "Jeel Catacombs Exit<br><small>(Ctrl+Click for details)</small>",
+      region: "Krythan",
+      place: "Jeel Catacombs",
+      details: {
+        title: "Jeel Catacombs Exit",
+        switchTo: "overworld",
+        flyTo: { x: 300, y: 858 },        
+        coordinates: { x: 293, y: 833 },// The coordinates for the Ladder inside the Jeel Catacombs underground area.
+        image: "images/markers/Jeel_Catacombs_Ladder_Exit.png",
+        lore: "Exit to Jeel above Jeel Catacombs.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "underground",
+      type: "underworld_crypt",
+      tooltip: "Krythan Crypt Exit<br><small>(Ctrl+Click for details)</small>",
+      region: "Krythan",
+      place: "Krythan Crypt",
+      details: {
+        title: "Krythan Crypt Exit",
+        switchTo: "overworld",
+        flyTo: { x: 300, y: 858 },        
+        coordinates: { x: 435, y: 851 },// The coordinates for the Ladder inside the Jeel Catacombs underground area.
+        image: "images/markers/Krythan_Crypt_Ladder_Exit.png",
+        lore: "Exit to Krythan above Krythan Crypt.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // Region: Darkwoods Undergrounds
+
+
     // Region: Highlands Undergrounds
     // Grell Tunnels
     {
@@ -122,8 +169,7 @@ export const undergroundMapMarkers = {
       details: {
         title: "Grell Exit",
         switchTo: "overworld",
-        flyTo: { x: 3240, y: 3607 },
-        // The coordinates for the Ladder inside the Grell Tunnels underground area.
+        flyTo: { x: 3240, y: 3607 },// The coordinates for the Ladder inside the Grell Tunnels underground area.
         coordinates: { x: 2918, y: 3365 },
         image: "images/markers/Grell_Ladder_Exit.png",
         lore: "Exit to Highlands above Grell.",
