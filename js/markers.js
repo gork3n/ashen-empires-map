@@ -869,6 +869,21 @@ export const mapMarkers = {
     },
 
     // Region: Black Swamp Portals
+    {
+      category: "portals",
+      type: "overworld_portal_lsp",
+      tooltip: "Portal to Lotor's Summer Palace",
+      region: "Black Swamp",
+      place: "Krog",
+      details: {
+        title: "Portal to Lotor's Summer Palace",
+        coordinates: { x: 3110, y: 3686 },
+        image: "images/markers/image_coming_soon.png",
+        lore: "More information about Portal to Lotor's Summer Palace is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // Region: Highlands Portals    
     {
@@ -4374,6 +4389,21 @@ export const mapMarkers = {
     // Region: Battle Plains Bank
 
     // Region: Black Swamp Bank
+    {
+      category: "npc",
+      type: "overworld_bank",
+      tooltip: "Bank",
+      region: "Black Swamp",
+      place: "Krog",
+      details: {
+        title: "Bank",
+        coordinates: { x: 3104, y: 3765 },
+        image: "images/markers/Krog_Bank.png",
+        lore: "More information about Bank is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // Region: Highlands Bank
     // City: Parian Bank
@@ -5263,14 +5293,14 @@ export const mapMarkers = {
     {
       category: "npc",
       type: "overworld_shop_weapon",
-      tooltip: "Micheal Vonda's Weapon Shop",
+      tooltip: "Micheal Vonda's Weaponry Shop",
       region: "Valinor",
       place: "Valinor",
       details: {
-        title: "Micheal Vonda's Weapon Shop",
+        title: "Micheal Vonda's Weaponry Shop",
         coordinates: { x: 737, y: 119 },
         image: "images/markers/image_coming_soon.png",
-        lore: "More information about Micheal Vonda's Weapon Shop is coming soon.",
+        lore: "More information about Micheal Vonda's Weaponry Shop is coming soon.",
         npcs: [],
         links: [],
       },
@@ -5453,14 +5483,14 @@ export const mapMarkers = {
     {
       category: "npc",
       type: "overworld_shop_weapon",
-      tooltip: "Bertwald's Weapon Shop",
+      tooltip: "Bertwald's Weaponry Shop",
       region: "Silvest Valley",
       place: "Silvest",
       details: {
         title: "Docale's Pub",
         coordinates: { x: 1137, y: 1370 },
         image: "images/markers/Bertwald_Weapon_Shop.png",
-        lore: "More information about Bertwald's Weapon Shop is coming soon.",
+        lore: "More information about Bertwald's Weaponry Shop is coming soon.",
         npcs: [],
         links: [],
       },
@@ -5475,7 +5505,7 @@ export const mapMarkers = {
         title: "Docale's Pub",
         coordinates: { x: 1119, y: 1381 },
         image: "images/markers/Oswyn_Armory_Shop.png",
-        lore: "More information about Bertwald's Weapon Shop is coming soon.",
+        lore: "More information about Bertwald's Weaponry Shop is coming soon.",
         npcs: [],
         links: [],
       },
@@ -5591,14 +5621,14 @@ export const mapMarkers = {
     {
       category: "npc",
       type: "overworld_shop_weapon",
-      tooltip: "Sgt. Stykler's Weapon Shop",
+      tooltip: "Sgt. Stykler's Weaponry Shop",
       region: "Silvest Valley",
       place: "Fort Eastwatch",
       details: {
-        title: "Sgt. Stykler's Weapon Shop",
+        title: "Sgt. Stykler's Weaponry Shop",
         coordinates: { x: 1356, y: 1299 },
         image: "images/markers/Sgt_Stykler_Weapon_Shop.png",
-        lore: "More information about Sgt. Stykler's Weapon Shop is coming soon.",
+        lore: "More information about Sgt. Stykler's Weaponry Shop is coming soon.",
         npcs: [],
         links: [],
       },
@@ -5684,11 +5714,11 @@ export const mapMarkers = {
     {
       category: "npc",
       type: "overworld_shop_weapon",
-      tooltip: "Tolar's Weapon Shop",
+      tooltip: "Tolar's Weaponry Shop",
       region: "Krythan",
       place: "Jeel",
       details: {
-        title: "Tolar's Weapon Shop",
+        title: "Tolar's Weaponry Shop",
         coordinates: { x: 297, y: 841 },
         image: "images/markers/Tolar_Weapon_Shop.png",
         lore: "Tolar's sell armor and weapon goods.",
@@ -6269,20 +6299,185 @@ export const mapMarkers = {
     // Region: Battle Plains Shops
 
     // Region: Black Swamp Shops
+    {
+      category: "npc",
+      type: "overworld_shop_armory",
+      tooltip: "Batuk's Armory Shop",
+      region: "Black Swamp",
+      place: "Krog",
+      details: {
+        title: "Batuk's Armory Shop",
+        coordinates: { x: 3143, y: 3752 },
+        image: "images/markers/Batuk_Armory_Shop.png",
+        lore: "More information about Batuk's Armory Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_leather",
+      tooltip: "Gorn's Leather Shop",
+      region: "Black Swamp",
+      place: "Krog",
+      details: {
+        title: "Gorn's Leather Shop",
+        coordinates: { x: 3162, y: 3753 },
+        image: "images/markers/Gorn_Leather_Shop.png",
+        lore: "More information about Gorn's Leather Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_farming",
+      tooltip: "Vrriga's Farming Shop",
+      region: "Black Swamp",
+      place: "Krog",
+      details: {
+        title: "Vrriga's Farming Shop",
+        coordinates: { x: 3145, y: 3781 },
+        image: "images/markers/Vrriga_Farming_Shop.png",
+        lore: "More information about Vrriga's Farming Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_magic",
+      tooltip: "Savu's Magic Shop",
+      region: "Black Swamp",
+      place: "Krog",
+      details: {
+        title: "Savu's Magic Shop",
+        coordinates: { x: 3121, y: 3768 },
+        image: "images/markers/Savu_Magic_Shop.png",
+        lore: "More information about Savu's Magic Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_magic",
+      tooltip: "Fragak's Weaponry Shop",
+      region: "Black Swamp",
+      place: "Krog",
+      details: {
+        title: "Fragak's Weaponry Shop",
+        coordinates: { x: 3121, y: 3768 },
+        image: "images/markers/Fragak_Weaponry_Shop.png",
+        lore: "More information about Fragak's Weaponry Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_weapon",
+      tooltip: "Fragak's Weaponry Shop",
+      region: "Black Swamp",
+      place: "Krog",
+      details: {
+        title: "Fragak's Weaponry Shop",
+        coordinates: { x: 3129, y: 3784 },
+        image: "images/markers/Fragak_Weaponry_Shop.png",
+        lore: "More information about Fragak's Weaponry Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_jewelry",
+      tooltip: "Mongo Rark's Jewelry Shop",
+      region: "Black Swamp",
+      place: "Krog",
+      details: {
+        title: "Mongo Rark's Jewelry Shop",
+        coordinates: { x: 3135, y: 3780 },
+        image: "images/markers/Mongo_Rark_Jewelry_Shop.png",
+        lore: "More information about Mongo Rark's Jewelry Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_armory",
+      tooltip: "Kronav's Armory Shop",
+      region: "Black Swamp",
+      place: "Krog",
+      details: {
+        title: "Kronav's Armory Shop",
+        coordinates: { x: 3122, y: 3792 },
+        image: "images/markers/Kronav_Armory_Shop.png",
+        lore: "More information about Kronav's Armory Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_pub",
+      tooltip: "Kornak's Pub",
+      region: "Black Swamp",
+      place: "Krog",
+      details: {
+        title: "Kornak's Pub",
+        coordinates: { x: 3116, y: 3805 },
+        image: "images/markers/Kornak_Pub.png",
+        lore: "More information about Kornak's Pub is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_provisioner",
+      tooltip: "Drakan's Provisioner Shop",
+      region: "Black Swamp",
+      place: "Krog",
+      details: {
+        title: "Drakan's Provisioner Shop",
+        coordinates: { x: 3092, y: 3789 },
+        image: "images/markers/Drakan_Provisioner_Shop.png",
+        lore: "More information about Drakan's Provisioner Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_carpentry",
+      tooltip: "Jarra's Carpentry Shop",
+      region: "Black Swamp",
+      place: "Krog",
+      details: {
+        title: "Jarra's Carpentry Shop",
+        coordinates: { x: 3081, y: 3785 },
+        image: "images/markers/Jarra_Carpentry_Shop.png",
+        lore: "More information about Jarra's Carpentry Shop is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // Region: Highlands Shops
     // City: Parian Shops
     {
       category: "npc",
       type: "overworld_shop_weapon",
-      tooltip: "Rhonidd's Weapon Shop",
+      tooltip: "Rhonidd's Weaponry Shop",
       region: "Highlands",
       place: "Parian",
       details: {
-        title: "Rhonidd's Weapon Shop",
+        title: "Rhonidd's Weaponry Shop",
         coordinates: { x: 3473, y: 3073 },
         image: "images/markers/Rohnidd_Weapon_Shop.png",
-        lore: "More information about Rhonidd's Weapon Shop is coming soon.",
+        lore: "More information about Rhonidd's Weaponry Shop is coming soon.",
         npcs: [],
         links: [],
       },
@@ -6545,14 +6740,14 @@ export const mapMarkers = {
     {
       category: "npc",
       type: "overworld_shop_weapon",
-      tooltip: "Hailey Brown's Weapon Shop",
+      tooltip: "Hailey Brown's Weaponry Shop",
       region: "Highlands",
       place: "Parian",
       details: {
-        title: "Hailey Brown's Weapon Shop",
+        title: "Hailey Brown's Weaponry Shop",
         coordinates: { x: 3442, y: 2983 },
         image: "images/markers/Hailey_Brown_Weapon_Shop.png",
-        lore: "More information about Hailey Brown's Weapon Shop is coming soon.",
+        lore: "More information about Hailey Brown's Weaponry Shop is coming soon.",
         npcs: [],
         links: [],
       },
@@ -6590,14 +6785,14 @@ export const mapMarkers = {
     {
       category: "npc",
       type: "overworld_shop_weapon",
-      tooltip: "Ereld's Weapon Shop",
+      tooltip: "Ereld's Weaponry Shop",
       region: "Highlands",
       place: "Parian",
       details: {
-        title: "Ereld's Weapon Shop",
+        title: "Ereld's Weaponry Shop",
         coordinates: { x: 3425, y: 2960 },
         image: "images/markers/Ereld_Weapon_Shop.png",
-        lore: "More information about Ereld's Weapon Shop is coming soon.",
+        lore: "More information about Ereld's Weaponry Shop is coming soon.",
         npcs: [],
         links: [],
       },
@@ -6607,14 +6802,14 @@ export const mapMarkers = {
     {
       category: "npc",
       type: "overworld_shop_weapon",
-      tooltip: "Kedalel's Weapon Shop",
+      tooltip: "Kedalel's Weaponry Shop",
       region: "Highlands",
       place: "Arda",
       details: {
-        title: "Kedalel's Weapon Shop",
+        title: "Kedalel's Weaponry Shop",
         coordinates: { x: 3405, y: 3491 },
         image: "images/markers/Kedalel_Weapon_Shop.png",
-        lore: "More information about Kedalel's Weapon Shop is coming soon.",
+        lore: "More information about Kedalel's Weaponry Shop is coming soon.",
         npcs: [],
         links: [],
       },
@@ -6622,14 +6817,14 @@ export const mapMarkers = {
     {
       category: "npc",
       type: "overworld_shop_weapon",
-      tooltip: "Adie's Weapon Shop",
+      tooltip: "Adie's Weaponry Shop",
       region: "Highlands",
       place: "Arda",
       details: {
-        title: "Adie's Weapon Shop",
+        title: "Adie's Weaponry Shop",
         coordinates: { x: 3401, y: 3495 },
         image: "images/markers/Adie_Weapon_Shop.png",
-        lore: "More information about Adie's Weapon Shop is coming soon.",
+        lore: "More information about Adie's Weaponry Shop is coming soon.",
         npcs: [],
         links: [],
       },
@@ -6868,14 +7063,14 @@ export const mapMarkers = {
     {
       category: "npc",
       type: "overworld_shop_weapon",
-      tooltip: "Lothannon's Weapon Shop",
+      tooltip: "Lothannon's Weaponry Shop",
       region: "Highlands",
       place: "Ethera Palace",
       details: {
-        title: "Lothannon's Weapon Shop",
+        title: "Lothannon's Weaponry Shop",
         coordinates: { x: 3525, y: 3708 },
         image: "images/markers/Lothannon_Weapon_Shop.png",
-        lore: "More information about Lothannon's Weapon Shop is coming soon.",
+        lore: "More information about Lothannon's Weaponry Shop is coming soon.",
         npcs: [],
         links: [],
       },
@@ -6911,7 +7106,7 @@ export const mapMarkers = {
       },
     },
 
-    // Region: Black Swamps Shops
+    // Region: Black Swamp Shops
     
     // Region: Western Isles Shops
     // Island: Lotor's Summer Palace Shops
@@ -6922,8 +7117,8 @@ export const mapMarkers = {
       region: "Western Isles",
       place: "Lotor's Summer Palace",
       details: {
-        title: "O'riles Weapon Shop",
-        coordinates: { x: 810, y: 674 },
+        title: "O'riles Weaponry Shop",
+        coordinates: { x: 810, y: 673 },
         image: "images/markers/Oriles_Weaponry_Shop.png",
         lore: "More information about O'riles Weaponry Shop is coming soon.",
         npcs: [],
@@ -7528,6 +7723,26 @@ export const mapMarkers = {
     // City: Autumn Spawns
 
     // City: Whisperdale Spawns
+
+    // Region: Battle Plains Spawns
+
+    // Region: Black Swamp Spawns
+    // City: Krog Spawns
+    {
+      category: "spawn",
+      type: "overworld_spawn_good",
+      tooltip: "Good Spawn Gate",
+      region: "Black Swamp",
+      place: "Krog",
+      details: {
+        title: "Good Spawn Gate",
+        coordinates: { x: 3095, y: 3754 },
+        image: "images/markers/Krog_Spawn_Gate.png",
+        lore: "More information about Krog Good Spawn Gate is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
 
 
     // Region: Highlands Spawns

@@ -276,7 +276,7 @@ function initializeMap() {
     // --- Set Initial Map View ---
     // Define the center of the map using in-game (4096x4096) coordinates.
     // This makes it easy to change the starting location.
-    const initialCenterGameCoords = { x: 280, y: 869, }; // Default View is { x: 776, y: 668, } (Showing Lotor's Summer Palace) Centers LSP on smaller screens.
+    const initialCenterGameCoords = { x: 3143, y: 3752, }; // Default View is { x: 776, y: 668, } (Showing Lotor's Summer Palace) Centers LSP on smaller screens.
 
     const mapSize = 32768;
     const scaleFactor = mapSize / 4096; // New scaling factor
@@ -1117,10 +1117,18 @@ function addMarkerFeature(source, x, y, type, tooltip, details, place, region) {
     const mapSize = 32768;
     const scaleFactor = mapSize / 4096;
 
-    // To center the marker in the 8x8 pixel block, we find the top-left corner (x * 8)
-    // and add half the block size (4). Then we subtract 1 pixel as requested.
-    const scaledX = (x * scaleFactor) - (scaleFactor / 2);
-    const olY = -(y * scaleFactor) + (scaleFactor / 2);
+    // The coordinate system is 1-based. Subtract 1 to get a 0-based index.
+    // Then, add 0.5 to the index before scaling to get the center of the pixel block.
+    const correctedX = x - 1;
+    let correctedY = y - 1;
+
+    // An additional pixel shift occurs on the Y-axis after coordinate 2807.
+    // The input 'y' is 1-based, so we check against 2807.
+    if (y > 2807) {
+        correctedY -= 1; // Shift up by 1 game pixel to account for the missing row
+    }
+    const scaledX = (correctedX + 0.5) * scaleFactor;
+    const olY = -(correctedY + 0.5) * scaleFactor;
     const coordinates = [scaledX, olY];
     
     // Create a feature for the marker
@@ -1273,10 +1281,18 @@ function addLabelFeature(source, x, y, text, fontSize, category, details) {
     const mapSize = 32768;
     const scaleFactor = mapSize / 4096;
 
-    // To center the label in the 8x8 pixel block, we find the top-left corner (x * 8)
-    // and add half the block size (4). Then we subtract 1 pixel as requested.
-    const scaledX = (x * scaleFactor) - (scaleFactor / 2);
-    const olY = -(y * scaleFactor) + (scaleFactor / 2);
+    // The coordinate system is 1-based. Subtract 1 to get a 0-based index.
+    // Then, add 0.5 to the index before scaling to get the center of the pixel block.
+    const correctedX = x - 1;
+    let correctedY = y - 1;
+
+    // An additional pixel shift occurs on the Y-axis after coordinate 2807.
+    // The input 'y' is 1-based, so we check against 2807.
+    if (y > 2807) {
+        correctedY -= 1; // Shift up by 1 game pixel to account for the missing row
+    }
+    const scaledX = (correctedX + 0.5) * scaleFactor;
+    const olY = -(correctedY + 0.5) * scaleFactor;
     
     // Create a point feature at this location
     const feature = new Feature({
@@ -1585,8 +1601,8 @@ function initializeCoordinateDisplay() {
         map.on('pointerdown', function(evt) {
             const coord = evt.coordinate;
             if (coord) {
-                lastX = Math.floor(coord[0] / scaleFactor);
-                lastY = Math.floor(-coord[1] / scaleFactor);
+                lastX = Math.floor(coord[0] / scaleFactor) + 1;
+                lastY = Math.floor(-coord[1] / scaleFactor) + 1;
                 updateDisplay();
             }
         });
@@ -1595,8 +1611,12 @@ function initializeCoordinateDisplay() {
         map.on('pointermove', function(evt) {
             const coord = evt.coordinate;
             if (coord) {
-                const newX = Math.floor(coord[0] / scaleFactor);
-                const newY = Math.floor(-coord[1] / scaleFactor);
+                const newX = Math.floor(coord[0] / scaleFactor) + 1;
+                let newY = Math.floor(-coord[1] / scaleFactor) + 1;
+                // If the calculated Y is at or after the missing row, add 1 to compensate.
+                if (newY >= 2807) {
+                    newY += 1;
+                }
                 if (newX !== lastX || newY !== lastY) {
                     lastX = newX;
                     lastY = newY;

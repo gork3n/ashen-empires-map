@@ -36,6 +36,7 @@ This section is migrated from the main README to consolidate all planning detail
   - ✅ **Coordinate Centering Correction**: A bulk coordinate correction has been applied to all markers and labels, adding an offset to center them perfectly within their scaled pixel blocks. This fixed a systemic issue where markers were anchored to the top-left corner of their coordinate space instead of the center.
   - 🚧 With the centering correction in place, the process of manually verifying each individual marker against its precise in-game location is now underway. This will correct any remaining inaccuracies from initial visual estimations.
   - ✅ **Refactor Complete:** All data has been consolidated into `markers.js` and `labels.js`. The `detail-maps.js` file has been eliminated. This improves data locality and makes it easier to manage and search.
+  - 🚧 **Pixel Shift Investigation**: Actively investigating the source of a minor, systemic pixel shift affecting some coordinates. Once identified, a targeted correction will be applied to resolve the discrepancy.
     - Each marker and label object would contain its own `details`, `region`, and `place` information.
     - `region`: The major geographical area (e.g., "Krythan", "Tundria").
     - `place`: The specific named location where the marker is found. This could be a city ("Valinor"), a dungeon ("Kylian's Lair"), a building, or a general area ("East Krythan Fields").
@@ -94,6 +95,11 @@ This section is migrated from the main README to consolidate all planning detail
 - ⬜ **Code Quality & Documentation**
   - ⬜ **Code Cleanup**: Remove temporary testing logic, and refactor any unused or redundant code to improve maintainability.
   - ⬜ **Demo & Documentation Site**: Create a dedicated site to showcase different implementation examples (e.g., standalone, embedded) and provide comprehensive documentation on how to use different map tile versions (e.g., no-scale, 4x scale, 8x scale) and integrate the map into various projects.
+
+- ⬜ **Map Image & Coordinate System Finalization**
+  - ⬜ Re-stitch the map tiles to re-introduce the missing `Y: 2807` coordinate row.
+  - ⬜ Re-stitch the map tiles to correct the one-pixel offset, allowing the coordinate system to revert to a true `(0,0)` origin.
+  - ⬜ Once the map image is finalized, remove the corresponding logical workarounds in `js/map.js` for the `1-based` system and the `Y: 2807` skip.
 
 ---
 

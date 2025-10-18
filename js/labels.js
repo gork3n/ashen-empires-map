@@ -567,11 +567,11 @@ export const mapLabels = {
     },
     {
       name: "Krog",
-      fontSize: 30,
+      fontSize: 35,
       region: "Black Swamp",
       details: {
         title: "Krog",
-        coordinates: { x: 3114, y: 3709 },
+        coordinates: { x: 3075, y: 3717 },
         image: "",
         lore: "More information about Krog is coming soon.",
         information: "",
