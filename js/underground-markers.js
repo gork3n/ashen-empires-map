@@ -48,6 +48,10 @@ export const undergroundMarkerStyles = {
     icon: "icons/crypt-entrance.svg",
     color: "#d36517ff", // SaddleBrown
   },
+  underworld_well: {
+    icon: "icons/well.svg",
+    color: "#d36517ff", // SaddleBrown
+  },
 };
 /**
  * This file contains the marker data specifically for the underground map.

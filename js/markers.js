@@ -207,7 +207,7 @@ export const markerStyles = {
     color: "#9370DB", // MediumPurple
   },
 
-  // s
+  // Underground Entrances
   overworld_stairs: {
     icon: "icons/3d-stairs.svg",
     color: "#d36517ff", // SaddleBrown
@@ -258,6 +258,10 @@ export const markerStyles = {
   },
   overworld_termigon: {
     icon: "icons/mite.svg",
+    color: "#d36517ff", // SaddleBrown
+  },
+  overworld_well: {
+    icon: "icons/well.svg",
     color: "#d36517ff", // SaddleBrown
   },
 };
@@ -315,7 +319,7 @@ export const mapMarkers = {
       },
     },
     //Done
-    // Island: Krythan Island Portals
+
     // Region: Silvest Valley Portals
 
     // Region: Krythan Portals
@@ -2004,7 +2008,91 @@ export const mapMarkers = {
       },
     },
 
-    // Region: Highlands
+    // Region: Battle Plains Quests
+
+    // Region: Black Swamp Quests
+    // City: Krog Quests
+    {
+      category: "npc",
+      type: "overworld_quest",
+      tooltip: "Targon",
+      region: "Black Swamp",
+      place: "Krog",
+      details: {
+        title: "Targon",
+        coordinates: { x: 3076, y: 3763 },
+        image: "images/markers/Targon_Quest.png",
+        lore: "Targon is a quest-giving NPC located in Krog.",
+        npcs: [],
+        quests: [
+          { "name": "Patron Quests", "url": "https://ashenempires.fandom.com/wiki/Patron_Quests#Krog" },
+          { "name": "Tomato Quest", "url": "https://ashenempires.fandom.com/wiki/Tomato_Quest" }
+        ],
+        links: [], 
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_quest",
+      tooltip: "Ambassador to Krog",
+      region: "Black Swamp",
+      place: "Krog",
+      details: {
+        title: "Ambassador to Krog",
+        coordinates: { x: 3074, y: 3765 },
+        image: "images/markers/Ambassador_to_Krog_Quest.png",
+        lore: "Ambassador to Krog is part of the Krog / Arda Quest.",
+        npcs: [],
+        links: [{ text: "Ashen Empires Wiki (Krog / Arda Quest)", url: "https://ashenempires.fandom.com/wiki/Krog_/_Arda_Quest" }], 
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_quest",
+      tooltip: "Alchemist Singaford",
+      region: "Black Swamp",
+      place: "Krog",
+      details: {
+        title: "Alchemist Singaford",
+        coordinates: { x: 3080, y: 3765 },
+        image: "images/markers/Alchemist_Singaford_Quest.png",
+        lore: "Alchemist Singaford is part of the Afflicted Tree Quest.",
+        npcs: [],
+        links: [{ text: "Ashen Empires Wiki (Afflicted Tree Quest)", url: "https://ashenempires.fandom.com/wiki/Afflicted_Tree" }], 
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_quest",
+      tooltip: "Warrog",
+      region: "Black Swamp",
+      place: "Krog",
+      details: {
+        title: "Warrog",
+        coordinates: { x: 3080, y: 3765 },
+        image: "images/markers/Warrog_Quest.png",
+        lore: "Warrog is part of the Warrog Quest.",
+        npcs: [],
+        links: [{ text: "Ashen Empires Wiki (Warrog Quest)", url: "https://ashenempires.fandom.com/wiki/Warrog" }], 
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_quest",
+      tooltip: "Ivogur",
+      region: "Black Swamp",
+      place: "Krog",
+      details: {
+        title: "Ivogur",
+        coordinates: { x: 3131, y: 3798 },
+        image: "images/markers/Ivogur_Quest.png",
+        lore: "Ivogur is part of the Ivogur Quest.",
+        npcs: [],
+        links: [{ text: "Ashen Empires Wiki (Ivogur Quest)", url: "https://ashenempires.fandom.com/wiki/Ivogur" }], 
+      },
+    },
+
+    // Region: Highlands Quests
     // City: Parian Quests
     {
       category: "npc",
@@ -3447,6 +3535,21 @@ export const mapMarkers = {
         coordinates: { x: 3072, y: 3766 },
         image: "images/markers/Krog_Mage_of_Lotor.png",
         lore: "Mage of Lotor is a key NPC in the Black Swamp region (Legacy Cloak).",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_information_npc",
+      tooltip: "Rabak",
+      region: "Black Swamp",
+      place: "Krog",
+      details: {
+        title: "Rabak",
+        coordinates: { x: 3079, y: 3769 },
+        image: "images/markers/Krog_Rabak.png",
+        lore: "Rabak region information.",
         npcs: [],
         links: [],
       },
@@ -6405,6 +6508,7 @@ export const mapMarkers = {
     // Region: Battle Plains Shops
 
     // Region: Black Swamp Shops
+    // City: Krog Shops
     {
       category: "npc",
       type: "overworld_shop_armory",
@@ -6576,6 +6680,38 @@ export const mapMarkers = {
         coordinates: { x: 3081, y: 3785 },
         image: "images/markers/Jarra_Carpentry_Shop.png",
         lore: "More information about Jarra's Carpentry Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_scrolls",
+      tooltip: "Riqa's Scroll Shop",
+      region: "Black Swamp",
+      place: "Krog",
+      details: {
+        title: "Riqa's Scroll Shop",
+        coordinates: { x: 3095, y: 3804 },
+        image: "images/markers/Riqa_Scroll_Shop.png",
+        lore: "More information about Riqa's Scroll Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_armory",
+      tooltip: "Lady of Krog's Alliance Shop",
+      region: "Black Swamp",
+      place: "Krog",
+      details: {
+        title: "Lady of Krog's Alliance Shop",
+        coordinates: { x: 3074, y: 3762 },
+        image: "images/markers/Lady_of_Krog_Alliance_Shop.png",
+        lore: "More information about Lady of Krog's Alliance Shop is coming soon.",
         currency: "gold",
         npcs: [],
         links: [],
@@ -9397,7 +9533,7 @@ export const mapMarkers = {
     },
     {
       category: "",
-      type: "overworld_sewer",
+      type: "overworld_well",
       tooltip: "Waste Tunnels",
       region: "Black Swamp",
       place: "Black Swamp",

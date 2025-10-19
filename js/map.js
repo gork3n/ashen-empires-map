@@ -691,6 +691,15 @@ function populateAndShowFlyout(data) {
         textHtml += '</ul>';
     }
 
+    // Quests (New Section)
+    if (details.quests && details.quests.length > 0) {
+        textHtml += '<h4>Quests</h4><ul>';
+        details.quests.forEach(quest => {
+            textHtml += `<li><a href="${quest.url}" target="_blank" rel="noopener noreferrer">${quest.name}</a></li>`;
+        });
+        textHtml += '</ul>';
+    }
+
     // Links
     if (details.links && details.links.length > 0) {
         textHtml += '<h4>External Links</h4><ul>';

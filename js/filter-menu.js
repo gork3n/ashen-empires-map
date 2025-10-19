@@ -54,19 +54,20 @@ const markerTypeNames = {
     'overworld_spawn_evil': "Evil Spawns",
 
     // Overworld Undergrounds
-    'overworld_underground_stairs': "Stairs",
-    'overworld_underground_ladder': "Ladders",
-    'overworld_underground_cave': "Caves",
-    'overworld_underground_crypt': "Crypts",
-    'overworld_underground_dungeon': "Dungeons",
-    'overworld_underground_mine': "Mines",
-    'overworld_underground_sewer': "Sewers",
-    'overworld_underground_closed': "Closed Entrances",
-    'overworld_underground_ant': "Ant Hills",
-    'overworld_underground_scorpion': "Scorpion Pits",
-    'overworld_underground_spider': "Spider Caves",
-    'overworld_underground_snake': "Snake Pits",
-    'overworld_underground_termigon': "Termigon Nests",
+    'overworld_stairs': "Stairs",
+    'overworld_ladder': "Ladders",
+    'overworld_cave': "Caves",
+    'overworld_crypt': "Crypts",
+    'overworld_dungeon': "Dungeons",
+    'overworld_mine': "Mines",
+    'overworld_sewer': "Sewers",
+    'overworld_closed': "Closed Entrances",
+    'overworld_ant': "Ant Hills",
+    'overworld_scorpion': "Scorpion Pits",
+    'overworld_spider': "Spider Caves",
+    'overworld_snake': "Snake Pits",
+    'overworld_termigon': "Termigon Nests",
+    'overworld_well': "Wells",
 
     // Underground Markers
     'underworld_portal_ancient': "Ancient Portals",
@@ -77,6 +78,7 @@ const markerTypeNames = {
     'underworld_bank': "Banks",
     'underworld_stairs': "Stairs",
     'underworld_ladder': "Ladders",
+    'underworld_crypt': "Crypts",
 };
 
 /**
@@ -356,7 +358,7 @@ function createMarkerToggleButtons() {
         { id: 'shops', name: 'Shops', type: 'category_shop' },
         { id: 'services_npcs', name: 'Other Services & NPCs' }, // Removed type to hide header icon
         { id: 'spawns', name: 'Spawns', type: 'category_spawn' },
-        { id: 'undergrounds', name: 'Undergrounds', type: 'category_underground' },
+        { id: 'undergrounds', name: 'Underground Entrances', type: 'category_underground' },
         
     ];
 
