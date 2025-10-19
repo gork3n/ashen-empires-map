@@ -1117,16 +1117,9 @@ function addMarkerFeature(source, x, y, type, tooltip, details, place, region) {
     const mapSize = 32768;
     const scaleFactor = mapSize / 4096;
 
-    // The coordinate system is 1-based. Subtract 1 to get a 0-based index.
-    // Then, add 0.5 to the index before scaling to get the center of the pixel block.
-    const correctedX = x - 1;
-    let correctedY = y - 1;
-
-    // An additional pixel shift occurs on the Y-axis after coordinate 2807.
-    // The input 'y' is 1-based, so we check against 2807.
-    if (y > 2807) {
-        correctedY -= 1; // Shift up by 1 game pixel to account for the missing row
-    }
+    // Apply a global offset to correct for tile alignment and add 0.5 to center the marker.
+    const correctedX = x - 2;
+    const correctedY = y - 2;
     const scaledX = (correctedX + 0.5) * scaleFactor;
     const olY = -(correctedY + 0.5) * scaleFactor;
     const coordinates = [scaledX, olY];
@@ -1281,16 +1274,9 @@ function addLabelFeature(source, x, y, text, fontSize, category, details) {
     const mapSize = 32768;
     const scaleFactor = mapSize / 4096;
 
-    // The coordinate system is 1-based. Subtract 1 to get a 0-based index.
-    // Then, add 0.5 to the index before scaling to get the center of the pixel block.
-    const correctedX = x - 1;
-    let correctedY = y - 1;
-
-    // An additional pixel shift occurs on the Y-axis after coordinate 2807.
-    // The input 'y' is 1-based, so we check against 2807.
-    if (y > 2807) {
-        correctedY -= 1; // Shift up by 1 game pixel to account for the missing row
-    }
+    // Apply a global offset to correct for tile alignment and add 0.5 to center the label.
+    const correctedX = x - 2;
+    const correctedY = y - 2;
     const scaledX = (correctedX + 0.5) * scaleFactor;
     const olY = -(correctedY + 0.5) * scaleFactor;
     
@@ -1611,12 +1597,9 @@ function initializeCoordinateDisplay() {
         map.on('pointermove', function(evt) {
             const coord = evt.coordinate;
             if (coord) {
-                const newX = Math.floor(coord[0] / scaleFactor) + 1;
-                let newY = Math.floor(-coord[1] / scaleFactor) + 1;
-                // If the calculated Y is at or after the missing row, add 1 to compensate.
-                if (newY >= 2807) {
-                    newY += 1;
-                }
+                // Apply the reverse of the global offset to get the correct display coordinate.
+                const newX = Math.floor(coord[0] / scaleFactor) + 2;
+                const newY = Math.floor(-coord[1] / scaleFactor) + 2;
                 if (newX !== lastX || newY !== lastY) {
                     lastX = newX;
                     lastY = newY;

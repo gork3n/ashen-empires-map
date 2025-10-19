@@ -714,7 +714,7 @@ export const mapMarkers = {
 
     /* Mainland Portals */
 
-    // Darkwoods Portals
+    // Region: Darkwoods Portals
     {
       category: "portals",
       type: "overworld_portal_blue",
@@ -821,7 +821,7 @@ export const mapMarkers = {
       },
     },
 
-    // Battle Plains Portals
+    // Region: Battle Plains Portals
     {
       category: "portals",
       type: "overworld_portal_small",
@@ -963,7 +963,7 @@ export const mapMarkers = {
       },
     },
 
-    // Western Isles Portals
+    // Region: Western Isles Portals
 
     // Island: Lotor's Prison
     {
@@ -1016,7 +1016,7 @@ export const mapMarkers = {
 
     // Region: Valley of Giants Portals
 
-    // Heartwood Coast Portals
+    // Region: Heartwood Coast Portals
     {
       category: "portals",
       type: "overworld_portal_lsp",
@@ -2245,10 +2245,9 @@ export const mapMarkers = {
     // Add more quests NPCs as needed
 
     // Sub-Category Innkeepers
-    // Island: Valinor Island Innkeeper
+    // Region: Valinor Innkeeper
 
-    // Island: Krythan Island Innkeeper
-    // Region: Silvest Valley Innkeeper
+    // Region: Silvest Valley Innkeeper    
 
     // Region: Krythan Innkeeper
     // City: Varg Innkeeper
@@ -2572,7 +2571,7 @@ export const mapMarkers = {
 
     /* Mainland Docks */
 
-    // Darkwoods Docks
+    // Region: Darkwoods Docks
     {
       category: "dock",
       type: "overworld_dock",
@@ -2606,18 +2605,18 @@ export const mapMarkers = {
     {
       category: "dock",
       type: "overworld_dock",
-      tooltip: "Dragoon Dock",
+      tooltip: "Dragoon Dock", // Just gave it a name, not sure if it's correct
       region: "Darkwoods",
       place: "Darkwoods",
       details: {
         title: "Dragoon Dock",
-        coordinates: { x: 403, y: 3221 },
+        coordinates: { x: 403, y: 3221 }, 
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Dragoon Dock is coming soon.",
         npcs: [],
         links: [],
       },
-    }, // Just gave it a name, not sure if it's correct
+    }, 
     {
       category: "dock",
       type: "overworld_dock",
@@ -2641,13 +2640,13 @@ export const mapMarkers = {
       place: "Darkwoods",
       details: {
         title: "Darkfell Dock",
-        coordinates: { x: 912, y: 3121 },
+        coordinates: { x: 912, y: 3121 }, // This is the ruins next to Dunmarrow Dock but I'm not sure what it's called Question
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Darkfell Dock is coming soon.",
         npcs: [],
         links: [],
       },
-    }, // This is the ruins next to Dunmarrow Dock but I'm not sure what it's called Question
+    }, 
     {
       category: "dock",
       type: "overworld_dock",
@@ -2664,7 +2663,7 @@ export const mapMarkers = {
       },
     },
 
-    // Battle Plains Docks
+    // Region: Battle Plains Docks
     {
       category: "dock",
       type: "overworld_dock",
@@ -2673,13 +2672,13 @@ export const mapMarkers = {
       place: "Battle Plains",
       details: {
         title: "Wandering Spirit Dock",
-        coordinates: { x: 2010, y: 2633 },
+        coordinates: { x: 2010, y: 2633 }, // This is above Shadow Temple Entrance I'm not sure what the ruins are called Question
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Wandering Spirit Dock is coming soon.",
         npcs: [],
         links: [],
       },
-    }, // This is above Shadow Temple Entrance I'm not sure what the ruins are called Question
+    }, 
     {
       category: "dock",
       type: "overworld_dock",
@@ -2726,7 +2725,7 @@ export const mapMarkers = {
       },
     },
 
-    // Black Swamp Docks
+    // Region: Black Swamp Docks
     {
       category: "dock",
       type: "overworld_dock",
@@ -2743,7 +2742,7 @@ export const mapMarkers = {
       },
     },
 
-    // Highlands Docks
+    // Region: Highlands Docks
     {
       category: "dock",
       type: "overworld_dock",
@@ -2820,7 +2819,7 @@ export const mapMarkers = {
       },
     },
 
-    // Western Isles Docks
+    // Region: Western Isles Docks
     {
       category: "dock",
       type: "overworld_dock",
@@ -2840,7 +2839,7 @@ export const mapMarkers = {
     // Region: Valley of Giants Docks
     // No Docks here to see
 
-    // Heartwood Coast Docks
+    // Region: Heartwood Coast Docks
     {
       category: "dock",
       type: "overworld_dock",
@@ -3393,7 +3392,6 @@ export const mapMarkers = {
 
 
     // Sub-Category Information
-    // Valinor Island Information
     // Region: Valinor
     // City: Valinor
     {
@@ -3412,7 +3410,7 @@ export const mapMarkers = {
       },
     },
 
-    // Region: Krythan Information
+    
 
     // Region: Silvest Valley Information
     {
@@ -3424,12 +3422,51 @@ export const mapMarkers = {
       details: {
         title: "Mage of Lotor",
         coordinates: { x: 1165, y: 1362 },
-        image: "images/markers/Mage_of_Lotor.png",
-        lore: "Mage of Lotor is a key NPC in the Silvest Valley (Legacy Cloak).",
+        image: "images/markers/Silvest_Mage_of_Lotor.png",
+        lore: "Mage of Lotor is a key NPC in the Silvest Valley region (Legacy Cloak).",
         npcs: [],
         links: [],
       },
     },
+
+    // Region: Krythan Information
+
+    // Region: Darkwoods Information
+
+    // Region: Battle Plains Information
+
+    // Region: Black Swamp Information
+    {
+      category: "npc",
+      type: "overworld_information_npc",
+      tooltip: "Mage of Lotor",
+      region: "Black Swamp",
+      place: "Krog",
+      details: {
+        title: "Mage of Lotor",
+        coordinates: { x: 3072, y: 3766 },
+        image: "images/markers/Krog_Mage_of_Lotor.png",
+        lore: "Mage of Lotor is a key NPC in the Black Swamp region (Legacy Cloak).",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // Region: Highlands Information
+
+    // Region: Western Isles Information
+
+    // Region: Valley of Giants Information
+
+    // Region: Heartwood Coast Information
+
+    // Region: Tundria Information
+
+    // Region: Sands of Creation Information
+
+    // Region: Breakwater Information
+
+    // Region: Broken Finger Information
 
     /*Lotor's Summer Palace Information*/
     {
@@ -3557,7 +3594,7 @@ export const mapMarkers = {
 
     // Region: Valley of Giants Information
 
-    // Heartwood Coast Information
+    // Region: Heartwood Coast Information
 
     // Region: Sands of Creation Region Information
 
@@ -3620,7 +3657,7 @@ export const mapMarkers = {
       place: "Krog",
       details: {
         title: "Town Steward (Krog)",
-        coordinates: { x: 3114, y: 3709 },
+        coordinates: { x: 3099, y: 3756 },
         image: "images/markers/image_coming_soon.png",
         lore: "The Town Steward of Krog offers a town bonus orb that grants Strength.",
         npcs: [],
@@ -3784,7 +3821,7 @@ export const mapMarkers = {
 
     // Region: Tundria Town Guardians
 
-    // Western Isles Town Guardians
+    // Region: Western Isles Town Guardians
 
     // Region: Sands of Creation Region Town Guardians
     // City: Ruhura Side Town Guardians
@@ -3937,10 +3974,11 @@ export const mapMarkers = {
 
     // Region: Krythan Games of Chance
 
-    // Mainland Games of Chance
     // Region: Darkwoods Games of Chance
 
     // Region: Battle Plains Games of Chance
+
+    // Region: Black Swamp Games of Chance
 
     // Region: Highlands Games of Chance
     // City: Parian Games of Chance
@@ -4042,10 +4080,13 @@ export const mapMarkers = {
 
     // Region: Krythan Events
 
-    // Mainland Events
-    // Darkwoods Events
+    // Region: Darkwoods Events
+    
+    // Region: Battle Plains Events
 
-    // Highlands Events
+    // Region: Black Swamp Events
+
+    // Region: Highlands Events
     // City: Parian Events
     {
       category: "npc",
@@ -4063,17 +4104,16 @@ export const mapMarkers = {
       },
     },
     
-    // City: Grell s Events
+    // City: Grell Events
+    // Grell markers will be in underground-markers.js
 
-    // Region: Battle Plains Events
-
-    // Region: Black Swamp Events
-
+    // Region: Western Isles Events
+    
     // Region: Heartwood Coast Events
 
     // Region: Tundria Events
 
-    // Region: Western Isles Events
+ 
 
     // Sub-Category Crafting
     // Add markers for obelisks and ruin spires here
@@ -5268,6 +5308,7 @@ export const mapMarkers = {
         coordinates: { x: 437, y: 86 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Dalgo's Tavern is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -5286,6 +5327,7 @@ export const mapMarkers = {
         coordinates: { x: 748, y: 115 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Larodeth Lywelyn's Pub and Grub Tavern is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -5301,6 +5343,7 @@ export const mapMarkers = {
         coordinates: { x: 737, y: 119 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Micheal Vonda's Weaponry Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -5316,6 +5359,7 @@ export const mapMarkers = {
         coordinates: { x: 732, y: 124 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Thomas Blackstone's Armory Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -5331,6 +5375,7 @@ export const mapMarkers = {
         coordinates: { x: 734, y: 115 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Whiliam Rosen's Provisioner Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -5346,6 +5391,7 @@ export const mapMarkers = {
         coordinates: { x: 771, y: 119 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Leon Elias's Provisioner Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -5361,6 +5407,7 @@ export const mapMarkers = {
         coordinates: { x: 783, y: 114 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Cladius Zamilus's Magic Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -5376,6 +5423,7 @@ export const mapMarkers = {
         coordinates: { x: 750, y: 150 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Linus Houson's Carpentry Store is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -5391,6 +5439,7 @@ export const mapMarkers = {
         coordinates: { x: 750, y: 151 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Kerry Thomas' Blacksmith Shop  is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -5406,6 +5455,7 @@ export const mapMarkers = {
         coordinates: { x: 750, y: 152 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Tina Florence's Leather Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -5429,6 +5479,7 @@ export const mapMarkers = {
         coordinates: { x: 1065, y: 1170 },
         image: "images/markers/Folger_Pub.png",
         lore: "More information about Folger's Pub is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -5444,6 +5495,7 @@ export const mapMarkers = {
         coordinates: { x: 1065, y: 1156 },
         image: "images/markers/Stedwyck_Provisioner_Shop.png",
         lore: "More information about Stedwyck's Provisioner Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -5459,6 +5511,7 @@ export const mapMarkers = {
         coordinates: { x: 1084, y: 1173 },
         image: "images/markers/Glover_Leather_Shop.png",
         lore: "More information about Glover's Leather Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -5474,6 +5527,7 @@ export const mapMarkers = {
         coordinates: { x: 1075, y: 1180 },
         image: "images/markers/Peake_Carpentry_Shop.png",
         lore: "More information about Peake's Carpentry Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -5491,6 +5545,7 @@ export const mapMarkers = {
         coordinates: { x: 1137, y: 1370 },
         image: "images/markers/Bertwald_Weapon_Shop.png",
         lore: "More information about Bertwald's Weaponry Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -5506,6 +5561,7 @@ export const mapMarkers = {
         coordinates: { x: 1119, y: 1381 },
         image: "images/markers/Oswyn_Armory_Shop.png",
         lore: "More information about Bertwald's Weaponry Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -5521,6 +5577,7 @@ export const mapMarkers = {
         coordinates: { x: 1116, y: 1390 },
         image: "images/markers/Eadwyn_Blacksmith_Shop.png",
         lore: "More information about Eadwyn's Blacksmith Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -5537,6 +5594,7 @@ export const mapMarkers = {
         coordinates: { x: 1093, y: 1386 },
         image: "images/markers/Cearl_Pub.png",
         lore: "More information about Cearl's Pub is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -5552,6 +5610,7 @@ export const mapMarkers = {
         coordinates: { x: 1079, y: 1380 },
         image: "images/markers/Cearl_Pub.png",
         lore: "More information about Bunker's Farming Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -5567,6 +5626,7 @@ export const mapMarkers = {
         coordinates: { x: 1087, y: 1359 },
         image: "images/markers/Vessik_Leather_Shop.png",
         lore: "More information about Vessik's Leather Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -5582,6 +5642,7 @@ export const mapMarkers = {
         coordinates: { x: 1091, y: 1356 },
         image: "images/markers/Bunden_Carpentry_Shop.png",
         lore: "More information about Bunden's Carpentry Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -5597,6 +5658,7 @@ export const mapMarkers = {
         coordinates: { x: 1101, y: 1359 },
         image: "images/markers/Thyrdwulf_Magic_Shop.png",
         lore: "More information about Thyrdwulf's Magic Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -5612,6 +5674,7 @@ export const mapMarkers = {
         coordinates: { x: 1118, y: 1362 },
         image: "images/markers/Coenred_Provisioner_Shop.png",
         lore: "More information about Coenred's Provisioner Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -5629,6 +5692,7 @@ export const mapMarkers = {
         coordinates: { x: 1356, y: 1299 },
         image: "images/markers/Sgt_Stykler_Weapon_Shop.png",
         lore: "More information about Sgt. Stykler's Weaponry Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -5644,6 +5708,7 @@ export const mapMarkers = {
         coordinates: { x: 1356, y: 1308 },
         image: "images/markers/Sgt_Stykler_Weapon_Shop.png",
         lore: "More information about Sgt. Brayce's Armory Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -5659,6 +5724,7 @@ export const mapMarkers = {
         coordinates: { x: 1337, y: 1298 },
         image: "images/markers/Keppler_Provisioner_Shop.png",
         lore: "More information about Keppler's Provisioner Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -5674,6 +5740,7 @@ export const mapMarkers = {
         coordinates: { x: 1341, y: 1309 },
         image: "images/markers/Timison_Pub.png",
         lore: "More information about Timison's Pub is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -5692,6 +5759,7 @@ export const mapMarkers = {
         coordinates: { x: 330, y: 847 },
         image: "images/markers/Caedmon_Carpenter_Shop.png",
         lore: "More information about Caedmon's Capenter Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -5707,6 +5775,7 @@ export const mapMarkers = {
         coordinates: { x: 314, y: 830 },
         image: "images/markers/Candor_Magic_Shop.png",
         lore: "More information about Candor's Magic Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -5722,6 +5791,7 @@ export const mapMarkers = {
         coordinates: { x: 297, y: 841 },
         image: "images/markers/Tolar_Weapon_Shop.png",
         lore: "Tolar's sell armor and weapon goods.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -5737,6 +5807,7 @@ export const mapMarkers = {
         coordinates: { x: 300, y: 836 },
         image: "images/markers/Aelli_Blacksmith_Shop.png",
         lore: "More information about Aelli's Blacksmith Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -5752,6 +5823,7 @@ export const mapMarkers = {
         coordinates: { x: 298, y: 836 },
         image: "images/markers/Merchant_Provisioner_Shop.png",
         lore: "More information about Merchant's Provisioner Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -5767,6 +5839,7 @@ export const mapMarkers = {
         coordinates: { x: 292, y: 842 },
         image: "images/markers/Terry_O_Doul_Pub.png",
         lore: "More information about Terry O'Doul's Pub is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -5782,6 +5855,7 @@ export const mapMarkers = {
         coordinates: { x: 276, y: 821 },
         image: "images/markers/Locket_Kirchkin_Ship_Yard.png",
         lore: "More information about Locket Kirchkin's Ship Yard is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -5797,6 +5871,7 @@ export const mapMarkers = {
         coordinates: { x: 262, y: 847 },
         image: "images/markers/Archos_Leather_Shop.png",
         lore: "More information about Archos' Leather Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -5812,6 +5887,7 @@ export const mapMarkers = {
         coordinates: { x: 263, y: 873 },
         image: "images/markers/Tondbert_Provisioner_Shop.png",
         lore: "More information about Tondbert's Provisioner Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -5827,6 +5903,7 @@ export const mapMarkers = {
         coordinates: { x: 242, y: 883 },
         image: "images/markers/Osuald_Farming_Shop.png",
         lore: "More information about Osuald's Farming Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -5844,6 +5921,7 @@ export const mapMarkers = {
         coordinates: { x: 253, y: 1133 },
         image: "images/markers/Brewmaster_Idmun_Pub.png",
         lore: "More information about Brewmaster Idmun's Pub is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -5859,6 +5937,7 @@ export const mapMarkers = {
         coordinates: { x: 257, y: 1137 },
         image: "images/markers/Hlothere_Magic_Shop.png",
         lore: "More information about Hlothere's Magic Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -5874,6 +5953,7 @@ export const mapMarkers = {
         coordinates: { x: 253, y: 1138 },
         image: "images/markers/Flannig_Scroll_Shop.png",
         lore: "More information about Flannig Scroll Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -5889,6 +5969,7 @@ export const mapMarkers = {
         coordinates: { x: 253, y: 1140 },
         image: "images/markers/Lotors_Castle_VIP_Store.png",
         lore: "More information about Lotor's Castle VIP Store is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -5904,6 +5985,7 @@ export const mapMarkers = {
         coordinates: { x: 258, y: 1139 },
         image: "images/markers/Ricardo_Sardis_Jewelry_Shop.png",
         lore: "More information about Ricardo Sardi's Jewelry Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -5919,6 +6001,7 @@ export const mapMarkers = {
         coordinates: { x: 255, y: 1156 },
         image: "images/markers/Hales_Weaponry_Shop.png",
         lore: "More information about Hale's Weaponry Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -5934,6 +6017,7 @@ export const mapMarkers = {
         coordinates: { x: 253, y: 1156 },
         image: "images/markers/Bercthuns_Armory_Shop.png",
         lore: "More information about Bercthun's Armory Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -5949,6 +6033,7 @@ export const mapMarkers = {
         coordinates: { x: 262, y: 1155 },
         image: "images/markers/Swidhelms_Blacksmith_Shop.png",
         lore: "More information about Swidhelm's Blacksmith Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -5964,6 +6049,7 @@ export const mapMarkers = {
         coordinates: { x: 213, y: 1146 },
         image: "images/markers/Merchants_Farm_Shop.png",
         lore: "More information about Merchant's Farm Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -5987,6 +6073,7 @@ export const mapMarkers = {
         coordinates: { x: 650, y: 1676 },
         image: "images/markers/Kevin_Larcon_Provisioner_Shop.png",
         lore: "More information about Kevin Larcon's Provisioner Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -6002,6 +6089,7 @@ export const mapMarkers = {
         coordinates: { x: 678, y: 1681 },
         image: "images/markers/Aedelred_Pub.png",
         lore: "More information about Aedelred's Pub is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -6017,6 +6105,7 @@ export const mapMarkers = {
         coordinates: { x: 689, y: 1682 },
         image: "images/markers/Davids_Armory_Shop.png",
         lore: "More information about David's Armory Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -6032,6 +6121,7 @@ export const mapMarkers = {
         coordinates: { x: 684, y: 1680 },
         image: "images/markers/Dubois_Blacksmith_Shop.png",
         lore: "More information about Dubois' Blacksmith Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -6047,6 +6137,7 @@ export const mapMarkers = {
         coordinates: { x: 691, y: 1698 },
         image: "images/markers/Andhuns_Weaponry_Shop.png",
         lore: "More information about Andhun's Weaponry Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -6062,6 +6153,7 @@ export const mapMarkers = {
         coordinates: { x: 651, y: 1706 },
         image: "images/markers/Gallos_Evil_Trinket_Shop.png",
         lore: "More information about Gallos' Evil Trinket Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -6077,6 +6169,7 @@ export const mapMarkers = {
         coordinates: { x: 683, y: 1705 },
         image: "images/markers/Rygors_Magic_Shop.png",
         lore: "More information about Rygor's Magic Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -6094,6 +6187,7 @@ export const mapMarkers = {
         coordinates: { x: 779, y: 1194 },
         image: "images/markers/Aedelwald_Magic_Shop.png",
         lore: "More information about Aedelwald's Magic Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -6109,6 +6203,7 @@ export const mapMarkers = {
         coordinates: { x: 774, y: 1194 },
         image: "images/markers/Trondhere_Provisioner_Shop.png",
         lore: "More information about Trondhere's Provisioner Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -6124,6 +6219,7 @@ export const mapMarkers = {
         coordinates: { x: 773, y: 1173 },
         image: "images/markers/Egbert_Pub.png",
         lore: "More information about Egbert's Pub is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -6152,6 +6248,7 @@ export const mapMarkers = {
         coordinates: { x: 1354, y: 3193 },
         image: "images/markers/Elvryn_Carpentery_Shop.png",
         lore: "More information about Elvryn's Carpentery Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -6167,6 +6264,7 @@ export const mapMarkers = {
         coordinates: { x: 1351, y: 3200 },
         image: "images/markers/Lominar_Taxidermy_Shop.png",
         lore: "More information about Lominar's Taxidermy Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -6182,6 +6280,7 @@ export const mapMarkers = {
         coordinates: { x: 1362, y: 3227 },
         image: "images/markers/Calidor_Reitmsa_Ship_Yard.png",
         lore: "More information about Calidor Reitmsa's Ship Yard is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -6197,6 +6296,7 @@ export const mapMarkers = {
         coordinates: { x: 1377, y: 3224 },
         image: "images/markers/Charyne_Tavern.png",
         lore: "More information about Charyne's Tavern is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -6212,6 +6312,7 @@ export const mapMarkers = {
         coordinates: { x: 1377, y: 3224 },
         image: "images/markers/Charyne_Tavern.png",
         lore: "More information about Charyne's Tavern is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -6227,6 +6328,7 @@ export const mapMarkers = {
         coordinates: { x: 1391, y: 3230 },
         image: "images/markers/Keile_Joargo_Provisioner_Shop.png",
         lore: "More information about Keile Joargo's Provisioner Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -6242,6 +6344,7 @@ export const mapMarkers = {
         coordinates: { x: 1391, y: 3220 },
         image: "images/markers/Xulfax_Weaponry_Shop.png",
         lore: "More information about Xulfax's Weaponry Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -6257,6 +6360,7 @@ export const mapMarkers = {
         coordinates: { x: 1391, y: 3208 },
         image: "images/markers/Hertzel_Armory_Shop.png",
         lore: "More information about Hertzel's Armory Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -6272,6 +6376,7 @@ export const mapMarkers = {
         coordinates: { x: 1400, y: 3211 },
         image: "images/markers/Calonar_Blacksmith_Shop.png",
         lore: "More information about Calonar's Blacksmith Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -6287,6 +6392,7 @@ export const mapMarkers = {
         coordinates: { x: 1412, y: 3183 },
         image: "images/markers/Saldizor_Magic_Shop.png",
         lore: "More information about Saldizor's Magic Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -6310,6 +6416,7 @@ export const mapMarkers = {
         coordinates: { x: 3143, y: 3752 },
         image: "images/markers/Batuk_Armory_Shop.png",
         lore: "More information about Batuk's Armory Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -6325,6 +6432,7 @@ export const mapMarkers = {
         coordinates: { x: 3162, y: 3753 },
         image: "images/markers/Gorn_Leather_Shop.png",
         lore: "More information about Gorn's Leather Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -6340,6 +6448,7 @@ export const mapMarkers = {
         coordinates: { x: 3145, y: 3781 },
         image: "images/markers/Vrriga_Farming_Shop.png",
         lore: "More information about Vrriga's Farming Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -6355,6 +6464,7 @@ export const mapMarkers = {
         coordinates: { x: 3121, y: 3768 },
         image: "images/markers/Savu_Magic_Shop.png",
         lore: "More information about Savu's Magic Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -6370,6 +6480,7 @@ export const mapMarkers = {
         coordinates: { x: 3121, y: 3768 },
         image: "images/markers/Fragak_Weaponry_Shop.png",
         lore: "More information about Fragak's Weaponry Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -6385,6 +6496,7 @@ export const mapMarkers = {
         coordinates: { x: 3129, y: 3784 },
         image: "images/markers/Fragak_Weaponry_Shop.png",
         lore: "More information about Fragak's Weaponry Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -6400,6 +6512,7 @@ export const mapMarkers = {
         coordinates: { x: 3135, y: 3780 },
         image: "images/markers/Mongo_Rark_Jewelry_Shop.png",
         lore: "More information about Mongo Rark's Jewelry Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -6415,6 +6528,7 @@ export const mapMarkers = {
         coordinates: { x: 3122, y: 3792 },
         image: "images/markers/Kronav_Armory_Shop.png",
         lore: "More information about Kronav's Armory Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -6430,6 +6544,7 @@ export const mapMarkers = {
         coordinates: { x: 3116, y: 3805 },
         image: "images/markers/Kornak_Pub.png",
         lore: "More information about Kornak's Pub is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -6445,6 +6560,7 @@ export const mapMarkers = {
         coordinates: { x: 3092, y: 3789 },
         image: "images/markers/Drakan_Provisioner_Shop.png",
         lore: "More information about Drakan's Provisioner Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -6460,6 +6576,7 @@ export const mapMarkers = {
         coordinates: { x: 3081, y: 3785 },
         image: "images/markers/Jarra_Carpentry_Shop.png",
         lore: "More information about Jarra's Carpentry Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -6478,6 +6595,7 @@ export const mapMarkers = {
         coordinates: { x: 3473, y: 3073 },
         image: "images/markers/Rohnidd_Weapon_Shop.png",
         lore: "More information about Rhonidd's Weaponry Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -6493,6 +6611,7 @@ export const mapMarkers = {
         coordinates: { x: 3472, y: 3063 },
         image: "images/markers/Hemos_Blacksmith_Shop.png",
         lore: "More information about Hemos' Blacksmith Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -6508,6 +6627,7 @@ export const mapMarkers = {
         coordinates: { x: 3479, y: 3072 },
         image: "images/markers/Sage_Rauth_Scrolls_Shop.png",
         lore: "More information about Sage Rauth's Scrolls Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -6523,6 +6643,7 @@ export const mapMarkers = {
         coordinates: { x: 3479, y: 3075 },
         image: "images/markers/Tragos_Magic_Shop.png",
         lore: "More information about Tragos' Magic Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -6538,6 +6659,7 @@ export const mapMarkers = {
         coordinates: { x: 3473, y: 3085 },
         image: "images/markers/Thodonna_Provisioner_Shop.png",
         lore: "More information about Thodonna's Provisioner Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -6553,6 +6675,7 @@ export const mapMarkers = {
         coordinates: { x: 3494, y: 3067 },
         image: "images/markers/Maggie_Hobson_Jewelry_Shop.png",
         lore: "More information about Maggie Hobson's Jewelry Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -6568,6 +6691,7 @@ export const mapMarkers = {
         coordinates: { x: 3500, y: 3062 },
         image: "images/markers/Theiseth_Provisioner_Shop.png",
         lore: "More information about Theiseth's Provisioner Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -6583,6 +6707,7 @@ export const mapMarkers = {
         coordinates: { x: 3514, y: 3070 },
         image: "images/markers/Arthuren_Ship_Yard_Shop.png",
         lore: "More information about Arthuren's Ship Yard Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -6598,6 +6723,7 @@ export const mapMarkers = {
         coordinates: { x: 3499, y: 3047 },
         image: "images/markers/Theard_Magic_Shop.png",
         lore: "More information about Theard's Magic Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -6613,6 +6739,7 @@ export const mapMarkers = {
         coordinates: { x: 3506, y: 3032 },
         image: "images/markers/Loeband_Pub.png",
         lore: "More information about Loeband's Pub is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -6628,6 +6755,7 @@ export const mapMarkers = {
         coordinates: { x: 3479, y: 3021 },
         image: "images/markers/Rella_Storage_Shop.png",
         lore: "Rella sells storage crates for 50,000 gold each. These are essential for expanding your bank space.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -6643,6 +6771,7 @@ export const mapMarkers = {
         coordinates: { x: 3479, y: 3027 },
         image: "images/markers/Welatrem_Carpentry_Shop.png",
         lore: "More information about Rella's Storage Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -6658,6 +6787,7 @@ export const mapMarkers = {
         coordinates: { x: 3494, y: 3002 },
         image: "images/markers/Draga_Leather_Shop.png",
         lore: "More information about Draga's Leather Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -6673,6 +6803,7 @@ export const mapMarkers = {
         coordinates: { x: 3478, y: 3005 },
         image: "images/markers/Kedardogan_Armory_Shop.png",
         lore: "More information about Kedardogan's Armory Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -6688,6 +6819,7 @@ export const mapMarkers = {
         coordinates: { x: 3486, y: 3005 },
         image: "images/markers/Afedriwyr_Blacksmith_Shop.png",
         lore: "More information about Afedriwyr's Blacksmith Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -6703,6 +6835,7 @@ export const mapMarkers = {
         coordinates: { x: 3459, y: 2994 },
         image: "images/markers/Malinnor_Provisioner_Shop.png",
         lore: "More information about Malinnor's Pub is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -6718,6 +6851,7 @@ export const mapMarkers = {
         coordinates: { x: 3446, y: 3004 },
         image: "images/markers/Melisandria_Farming_Shop.png",
         lore: "More information about Melisandria's Farming Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -6733,6 +6867,7 @@ export const mapMarkers = {
         coordinates: { x: 3444, y: 2983 },
         image: "images/markers/Oloatlan_Carpentry_Shop.png",
         lore: "More information about Oloatlan's Carpentry Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -6748,6 +6883,7 @@ export const mapMarkers = {
         coordinates: { x: 3442, y: 2983 },
         image: "images/markers/Hailey_Brown_Weapon_Shop.png",
         lore: "More information about Hailey Brown's Weaponry Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -6763,6 +6899,7 @@ export const mapMarkers = {
         coordinates: { x: 3444, y: 2970 },
         image: "images/markers/Jeralif_Provisioner_Shop.png",
         lore: "More information about Jeralif's Provisioner Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -6778,6 +6915,7 @@ export const mapMarkers = {
         coordinates: { x: 3421, y: 2976 },
         image: "images/markers/Zaetlan_Magic_Shop.png",
         lore: "More information about Zaetlan's Magic Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -6793,6 +6931,7 @@ export const mapMarkers = {
         coordinates: { x: 3425, y: 2960 },
         image: "images/markers/Ereld_Weapon_Shop.png",
         lore: "More information about Ereld's Weaponry Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -6810,6 +6949,7 @@ export const mapMarkers = {
         coordinates: { x: 3405, y: 3491 },
         image: "images/markers/Kedalel_Weapon_Shop.png",
         lore: "More information about Kedalel's Weaponry Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -6825,6 +6965,7 @@ export const mapMarkers = {
         coordinates: { x: 3401, y: 3495 },
         image: "images/markers/Adie_Weapon_Shop.png",
         lore: "More information about Adie's Weaponry Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -6840,6 +6981,7 @@ export const mapMarkers = {
         coordinates: { x: 3413, y: 3496 },
         image: "images/markers/Mo_Leather_Shop.png",
         lore: "More information about Adie's Leather Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -6855,6 +6997,7 @@ export const mapMarkers = {
         coordinates: { x: 3422, y: 3496 },
         image: "images/markers/Delawyth_Carpentry_Shop.png",
         lore: "More information about Delawyth's Carpentry Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -6870,6 +7013,7 @@ export const mapMarkers = {
         coordinates: { x: 3380, y: 3495 },
         image: "images/markers/Edelassa_Armory_Shop.png",
         lore: "More information about Edelassa's Armory Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -6885,6 +7029,7 @@ export const mapMarkers = {
         coordinates: { x: 3382, y: 3490 },
         image: "images/markers/Edelbram_Blacksmith_Shop.png",
         lore: "More information about Edelbram's Blacksmith Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -6900,6 +7045,7 @@ export const mapMarkers = {
         coordinates: { x: 3393, y: 3476 },
         image: "images/markers/Lothath_Provisioner_Shop.png",
         lore: "More information about Lothath's Provisioner Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -6915,6 +7061,7 @@ export const mapMarkers = {
         coordinates: { x: 3420, y: 3467 },
         image: "images/markers/Grimlock_Pub_Shop.png",
         lore: "More information about Grimlock's Pub is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -6930,6 +7077,7 @@ export const mapMarkers = {
         coordinates: { x: 3381, y: 3470 },
         image: "images/markers/Janus_Laruis_Magic_Shop.png",
         lore: "More information about Janus Laruis' Magic Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -6951,6 +7099,7 @@ export const mapMarkers = {
         coordinates: { x: 3560, y: 3670 },
         image: "images/markers/Kryiel_Bakery_Shop.png",
         lore: "More information about Kryiel's Bakery Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -6966,6 +7115,7 @@ export const mapMarkers = {
         coordinates: { x: 3557, y: 3693 },
         image: "images/markers/Astaeg_Magic_Shop.png",
         lore: "More information about Astaeg's Magic Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -6981,6 +7131,7 @@ export const mapMarkers = {
         coordinates: { x: 3556, y: 3698 },
         image: "images/markers/Dugos_Farming_Shop.png",
         lore: "More information about Dugos' Farming Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -6996,6 +7147,7 @@ export const mapMarkers = {
         coordinates: { x: 3573, y: 3695 },
         image: "images/markers/Adrekor_Ship_Yard.png",
         lore: "More information about Adrekor's Ship Yard is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -7011,6 +7163,7 @@ export const mapMarkers = {
         coordinates: { x: 3556, y: 3717 },
         image: "images/markers/Sevililoth_Armory_Shop.png",
         lore: "More information about Sevililoth's Armory Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -7026,6 +7179,7 @@ export const mapMarkers = {
         coordinates: { x: 3561, y: 3723 },
         image: "images/markers/Zathras_Leather_Shop.png",
         lore: "More information about Zathras' Leather Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -7041,6 +7195,7 @@ export const mapMarkers = {
         coordinates: { x: 3544, y: 3710 },
         image: "images/markers/Ethialin_Provisioner_Shop.png",
         lore: "More information about Ethialin's Provisioner Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -7056,6 +7211,7 @@ export const mapMarkers = {
         coordinates: { x: 3538, y: 3708 },
         image: "images/markers/Cadenad_Blacksmith_Shop.png",
         lore: "More information about Cadenad's Blacksmith Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -7071,6 +7227,7 @@ export const mapMarkers = {
         coordinates: { x: 3525, y: 3708 },
         image: "images/markers/Lothannon_Weapon_Shop.png",
         lore: "More information about Lothannon's Weaponry Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -7086,6 +7243,7 @@ export const mapMarkers = {
         coordinates: { x: 3513, y: 3694 },
         image: "images/markers/Desdemona_Provisioner_Shop.png",
         lore: "More information about Desdemona's Provisioner Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -7101,6 +7259,7 @@ export const mapMarkers = {
         coordinates: { x: 3537, y: 3687 },
         image: "images/markers/Larelikor_Carpentry_Shop.png",
         lore: "More information about Larelikor's Carpentry Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -7121,6 +7280,7 @@ export const mapMarkers = {
         coordinates: { x: 810, y: 673 },
         image: "images/markers/Oriles_Weaponry_Shop.png",
         lore: "More information about O'riles Weaponry Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -7136,6 +7296,7 @@ export const mapMarkers = {
         coordinates: { x: 809, y: 681 },
         image: "images/markers/Colleen_Franks_Armory_Shop.png",
         lore: "More information about Colleen Franks' Armory Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -7151,6 +7312,7 @@ export const mapMarkers = {
         coordinates: { x: 860, y: 713 },
         image: "images/markers/Garius_Farming_Shop.png",
         lore: "More information about Garius' Farming Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -7166,6 +7328,7 @@ export const mapMarkers = {
         coordinates: { x: 852, y: 709 },
         image: "images/markers/Tom_Uslak_Carpenter_Shop.png",
         lore: "More information about Tom Uslak Carpenter Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -7181,6 +7344,7 @@ export const mapMarkers = {
         coordinates: { x: 768, y: 621 },
         image: "images/markers/Blueprint_Sales_Shop.png",
         lore: "More information about Blueprint Sales is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -7196,6 +7360,7 @@ export const mapMarkers = {
         coordinates: { x: 770, y: 621 },
         image: "images/markers/Surveying_and_Tools_Sales_Shop.png",
         lore: "More information about Surveying and Tools Sales is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -7227,6 +7392,7 @@ export const mapMarkers = {
         coordinates: { x: 769, y: 600 },
         image: "images/markers/Wizard_Blunderstone_Shop.png",
         lore: "More information about Wizard Blunderstone is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -7242,6 +7408,7 @@ export const mapMarkers = {
         coordinates: { x: 763, y: 604 },
         image: "images/markers/VIP_Store.png",
         lore: "More information about VIP Store is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -7257,6 +7424,7 @@ export const mapMarkers = {
         coordinates: { x: 762, y: 598 },
         image: "images/markers/Lotors_Gardener_Shop.png",
         lore: "More information about Lotor's Gardener's Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -7272,6 +7440,7 @@ export const mapMarkers = {
         coordinates: { x: 790, y: 593 },
         image: "images/markers/Larson_Davide_Shop.png",
         lore: "More information about Larson Davide's Shipyard Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -7287,6 +7456,7 @@ export const mapMarkers = {
         coordinates: { x: 792, y: 593 },
         image: "images/markers/Tides_of_Fate_Raft_Offer.png",
         lore: "More information about Tides of Fate Raft Offer is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -7302,6 +7472,7 @@ export const mapMarkers = {
         coordinates: { x: 756, y: 676 },
         image: "images/markers/Doyle_Trobush_Magic_Shop.png",
         lore: "More information about Doyle Trobush's Magic Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -7317,6 +7488,7 @@ export const mapMarkers = {
         coordinates: { x: 789, y: 660 },
         image: "images/markers/Panteo_Jewelry_Shop.png",
         lore: "More information about Panteo's Jewelry Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -7332,6 +7504,7 @@ export const mapMarkers = {
         coordinates: { x: 789, y: 690 },
         image: "images/markers/Canuelle_Jewelry_Shop.png",
         lore: "More information about Canuelle's Jewelry Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -7347,6 +7520,7 @@ export const mapMarkers = {
         coordinates: { x: 802, y: 703 },
         image: "images/markers/Mongor_Leatherworking_Shop.png",
         lore: "More information about Mongor's Leatherworking Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -7362,6 +7536,7 @@ export const mapMarkers = {
         coordinates: { x: 799, y: 699 },
         image: "images/markers/Kaleic_Blacksmith_Shop.png",
         lore: "More information about Kaleic's Blacksmith Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -7377,6 +7552,7 @@ export const mapMarkers = {
         coordinates: { x: 811, y: 697 },
         image: "images/markers/Mace_Gurban_Provisioner_Shop.png",
         lore: "More information about Mace Gurban's Provisioner Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -7392,6 +7568,7 @@ export const mapMarkers = {
         coordinates: { x: 845, y: 727 },
         image: "images/markers/Docale_Pub.png",
         lore: "More information about Docale's Pub is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -7410,6 +7587,7 @@ export const mapMarkers = {
         coordinates: { x: 405, y: 2192 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Ricbert's Carpentry Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -7425,6 +7603,7 @@ export const mapMarkers = {
         coordinates: { x: 398, y: 2194 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Berctuald's Farming Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -7440,6 +7619,7 @@ export const mapMarkers = {
         coordinates: { x: 3405, y: 3476 },
         image: "images/markers/Sevyd_Farming_Shop.png",
         lore: "More information about Sevyd's Farming Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -7455,6 +7635,7 @@ export const mapMarkers = {
         coordinates: { x: 402, y: 2219 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Osric's Pub is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -7470,6 +7651,7 @@ export const mapMarkers = {
         coordinates: { x: 384, y: 2219 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Wulfhere's Provisioner Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -7485,6 +7667,7 @@ export const mapMarkers = {
         coordinates: { x: 370, y: 2219 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Killjoy's Weaponry Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -7500,6 +7683,7 @@ export const mapMarkers = {
         coordinates: { x: 374, y: 2215 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Harkyn's Armory Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
@@ -7515,6 +7699,7 @@ export const mapMarkers = {
         coordinates: { x: 379, y: 2236 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Aldulf's Magic Shop is coming soon.",
+        currency: "gold",
         npcs: [],
         links: [],
       },
