@@ -3909,7 +3909,7 @@ export const mapMarkers = {
       place: "Arda",
       details: {
         title: "Town Guardian",
-        coordinates: { x: 3389, y: 3469 },
+        coordinates: { x: 3389, y: 3470 },
         image: "images/markers/Arda_Town_Guardian.png",
         lore: "The Town Guardian in Arda.",
         npcs: [],
@@ -4017,7 +4017,7 @@ export const mapMarkers = {
       place: "Arda",
       details: {
         title: "Town Wizard of Insight",
-        coordinates: { x: 3419, y: 3474 },
+        coordinates: { x: 3419, y: 3475 },
         image: "images/markers/Arda_Town_Wizard_of_Insight.png",
         lore: "More information about Arda Town Wizard of Insight is coming soon.",
         npcs: [],
@@ -4624,7 +4624,7 @@ export const mapMarkers = {
       place: "Arda",
       details: {
         title: "Bank",
-        coordinates: { x: 3392, y: 3493 },
+        coordinates: { x: 3392, y: 3494 },
         image: "images/markers/Arda_Bank.png",
         lore: "More information about Arda Bank is coming soon.",
         npcs: [],
@@ -7102,7 +7102,7 @@ export const mapMarkers = {
       place: "Arda",
       details: {
         title: "Kedalel's Weaponry Shop",
-        coordinates: { x: 3405, y: 3491 },
+        coordinates: { x: 3405, y: 3492 },
         image: "images/markers/Kedalel_Weapon_Shop.png",
         lore: "More information about Kedalel's Weaponry Shop is coming soon.",
         currency: "gold",
@@ -7118,7 +7118,7 @@ export const mapMarkers = {
       place: "Arda",
       details: {
         title: "Adie's Weaponry Shop",
-        coordinates: { x: 3401, y: 3495 },
+        coordinates: { x: 3401, y: 3496 },
         image: "images/markers/Adie_Weapon_Shop.png",
         lore: "More information about Adie's Weaponry Shop is coming soon.",
         currency: "gold",
@@ -7134,7 +7134,7 @@ export const mapMarkers = {
       place: "Arda",
       details: {
         title: "Adie's Leather Shop",
-        coordinates: { x: 3413, y: 3496 },
+        coordinates: { x: 3413, y: 3497 },
         image: "images/markers/Mo_Leather_Shop.png",
         lore: "More information about Adie's Leather Shop is coming soon.",
         currency: "gold",
@@ -7150,7 +7150,7 @@ export const mapMarkers = {
       place: "Arda",
       details: {
         title: "Delawyth's Carpentry Shop",
-        coordinates: { x: 3422, y: 3496 },
+        coordinates: { x: 3422, y: 3497 },
         image: "images/markers/Delawyth_Carpentry_Shop.png",
         lore: "More information about Delawyth's Carpentry Shop is coming soon.",
         currency: "gold",
@@ -7166,7 +7166,7 @@ export const mapMarkers = {
       place: "Arda",
       details: {
         title: "Edelassa's Armory Shop",
-        coordinates: { x: 3380, y: 3495 },
+        coordinates: { x: 3380, y: 3496 },
         image: "images/markers/Edelassa_Armory_Shop.png",
         lore: "More information about Edelassa's Armory Shop is coming soon.",
         currency: "gold",
@@ -7182,7 +7182,7 @@ export const mapMarkers = {
       place: "Arda",
       details: {
         title: "Edelbram's Blacksmith Shop",
-        coordinates: { x: 3382, y: 3490 },
+        coordinates: { x: 3382, y: 3491 },
         image: "images/markers/Edelbram_Blacksmith_Shop.png",
         lore: "More information about Edelbram's Blacksmith Shop is coming soon.",
         currency: "gold",
@@ -7198,7 +7198,7 @@ export const mapMarkers = {
       place: "Arda",
       details: {
         title: "Lothath's Provisioner Shop",
-        coordinates: { x: 3393, y: 3476 },
+        coordinates: { x: 3393, y: 3477 },
         image: "images/markers/Lothath_Provisioner_Shop.png",
         lore: "More information about Lothath's Provisioner Shop is coming soon.",
         currency: "gold",
@@ -7214,7 +7214,7 @@ export const mapMarkers = {
       place: "Arda",
       details: {
         title: "Grimlock's Pub",
-        coordinates: { x: 3420, y: 3467 },
+        coordinates: { x: 3420, y: 3468 },
         image: "images/markers/Grimlock_Pub_Shop.png",
         lore: "More information about Grimlock's Pub is coming soon.",
         currency: "gold",
@@ -7230,7 +7230,7 @@ export const mapMarkers = {
       place: "Arda",
       details: {
         title: "Janus Laruis' Magic Shop",
-        coordinates: { x: 3381, y: 3470 },
+        coordinates: { x: 3381, y: 3471 },
         image: "images/markers/Janus_Laruis_Magic_Shop.png",
         lore: "More information about Janus Laruis' Magic Shop is coming soon.",
         currency: "gold",
@@ -7252,7 +7252,7 @@ export const mapMarkers = {
       place: "Ethera Palace",
       details: {
         title: "Kryiel's Bakery Shop",
-        coordinates: { x: 3560, y: 3670 },
+        coordinates: { x: 3560, y: 3672 },
         image: "images/markers/Kryiel_Bakery_Shop.png",
         lore: "More information about Kryiel's Bakery Shop is coming soon.",
         currency: "gold",
@@ -7268,7 +7268,7 @@ export const mapMarkers = {
       place: "Ethera Palace",
       details: {
         title: "Astaeg's Magic Shop",
-        coordinates: { x: 3557, y: 3693 },
+        coordinates: { x: 3557, y: 3695 },
         image: "images/markers/Astaeg_Magic_Shop.png",
         lore: "More information about Astaeg's Magic Shop is coming soon.",
         currency: "gold",
@@ -7284,7 +7284,7 @@ export const mapMarkers = {
       place: "Ethera Palace",
       details: {
         title: "Dugos' Farming Shop",
-        coordinates: { x: 3556, y: 3698 },
+        coordinates: { x: 3556, y: 3700 },
         image: "images/markers/Dugos_Farming_Shop.png",
         lore: "More information about Dugos' Farming Shop is coming soon.",
         currency: "gold",
@@ -7300,7 +7300,7 @@ export const mapMarkers = {
       place: "Ethera Palace",
       details: {
         title: "Adrekor's Ship Yard",
-        coordinates: { x: 3573, y: 3695 },
+        coordinates: { x: 3573, y: 3697 },
         image: "images/markers/Adrekor_Ship_Yard.png",
         lore: "More information about Adrekor's Ship Yard is coming soon.",
         currency: "gold",
@@ -7316,7 +7316,7 @@ export const mapMarkers = {
       place: "Ethera Palace",
       details: {
         title: "Sevililoth's Armory Shop",
-        coordinates: { x: 3556, y: 3717 },
+        coordinates: { x: 3556, y: 3719 },
         image: "images/markers/Sevililoth_Armory_Shop.png",
         lore: "More information about Sevililoth's Armory Shop is coming soon.",
         currency: "gold",
@@ -7332,7 +7332,7 @@ export const mapMarkers = {
       place: "Ethera Palace",
       details: {
         title: "Zathras' Leather Shop",
-        coordinates: { x: 3561, y: 3723 },
+        coordinates: { x: 3561, y: 3725 },
         image: "images/markers/Zathras_Leather_Shop.png",
         lore: "More information about Zathras' Leather Shop is coming soon.",
         currency: "gold",
@@ -7348,7 +7348,7 @@ export const mapMarkers = {
       place: "Ethera Palace",
       details: {
         title: "Ethialin's Provisioner Shop",
-        coordinates: { x: 3544, y: 3710 },
+        coordinates: { x: 3544, y: 3712 },
         image: "images/markers/Ethialin_Provisioner_Shop.png",
         lore: "More information about Ethialin's Provisioner Shop is coming soon.",
         currency: "gold",
@@ -7364,7 +7364,7 @@ export const mapMarkers = {
       place: "Ethera Palace",
       details: {
         title: "Cadenad's Blacksmith Shop",
-        coordinates: { x: 3538, y: 3708 },
+        coordinates: { x: 3538, y: 3710 },
         image: "images/markers/Cadenad_Blacksmith_Shop.png",
         lore: "More information about Cadenad's Blacksmith Shop is coming soon.",
         currency: "gold",
@@ -7380,7 +7380,7 @@ export const mapMarkers = {
       place: "Ethera Palace",
       details: {
         title: "Lothannon's Weaponry Shop",
-        coordinates: { x: 3525, y: 3708 },
+        coordinates: { x: 3525, y: 3710 },
         image: "images/markers/Lothannon_Weapon_Shop.png",
         lore: "More information about Lothannon's Weaponry Shop is coming soon.",
         currency: "gold",
@@ -7396,7 +7396,7 @@ export const mapMarkers = {
       place: "Ethera Palace",
       details: {
         title: "Desdemona's Provisioner Shop",
-        coordinates: { x: 3513, y: 3694 },
+        coordinates: { x: 3513, y: 3696 },
         image: "images/markers/Desdemona_Provisioner_Shop.png",
         lore: "More information about Desdemona's Provisioner Shop is coming soon.",
         currency: "gold",
@@ -7412,7 +7412,7 @@ export const mapMarkers = {
       place: "Ethera Palace",
       details: {
         title: "Larelikor's Carpentry Shop",
-        coordinates: { x: 3537, y: 3687 },
+        coordinates: { x: 3537, y: 3689 },
         image: "images/markers/Larelikor_Carpentry_Shop.png",
         lore: "More information about Larelikor's Carpentry Shop is coming soon.",
         currency: "gold",
@@ -7772,7 +7772,7 @@ export const mapMarkers = {
       place: "Arda",
       details: {
         title: "Sevyd's Farming Shop",
-        coordinates: { x: 3405, y: 3476 },
+        coordinates: { x: 3405, y: 3477 },
         image: "images/markers/Sevyd_Farming_Shop.png",
         lore: "More information about Sevyd's Farming Shop is coming soon.",
         currency: "gold",
