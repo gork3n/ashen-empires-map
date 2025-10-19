@@ -1126,9 +1126,9 @@ function addMarkerFeature(source, x, y, type, tooltip, details, place, region) {
     const mapSize = 32768;
     const scaleFactor = mapSize / 4096;
 
-    // Apply a global offset to correct for tile alignment and add 0.5 to center the marker.
-    const correctedX = x - 2;
-    const correctedY = y - 2;
+    // Add 0.5 to the coordinates to center the marker within its pixel block.
+    const correctedX = x;
+    const correctedY = y;
     const scaledX = (correctedX + 0.5) * scaleFactor;
     const olY = -(correctedY + 0.5) * scaleFactor;
     const coordinates = [scaledX, olY];
@@ -1283,9 +1283,9 @@ function addLabelFeature(source, x, y, text, fontSize, category, details) {
     const mapSize = 32768;
     const scaleFactor = mapSize / 4096;
 
-    // Apply a global offset to correct for tile alignment and add 0.5 to center the label.
-    const correctedX = x - 2;
-    const correctedY = y - 2;
+    // Add 0.5 to the coordinates to center the label within its pixel block.
+    const correctedX = x;
+    const correctedY = y;
     const scaledX = (correctedX + 0.5) * scaleFactor;
     const olY = -(correctedY + 0.5) * scaleFactor;
     
@@ -1607,8 +1607,8 @@ function initializeCoordinateDisplay() {
             const coord = evt.coordinate;
             if (coord) {
                 // Apply the reverse of the global offset to get the correct display coordinate.
-                const newX = Math.floor(coord[0] / scaleFactor) + 2;
-                const newY = Math.floor(-coord[1] / scaleFactor) + 2;
+                const newX = Math.floor(coord[0] / scaleFactor) + 1;
+                const newY = Math.floor(-coord[1] / scaleFactor) + 1;
                 if (newX !== lastX || newY !== lastY) {
                     lastX = newX;
                     lastY = newY;

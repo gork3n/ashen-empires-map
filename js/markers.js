@@ -378,8 +378,28 @@ export const mapMarkers = {
 
     // City: Vrethpool Portals
 
-    // Mainlands Housing Realm Portals
-    // Region: Highlands
+    // Region: Battle Plains Portals
+
+    // Region: Black Swamp Portals
+    // City: Krog Portals
+    {
+      category: "portals",
+      type: "overworld_portal_housing",
+      tooltip: "Portal to Housing Realm",
+      region: "Black Swamp",
+      place: "Krog",
+      details: {
+        title: "Portal to Housing Realm",
+        coordinates: { x: 3122, y: 3730 },
+        image: "images/portals/Krog_Housing_Realm_Portal.png",
+        lore: "More information about Portal to Housing Realm is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    
+    // Region: Highlands Housing Realm Portal
     // City: Parian Housing Realm Portal
     {
       category: "portals",
@@ -7669,7 +7689,7 @@ export const mapMarkers = {
       place: "Lotor's Summer Palace",
       details: {
         title: "Kaleic's Blacksmith Shop",
-        coordinates: { x: 799, y: 699 },
+        coordinates: { x: 799, y: 700 },
         image: "images/markers/Kaleic_Blacksmith_Shop.png",
         lore: "More information about Kaleic's Blacksmith Shop is coming soon.",
         currency: "gold",
@@ -9321,7 +9341,7 @@ export const mapMarkers = {
     // Region: Darkwoods underground
     // Necropolis underground
     {
-      category: "",
+      category: "undergrounds",
       type: "overworld_stairs",
       tooltip:
         "Trap Door to Necropolis Magic and Farm Shops (They do not work)",
@@ -9329,8 +9349,8 @@ export const mapMarkers = {
       place: "Necropolis",
       details: {
         title:
-          "Trap Door to Necropolis Magic and Farm Shops (They do not work)",
-        switchTo: "", // This will trigger the map switch
+          "Trap Door to Necropolis Magic and Farm Shops",
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 1362, y: 2888 },
         image: "images/markers/image_coming_soon.png",
@@ -9340,14 +9360,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
+      category: "undergrounds",
       type: "overworld_ladder",
       tooltip: "Ladder to inside Necropolis",
       region: "Darkwoods",
       place: "Necropolis",
       details: {
         title: "Ladder to inside Necropolis",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 1348, y: 2932 },
         image: "images/markers/image_coming_soon.png",
@@ -9360,14 +9380,14 @@ export const mapMarkers = {
     // Region: Battle Plains underground
     
     {
-      category: "",
+      category: "undergrounds",
       type: "overworld_cave",
       tooltip: "Badlands Cave",
       region: "Battle Plains",
       place: "Battle Plains",
       details: {
         title: "Badlands Cave",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2888, y: 2882 },
         image: "images/markers/image_coming_soon.png",
@@ -9377,14 +9397,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
+      category: "undergrounds",
       type: "overworld_stairs",
       tooltip: "Chlera Catacombs",
       region: "Battle Plains",
       place: "Chlera",
       details: {
         title: "Chlera Catacombs",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2329, y: 3619 },
         image: "images/markers/image_coming_soon.png",
@@ -9394,14 +9414,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
+      category: "undergrounds",
       type: "overworld_cave",
       tooltip: "Desprail Cave",
       region: "Battle Plains",
       place: "Battle Plains",
       details: {
         title: "Desprail Cave",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2136, y: 3155 },
         image: "images/markers/image_coming_soon.png",
@@ -9411,14 +9431,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
+      category: "undergrounds",
       type: "overworld_cave",
       tooltip: "Badlands Cave",
       region: "Battle Plains",
       place: "Battle Plains",
       details: {
         title: "Badlands Cave",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2290, y: 2779 },
         image: "images/markers/image_coming_soon.png",
@@ -9428,14 +9448,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
+      category: "undergrounds",
       type: "overworld_dungeon",
       tooltip: "Deep Shadow Temple",
       region: "Battle Plains",
       place: "Battle Plains",
       details: {
         title: "Deep Shadow Temple",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2009, y: 2675 },
         image: "images/markers/image_coming_soon.png",
@@ -9445,14 +9465,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
+      category: "undergrounds",
       type: "overworld_cave",
       tooltip: "Fungoid Cave",
       region: "Battle Plains",
       place: "Battle Plains",
       details: {
         title: "Fungiod Cave",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 1961, y: 3763 },
         image: "images/markers/Fungiod_Cave.png",
@@ -9464,14 +9484,14 @@ export const mapMarkers = {
 
     // Region: Black Swamp underground
     {
-      category: "",
+      category: "undergrounds",
       type: "overworld_snake",
       tooltip: "Krog Snake Pit",
       region: "Black Swamp",
       place: "Krog",
       details: {
         title: "Krog Snake Pit",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 3272, y: 3990 },
         image: "images/markers/image_coming_soon.png",
@@ -9481,14 +9501,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
+      category: "undergrounds",
       type: "overworld_sewer",
       tooltip: "Krog Sewer",
       region: "Black Swamp",
       place: "Black Swamp",
       details: {
         title: "Krog Sewer",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2823, y: 3623 },
         image: "images/markers/image_coming_soon.png",
@@ -9498,14 +9518,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
+      category: "undergrounds",
       type: "overworld_sewer",
       tooltip: "Krog Sewer",
       region: "Black Swamp",
       place: "Black Swamp",
       details: {
         title: "Krog Sewer",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 3018, y: 3814 },
         image: "images/markers/image_coming_soon.png",
@@ -9515,14 +9535,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
+      category: "undergrounds",
       type: "overworld_crypt",
       tooltip: "Drakkan Crypt",
       region: "Black Swamp",
       place: "Black Swamp",
       details: {
         title: "Drakkan Crypt",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2792, y: 3833 },
         image: "images/markers/image_coming_soon.png",
@@ -9532,14 +9552,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
+      category: "undergrounds",
       type: "overworld_well",
       tooltip: "Waste Tunnels",
       region: "Black Swamp",
       place: "Black Swamp",
       details: {
         title: "Waste Tunnels",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 3244, y: 3834 },
         image: "images/markers/image_coming_soon.png",
@@ -9549,14 +9569,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
+      category: "undergrounds",
       type: "overworld_ant",
       tooltip: "Ant Hill",
       region: "Black Swamp",
       place: "Black Swamp",
       details: {
         title: "Ant Hill",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 3095, y: 3865 },
         image: "images/markers/image_coming_soon.png",
@@ -9566,14 +9586,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
+      category: "undergrounds",
       type: "overworld_scorpion",
       tooltip: "Scorpion",
       region: "Black Swamp",
       place: "Black Swamp",
       details: {
         title: "Scorpion",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 3130, y: 3660 },
         image: "images/markers/image_coming_soon.png",
@@ -9583,14 +9603,14 @@ export const mapMarkers = {
       },
     },
     {
-      category: "",
+      category: "undergrounds",
       type: "overworld_dungeon",
       tooltip: "Valekar's Fortress Dungeon",
       region: "Black Swamp",
       place: "Black Swamp",
       details: {
         title: "Valekar's Fortress Dungeon",
-        switchTo: "", // This will trigger the map switch
+        switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 3079, y: 3516 },
         image: "images/markers/image_coming_soon.png",

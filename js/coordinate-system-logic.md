@@ -2,6 +2,7 @@
 
 This document outlines the core logic for handling coordinates and placing markers/labels on the map, as implemented in `js/map.js`.
 
+ 
 ## 1. Coordinate Systems
 
 *   **In-Game Coordinates (Reference)**: While the native in-game coordinate system starts at `(0,0)`, our map implementation uses a `1-based` system for data entry to correct for a map stitching offset. Therefore, `(1,1)` is treated as the top-left corner for all marker and label data provided in the project files.
@@ -14,34 +15,13 @@ This document outlines the core logic for handling coordinates and placing marke
 
 ## 3. Marker and Label Placement (`addMarkerFeature`, `addLabelFeature`)
 
-These functions convert your `1-based` in-game `(x, y)` coordinates into `OpenLayers` `(scaledX, olY)` coordinates for precise placement.
+These functions convert your `1-based` in-game `(x, y)` coordinates into `OpenLayers` `(scaledX, olY)` coordinates for precise placement. The logic is identical for both markers and labels.
 
-### Step 1: Convert to 0-Based Index
-
-```javascript
-const correctedX = x - 1;
-let correctedY = y - 1;
-```
-
-Since the in-game coordinates are `1-based` (e.g., `X:1` is the first column), but array/pixel calculations are `0-based`, we subtract `1` from both `x` and `y` to get a `0-based` index for the pixel block.
-
-### Step 2: Account for Missing Y-Coordinate Row (`Y: 2807`)
+### Step 1: Scale and Center
 
 ```javascript
-if (y > 2807) {
-    correctedY -= 1; // Shift up by 1 game pixel to account for the missing row
-}
-```
-
-Because the `Y: 2807` row is physically missing from the map image, all subsequent rows are effectively shifted up by one game pixel. This conditional `correctedY -= 1` compensates for that physical shift, ensuring markers after `Y: 2807` are placed one game pixel higher than their raw `y - 1` calculation would suggest.
-
-I had to do this because when stitching the map together with screenshots, it resulted in an inadvertent one-pixel overlap at the y-coordinate 2807.
-
-### Step 3: Scale and Center within the Pixel Block
-
-```javascript
-const scaledX = (correctedX + 0.5) * scaleFactor;
-const olY = -(correctedY + 0.5) * scaleFactor;
+const scaledX = (x + 0.5) * scaleFactor;
+const olY = -(y + 0.5) * scaleFactor;
 ```
 
 *   `(correctedX + 0.5)` and `(correctedY + 0.5)`: This is crucial for centering. Multiplying `correctedX` (a `0-based` index) by `scaleFactor` would give the top-left corner of the `8x8` pixel block. Adding `0.5` *before* multiplying by `scaleFactor` effectively shifts the coordinate to the *center* of that `8x8` block.
