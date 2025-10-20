@@ -18,6 +18,10 @@ export const undergroundMarkerStyles = {
   },
 
   // Services and NPCs
+  underworld_quest: {
+    icon: "icons/scroll-unfurled.svg",
+    color: "#ccae03ff", // Goldend Ochre
+  },
   underworld_inn_keeper: {
     icon: "icons/candle-holder.svg",
     color: "#5ba8e7ff", // Light SteelBlue
@@ -112,6 +116,22 @@ export const undergroundMapMarkers = {
         lore: "The Town Wizard of Insight in Grell.",
         npcs: [],
         links: [],
+      },
+    },
+    // Place: Emporium Abbey NPCs
+    {
+      category: "npc",
+      type: "underworld_quest",
+      tooltip: "Holendar",
+      region: "Highlands",
+      place: "Emporium Abbey",
+      details: {
+        title: "Holendar",
+        coordinates: { x: 2760, y: 3190 },
+        image: "images/markers/Holendar.png",
+        lore: "Holendar in the Emporium Abbey underground is part of the Guild Quest.",
+        npcs: [],
+        links: [{ text: "Ashen Empires Wiki (Guild Quest #5)", url: "https://ashenempires.fandom.com/wiki/Guild_Quest#5.)_Holendar" }],
       },
     },
   ],

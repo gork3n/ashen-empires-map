@@ -129,7 +129,48 @@ export const mapLabels = {
     // Region: Brokenfinger Mines
   ],
   basements: [
-    // Add underground basement labels here
+    // Region: Valinor Basements
+
+    // Region: Silvest Valley Basements
+
+    // Region: Krythan Basements
+
+    // Region: Darkwoods Basements
+
+    // Region: Battle Plains Basements
+
+    // Region: Black Swamp Basements
+
+    // Region: Highlands Basements
+
+    // Place: Emporium Abbey
+    {
+      name: "Emporium Abbey Basement",
+      fontSize: 30,
+      region: "Highlands",
+      details: {
+        title: "Emporium Abbey Basement",
+        coordinates: { x: 2767, y: 3167 },
+        image: "",
+        lore: "More information about Emporium Abbey Basement is coming soon.",
+        information: "",
+        bonus: "",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // Region: Western Isles Basements
+
+    // Region: Valley of Giants Basements
+
+    // Region: Heartwood Coast Basements
+
+    // Region: Tundria Basements
+
+    // Region: Breakwater Basements
+
+    // Region: Brokenfinger Basements
   ],
   catacombs: [
     {

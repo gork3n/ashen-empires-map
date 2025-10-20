@@ -1,10 +1,10 @@
 # Feature Summary: Interactive Mini-Map in Flyout
 
-This document outlines the complete set of changes required to implement an interactive map preview inside the information flyout panel.
+This document outlines the implementation of an interactive map preview inside the information flyout panel.
 
 ## 1. Objective
 
-For markers that link between the overworld and underground maps (e.g., "Grell Entrance"), the goal is to replace the static image in the flyout panel with a live, non-interactive mini-map. This map will be centered on the destination coordinates and will have a "Go to location" button overlaid on it. Clicking this button will switch the main map's view to the destination and close the flyout panel.
+For markers that link between the overworld and underground maps (e.g., "Grell Entrance"), the goal is to replace the static image in the flyout panel with a live, **interactive** mini-map. This map is centered on the destination coordinates and has a "Go to location" button overlaid on it. Clicking this button switches the main map's view to the destination and closes the flyout panel.
 
 ---
 
@@ -22,50 +22,47 @@ let flyoutMapInstance = null; // To hold the mini-map instance
 
 ### `showInfoFlyout(data)` Function
 
-This function needs to be `async` and must be modified to conditionally render the mini-map container.
+This function is the entry point. It conditionally renders the mini-map container and uses `requestAnimationFrame` for reliable initialization timing.
 
 ```javascript
-async function showInfoFlyout(data) {
-    // ... (get details, flyout, title, content elements) ...
+function showInfoFlyout(data) {
+    // ... (get flyout element) ...
+    const mainMapView = map.getView(); // Capture the main map's view.
 
-    // First, ensure any previous mini-map is destroyed
-    destroyFlyoutMap();
-
-    // ... (set title) ...
-
-    let imageHtml = '';
+    // If flyout is already open, hide it first, then show the new one.
     // ...
+    populateAndShowFlyout(data, mainMapView);
+}
+
+function populateAndShowFlyout(data, mainMapView) {
+    // ... (get details, title, content elements) ...
+
+    // Ensure any previous mini-map is destroyed.
+    destroyFlyoutMap();
 
     // --- Conditionally Render Mini-Map ---
     if (details.switchTo && details.flyTo) {
         // For map-switching markers, show a mini-map preview.
         imageHtml = `
             <div class="flyout-image-column">
-                <div class="flyout-map-preview-container">
+                <div class="flyout-map-preview-container ${details.switchTo}-preview">
                     <div id="flyout-minimap" class="flyout-minimap"></div>
                     <button id="flyout-go-btn" class="flyout-go-btn" title="Go to location"></button>
                 </div>
             </div>
         `;
-    } else if (details.image) {
-        // For regular markers, show the static image.
-        imageHtml = `...`;
     }
-
-    // ... (build textHtml and finalHtml) ...
-
-    content.innerHTML = finalHtml;
-    flyout.classList.add('visible');
+    // ... (build and render final HTML) ...
 
     // --- Initialize Mini-Map After Transition ---
     if (details.switchTo && details.flyTo) {
-        // The map must be initialized AFTER the flyout's transition ends,
-        // so that OpenLayers can correctly calculate the size of the map div.
-        const onTransitionEnd = () => {
-            initializeFlyoutMap(details.switchTo, details.flyTo);
-            flyout.removeEventListener('transitionend', onTransitionEnd);
-        };
-        flyout.addEventListener('transitionend', onTransitionEnd, { once: true });
+        // Use requestAnimationFrame for reliable initialization after the DOM is updated.
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => { // A second frame ensures rendering is complete.
+                initializeFlyoutMap(details.switchTo, details.flyTo, mainMapView);
+                // ... (add event listener to goButton) ...
+            });
+        });
 
         const goButton = document.getElementById('flyout-go-btn');
         if (goButton) {
@@ -75,6 +72,8 @@ async function showInfoFlyout(data) {
             });
         }
     }
+
+    flyout.classList.add('visible');
 }
 ```
 
@@ -119,4 +118,3 @@ New styles are needed for the map container and the overlaid button.
 Two new SVG icons are required in the `/icons/` directory:
 1.  `icons/location-pin.svg`: A pin icon to mark the destination on the mini-map.
 2.  `icons/double-arrow.svg`: An arrow icon for the "Go to location" button.
-

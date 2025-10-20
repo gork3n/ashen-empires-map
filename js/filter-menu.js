@@ -71,6 +71,7 @@ const markerTypeNames = {
 
     // Underground Markers
     'underworld_portal_ancient': "Ancient Portals",
+    'underworld_quest': "Quests",
     'underworld_shop_generic': "General Stores",
     'underworld_inn_keeper': "Innkeepers",
     'underworld_town_guardian': "Town Guardians",

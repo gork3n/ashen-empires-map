@@ -323,12 +323,14 @@ function initializeMap() {
     map = new Map({ // Initialize the map
         target: 'map',
         layers: [overworldTileLayer, undergroundTileLayer],
+        // This is the critical fix. By defining the resolutions directly on the main
+        // map's view, we guarantee that `map.getView().getResolutions()` will always
+        // return a valid array, which solves the `undefined` error in the mini-map.
         view: new View({
             center: initialCenterOlCoords, // Use your calculated center
-            resolution: 8, // Set to 8 for zoom level 4
-            minResolution: 0.1, // Corresponds to the most zoomed-in level
-            maxResolution: 128, // Corresponds to the most zoomed-out level
-            constrainResolution: true, // Snap to integer zoom levels
+            resolution: 8, // Start at zoom level 4
+            resolutions: [128, 64, 32, 16, 8, 4, 2, 1], // Explicitly define resolutions
+            constrainResolution: true, // Snap to defined zoom levels
         })
     });
 
@@ -596,6 +598,7 @@ function setupInfoFlyout() {
  */
 function showInfoFlyout(data) {
     const flyout = document.getElementById('info-flyout');
+    const mainMapView = map.getView(); // Capture the view object now.
     const transitionDuration = 400; // Must match the CSS transition duration
 
     // If the flyout is already visible, hide it first, then show the new one.
@@ -604,11 +607,11 @@ function showInfoFlyout(data) {
 
         // Wait for the hide animation to complete before showing the new content.
         setTimeout(() => {
-            populateAndShowFlyout(data);
+            populateAndShowFlyout(data, mainMapView);
         }, transitionDuration);
     } else {
         // If it's not visible, just show it immediately.
-        populateAndShowFlyout(data);
+        populateAndShowFlyout(data, mainMapView);
     }
 }
 
@@ -616,7 +619,7 @@ function showInfoFlyout(data) {
  * Populates the flyout with content and makes it visible.
  * @param {object} data - The feature data.
  */
-function populateAndShowFlyout(data) {
+function populateAndShowFlyout(data, mainMapView) {
     // The data object now contains everything, but the core info is in `details`.
     const details = data.details;
     if (!details) return;
@@ -727,21 +730,22 @@ function populateAndShowFlyout(data) {
 
     // --- Mini-Map Initialization Logic ---
     if (details.switchTo && details.flyTo) {
-        // The map must be initialized AFTER the flyout's transition ends,
-        // so that OpenLayers can correctly calculate the size of the map div.
-        flyout.addEventListener('transitionend', () => {
-            // Initialize the map now that the container is visible and has dimensions.
-            initializeFlyoutMap(details.switchTo, details.flyTo);
-
-            // Set up the "Go" button listener after the map is created.
-            const goButton = document.getElementById('flyout-go-btn');
-            if (goButton) {
-                goButton.addEventListener('click', () => {
-                    switchMap(details.switchTo, details.flyTo);
-                    hideInfoFlyout(); // Close the flyout after clicking
-                });
-            }
-        }, { once: true });
+        // Use requestAnimationFrame to ensure the DOM is updated and the flyout
+        // is visible before we try to initialize the map inside it. This is the
+        // most reliable way to handle this, as it's not dependent on CSS transitions.
+        requestAnimationFrame(() => {
+            // A second frame ensures even complex browser rendering is complete.
+            requestAnimationFrame(() => {
+                initializeFlyoutMap(details.switchTo, details.flyTo, mainMapView);
+                const goButton = document.getElementById('flyout-go-btn');
+                if (goButton) {
+                    goButton.addEventListener('click', () => {
+                        switchMap(details.switchTo, details.flyTo);
+                        hideInfoFlyout();
+                    });
+                }
+            });
+        });
     }
 
     flyout.classList.add('visible');
@@ -772,10 +776,21 @@ function hideInfoFlyout() {
  * @param {string} targetMap - The map to display ('overworld' or 'underground').
  * @param {object} flyToCoords - The coordinates {x, y} to center the mini-map on.
  */
-function initializeFlyoutMap(targetMap, flyToCoords) {
+function initializeFlyoutMap(targetMap, flyToCoords, mainMapView) {
+    // --- Pre-computation and Safety Checks ---
+    // Ensure flyToCoords is not null/undefined before proceeding.
+    if (!flyToCoords) {
+        console.error("initializeFlyoutMap called without flyToCoords.");
+        return; // Exit if there are no coordinates
+    }
+
     const mapSize = 32768;
     const scaleFactor = mapSize / 4096;
     const offset = scaleFactor / 2;
+
+    // --- Determine Zoom Level ---
+    // The main map's resolutions are [128, 64, 32, 16, 8, 4, 2, 1].
+    // A higher zoom number means a lower resolution value.
 
     const olCoords = [
         flyToCoords.x * scaleFactor + offset,
@@ -785,19 +800,19 @@ function initializeFlyoutMap(targetMap, flyToCoords) {
     // --- 1. Get the Tile Layer ---
     // Get the SOURCE from the main map's layer to ensure we show the correct map (overworld/underground).
     const targetSource = targetMap === 'underground' ? undergroundTileLayer.getSource() : overworldTileLayer.getSource();
-    const miniMapTileLayer = new TileLayer({
-        source: targetSource
-    });
 
     // --- 2. Get the Marker Layers ---
     // Get the sources from the main map's layers. This is the correct way to share
     // data between maps without sharing layer state (like visibility).
-    let targetLayerObjects;
+    let targetMarkerLayerObjects;
+    let targetLabelLayerObjects;
     if (targetMap === 'underground') {
-        targetLayerObjects = undergroundMarkerLayers;
+        targetMarkerLayerObjects = undergroundMarkerLayers;
+        targetLabelLayerObjects = undergroundLabelLayers;
     } else {
         // For the overworld, we need all its layers, including the 'undergrounds' layer.
-        targetLayerObjects = markerLayers;
+        targetMarkerLayerObjects = markerLayers;
+        targetLabelLayerObjects = labelLayers;
     }
 
     // Create a new, independent style function for the mini-map.
@@ -811,33 +826,60 @@ function initializeFlyoutMap(targetMap, flyToCoords) {
         return style;
     };
 
-    const targetMarkerLayers = Object.values(targetLayerObjects).map(layer => {
-        return new VectorLayer({
-            source: layer.getSource(),
-            style: miniMapStyleFunction, // Use the new, isolated style function
-            visible: true // Ensure the layer is visible on the mini-map
-        });
-    });
+    const markerLayersToAdd = (targetMarkerLayerObjects && Object.keys(targetMarkerLayerObjects).length > 0)
+        ? Object.values(targetMarkerLayerObjects)
+            .map(layer => {
+                if (layer && layer.getSource()) {
+                    return new VectorLayer({
+                        source: layer.getSource(),
+                        style: miniMapStyleFunction,
+                        visible: true
+                    });
+                }
+                return null; // Explicitly return null for invalid layers
+            }).filter(Boolean) // Filter out any nulls from the final array
+        : [];
 
+    // --- 3. Get the Label Layers ---
+    const labelLayersToAdd = (targetLabelLayerObjects && Object.keys(targetLabelLayerObjects).length > 0)
+        ? Object.values(targetLabelLayerObjects)
+            .map(layer => {
+                if (layer && layer.getSource()) {
+                    return new VectorLayer({
+                        source: layer.getSource(),
+                        style: layer.getStyle(),
+                        visible: true
+                    });
+                }
+                return null;
+            }).filter(Boolean)
+        : [];
 
     // --- 4. Assemble All Layers for the Mini-Map ---
-    // Start with the base tile layer, then add all the marker layers from the target map,
-    const allLayers = [miniMapTileLayer, ...targetMarkerLayers];
+    const miniMapTileLayer = new TileLayer({ source: targetSource }); // Define the tile layer
+    // Assemble all layers, ensuring no undefined values are included.
+    const allLayers = [miniMapTileLayer, ...markerLayersToAdd, ...labelLayersToAdd];
+
+    // --- 5. Create the View and Map Instance ---
+    // This is the critical fix. We must create a valid View object first.
+    // We use the main map's resolutions as a reliable source.
+    // By fixing the main map's view, we can now reliably get the resolutions.
+    const resolutions = map.getView().getResolutions();
+    const targetZoom = flyToCoords.zoom !== undefined ? flyToCoords.zoom : 4;
+    const initialResolution = resolutions[Math.max(0, Math.min(resolutions.length - 1, targetZoom))];
+
+    const miniMapView = new View({
+        center: olCoords,
+        resolution: initialResolution,
+        resolutions: resolutions, // Provide the full resolution array
+        constrainResolution: true,
+    });
 
     flyoutMapInstance = new Map({
         target: 'flyout-minimap',
         layers: allLayers,
-        // By not specifying controls or interactions, we get the defaults (pan, zoom, etc.)
-        view: new View({
-            center: olCoords,
-            // The main map's resolutions are [128, 64, 32, 16, 8, 4, 2, 1].
-            // Resolution 8 corresponds to zoom level 4, which is a good starting overview.
-            resolution: 8,
-            // Set the same zoom constraints as the main map for a consistent feel.
-            minResolution: 1, // Corresponds to zoom level 7
-            maxResolution: 128, // Corresponds to zoom level 0
-            constrainResolution: true,
-        })
+        view: miniMapView,
+        // By not specifying interactions or controls, OpenLayers will use the defaults, which include pan and zoom.
     });
 }
 
@@ -1129,9 +1171,10 @@ function addMarkerFeature(source, x, y, type, tooltip, details, place, region) {
     // Add 0.5 to the coordinates to center the marker within its pixel block.
     const correctedX = x;
     const correctedY = y;
-    const scaledX = (correctedX + 0.5) * scaleFactor;
-    const olY = -(correctedY + 0.5) * scaleFactor;
-    const coordinates = [scaledX, olY];
+    const scaledX = correctedX * scaleFactor;
+    const olY = -(correctedY * scaleFactor);
+    const offset = scaleFactor / 2;
+    const coordinates = [scaledX + offset, olY - offset]; // Use the centered coordinates
     
     // Create a feature for the marker
     const feature = new Feature({
@@ -1286,16 +1329,17 @@ function addLabelFeature(source, x, y, text, fontSize, category, details) {
     // Add 0.5 to the coordinates to center the label within its pixel block.
     const correctedX = x;
     const correctedY = y;
-    const scaledX = (correctedX + 0.5) * scaleFactor;
-    const olY = -(correctedY + 0.5) * scaleFactor;
-    
+    const scaledX = correctedX * scaleFactor;
+    const olY = -(correctedY * scaleFactor);
+    const offset = scaleFactor / 2;
+
     // Create a point feature at this location
     const feature = new Feature({
         geometry: new Point([scaledX, olY]),
         name: text,
         baseFontSize: fontSize,
         category: category,
-        details: details
+        details: details,
     });
     
     // Add a tooltip for specific label categories that use a special font.
@@ -1596,8 +1640,8 @@ function initializeCoordinateDisplay() {
         map.on('pointerdown', function(evt) {
             const coord = evt.coordinate;
             if (coord) {
-                lastX = Math.floor(coord[0] / scaleFactor) + 1;
-                lastY = Math.floor(-coord[1] / scaleFactor) + 1;
+                lastX = Math.floor(coord[0] / scaleFactor);
+                lastY = Math.floor(-coord[1] / scaleFactor);
                 updateDisplay();
             }
         });
@@ -1607,8 +1651,8 @@ function initializeCoordinateDisplay() {
             const coord = evt.coordinate;
             if (coord) {
                 // Apply the reverse of the global offset to get the correct display coordinate.
-                const newX = Math.floor(coord[0] / scaleFactor) + 1;
-                const newY = Math.floor(-coord[1] / scaleFactor) + 1;
+                const newX = Math.floor(coord[0] / scaleFactor);
+                const newY = Math.floor(-coord[1] / scaleFactor);
                 if (newX !== lastX || newY !== lastY) {
                     lastX = newX;
                     lastY = newY;

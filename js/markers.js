@@ -60,7 +60,7 @@ export const markerStyles = {
     color: "#ccae03ff", // Goldend Ochre
   },
 
-  overworld_shop_weapon: {
+  overworld_shop_weaponry: {
     icon: "icons/crossed-swords.svg",
     color: "#32CD32", // LimeGreen
   },
@@ -442,7 +442,7 @@ export const mapMarkers = {
       place: "Lotor's Summer Palace",
       details: {
         title: "Portal to Party Island",
-        coordinates: { x: 761, y: 589 },
+        coordinates: { x: 760, y: 589 },
         image: "images/portals/Party_Island_Portal.png",
         lore: "More information about Portal to Party Island is coming soon.",
         npcs: [],
@@ -1703,7 +1703,7 @@ export const mapMarkers = {
     //   region: "Valinor",
     //   place: "Valinor",
     //   details: {
-    //     title: "Thurstan (Dynamic Quest)",
+    //     title: "Thurstan (Dynamic quest)",
     //     coordinates: { x: 722, y: 91 },
     //     image: "images/markers/Thurstan_Dynamic_Quest.png",
     //     lore: "More information about Thurstan (Wanders) is coming soon.",
@@ -1717,7 +1717,7 @@ export const mapMarkers = {
     //   region: "Valinor",
     //   place: "Valinor",
     //   details: {
-    //     title: "Philipus (Dynamic Quest)",
+    //     title: "Philipus (Dynamic quest)",
     //     coordinates: { x: 746, y: 101 },
     //     image: "images/markers/Philipus_Dynamic_Quest.png",
     //     lore: "More information about Philipus (Wanders) is coming soon.",
@@ -1731,7 +1731,7 @@ export const mapMarkers = {
     //   region: "Valinor",
     //   place: "Valinor",
     //   details: {
-    //     title: "Alard (Dynamic Quest)",
+    //     title: "Alard (Dynamic quest)",
     //     coordinates: { x: 737, y: 104 },
     //     image: "images/markers/Alard_Dynamic_Quest.png",
     //     lore: "More information about Alard (Wanders) is coming soon.",
@@ -1745,7 +1745,7 @@ export const mapMarkers = {
     //   region: "Valinor",
     //   place: "Valinor",
     //   details: {
-    //     title: "Basilus (Dynamic Quest)",
+    //     title: "Basilus (Dynamic quest)",
     //     coordinates: { x: 749, y: 142 },
     //     image: "images/markers/Basilus_Dynamic_Quest.png",
     //     lore: "More information about Basilus (Wanders) is coming soon.",
@@ -1759,7 +1759,7 @@ export const mapMarkers = {
     //   region: "Valinor",
     //   place: "Valinor",
     //   details: {
-    //     title: "Ailward (Dynamic Quest)",
+    //     title: "Ailward (Dynamic quest)",
     //     coordinates: { x: 735, y: 131 },
     //     image: "images/markers/Ailward_Dynamic_Quest.png",
     //     lore: "More information about Ailward (Wanders) is coming soon.",
@@ -1773,7 +1773,7 @@ export const mapMarkers = {
     //   region: "Valinor",
     //   place: "Valinor",
     //   details: {
-    //     title: "Sperling (Dynamic Quest)",
+    //     title: "Sperling (Dynamic quest)",
     //     coordinates: { x: 748, y: 133 },
     //     image: "images/markers/Sperling_Dynamic_Quest.png",
     //     lore: "More information about Sperling (Wanders) is coming soon.",
@@ -1787,7 +1787,7 @@ export const mapMarkers = {
     //   region: "Valinor",
     //   place: "Valinor",
     //   details: {
-    //     title: "Wimund (Dynamic Quest)",
+    //     title: "Wimund (Dynamic quest)",
     //     coordinates: { x: 731, y: 147 },
     //     image: "images/markers/Wimund_Dynamic_Quest.png",
     //     lore: "More information about Wimund (Wanders) is coming soon.",
@@ -1801,7 +1801,7 @@ export const mapMarkers = {
     //   region: "Valinor",
     //   place: "Valinor",
     //   details: {
-    //     title: "Seman (Dynamic Quest)",
+    //     title: "Seman (Dynamic quest)",
     //     coordinates: { x: 781, y: 101 },
     //     image: "images/markers/Seman_Dynamic_Quest.png",
     //     lore: "More information about Seman (Wanders) is coming soon.",
@@ -1815,7 +1815,7 @@ export const mapMarkers = {
     //   region: "Valinor",
     //   place: "Valinor",
     //   details: {
-    //     title: "Wymare (Dynamic Quest)",
+    //     title: "Wymare (Dynamic quest)",
     //     coordinates: { x: 723, y: 158 },
     //     image: "images/markers/Wymare_Dynamic_Quest.png",
     //     lore: "More information about Wymare (Wanders) is coming soon.",
@@ -1829,7 +1829,7 @@ export const mapMarkers = {
     //   region: "Valinor",
     //   place: "Valinor",
     //   details: {
-    //     title: "Byota (Dynamic Quest)",
+    //     title: "Byota (Dynamic quest)",
     //     coordinates: { x: 769, y: 92 },
     //     image: "images/markers/Byota_Dynamic_Quest.png",
     //     lore: "More information about Byota (Wanders) is coming soon.",
@@ -2031,6 +2031,22 @@ export const mapMarkers = {
     // Region: Battle Plains Quests
 
     // Region: Black Swamp Quests
+    {
+      category: "npc",
+      type: "overworld_quest",
+      tooltip: "Dawat Worker",
+      region: "Black Swamp",
+      place: "Black Swamp",
+      details: {
+        title: "Dawat Worker",
+        coordinates: { x: 2737, y: 3306 },
+        image: "images/markers/Dawat_Worker_Quest.png",
+        lore: "Dawat Worker is a quest-giving NPC located in Black Swamp near the northwest bridge.",
+        npcs: [],
+        quests: [],
+        links: [{ text: "Ashen Empires Wiki (Dawat Worker)", url: "https://ashenempires.fandom.com/wiki/Dawat_Worker" }], 
+      },
+    },
     // City: Krog Quests
     {
       category: "npc",
@@ -2063,7 +2079,7 @@ export const mapMarkers = {
         image: "images/markers/Ambassador_to_Krog_Quest.png",
         lore: "Ambassador to Krog is part of the Krog / Arda Quest.",
         npcs: [],
-        links: [{ text: "Ashen Empires Wiki (Krog / Arda Quest)", url: "https://ashenempires.fandom.com/wiki/Krog_/_Arda_Quest" }], 
+        links: [{ text: "Ashen Empires Wiki (Krog / Arda quest)", url: "https://ashenempires.fandom.com/wiki/Krog_/_Arda_Quest" }], 
       },
     },
     {
@@ -2078,7 +2094,7 @@ export const mapMarkers = {
         image: "images/markers/Alchemist_Singaford_Quest.png",
         lore: "Alchemist Singaford is part of the Afflicted Tree Quest.",
         npcs: [],
-        links: [{ text: "Ashen Empires Wiki (Afflicted Tree Quest)", url: "https://ashenempires.fandom.com/wiki/Afflicted_Tree" }], 
+        links: [{ text: "Ashen Empires Wiki (Afflicted Tree quest)", url: "https://ashenempires.fandom.com/wiki/Afflicted_Tree" }], 
       },
     },
     {
@@ -2093,13 +2109,13 @@ export const mapMarkers = {
         image: "images/markers/Warrog_Quest.png",
         lore: "Warrog is part of the Warrog Quest.",
         npcs: [],
-        links: [{ text: "Ashen Empires Wiki (Warrog Quest)", url: "https://ashenempires.fandom.com/wiki/Warrog" }], 
+        links: [{ text: "Ashen Empires Wiki (Warrog quest)", url: "https://ashenempires.fandom.com/wiki/Warrog" }], 
       },
     },
     {
       category: "npc",
       type: "overworld_quest",
-      tooltip: "Ivogur",
+      tooltip: "Ivogur (Wanders)",
       region: "Black Swamp",
       place: "Krog",
       details: {
@@ -2108,7 +2124,206 @@ export const mapMarkers = {
         image: "images/markers/Ivogur_Quest.png",
         lore: "Ivogur is part of the Ivogur Quest.",
         npcs: [],
-        links: [{ text: "Ashen Empires Wiki (Ivogur Quest)", url: "https://ashenempires.fandom.com/wiki/Ivogur" }], 
+        links: [{ text: "Ashen Empires Wiki (Ivogur quest)", url: "https://ashenempires.fandom.com/wiki/Ivogur" }], 
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_quest",
+      tooltip: "Haburt",
+      region: "Black Swamp",
+      place: "Krog",
+      details: {
+        title: "Haburt",
+        coordinates: { x: 3121, y: 3763 },
+        image: "images/markers/Haburt_Quest.png",
+        lore: "Haburt is part of the 40 Fire Ants Quest.",
+        npcs: [],
+        links: [{ text: "Ashen Empires Wiki (40 Fire Ants quest)", url: "https://ashenempires.fandom.com/wiki/40_Fire_Ants" }], 
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_quest",
+      tooltip: "Jessicugh (Wanders)",
+      region: "Black Swamp",
+      place: "Krog",
+      details: {
+        title: "Jessicugh",
+        coordinates: { x: 3104, y: 3780 },
+        image: "images/markers/Jessicugh_Quest.png",
+        lore: "Jessicugh is part of the Sting Operation Quest.",
+        npcs: [],
+        links: [{ text: "Ashen Empires Wiki (Sting Operation quest)", url: "https://ashenempires.fandom.com/wiki/Sting_Operation" }], 
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_quest",
+      tooltip: "Oonga",
+      region: "Black Swamp",
+      place: "Krog",
+      details: {
+        title: "Oonga",
+        coordinates: { x: 3150, y: 3743 },
+        image: "images/markers/Oonga_Quest.png",
+        lore: "Oonga is part of the Oonga's Lost Pet Quest.",
+        npcs: [],
+        links: [{ text: "Ashen Empires Wiki (Oonga's Lost Pet quest)", url: "https://ashenempires.fandom.com/wiki/Oonga%27s_Lost_Pet" }], 
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_quest",
+      tooltip: "Rumpda (Wanders)",
+      region: "Black Swamp",
+      place: "Krog",
+      details: {
+        title: "Rumpda",
+        coordinates: { x: 3141, y: 3763 },
+        image: "images/markers/Rumpda_Quest.png",
+        lore: "Rumpda is part of the Rumpda's Swamp Quest.",
+        npcs: [],
+        links: [{ text: "Ashen Empires Wiki (Rumpda's Swamp quest)", url: "https://ashenempires.fandom.com/wiki/Rumpda%27s_Swamp_Quest" }], 
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_quest",
+      tooltip: "Bograhk Dargarkh (Wanders)",
+      region: "Black Swamp",
+      place: "Krog",
+      details: {
+        title: "Bograhk Dargarkh",
+        coordinates: { x: 3105, y: 3755 },
+        image: "images/markers/Bograhk_Dargarkh_Quest.png",
+        lore: "Bograhk Dargarkh is part of the The Art of Combat Quest.",
+        npcs: [],
+        links: [{ text: "Ashen Empires Wiki (The Art of Combat quest)", url: "https://ashenempires.fandom.com/wiki/The_Art_of_Combat" }], 
+      },
+    },
+    // Place: Medosk Mountain Quests
+    {
+      category: "npc",
+      type: "overworld_quest",
+      tooltip: "Moklad's Journal",
+      region: "Black Swamp",
+      place: "Krog",
+      details: {
+        title: "Moklad's Journal",
+        coordinates: { x: 2884, y: 3498 },
+        image: "images/markers/Moklads_Journal_Quest.png",
+        lore: "Moklad's Journal is part of the Moklad is Missing Quest.",
+        npcs: [],
+        links: [{ text: "Ashen Empires Wiki (Moklad is Missing quest)", url: "https://ashenempires.fandom.com/wiki/Moklad_is_Missing" }], 
+      },
+    },
+    // Place: Medosk Mountain Pass Quests
+    {
+      category: "npc",
+      type: "overworld_quest",
+      tooltip: "Kobold Prisoner",
+      region: "Black Swamp",
+      place: "Krog",
+      details: {
+        title: "Kobold Prisoner",
+        coordinates: { x: 3273, y: 3780 },
+        image: "images/markers/Kobold_Prisoner_Quest.png",
+        lore: "Kobold Prisoner is part of the Hole of Tears Quest.",
+        npcs: [],
+        links: [{ text: "Ashen Empires Wiki (Hole of Tears quest)", url: "https://ashenempires.fandom.com/wiki/Hole_of_Tears" }], 
+      },
+    },
+    // City: Samad Quests
+    {
+      category: "npc",
+      type: "overworld_quest",
+      tooltip: "Jeqa (Wanders)",
+      region: "Black Swamp",
+      place: "Samad",
+      details: {
+        title: "Jeqa",
+        coordinates: { x: 2648, y: 3524 },
+        image: "images/markers/Jeqa_Quest.png",
+        lore: "Jeqa is part of the Moklad is Missing Quest.",
+        npcs: [],
+        links: [{ text: "Ashen Empires Wiki (Moklad is Missing quest)", url: "https://ashenempires.fandom.com/wiki/Moklad_is_Missing" }], 
+      },
+    },
+    // City: Dawat Quests
+    {
+      category: "npc",
+      type: "overworld_quest",
+      tooltip: "Kongodo (Wanders)",
+      region: "Black Swamp",
+      place: "Dawat",
+      details: {
+        title: "Kongodo",
+        coordinates: { x: 3088, y: 3366 },
+        image: "images/markers/Kongodo_Quest.png",
+        lore: "Kongodo is part of the Invasion Quest.",
+        npcs: [],
+        links: [{ text: "Ashen Empires Wiki (Invasion quest)", url: "https://ashenempires.fandom.com/wiki/Invasion" }], 
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_quest",
+      tooltip: "Kudah",
+      region: "Black Swamp",
+      place: "Dawat",
+      details: {
+        title: "Kudah",
+        coordinates: { x: 3085, y: 3360 },
+        image: "images/markers/Kudah_Quest.png",
+        lore: "Kudah is part of the Kudah Quest.",
+        npcs: [],
+        links: [{ text: "Ashen Empires Wiki (Kudah quest)", url: "https://ashenempires.fandom.com/wiki/Kudah" }], 
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_quest",
+      tooltip: "Shargar",
+      region: "Black Swamp",
+      place: "Dawat",
+      details: {
+        title: "Shargar",
+        coordinates: { x: 3089, y: 3362 },
+        image: "images/markers/Shargar_Quest.png",
+        lore: "Shargar is part of the Shargar Quest.",
+        npcs: [],
+        links: [{ text: "Ashen Empires Wiki (Shargar quest)", url: "https://ashenempires.fandom.com/wiki/Shargar" }], 
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_quest",
+      tooltip: "Hapuna",
+      region: "Black Swamp",
+      place: "Dawat",
+      details: {
+        title: "Hapuna",
+        coordinates: { x: 3076, y: 3364 },
+        image: "images/markers/Hapuna_Quest.png",
+        lore: "Hapuna is part of the Hapuna Quest.",
+        npcs: [],
+        links: [{ text: "Ashen Empires Wiki (Hapuna quest)", url: "https://ashenempires.fandom.com/wiki/Hapuna" }], 
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_quest",
+      tooltip: "Sweetness",
+      region: "Black Swamp",
+      place: "Dawat",
+      details: {
+        title: "Sweetness",
+        coordinates: { x: 3116, y: 3374 },
+        image: "images/markers/Sweetness_Quest.png",
+        lore: "Sweetness is part of the Sweetness Quest.",
+        npcs: [],
+        links: [{ text: "Ashen Empires Wiki (Sweetness quest)", url: "https://ashenempires.fandom.com/wiki/Sweetness" }], 
       },
     },
 
@@ -2141,7 +2356,7 @@ export const mapMarkers = {
         image: "images/markers/Claricia_Forence_Quest.png",
         lore: "Claricia Forence is part of the Lotorian Quest.",
         npcs: [],
-        links: [{ text: "Ashen Empires Wiki (Lotorian Quest)", url: "https://ashenempires.fandom.com/wiki/Faction_Quests#Lotorian_Quest" }], 
+        links: [{ text: "Ashen Empires Wiki (Lotorian quest)", url: "https://ashenempires.fandom.com/wiki/Faction_Quests#Lotorian_Quest" }], 
       },
     },
     {
@@ -2156,7 +2371,7 @@ export const mapMarkers = {
         image: "images/markers/Warlord_Isbraen_Quest.png",
         lore: "Warlord Isbraen is an Archery Trainer located in Parian in the Government building.",
         npcs: [],
-        links: [{ text: "Ashen Empires Wiki (Lotorian Quest)", url: "https://ashenempires.fandom.com/wiki/Parian_Warlords" }],
+        links: [{ text: "Ashen Empires Wiki (Lotorian quest)", url: "https://ashenempires.fandom.com/wiki/Parian_Warlords" }],
       },
     },
     {
@@ -2171,7 +2386,7 @@ export const mapMarkers = {
         image: "images/markers/Warlord_Uerog_Quest.png",
         lore: "Warlord Uerog is a Warrior Trainer located in Parian in the Government building.",
         npcs: [],
-        links: [{ text: "Ashen Empires Wiki (Lotorian Quest)", url: "https://ashenempires.fandom.com/wiki/Parian_Warlords" }],
+        links: [{ text: "Ashen Empires Wiki (Lotorian quest)", url: "https://ashenempires.fandom.com/wiki/Parian_Warlords" }],
       },
     },
     {
@@ -2810,7 +3025,7 @@ export const mapMarkers = {
       place: "Battle Plains",
       details: {
         title: "Battle Plains Dock",
-        coordinates: { x: 2599, y: 3507 },
+        coordinates: { x: 2599, y: 3508 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Battle Plains Dock is coming soon.",
         npcs: [],
@@ -2825,7 +3040,7 @@ export const mapMarkers = {
       place: "Battle Plains",
       details: {
         title: "Maraket Dock",
-        coordinates: { x: 3109, y: 4020 },
+        coordinates: { x: 3109, y: 4021 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Maraket Dock is coming soon.",
         npcs: [],
@@ -2842,7 +3057,7 @@ export const mapMarkers = {
       place: "Samad",
       details: {
         title: "Samad Dock",
-        coordinates: { x: 2612, y: 3511 },
+        coordinates: { x: 2612, y: 3513 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Samad Dock is coming soon.",
         npcs: [],
@@ -3852,7 +4067,7 @@ export const mapMarkers = {
       },
     },
 
-    // Mainland Town Guardians
+
     // Region: Darkwoods Town Guardians
     // City: Josody Town Guardians
     
@@ -3882,6 +4097,26 @@ export const mapMarkers = {
     // City: Autumn Town Guardians
 
     // City: Whisperdale Town Guardians
+
+    // Region: Battle Plains Town Guardians
+
+    // Region: Black Swamp Town Guardians
+    // City: Dawat Town Guardians
+    {
+      category: "npc",
+      type: "overworld_town_guardian",
+      tooltip: "Town Guardian (Dawat)",
+      region: "Highlands",
+      place: "Dawat",
+      details: {
+        title: "Town Guardian",
+        coordinates: { x: 3082, y: 3370 },
+        image: "images/markers/Dawat_Town_Guardian.png",
+        lore: "The Town Guardian in Dawat.",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // Region: Highlands Town Guardians
     // City: Parian Town Guardians
@@ -4002,8 +4237,41 @@ export const mapMarkers = {
     // City: Autumn Town Wizard of Insight
 
     // City: Whisperdale Town Wizard of Insight
+    {
+      category: "npc",
+      type: "overworld_town_wizard_of_insight",
+      tooltip: "Town Wizard of Insight (Dunmarrow)",
+      region: "Darkwoods",
+      place: "Dunmarrow",
+      details: {
+        title: "Town Wizard of Insight",
+        coordinates: { x: 1344, y: 3200 },
+        image: "images/markers/Dunmarrow_Town_Wizard_of_Insight.png",
+        lore: "More information about Dunmarrow Town Wizard of Insight is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // Region: Battle Plains Town Wizard of Insight
+
+    // Region: Black Swamp Town Wizard of Insight
+    // City: Dawat Town Wizard of Insight
+    {
+      category: "npc",
+      type: "overworld_town_wizard_of_insight",
+      tooltip: "Town Wizard of Insight (Dawat)",
+      region: "Highlands",
+      place: "Dawat",
+      details: {
+        title: "Town Wizard of Insight",
+        coordinates: { x: 3075, y: 3384 },
+        image: "images/markers/Dawat_Town_Wizard_of_Insight.png",
+        lore: "More information about Dawat Town Wizard of Insight is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // Region: Highlands Town Wizard of Insight
     // City: Parian Town Wizard of Insight
@@ -4044,35 +4312,7 @@ export const mapMarkers = {
       },
     },
 
-    // Region: Darkwoods Town Wizard of Insight
-    // City: Josody Town Wizard of Insight
-
-    // City: Gulley Town Wizard of Insight
-
-    // City: Redwake Town Wizard of Insight
-
-    // City: Darkfell Town Wizard of Insight
-
-    // City: Dunmarrow Town Wizard of Insight
-
-    // City: Autumn Town Wizard of Insight
-
-    // City: Whisperdale Town Wizard of Insight
-    {
-      category: "npc",
-      type: "overworld_town_wizard_of_insight",
-      tooltip: "Town Wizard of Insight (Dunmarrow)",
-      region: "Darkwoods",
-      place: "Dunmarrow",
-      details: {
-        title: "Town Wizard of Insight",
-        coordinates: { x: 1344, y: 3200 },
-        image: "images/markers/Dunmarrow_Town_Wizard_of_Insight.png",
-        lore: "More information about Dunmarrow Town Wizard of Insight is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
+    
 
     // Sub-Category Game of Chance
     // Island: Lotor's Summer Palace Game of Chance
@@ -4538,7 +4778,7 @@ export const mapMarkers = {
       place: "Dunmarrow",
       details: {
         title: "Dunmarrow Bank",
-        coordinates: { x: 1393, y: 3207 },
+        coordinates: { x: 1394, y: 3208 },
         image: "images/markers/Wythwyvn_Dunmarrow_Bank.png",
         lore: "More information about Dunmarrow Wythwyvn's Bank is coming soon.",
         npcs: [],
@@ -4552,6 +4792,7 @@ export const mapMarkers = {
     // Region: Battle Plains Bank
 
     // Region: Black Swamp Bank
+    // City: Krog Bank
     {
       category: "npc",
       type: "overworld_bank",
@@ -4562,6 +4803,54 @@ export const mapMarkers = {
         title: "Bank",
         coordinates: { x: 3104, y: 3765 },
         image: "images/markers/Krog_Bank.png",
+        lore: "More information about Bank is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    // City: Maraket Bank
+    {
+      category: "npc",
+      type: "overworld_bank",
+      tooltip: "Bank",
+      region: "Black Swamp",
+      place: "Maraket",
+      details: {
+        title: "Bank",
+        coordinates: { x: 3076, y: 4007 },
+        image: "images/markers/Maraket_Bank.png",
+        lore: "More information about Bank is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    // City: Samad Bank
+    {
+      category: "npc",
+      type: "overworld_bank",
+      tooltip: "Bank",
+      region: "Black Swamp",
+      place: "Samad",
+      details: {
+        title: "Bank",
+        coordinates: { x: 2641, y: 3517 },
+        image: "images/markers/Samad_Bank.png",
+        lore: "More information about Bank is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    // City: Dawat Bank
+    {
+      category: "npc",
+      type: "overworld_bank",
+      tooltip: "Bank",
+      region: "Black Swamp",
+      place: "Dawat",
+      details: {
+        title: "Bank",
+        coordinates: { x: 3093, y: 3377 },
+        image: "images/markers/Dawat_Bank.png",
         lore: "More information about Bank is coming soon.",
         npcs: [],
         links: [],
@@ -5457,7 +5746,7 @@ export const mapMarkers = {
     },
     {
       category: "npc",
-      type: "overworld_shop_weapon",
+      type: "overworld_shop_weaponry",
       tooltip: "Micheal Vonda's Weaponry Shop",
       region: "Valinor",
       place: "Valinor",
@@ -5659,7 +5948,7 @@ export const mapMarkers = {
     // City: Silvest Shops
     {
       category: "npc",
-      type: "overworld_shop_weapon",
+      type: "overworld_shop_weaponry",
       tooltip: "Bertwald's Weaponry Shop",
       region: "Silvest Valley",
       place: "Silvest",
@@ -5806,7 +6095,7 @@ export const mapMarkers = {
     // City: Fort Eastwatch Shops
     {
       category: "npc",
-      type: "overworld_shop_weapon",
+      type: "overworld_shop_weaponry",
       tooltip: "Sgt. Stykler's Weaponry Shop",
       region: "Silvest Valley",
       place: "Fort Eastwatch",
@@ -5905,7 +6194,7 @@ export const mapMarkers = {
     },
     {
       category: "npc",
-      type: "overworld_shop_weapon",
+      type: "overworld_shop_weaponry",
       tooltip: "Tolar's Weaponry Shop",
       region: "Krythan",
       place: "Jeel",
@@ -6115,7 +6404,7 @@ export const mapMarkers = {
     },
     {
       category: "npc",
-      type: "overworld_shop_weapon",
+      type: "overworld_shop_weaponry",
       tooltip: "Hale's Weaponry Shop",
       region: "Krythan",
       place: "Lotor's Castle",
@@ -6251,7 +6540,7 @@ export const mapMarkers = {
     },
     {
       category: "npc",
-      type: "overworld_shop_weapon",
+      type: "overworld_shop_weaponry",
       tooltip: "Andhun's Weaponry Shop",
       region: "Krythan",
       place: "Vrethpool",
@@ -6400,7 +6689,7 @@ export const mapMarkers = {
       place: "Dunmarrow",
       details: {
         title: "Calidor Reitmsa's Ship Yard",
-        coordinates: { x: 1362, y: 3227 },
+        coordinates: { x: 1362, y: 3228 },
         image: "images/markers/Calidor_Reitmsa_Ship_Yard.png",
         lore: "More information about Calidor Reitmsa's Ship Yard is coming soon.",
         currency: "gold",
@@ -6448,7 +6737,7 @@ export const mapMarkers = {
       place: "Dunmarrow",
       details: {
         title: "Keile Joargo's Provisioner Shop",
-        coordinates: { x: 1391, y: 3230 },
+        coordinates: { x: 1391, y: 3232 },
         image: "images/markers/Keile_Joargo_Provisioner_Shop.png",
         lore: "More information about Keile Joargo's Provisioner Shop is coming soon.",
         currency: "gold",
@@ -6458,7 +6747,7 @@ export const mapMarkers = {
     },
     {
       category: "npc",
-      type: "overworld_shop_weapon",
+      type: "overworld_shop_weaponry",
       tooltip: "Xulfax's Weaponry Shop",
       region: "Darkwoods",
       place: "Dunmarrow",
@@ -6480,7 +6769,7 @@ export const mapMarkers = {
       place: "Dunmarrow",
       details: {
         title: "Hertzel's Armory Shop",
-        coordinates: { x: 1391, y: 3208 },
+        coordinates: { x: 1391, y: 3210 },
         image: "images/markers/Hertzel_Armory_Shop.png",
         lore: "More information about Hertzel's Armory Shop is coming soon.",
         currency: "gold",
@@ -6611,7 +6900,7 @@ export const mapMarkers = {
     },
     {
       category: "npc",
-      type: "overworld_shop_weapon",
+      type: "overworld_shop_weaponry",
       tooltip: "Fragak's Weaponry Shop",
       region: "Black Swamp",
       place: "Krog",
@@ -6737,12 +7026,416 @@ export const mapMarkers = {
         links: [],
       },
     },
+    // City: Maraket Shops
+    {
+      category: "npc",
+      type: "overworld_shop_magic",
+      tooltip: "Tanak's Magic Shop",
+      region: "Black Swamp",
+      place: "Maraket",
+      details: {
+        title: "Tanak's Magic Shop",
+        coordinates: { x: 3082, y: 4006 },
+        image: "images/markers/Tanak_Magic_Shop.png",
+        lore: "More information about Tanak's Magic Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_shipyard",
+      tooltip: "Beldran's Shipyard",
+      region: "Black Swamp",
+      place: "Maraket",
+      details: {
+        title: "Beldran's Shipyard",
+        coordinates: { x: 3090, y: 4020 },
+        image: "images/markers/Beldran_Shipyard.png",
+        lore: "More information about Beldran's Shipyard is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_armory",
+      tooltip: "Jezral's Armory Shop",
+      region: "Black Swamp",
+      place: "Maraket",
+      details: {
+        title: "Jezral's Armory Shop",
+        coordinates: { x: 3070, y: 4023 },
+        image: "images/markers/Jezral_Armory_Shop.png",
+        lore: "More information about Jezral's Armory Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_blacksmith",
+      tooltip: "Verdax's Blacksmith Shop",
+      region: "Black Swamp",
+      place: "Maraket",
+      details: {
+        title: "Verdax's Blacksmith Shop",
+        coordinates: { x: 3070, y: 4025 },
+        image: "images/markers/Verdax_Blacksmith_Shop.png",
+        lore: "More information about Verdax's Blacksmith Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_weaponry",
+      tooltip: "Moortok's Weaponry Shop",
+      region: "Black Swamp",
+      place: "Maraket",
+      details: {
+        title: "Moortok's Weaponry Shop",
+        coordinates: { x: 3058, y: 4016 },
+        image: "images/markers/Moortok_Weaponry_Shop.png",
+        lore: "More information about Moortok's Weaponry Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_pub",
+      tooltip: "Moorta's Pub",
+      region: "Black Swamp",
+      place: "Maraket",
+      details: {
+        title: "Moorta's Pub",
+        coordinates: { x: 3047, y: 4009 },
+        image: "images/markers/Moorta_Pub.png",
+        lore: "More information about Moorta's Pub is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_provisioner",
+      tooltip: "Gabbik's Provisioner Shop",
+      region: "Black Swamp",
+      place: "Maraket",
+      details: {
+        title: "Gabbik's Provisioner Shop",
+        coordinates: { x: 3051, y: 4002 },
+        image: "images/markers/Gabbik_Provisioner_Shop.png",
+        lore: "More information about Gabbik's Provisioner Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_leather",
+      tooltip: "Greelnik's Leather Shop",
+      region: "Black Swamp",
+      place: "Maraket",
+      details: {
+        title: "Greelnik's Leather Shop",
+        coordinates: { x: 3035, y: 4001 },
+        image: "images/markers/Greelnik_Leather_Shop.png",
+        lore: "More information about Greelnik's Leather Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_carpentry",
+      tooltip: "Hamatad's Carpentry Shop",
+      region: "Black Swamp",
+      place: "Maraket",
+      details: {
+        title: "Hamatad's Carpentry Shop",
+        coordinates: { x: 3035, y: 4008 },
+        image: "images/markers/Hamatad_Carpentry_Shop.png",
+        lore: "More information about Hamatad's Carpentry Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_farming",
+      tooltip: "Targek's Farming Shop",
+      region: "Black Swamp",
+      place: "Maraket",
+      details: {
+        title: "Targek's Farming Shop",
+        coordinates: { x: 3043, y: 4026 },
+        image: "images/markers/Targek_Farming_Shop.png",
+        lore: "More information about Targek's Farming Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // City: Samad Shops
+    {
+      category: "npc",
+      type: "overworld_shop_provisioner",
+      tooltip: "Dagda's Provisioner Shop",
+      region: "Black Swamp",
+      place: "Samad",
+      details: {
+        title: "Dagda's Provisioner Shop",
+        coordinates: { x: 2661, y: 3507 },
+        image: "images/markers/Dagda_Provisioner_Shop.png",
+        lore: "More information about Dagda's Provisioner Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_weaponry",
+      tooltip: "Rakgol's Weapon Shop",
+      region: "Black Swamp",
+      place: "Samad",
+      details: {
+        title: "Rakgol's Weapon Shop",
+        coordinates: { x: 2666, y: 3514 },
+        image: "images/markers/Rakgol_Weapon_Shop.png",
+        lore: "More information about Rakgol's Weapon Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_magic",
+      tooltip: "Gradrak's Magic Shop",
+      region: "Black Swamp",
+      place: "Samad",
+      details: {
+        title: "Gradrak's Magic Shop",
+        coordinates: { x: 2651, y: 3518 },
+        image: "images/markers/Gradrak_Magic_Shop.png",
+        lore: "More information about Gradrak's Magic Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_pub",
+      tooltip: "Jurgen's Pub",
+      region: "Black Swamp",
+      place: "Samad",
+      details: {
+        title: "Jurgen's Pub",
+        coordinates: { x: 2650, y: 3505 },
+        image: "images/markers/Jurgen_Pub.png",
+        lore: "More information about Jurgen's Pub is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_carpentry",
+      tooltip: "Frodegi's Carpentry Shop",
+      region: "Black Swamp",
+      place: "Samad",
+      details: {
+        title: "Frodegi's Carpentry Shop",
+        coordinates: { x: 2627, y: 3516 },
+        image: "images/markers/Frodegi_Carpentry_Shop.png",
+        lore: "More information about Frodegi's Carpentry Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_armory",
+      tooltip: "Tradena's Armory Shop",
+      region: "Black Swamp",
+      place: "Samad",
+      details: {
+        title: "Tradena's Armory Shop",
+        coordinates: { x: 2625, y: 3506 },
+        image: "images/markers/Tradena_Armory_Shop.png",
+        lore: "More information about Tradena's Armory Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_leather",
+      tooltip: "Tomak's Leather Shop",
+      region: "Black Swamp",
+      place: "Samad",
+      details: {
+        title: "Tomak's Leather Shop",
+        coordinates: { x: 2604, y: 3519 },
+        image: "images/markers/Tomak_Leather_Shop.png",
+        lore: "More information about Tomak's Leather Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_farming",
+      tooltip: "Uthein's Farming Shop",
+      region: "Black Swamp",
+      place: "Samad",
+      details: {
+        title: "Uthein's Farming Shop",
+        coordinates: { x: 2605, y: 3531 },
+        image: "images/markers/Uthein_Farming_Shop.png",
+        lore: "More information about Uthein's Farming Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    // City: Dawat Shops
+    {
+      category: "npc",
+      type: "overworld_shop_armory",
+      tooltip: "Vrrgkan's Armory Shop",
+      region: "Black Swamp",
+      place: "Dawat",
+      details: {
+        title: "Vrrgkan's Armory Shop",
+        coordinates: { x: 3076, y: 3371 },
+        image: "images/markers/Vrrgkan_Armory_Shop.png",
+        lore: "More information about Vrrgkan's Armory Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_weaponry",
+      tooltip: "Nok's Weaponry Shop",
+      region: "Black Swamp",
+      place: "Dawat",
+      details: {
+        title: "Nok's Weaponry Shop",
+        coordinates: { x: 3075, y: 3378 },
+        image: "images/markers/Nok_Weaponry_Shop.png",
+        lore: "More information about Nok's Weaponry Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_pub",
+      tooltip: "Chogto's Pub",
+      region: "Black Swamp",
+      place: "Dawat",
+      details: {
+        title: "Chogto's Pub",
+        coordinates: { x: 3100, y: 3377 },
+        image: "images/markers/Chogto_Pub.png",
+        lore: "More information about Chogto's Pub is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_farming",
+      tooltip: "Trabad's Farming Shop",
+      region: "Black Swamp",
+      place: "Dawat",
+      details: {
+        title: "Trabad's Farming Shop",
+        coordinates: { x: 3095, y: 3373 },
+        image: "images/markers/Trabad_Farming_Shop.png",
+        lore: "More information about Tradab's Farming Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_farming",
+      tooltip: "Frolg's Carpentry Shop",
+      region: "Black Swamp",
+      place: "Dawat",
+      details: {
+        title: "Frolg's Carpentry Shop",
+        coordinates: { x: 3089, y: 3372 },
+        image: "images/markers/Frolg_Carpentry_Shop.png",
+        lore: "More information about Frolg's Carpentry Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_farming",
+      tooltip: "Uncoe's Provisioner Shop",
+      region: "Black Swamp",
+      place: "Dawat",
+      details: {
+        title: "Uncoe's Provisioner Shop",
+        coordinates: { x: 3099, y: 3387 },
+        image: "images/markers/Uncoe_Provisioner_Shop.png",
+        lore: "More information about Uncoe's Provisioner Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_magic",
+      tooltip: "Janos McGreggor's Magic Shop",
+      region: "Black Swamp",
+      place: "Dawat",
+      details: {
+        title: "Janos McGreggor's Magic Shop",
+        coordinates: { x: 3091, y: 3374 },
+        image: "images/markers/Janos_McGreggor_Magic_Shop.png",
+        lore: "More information about Janos McGreggor's Magic Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // Region: Highlands Shops
     // City: Parian Shops
     {
       category: "npc",
-      type: "overworld_shop_weapon",
+      type: "overworld_shop_weaponry",
       tooltip: "Rhonidd's Weaponry Shop",
       region: "Highlands",
       place: "Parian",
@@ -7030,7 +7723,7 @@ export const mapMarkers = {
     },
     {
       category: "npc",
-      type: "overworld_shop_weapon",
+      type: "overworld_shop_weaponry",
       tooltip: "Hailey Brown's Weaponry Shop",
       region: "Highlands",
       place: "Parian",
@@ -7078,7 +7771,7 @@ export const mapMarkers = {
     },
     {
       category: "npc",
-      type: "overworld_shop_weapon",
+      type: "overworld_shop_weaponry",
       tooltip: "Ereld's Weaponry Shop",
       region: "Highlands",
       place: "Parian",
@@ -7096,7 +7789,7 @@ export const mapMarkers = {
     // City: Arda Shops
     {
       category: "npc",
-      type: "overworld_shop_weapon",
+      type: "overworld_shop_weaponry",
       tooltip: "Kedalel's Weaponry Shop",
       region: "Highlands",
       place: "Arda",
@@ -7112,13 +7805,13 @@ export const mapMarkers = {
     },
     {
       category: "npc",
-      type: "overworld_shop_weapon",
+      type: "overworld_shop_weaponry",
       tooltip: "Adie's Weaponry Shop",
       region: "Highlands",
       place: "Arda",
       details: {
         title: "Adie's Weaponry Shop",
-        coordinates: { x: 3401, y: 3496 },
+        coordinates: { x: 3402, y: 3496 },
         image: "images/markers/Adie_Weapon_Shop.png",
         lore: "More information about Adie's Weaponry Shop is coming soon.",
         currency: "gold",
@@ -7374,7 +8067,7 @@ export const mapMarkers = {
     },
     {
       category: "npc",
-      type: "overworld_shop_weapon",
+      type: "overworld_shop_weaponry",
       tooltip: "Lothannon's Weaponry Shop",
       region: "Highlands",
       place: "Ethera Palace",
@@ -7390,7 +8083,7 @@ export const mapMarkers = {
     },
     {
       category: "npc",
-      type: "overworld_shop_weapon",
+      type: "overworld_shop_weaponry",
       tooltip: "Desdemona's Provisioner Shop",
       region: "Highlands",
       place: "Ethera Palace",
@@ -7427,7 +8120,7 @@ export const mapMarkers = {
     // Island: Lotor's Summer Palace Shops
     {
       category: "npc",
-      type: "overworld_shop_weapon",
+      type: "overworld_shop_weaponry",
       tooltip: "O'riles Weaponry Shop",
       region: "Western Isles",
       place: "Lotor's Summer Palace",
@@ -7481,7 +8174,7 @@ export const mapMarkers = {
       place: "Lotor's Summer Palace",
       details: {
         title: "Tom Uslak Carpenter Shop",
-        coordinates: { x: 852, y: 709 },
+        coordinates: { x: 852, y: 710 },
         image: "images/markers/Tom_Uslak_Carpenter_Shop.png",
         lore: "More information about Tom Uslak Carpenter Shop is coming soon.",
         currency: "gold",
@@ -7497,7 +8190,7 @@ export const mapMarkers = {
       place: "Lotor's Summer Palace",
       details: {
         title: "Blueprint Sales",
-        coordinates: { x: 768, y: 621 },
+        coordinates: { x: 768, y: 622 },
         image: "images/markers/Blueprint_Sales_Shop.png",
         lore: "More information about Blueprint Sales is coming soon.",
         currency: "gold",
@@ -7513,7 +8206,7 @@ export const mapMarkers = {
       place: "Lotor's Summer Palace",
       details: {
         title: "Surveying and Tools Sales",
-        coordinates: { x: 770, y: 621 },
+        coordinates: { x: 770, y: 622 },
         image: "images/markers/Surveying_and_Tools_Sales_Shop.png",
         lore: "More information about Surveying and Tools Sales is coming soon.",
         currency: "gold",
@@ -7625,7 +8318,7 @@ export const mapMarkers = {
       place: "Lotor's Summer Palace",
       details: {
         title: "Doyle Trobush's Magic Shop",
-        coordinates: { x: 756, y: 676 },
+        coordinates: { x: 756, y: 677 },
         image: "images/markers/Doyle_Trobush_Magic_Shop.png",
         lore: "More information about Doyle Trobush's Magic Shop is coming soon.",
         currency: "gold",
@@ -7673,7 +8366,7 @@ export const mapMarkers = {
       place: "Lotor's Summer Palace",
       details: {
         title: "Mongor's Leatherworking Shop",
-        coordinates: { x: 802, y: 703 },
+        coordinates: { x: 802, y: 704 },
         image: "images/markers/Mongor_Leatherworking_Shop.png",
         lore: "More information about Mongor's Leatherworking Shop is coming soon.",
         currency: "gold",
@@ -7705,7 +8398,7 @@ export const mapMarkers = {
       place: "Lotor's Summer Palace",
       details: {
         title: "Mace Gurban's Provisioner Shop",
-        coordinates: { x: 811, y: 697 },
+        coordinates: { x: 811, y: 698 },
         image: "images/markers/Mace_Gurban_Provisioner_Shop.png",
         lore: "More information about Mace Gurban's Provisioner Shop is coming soon.",
         currency: "gold",
@@ -7721,7 +8414,7 @@ export const mapMarkers = {
       place: "Lotor's Summer Palace",
       details: {
         title: "Docale's Pub",
-        coordinates: { x: 845, y: 727 },
+        coordinates: { x: 846, y: 728 },
         image: "images/markers/Docale_Pub.png",
         lore: "More information about Docale's Pub is coming soon.",
         currency: "gold",
@@ -7814,7 +8507,7 @@ export const mapMarkers = {
     },
     {
       category: "npc",
-      type: "overworld_shop_weapon",
+      type: "overworld_shop_weaponry",
       tooltip: "Killjoy's Weaponry Shop",
       region: "Western Isles",
       place: "Scarab Island",
@@ -8053,7 +8746,7 @@ export const mapMarkers = {
       place: "Dunmarrow",
       details: {
         title: "Good Spawn Gate",
-        coordinates: { x: 1385, y: 3187 },
+        coordinates: { x: 1385, y: 3186 },
         image: "images/markers/Dunmarrow_Spawn_Gate.png",
         lore: "More information about Dunmarrow Good Spawn Gate is coming soon.",
         npcs: [],
@@ -8068,6 +8761,21 @@ export const mapMarkers = {
     // Region: Battle Plains Spawns
 
     // Region: Black Swamp Spawns
+    {
+      category: "spawn",
+      type: "overworld_spawn_good",
+      tooltip: "Good Spawn Gate",
+      region: "Black Swamp",
+      place: "Black Swamp Outpost",
+      details: {
+        title: "Good Spawn Gate",
+        coordinates: { x: 2920, y: 3578 },
+        image: "images/markers/Black_Swamp_Outpost_Spawn_Gate.png",
+        lore: "More information about Black Swamp Outpost Good Spawn Gate is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
     // City: Krog Spawns
     {
       category: "spawn",
@@ -8080,6 +8788,57 @@ export const mapMarkers = {
         coordinates: { x: 3095, y: 3754 },
         image: "images/markers/Krog_Spawn_Gate.png",
         lore: "More information about Krog Good Spawn Gate is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    // City: Maraket Spawns
+    {
+      category: "spawn",
+      type: "overworld_spawn_good",
+      tooltip: "Good Spawn Gate",
+      region: "Black Swamp",
+      place: "Maraket",
+      details: {
+        title: "Good Spawn Gate",
+        coordinates: { x: 3063, y: 4041 },
+        image: "images/markers/Maraket_Spawn_Gate.png",
+        lore: "More information about Maraket Good Spawn Gate is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+
+    // City: Samad Spawns
+    {
+      category: "spawn",
+      type: "overworld_spawn_good",
+      tooltip: "Good Spawn Gate",
+      region: "Black Swamp",
+      place: "Samad",
+      details: {
+        title: "Good Spawn Gate",
+        coordinates: { x: 2631, y: 3545 },
+        image: "images/markers/Samad_Spawn_Gate.png",
+        lore: "More information about Samad Good Spawn Gate is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // City: Dawat Spawns
+    {
+      category: "spawn",
+      type: "overworld_spawn_good",
+      tooltip: "Good Spawn Gate",
+      region: "Black Swamp",
+      place: "Dawat",
+      details: {
+        title: "Good Spawn Gate",
+        coordinates: { x: 3094, y: 3363 },
+        image: "images/markers/Dawat_Spawn_Gate.png",
+        lore: "More information about Dawat Good Spawn Gate is coming soon.",
         npcs: [],
         links: [],
       },
@@ -9229,6 +9988,25 @@ export const mapMarkers = {
       },
     },
 
+    // Place: Emporium Abbey underground
+    {
+      category: "undergrounds",
+      type: "overworld_ladder",
+      tooltip: "Emporium Abbey Trapdoor Room", 
+      region: "Highlands",
+      place: "Highlands",
+      details: {
+        title: "Emporium Abbey Trapdoor Room",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 2776, y: 3185, zoom: 6 }, // The coordinates and zoom level to center on
+        coordinates: { x: 2776, y: 3185 },
+        image: "images/markers/Emporium_Abbey_Trapdoor_Room.png",
+        lore: "Emporium Abbey Trapdoor Room is fully to trapdoors that lead underground a maze of sorts.",
+        npcs: [],
+        links: [],
+      },
+    },
+
     // City: Arda underground
 
     // City: Grell underground
@@ -9486,28 +10264,29 @@ export const mapMarkers = {
     {
       category: "undergrounds",
       type: "overworld_snake",
-      tooltip: "Krog Snake Pit",
+      tooltip: "Maraket Snake Pit Entrance",
       region: "Black Swamp",
       place: "Krog",
       details: {
-        title: "Krog Snake Pit",
+        title: "Maraket Snake Pit Entrance",
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 3272, y: 3990 },
         image: "images/markers/image_coming_soon.png",
-        lore: "More information about Krog Snake Pit is coming soon.",
+        lore: "More information about Maraket Snake Pit is coming soon.",
         npcs: [],
         links: [],
       },
     },
+    // Place: Vorda Swamp underground
     {
       category: "undergrounds",
       type: "overworld_sewer",
-      tooltip: "Krog Sewer",
+      tooltip: "Krog Sewer Entrance",
       region: "Black Swamp",
-      place: "Black Swamp",
+      place: "Vorda Swamp",
       details: {
-        title: "Krog Sewer",
+        title: "Krog Sewer Entrance",
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2823, y: 3623 },
@@ -9517,31 +10296,15 @@ export const mapMarkers = {
         links: [],
       },
     },
-    {
-      category: "undergrounds",
-      type: "overworld_sewer",
-      tooltip: "Krog Sewer",
-      region: "Black Swamp",
-      place: "Black Swamp",
-      details: {
-        title: "Krog Sewer",
-        switchTo: "underground", // This will trigger the map switch
-        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
-        coordinates: { x: 3018, y: 3814 },
-        image: "images/markers/image_coming_soon.png",
-        lore: "More information about Krog Sewer is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
+    // Place: Drakkan underground
     {
       category: "undergrounds",
       type: "overworld_crypt",
-      tooltip: "Drakkan Crypt",
+      tooltip: "Drakkan Crypt Entrance",
       region: "Black Swamp",
-      place: "Black Swamp",
+      place: "Drakkan",
       details: {
-        title: "Drakkan Crypt",
+        title: "Drakkan Crypt Entrance",
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2792, y: 3833 },
@@ -9551,14 +10314,15 @@ export const mapMarkers = {
         links: [],
       },
     },
+    // Place: Kobold Camp underground
     {
       category: "undergrounds",
       type: "overworld_well",
-      tooltip: "Waste Tunnels",
+      tooltip: "Waste Tunnels Entrance",
       region: "Black Swamp",
       place: "Black Swamp",
       details: {
-        title: "Waste Tunnels",
+        title: "Waste Tunnels Entrance",
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 3244, y: 3834 },
@@ -9568,14 +10332,15 @@ export const mapMarkers = {
         links: [],
       },
     },
+    // Place: Medosk Mountains underground
     {
       category: "undergrounds",
       type: "overworld_ant",
-      tooltip: "Ant Hill",
+      tooltip: "Ant Hill Entrance",
       region: "Black Swamp",
-      place: "Black Swamp",
+      place: "Medosk Mountains",
       details: {
-        title: "Ant Hill",
+        title: "Ant Hill Entrance",
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 3095, y: 3865 },
@@ -9588,11 +10353,11 @@ export const mapMarkers = {
     {
       category: "undergrounds",
       type: "overworld_scorpion",
-      tooltip: "Scorpion",
+      tooltip: "Scorpion Pit Entrance",
       region: "Black Swamp",
       place: "Black Swamp",
       details: {
-        title: "Scorpion",
+        title: "Scorpion Pit Entrance",
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 3130, y: 3660 },
@@ -9605,16 +10370,86 @@ export const mapMarkers = {
     {
       category: "undergrounds",
       type: "overworld_dungeon",
-      tooltip: "Valekar's Fortress Dungeon",
+      tooltip: "Temple of Agon Entrance",
       region: "Black Swamp",
       place: "Black Swamp",
       details: {
-        title: "Valekar's Fortress Dungeon",
+        title: "Temple of Agon Entrance",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
+        coordinates: { x: 3114, y: 3638 },
+        image: "images/markers/Temple_of_Agon_Entrance.png",
+        lore: "More information about Temple of Agon is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "undergrounds",
+      type: "overworld_dungeon",
+      tooltip: "Ivogur's Mine Entrance",
+      region: "Black Swamp",
+      place: "Black Swamp",
+      details: {
+        title: "Ivogur's Mine Entrance",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
+        coordinates: { x: 2962, y: 3913 },
+        image: "images/markers/Ivogur's_Mine_Entrance.png",
+        lore: "More information about Ivogur's Mine is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    // City: Valekar's Fortress underground
+    {
+      category: "undergrounds",
+      type: "overworld_dungeon",
+      tooltip: "Valekar's Fortress Dungeon Entrance",
+      region: "Black Swamp",
+      place: "Black Swamp",
+      details: {
+        title: "Valekar's Fortress Dungeon Entrance",
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 3079, y: 3516 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Valekar's Fortress Dungeon is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    // City: Krog Underground
+    {
+      category: "undergrounds",
+      type: "overworld_mine",
+      tooltip: "Sogrun Mine Entrance",
+      region: "Black Swamp",
+      place: "Krog",
+      details: {
+        title: "Sogrun Mine Entrance",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
+        coordinates: { x: 3154, y: 3737 },
+        image: "images/markers/image_coming_soon.png",
+        lore: "More information about Sogrun Mine is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "undergrounds",
+      type: "overworld_sewer",
+      tooltip: "Krog Sewer Entrance",
+      region: "Black Swamp",
+      place: "Black Swamp",
+      details: {
+        title: "Krog Sewer Entrance",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
+        coordinates: { x: 3018, y: 3814 },
+        image: "images/markers/image_coming_soon.png",
+        lore: "More information about Krog Sewer is coming soon.",
         npcs: [],
         links: [],
       },
