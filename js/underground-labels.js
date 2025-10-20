@@ -48,7 +48,21 @@ export const mapLabels = {
 
   ],
   dungeons: [
-    // Add underground dungeon labels here
+    {
+      name: "Minotaur Maze",
+      fontSize: 30,
+      region: "Highlands",
+      details: {
+        title: "Minotaur Maze",
+        coordinates: { x: 3465, y: 3101 },
+        image: "",
+        lore: "More information about Minotaur Maze is coming soon.",
+        information: "",
+        bonus: "",
+        npcs: [],
+        links: [],
+      },
+    },
   ],
   crypts: [
     {
@@ -68,7 +82,21 @@ export const mapLabels = {
     },
   ],
   caves: [
-    // Add underground cave labels here
+    {
+      name: "Vel Dran Cave",
+      fontSize: 30,
+      region: "Highlands",
+      details: {
+        title: "Vel Dran Cave",
+        coordinates: { x: 3145, y: 3063 },
+        image: "",
+        lore: "More information about Vel Dran Cave is coming soon.",
+        information: "",
+        bonus: "",
+        npcs: [],
+        links: [],
+      },
+    },
   ],
   mines: [
     // Add underground mine labels here

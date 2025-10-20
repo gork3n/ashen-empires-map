@@ -52,6 +52,10 @@ export const undergroundMarkerStyles = {
     icon: "icons/crypt-entrance.svg",
     color: "#d36517ff", // SaddleBrown
   },
+  underworld_cave: {
+    icon: "icons/cave-entrance.svg",
+    color: "#d36517ff", // SaddleBrown
+  },
   underworld_well: {
     icon: "icons/well.svg",
     color: "#d36517ff", // SaddleBrown
@@ -147,7 +151,7 @@ export const undergroundMapMarkers = {
     {
       category: "underground",
       type: "underworld_ladder",
-      tooltip: "Jeel Catacombs Exit<br><small>(Ctrl+Click for details)</small>",
+      tooltip: "Jeel Catacombs Exit",
       region: "Krythan",
       place: "Jeel Catacombs",
       details: {
@@ -164,7 +168,7 @@ export const undergroundMapMarkers = {
     {
       category: "underground",
       type: "underworld_crypt",
-      tooltip: "Krythan Crypt Exit<br><small>(Ctrl+Click for details)</small>",
+      tooltip: "Krythan Crypt Exit",
       region: "Krythan",
       place: "Krythan Crypt",
       details: {
@@ -183,11 +187,65 @@ export const undergroundMapMarkers = {
 
 
     // Region: Highlands Undergrounds
-    // Grell Tunnels
+    // Place: Minotaur Maze underground
+    {
+      category: "underground",
+      type: "underworld_stairs",
+      tooltip: "Minotaur Maze Exit",
+      region: "Highlands",
+      place: "Grell",
+      details: {
+        title: "Grell Exit",
+        switchTo: "overworld",
+        flyTo: { x: 2996, y: 3044 },// The coordinates for the Ladder inside the Grell Tunnels underground area.
+        coordinates: { x: 3411, y: 3105 },
+        image: "images/markers/Grell_Ladder_Exit.png",
+        lore: "Exit to Highlands above Grell.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "underground",
+      type: "underworld_stairs",
+      tooltip: "Minotaur Maze Exit",
+      region: "Highlands",
+      place: "Grell",
+      details: {
+        title: "Grell Exit",
+        switchTo: "overworld",
+        flyTo: { x: 2996, y: 3044 },// The coordinates for the Ladder inside the Grell Tunnels underground area.
+        coordinates: { x: 3419, y: 3105 },
+        image: "images/markers/Grell_Ladder_Exit.png",
+        lore: "Exit to Highlands above Grell.",
+        npcs: [],
+        links: [],
+      },
+    },
+    // Place: Vel Dran Cave underground
+    {
+      category: "underground",
+      type: "underworld_cave",
+      tooltip: "Vel Dran Cave Exit",
+      region: "Highlands",
+      place: "Vel Dran Cave",
+      details: {
+        title: "Vel Dran Cave Exit",
+        switchTo: "overworld",
+        flyTo: { x: 3288, y: 3298 },// The coordinates for the Ladder inside the Vel Dran Cave underground area.
+        coordinates: { x: 3288, y: 3298 },
+        image: "images/markers/Vel_Dran_Cave_Ladder_Exit.png",
+        lore: "Exit to Highlands above Vel Dran Cave.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // City: Grell underground
     {
       category: "underground",
       type: "underworld_ladder",
-      tooltip: "Grell Tunnels Exit<br><small>(Ctrl+Click for details)</small>",
+      tooltip: "Grell Tunnels Exit",
       region: "Highlands",
       place: "Grell",
       details: {

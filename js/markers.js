@@ -409,7 +409,7 @@ export const mapMarkers = {
       place: "Parian",
       details: {
         title: "Portal to Housing Realm",
-        coordinates: { x: 3465, y: 3132 },
+        coordinates: { x: 3465, y: 3133 },
         image: "images/portals/Parian_Housing_Realm_Portal.png",
         lore: "More information about Portal to Housing Realm is coming soon.",
         npcs: [],
@@ -909,7 +909,22 @@ export const mapMarkers = {
       },
     },
 
-    // Region: Highlands Portals    
+    // Region: Highlands Portals   
+    {
+      category: "portals",
+      type: "overworld_portal_small",
+      tooltip: "Portal to Minotaur Island",
+      region: "Highlands",
+      place: "Ancient Site of Minos",
+      details: {
+        title: "Portal to Minotaur Island",
+        coordinates: { x: 2935, y: 3191 },
+        image: "images/markers/Minotaur_Island_Portal.png",
+        lore: "More information about Portal to Minotaur Island is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    }, 
     {
       category: "portals",
       type: "overworld_portal_small",
@@ -979,7 +994,7 @@ export const mapMarkers = {
       place: "Parian",
       details: {
         title: "Portal to Lotor's Summer Palace",
-        coordinates: { x: 3415, y: 2918 },
+        coordinates: { x: 3415, y: 2919 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Portal to Lotor's Summer Palace is coming soon.",
         npcs: [],
@@ -2337,7 +2352,7 @@ export const mapMarkers = {
       place: "Parian",
       details: {
         title: "Basil",
-        coordinates: { x: 3464, y: 2997 },
+        coordinates: { x: 3464, y: 2998 },
         image: "images/markers/Basil_Quest.png",
         lore: "Basil is part of the Fine Land Quest.",
         npcs: [],
@@ -2352,7 +2367,7 @@ export const mapMarkers = {
       place: "Parian",
       details: {
         title: "Claricia Forence",
-        coordinates: { x: 3430, y: 2956 },
+        coordinates: { x: 3430, y: 2957 },
         image: "images/markers/Claricia_Forence_Quest.png",
         lore: "Claricia Forence is part of the Lotorian Quest.",
         npcs: [],
@@ -2367,7 +2382,7 @@ export const mapMarkers = {
       place: "Parian",
       details: {
         title: "Warlord Isbraen",
-        coordinates: { x: 3432, y: 3050 },
+        coordinates: { x: 3432, y: 3051 },
         image: "images/markers/Warlord_Isbraen_Quest.png",
         lore: "Warlord Isbraen is an Archery Trainer located in Parian in the Government building.",
         npcs: [],
@@ -2382,7 +2397,7 @@ export const mapMarkers = {
       place: "Parian",
       details: {
         title: "Warlord Isbraen",
-        coordinates: { x: 3430, y: 3044 },
+        coordinates: { x: 3430, y: 3045 },
         image: "images/markers/Warlord_Uerog_Quest.png",
         lore: "Warlord Uerog is a Warrior Trainer located in Parian in the Government building.",
         npcs: [],
@@ -2397,7 +2412,7 @@ export const mapMarkers = {
       place: "Parian",
       details: {
         title: "Warlord Cheroth",
-        coordinates: { x: 3435, y: 3042 },
+        coordinates: { x: 3435, y: 3043 },
         image: "images/markers/Warlord_Uerog_Quest.png",
         lore: "Warlord Uerog is a Mage Trainer located in Parian in the Government building.",
         npcs: [],
@@ -2412,7 +2427,7 @@ export const mapMarkers = {
       place: "Parian",
       details: {
         title: "Lloyd Dogen",
-        coordinates: { x: 3607, y: 3000 },
+        coordinates: { x: 3607, y: 3001 },
         image: "images/markers/Lloyd_Dogen_Quest.png",
         lore: "Warlord Uerog is a Mage Trainer located in Parian in the Government building.",
         npcs: [],
@@ -2427,7 +2442,7 @@ export const mapMarkers = {
       place: "Parian",
       details: {
         title: "Chadwell",
-        coordinates: { x: 3513, y: 3051 },
+        coordinates: { x: 3513, y: 3052 },
         image: "images/markers/Chadwell_Quest.png",
         lore: "Chadwell is part of the Fishing for Friends Part 4 Trials",
         npcs: [],
@@ -2442,13 +2457,75 @@ export const mapMarkers = {
       place: "Parian",
       details: {
         title: "Heudekka",
-        coordinates: { x: 3433, y: 3031},
+        coordinates: { x: 3433, y: 3032},
         image: "images/markers/Heudekka_Quest.png",
         lore: "Heudekka is part of the Fine Land - Trade Must Flourish.",
         npcs: [],
         links: [{ text: "Ashen Empires Wiki (Fine Land - Trade Must Flourish)", url: "https://ashenempires.fandom.com/wiki/Fine_Land_(complete_guide)#Trade_Must_Flourish" }],
       },
     },
+    // Place: Emporium Abbey Quests
+    {
+      category: "npc",
+      type: "overworld_quest",
+      tooltip: "The Redeemer",
+      region: "Highlands",
+      place: "Emporium Abbey",
+      details: {
+        title: "The Redeemer",
+        coordinates: { x: 2772, y: 3169},
+        image: "images/markers/The_Redeemer_Quest.png",
+        lore: "The Redeemer is part of the Faction Quests - Neutral Quest.",
+        npcs: [],
+        links: [{ text: "Ashen Empires Wiki (Faction Quests - Neutral Quest)", url: "https://ashenempires.fandom.com/wiki/Faction_Quests#Neutral_Quest" }],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_quest",
+      tooltip: "Father Gweedo (Wanders)",
+      region: "Highlands",
+      place: "Emporium Abbey",
+      details: {
+        title: "Father Gweedo",
+        coordinates: { x: 2775, y: 3172},
+        image: "images/markers/Father_Gweedo_Quest.png",
+        lore: "Father Gweedo is part of the Guild Quest - Holendar.",
+        npcs: [],
+        links: [{ text: "Ashen Empires Wiki (Guild Quest - Holendar)", url: "https://ashenempires.fandom.com/wiki/Guild_Quest#5.)_Holendar" }],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_quest",
+      tooltip: "Ragged Travler (Wanders)",
+      region: "Highlands",
+      place: "Emporium Abbey",
+      details: {
+        title: "Ragged Travler",
+        coordinates: { x: 2768, y: 3191},
+        image: "images/markers/Ragged_Travler_Quest.png",
+        lore: "Ragged Travler is part of the Ragged Travler quest.",
+        npcs: [],
+        links: [{ text: "Ashen Empires Wiki (Ragged Traveller)", url: "https://ashenempires.fandom.com/wiki/Ragged_Traveller" }],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_quest",
+      tooltip: "Maid Nelly (Wanders)",
+      region: "Highlands",
+      place: "Emporium Abbey",
+      details: {
+        title: "Maid Nelly",
+        coordinates: { x: 2760, y: 3170},
+        image: "images/markers/Maid_Nelly_Quest.png",
+        lore: "Maid Nelly is part of the Maid Nelly quest.",
+        npcs: [],
+        links: [{ text: "Ashen Empires Wiki (Maid Nelly)", url: "https://ashenempires.fandom.com/wiki/Maid_Nelly" }],
+      },
+    },
+
     // City: Arda Quests
 
     // City: Grell Quests - Located in -markers.js
@@ -2671,7 +2748,7 @@ export const mapMarkers = {
       place: "Parian",
       details: {
         title: "Parian Innkeeper",
-        coordinates: { x: 3475, y: 3005 },
+        coordinates: { x: 3475, y: 3006 },
         image: "images/markers/Parian_Innkeeper.png",
         lore: "More information about Parian Innkeeper is coming soon.",
         npcs: [],
@@ -2689,7 +2766,7 @@ export const mapMarkers = {
       place: "Parian",
       details: {
         title: "Ethera Palace Innkeeper",
-        coordinates: { x: 3519, y: 3691 },
+        coordinates: { x: 3519, y: 3692 },
         image: "images/markers/Ethera_Palace_Innkeeper.png",
         lore: "More information about Ethera Palace Innkeeper is coming soon.",
         npcs: [],
@@ -4128,7 +4205,7 @@ export const mapMarkers = {
       place: "Parian",
       details: {
         title: "Town Guardian",
-        coordinates: { x: 3434, y: 3030 },
+        coordinates: { x: 3434, y: 3031 },
         image: "images/markers/Parian_Town_Guardian.png",
         lore: "The Town Guardian in Parian.",
         npcs: [],
@@ -4353,7 +4430,7 @@ export const mapMarkers = {
       place: "Parian",
       details: {
         title: "Trinde's Demon Eye Game",
-        coordinates: { x: 3516, y: 3040 },
+        coordinates: { x: 3516, y: 3041 },
         image: "images/markers/Trinde_Demon_Eye_Game.png",
         lore: "More information about Trinde's Demon Eye Game is coming soon.",
         npcs: [],
@@ -4368,7 +4445,7 @@ export const mapMarkers = {
       place: "Parian",
       details: {
         title: "Baldrus's Demon Eye Game",
-        coordinates: { x: 3478, y: 3014 },
+        coordinates: { x: 3478, y: 3015 },
         image: "images/markers/Baldrus_Demon_Eye_Game.png",
         lore: "More information about Baldrus's Demon Eye Game is coming soon.",
         npcs: [],
@@ -4459,7 +4536,7 @@ export const mapMarkers = {
       place: "Lotor's Summer Palace",
       details: {
         title: "Armsmaster",
-        coordinates: { x: 3470, y: 3076 },
+        coordinates: { x: 3470, y: 3077 },
         image: "images/markers/Armsmaster.png",
         lore: "More information about Armsmaster is coming soon.",
         npcs: [],
@@ -4867,7 +4944,7 @@ export const mapMarkers = {
       place: "Parian",
       details: {
         title: "North Bank",
-        coordinates: { x: 3441, y: 2956 },
+        coordinates: { x: 3441, y: 2957 },
         image: "images/markers/Parian_North_Bank.png",
         lore: "More information about North Bank is coming soon.",
         npcs: [],
@@ -4882,7 +4959,7 @@ export const mapMarkers = {
       place: "Parian",
       details: {
         title: "East Bank",
-        coordinates: { x: 3497, y: 3024 },
+        coordinates: { x: 3497, y: 3025 },
         image: "images/markers/Parian_North_Bank.png",
         lore: "More information about East Bank is coming soon.",
         npcs: [],
@@ -4897,7 +4974,7 @@ export const mapMarkers = {
       place: "Parian",
       details: {
         title: "South Bank",
-        coordinates: { x: 3451, y: 3072 },
+        coordinates: { x: 3451, y: 3073 },
         image: "images/markers/Parian_North_Bank.png",
         lore: "More information about South Bank is coming soon.",
         npcs: [],
@@ -7441,7 +7518,7 @@ export const mapMarkers = {
       place: "Parian",
       details: {
         title: "Rhonidd's Weaponry Shop",
-        coordinates: { x: 3473, y: 3073 },
+        coordinates: { x: 3473, y: 3074 },
         image: "images/markers/Rohnidd_Weapon_Shop.png",
         lore: "More information about Rhonidd's Weaponry Shop is coming soon.",
         currency: "gold",
@@ -7457,7 +7534,7 @@ export const mapMarkers = {
       place: "Parian",
       details: {
         title: "Hemos' Blacksmith Shop",
-        coordinates: { x: 3472, y: 3063 },
+        coordinates: { x: 3472, y: 3064 },
         image: "images/markers/Hemos_Blacksmith_Shop.png",
         lore: "More information about Hemos' Blacksmith Shop is coming soon.",
         currency: "gold",
@@ -7473,7 +7550,7 @@ export const mapMarkers = {
       place: "Parian",
       details: {
         title: "Sage Rauth's Scrolls Shop",
-        coordinates: { x: 3479, y: 3072 },
+        coordinates: { x: 3479, y: 3073 },
         image: "images/markers/Sage_Rauth_Scrolls_Shop.png",
         lore: "More information about Sage Rauth's Scrolls Shop is coming soon.",
         currency: "gold",
@@ -7489,7 +7566,7 @@ export const mapMarkers = {
       place: "Parian",
       details: {
         title: "Tragos' Magic Shop",
-        coordinates: { x: 3479, y: 3075 },
+        coordinates: { x: 3479, y: 3076 },
         image: "images/markers/Tragos_Magic_Shop.png",
         lore: "More information about Tragos' Magic Shop is coming soon.",
         currency: "gold",
@@ -7505,7 +7582,7 @@ export const mapMarkers = {
       place: "Parian",
       details: {
         title: "Thodonna's Provisioner Shop",
-        coordinates: { x: 3473, y: 3085 },
+        coordinates: { x: 3473, y: 3086 },
         image: "images/markers/Thodonna_Provisioner_Shop.png",
         lore: "More information about Thodonna's Provisioner Shop is coming soon.",
         currency: "gold",
@@ -7521,7 +7598,7 @@ export const mapMarkers = {
       place: "Parian",
       details: {
         title: "Maggie Hobson's Jewelry Shop",
-        coordinates: { x: 3494, y: 3067 },
+        coordinates: { x: 3494, y: 3068 },
         image: "images/markers/Maggie_Hobson_Jewelry_Shop.png",
         lore: "More information about Maggie Hobson's Jewelry Shop is coming soon.",
         currency: "gold",
@@ -7537,7 +7614,7 @@ export const mapMarkers = {
       place: "Parian",
       details: {
         title: "Theiseth's Provisioner Shop",
-        coordinates: { x: 3500, y: 3062 },
+        coordinates: { x: 3500, y: 3063 },
         image: "images/markers/Theiseth_Provisioner_Shop.png",
         lore: "More information about Theiseth's Provisioner Shop is coming soon.",
         currency: "gold",
@@ -7553,7 +7630,7 @@ export const mapMarkers = {
       place: "Parian",
       details: {
         title: "Arthuren's Ship Yard Shop",
-        coordinates: { x: 3514, y: 3070 },
+        coordinates: { x: 3514, y: 3071 },
         image: "images/markers/Arthuren_Ship_Yard_Shop.png",
         lore: "More information about Arthuren's Ship Yard Shop is coming soon.",
         currency: "gold",
@@ -7569,7 +7646,7 @@ export const mapMarkers = {
       place: "Parian",
       details: {
         title: "Theard's Magic Shop",
-        coordinates: { x: 3499, y: 3047 },
+        coordinates: { x: 3499, y: 3048 },
         image: "images/markers/Theard_Magic_Shop.png",
         lore: "More information about Theard's Magic Shop is coming soon.",
         currency: "gold",
@@ -7585,7 +7662,7 @@ export const mapMarkers = {
       place: "Parian",
       details: {
         title: "Loeband's Pub",
-        coordinates: { x: 3506, y: 3032 },
+        coordinates: { x: 3506, y: 3033 },
         image: "images/markers/Loeband_Pub.png",
         lore: "More information about Loeband's Pub is coming soon.",
         currency: "gold",
@@ -7601,7 +7678,7 @@ export const mapMarkers = {
       place: "Parian",
       details: {
         title: "Rella's Storage Shop",
-        coordinates: { x: 3479, y: 3021 },
+        coordinates: { x: 3479, y: 3022 },
         image: "images/markers/Rella_Storage_Shop.png",
         lore: "Rella sells storage crates for 50,000 gold each. These are essential for expanding your bank space.",
         currency: "gold",
@@ -7617,7 +7694,7 @@ export const mapMarkers = {
       place: "Parian",
       details: {
         title: "Rella's Storage Shop",
-        coordinates: { x: 3479, y: 3027 },
+        coordinates: { x: 3479, y: 3028 },
         image: "images/markers/Welatrem_Carpentry_Shop.png",
         lore: "More information about Rella's Storage Shop is coming soon.",
         currency: "gold",
@@ -7633,7 +7710,7 @@ export const mapMarkers = {
       place: "Parian",
       details: {
         title: "Draga's Leather Shop",
-        coordinates: { x: 3494, y: 3002 },
+        coordinates: { x: 3494, y: 3003 },
         image: "images/markers/Draga_Leather_Shop.png",
         lore: "More information about Draga's Leather Shop is coming soon.",
         currency: "gold",
@@ -7649,7 +7726,7 @@ export const mapMarkers = {
       place: "Parian",
       details: {
         title: "Kedardogan's Armory Shop",
-        coordinates: { x: 3478, y: 3005 },
+        coordinates: { x: 3478, y: 3006 },
         image: "images/markers/Kedardogan_Armory_Shop.png",
         lore: "More information about Kedardogan's Armory Shop is coming soon.",
         currency: "gold",
@@ -7665,7 +7742,7 @@ export const mapMarkers = {
       place: "Parian",
       details: {
         title: "Afedriwyr's Blacksmith Shop",
-        coordinates: { x: 3486, y: 3005 },
+        coordinates: { x: 3486, y: 3006 },
         image: "images/markers/Afedriwyr_Blacksmith_Shop.png",
         lore: "More information about Afedriwyr's Blacksmith Shop is coming soon.",
         currency: "gold",
@@ -7681,7 +7758,7 @@ export const mapMarkers = {
       place: "Parian",
       details: {
         title: "Malinnor's Pub",
-        coordinates: { x: 3459, y: 2994 },
+        coordinates: { x: 3459, y: 2995 },
         image: "images/markers/Malinnor_Provisioner_Shop.png",
         lore: "More information about Malinnor's Pub is coming soon.",
         currency: "gold",
@@ -7697,7 +7774,7 @@ export const mapMarkers = {
       place: "Parian",
       details: {
         title: "Melisandria's Farming Shop",
-        coordinates: { x: 3446, y: 3004 },
+        coordinates: { x: 3446, y: 3005 },
         image: "images/markers/Melisandria_Farming_Shop.png",
         lore: "More information about Melisandria's Farming Shop is coming soon.",
         currency: "gold",
@@ -7713,7 +7790,7 @@ export const mapMarkers = {
       place: "Parian",
       details: {
         title: "Oloatlan's Carpentry Shop",
-        coordinates: { x: 3444, y: 2983 },
+        coordinates: { x: 3444, y: 2984 },
         image: "images/markers/Oloatlan_Carpentry_Shop.png",
         lore: "More information about Oloatlan's Carpentry Shop is coming soon.",
         currency: "gold",
@@ -7729,7 +7806,7 @@ export const mapMarkers = {
       place: "Parian",
       details: {
         title: "Hailey Brown's Weaponry Shop",
-        coordinates: { x: 3442, y: 2983 },
+        coordinates: { x: 3442, y: 2984 },
         image: "images/markers/Hailey_Brown_Weapon_Shop.png",
         lore: "More information about Hailey Brown's Weaponry Shop is coming soon.",
         currency: "gold",
@@ -7745,7 +7822,7 @@ export const mapMarkers = {
       place: "Parian",
       details: {
         title: "Jeralif's Provisioner Shop",
-        coordinates: { x: 3444, y: 2970 },
+        coordinates: { x: 3444, y: 2971 },
         image: "images/markers/Jeralif_Provisioner_Shop.png",
         lore: "More information about Jeralif's Provisioner Shop is coming soon.",
         currency: "gold",
@@ -7761,7 +7838,7 @@ export const mapMarkers = {
       place: "Parian",
       details: {
         title: "Zaetlan's Magic Shop",
-        coordinates: { x: 3421, y: 2976 },
+        coordinates: { x: 3421, y: 2977 },
         image: "images/markers/Zaetlan_Magic_Shop.png",
         lore: "More information about Zaetlan's Magic Shop is coming soon.",
         currency: "gold",
@@ -7777,7 +7854,7 @@ export const mapMarkers = {
       place: "Parian",
       details: {
         title: "Ereld's Weaponry Shop",
-        coordinates: { x: 3425, y: 2960 },
+        coordinates: { x: 3425, y: 2961 },
         image: "images/markers/Ereld_Weapon_Shop.png",
         lore: "More information about Ereld's Weaponry Shop is coming soon.",
         currency: "gold",
@@ -9865,6 +9942,59 @@ export const mapMarkers = {
     },
 
     // Region: Highlands underground
+    // Place: Minotaur Maze Temple
+    {
+      category: "undergrounds",
+      type: "overworld_stairs",
+      tooltip: "Minotaur Maze", // This was the former Astari Cave, which has since moved south.
+      region: "Highlands",
+      place: "Highlands",
+      details: {
+        title: "Minotaur Maze",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 3411, y: 3105, zoom: 6 }, // The coordinates to center on after switching
+        coordinates: { x: 2996, y: 3044 },
+        image: "images/markers/Minotaur_Maze.png",
+        lore: "More information about Minotaur Maze is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "undergrounds",
+      type: "overworld_stairs",
+      tooltip: "Minotaur Maze", // This was the former Astari Cave, which has since moved south.
+      region: "Highlands",
+      place: "Highlands",
+      details: {
+        title: "Minotaur Maze",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 3411, y: 3105, zoom: 6 }, // The coordinates to center on after switching
+        coordinates: { x: 3003, y: 3044 },
+        image: "images/markers/Minotaur_Maze.png",
+        lore: "More information about Minotaur Maze is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    }, 
+    // Place: Parian Theif Fort
+    {
+      category: "undergrounds",
+      type: "overworld_stairs",
+      tooltip: "Vel Dran Cave", 
+      region: "Highlands",
+      place: "Highlands",
+      details: {
+        title: "Vel Dran Cave",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 3184, y: 3081, zoom: 4 }, // The coordinates to center on after switching
+        coordinates: { x: 3170, y: 3085 },
+        image: "images/markers/Vel_Dran_Cave.png",
+        lore: "More information about Vel Dran Cave is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
     {
       category: "undergrounds",
       type: "overworld_closed",
@@ -9963,7 +10093,7 @@ export const mapMarkers = {
         title: "West Entrance to Parian Tunnels",
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
-        coordinates: { x: 3450, y: 3037 },
+        coordinates: { x: 3450, y: 3038 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about West Entrance to Parian Tunnels is coming soon.",
         npcs: [],
@@ -9980,7 +10110,7 @@ export const mapMarkers = {
         title: "East Entrance to Parian Tunnels",
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
-        coordinates: { x: 3507, y: 3027 },
+        coordinates: { x: 3507, y: 3028 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about East Entrance to Parian Tunnels is coming soon.",
         npcs: [],
@@ -10070,7 +10200,7 @@ export const mapMarkers = {
       details: {
         title: "Vel Dran Cave",
         switchTo: "underground", // This will trigger the map switch
-        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
+        flyTo: { x: 3288, y: 3298, zoom: 5 }, // The coordinates to center on after switching
         coordinates: { x: 3287, y: 3300 },
         image: "images/markers/Vel_Dran_Cave.png",
         lore: "More information about Vel Dran Cave is coming soon.",

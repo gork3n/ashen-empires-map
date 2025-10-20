@@ -299,7 +299,7 @@ function initializeMap() {
             tileGrid: new TileGrid({
                 extent: [0, -32768, 32768, 0],
                 origin: [0, 0],
-                resolutions: [128, 64, 32, 16, 8, 4, 2, 1],
+                resolutions: [128, 64, 32, 16, 8, 4, 2, 1, 0.5, 0.25],
                 tileSize: [256, 256]
             })
         })
@@ -314,7 +314,7 @@ function initializeMap() {
             tileGrid: new TileGrid({
                 extent: [0, -32768, 32768, 0],
                 origin: [0, 0],
-                resolutions: [128, 64, 32, 16, 8, 4, 2, 1],
+                resolutions: [128, 64, 32, 16, 8, 4, 2, 1, 0.5, 0.25],
                 tileSize: [256, 256]
             })
         })
@@ -329,7 +329,7 @@ function initializeMap() {
         view: new View({
             center: initialCenterOlCoords, // Use your calculated center
             resolution: 8, // Start at zoom level 4
-            resolutions: [128, 64, 32, 16, 8, 4, 2, 1], // Explicitly define resolutions
+            resolutions: [128, 64, 32, 16, 8, 4, 2, 1, 0.5, 0.25], // Explicitly define resolutions
             constrainResolution: true, // Snap to defined zoom levels
         })
     });
@@ -644,7 +644,7 @@ function populateAndShowFlyout(data, mainMapView) {
             <div class="flyout-image-column">
                 <div class="flyout-map-preview-container ${details.switchTo}-preview">
                     <div id="flyout-minimap" class="flyout-minimap"></div>
-                    <button id="flyout-go-btn" class="flyout-go-btn" title="Go to location"></button>
+                    <button id="flyout-go-btn" class="flyout-go-btn" title="Go to location">Go</button>
                 </div>
             </div>
         `;

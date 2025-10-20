@@ -868,13 +868,14 @@ input:checked + .slider:before {
     box-shadow: 0 2px 6px rgba(0,0,0,0.4);
     transition: transform 0.2s, background-color 0.2s;
     z-index: 10; /* Ensure it's above the map canvas */
-}
-
-.flyout-go-btn::before {
-    content: '→'; /* Simple arrow as a fallback */
-    font-size: 28px;
+    /* New styles to center the text content */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #111;
-    line-height: 48px; /* Vertically center the arrow */
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Alegreya Sans', sans-serif;
 }
 
 /* --- Dark Mode Scrollbar for Filter Menu --- */

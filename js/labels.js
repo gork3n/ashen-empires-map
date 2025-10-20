@@ -448,7 +448,7 @@ export const mapLabels = {
       region: "Highlands",
       details: {
         title: "Parian",
-        coordinates: { x: 3461, y: 2938 },
+        coordinates: { x: 3461, y: 2939 },
         image: "",
         lore: "More information about Parian is coming soon.",
         information: "",
@@ -3151,7 +3151,7 @@ export const mapLabels = {
       region: "Highlands",
       details: {
         title: "Parian Lake",
-        coordinates: { x: 3511, y: 2950 },
+        coordinates: { x: 3511, y: 2951 },
         image: "",
         lore: "More information about Parian Lake is coming soon.",
         information: "",
