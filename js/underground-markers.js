@@ -60,6 +60,10 @@ export const undergroundMarkerStyles = {
     icon: "icons/well.svg",
     color: "#d36517ff", // SaddleBrown
   },
+  underworld_hole: {
+    icon: "icons/hole.svg",
+    color: "#d36517ff", // SaddleBrown
+  },
 };
 /**
  * This file contains the marker data specifically for the underground map.
@@ -184,6 +188,247 @@ export const undergroundMapMarkers = {
     },
 
     // Region: Darkwoods Undergrounds
+    {
+      category: "underground",
+      type: "underworld_ladder",
+      tooltip: "Termigon Pit Exit",
+      region: "Darkwoods",
+      place: "Darkwoods",
+      details: {
+        title: "Termigon Pit Exit",
+        switchTo: "overworld",
+        flyTo: { x: 761, y: 3322, zoom: 5 },// The coordinates for the Ladder inside the Grell Tunnels underground area.
+        coordinates: { x: 852, y: 3355 },
+        image: "images/markers/Termigon_Pit_Exit.png",
+        lore: "Exit to Darkwoods above Termigon Pit.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "underground",
+      type: "underworld_ladder",
+      tooltip: "Termigon Pit Level 2 Entrance",
+      region: "Darkwoods",
+      place: "Darkwoods",
+      details: {
+        title: "Termigon Pit Level 2 Entrance",
+        switchTo: "underground",
+        flyTo: { x: 938, y: 3317, zoom: 5 },// The coordinates for the Ladder inside the Grell Tunnels underground area.
+        coordinates: { x: 858, y: 3349 },
+        image: "images/markers/Termigon_Pit_Level_2_Entrance.png",
+        lore: "Entrance to Termigon Pit Level below Termigon Pit.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "underground",
+      type: "underworld_ladder",
+      tooltip: "Termigon Pit Level 2 Exit",
+      region: "Darkwoods",
+      place: "Darkwoods",
+      details: {
+        title: "Termigon Pit Level 2 Exit",
+        switchTo: "underground",
+        flyTo: { x: 792, y: 3303, zoom: 5 },// The coordinates for the Ladder inside the Grell Tunnels underground area.
+        coordinates: { x: 968, y: 3303 },
+        image: "images/markers/Termigon_Pit_Level_2_Exit.png",
+        lore: "Exit to Termigon Pit Level above Termigon Pit Level 2.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "underground",
+      type: "underworld_ladder",
+      tooltip: "Pit Connector Level 3 Exit",
+      region: "Darkwoods",
+      place: "Darkwoods",
+      details: {
+        title: "Pit Connector Level 3 Exit",
+        switchTo: "underground",
+        flyTo: { x: 968, y: 3303, zoom: 6 },// The coordinates for the Ladder inside the Grell Tunnels underground area.
+        coordinates: { x: 792, y: 3303 },
+        image: "images/markers/Pit_Connector_Level_3_Exit.png",
+        lore: "Exit to Pit Connector Level 3 above Pit Connector Level 3.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "underground",
+      type: "underworld_ladder",
+      tooltip: "Termigon Pit Exit",
+      region: "Darkwoods",
+      place: "Darkwoods",
+      details: {
+        title: "Termigon Pit Exit",
+        switchTo: "underground",
+        flyTo: { x: 938, y: 3317, zoom: 5 },// The coordinates for the Ladder inside the Grell Tunnels underground area.
+        coordinates: { x: 858, y: 3349 },
+        image: "images/markers/Termigon_Pit_Exit.png",
+        lore: "Exit to Darkwoods above Termigon Pit.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "underground",
+      type: "underworld_cave",
+      tooltip: "Triddle Cave Exit",
+      region: "Darkwoods",
+      place: "Darkwoods",
+      details: {
+        title: "Triddle Cave Exit",
+        switchTo: "overworld",
+        flyTo: { x: 799, y: 3335, zoom: 5 },// The coordinates for the Ladder inside the Grell Tunnels underground area.
+        coordinates: { x: 792, y: 3330 },
+        image: "images/markers/Triddle_Cave_Exit.png",
+        lore: "Exit to Darkwoods above Triddle Cave.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "underground",
+      type: "underworld_cave",
+      tooltip: "Astari Rune Shelter Exit",
+      region: "Darkwoods",
+      place: "Darkwoods",
+      details: {
+        title: "Astari Rune Shelter Exit",
+        switchTo: "overworld",
+        flyTo: { x: 813, y: 3221, zoom: 5 },// The coordinates for the Ladder inside the Grell Tunnels underground area.
+        coordinates: { x: 813, y: 3223 },
+        image: "images/markers/Astari_Rune_Shelter_Exit.png",
+        lore: "Exit to Darkwoods above Astari Rune Shelter.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "underground",
+      type: "underworld_cave",
+      tooltip: "Ant Mound Exit",
+      region: "Darkwoods",
+      place: "Darkwoods",
+      details: {
+        title: "Ant Mound Exit",
+        switchTo: "overworld",
+        flyTo: { x: 839, y: 3271, zoom: 5 },// The coordinates for the Ladder inside the Grell Tunnels underground area.
+        coordinates: { x: 839, y: 3271 },
+        image: "images/markers/Ant_Mound_Exit.png",
+        lore: "Exit to Darkwoods above Ant Mound.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "underground",
+      type: "underworld_hole",
+      tooltip: "Ant Mound Level 2 Entrance",
+      region: "Darkwoods",
+      place: "Darkwoods",
+      details: {
+        title: "Ant Mound Level 2 Entrance",
+        switchTo: "underground",
+        flyTo: { x: 1000, y: 3271, zoom: 5 },// The coordinates for the Ladder inside the Grell Tunnels underground area.
+        coordinates: { x: 824, y: 3271 },
+        image: "images/markers/Ant_Mound_Exit.png",
+        lore: "Exit to Darkwoods above Ant Mound.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "underground",
+      type: "underworld_cave",
+      tooltip: "Ant Mound Level 2 Exit",
+      region: "Darkwoods",
+      place: "Darkwoods",
+      details: {
+        title: "Ant Mound Level 2 Exit",
+        switchTo: "underground",
+        flyTo: { x: 824, y: 3271, zoom: 5 },// The coordinates for the Ladder inside the Grell Tunnels underground area.
+        coordinates: { x: 1000, y: 3271 },
+        image: "images/markers/Ant_Mound_Level_2_Exit.png",
+        lore: "Exit to Darkwoods above Ant Mound Level 2.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // City: Whisperdale Undergrounds
+    {
+      category: "underground",
+      type: "underworld_stairs",
+      tooltip: "Cherla Catacombs Exit",
+      region: "Battle Plains",
+      place: "Chlera",
+      details: {
+        title: "Chlera Catacombs Exit",
+        switchTo: "overworld",
+        flyTo: { x: 423, y: 3430, zoom: 5 },// The coordinates for the Ladder inside the Grell Tunnels underground area.
+        coordinates: { x: 423, y: 3431 },
+        image: "images/markers/Grell_Ladder_Exit.png",
+        lore: "Exit to Chlera above Chlera Catacombs.",
+        npcs: [],
+        links: [],
+      },
+    },
+    // Place: Cathedral of Joyous Afterlife underground
+    {
+      category: "underground",
+      type: "underworld_stairs",
+      tooltip: "Cathedral of Joyous Afterlife Exit",
+      region: "Battle Plains",
+      place: "Chlera",
+      details: {
+        title: "Cathedral of Joyous Afterlife Exit",
+        switchTo: "overworld",
+        flyTo: { x: 633, y: 3187, zoom: 4 },// The coordinates for the Ladder inside the Grell Tunnels underground area.
+        coordinates: { x: 712, y: 3125 },
+        image: "images/markers/Cathedral_of_Joyous_Afterlife_Ladder_Exit.png",
+        lore: "Exit to Chlera above Cathedral of Joyous Afterlife.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "underground",
+      type: "underworld_stairs",
+      tooltip: "Cathedral of Joyous Afterlife Exit",
+      region: "Battle Plains",
+      place: "Chlera",
+      details: {
+        title: "Cathedral of Joyous Afterlife Exit",
+        switchTo: "overworld",
+        flyTo: { x: 628, y: 3198, zoom: 4 },// The coordinates for the Ladder inside the Grell Tunnels underground area.
+        coordinates: { x: 647, y: 3144 },
+        image: "images/markers/Cathedral_of_Joyous_Afterlife_Exit.png",
+        lore: "Exit to Chlera above Cathedral of Joyous Afterlife.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "underground",
+      type: "underworld_stairs",
+      tooltip: "Cathedral of Joyous Afterlife Exit",
+      region: "Battle Plains",
+      place: "Chlera",
+      details: {
+        title: "Cathedral of Joyous Afterlife Exit",
+        switchTo: "overworld",
+        flyTo: { x: 680, y: 3319, zoom: 4 },// The coordinates for the Ladder inside the Grell Tunnels underground area.
+        coordinates: { x: 679, y: 3316 },
+        image: "images/markers/Cathedral_of_Joyous_Afterlife_Exit.png",
+        lore: "Exit to Chlera above Cathedral of Joyous Afterlife.",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // Region: Black Swamp Undergrounds
 

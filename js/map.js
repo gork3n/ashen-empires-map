@@ -276,7 +276,7 @@ function initializeMap() {
     // --- Set Initial Map View ---
     // Define the center of the map using in-game (4096x4096) coordinates.
     // This makes it easy to change the starting location.
-    const initialCenterGameCoords = { x: 2203, y: 3199, }; // Default View is { x: 776, y: 668, } (Showing Lotor's Summer Palace) Centers LSP on smaller screens.
+    const initialCenterGameCoords = { x: 552, y: 3185, }; // Default View is { x: 776, y: 668, } (Showing Lotor's Summer Palace) Centers LSP on smaller screens.
 
     const mapSize = 32768;
     const scaleFactor = mapSize / 4096; // New scaling factor
@@ -468,9 +468,40 @@ function updateFilterMenuTitles() {
  * @param {string} targetMap - The map to switch to ('overworld' or 'underground').
  * @param {object} [flyToCoords=null] - Optional coordinates {x, y} to fly to after switching.
  */
+function flyToLocation(flyToCoords) {
+    if (!flyToCoords || flyToCoords.x === undefined || flyToCoords.y === undefined) return;
+
+    const mapSize = 32768;
+    const scaleFactor = mapSize / 4096;
+    const offset = scaleFactor / 2;
+
+    const olCoords = [
+        flyToCoords.x * scaleFactor + offset,
+        -(flyToCoords.y * scaleFactor) - offset
+    ];
+
+    const view = map.getView();
+    const currentZoom = view.getZoom();
+    const targetZoom = flyToCoords.zoom !== undefined ? flyToCoords.zoom : (currentZoom < 5 ? 5 : currentZoom);
+
+    view.animate({
+        center: olCoords,
+        zoom: targetZoom,
+        duration: 1000, // Animation duration in milliseconds
+    });
+}
+
+/**
+ * Switches the map view between 'overworld' and 'underground'.
+ * @param {string} targetMap - The map to switch to ('overworld' or 'underground').
+ * @param {object} [flyToCoords=null] - Optional coordinates {x, y} to fly to after switching.
+ */
 function switchMap(targetMap, flyToCoords = null) {
-    if (targetMap === currentMap) return; // No change needed
-    
+    if (targetMap === currentMap) {
+        if (flyToCoords) flyToLocation(flyToCoords);
+        return;
+    }
+
     const isSwitchingToUnderground = targetMap === 'underground';
     const mapElement = document.getElementById('map');
 
@@ -522,30 +553,10 @@ function switchMap(targetMap, flyToCoords = null) {
     hideInfoFlyout();
 
     // Update the active state of the toggle buttons
-    const overworldBtn = document.getElementById('toggle-overworld');
-    const undergroundBtn = document.getElementById('toggle-underground');
-    if (overworldBtn && undergroundBtn) {
-        overworldBtn.classList.toggle('active', !isSwitchingToUnderground);
-        undergroundBtn.classList.toggle('active', isSwitchingToUnderground);
-    }
+    updateToggleButtons(isSwitchingToUnderground);
 
-    // If flyToCoords are provided, animate the view to the new center.
-    if (flyToCoords && flyToCoords.x && flyToCoords.y) {
-        const mapSize = 32768;
-        const scaleFactor = mapSize / 4096;
-        const offset = scaleFactor / 2;
-
-        const olCoords = [
-            flyToCoords.x * scaleFactor + offset,
-            -(flyToCoords.y * scaleFactor) - offset
-        ];
-
-        map.getView().animate({
-            center: olCoords,
-            duration: 1000, // Animation duration in milliseconds
-            zoom: map.getView().getZoom() < 5 ? 5 : map.getView().getZoom() // Zoom in if too far out
-        });
-    }
+    // If flyToCoords are provided, animate the view to the new center
+    if (flyToCoords) flyToLocation(flyToCoords);
 }
 
 

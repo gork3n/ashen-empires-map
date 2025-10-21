@@ -1950,7 +1950,7 @@ export const mapMarkers = {
 
     // Mainland Quests
 
-    // Region: Darkwoods
+    // Region: Darkwoods Quests
     // City: Dunmarrow Quests
     {
       category: "npc",
@@ -2042,6 +2042,220 @@ export const mapMarkers = {
         links: [{ text: "Ashen Empires Wiki (Parian Warlords)", url: "https://ashenempires.fandom.com/wiki/Parian_Warlords" }],
       },
     },
+    // City: Whisperdale Quests
+    {
+      category: "npc",
+      type: "overworld_quest",
+      tooltip: "Periza (Wanders)",
+      region: "Darkwoods",
+      place: "Whisperdale",
+      details: {
+        title: "Periza Quest",
+        coordinates: { x: 371, y: 3456 },
+        image: "images/markers/Periza_Quest.png",
+        lore: "Periza is part of the Warg Quest quest line.",
+        npcs: [],
+        links: [{ text: "Ashen Empires Wiki (Warg Quest)", url: "https://ashenempires.fandom.com/wiki/Warg_Quest" }],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_quest",
+      tooltip: "Varios (Wanders)",
+      region: "Darkwoods",
+      place: "Whisperdale",
+      details: {
+        title: "Varios Quest",
+        coordinates: { x: 389, y: 3443 },
+        image: "images/markers/Varios_Quest.png",
+        lore: "Varios is part of the Time for Revenge quest line.",
+        npcs: [],
+        links: [{ text: "Ashen Empires Wiki (Time for Revenge)", url: "https://ashenempires.fandom.com/wiki/Varios" }],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_quest",
+      tooltip: "Jarkam (Wanders)",
+      region: "Darkwoods",
+      place: "Whisperdale",
+      details: {
+        title: "Jarkam Quest",
+        coordinates: { x: 388, y: 3461 },
+        image: "images/markers/Jarkam_Quest.png",
+        lore: "Jarkam is part of the Jarkam's Note quest line.",
+        npcs: [],
+        links: [{ text: "Ashen Empires Wiki (Jarkam's Note)", url: "https://ashenempires.fandom.com/wiki/Jarkam%27s_Note" }],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_quest",
+      tooltip: "Tilis Oakwoven (Wanders)",
+      region: "Darkwoods",
+      place: "Whisperdale",
+      details: {
+        title: "Tilis Oakwoven Quest",
+        coordinates: { x: 382, y: 3460 },
+        image: "images/markers/Tilis_Oakwoven_Quest.png",
+        lore: "Tilis Oakwoven is part of the Advanced Ranger Training quest line.",
+        npcs: [],
+        links: [{ text: "Ashen Empires Wiki (Advanced Ranger Training)", url: "https://ashenempires.fandom.com/wiki/Advanced_Ranger_Training" }],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_quest",
+      tooltip: "Zarowyn (Wanders)",
+      region: "Darkwoods",
+      place: "Whisperdale",
+      details: {
+        title: "Zarowyn Quest",
+        coordinates: { x: 391, y: 3462 },
+        image: "images/markers/Zarowyn_Quest.png",
+        lore: "Zarowyn is part of the Search for Jhulara quest line.",
+        npcs: [],
+        links: [{ text: "Ashen Empires Wiki (Search for Jhulara)", url: "https://ashenempires.fandom.com/wiki/Search_for_Jhulara" }],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_quest",
+      tooltip: "Zerev",
+      region: "Darkwoods",
+      place: "Whisperdale",
+      details: {
+        title: "Zerev Quest",
+        coordinates: { x: 441, y: 3476 },
+        image: "images/markers/Zerev_Quest.png",
+        lore: "Zerev is part of the Loyal quest line.",
+        npcs: [],
+        links: [{ text: "Ashen Empires Wiki (Loyal)", url: "https://ashenempires.fandom.com/wiki/Loyal" }],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_quest",
+      tooltip: "Legrant",
+      region: "Darkwoods",
+      place: "Whisperdale",
+      details: {
+        title: "Legrant Quest",
+        coordinates: { x: 405, y: 3482 },
+        image: "images/markers/Legrant_Quest.png",
+        lore: "Legrant is part of the The Bane of Whisperdale quest line.",
+        npcs: [],
+        links: [{ text: "Ashen Empires Wiki (The Bane of Whisperdale)", url: "https://ashenempires.fandom.com/wiki/The_Bane_of_Whisperdale" }],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_quest",
+      tooltip: "Paezer",
+      region: "Darkwoods",
+      place: "Whisperdale",
+      details: {
+        title: "Paezer Quest",
+        coordinates: { x: 345, y: 3484 },
+        image: "images/markers/Paezer_Quest.png",
+        lore: "Paezar is part of the Fishing for Friends quest line.",
+        npcs: [],
+        links: [{ text: "Ashen Empires Wiki (Fishing for Friends)", url: "https://ashenempires.fandom.com/wiki/Fishing_for_Friends" }],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_quest",
+      tooltip: "Azulum",
+      region: "Darkwoods",
+      place: "Whisperdale",
+      details: {
+        title: "Azulum Quest",
+        coordinates: { x: 394, y: 3479 },
+        image: "images/markers/Azulum_Quest.png",
+        lore: "Azulum is part of the Oozing on the Job quest line.",
+        npcs: [],
+        links: [{ text: "Ashen Empires Wiki (Oozing on the Job)", url: "#" }], // Quest not added to the AE wiki yet.
+      },
+    },
+    // City: Autumn Quests
+    {
+      category: "npc",
+      type: "overworld_quest",
+      tooltip: "Vesos (Wanders)",
+      region: "Darkwoods",
+      place: "Autumn",
+      details: {
+        title: "Vesos Quest",
+        coordinates: { x: 588, y: 3401 },
+        image: "images/markers/Vesos_Quest.png",
+        lore: "Vesos is part of the Noisy Neighbors quest line.",
+        npcs: [],
+        links: [{ text: "Ashen Empires Wiki (Noisy Neighbors)", url: "https://ashenempires.fandom.com/wiki/Noisy_Neighbors" }], // Quest not added to the AE wiki yet.
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_quest",
+      tooltip: "Rydyl (Wanders)",
+      region: "Darkwoods",
+      place: "Autumn",
+      details: {
+        title: "Rydyl Quest",
+        coordinates: { x: 582, y: 3409 },
+        image: "images/markers/Rydyl_Quest.png",
+        lore: "Rydyl is part of the Rydyl quest line.",
+        npcs: [],
+        links: [{ text: "Ashen Empires Wiki (Rydyl)", url: "https://ashenempires.fandom.com/wiki/Rydyl" }], // Quest not added to the AE wiki yet.
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_quest",
+      tooltip: "Jhulara (Wanders)",
+      region: "Darkwoods",
+      place: "Autumn",
+      details: {
+        title: "Jhulara Quest",
+        coordinates: { x: 592, y: 3402 },
+        image: "images/markers/Jhulara_Quest.png",
+        lore: "Jhulara is part of the Julara's Father quest line.",
+        npcs: [],
+        links: [{ text: "Ashen Empires Wiki (Julara's Father)", url: "https://ashenempires.fandom.com/wiki/Jhulara%27s_Father" }], // Quest not added to the AE wiki yet.
+      },
+    },
+    // Place: Burslord's Hunting Lodge Quests
+    {
+      category: "npc",
+      type: "overworld_quest",
+      tooltip: "Galun",
+      region: "Darkwoods",
+      place: "Autumn",
+      details: {
+        title: "Galun Quest",
+        coordinates: { x: 676, y: 3403 },
+        image: "images/markers/Galun_Quest.png",
+        lore: "Galun is part of the Sentimental Value quest line.",
+        npcs: [],
+        links: [{ text: "Ashen Empires Wiki (Sentimental Value)", url: "https://ashenempires.fandom.com/wiki/Sentimental_Value" }], // Quest not added to the AE wiki yet.
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_quest",
+      tooltip: "Burslord (Wanders)",
+      region: "Darkwoods",
+      place: "Autumn",
+      details: {
+        title: "Burslord Quest",
+        coordinates: { x: 682, y: 3407 },
+        image: "images/markers/Burslord_Quest.png",
+        lore: "Burslord is part of the Termigon Armor quest line.",
+        npcs: [],
+        links: [{ text: "Ashen Empires Wiki (Termigon Armor)", url: "https://ashenempires.fandom.com/wiki/Termigon_Armor" }], // Quest not added to the AE wiki yet.
+      },
+    },
+    
 
     // Region: Battle Plains Quests
     // City: Chlera Quests
@@ -3062,7 +3276,7 @@ export const mapMarkers = {
       place: "Darkwoods",
       details: {
         title: "Whisperdale Dock",
-        coordinates: { x: 343, y: 3491 },
+        coordinates: { x: 344, y: 3491 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Whisperdale Dock is coming soon.",
         npcs: [],
@@ -3827,6 +4041,69 @@ export const mapMarkers = {
       },
     },
 
+    // Sub-Category: Mage of Lotor NPCs
+
+    // Region: Silvest Valley Mage of Lotor NPCs
+    // City: Silvest Mage of Lotor NPCs
+    {
+      category: "npc",
+      type: "overworld_information_npc",
+      tooltip: "Mage of Lotor",
+      region: "Silvest Valley",
+      place: "Silvest",
+      details: {
+        title: "Mage of Lotor",
+        coordinates: { x: 1165, y: 1362 },
+        image: "images/markers/Silvest_Mage_of_Lotor.png",
+        lore: "Mage of Lotor is a key NPC in the Silvest Valley region (Legacy Cloak).",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // Region: Krythan Mage of Lotor NPCs
+
+    // Region: Darkwoods Mage of Lotor NPCs
+    // City: Josody Mage of Lotor NPCs
+
+    // City: Whisperdale Mage of Lotor NPCs
+    {
+      category: "npc",
+      type: "overworld_information_npc",
+      tooltip: "Mage of Lotor",
+      region: "Darkwoods",
+      place: "Whisperdale",
+      details: {
+        title: "Mage of Lotor",
+        coordinates: { x: 402, y: 3432 },
+        image: "images/markers/Whisperdale_Mage_of_Lotor.png",
+        lore: "Mage of Lotor is a key NPC in the Darkwoods region (Legacy Cloak).",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // Region: Battle Plains Mage of Lotor NPCs
+
+    // Region: Black Swamp Mage of Lotor NPCs
+    // City: Krog Mage of Lotor NPCs
+    {
+      category: "npc",
+      type: "overworld_information_npc",
+      tooltip: "Mage of Lotor",
+      region: "Black Swamp",
+      place: "Krog",
+      details: {
+        title: "Mage of Lotor",
+        coordinates: { x: 3072, y: 3766 },
+        image: "images/markers/Krog_Mage_of_Lotor.png",
+        lore: "Mage of Lotor is a key NPC in the Black Swamp region (Legacy Cloak).",
+        npcs: [],
+        links: [],
+      },
+    },
+
+
 
     // Sub-Category Information
     // Region: Valinor
@@ -3850,44 +4127,34 @@ export const mapMarkers = {
     
 
     // Region: Silvest Valley Information
-    {
-      category: "npc",
-      type: "overworld_information_npc",
-      tooltip: "Mage of Lotor",
-      region: "Silvest Valley",
-      place: "Silvest",
-      details: {
-        title: "Mage of Lotor",
-        coordinates: { x: 1165, y: 1362 },
-        image: "images/markers/Silvest_Mage_of_Lotor.png",
-        lore: "Mage of Lotor is a key NPC in the Silvest Valley region (Legacy Cloak).",
-        npcs: [],
-        links: [],
-      },
-    },
+    
 
     // Region: Krythan Information
 
     // Region: Darkwoods Information
+    // City: Josody Information
 
-    // Region: Battle Plains Information
-
-    // Region: Black Swamp Information
+    // City: Whisperdale Information
     {
       category: "npc",
       type: "overworld_information_npc",
-      tooltip: "Mage of Lotor",
-      region: "Black Swamp",
-      place: "Krog",
+      tooltip: "Lord Vezryl",
+      region: "Darkwoods",
+      place: "Whisperdale",
       details: {
-        title: "Mage of Lotor",
-        coordinates: { x: 3072, y: 3766 },
-        image: "images/markers/Krog_Mage_of_Lotor.png",
-        lore: "Mage of Lotor is a key NPC in the Black Swamp region (Legacy Cloak).",
+        title: "Lord Vezryl",
+        coordinates: { x: 409, y: 3429 },
+        image: "images/markers/Whisperdale_Lord_Vezryl.png",
+        lore: "Lord Vezryl is a key NPC in the Darkwoods region.",
         npcs: [],
         links: [],
       },
     },
+
+    // Region: Battle Plains Information
+
+    // Region: Black Swamp Information
+    
     {
       category: "npc",
       type: "overworld_information_npc",
@@ -4086,13 +4353,13 @@ export const mapMarkers = {
     {
       category: "npc",
       type: "overworld_town_steward",
-      tooltip: "Town Steward (Whisperdale)",
+      tooltip: "Whisperdale Steward",
       region: "Darkwoods",
       place: "Whisperdale",
       details: {
-        title: "Town Steward (Whisperdale)",
-        coordinates: { x: 404, y: 3417 },
-        image: "images/markers/image_coming_soon.png",
+        title: "Whisperdale Steward",
+        coordinates: { x: 393, y: 3458 },
+        image: "images/markers/Whisperdale_Steward.png",
         lore: "The Town Steward of Whisperdale offers a town bonus orb that grants Dexterity.",
         npcs: [],
         links: [],
@@ -4983,8 +5250,39 @@ export const mapMarkers = {
     },
 
     // City: Autumn Bank
+    {
+      category: "npc",
+      type: "overworld_bank",
+      tooltip: "Kezvorik's Bank",
+      region: "Darkwoods",
+      place: "Autumn",
+      details: {
+        title: "Autumn Bank",
+        coordinates: { x: 604, y: 3420 },
+        image: "images/markers/Autumn_Bank.png",
+        lore: "More information about Autumn Bank is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // City: Whisperdale Bank
+    {
+      category: "npc",
+      type: "overworld_bank",
+      tooltip: "Bank",
+      region: "Darkwoods",
+      place: "Whisperdale",
+      details: {
+        title: "Whisperdale Bank",
+        coordinates: { x: 381, y: 3433 },
+        image: "images/markers/Whisperdale_Bank.png",
+        lore: "More information about Whisperdale Bank is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+
     // Region: Battle Plains Bank
     // City: Chlera Bank
     {
@@ -5807,6 +6105,22 @@ export const mapMarkers = {
     // Mainlands Trainers
 
     // Region: Darkwoods Trainers
+    // City: Whisperdale Trainers
+    {
+      category: "npc",
+      type: "overworld_trainer",
+      tooltip: "Lotorian Knight",
+      region: "Darkwoods",
+      place: "Whisperdale",
+      details: {
+        title: "Lotorian Knight",
+        coordinates: { x: 402, y: 3429 },
+        image: "images/markers/Whisperdale_Lotorian_Knight.png",
+        lore: "More information about Lotorian Knight is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // Region: Battle Plains Trainers
 
@@ -7036,9 +7350,363 @@ export const mapMarkers = {
       },
     },
 
-    // City: Autumn
+    // City: Autumn Shops
+    {
+      category: "npc",
+      type: "overworld_shop_weaponry",
+      tooltip: "Xatak's Weaponry Shop",
+      region: "Darkwoods",
+      place: "Whisperdale",
+      details: {
+        title: "Xatak's Weaponry Shop",
+        coordinates: { x: 578, y: 3395 },
+        image: "images/markers/Xatak_Weaponry_Shop.png",
+        lore: "More information about Xatak's Weaponry Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_leather",
+      tooltip: "Narzil's Leather Shop",
+      region: "Darkwoods",
+      place: "Whisperdale",
+      details: {
+        title: "Narzil's Leather Shop",
+        coordinates: { x: 578, y: 3417 },
+        image: "images/markers/Narzil_Leather_Shop.png",
+        lore: "More information about Narzil's Leather Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_provisioner",
+      tooltip: "Varyana's Provisioner Shop",
+      region: "Darkwoods",
+      place: "Whisperdale",
+      details: {
+        title: "Varyana's Provisioner Shop",
+        coordinates: { x: 583, y: 3420 },
+        image: "images/markers/Varyana_Provisioner_Shop.png",
+        lore: "More information about Varyana's Provisioner Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_pub",
+      tooltip: "Sylvax's Pub",
+      region: "Darkwoods",
+      place: "Whisperdale",
+      details: {
+        title: "Sylvax's Pub",
+        coordinates: { x: 588, y: 3416 },
+        image: "images/markers/Sylvax_Pub.png",
+        lore: "More information about Sylvax's Pub is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_magic",
+      tooltip: "Malkoron's Magic Shop",
+      region: "Darkwoods",
+      place: "Whisperdale",
+      details: {
+        title: "Malkoron's Magic Shop",
+        coordinates: { x: 601, y: 3396 },
+        image: "images/markers/Malkoron_Magic_Shop.png",
+        lore: "More information about Malkoron's Magic Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_jewelry",
+      tooltip: "Larcie Nightwind's Jewelry Shop",
+      region: "Darkwoods",
+      place: "Whisperdale",
+      details: {
+        title: "Larcie Nightwind's Jewelry Shop",
+        coordinates: { x: 599, y: 3396 },
+        image: "images/markers/Larcie_Nightwind_Jewelry_Shop.png",
+        lore: "More information about Larcie Nightwind's Jewelry Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_carpentry",
+      tooltip: "Dolbrax's Carpentry Shop",
+      region: "Darkwoods",
+      place: "Whisperdale",
+      details: {
+        title: "Dolbrax's Carpentry Shop",
+        coordinates: { x: 592, y: 3394 },
+        image: "images/markers/Dolbrax_Carpentry_Shop.png",
+        lore: "More information about Dolbrax's Carpentry Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
 
-    // City: Whisperdale
+    // Place: Lord Vezryl's Estate Shops
+    {
+      category: "npc",
+      type: "overworld_shop_leather",
+      tooltip: "Alaven's Leather Shop",
+      region: "Darkwoods",
+      place: "Lord Vezryl's Estate",
+      details: {
+        title: "Alaven's Leather Shop",
+        coordinates: { x: 545, y: 3176 },
+        image: "images/markers/Alaven_Leather_Shop.png",
+        lore: "More information about Alaven's Leather Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_pub",
+      tooltip: "Golgaste's Kitchen",
+      region: "Darkwoods",
+      place: "Lord Vezryl's Estate",
+      details: {
+        title: "Golgaste's Kitchen",
+        coordinates: { x: 551, y: 3163 },
+        image: "images/markers/Golgaste_Kitchen.png",
+        lore: "More information about Golgaste's Kitchen is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // City: Whisperdale Shops
+    {
+      category: "npc",
+      type: "overworld_shop_leather",
+      tooltip: "Vornath's Leather Shop",
+      region: "Darkwoods",
+      place: "Whisperdale",
+      details: {
+        title: "Vornath's Leather Shop",
+        coordinates: { x: 392, y: 3474 },
+        image: "images/markers/Vornath_Leather_Shop.png",
+        lore: "More information about Vornath's Leather Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_carpentry",
+      tooltip: "Quizlin's Carpentry Shop",
+      region: "Darkwoods",
+      place: "Whisperdale",
+      details: {
+        title: "Quizlin's Carpentry Shop",
+        coordinates: { x: 381, y: 3477 },
+        image: "images/markers/Quizlin_Carpentry_Shop.png",
+        lore: "More information about Quizlin's Carpentry Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_pub",
+      tooltip: "Belokk's Tavern",
+      region: "Darkwoods",
+      place: "Whisperdale",
+      details: {
+        title: "Belokk's Tavern",
+        coordinates: { x: 377, y: 3450 },
+        image: "images/markers/Belokk_Tavern.png",
+        lore: "More information about Belokk's Tavern is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_farming",
+      tooltip: "Pharyd's Farming Shop",
+      region: "Darkwoods",
+      place: "Whisperdale",
+      details: {
+        title: "Pharyd's Farming Shop",
+        coordinates: { x: 366, y: 3456 },
+        image: "images/markers/Pharyd_Farming_Shop.png",
+        lore: "More information about Pharyd's Farming Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_provisioner",
+      tooltip: "Kazagar's Provisioner Shop",
+      region: "Darkwoods",
+      place: "Whisperdale",
+      details: {
+        title: "Kazagar's Provisioner Shop",
+        coordinates: { x: 378, y: 3439 },
+        image: "images/markers/Kazagar_Provisioner_Shop.png",
+        lore: "More information about Kazagar's Provisioner Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_magic",
+      tooltip: "Gidrax's Magic Shop",
+      region: "Darkwoods",
+      place: "Whisperdale",
+      details: {
+        title: "Gidrax's Magic Shop",
+        coordinates: { x: 403, y: 3435 },
+        image: "images/markers/Gidrax_Magic_Shop.png",
+        lore: "More information about Gidrax's Magic Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_blacksmith",
+      tooltip: "Adalar's Blacksmith Shop",
+      region: "Darkwoods",
+      place: "Whisperdale",
+      details: {
+        title: "Adalar's Blacksmith Shop",
+        coordinates: { x: 405, y: 3448 },
+        image: "images/markers/Adalar_Blacksmith_Shop.png",
+        lore: "More information about Adalar's Blacksmith Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_armory",
+      tooltip: "Igrik's Armory Shop",
+      region: "Darkwoods",
+      place: "Whisperdale",
+      details: {
+        title: "Igrik's Armory Shop",
+        coordinates: { x: 393, y: 3444 },
+        image: "images/markers/Igrik_Armory_Shop.png",
+        lore: "More information about Igrik's Armory Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_weaponry",
+      tooltip: "Gantagor's Weaponry Shop",
+      region: "Darkwoods",
+      place: "Whisperdale",
+      details: {
+        title: "Gantagor's Weaponry Shop",
+        coordinates: { x: 393, y: 3450 },
+        image: "images/markers/Gantagor_Weaponry_Shop.png",
+        lore: "More information about Gantagor's Weaponry Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_jewelry",
+      tooltip: "Dalores Farkai's Jewelry Shop",
+      region: "Darkwoods",
+      place: "Whisperdale",
+      details: {
+        title: "Dalores Farkai's Jewelry Shop",
+        coordinates: { x: 339, y: 3476 },
+        image: "images/markers/Dalores_Farkai_Jewelry_Shop.png",
+        lore: "More information about Dalores Farkai's Jewelry Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_shipyard",
+      tooltip: "Manet's Shipyard",
+      region: "Darkwoods",
+      place: "Whisperdale",
+      details: {
+        title: "Manet's Shipyard",
+        coordinates: { x: 339, y: 3479 },
+        image: "images/markers/Manet_Shipyard.png",
+        lore: "More information about Manet's Shipyard is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_generic",
+      tooltip: "Lady Vezryl's Alliance Shop",
+      region: "Darkwoods",
+      place: "Whisperdale",
+      details: {
+        title: "Lady Vezryl's Alliance Shop",
+        coordinates: { x: 402, y: 3426 },
+        image: "images/markers/Lady_Vezryl_Alliance_Shop.png",
+        lore: "More information about Lady Vezryl's Alliance Shop is coming soon.",
+        currency: "Soluri Coin",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_scrolls",
+      tooltip: "Mordani's Scroll Shop",
+      region: "Darkwoods",
+      place: "Whisperdale",
+      details: {
+        title: "Mordani's Scroll Shop",
+        coordinates: { x: 438, y: 3428 },
+        image: "images/markers/Mordani_Scroll_Shop.png",
+        lore: "More information about Mordani's Scroll Shop is coming soon.",
+        currency: "Soluri Coin",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // Region: Battle Plains Shops
     // City: Chlera Shops
@@ -7528,7 +8196,7 @@ export const mapMarkers = {
     },
     {
       category: "npc",
-      type: "overworld_shop_armory",
+      type: "overworld_shop_generic",
       tooltip: "Lady of Krog's Alliance Shop",
       region: "Black Swamp",
       place: "Krog",
@@ -9245,6 +9913,21 @@ export const mapMarkers = {
     
 
     // Region: Darkwoods Spawns
+    {
+      category: "spawn",
+      type: "overworld_spawn_evil",
+      tooltip: "Evil Spawn Gate",
+      region: "Darkwoods",
+      place: "Darkwoods",
+      details: {
+        title: "Evil Spawn Gate",
+        coordinates: { x: 455, y: 3095 },
+        image: "images/markers/Darkwoods_Spawn_Gate.png",
+        lore: "More information about Dunmarrow Evil Spawn Gate is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
     // City: Josody Spawns
 
     // City: Gulley Spawns
@@ -9271,8 +9954,38 @@ export const mapMarkers = {
     },
 
     // City: Autumn Spawns
+    {
+      category: "spawn",
+      type: "overworld_spawn_good",
+      tooltip: "Good Spawn Gate",
+      region: "Darkwoods",
+      place: "Autumn",
+      details: {
+        title: "Good Spawn Gate",
+        coordinates: { x: 583, y: 3321 },
+        image: "images/markers/Autumn_Spawn_Gate.png",
+        lore: "More information about Autumn Good Spawn Gate is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // City: Whisperdale Spawns
+    {
+      category: "spawn",
+      type: "overworld_spawn_good",
+      tooltip: "Good Spawn Gate",
+      region: "Darkwoods",
+      place: "Whisperdale",
+      details: {
+        title: "Good Spawn Gate",
+        coordinates: { x: 389, y: 3456 },
+        image: "images/markers/Whisperdale_Spawn_Gate.png",
+        lore: "More information about Whisperdale Good Spawn Gate is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // Region: Battle Plains Spawns
     // City: Chlera Spawns
@@ -10260,17 +10973,34 @@ export const mapMarkers = {
     },
     {
       category: "undergrounds",
-      type: "overworld_scorpion",
-      tooltip: "Scorpion Pit",
+      type: "overworld_cave",
+      tooltip: "Astari Ruin Shelter Entrance",
       region: "Darkwoods",
       place: "Darkwoods",
       details: {
-        title: "Scorpion Pit",
+        title: "Astari Ruin Shelter Entrance",
         switchTo: "underground", // This will trigger the map switch
-        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
-        coordinates: { x: 837, y: 3269 },
+        flyTo: { x: 813, y: 3223, zoom: 6 }, // The coordinates to center on after switching
+        coordinates: { x: 813, y: 3221 },
+        image: "images/markers/Astari_Rune_Shelter_Entrance.png",
+        lore: "More information about Astari Ruin Shelter Entrance is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "undergrounds",
+      type: "overworld_ant",
+      tooltip: "Ant Mound",
+      region: "Darkwoods",
+      place: "Darkwoods",
+      details: {
+        title: "Ant Mound",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 839, y: 3271, zoom: 6 }, // The coordinates to center on after switching
+        coordinates: { x: 839, y: 3271 },
         image: "images/markers/image_coming_soon.png",
-        lore: "More information about Scorpion Pit is coming soon.",
+        lore: "More information about Ant Mound is coming soon.",
         npcs: [],
         links: [],
       },
@@ -10284,7 +11014,7 @@ export const mapMarkers = {
       details: {
         title: "Termigon Pit",
         switchTo: "underground", // This will trigger the map switch
-        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
+        flyTo: { x: 852, y: 3355, zoom: 6 }, // The coordinates to center on after switching
         coordinates: { x: 759, y: 3322 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Termigon Pit is coming soon.",
@@ -10295,16 +11025,16 @@ export const mapMarkers = {
     {
       category: "undergrounds",
       type: "overworld_mine",
-      tooltip: "South Astari Rune Shelter",
+      tooltip: "Triddle Mine",
       region: "Darkwoods",
       place: "Darkwoods",
       details: {
-        title: "South Astari Rune Shelter",
+        title: "Triddle Mine",
         switchTo: "underground", // This will trigger the map switch
-        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
+        flyTo: { x: 792, y: 3330, zoom: 7 }, // The coordinates to center on after switching
         coordinates: { x: 799, y: 3335 },
         image: "images/markers/image_coming_soon.png",
-        lore: "More information about South Astari Rune Shelter is coming soon.",
+        lore: "More information about Triddle Mine is coming soon.",
         npcs: [],
         links: [],
       },
@@ -10386,8 +11116,25 @@ export const mapMarkers = {
       details: {
         title: "Cathedral of Joyous Afterlife (North Entrance)",
         switchTo: "underground", // This will trigger the map switch
-        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
+        flyTo: { x: 712, y: 3125, zoom: 5 }, // The coordinates to center on after switching
         coordinates: { x: 633, y: 3187 },
+        image: "images/markers/image_coming_soon.png",
+        lore: "More information about Cathedral of Joyous Afterlife (North Entrance) is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "undergrounds",
+      type: "overworld_dungeon",
+      tooltip: "Cathedral of Joyous Afterlife (North Entrance)",
+      region: "Darkwoods",
+      place: "Darkwoods",
+      details: {
+        title: "Cathedral of Joyous Afterlife (North Entrance)",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 647, y: 3144, zoom: 5 }, // The coordinates to center on after switching
+        coordinates: { x: 628, y: 3198 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Cathedral of Joyous Afterlife (North Entrance) is coming soon.",
         npcs: [],
@@ -10403,7 +11150,7 @@ export const mapMarkers = {
       details: {
         title: "Cathedral of Joyous Afterlife (South Entrance)",
         switchTo: "underground", // This will trigger the map switch
-        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
+        flyTo: { x: 680, y: 3319, zoom: 5 }, // The coordinates to center on after switching
         coordinates: { x: 680, y: 3319 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Cathedral of Joyous Afterlife (South Entrance) is coming soon.",
@@ -10411,8 +11158,26 @@ export const mapMarkers = {
         links: [],
       },
     },
+    // City: Whisperdale underground
+    {
+      category: "undergrounds",
+      type: "overworld_stairs",
+      tooltip: "Whisperdale Library Basement",
+      region: "Darkwoods",
+      place: "Darkwoods",
+      details: {
+        title: "Whisperdale Library Basement",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 423, y: 3431, zoom: 7 }, // The coordinates to center on after switching
+        coordinates: { x: 423, y: 3430 },
+        image: "images/markers/image_coming_soon.png",
+        lore: "More information about Whisperdale Library Basement is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
 
-    // Region: Highlands underground x: 3127, y: 3222
+    // Region: Highlands underground
     // Place: Vel Dran underground
     {
       category: "undergrounds",

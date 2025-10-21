@@ -13,7 +13,7 @@ const markerTypeNames = {
     'overworld_portal_whirlpool': "Whirlpools",
 
     // Overworld Shops
-    'overworld_shop_weapon': "Weapon Shops",
+    'overworld_shop_weaponry': "Weaponry",
     'overworld_shop_armory': "Armories",
     'overworld_shop_generic': "General Stores",
     'overworld_shop_provisioner': "Provisioners",
@@ -80,9 +80,13 @@ const markerTypeNames = {
     'underworld_stairs': "Stairs",
     'underworld_ladder': "Ladders",
     'underworld_crypt': "Crypts",
+    'underworld_cave': "Caves",
+    'underworld_hole': "Holes",
 };
 
 /**
+
+
  * Initialize filter menu functionality. This is the main entry point for this module.
  * @param {object} data - The data object from map.js.
  * @param {object} data.mapMarkers - The marker data.

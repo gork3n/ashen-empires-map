@@ -477,6 +477,10 @@ input:checked + .slider:before {
 
 /* --- New Grid Layout for Label Toggles --- */
 #label-toggles {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Create a 2-column grid */
     gap: 10px;

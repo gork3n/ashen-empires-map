@@ -65,6 +65,7 @@ export const mapLabels = {
     },
   ],
   crypts: [
+    // Region: Krythan Crypts
     {
       name: "Krythan Crypt",
       fontSize: 30,
@@ -80,6 +81,23 @@ export const mapLabels = {
         links: [],
       },
     },
+    // Region: Darkwoods Crypts
+    {
+      name: "Cathedral\nof\nJoyous Afterlife",
+      fontSize: 30,
+      region: "Darkwoods",
+      details: {
+        title: "Cathedral of Joyous Afterlife",
+        coordinates: { x: 703, y: 3310 },
+        image: "",
+        lore: "The Cathedral of Joyous Afterlife is a large dungeon in the Darkwoods.",
+        information: "",
+        bonus: "",
+        npcs: [],
+        links: [],
+      },
+    },
+
   ],
   caves: [
     {
@@ -164,6 +182,22 @@ export const mapLabels = {
     // Region: Krythan Basements
 
     // Region: Darkwoods Basements
+    // City: Whisperdale Basements
+    {
+      name: "Whisperdale Library Basement",
+      fontSize: 15,
+      region: "Darkwoods",
+      details: {
+        title: "Whisperdale Library Basement",
+        coordinates: { x: 430, y: 3425 },
+        image: "",
+        lore: "More information about Whisperdale Library Basement is coming soon.",
+        information: "",
+        bonus: "",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // Region: Battle Plains Basements
 
@@ -282,7 +316,53 @@ export const mapLabels = {
     // Add underground grotto labels here
   ],
   pits: [
-    // Add underground pit labels here
+    // Region: Darkwoods Pits
+    {
+      name: "Termigon Pit",
+      fontSize: 15,
+      region: "Darkwoods",
+      details: {
+        title: "Termigon Pit",
+        coordinates: { x: 855, y: 3341 },
+        image: "",
+        lore: "More information about Termigon Pit is coming soon.",
+        information: "The Termigon Pit is a deep underground pit located in the Darkwoods region.",
+        bonus: "",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      name: "Ant Mound",
+      fontSize: 15,
+      region: "Darkwoods",
+      details: {
+        title: "Ant Mound",
+        coordinates: { x: 831, y: 3262 },
+        image: "",
+        lore: "More information about Ant Mound is coming soon.",
+        information: "The Ant Mound is a mysterious underground location in the Darkwoods region.",
+        bonus: "",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      name: "Astari Rune Shelter",
+      fontSize: 20,
+      region: "Darkwoods",
+      details: {
+        title: "Astari Rune Shelter",
+        coordinates: { x: 802, y: 3212 },
+        image: "",
+        lore: "More information about Astari Rune Shelter is coming soon.",
+        information: "The Astari Rune Shelter is a mysterious underground location in the Darkwoods region.",
+        bonus: "",
+        npcs: [],
+        links: [],
+      },
+    },
+
   ],
   passages: [
     // Add underground passage labels here
