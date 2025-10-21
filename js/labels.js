@@ -403,7 +403,7 @@ export const mapLabels = {
       region: "Darkwoods",
       details: {
         title: "Gulley",
-        coordinates: { x: 1107, y: 3672 },
+        coordinates: { x: 1104, y: 2752 },
         image: "",
         lore: "More information about Gulley is coming soon.",
         information: "",

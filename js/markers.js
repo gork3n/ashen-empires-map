@@ -10867,16 +10867,16 @@ export const mapMarkers = {
     {
       category: "undergrounds",
       type: "overworld_stairs",
-      tooltip: "Desprail Catacombs",
+      tooltip: "Desprail Tunnels",
       region: "Battle Plains",
       place: "Desprail",
       details: {
-        title: "Desprail Catacombs",
+        title: "Desprail Tunnels",
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 2230, y: 3198, zoom: 5 }, // The coordinates to center on after switching
         coordinates: { x: 2230, y: 3198 },
-        image: "images/markers/Desprail_Catacombs.png",
-        lore: "More information about Desprail Catacombs is coming soon.",
+        image: "images/markers/Desprail_Tunnels.png",
+        lore: "More information about Desprail Tunnels is coming soon.",
         npcs: [],
         links: [],
       },

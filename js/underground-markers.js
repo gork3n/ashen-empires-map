@@ -210,16 +210,16 @@ export const undergroundMapMarkers = {
     {
       category: "underground",
       type: "underworld_stairs",
-      tooltip: "Cherla Catacombs Exit",
+      tooltip: "Desprail Tunnels Exit",
       region: "Battle Plains",
       place: "Chlera",
       details: {
-        title: "Chlera Catacombs Exit",
+        title: "Desprail Tunnels Exit",
         switchTo: "overworld",
-        flyTo: { x: 2230, y: 3198, zoom: 5 },// The coordinates for the Ladder inside the Grell Tunnels underground area.
+        flyTo: { x: 2230, y: 3198, zoom: 5 },
         coordinates: { x: 2230, y: 3198 },
-        image: "images/markers/Grell_Ladder_Exit.png",
-        lore: "Exit to Chlera above Chlera Catacombs.",
+        image: "images/markers/Desprail_Tunnels_Exit.png",
+        lore: "Exit to Chlera above Desprail Tunnels.",
         npcs: [],
         links: [],
       },
@@ -233,7 +233,7 @@ export const undergroundMapMarkers = {
       details: {
         title: "Desprail Cave Exit",
         switchTo: "overworld",
-        flyTo: { x: 2136, y: 3155, zoom: 5 },// The coordinates for the Ladder inside the Grell Tunnels underground area.
+        flyTo: { x: 2136, y: 3155, zoom: 5 },
         coordinates: { x: 2119, y: 3138 },
         image: "images/markers/Desprail_Cave_Exit.png",
         lore: "Exit to Desprail Cave.",

@@ -261,7 +261,22 @@ export const mapLabels = {
     // Add underground sewer labels here
   ],
   tunnels: [
-    // Add underground tunnel labels here
+    // Region: Battle Plains Tunnels
+    {
+      name: "Desprail Tunnels",
+      fontSize: 25,
+      region: "Battle Plains",
+      details: {
+        title: "Desprail Tunnels",
+        coordinates: { x: 2180, y: 3211 },
+        image: "",
+        lore: "More information about Desprail Tunnels is coming soon.",
+        information: "Desprail Tunnels are located beneath Desprail.",
+        bonus: "",
+        npcs: [],
+        links: [],
+      },
+    },
   ],
   grottos: [
     // Add underground grotto labels here
