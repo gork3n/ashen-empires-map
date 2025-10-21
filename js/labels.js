@@ -513,7 +513,7 @@ export const mapLabels = {
         image: "",
         lore: "More information about Chlera is coming soon.",
         information: "",
-        bonus: "",
+        bonus: "City Bonus: Pierce +5 Pct, Dexterity +5",
         npcs: [],
         links: [{ text: "Ashen Empires Wiki (Non-Expansion Quests)", url: "https://ashenempires.fandom.com/wiki/Non-Expansion_Quests#Chlera" }],
       },

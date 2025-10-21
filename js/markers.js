@@ -2044,6 +2044,23 @@ export const mapMarkers = {
     },
 
     // Region: Battle Plains Quests
+    // City: Chlera Quests
+    {
+      category: "npc",
+      type: "overworld_quest",
+      tooltip: "Enderic",
+      region: "Battle Plains",
+      place: "Chlera",
+      details: {
+        title: "Enderic",
+        coordinates: { x: 2470, y: 3563 },
+        image: "images/markers/Dawat_Worker_Quest.png",
+        lore: "Enderic is part of the Secret City quest line.",
+        npcs: [],
+        quests: [],
+        links: [{ text: "Ashen Empires Wiki (Secret City)", url: "https://ashenempires.fandom.com/wiki/Secret_City" }], 
+      },
+    },
 
     // Region: Black Swamp Quests
     {
@@ -2736,6 +2753,26 @@ export const mapMarkers = {
     // City: Autumn Innkeeper
 
     // City: Whisperdale Innkeeper
+
+    // Region: Black Swamp Innkeeper
+
+    // Region: Battle Plains Innkeeper
+    // City: Chlera Innkeeper
+    {
+      category: "npc",
+      type: "overworld_inn_keeper",
+      tooltip: "Chlera Innkeeper",
+      region: "Battle Plains",
+      place: "Chlera",
+      details: {
+        title: "Chlera Innkeeper",
+        coordinates: { x: 2386, y: 3598 },
+        image: "images/markers/Chlera_Innkeeper.png",
+        lore: "More information about Chlera Innkeeper is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
 
 
     // Region: Highlands Innkeeper
@@ -4062,6 +4099,8 @@ export const mapMarkers = {
       },
     },
     // Region: Battle Plains Town Stewards
+    // City: Chlera Town Stewards
+    
 
     // Region: Black Swamp Town Stewards
     {
@@ -4176,20 +4215,52 @@ export const mapMarkers = {
     // City: Whisperdale Town Guardians
 
     // Region: Battle Plains Town Guardians
+    // City: Chlera Town Guardians
+    {
+      category: "npc",
+      type: "overworld_town_guardian",
+      tooltip: "Town Guardian (Chlera)",
+      region: "Battle Plains",
+      place: "Chlera",
+      details: {
+        title: "Town Guardian",
+        coordinates: { x: 2415, y: 3562 },
+        image: "images/markers/Chlera_Town_Guardian.png",
+        lore: "The Town Guardian in Chlera.",
+        npcs: [],
+        links: [],
+      },
+    },
+    // City: Desprail Town Guardians
+    {
+      category: "npc",
+      type: "overworld_town_guardian",
+      tooltip: "Town Guardian (Chlera)",
+      region: "Battle Plains",
+      place: "Chlera",
+      details: {
+        title: "Town Guardian",
+        coordinates: { x: 2415, y: 3562 },
+        image: "images/markers/Chlera_Town_Guardian.png",
+        lore: "The Town Guardian in Chlera.",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // Region: Black Swamp Town Guardians
     // City: Dawat Town Guardians
     {
       category: "npc",
       type: "overworld_town_guardian",
-      tooltip: "Town Guardian (Dawat)",
-      region: "Highlands",
-      place: "Dawat",
+      tooltip: "Town Guardian (Desprail)",
+      region: "Battle Plains",
+      place: "Desprail",
       details: {
         title: "Town Guardian",
-        coordinates: { x: 3082, y: 3370 },
-        image: "images/markers/Dawat_Town_Guardian.png",
-        lore: "The Town Guardian in Dawat.",
+        coordinates: { x: 2196, y: 3190 },
+        image: "images/markers/Desprail_Town_Guardian.png",
+        lore: "The Town Guardian in Desprail.",
         npcs: [],
         links: [],
       },
@@ -4331,6 +4402,38 @@ export const mapMarkers = {
     },
 
     // Region: Battle Plains Town Wizard of Insight
+    // City: Chlera Town Wizard of Insight
+    {
+      category: "npc",
+      type: "overworld_town_wizard_of_insight",
+      tooltip: "Town Wizard of Insight (Chlera)",
+      region: "Battle Plains",
+      place: "Chlera",
+      details: {
+        title: "Town Wizard of Insight",
+        coordinates: { x: 2383, y: 3574 },
+        image: "images/markers/Chlera_Town_Wizard_of_Insight.png",
+        lore: "More information about Chlera Town Wizard of Insight is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    // City: Desprail Town Wizard of Insight
+    {
+      category: "npc",
+      type: "overworld_town_wizard_of_insight",
+      tooltip: "Town Wizard of Insight (Chlera)",
+      region: "Battle Plains",
+      place: "Chlera",
+      details: {
+        title: "Town Wizard of Insight",
+        coordinates: { x: 2179, y: 3203 },
+        image: "images/markers/Chlera_Town_Wizard_of_Insight.png",
+        lore: "More information about Chlera Town Wizard of Insight is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // Region: Black Swamp Town Wizard of Insight
     // City: Dawat Town Wizard of Insight
@@ -4417,6 +4520,22 @@ export const mapMarkers = {
     // Region: Darkwoods Games of Chance
 
     // Region: Battle Plains Games of Chance
+    // City: Chlera Games of Chance
+    {
+      category: "npc",
+      type: "overworld_game_of_chance",
+      tooltip: "Jairn's Demon Eye Game (Wanders)",
+      region: "Battle Plains",
+      place: "Chlera",
+      details: {
+        title: "Jairn's Demon Eye Game (Wanders)",
+        coordinates: { x: 2405, y: 3585 },
+        image: "images/markers/Jairn_Demon_Eye_Game.png",
+        lore: "More information about Jairn's Demon Eye Game is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // Region: Black Swamp Games of Chance
 
@@ -4867,24 +4986,54 @@ export const mapMarkers = {
 
     // City: Whisperdale Bank
     // Region: Battle Plains Bank
-
-    // Region: Black Swamp Bank
-    // City: Krog Bank
+    // City: Chlera Bank
     {
       category: "npc",
       type: "overworld_bank",
       tooltip: "Bank",
-      region: "Black Swamp",
-      place: "Krog",
+      region: "Battle Plains",
+      place: "Chlera",
       details: {
         title: "Bank",
-        coordinates: { x: 3104, y: 3765 },
-        image: "images/markers/Krog_Bank.png",
+        coordinates: { x: 2391, y: 3567 },
+        image: "images/markers/Chlera_Bank.png",
         lore: "More information about Bank is coming soon.",
         npcs: [],
         links: [],
       },
     },
+    // City: Desprail Bank
+    {
+      category: "npc",
+      type: "overworld_bank",
+      tooltip: "Bank",
+      region: "Battle Plains",
+      place: "Desprail",
+      details: {
+        title: "Bank",
+        coordinates: { x: 2204, y: 3194 },
+        image: "images/markers/Desprail_Bank.png",
+        lore: "More information about Bank is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_bank",
+      tooltip: "Feraxid's Bank",
+      region: "Battle Plains",
+      place: "Desprail",
+      details: {
+        title: "Feraxid's Bank",
+        coordinates: { x: 2205, y: 3180 },
+        image: "images/markers/Feraxid_Bank.png",
+        lore: "More information about Feraxid's Bank is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+
     // City: Maraket Bank
     {
       category: "npc",
@@ -6892,6 +7041,296 @@ export const mapMarkers = {
     // City: Whisperdale
 
     // Region: Battle Plains Shops
+    // City: Chlera Shops
+    {
+      category: "npc",
+      type: "overworld_shop_weaponry",
+      tooltip: "Emelio's Weaponry Shop",
+      region: "Battle Plains",
+      place: "Chlera",
+      details: {
+        title: "Emelio's Weaponry Shop",
+        coordinates: { x: 2371, y: 3563 },
+        image: "images/markers/Emelio_Weaponry_Shop.png",
+        lore: "More information about Emelio's Weaponry Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_blacksmith",
+      tooltip: "Varnak's Blacksmith Shop",
+      region: "Battle Plains",
+      place: "Chlera",
+      details: {
+        title: "Varnak's Blacksmith Shop",
+        coordinates: { x: 2370, y: 3576 },
+        image: "images/markers/Varnak_Blacksmith_Shop.png",
+        lore: "More information about Varnak's Blacksmith Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_magic",
+      tooltip: "Ulric's Magic Shop",
+      region: "Battle Plains",
+      place: "Chlera",
+      details: {
+        title: "Ulric's Magic Shop",
+        coordinates: { x: 2389, y: 3588 },
+        image: "images/markers/Ulric_Magic_Shop.png",
+        lore: "More information about Ulric's Magic Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_pub",
+      tooltip: "David's Pub",
+      region: "Battle Plains",
+      place: "Chlera",
+      details: {
+        title: "David's Pub",
+        coordinates: { x: 2402, y: 3592 },
+        image: "images/markers/David_Pub.png",
+        lore: "More information about David's Pub is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_provisioner",
+      tooltip: "Zalman's Provisioner Shop",
+      region: "Battle Plains",
+      place: "Chlera",
+      details: {
+        title: "Zalman's Provisioner Shop",
+        coordinates: { x: 2415, y: 3587 },
+        image: "images/markers/Zalman_Provisioner_Shop.png",
+        lore: "More information about Zalman's Provisioner Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_armory",
+      tooltip: "Maximillian's Armory Shop",
+      region: "Battle Plains",
+      place: "Chlera",
+      details: {
+        title: "Maximillian's Armory Shop",
+        coordinates: { x: 2432, y: 3595 },
+        image: "images/markers/Maximillian_Armory_Shop.png",
+        lore: "More information about Maximillian's Armory Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_blacksmith",
+      tooltip: "Duras' Blacksmith Shop",
+      region: "Battle Plains",
+      place: "Chlera",
+      details: {
+        title: "Duras' Blacksmith Shop",
+        coordinates: { x: 2437, y: 3606 },
+        image: "images/markers/Duras_Blacksmith_Shop.png",
+        lore: "More information about Duras' Blacksmith Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_leather",
+      tooltip: "Viona's Leather Shop",
+      region: "Battle Plains",
+      place: "Chlera",
+      details: {
+        title: "Viona's Leather Shop",
+        coordinates: { x: 2371, y: 3626 },
+        image: "images/markers/Viona_Leather_Shop.png",
+        lore: "More information about Viona's Leather Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_leather",
+      tooltip: "Shagrat's Carpentry Shop",
+      region: "Battle Plains",
+      place: "Chlera",
+      details: {
+        title: "Shagrat's Carpentry Shop",
+        coordinates: { x: 2377, y: 3622 },
+        image: "images/markers/Shagrat_Carpentry_Shop.png",
+        lore: "More information about Shagrat's Carpentry Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_farming",
+      tooltip: "Laci's Farming Shop",
+      region: "Battle Plains",
+      place: "Chlera",
+      details: {
+        title: "Laci's Farming Shop",
+        coordinates: { x: 2407, y: 3615 },
+        image: "images/markers/Laci_Farming_Shop.png",
+        lore: "More information about Laci's Farming Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    // City: Desprail Shops
+    {
+      category: "npc",
+      type: "overworld_shop_leather",
+      tooltip: "Dera's Leather Shop",
+      region: "Battle Plains",
+      place: "Desprail",
+      details: {
+        title: "Dera's Leather Shop",
+        coordinates: { x: 2186, y: 3230 },
+        image: "images/markers/Dera_Leather_Shop.png",
+        lore: "More information about Dera's Leather Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_armory",
+      tooltip: "Rigan's Armory Shop",
+      region: "Battle Plains",
+      place: "Desprail",
+      details: {
+        title: "Rigan's Armory Shop",
+        coordinates: { x: 2177, y: 3197 },
+        image: "images/markers/Rigan_Armory_Shop.png",
+        lore: "More information about Rigan's Armory Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_provisioner",
+      tooltip: "Yisean's Provisioner Shop",
+      region: "Battle Plains",
+      place: "Desprail",
+      details: {
+        title: "Yisean's Provisioner Shop",
+        coordinates: { x: 2211, y: 3195 },
+        image: "images/markers/Yisean_Provisioner_Shop.png",
+        lore: "More information about Yisean's Provisioner Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_carpentry",
+      tooltip: "Domas' Carpentry Shop",
+      region: "Battle Plains",
+      place: "Desprail",
+      details: {
+        title: "Domas' Carpentry Shop",
+        coordinates: { x: 2230, y: 3185 },
+        image: "images/markers/Domas_Carpentry_Shop.png",
+        lore: "More information about Domas' Carpentry Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_farming",
+      tooltip: "Diadra's Farming Shop",
+      region: "Battle Plains",
+      place: "Desprail",
+      details: {
+        title: "Diadra's Farming Shop",
+        coordinates: { x: 2236, y: 3185 },
+        image: "images/markers/Diadra_Farming_Shop.png",
+        lore: "More information about Diadra's Farming Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_blacksmith",
+      tooltip: "Nydymond's Blacksmith Shop",
+      region: "Battle Plains",
+      place: "Desprail",
+      details: {
+        title: "Nydymond's Blacksmith Shop",
+        coordinates: { x: 2236, y: 3199 },
+        image: "images/markers/Nydymond_Blacksmith_Shop.png",
+        lore: "More information about Nydymond's Blacksmith Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_weaponry",
+      tooltip: "Nafur's Weaponry Shop",
+      region: "Battle Plains",
+      place: "Desprail",
+      details: {
+        title: "Nafur's Weaponry Shop",
+        coordinates: { x: 2231, y: 3207 },
+        image: "images/markers/Nafur_Weaponry_Shop.png",
+        lore: "More information about Nafur's Weaponry Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_magic",
+      tooltip: "Droawan's Magic Shop",
+      region: "Battle Plains",
+      place: "Desprail",
+      details: {
+        title: "Droawan's Magic Shop",
+        coordinates: { x: 2228, y: 3202 },
+        image: "images/markers/Droawan_Magic_Shop.png",
+        lore: "More information about Droawan's Magic Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // Region: Black Swamp Shops
     // City: Krog Shops
@@ -8836,6 +9275,38 @@ export const mapMarkers = {
     // City: Whisperdale Spawns
 
     // Region: Battle Plains Spawns
+    // City: Chlera Spawns
+    {
+      category: "spawn",
+      type: "overworld_spawn_good",
+      tooltip: "Good Spawn Gate",
+      region: "Battle Plains",
+      place: "Chlera",
+      details: {
+        title: "Good Spawn Gate",
+        coordinates: { x: 2391, y: 3577 },
+        image: "images/markers/Chlera_Spawn_Gate.png",
+        lore: "More information about Chlera Good Spawn Gate is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    // City: Desprail Evil Spawn
+    {
+      category: "spawn",
+      type: "overworld_spawn_evil",
+      tooltip: "Evil Spawn Gate",
+      region: "Battle Plains",
+      place: "Desprail",
+      details: {
+        title: "Evil Spawn Gate",
+        coordinates: { x: 2215, y: 3111 },
+        image: "images/markers/Desprail_Spawn_Gate.png",
+        lore: "More information about Desprail Evil Spawn Gate is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // Region: Black Swamp Spawns
     {
@@ -9941,8 +10412,26 @@ export const mapMarkers = {
       },
     },
 
-    // Region: Highlands underground
-    // Place: Minotaur Maze Temple
+    // Region: Highlands underground x: 3127, y: 3222
+    // Place: Vel Dran underground
+    {
+      category: "undergrounds",
+      type: "overworld_ladder",
+      tooltip: "Vel Dran Cave Entrance", // This was the former Astari Cave, which has since moved south.
+      region: "Highlands",
+      place: "Vel Dran",
+      details: {
+        title: "Vel Dran Cave Entrance",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 3097, y: 3221, zoom: 6 }, // The coordinates to center on after switching
+        coordinates: { x: 3127, y: 3222 },
+        image: "images/markers/Vel_Dran_Cave_Entrance.png",
+        lore: "More information about Vel Dran Cave Entrance is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    // Place: Minotaur Maze Temple underground
     {
       category: "undergrounds",
       type: "overworld_stairs",
@@ -10149,7 +10638,7 @@ export const mapMarkers = {
       details: {
         title: "Grell Entrance",
         switchTo: "underground", // This will trigger the map switch
-        flyTo: { x: 2919, y: 3366 }, // The coordinates to center on after switching
+        flyTo: { x: 2919, y: 3366, zoom: 5 }, // The coordinates to center on after switching
         coordinates: { x: 3241, y: 3608 },
         image: "images/markers/Grell_Entrance.png",
         lore: "More information about Grell Entrance is coming soon.",
@@ -10304,40 +10793,7 @@ export const mapMarkers = {
         links: [],
       },
     },
-    {
-      category: "undergrounds",
-      type: "overworld_stairs",
-      tooltip: "Chlera Catacombs",
-      region: "Battle Plains",
-      place: "Chlera",
-      details: {
-        title: "Chlera Catacombs",
-        switchTo: "underground", // This will trigger the map switch
-        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
-        coordinates: { x: 2329, y: 3619 },
-        image: "images/markers/image_coming_soon.png",
-        lore: "More information about Chlera Catacombs is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      category: "undergrounds",
-      type: "overworld_cave",
-      tooltip: "Desprail Cave",
-      region: "Battle Plains",
-      place: "Battle Plains",
-      details: {
-        title: "Desprail Cave",
-        switchTo: "underground", // This will trigger the map switch
-        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
-        coordinates: { x: 2136, y: 3155 },
-        image: "images/markers/image_coming_soon.png",
-        lore: "More information about Desprail Cave is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
+    
     {
       category: "undergrounds",
       type: "overworld_cave",
@@ -10385,6 +10841,59 @@ export const mapMarkers = {
         coordinates: { x: 1961, y: 3763 },
         image: "images/markers/Fungiod_Cave.png",
         lore: "More information about Fungiod Cave is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    // City: Chlera underground
+    {
+      category: "undergrounds",
+      type: "overworld_stairs",
+      tooltip: "Chlera Catacombs",
+      region: "Battle Plains",
+      place: "Chlera",
+      details: {
+        title: "Chlera Catacombs",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 2359, y: 3571, zoom: 5 }, // The coordinates to center on after switching
+        coordinates: { x: 2330, y: 3620 },
+        image: "images/markers/image_coming_soon.png",
+        lore: "More information about Chlera Catacombs is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    // City: Desprail underground
+    {
+      category: "undergrounds",
+      type: "overworld_stairs",
+      tooltip: "Desprail Catacombs",
+      region: "Battle Plains",
+      place: "Desprail",
+      details: {
+        title: "Desprail Catacombs",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 2230, y: 3198, zoom: 5 }, // The coordinates to center on after switching
+        coordinates: { x: 2230, y: 3198 },
+        image: "images/markers/Desprail_Catacombs.png",
+        lore: "More information about Desprail Catacombs is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "undergrounds",
+      type: "overworld_cave",
+      tooltip: "Desprail Cave",
+      region: "Battle Plains",
+      place: "Battle Plains",
+      details: {
+        title: "Desprail Cave",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 2119, y: 3138, zoom: 5 }, // The coordinates to center on after switching
+        coordinates: { x: 2136, y: 3155 },
+        image: "images/markers/image_coming_soon.png",
+        lore: "More information about Desprail Cave is coming soon.",
         npcs: [],
         links: [],
       },

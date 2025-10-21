@@ -185,6 +185,63 @@ export const undergroundMapMarkers = {
 
     // Region: Darkwoods Undergrounds
 
+    // Region: Black Swamp Undergrounds
+
+    // Region: Battle Plains Undergrounds
+    // City: Chlera Undergrounds
+    {
+      category: "underground",
+      type: "underworld_stairs",
+      tooltip: "Cherla Catacombs Exit",
+      region: "Battle Plains",
+      place: "Chlera",
+      details: {
+        title: "Chlera Catacombs Exit",
+        switchTo: "overworld",
+        flyTo: { x: 2330, y: 3620 },// The coordinates for the Ladder inside the Grell Tunnels underground area.
+        coordinates: { x: 2359, y: 3571 },
+        image: "images/markers/Grell_Ladder_Exit.png",
+        lore: "Exit to Chlera above Chlera Catacombs.",
+        npcs: [],
+        links: [],
+      },
+    },
+    // City: Desprail Undergrounds x: 2119, y: 3138,
+    {
+      category: "underground",
+      type: "underworld_stairs",
+      tooltip: "Cherla Catacombs Exit",
+      region: "Battle Plains",
+      place: "Chlera",
+      details: {
+        title: "Chlera Catacombs Exit",
+        switchTo: "overworld",
+        flyTo: { x: 2230, y: 3198, zoom: 5 },// The coordinates for the Ladder inside the Grell Tunnels underground area.
+        coordinates: { x: 2230, y: 3198 },
+        image: "images/markers/Grell_Ladder_Exit.png",
+        lore: "Exit to Chlera above Chlera Catacombs.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "underground",
+      type: "underworld_stairs",
+      tooltip: "Desprail Cave Exit",
+      region: "Battle Plains",
+      place: "Chlera",
+      details: {
+        title: "Desprail Cave Exit",
+        switchTo: "overworld",
+        flyTo: { x: 2136, y: 3155, zoom: 5 },// The coordinates for the Ladder inside the Grell Tunnels underground area.
+        coordinates: { x: 2119, y: 3138 },
+        image: "images/markers/Desprail_Cave_Exit.png",
+        lore: "Exit to Desprail Cave.",
+        npcs: [],
+        links: [],
+      },
+    },
+
 
     // Region: Highlands Undergrounds
     // Place: Minotaur Maze underground
@@ -255,6 +312,23 @@ export const undergroundMapMarkers = {
         coordinates: { x: 2918, y: 3365 },
         image: "images/markers/Grell_Ladder_Exit.png",
         lore: "Exit to Highlands above Grell.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "underground",
+      type: "underworld_ladder",
+      tooltip: "Vel Dran Exit",
+      region: "Highlands",
+      place: "Grell",
+      details: {
+        title: "Vel Dran Exit",
+        switchTo: "overworld",
+        flyTo: { x: 3127, y: 3222, zoom: 5 },// The coordinates for the Ladder inside the Grell Tunnels underground area.
+        coordinates: { x: 3097, y: 3221 },
+        image: "images/markers/Vel_Dran_Cave_Ladder_Exit.png",
+        lore: "Exit to Vel Dran.",
         npcs: [],
         links: [],
       },

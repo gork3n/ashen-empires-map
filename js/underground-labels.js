@@ -201,6 +201,11 @@ export const mapLabels = {
     // Region: Brokenfinger Basements
   ],
   catacombs: [
+    // Region: Valinor Catacombs
+
+    // Region: Silvest Valley Catacombs
+
+    // Region: Krythan Catacombs
     {
       name: "Jeel Catacombs",
       fontSize: 30,
@@ -216,6 +221,41 @@ export const mapLabels = {
         links: [],
       },
     },
+    // Region: Darkwoods Catacombs
+
+    // Region: Black Swamp Catacombs
+
+    // Region: Battle Plains Catacombs
+    // City: Chlera Catacombs
+    {
+      name: "Chlera Catacombs",
+      fontSize: 30,
+      region: "Battle Plains",
+      details: {
+        title: "Chlera Catacombs",
+        coordinates: { x: 2422, y: 3513 },
+        image: "",
+        lore: "More information about Chlera Catacombs is coming soon.",
+        information: "",
+        bonus: "",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // Region: Highlands Catacombs
+
+    // Region: Western Isles Catacombs
+
+    // Region: Valley of Giants Catacombs
+
+    // Region: Heartwood Coast Catacombs
+
+    // Region: Tundria Catacombs
+
+    // Region: Breakwater Catacombs
+
+    // Region: Brokenfinger Catacombs
   ],
   sewers: [
     // Add underground sewer labels here
