@@ -10469,7 +10469,7 @@ export const mapMarkers = {
     // Place: Parian Theif Fort
     {
       category: "undergrounds",
-      type: "overworld_stairs",
+      type: "overworld_ladder",
       tooltip: "Vel Dran Cave", 
       region: "Highlands",
       place: "Highlands",
@@ -10479,7 +10479,7 @@ export const mapMarkers = {
         flyTo: { x: 3184, y: 3081, zoom: 4 }, // The coordinates to center on after switching
         coordinates: { x: 3170, y: 3085 },
         image: "images/markers/Vel_Dran_Cave.png",
-        lore: "More information about Vel Dran Cave is coming soon.",
+        lore: "This entrance to Vel Dran cave is one way.",
         npcs: [],
         links: [],
       },
