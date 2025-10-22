@@ -276,7 +276,7 @@ function initializeMap() {
     // --- Set Initial Map View ---
     // Define the center of the map using in-game (4096x4096) coordinates.
     // This makes it easy to change the starting location.
-    const initialCenterGameCoords = { x: 552, y: 3185, }; // Default View is { x: 776, y: 668, } (Showing Lotor's Summer Palace) Centers LSP on smaller screens.
+    const initialCenterGameCoords = { x: 765, y: 3279, }; // Default View is { x: 776, y: 668, } (Showing Lotor's Summer Palace) Centers LSP on smaller screens.
 
     const mapSize = 32768;
     const scaleFactor = mapSize / 4096; // New scaling factor
@@ -328,7 +328,7 @@ function initializeMap() {
         // return a valid array, which solves the `undefined` error in the mini-map.
         view: new View({
             center: initialCenterOlCoords, // Use your calculated center
-            resolution: 1, // Start at zoom level 4
+            resolution: 3, // Start at zoom level 4
             resolutions: [128, 64, 32, 16, 8, 4, 2, 1, 0.5, 0.25], // Explicitly define resolutions
             constrainResolution: true, // Snap to defined zoom levels
         })
