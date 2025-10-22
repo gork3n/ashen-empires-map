@@ -2256,6 +2256,52 @@ export const mapMarkers = {
       },
     },
     
+    // City: Redwake Quests
+    {
+      category: "npc",
+      type: "overworld_quest",
+      tooltip: "Kimnuug (Wanders)",
+      region: "Darkwoods",
+      place: "Redwake",
+      details: {
+        title: "Kimnuug Quest",
+        coordinates: { x: 456, y: 2836 },
+        image: "images/markers/Kimnuug_Quest.png",
+        lore: "Kimnuug is part of the Chaffed quest line.",
+        npcs: [],
+        links: [{ text: "Ashen Empires Wiki (Chaffed)", url: "https://ashenempires.fandom.com/wiki/Chaffed" }], // Quest not added to the AE wiki yet.
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_quest",
+      tooltip: "Marla Moculous (Wanders)",
+      region: "Darkwoods",
+      place: "Redwake",
+      details: {
+        title: "Marla Moculous Quest",
+        coordinates: { x: 466, y: 2873 },
+        image: "images/markers/Marla_Moculous_Quest.png",
+        lore: "Marla Moculous is part of the Marla Moculous quest line.",
+        npcs: [],
+        links: [{ text: "Ashen Empires Wiki (Marla Moculous)", url: "https://ashenempires.fandom.com/wiki/Marla_Moculous" }], // Quest not added to the AE wiki yet.
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_quest",
+      tooltip: "Wilco Thatter",
+      region: "Darkwoods",
+      place: "Redwake",
+      details: {
+        title: "Wilco Thatter Quest",
+        coordinates: { x: 452, y: 2870 },
+        image: "images/markers/Wilco_Thatter_Quest.png",
+        lore: "Wilco Thatter is part of the Spies quest line.",
+        npcs: [],
+        links: [{ text: "Ashen Empires Wiki (Spies)", url: "https://ashenempires.fandom.com/wiki/Spies" }], // Quest not added to the AE wiki yet.
+      },
+    },
 
     // Region: Battle Plains Quests
     // City: Chlera Quests
@@ -2944,6 +2990,22 @@ export const mapMarkers = {
     // City: Gulley Innkeeper
 
     // City: Redwake Innkeeper
+    {
+      category: "npc",
+      type: "overworld_inn_keeper",
+      tooltip: "Redwake Innkeeper",
+      region: "Darkwoods",
+      place: "Redwake",
+      details: {
+        title: "Redwake Innkeeper",
+        coordinates: { x: 457, y: 2873 },
+        image: "images/markers/Redwake_Innkeeper.png",
+        lore: "More information about Redwake Innkeeper is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    
 
     // City: Darkfell Innkeeper
 
@@ -3246,7 +3308,7 @@ export const mapMarkers = {
       place: "Darkwoods",
       details: {
         title: "Redwake Dock",
-        coordinates: { x: 404, y: 2867 },
+        coordinates: { x: 403, y: 2868 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Redwake Dock is coming soon.",
         npcs: [],
@@ -4066,6 +4128,23 @@ export const mapMarkers = {
     // Region: Darkwoods Mage of Lotor NPCs
     // City: Josody Mage of Lotor NPCs
 
+    // City: Redwake Mage of Lotor NPCs
+    {
+      category: "npc",
+      type: "overworld_information_npc",
+      tooltip: "Mage of Lotor",
+      region: "Darkwoods",
+      place: "Redwake",
+      details: {
+        title: "Mage of Lotor",
+        coordinates: { x: 466, y: 2886 },
+        image: "images/markers/Redwake_Mage_of_Lotor.png",
+        lore: "Mage of Lotor is a key NPC in the Darkwoods region (Legacy Cloak).",
+        npcs: [],
+        links: [],
+      },
+    },
+
     // City: Whisperdale Mage of Lotor NPCs
     {
       category: "npc",
@@ -4133,6 +4212,24 @@ export const mapMarkers = {
 
     // Region: Darkwoods Information
     // City: Josody Information
+
+    // City: Redwake Information
+    {
+      category: "npc",
+      type: "overworld_information_npc",
+      tooltip: "Tides of Fate Raft Offer",
+      region: "Darkwoods",
+      place: "Redwake",
+      details: {
+        title: "Tides of Fate Raft Offer",
+        coordinates: { x: 420, y: 2867 },
+        image: "images/markers/Redwake_Tides_of_Fate_Raft_Offer.png",
+        lore: "Free raft offer for players (You can only use the service once).",
+        npcs: [],
+        links: [],
+      },
+    },
+    
 
     // City: Whisperdale Information
     {
@@ -5214,8 +5311,38 @@ export const mapMarkers = {
     // City: Gulley Bank
 
     // City: Redwake Bank
+    {
+      category: "npc",
+      type: "overworld_bank",
+      tooltip: "Drax's Bank",
+      region: "Darkwoods",
+      place: "Redwake",
+      details: {
+        title: "Redwake Bank",
+        coordinates: { x: 444, y: 2873 },
+        image: "images/markers/Redwake_Bank.png",
+        lore: "More information about Redwake Bank is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // City: Darkfell Bank
+    {
+      category: "npc",
+      type: "overworld_bank",
+      tooltip: "Bank",
+      region: "Darkwoods",
+      place: "Darkfell",
+      details: {
+        title: "Darkfell Bank",
+        coordinates: { x: 884, y: 3079 },
+        image: "images/markers/Darkfell_Bank.png",
+        lore: "More information about Darkfell Bank is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // City: Dunmarrow Bank
     {
@@ -5248,6 +5375,7 @@ export const mapMarkers = {
         links: [],
       },
     },
+    
 
     // City: Autumn Bank
     {
@@ -6105,6 +6233,38 @@ export const mapMarkers = {
     // Mainlands Trainers
 
     // Region: Darkwoods Trainers
+    // City: Redwake Trainers
+    {
+      category: "npc",
+      type: "overworld_trainer",
+      tooltip: "Familiar Trainer",
+      region: "Darkwoods",
+      place: "Redwake",
+      details: {
+        title: "Familiar Trainer",
+        coordinates: { x: 451, y: 2873 },
+        image: "images/markers/Redwake_Familiar_Trainer.png",
+        lore: "More information about Familiar Trainer is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_trainer",
+      tooltip: "Henchman Trainer",
+      region: "Darkwoods",
+      place: "Redwake",
+      details: {
+        title: "Henchman Trainer",
+        coordinates: { x: 430, y: 2866 },
+        image: "images/markers/Redwake_Henchman_Trainer.png",
+        lore: "More information about Henchman Trainer is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+
     // City: Whisperdale Trainers
     {
       category: "npc",
@@ -7185,8 +7345,360 @@ export const mapMarkers = {
     // City: Gulley Shops
 
     // City: Redwake Shops
+    {
+      category: "npc",
+      type: "overworld_shop_generic",
+      tooltip: "VIP Store",
+      region: "Darkwoods",
+      place: "Redwake",
+      details: {
+        title: "VIP Store",
+        coordinates: { x: 458, y: 2870 },
+        image: "images/markers/Redwake_VIP_Store.png",
+        lore: "More information about VIP Store is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_pub",
+      tooltip: "Melanea's Pub",
+      region: "Darkwoods",
+      place: "Redwake",
+      details: {
+        title: "Melanea's Pub",
+        coordinates: { x: 463, y: 2874 },
+        image: "images/markers/Melanea_Pub.png",
+        lore: "More information about Melanea's Pub is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_magic",
+      tooltip: "Ezleth's Magic Shop",
+      region: "Darkwoods",
+      place: "Redwake",
+      details: {
+        title: "Ezleth's Magic Shop",
+        coordinates: { x: 467, y: 2884 },
+        image: "images/markers/Ezleth_Magic_Shop.png",
+        lore: "More information about Ezleth's Magic Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_armory",
+      tooltip: "Galimar the Armorer Shop",
+      region: "Darkwoods",
+      place: "Redwake",
+      details: {
+        title: "Galimar the Armorer Shop",
+        coordinates: { x: 471, y: 2879 },
+        image: "images/markers/Galimar_Armorer_Shop.png",
+        lore: "More information about Galimar the Armorer Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_weaponry",
+      tooltip: "Weaponmaster Yazivir's Weaponry Shop",
+      region: "Darkwoods",
+      place: "Redwake",
+      details: {
+        title: "Weaponmaster Yazivir's Weaponry Shop",
+        coordinates: { x: 476, y: 2879 },
+        image: "images/markers/Weaponmaster_Yazivir_Weaponry_Shop.png",
+        lore: "More information about Weaponmaster Yazivir's Weaponry Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_blacksmith",
+      tooltip: "Padwick's Blacksmith Shop",
+      region: "Darkwoods",
+      place: "Redwake",
+      details: {
+        title: "Padwick's Blacksmith Shop",
+        coordinates: { x: 469, y: 2862 },
+        image: "images/markers/Padwick_Blacksmith_Shop.png",
+        lore: "More information about Padwick's Blacksmith Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_leather",
+      tooltip: "Relimar's Leather Shop",
+      region: "Darkwoods",
+      place: "Redwake",
+      details: {
+        title: "Relimar's Leather Shop",
+        coordinates: { x: 469, y: 2854 },
+        image: "images/markers/Relimar_Leather_Shop.png",
+        lore: "More information about Relimar's Leather Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_carpentry",
+      tooltip: "Somicar's Carpentry Shop",
+      region: "Darkwoods",
+      place: "Redwake",
+      details: {
+        title: "Somicar's Carpentry Shop",
+        coordinates: { x: 441, y: 2854 },
+        image: "images/markers/Somicar_Carpentry_Shop.png",
+        lore: "More information about Somicar's Carpentry Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_provisioner",
+      tooltip: "Tezryk's Provisioner Shop",
+      region: "Darkwoods",
+      place: "Redwake",
+      details: {
+        title: "Tezryk's Provisioner Shop",
+        coordinates: { x: 441, y: 2865 },
+        image: "images/markers/Tezryk_Provisioner_Shop.png",
+        lore: "More information about Tezryk's Provisioner Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_shipyard",
+      tooltip: "Mosan's Shipyard",
+      region: "Darkwoods",
+      place: "Redwake",
+      details: {
+        title: "Mosan's Shipyard",
+        coordinates: { x: 418, y: 2867 },
+        image: "images/markers/Mosan_Shipyard.png",
+        lore: "More information about Mosan's Shipyard is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_farming",
+      tooltip: "Garzug's Farming Shop",
+      region: "Darkwoods",
+      place: "Redwake",
+      details: {
+        title: "Garzug's Farming Shop",
+        coordinates: { x: 456, y: 2841 },
+        image: "images/markers/Garzug_Farming_Shop.png",
+        lore: "More information about Garzug's Farming Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_jewelry",
+      tooltip: "Constance Roak's Jewelry Shop",
+      region: "Darkwoods",
+      place: "Redwake",
+      details: {
+        title: "Constance Roak's Jewelry Shop",
+        coordinates: { x: 470, y: 2841 },
+        image: "images/markers/Constance_Roak_Jewelry_Shop.png",
+        lore: "More information about Constance Roak's Jewelry Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // City: Darkfell Shops
+    {
+      category: "npc",
+      type: "overworld_shop_pub",
+      tooltip: "Corewyr's Pub",
+      region: "Darkwoods",
+      place: "Darkfell",
+      details: {
+        title: "Corewyr's Pub",
+        coordinates: { x: 893, y: 3079 },
+        image: "images/markers/Corewyr_Pub.png",
+        lore: "More information about Corewyr's Pub is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_jewelry",
+      tooltip: "Willis Dargi's Jewelry Shop",
+      region: "Darkwoods",
+      place: "Darkfell",
+      details: {
+        title: "Willis Dargi's Jewelry Shop",
+        coordinates: { x: 895, y: 3073 },
+        image: "images/markers/Willis_Dargi_Jewelry_Shop.png",
+        lore: "More information about Willis Dargi's Jewelry Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_provisioner",
+      tooltip: "Ereisa's Provisioner Shop",
+      region: "Darkwoods",
+      place: "Darkfell",
+      details: {
+        title: "Ereisa's Provisioner Shop",
+        coordinates: { x: 903, y: 3081 },
+        image: "images/markers/Ereisa_Provisioner_Shop.png",
+        lore: "More information about Ereisa's Provisioner Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_provisioner",
+      tooltip: "Driejar's Provisioner Shop",
+      region: "Darkwoods",
+      place: "Darkfell",
+      details: {
+        title: "Driejar's Provisioner Shop",
+        coordinates: { x: 909, y: 3081 },
+        image: "images/markers/Driejar_Provisioner_Shop.png",
+        lore: "More information about Driejar's Provisioner Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_carpentry",
+      tooltip: "Tiras' Carpentry Shop",
+      region: "Darkwoods",
+      place: "Darkfell",
+      details: {
+        title: "Tiras' Carpentry Shop",
+        coordinates: { x: 890, y: 3093 },
+        image: "images/markers/Tiras_Carpentry_Shop.png",
+        lore: "More information about Tiras' Carpentry Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_weaponry",
+      tooltip: "Eralid's Weaponry Shop",
+      region: "Darkwoods",
+      place: "Darkfell",
+      details: {
+        title: "Eralid's Weaponry Shop",
+        coordinates: { x: 906, y: 3090 },
+        image: "images/markers/Eralid_Weaponry_Shop.png",
+        lore: "More information about Eralid's Weaponry Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_armory",
+      tooltip: "Galaeth's Armory Shop",
+      region: "Darkwoods",
+      place: "Darkfell",
+      details: {
+        title: "Galaeth's Armory Shop",
+        coordinates: { x: 901, y: 3099 },
+        image: "images/markers/Galaeth_Armory_Shop.png",
+        lore: "More information about Galaeth's Armory Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_blacksmith",
+      tooltip: "Rhiram's Blacksmith Shop",
+      region: "Darkwoods",
+      place: "Darkfell",
+      details: {
+        title: "Rhiram's Blacksmith Shop",
+        coordinates: { x: 906, y: 3096 },
+        image: "images/markers/Rhiram_Blacksmith_Shop.png",
+        lore: "More information about Rhiram's Blacksmith Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_leather",
+      tooltip: "Ederaron's Leather Shop",
+      region: "Darkwoods",
+      place: "Darkfell",
+      details: {
+        title: "Ederaron's Leather Shop",
+        coordinates: { x: 919, y: 3091 },
+        image: "images/markers/Ederaron_Leather_Shop.png",
+        lore: "More information about Ederaron's Leather Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_jewelry", // Suppose to be a Shipyard in-game but is a Jewelry shop.
+      tooltip: "Aeal Unlope's Jewelry Shop",
+      region: "Darkwoods",
+      place: "Darkfell",
+      details: {
+        title: "Aeal Unlope's Jewelry Shop",
+        coordinates: { x: 898, y: 3119 },
+        image: "images/markers/Aeal_Unlope_Jewelry_Shop.png",
+        lore: "More information about Aeal Unlope's Jewelry Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // City: Dunmarrow Shops
     {
@@ -9488,7 +10000,7 @@ export const mapMarkers = {
         title: "Tides of Fate Raft Offer",
         coordinates: { x: 792, y: 593 },
         image: "images/markers/Tides_of_Fate_Raft_Offer.png",
-        lore: "More information about Tides of Fate Raft Offer is coming soon.",
+        lore: "Free raft offer for players (You can only use the service once).",
         currency: "gold",
         npcs: [],
         links: [],
@@ -9954,6 +10466,23 @@ export const mapMarkers = {
     },
 
     // City: Autumn Spawns
+    {
+      category: "spawn",
+      type: "overworld_spawn_good",
+      tooltip: "Good Spawn Gate",
+      region: "Darkwoods",
+      place: "Darkfell",
+      details: {
+        title: "Good Spawn Gate",
+        coordinates: { x: 887, y: 3033 },
+        image: "images/markers/Darkfell_Spawn_Gate.png",
+        lore: "More information about Darkfell Good Spawn Gate is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // City: Darkfell Spawns
     {
       category: "spawn",
       type: "overworld_spawn_good",
@@ -11158,6 +11687,25 @@ export const mapMarkers = {
         links: [],
       },
     },
+    // Place: Crypth of Ryonkah underground
+    {
+      category: "undergrounds",
+      type: "overworld_ladder",
+      tooltip: "Crypts of Ryonkah Entrance",
+      region: "Darkwoods",
+      place: "Crypts of Ryonkah",
+      details: {
+        title: "Crypts of Ryonkah Entrance",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 1028, y: 2981, zoom: 7 }, // The coordinates to center on after switching
+        coordinates: { x: 1028, y: 2981 },
+        image: "images/markers/Crypt_of_Ryonkah_Entrance.png",
+        lore: "More information about Crypt of Ryonkah Entrance is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+
     // City: Whisperdale underground
     {
       category: "undergrounds",
@@ -11504,19 +12052,19 @@ export const mapMarkers = {
     // Necropolis underground
     {
       category: "undergrounds",
-      type: "overworld_stairs",
+      type: "overworld_ladder",
       tooltip:
-        "Trap Door to Necropolis Magic and Farm Shops (They do not work)",
+        "Necropolis Maze Tunnel Entrance",
       region: "Darkwoods",
       place: "Necropolis",
       details: {
         title:
-          "Trap Door to Necropolis Magic and Farm Shops",
+          "Necropolis Maze Tunnel Entrance",
         switchTo: "underground", // This will trigger the map switch
-        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
+        flyTo: { x: 1363, y: 2878 }, // The coordinates to center on after switching
         coordinates: { x: 1362, y: 2888 },
-        image: "images/markers/image_coming_soon.png",
-        lore: "More information about Trap Door to Necropolis Magic and Farm Shops (They do not work) is coming soon.",
+        image: "images/markers/Necropolis_Maze_Tunnel_Entrance.png",
+        lore: "More information about Necropolis Maze Tunnel Entrance is coming soon.",
         npcs: [],
         links: [],
       },
@@ -11524,16 +12072,35 @@ export const mapMarkers = {
     {
       category: "undergrounds",
       type: "overworld_ladder",
-      tooltip: "Ladder to inside Necropolis",
+      tooltip:
+        "Necropolis Maze Tunnel Entrance",
       region: "Darkwoods",
       place: "Necropolis",
       details: {
-        title: "Ladder to inside Necropolis",
+        title:
+          "Necropolis Maze Tunnel Entrance",
         switchTo: "underground", // This will trigger the map switch
-        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
+        flyTo: { x: 1372, y: 2909 }, // The coordinates to center on after switching
+        coordinates: { x: 1377, y: 2935 },
+        image: "images/markers/Necropolis_Maze_Tunnel_Entrance.png",
+        lore: "More information about Necropolis Maze Tunnel Entrance is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "undergrounds",
+      type: "overworld_ladder",
+      tooltip: "Necropolis Basement Entrance",
+      region: "Darkwoods",
+      place: "Necropolis",
+      details: {
+        title: "Necropolis Basement Entrance",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 1345, y: 2939 }, // The coordinates to center on after switching
         coordinates: { x: 1348, y: 2932 },
-        image: "images/markers/image_coming_soon.png",
-        lore: "More information about Ladder to inside Necropolis is coming soon.",
+        image: "images/markers/Necropolis_Basement_Entrance.png",
+        lore: "More information about Necropolis Basement Entrance is coming soon.",
         npcs: [],
         links: [],
       },

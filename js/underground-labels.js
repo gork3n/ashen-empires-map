@@ -97,6 +97,22 @@ export const mapLabels = {
         links: [],
       },
     },
+    {
+      name: "Crypts of Ryonkah",
+      fontSize: 30,
+      region: "Darkwoods",
+      details: {
+        title: "Crypts of Ryonkah",
+        coordinates: { x: 999, y: 2794 },
+        image: "",
+        lore: "The Crypts of Ryonkah is a large dungeon in the Darkwoods.",
+        information: "",
+        bonus: "",
+        npcs: [],
+        links: [],
+      },
+    },
+
 
   ],
   caves: [
@@ -296,6 +312,7 @@ export const mapLabels = {
   ],
   tunnels: [
     // Region: Battle Plains Tunnels
+    // City: Desparil Tunnels
     {
       name: "Desprail Tunnels",
       fontSize: 25,
@@ -306,6 +323,38 @@ export const mapLabels = {
         image: "",
         lore: "More information about Desprail Tunnels is coming soon.",
         information: "Desprail Tunnels are located beneath Desprail.",
+        bonus: "",
+        npcs: [],
+        links: [],
+      },
+    },
+    // Darkwoods Tunnels
+    // Place: Necropolis Tunnels
+    {
+      name: "Necropolis Maze Tunnel",
+      fontSize: 25,
+      region: "Darkwoods",
+      details: {
+        title: "Necropolis Maze Tunnel",
+        coordinates: { x: 1363, y: 2870 },
+        image: "",
+        lore: "More information about Necropolis Maze Tunnel is coming soon.",
+        information: "Necropolis Maze Tunnel is located beneath the Necropolis.",
+        bonus: "",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      name: "Necropolis Basement",
+      fontSize: 25,
+      region: "Darkwoods",
+      details: {
+        title: "Necropolis Basement",
+        coordinates: { x: 1363, y: 2924 },
+        image: "",
+        lore: "More information about Necropolis Basement is coming soon.",
+        information: "Necropolis Basement is located beneath the Necropolis.",
         bonus: "",
         npcs: [],
         links: [],

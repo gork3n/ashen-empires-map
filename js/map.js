@@ -276,7 +276,7 @@ function initializeMap() {
     // --- Set Initial Map View ---
     // Define the center of the map using in-game (4096x4096) coordinates.
     // This makes it easy to change the starting location.
-    const initialCenterGameCoords = { x: 765, y: 3279, }; // Default View is { x: 776, y: 668, } (Showing Lotor's Summer Palace) Centers LSP on smaller screens.
+    const initialCenterGameCoords = { x: 1359, y: 2935, }; // Default View is { x: 776, y: 668, } (Showing Lotor's Summer Palace) Centers LSP on smaller screens.
 
     const mapSize = 32768;
     const scaleFactor = mapSize / 4096; // New scaling factor

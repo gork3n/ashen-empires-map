@@ -10,6 +10,14 @@ export const undergroundMarkerStyles = {
     icon: "icons/ancient-portal.svg",
     color: "#A9A9A9", // DarkGray
   },
+  underworld_portal_blue: {
+    icon: "icons/blue-portal.svg", // Using dungeon gate for blue instance portals
+    color: "#00BFFF", // DeepSkyBlue
+  },
+  underworld_portal_small: {
+    icon: "icons/small-blue.svg", // Using crystal for small, magical portals
+    color: "#DA70D6", // Orchid
+  },
 
   // Shops
   underworld_shop_generic: {
@@ -73,7 +81,41 @@ export const undergroundMarkerStyles = {
 
 export const undergroundMapMarkers = {
   portals: [
-    // Add underground portal markers here
+    // Place: Crypts of Ryonkah Portal
+    {
+      category: "underground",
+      type: "underworld_portal_small",
+      tooltip: "Crypts of Ryonkah Portal",
+      region: "Krythan",
+      place: "Crypts of Ryonkah",
+      details: {
+        title: "Jeel Catacombs Exit",
+        switchTo: "overworld",
+        flyTo: { x: 855, y: 2775, zoom: 5 },        
+        coordinates: { x: 981, y: 2898 },// The coordinates for the Ladder inside the Jeel Catacombs underground area.
+        image: "images/markers/Jeel_Catacombs_Ladder_Exit.png",
+        lore: "Exit to Jeel above Jeel Catacombs.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "underground",
+      type: "underworld_portal_small",
+      tooltip: "Crypts of Ryonkah Portal",
+      region: "Krythan",
+      place: "Crypts of Ryonkah",
+      details: {
+        title: "Jeel Catacombs Exit",
+        switchTo: "overworld",
+        flyTo: { x: 981, y: 2898, zoom: 5 },        
+        coordinates: { x: 855, y: 2775 },// The coordinates for the Ladder inside the Jeel Catacombs underground area.
+        image: "images/markers/Jeel_Catacombs_Ladder_Exit.png",
+        lore: "Exit to Jeel above Jeel Catacombs.",
+        npcs: [],
+        links: [],
+      },
+    },
   ],
   shops: [
     // Add underground shop markers here
@@ -188,14 +230,15 @@ export const undergroundMapMarkers = {
     },
 
     // Region: Darkwoods Undergrounds
+    
     {
       category: "underground",
       type: "underworld_hole",
-      tooltip: "Termigon Pit Exit",
+      tooltip: "Termigon Pit Ext",
       region: "Darkwoods",
       place: "Darkwoods",
       details: {
-        title: "Termigon Pit Exi1t",
+        title: "Termigon Pit Exit",
         switchTo: "overworld",
         flyTo: { x: 761, y: 3322, zoom: 5 },// The coordinates for the Ladder inside the Grell Tunnels underground area.
         coordinates: { x: 852, y: 3355 },
@@ -626,6 +669,179 @@ export const undergroundMapMarkers = {
         coordinates: { x: 1000, y: 3271 },
         image: "images/markers/Ant_Mound_Level_2_Exit.png",
         lore: "Exit to Darkwoods above Ant Mound Level 2.",
+        npcs: [],
+        links: [],
+      },
+    },
+    //Place: Crypts of Ryonkah underground
+    {
+      category: "underground",
+      type: "underworld_ladder",
+      tooltip: "Crypts of Ryonkah Exit",
+      region: "Darkwoods",
+      place: "Darkwoods",
+      details: {
+        title: "Crypts of Ryonkah Exit",
+        switchTo: "overworld",
+        flyTo: { x: 1028, y: 2981, zoom: 7 }, // The coordinates to center on after switching
+        coordinates: { x: 1028, y: 2981 },
+        image: "images/markers/Crypt_of_Ryonkah_Exit.png",
+        lore: "Exit to Darkwoods above Crypts of Ryonkah.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "underground",
+      type: "underworld_stairs",
+      tooltip: "Crypts of Ryonkah Level 2 Entrance",
+      region: "Darkwoods",
+      place: "Darkwoods",
+      details: {
+        title: "Crypts of Ryonkah Level 2 Entrance",
+        switchTo: "underground",
+        flyTo: { x: 1124, y: 2794, zoom: 7 }, // The coordinates to center on after switching
+        coordinates: { x: 963, y: 2821 },
+        image: "images/markers/Crypt_of_Ryonkah_Exit.png",
+        lore: "Exit to Darkwoods above Crypts of Ryonkah.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "underground",
+      type: "underworld_stairs",
+      tooltip: "Crypts of Ryonkah Level 2 Exit",
+      region: "Darkwoods",
+      place: "Darkwoods",
+      details: {
+        title: "Crypts of Ryonkah Level 2 Exit",
+        switchTo: "underground",
+        flyTo: { x: 963, y: 2821, zoom: 7 }, // The coordinates to center on after switching
+        coordinates: { x: 1124, y: 2794 },
+        image: "images/markers/Crypt_of_Ryonkah_Exit.png",
+        lore: "Exit to Crypts of Ryonkah Level 1.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "underground",
+      type: "underworld_stairs",
+      tooltip: "Crypts of Ryonkah Level 3 Entrance",
+      region: "Darkwoods",
+      place: "Darkwoods",
+      details: {
+        title: "Crypts of Ryonkah Level 3 Entrance",
+        switchTo: "underground",
+        flyTo: { x: 1147, y: 2919, zoom: 7 }, // The coordinates to center on after switching
+        coordinates: { x: 1032, y: 2859 },
+        image: "images/markers/Crypt_of_Ryonkah_Exit.png",
+        lore: "Entrance to Crypts of Ryonkah Level 3.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "underground",
+      type: "underworld_stairs",
+      tooltip: "Crypts of Ryonkah Level 3 Exit",
+      region: "Darkwoods",
+      place: "Darkwoods",
+      details: {
+        title: "Crypts of Ryonkah Level 3 Exit",
+        switchTo: "underground",
+        flyTo: { x: 1032, y: 2859, zoom: 7 }, // The coordinates to center on after switching
+        coordinates: { x: 1147, y: 2919 },
+        image: "images/markers/Crypt_of_Ryonkah_Exit.png",
+        lore: "Exit to Crypts of Ryonkah Level 1.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // Place Necropolis underground
+    {
+      category: "underground",
+      type: "underworld_ladder",
+      tooltip: "Necropolis Basement Exit",
+      region: "Darkwoods",
+      place: "Necropolis",
+      details: {
+        title: "Necropolis Basement Exit",
+        switchTo: "overworld",
+        flyTo: { x: 1348, y: 2932, zoom: 6 },
+        coordinates: { x: 1345, y: 2939 },
+        image: "images/markers/Necropolis_Basement_Exit.png",
+        lore: "Exit to Necropolis Stores above Necropolis Basement.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "underground",
+      type: "underworld_ladder",
+      tooltip: "Necropolis Maze Tunnel Exit",
+      region: "Darkwoods",
+      place: "Necropolis",
+      details: {
+        title: "Necropolis Maze Tunnel Exit",
+        switchTo: "overworld",
+        flyTo: { x: 1363, y: 2887, zoom: 6 },
+        coordinates: { x: 1363, y: 2878 },
+        image: "images/markers/Necropolis_Maze_Tunnel_Exit.png",
+        lore: "Exit to Necropolis Stores above Necropolis Maze Tunnel.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "underground",
+      type: "underworld_ladder",
+      tooltip: "Necropolis Maze Tunnel Exit",
+      region: "Darkwoods",
+      place: "Necropolis",
+      details: {
+        title: "Necropolis Maze Tunnel Exit",
+        switchTo: "overworld",
+        flyTo: { x: 1379, y: 2955, zoom: 6 },
+        coordinates: { x: 1365, y: 2909 },
+        image: "images/markers/Necropolis_Maze_Tunnel_Exit.png",
+        lore: "Exit to Necropolis Stores above Necropolis Maze Tunnel.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "underground",
+      type: "underworld_ladder",
+      tooltip: "Necropolis Maze Tunnel Exit",
+      region: "Darkwoods",
+      place: "Necropolis",
+      details: {
+        title: "Necropolis Maze Tunnel Exit",
+        switchTo: "overworld",
+        flyTo: { x: 1386, y: 2955, zoom: 6 },
+        coordinates: { x: 1372, y: 2909 },
+        image: "images/markers/Necropolis_Maze_Tunnel_Exit.png",
+        lore: "Entrance to Necropolis Stores above Necropolis Maze Tunnel.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "underground",
+      type: "underworld_ladder",
+      tooltip: "Necropolis Maze Tunnel Exit",
+      region: "Darkwoods",
+      place: "Necropolis",
+      details: {
+        title: "Necropolis Maze Tunnel Exit",
+        switchTo: "overworld",
+        flyTo: { x: 1377, y: 2935, zoom: 6 },
+        coordinates: { x: 1363, y: 2889 },
+        image: "images/markers/Necropolis_Maze_Tunnel_Exit.png",
+        lore: "Entrance to Necropolis above Necropolis Maze Tunnel.",
         npcs: [],
         links: [],
       },
