@@ -240,7 +240,7 @@ export const undergroundMapMarkers = {
       details: {
         title: "Termigon Pit Exit",
         switchTo: "overworld",
-        flyTo: { x: 761, y: 3322, zoom: 5 },// The coordinates for the Ladder inside the Grell Tunnels underground area.
+        flyTo: { x: 761, y: 3322, zoom: 5 },
         coordinates: { x: 852, y: 3355 },
         image: "images/markers/Termigon_Pit_Exit.png",
         lore: "Exit to Darkwoods above Termigon Pit.",
@@ -257,7 +257,7 @@ export const undergroundMapMarkers = {
       details: {
         title: "Termigon Pit Level 2 Entrance",
         switchTo: "underground",
-        flyTo: { x: 938, y: 3317, zoom: 5 },// The coordinates for the Ladder inside the Grell Tunnels underground area.
+        flyTo: { x: 938, y: 3317, zoom: 5 },
         coordinates: { x: 858, y: 3349 },
         image: "images/markers/Termigon_Pit_Level_2_Entrance.png",
         lore: "Entrance to Termigon Pit Level 2.",
@@ -274,7 +274,7 @@ export const undergroundMapMarkers = {
       details: {
         title: "Termigon Pit Level 2 Exit",
         switchTo: "underground",
-        flyTo: { x: 858, y: 3349, zoom: 5 },// The coordinates for the Ladder inside the Grell Tunnels underground area.
+        flyTo: { x: 858, y: 3349, zoom: 5 },
         coordinates: { x: 938, y: 3317 },
         image: "images/markers/Termigon_Pit_Level_2_Exit.png",
         lore: "Exit to Termigon Pit Level 2.",
@@ -291,7 +291,7 @@ export const undergroundMapMarkers = {
       details: {
         title: "Termigon Pit Level 2 Entrance",
         switchTo: "underground",
-        flyTo: { x: 938, y: 3317, zoom: 5 },// The coordinates for the Ladder inside the Grell Tunnels underground area.
+        flyTo: { x: 938, y: 3317, zoom: 5 },
         coordinates: { x: 858, y: 3349 },
         image: "images/markers/Termigon_Pit_Level_2_Entrance.png",
         lore: "Entrance to Termigon Pit Level below Termigon Pit.",
@@ -308,7 +308,7 @@ export const undergroundMapMarkers = {
       details: {
         title: "Underground Connector Entrance",
         switchTo: "underground",
-        flyTo: { x: 792, y: 3303, zoom: 5 },// The coordinates for the Ladder inside the Grell Tunnels underground area.
+        flyTo: { x: 792, y: 3303, zoom: 5 },
         coordinates: { x: 968, y: 3303 },
         image: "images/markers/Underground_Connector_Entrance.png",
         lore: "Entrance to Underground Connector.",
@@ -325,7 +325,7 @@ export const undergroundMapMarkers = {
       details: {
         title: "Underground Connector Entrance",
         switchTo: "underground",
-        flyTo: { x: 791, y: 3287, zoom: 5 },// The coordinates for the Ladder inside the Grell Tunnels underground area.
+        flyTo: { x: 791, y: 3287, zoom: 5 },
         coordinates: { x: 967, y: 3287 },
         image: "images/markers/Underground_Connector_Entrance.png",
         lore: "Entrance to Underground Connector.",
@@ -342,7 +342,7 @@ export const undergroundMapMarkers = {
       details: {
         title: "Underground Connector Exit",
         switchTo: "underground",
-        flyTo: { x: 968, y: 3303, zoom: 6 },// The coordinates for the Ladder inside the Grell Tunnels underground area.
+        flyTo: { x: 968, y: 3303, zoom: 6 },
         coordinates: { x: 792, y: 3303 },
         image: "images/markers/Underground_Connector_Exit.png",
         lore: "Exit to Underground Connector above Underground Connector.",
@@ -359,7 +359,7 @@ export const undergroundMapMarkers = {
       details: {
         title: "Termigon Pit Level 3 Entrance",
         switchTo: "underground",
-        flyTo: { x: 983, y: 3288, zoom: 6 },// The coordinates for the Ladder inside the Grell Tunnels underground area.
+        flyTo: { x: 983, y: 3288, zoom: 6 },
         coordinates: { x: 807, y: 3288 },
         image: "images/markers/Termigon_Pit_Level_3_Entrance.png",
         lore: "Entrance to Termigon Pit Level 3.",
@@ -376,7 +376,7 @@ export const undergroundMapMarkers = {
       details: {
         title: "Termigon Pit Level 4 Entrance",
         switchTo: "underground",
-        flyTo: { x: 1034, y: 3368, zoom: 6 },// The coordinates for the Ladder inside the Grell Tunnels underground area.
+        flyTo: { x: 1034, y: 3368, zoom: 6 },
         coordinates: { x: 1034, y: 3304 },
         image: "images/markers/Termigon_Pit_Level_4_Entrance.png",
         lore: "Entrance to Termigon Pit Level 4.",
@@ -393,7 +393,7 @@ export const undergroundMapMarkers = {
       details: {
         title: "Termigon Pit Level 4 Exit",
         switchTo: "underground",
-        flyTo: { x: 1034, y: 3304, zoom: 6 },// The coordinates for the Ladder inside the Grell Tunnels underground area.
+        flyTo: { x: 1034, y: 3304, zoom: 6 },
         coordinates: { x: 1034, y: 3368 },
         image: "images/markers/Termigon_Pit_Level_4_Exit.png",
         lore: "Exit to Termigon Pit Level 3.",
@@ -410,7 +410,7 @@ export const undergroundMapMarkers = {
       details: {
         title: "Termigon Pit Level 5 Entrance",
         switchTo: "underground",
-        flyTo: { x: 1076, y: 3286, zoom: 6 },// The coordinates for the Ladder inside the Grell Tunnels underground area.
+        flyTo: { x: 1076, y: 3286, zoom: 6 },
         coordinates: { x: 1028, y: 3286 },
         image: "images/markers/Termigon_Pit_Level_5_Entrance.png",
         lore: "Entrance to Termigon Pit Level 5.",
@@ -427,7 +427,7 @@ export const undergroundMapMarkers = {
       details: {
         title: "Termigon Pit Level 5 Exit",
         switchTo: "underground",
-        flyTo: { x: 1028, y: 3286, zoom: 6 },// The coordinates for the Ladder inside the Grell Tunnels underground area.
+        flyTo: { x: 1028, y: 3286, zoom: 6 },
         coordinates: { x: 1076, y: 3286 },
         image: "images/markers/Termigon_Pit_Level_5_Exit.png",
         lore: "Exit to Termigon Pit Level 4.",
@@ -444,7 +444,7 @@ export const undergroundMapMarkers = {
       details: {
         title: "Underground Connector Entrance",
         switchTo: "underground",
-        flyTo: { x: 807, y: 3288, zoom: 6 },// The coordinates for the Ladder inside the Grell Tunnels underground area.
+        flyTo: { x: 807, y: 3288, zoom: 6 },
         coordinates: { x: 983, y: 3288 },
         image: "images/markers/Underground_Connector_Entrance.png",
         lore: "Entrance to Underground Connector.",
@@ -461,7 +461,7 @@ export const undergroundMapMarkers = {
       details: {
         title: "Triddle Cave Exit",
         switchTo: "overworld",
-        flyTo: { x: 799, y: 3335, zoom: 5 },// The coordinates for the Ladder inside the Grell Tunnels underground area.
+        flyTo: { x: 799, y: 3335, zoom: 5 },
         coordinates: { x: 792, y: 3330 },
         image: "images/markers/Triddle_Cave_Exit.png",
         lore: "Exit to Darkwoods above Triddle Cave.",
@@ -478,7 +478,7 @@ export const undergroundMapMarkers = {
       details: {
         title: "Triddle Cave Level 2 Entrance",
         switchTo: "underground",
-        flyTo: { x: 983, y: 3335, zoom: 5 },// The coordinates for the Ladder inside the Grell Tunnels underground area.
+        flyTo: { x: 983, y: 3335, zoom: 5 },
         coordinates: { x: 807, y: 3335 },
         image: "images/markers/Triddle_Cave_Level_2_Entrance.png",
         lore: "Entrance to Triddle Cave Level 2.",
@@ -495,7 +495,7 @@ export const undergroundMapMarkers = {
       details: {
         title: "Triddle Cave Level 2 Exit",
         switchTo: "underground",
-        flyTo: { x: 807, y: 3335, zoom: 5 },// The coordinates for the Ladder inside the Grell Tunnels underground area.
+        flyTo: { x: 807, y: 3335, zoom: 5 },
         coordinates: { x: 983, y: 3335 },
         image: "images/markers/Triddle_Cave_Level_2_Exit.png",
         lore: "Exit to Triddle Cave Level 2.",
@@ -512,7 +512,7 @@ export const undergroundMapMarkers = {
       details: {
         title: "Underground Connector Entrance",
         switchTo: "underground",
-        flyTo: { x: 807, y: 3304, zoom: 5 },// The coordinates for the Ladder inside the Grell Tunnels underground area.
+        flyTo: { x: 807, y: 3304, zoom: 5 },
         coordinates: { x: 983, y: 3304 },
         image: "images/markers/Underground_Connector_Entrance.png",
         lore: "Entrance to Underground Connector.",
@@ -529,7 +529,7 @@ export const undergroundMapMarkers = {
       details: {
         title: "Underground Connector Exit",
         switchTo: "underground",
-        flyTo: { x: 983, y: 3304, zoom: 5 },// The coordinates for the Ladder inside the Grell Tunnels underground area.
+        flyTo: { x: 983, y: 3304, zoom: 5 },
         coordinates: { x: 807, y: 3304 },
         image: "images/markers/Underground_Connector_Exit.png",
         lore: "Exit to Underground Connector.",
@@ -546,7 +546,7 @@ export const undergroundMapMarkers = {
       details: {
         title: "Underground Connector Exit",
         switchTo: "underground",
-        flyTo: { x: 967, y: 3287, zoom: 5 },// The coordinates for the Ladder inside the Grell Tunnels underground area.
+        flyTo: { x: 967, y: 3287, zoom: 5 },
         coordinates: { x: 791, y: 3287 },
         image: "images/markers/Underground_Connector_Exit.png",
         lore: "Exit to Underground Connector.",
@@ -563,7 +563,7 @@ export const undergroundMapMarkers = {
       details: {
         title: "Underground Connector Entrance",
         switchTo: "underground",
-        flyTo: { x: 791, y: 3287, zoom: 5 },// The coordinates for the Ladder inside the Grell Tunnels underground area.
+        flyTo: { x: 791, y: 3287, zoom: 5 },
         coordinates: { x: 967, y: 3287 },
         image: "images/markers/Underground_Connector_Entrance.png",
         lore: "Entrance to Underground Connector.",
@@ -580,7 +580,7 @@ export const undergroundMapMarkers = {
       details: {
         title: "Astari Rune Shelter Entrance",
         switchTo: "underground",
-        flyTo: { x: 779, y: 3251, zoom: 5 },// The coordinates for the Ladder inside the Grell Tunnels underground area.
+        flyTo: { x: 779, y: 3251, zoom: 5 },
         coordinates: { x: 955, y: 3253 },
         image: "images/markers/Astari_Rune_Shelter_Entrance.png",
         lore: "Entrance to Astari Rune Shelter.",
@@ -597,7 +597,7 @@ export const undergroundMapMarkers = {
       details: {
         title: "Astari Rune Shelter Exit",
         switchTo: "underground",
-        flyTo: { x: 955, y: 3253, zoom: 5 },// The coordinates for the Ladder inside the Grell Tunnels underground area.
+        flyTo: { x: 955, y: 3253, zoom: 5 },
         coordinates: { x: 779, y: 3251 },
         image: "images/markers/Astari_Rune_Shelter_Exit.png",
         lore: "Exit to Astari Rune Shelter.",
@@ -614,7 +614,7 @@ export const undergroundMapMarkers = {
       details: {
         title: "Astari Rune Shelter Exit",
         switchTo: "overworld",
-        flyTo: { x: 813, y: 3221, zoom: 5 },// The coordinates for the Ladder inside the Grell Tunnels underground area.
+        flyTo: { x: 813, y: 3221, zoom: 5 },
         coordinates: { x: 813, y: 3223 },
         image: "images/markers/Astari_Rune_Shelter_Exit.png",
         lore: "Exit to Darkwoods above Astari Rune Shelter.",
@@ -631,7 +631,7 @@ export const undergroundMapMarkers = {
       details: {
         title: "Ant Mound Exit",
         switchTo: "overworld",
-        flyTo: { x: 839, y: 3271, zoom: 5 },// The coordinates for the Ladder inside the Grell Tunnels underground area.
+        flyTo: { x: 839, y: 3271, zoom: 5 },
         coordinates: { x: 839, y: 3271 },
         image: "images/markers/Ant_Mound_Exit.png",
         lore: "Exit to Darkwoods above Ant Mound.",
@@ -648,7 +648,7 @@ export const undergroundMapMarkers = {
       details: {
         title: "Ant Mound Level 2 Entrance",
         switchTo: "underground",
-        flyTo: { x: 1000, y: 3271, zoom: 5 },// The coordinates for the Ladder inside the Grell Tunnels underground area.
+        flyTo: { x: 1000, y: 3271, zoom: 5 },
         coordinates: { x: 824, y: 3271 },
         image: "images/markers/Ant_Mound_Exit.png",
         lore: "Exit to Darkwoods above Ant Mound.",
@@ -665,7 +665,7 @@ export const undergroundMapMarkers = {
       details: {
         title: "Ant Mound Level 2 Exit",
         switchTo: "underground",
-        flyTo: { x: 824, y: 3271, zoom: 5 },// The coordinates for the Ladder inside the Grell Tunnels underground area.
+        flyTo: { x: 824, y: 3271, zoom: 5 },
         coordinates: { x: 1000, y: 3271 },
         image: "images/markers/Ant_Mound_Level_2_Exit.png",
         lore: "Exit to Darkwoods above Ant Mound Level 2.",
@@ -673,6 +673,7 @@ export const undergroundMapMarkers = {
         links: [],
       },
     },
+    
     //Place: Crypts of Ryonkah underground
     {
       category: "underground",
@@ -683,7 +684,7 @@ export const undergroundMapMarkers = {
       details: {
         title: "Crypts of Ryonkah Exit",
         switchTo: "overworld",
-        flyTo: { x: 1028, y: 2981, zoom: 7 }, // The coordinates to center on after switching
+        flyTo: { x: 1028, y: 2981, zoom: 7 }, 
         coordinates: { x: 1028, y: 2981 },
         image: "images/markers/Crypt_of_Ryonkah_Exit.png",
         lore: "Exit to Darkwoods above Crypts of Ryonkah.",
@@ -700,7 +701,7 @@ export const undergroundMapMarkers = {
       details: {
         title: "Crypts of Ryonkah Level 2 Entrance",
         switchTo: "underground",
-        flyTo: { x: 1124, y: 2794, zoom: 7 }, // The coordinates to center on after switching
+        flyTo: { x: 1124, y: 2794, zoom: 7 }, 
         coordinates: { x: 963, y: 2821 },
         image: "images/markers/Crypt_of_Ryonkah_Exit.png",
         lore: "Exit to Darkwoods above Crypts of Ryonkah.",
@@ -717,7 +718,7 @@ export const undergroundMapMarkers = {
       details: {
         title: "Crypts of Ryonkah Level 2 Exit",
         switchTo: "underground",
-        flyTo: { x: 963, y: 2821, zoom: 7 }, // The coordinates to center on after switching
+        flyTo: { x: 963, y: 2821, zoom: 7 }, 
         coordinates: { x: 1124, y: 2794 },
         image: "images/markers/Crypt_of_Ryonkah_Exit.png",
         lore: "Exit to Crypts of Ryonkah Level 1.",
@@ -734,7 +735,7 @@ export const undergroundMapMarkers = {
       details: {
         title: "Crypts of Ryonkah Level 3 Entrance",
         switchTo: "underground",
-        flyTo: { x: 1147, y: 2919, zoom: 7 }, // The coordinates to center on after switching
+        flyTo: { x: 1147, y: 2919, zoom: 7 }, 
         coordinates: { x: 1032, y: 2859 },
         image: "images/markers/Crypt_of_Ryonkah_Exit.png",
         lore: "Entrance to Crypts of Ryonkah Level 3.",
@@ -751,7 +752,7 @@ export const undergroundMapMarkers = {
       details: {
         title: "Crypts of Ryonkah Level 3 Exit",
         switchTo: "underground",
-        flyTo: { x: 1032, y: 2859, zoom: 7 }, // The coordinates to center on after switching
+        flyTo: { x: 1032, y: 2859, zoom: 7 }, 
         coordinates: { x: 1147, y: 2919 },
         image: "images/markers/Crypt_of_Ryonkah_Exit.png",
         lore: "Exit to Crypts of Ryonkah Level 1.",
@@ -846,6 +847,24 @@ export const undergroundMapMarkers = {
         links: [],
       },
     },
+    // Place: McKelsky Crypt underground
+    {
+      category: "underground",
+      type: "underworld_ladder",
+      tooltip: "McKelsky Crypt Exit",
+      region: "Darkwoods",
+      place: "Necropolis",
+      details: {
+        title: "McKelsky Crypt Exit",
+        switchTo: "overworld",
+        flyTo: { x: 1430, y: 3045, zoom: 6 },
+        coordinates: { x: 1431, y: 3046 },
+        image: "images/markers/McKelsky_Crypt_Exit.png",
+        lore: "Entrance to Necropolis above McKelsky Crypt.",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // City: Whisperdale Undergrounds
     {
@@ -857,7 +876,7 @@ export const undergroundMapMarkers = {
       details: {
         title: "Chlera Catacombs Exit",
         switchTo: "overworld",
-        flyTo: { x: 423, y: 3430, zoom: 5 },// The coordinates for the Ladder inside the Grell Tunnels underground area.
+        flyTo: { x: 423, y: 3430, zoom: 5 },
         coordinates: { x: 423, y: 3431 },
         image: "images/markers/Grell_Ladder_Exit.png",
         lore: "Exit to Chlera above Chlera Catacombs.",
@@ -875,7 +894,7 @@ export const undergroundMapMarkers = {
       details: {
         title: "Cathedral of Joyous Afterlife Exit",
         switchTo: "overworld",
-        flyTo: { x: 633, y: 3187, zoom: 4 },// The coordinates for the Ladder inside the Grell Tunnels underground area.
+        flyTo: { x: 633, y: 3187, zoom: 4 },
         coordinates: { x: 712, y: 3125 },
         image: "images/markers/Cathedral_of_Joyous_Afterlife_Ladder_Exit.png",
         lore: "Exit to Chlera above Cathedral of Joyous Afterlife.",
@@ -892,7 +911,7 @@ export const undergroundMapMarkers = {
       details: {
         title: "Cathedral of Joyous Afterlife Exit",
         switchTo: "overworld",
-        flyTo: { x: 628, y: 3198, zoom: 4 },// The coordinates for the Ladder inside the Grell Tunnels underground area.
+        flyTo: { x: 628, y: 3198, zoom: 4 },
         coordinates: { x: 647, y: 3144 },
         image: "images/markers/Cathedral_of_Joyous_Afterlife_Exit.png",
         lore: "Exit to Chlera above Cathedral of Joyous Afterlife.",
@@ -909,7 +928,7 @@ export const undergroundMapMarkers = {
       details: {
         title: "Cathedral of Joyous Afterlife Exit",
         switchTo: "overworld",
-        flyTo: { x: 680, y: 3319, zoom: 4 },// The coordinates for the Ladder inside the Grell Tunnels underground area.
+        flyTo: { x: 680, y: 3319, zoom: 4 },
         coordinates: { x: 679, y: 3316 },
         image: "images/markers/Cathedral_of_Joyous_Afterlife_Exit.png",
         lore: "Exit to Chlera above Cathedral of Joyous Afterlife.",
@@ -931,7 +950,7 @@ export const undergroundMapMarkers = {
       details: {
         title: "Chlera Catacombs Exit",
         switchTo: "overworld",
-        flyTo: { x: 2330, y: 3620 },// The coordinates for the Ladder inside the Grell Tunnels underground area.
+        flyTo: { x: 2330, y: 3620 },
         coordinates: { x: 2359, y: 3571 },
         image: "images/markers/Grell_Ladder_Exit.png",
         lore: "Exit to Chlera above Chlera Catacombs.",
@@ -987,7 +1006,7 @@ export const undergroundMapMarkers = {
       details: {
         title: "Grell Exit",
         switchTo: "overworld",
-        flyTo: { x: 2996, y: 3044 },// The coordinates for the Ladder inside the Grell Tunnels underground area.
+        flyTo: { x: 2996, y: 3044 },
         coordinates: { x: 3411, y: 3105 },
         image: "images/markers/Grell_Ladder_Exit.png",
         lore: "Exit to Highlands above Grell.",
@@ -1004,7 +1023,7 @@ export const undergroundMapMarkers = {
       details: {
         title: "Grell Exit",
         switchTo: "overworld",
-        flyTo: { x: 2996, y: 3044 },// The coordinates for the Ladder inside the Grell Tunnels underground area.
+        flyTo: { x: 2996, y: 3044 },
         coordinates: { x: 3419, y: 3105 },
         image: "images/markers/Grell_Ladder_Exit.png",
         lore: "Exit to Highlands above Grell.",
@@ -1041,7 +1060,7 @@ export const undergroundMapMarkers = {
       details: {
         title: "Grell Exit",
         switchTo: "overworld",
-        flyTo: { x: 3240, y: 3607 },// The coordinates for the Ladder inside the Grell Tunnels underground area.
+        flyTo: { x: 3240, y: 3607 },
         coordinates: { x: 2918, y: 3365 },
         image: "images/markers/Grell_Ladder_Exit.png",
         lore: "Exit to Highlands above Grell.",
@@ -1058,7 +1077,7 @@ export const undergroundMapMarkers = {
       details: {
         title: "Vel Dran Exit",
         switchTo: "overworld",
-        flyTo: { x: 3127, y: 3222, zoom: 5 },// The coordinates for the Ladder inside the Grell Tunnels underground area.
+        flyTo: { x: 3127, y: 3222, zoom: 5 },
         coordinates: { x: 3097, y: 3221 },
         image: "images/markers/Vel_Dran_Cave_Ladder_Exit.png",
         lore: "Exit to Vel Dran.",

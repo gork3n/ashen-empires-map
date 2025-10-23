@@ -2175,7 +2175,7 @@ export const mapMarkers = {
         image: "images/markers/Azulum_Quest.png",
         lore: "Azulum is part of the Oozing on the Job quest line.",
         npcs: [],
-        links: [{ text: "Ashen Empires Wiki (Oozing on the Job)", url: "#" }], // Quest not added to the AE wiki yet.
+        links: [{ text: "Ashen Empires Wiki (Oozing on the Job)", url: "#" }], 
       },
     },
     // City: Autumn Quests
@@ -2191,7 +2191,7 @@ export const mapMarkers = {
         image: "images/markers/Vesos_Quest.png",
         lore: "Vesos is part of the Noisy Neighbors quest line.",
         npcs: [],
-        links: [{ text: "Ashen Empires Wiki (Noisy Neighbors)", url: "https://ashenempires.fandom.com/wiki/Noisy_Neighbors" }], // Quest not added to the AE wiki yet.
+        links: [{ text: "Ashen Empires Wiki (Noisy Neighbors)", url: "https://ashenempires.fandom.com/wiki/Noisy_Neighbors" }], 
       },
     },
     {
@@ -2206,7 +2206,7 @@ export const mapMarkers = {
         image: "images/markers/Rydyl_Quest.png",
         lore: "Rydyl is part of the Rydyl quest line.",
         npcs: [],
-        links: [{ text: "Ashen Empires Wiki (Rydyl)", url: "https://ashenempires.fandom.com/wiki/Rydyl" }], // Quest not added to the AE wiki yet.
+        links: [{ text: "Ashen Empires Wiki (Rydyl)", url: "https://ashenempires.fandom.com/wiki/Rydyl" }], 
       },
     },
     {
@@ -2221,7 +2221,7 @@ export const mapMarkers = {
         image: "images/markers/Jhulara_Quest.png",
         lore: "Jhulara is part of the Julara's Father quest line.",
         npcs: [],
-        links: [{ text: "Ashen Empires Wiki (Julara's Father)", url: "https://ashenempires.fandom.com/wiki/Jhulara%27s_Father" }], // Quest not added to the AE wiki yet.
+        links: [{ text: "Ashen Empires Wiki (Julara's Father)", url: "https://ashenempires.fandom.com/wiki/Jhulara%27s_Father" }], 
       },
     },
     // Place: Burslord's Hunting Lodge Quests
@@ -2237,7 +2237,7 @@ export const mapMarkers = {
         image: "images/markers/Galun_Quest.png",
         lore: "Galun is part of the Sentimental Value quest line.",
         npcs: [],
-        links: [{ text: "Ashen Empires Wiki (Sentimental Value)", url: "https://ashenempires.fandom.com/wiki/Sentimental_Value" }], // Quest not added to the AE wiki yet.
+        links: [{ text: "Ashen Empires Wiki (Sentimental Value)", url: "https://ashenempires.fandom.com/wiki/Sentimental_Value" }], 
       },
     },
     {
@@ -2252,7 +2252,7 @@ export const mapMarkers = {
         image: "images/markers/Burslord_Quest.png",
         lore: "Burslord is part of the Termigon Armor quest line.",
         npcs: [],
-        links: [{ text: "Ashen Empires Wiki (Termigon Armor)", url: "https://ashenempires.fandom.com/wiki/Termigon_Armor" }], // Quest not added to the AE wiki yet.
+        links: [{ text: "Ashen Empires Wiki (Termigon Armor)", url: "https://ashenempires.fandom.com/wiki/Termigon_Armor" }], 
       },
     },
     
@@ -2269,7 +2269,7 @@ export const mapMarkers = {
         image: "images/markers/Kimnuug_Quest.png",
         lore: "Kimnuug is part of the Chaffed quest line.",
         npcs: [],
-        links: [{ text: "Ashen Empires Wiki (Chaffed)", url: "https://ashenempires.fandom.com/wiki/Chaffed" }], // Quest not added to the AE wiki yet.
+        links: [{ text: "Ashen Empires Wiki (Chaffed)", url: "https://ashenempires.fandom.com/wiki/Chaffed" }], 
       },
     },
     {
@@ -2284,7 +2284,7 @@ export const mapMarkers = {
         image: "images/markers/Marla_Moculous_Quest.png",
         lore: "Marla Moculous is part of the Marla Moculous quest line.",
         npcs: [],
-        links: [{ text: "Ashen Empires Wiki (Marla Moculous)", url: "https://ashenempires.fandom.com/wiki/Marla_Moculous" }], // Quest not added to the AE wiki yet.
+        links: [{ text: "Ashen Empires Wiki (Marla Moculous)", url: "https://ashenempires.fandom.com/wiki/Marla_Moculous" }], 
       },
     },
     {
@@ -2299,7 +2299,68 @@ export const mapMarkers = {
         image: "images/markers/Wilco_Thatter_Quest.png",
         lore: "Wilco Thatter is part of the Spies quest line.",
         npcs: [],
-        links: [{ text: "Ashen Empires Wiki (Spies)", url: "https://ashenempires.fandom.com/wiki/Spies" }], // Quest not added to the AE wiki yet.
+        links: [{ text: "Ashen Empires Wiki (Spies)", url: "https://ashenempires.fandom.com/wiki/Spies" }], 
+      },
+    },
+    // City: Gulley Quests
+    {
+      category: "npc",
+      type: "overworld_quest",
+      tooltip: "Rineguile (Wanders)",
+      region: "Darkwoods",
+      place: "Gulley",
+      details: {
+        title: "Rineguile Quest",
+        coordinates: { x: 1103, y: 2760 },
+        image: "images/markers/Rineguile_Quest.png",
+        lore: "Rineguile is part of the It's Weight in Gold quest line.",
+        npcs: [],
+        links: [{ text: "Ashen Empires Wiki (It's Weight in Gold)", url: "https://ashenempires.fandom.com/wiki/Rineguile" }], 
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_quest",
+      tooltip: "Farmer Obrien (Wanders)",
+      region: "Darkwoods",
+      place: "Gulley",
+      details: {
+        title: "Farmer Obrien Quest",
+        coordinates: { x: 1117, y: 2790 },
+        image: "images/markers/Farmer_Obrien_Quest.png",
+        lore: "Farmer Obrien is part of the Chaffed quest line.",
+        npcs: [],
+        links: [{ text: "Ashen Empires Wiki (Chaffed)", url: "https://ashenempires.fandom.com/wiki/Chaffed" }], 
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_quest",
+      tooltip: "Scrotore (Wanders)",
+      region: "Darkwoods",
+      place: "Gulley",
+      details: {
+        title: "Scrotore Quest",
+        coordinates: { x: 1112, y: 2772 },
+        image: "images/markers/Scrotore_Quest.png",
+        lore: "Scrotore is part of the Scrotore's Knapsack quest line.",
+        npcs: [],
+        links: [{ text: "Ashen Empires Wiki (Scrotore's Knapsack)", url: "https://ashenempires.fandom.com/wiki/Scrotore%27s_Knapsack" }], 
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_quest",
+      tooltip: "Samual Green (Wanders)",
+      region: "Darkwoods",
+      place: "Gulley",
+      details: {
+        title: "Scrotore Quest",
+        coordinates: { x: 1108, y: 2793 },
+        image: "images/markers/Scrotore_Quest.png",
+        lore: "Samual Green is part of the Samual Green quest line.",
+        npcs: [],
+        links: [{ text: "Ashen Empires Wiki (Samual Green)", url: "https://ashenempires.fandom.com/wiki/Samual_Green" }], 
       },
     },
 
@@ -4550,8 +4611,38 @@ export const mapMarkers = {
 
     // Region: Darkwoods Town Guardians
     // City: Josody Town Guardians
+    {
+      category: "npc",
+      type: "overworld_town_guardian",
+      tooltip: "Town Guardian (Josody)",
+      region: "Darkwoods",
+      place: "Josody",
+      details: {
+        title: "Town Guardian",
+        coordinates: { x: 1322, y: 2483 },
+        image: "images/markers/Josody_Town_Guardian.png",
+        lore: "The Town Guardian in Josody.",
+        npcs: [],
+        links: [],
+      },
+    },
     
     // City: Gulley Town Guardians
+    {
+      category: "npc",
+      type: "overworld_town_guardian",
+      tooltip: "Town Guardian (Gulley)",
+      region: "Darkwoods",
+      place: "Gulley",
+      details: {
+        title: "Town Guardian",
+        coordinates: { x: 1113, y: 2767 },
+        image: "images/markers/Gulley_Town_Guardian.png",
+        lore: "The Town Guardian in Gulley.",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // City: Redwake Town Guardians
 
@@ -4737,8 +4828,38 @@ export const mapMarkers = {
 
     // Region: Darkwoods Town Wizard of Insight
     // City: Josody Town Wizard of Insight
+    {
+      category: "npc",
+      type: "overworld_town_wizard_of_insight",
+      tooltip: "Town Wizard of Insight (Josody)",
+      region: "Darkwoods",
+      place: "Josody",
+      details: {
+        title: "Town Wizard of Insight",
+        coordinates: { x: 1352, y: 2516 },
+        image: "images/markers/Josody_Town_Wizard_of_Insight.png",
+        lore: "More information about Josody Town Wizard of Insight is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // City: Gulley Town Wizard of Insight
+    {
+      category: "npc",
+      type: "overworld_town_wizard_of_insight",
+      tooltip: "Town Wizard of Insight (Gulley)",
+      region: "Darkwoods",
+      place: "Gulley",
+      details: {
+        title: "Town Wizard of Insight",
+        coordinates: { x: 1110, y: 2791 },
+        image: "images/markers/Gulley_Town_Wizard_of_Insight.png",
+        lore: "More information about Gulley Town Wizard of Insight is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // City: Redwake Town Wizard of Insight
 
@@ -5307,8 +5428,38 @@ export const mapMarkers = {
 
     // Region: Darkwoods Bank
     // City: Josody Bank
+    {
+      category: "npc",
+      type: "overworld_bank",
+      tooltip: "Bank",
+      region: "Darkwoods",
+      place: "Josody",
+      details: {
+        title: "Josody Bank",
+        coordinates: { x: 1303, y: 2509 },
+        image: "images/markers/Josody_Bank.png",
+        lore: "More information about Josody Bank is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // City: Gulley Bank
+    {
+      category: "npc",
+      type: "overworld_bank",
+      tooltip: "Bank",
+      region: "Darkwoods",
+      place: "Gulley",
+      details: {
+        title: "Gulley Bank",
+        coordinates: { x: 1103, y: 2774 },
+        image: "images/markers/Gulley_Bank.png",
+        lore: "More information about Gulley Bank is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // City: Redwake Bank
     {
@@ -7341,8 +7492,312 @@ export const mapMarkers = {
 
     // Region: Darkwoods Shops
     // City: Josody Shops
+    {
+      category: "npc",
+      type: "overworld_shop_leather",
+      tooltip: "Tegwienol's Leather Shop",
+      region: "Darkwoods",
+      place: "Josody",
+      details: {
+        title: "Tegwienol's Leather Shop",
+        coordinates: { x: 1306, y: 2544 },
+        image: "images/markers/Tegwienols_Leather_Shop.png",
+        lore: "More information about Tegwienol's Leather Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_carpentry",
+      tooltip: "Zaliquon's Carpentry Shop",
+      region: "Darkwoods",
+      place: "Josody",
+      details: {
+        title: "Zaliquon's Carpentry Shop",
+        coordinates: { x: 1310, y: 2539 },
+        image: "images/markers/Zaliquons_Carpentry_Shop.png",
+        lore: "More information about Zaliquon's Carpentry Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_farming",
+      tooltip: "Quender's Farming Shop",
+      region: "Darkwoods",
+      place: "Josody",
+      details: {
+        title: "Quender's Farming Shop",
+        coordinates: { x: 1329, y: 2543 },
+        image: "images/markers/Quenders_Farming_Shop.png",
+        lore: "More information about Quender's Farming Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_provisioner",
+      tooltip: "Margret Dawson's Provisioner Shop",
+      region: "Darkwoods",
+      place: "Josody",
+      details: {
+        title: "Margret Dawson's Provisioner Shop",
+        coordinates: { x: 1321, y: 2526 },
+        image: "images/markers/Margret_Dawsons_Provisioner_Shop.png",
+        lore: "More information about Margret Dawson's Provisioner Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_blacksmith",
+      tooltip: "Kezwyx's Blacksmith Shop",
+      region: "Darkwoods",
+      place: "Josody",
+      details: {
+        title: "Kezwyx's Blacksmith Shop",
+        coordinates: { x: 1370, y: 2525 },
+        image: "images/markers/Kezwyxs_Blacksmith_Shop.png",
+        lore: "More information about Kezwyx's Blacksmith Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_weaponry",
+      tooltip: "Shyvly's Weapon Shop",
+      region: "Darkwoods",
+      place: "Josody",
+      details: {
+        title: "Shyvly's Weapon Shop",
+        coordinates: { x: 1367, y: 2529 },
+        image: "images/markers/Shyvlys_Weapon_Shop.png",
+        lore: "More information about Shyvly's Weapon Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_weaponry",
+      tooltip: "Malivar's Weapon Shop",
+      region: "Darkwoods",
+      place: "Josody",
+      details: {
+        title: "Malivar's Weapon Shop",
+        coordinates: { x: 1368, y: 2529 },
+        image: "images/markers/Malivars_Weapon_Shop.png",
+        lore: "More information about Malivar's Weapon Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_armory",
+      tooltip: "Darzig's Armory Shop",
+      region: "Darkwoods",
+      place: "Josody",
+      details: {
+        title: "Darzig's Armory Shop",
+        coordinates: { x: 1365, y: 2504 },
+        image: "images/markers/Darzigs_Armory_Shop.png",
+        lore: "More information about Darzig's Armory Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_shipyard",
+      tooltip: "Gilron Argas's Shipyard",
+      region: "Darkwoods",
+      place: "Josody",
+      details: {
+        title: "Gilron Argas's Shipyard",
+        coordinates: { x: 1386, y: 2510 },
+        image: "images/markers/Gilron_Argass_Shipyard.png",
+        lore: "More information about Gilron Argas's Shipyard is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_magic",
+      tooltip: "Zavoril's Magic Shop",
+      region: "Darkwoods",
+      place: "Josody",
+      details: {
+        title: "Zavoril's Magic Shop",
+        coordinates: { x: 1389, y: 2534 },
+        image: "images/markers/Zavorils_Magic_Shop.png",
+        lore: "More information about Zavoril's Magic Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_scrolls",
+      tooltip: "Rugue's Scroll Shop",
+      region: "Darkwoods",
+      place: "Josody",
+      details: {
+        title: "Rugue's Scroll Shop",
+        coordinates: { x: 1387, y: 2534 },
+        image: "images/markers/Rugues_Scroll_Shop.png",
+        lore: "More information about Rugue's Scroll Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_pub",
+      tooltip: "Nilswin's Cooking Shop",
+      region: "Darkwoods",
+      place: "Josody",
+      details: {
+        title: "Nilswin's Cooking Shop",
+        coordinates: { x: 1352, y: 2544 },
+        image: "images/markers/Nilswins_Cooking_Shop.png",
+        lore: "More information about Nilswin's Cooking Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_pub",
+      tooltip: "Garcon's Cooking Shop",
+      region: "Darkwoods",
+      place: "Josody",
+      details: {
+        title: "Garcon's Cooking Shop",
+        coordinates: { x: 1350, y: 2544 },
+        image: "images/markers/Garcons_Cooking_Shop.png",
+        lore: "More information about Garcon's Cooking Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // City: Gulley Shops
+    {
+      category: "npc",
+      type: "overworld_shop_leather",
+      tooltip: "Vyserin's Leather Shop",
+      region: "Darkwoods",
+      place: "Gulley",
+      details: {
+        title: "Vyserin's Leather Shop",
+        coordinates: { x: 1097, y: 2796 },
+        image: "images/markers/Vyserins_Leather_Shop.png",
+        lore: "More information about Vyserin's Leather Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_carpentry",
+      tooltip: "Dryzid's Carpentry Shop",
+      region: "Darkwoods",
+      place: "Gulley",
+      details: {
+        title: "Dryzid's Carpentry Shop",
+        coordinates: { x: 1093, y: 2783 },
+        image: "images/markers/Dryzids_Carpentry_Shop.png",
+        lore: "More information about Dryzid's Carpentry Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_provisioner",
+      tooltip: "Yrmina's Provisioner Shop",
+      region: "Darkwoods",
+      place: "Gulley",
+      details: {
+        title: "Yrmina's Provisioner Shop",
+        coordinates: { x: 1103, y: 2786 },
+        image: "images/markers/Yrminas_Provisioner_Shop.png",
+        lore: "More information about Yrmina's Provisioner Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_farming",
+      tooltip: "Erkal's Farming Shop",
+      region: "Darkwoods",
+      place: "Gulley",
+      details: {
+        title: "Erkal's Farming Shop",
+        coordinates: { x: 1114, y: 2784 },
+        image: "images/markers/Erkal_Farming_Shop.png",
+        lore: "More information about Erkal's Farming Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_pub",
+      tooltip: "Nadar's Pub",
+      region: "Darkwoods",
+      place: "Gulley",
+      details: {
+        title: "Nadar's Pub",
+        coordinates: { x: 1115, y: 2760 },
+        image: "images/markers/Nadars_Pub.png",
+        lore: "More information about Nadar's Pub is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_magic",
+      tooltip: "Xulimar's Magic Shop",
+      region: "Darkwoods",
+      place: "Gulley",
+      details: {
+        title: "Xulimar's Magic Shop",
+        coordinates: { x: 1105, y: 2766 },
+        image: "images/markers/Xulimars_Magic_Shop.png",
+        lore: "More information about Xulimar's Magic Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // City: Redwake Shops
     {
@@ -10441,6 +10896,21 @@ export const mapMarkers = {
       },
     },
     // City: Josody Spawns
+    {
+      category: "spawn",
+      type: "overworld_spawn_good",
+      tooltip: "Good Spawn Gate",
+      region: "Darkwoods",
+      place: "Josody",
+      details: {
+        title: "Good Spawn Gate",
+        coordinates: { x: 1315, y: 2514 },
+        image: "images/markers/Josody_Spawn_Gate.png",
+        lore: "More information about Josody Good Spawn Gate is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // City: Gulley Spawns
 
@@ -11611,7 +12081,7 @@ export const mapMarkers = {
       details: {
         title: "McKelsky Crypt",
         switchTo: "underground", // This will trigger the map switch
-        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
+        flyTo: { x: 1431, y: 3046 }, // The coordinates to center on after switching
         coordinates: { x: 1430, y: 3045 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about McKelsky Crypt is coming soon.",
