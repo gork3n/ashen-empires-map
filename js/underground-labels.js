@@ -112,10 +112,50 @@ export const mapLabels = {
         links: [],
       },
     },
+    {
+      name: "McKelsky Crypt",
+      fontSize: 30,
+      region: "Darkwoods",
+      details: {
+        title: "McKelsky Crypt",
+        coordinates: { x: 1432, y: 2989 },
+        image: "",
+        lore: "The McKelsky Crypt is in the Darkwoods.",
+        information: "",
+        bonus: "",
+        npcs: [],
+        links: [],
+      },
+    },
+    // Region: Battle Plains Crypts
+
+    // Region: Black Swamp Crypts
+
+    // Region: Highlands Crypts
+
+    // Region: Western Isles Crypts
+    // Place: Lycanth Crypt
+    {
+      name: "Crypts of Ryonkah",
+      fontSize: 30,
+      region: "Western Isles",
+      details: {
+        title: "Lycanth Crypt",
+        coordinates: { x: 280, y: 2603 },
+        image: "",
+        lore: "The Lycanth Crypt is a large dungeon in the Western Isles.",
+        information: "",
+        bonus: "",
+        npcs: [],
+        links: [],
+      },
+    },
 
 
   ],
   caves: [
+    // Region: Highlands Caves
+    // Place: Vel Dran Cave
     {
       name: "Vel Dran Cave",
       fontSize: 30,
@@ -125,6 +165,69 @@ export const mapLabels = {
         coordinates: { x: 3145, y: 3063 },
         image: "",
         lore: "More information about Vel Dran Cave is coming soon.",
+        information: "",
+        bonus: "",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // Region: Western Isles Caves
+    // Place: Spore Cave
+    {
+      name: "Spore Cave",
+      fontSize: 30,
+      region: "Highlands",
+      details: {
+        title: "Spore Cave",
+        coordinates: { x: 453, y: 2507 },
+        image: "",
+        lore: "More information about Spore Cave is coming soon.",
+        information: "",
+        bonus: "",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      name: "Spore Cave Level 2",
+      fontSize: 30,
+      region: "Highlands",
+      details: {
+        title: "Spore Cave Level 2",
+        coordinates: { x: 679, y: 2410 },
+        image: "",
+        lore: "More information about Spore Cave Level 2 is coming soon.",
+        information: "",
+        bonus: "",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      name: "Spore Cave Level 3",
+      fontSize: 30,
+      region: "Highlands",
+      details: {
+        title: "Spore Cave Level 3",
+        coordinates: { x: 1526, y: 2922 },
+        image: "",
+        lore: "More information about Spore Cave Level 3 is coming soon.",
+        information: "",
+        bonus: "",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      name: "Spore Cave Level 4",
+      fontSize: 30,
+      region: "Highlands",
+      details: {
+        title: "Spore Cave Level 4",
+        coordinates: { x: 1814, y: 2812 },
+        image: "",
+        lore: "More information about Spore Cave Level 4 is coming soon.",
         information: "",
         bonus: "",
         npcs: [],
@@ -179,6 +282,7 @@ export const mapLabels = {
     },
 
     // Region: Western Isles Mines
+    // Place: Werewolf Island Mine
 
     // Region: Valley of Giants Mines
 
@@ -355,6 +459,22 @@ export const mapLabels = {
         image: "",
         lore: "More information about Necropolis Basement is coming soon.",
         information: "Necropolis Basement is located beneath the Necropolis.",
+        bonus: "",
+        npcs: [],
+        links: [],
+      },
+    },
+    // Region: Western Isles Tunnels
+    {
+      name: "Werewolf Island Tunnel",
+      fontSize: 25,
+      region: "Western Isles",
+      details: {
+        title: "Werewolf Island Tunnel",
+        coordinates: { x: 472, y: 2628 },
+        image: "",
+        lore: "More information about Werewolf Island Pass Tunnel is coming soon.",
+        information: "Werewolf Island Pass Tunnel is located beneath the Western Isles.",
         bonus: "",
         npcs: [],
         links: [],

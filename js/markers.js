@@ -10704,6 +10704,87 @@ export const mapMarkers = {
         links: [],
       },
     },
+    // City: Lycanth Shops
+    {
+      category: "npc",
+      type: "overworld_shop_provisioner",
+      tooltip: "Leroy Janks's Provisioner Shop",
+      region: "Western Isles",
+      place: "Lycanth",
+      details: {
+        title: "Leroy Janks's Provisioner Shop",
+        coordinates: { x: 274, y: 2633 },
+        image: "images/markers/Leroy_Janks_Provisioner_Shop.png",
+        lore: "More information about Leroy Janks's Provisioner Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_magic",
+      tooltip: "Maritha's Magic Shop",
+      region: "Western Isles",
+      place: "Lycanth",
+      details: {
+        title: "Maritha's Magic Shop",
+        coordinates: { x: 275, y: 2641 },
+        image: "images/markers/Maritha's_Magic_Shop.png",
+        lore: "More information about Maritha's Magic Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_pub",
+      tooltip: "Kolb's Pub",
+      region: "Western Isles",
+      place: "Lycanth",
+      details: {
+        title: "Kolb's Pub",
+        coordinates: { x: 272, y: 2655 },
+        image: "images/markers/Kolb's_Pub.png",
+        lore: "More information about Kolb's Pub is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_provisioner",
+      tooltip: "Dawthis' Provisioner Shop",
+      region: "Western Isles",
+      place: "Lycanth",
+      details: {
+        title: "Dawthis' Provisioner Shop",
+        coordinates: { x: 252, y: 2646 },
+        image: "images/markers/Dawthis'_Provisioner_Shop.png",
+        lore: "More information about Dawthis' Provisioner Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_blacksmith",
+      tooltip: "Thorpe's Blacksmith Shop",
+      region: "Western Isles",
+      place: "Lycanth",
+      details: {
+        title: "Thorpe's Blacksmith Shop",
+        coordinates: { x: 252, y: 2636 },
+        image: "images/markers/Thorpe's_Blacksmith_Shop.png",
+        lore: "More information about Thorpe's Blacksmith Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // Region: Valley of Giants Shops
     // No shops in Valley of Giants
@@ -11883,17 +11964,51 @@ export const mapMarkers = {
     // Werewolf Island underground
     {
       category: "undergrounds",
-      type: "overworld_cave",
-      tooltip: "Werewolf Cave",
+      type: "overworld_ladder",
+      tooltip: "Werewolf Island Pass Entrance",
       region: "Krythan",
       place: "Werewolf Island",
       details: {
-        title: "Werewolf Cave",
+        title: "Werewolf Island Pass Entrance",
         switchTo: "underground", // This will trigger the map switch
-        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
-        coordinates: { x: 318, y: 2603 },
-        image: "images/markers/image_coming_soon.png",
-        lore: "More information about Werewolf Cave is coming soon.",
+        flyTo: { x: 477, y: 2632, zoom: 7 }, // The coordinates to center on after switching
+        coordinates: { x: 462, y: 2552 },
+        image: "images/markers/Werewolf_Island_Pass_Entrance.png",
+        lore: "More information about Werewolf Island Pass Entrance is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "undergrounds",
+      type: "overworld_ladder",
+      tooltip: "Werewolf Island Pass Entrance",
+      region: "Krythan",
+      place: "Werewolf Island",
+      details: {
+        title: "Werewolf Island Pass Entrance",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 450, y: 2632, zoom: 7 }, // The coordinates to center on after switching
+        coordinates: { x: 450, y: 2552 },
+        image: "images/markers/Werewolf_Island_Pass_Entrance.png",
+        lore: "More information about Werewolf Island Pass Entrance is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "undergrounds",
+      type: "overworld_cave",
+      tooltip: "Spore Cave Entrance",
+      region: "Krythan",
+      place: "Werewolf Island",
+      details: {
+        title: "Spore Cave Entrance",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 365, y: 2582 }, // The coordinates to center on after switching
+        coordinates: { x: 316, y: 2602 },
+        image: "images/markers/Werewolf_Cave_Entrance.png",
+        lore: "More information about Spore Cave Entrance is coming soon.",
         npcs: [],
         links: [],
       },
@@ -11907,7 +12022,7 @@ export const mapMarkers = {
       details: {
         title: "Lycanth Crypt",
         switchTo: "underground", // This will trigger the map switch
-        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
+        flyTo: { x: 466, y: 2631 }, // The coordinates to center on after switching
         coordinates: { x: 297, y: 2617 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Lycanth Crypt is coming soon.",
