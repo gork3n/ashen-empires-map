@@ -279,6 +279,7 @@ function createUndergroundLabelToggleButtons() {
 
     // Define the specific categories for the underground map
     const undergroundLabelCategories = [
+        { id: 'upperstairs', name: 'Upper Stairs', icon: 'icons/3d-stairs.svg' },
         { id: 'cities', name: 'Cities', icon: 'icons/medieval-village-01.svg' }, // SVG Icon
         { id: 'catacombs', name: 'Catacombs', icon: 'icons/dungeon-gate.svg' },
         { id: 'dungeons', name: 'Dungeons', icon: 'icons/dungeon-gate.svg' }, // SVG Icon

@@ -24,6 +24,66 @@ export const undergroundMarkerStyles = {
     icon: "icons/hanging-sign.svg",
     color: "#32CD32", // LimeGreen
   },
+  underworld_shop_weaponry: {
+    icon: "icons/crossed-swords.svg",
+    color: "#32CD32", // LimeGreen
+  },
+  underworld_shop_armory: {
+    icon: "icons/round-shield.svg",
+    color: "#32CD32", // LimeGreen
+  },
+  underworld_shop_provisioner: {
+    icon: "icons/barrel.svg",
+    color: "#32CD32", // LimeGreen
+  },
+  underworld_shop_pub: {
+    icon: "icons/beer-stein.svg",
+    color: "#32CD32", // LimeGreen
+  },
+  underworld_shop_bakery: {
+    icon: "icons/cook.svg",
+    color: "#32CD32", // LimeGreen
+  },
+  underworld_shop_jewelry: {
+    icon: "icons/big-diamond-ring.svg",
+    color: "#32CD32", // LimeGreen
+  },
+  underworld_shop_carpentry: {
+    icon: "icons/hand-saw.svg",
+    color: "#32CD32", // LimeGreen
+  },
+  underworld_shop_leather: {
+    icon: "icons/leather-boot.svg",
+    color: "#32CD32", // LimeGreen
+  },
+  underworld_shop_farming: {
+    icon: "icons/spade.svg",
+    color: "#32CD32", // LimeGreen
+  },
+  underworld_shop_blacksmith: {
+    icon: "icons/anvil.svg",
+    color: "#32CD32", // LimeGreen
+  },
+  underworld_shop_magic: {
+    icon: "icons/potion-ball.svg",
+    color: "#32CD32", // LimeGreen
+  },
+  underworld_shop_evil_trinket: {
+    icon: "icons/evil-book.svg",
+    color: "#9370DB", // MediumPurple
+  },
+  underworld_shop_runecrafting: {
+    icon: "icons/rupee.svg",
+    color: "#32CD32", // LimeGreen
+  },
+  underworld_shop_survey: {
+    icon: "icons/scroll-unfurled.svg",
+    color: "#32CD32", // LimeGreen
+  },
+  underworld_shop_scrolls: {
+    icon: "icons/tied-scroll.svg",
+    color: "#32CD32", // LimeGreen
+  },
 
   // Services and NPCs
   underworld_quest: {
@@ -135,10 +195,90 @@ export const undergroundMapMarkers = {
         links: [],
       },
     },
+    // Region: Sands of Creation Portals
+    // Island: Ruhura Portals
+    {
+      category: "underground",
+      type: "underworld_portal_small",
+      tooltip: "Mukarramma Dungeon Exit Portal",
+      region: "Sands of Creation",
+      place: "Mukarramma Dungeon",
+      details: {
+        title: "Mukarramma Dungeon Exit Portal",
+        switchTo: "underground",
+        flyTo: { x: 948, y: 4006, zoom: 5 },        
+        coordinates: { x: 149, y: 3797 },// The coordinates for the Ladder inside the Jeel Catacombs underground area.
+        image: "images/markers/Portal_Mukarramma_Dungeon.png",
+        lore: "Exit to Mukarramma above the Mukarramma Dungeon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    // Island: Khafra Portals
+    {
+      category: "underground",
+      type: "underworld_portal_small",
+      tooltip: "Portal to Shadow Dragons",
+      region: "Sands of Creation",
+      place: "Elemental Cave Khafra Side",
+      details: {
+        title: "Portal to Shadow Dragons",
+        switchTo: "overworld",
+        flyTo: { x: 69, y: 3694, zoom: 5 },        
+        coordinates: { x: 193, y: 3727 },// The coordinates for the Ladder inside the Jeel Catacombs underground area.
+        image: "images/markers/Portal_Shadow_Dragons.png",
+        lore: "Portal to the Shadow Dragons from the Elemental Cave Khafra Side.",
+        npcs: [],
+        links: [],
+      },
+    },
 
   ],
   shops: [
-    // Add underground shop markers here
+    // Region: Valinor Shops
+
+    // Region: Silvest Valley Shops
+
+    // Region: Krythan Shops
+
+    // Region: Darkwoods Shops
+
+    // Region: Battle Plains Shops
+
+    // Region: Black Swamp Shops
+
+    // Region: Highlands Shops
+
+    // Region: Western Isles Shops
+
+    // Region: Valley of Giants Shops
+
+    // Region: Heartwood Coast Shops
+
+    // Region: Tundria Shops
+
+    // Region: Sands of Creation Shops
+    // City: Ruhura Shops
+    {
+      category: "npc",
+      type: "underworld_shop_leather",
+      tooltip: "Hamad's Leatherworking Shop",
+      region: "Sands of Creation",
+      place: "Ruhura",
+      details: {
+        title: "Hamad's Leatherworking Shop",
+        coordinates: { x: 372, y: 4033 },
+        image: "images/markers/Hamad's_Leatherworking_Shop.png",
+        lore: "More information about Hamad's Leatherworking Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // Region: Breakwater Shops
+
+    // Region: Broken Finger Shops
   ],
   services_npcs: [
     // Region: Highlands Undergrounds
@@ -1294,5 +1434,215 @@ export const undergroundMapMarkers = {
         links: [],
       },
     },
+
+    // Region: Highlands Undergrounds
+
+    // Region: Western Isles Undergrounds
+
+    // Region: Valley of Giants Undergrounds
+
+    // Region: Heartwood Coast Undergrounds
+
+    // Region: Tundria Undergrounds
+
+    // Region: Sands of Creation Undergrounds
+    // Island: Ruhura Undergrounds
+    {
+      category: "underground",
+      type: "underworld_ladder",
+      tooltip: "Elemental Cave Exit",
+      region: "Sands of Creation",
+      place: "Ruhura Island",
+      details: {
+        title: "Elemental Cave Exit",
+        switchTo: "overworld",
+        flyTo: { x: 545, y: 3838, zoom: 5 }, 
+        coordinates: { x: 333, y: 3683 },
+        image: "images/markers/Elemental_Cave_Exit.png",
+        lore: "Exit to Elemental Cave.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "underground",
+      type: "underworld_ladder",
+      tooltip: "Artonian Pass Ruhura Side Exit",
+      region: "Sands of Creation",
+      place: "Ruhura Island",
+      details: {
+        title: "Artonian Pass Ruhura Side Exit",
+        switchTo: "overworld",
+        flyTo: { x: 401, y: 3793, zoom: 5 }, 
+        coordinates: { x: 376, y: 3415 },
+        image: "images/markers/Artonian_Pass_Ruhura_Side_Exit.png",
+        lore: "Exit to Artonian Pass Ruhura Side.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "underground",
+      type: "underworld_ladder",
+      tooltip: "Artonian Pass Greater Dragon Island Side Exit",
+      region: "Sands of Creation",
+      place: "Ruhura Island",
+      details: {
+        title: "Artonian Pass Greater Dragon Island Side Exit",
+        switchTo: "overworld",
+        flyTo: { x: 308, y: 3910, zoom: 5 }, 
+        coordinates: { x: 359, y: 3495 },
+        image: "images/markers/Artonian_Pass_Greater_Dragon_Island_Side_Exit.png",
+        lore: "Exit to Artonian Pass Greater Dragon Island Side.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "underground",
+      type: "underworld_ladder",
+      tooltip: "Elemental Cave Exit",
+      region: "Sands of Creation",
+      place: "Ruhura Island",
+      details: {
+        title: "Elemental Cave Exit",
+        switchTo: "overworld",
+        flyTo: { x: 455, y: 3719, zoom: 5 }, 
+        coordinates: { x: 382, y: 3675 },
+        image: "images/markers/Elemental_Cave_Exit.png",
+        lore: "Exit to Elemental Cave.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "underground",
+      type: "underworld_ladder",
+      tooltip: "Elemental Cave Exit to Khafra Side",
+      region: "Sands of Creation",
+      place: "Ruhura Island",
+      details: {
+        title: "Elemental Cave Exit",
+        switchTo: "underground",
+        flyTo: { x: 57, y: 3707, zoom: 5 }, // RtoK Elemental Cave Entrance coordinates
+        coordinates: { x: 314, y: 3782 },
+        image: "images/markers/Elemental_Cave_Exit.png",
+        lore: "Exit to Elemental Cave.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "underground",
+      type: "underworld_cave",
+      tooltip: "Artonian Cave Exit",
+      region: "Sands of Creation",
+      place: "Ruhura Island",
+      details: {
+        title: "Artonian Cave Exit",
+        switchTo: "overworld",
+        flyTo: { x: 490, y: 3652, zoom: 5 }, 
+        coordinates: { x: 471, y: 3655 },
+        image: "images/markers/Artonian_Cave_Exit.png",
+        lore: "Exit to Artonian Cave.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "underground",
+      type: "underworld_ladder",
+      tooltip: "Artonian Fort Cave Exit",
+      region: "Sands of Creation",
+      place: "Ruhura Island",
+      details: {
+        title: "Artonian Fort Cave Exit",
+        switchTo: "overworld",
+        flyTo: { x: 551, y: 3656, zoom: 5 }, 
+        coordinates: { x: 519, y: 3671 },
+        image: "images/markers/Artonian_Fort_Cave_Exit.png",
+        lore: "Exit to Artonian Fort Cave.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "underground",
+      type: "underworld_ladder",
+      tooltip: "Lupinsix's Lair Exit",
+      region: "Sands of Creation",
+      place: "Ruhura Island",
+      details: {
+        title: "Lupinsix's Lair Exit",
+        switchTo: "overworld",
+        flyTo: { x: 792, y: 3848, zoom: 5 }, 
+        coordinates: { x: 1448, y: 3958 },
+        image: "images/markers/Lupinsix's_Lair_Exit.png",
+        lore: "Exit to Lupinsix's Lair.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // City: Ruhura Undergrounds
+    {
+      category: "underground",
+      type: "underworld_stairs",
+      tooltip: "Leather Shop Basement Exit",
+      region: "Western Isles",
+      place: "Ruhura",
+      details: {
+        title: "Leather Shop Basement Exit",
+        switchTo: "overworld",
+        flyTo: { x: 370, y: 4036, zoom: 5 }, 
+        coordinates: { x: 370, y: 4038 },
+        image: "images/markers/Leather_Shop_Basement_Exit.png",
+        lore: "Exit to Leather Shop Basement.",
+        npcs: [],
+        links: [],
+      },
+    },
+    // Island: Khafra Undergrounds
+    {
+      category: "underground",
+      type: "underworld_ladder",
+      tooltip: "Elemental Cave Khafra Side Exit",
+      region: "Western Isles",
+      place: "Ruhura",
+      details: {
+        title: "Elemental Cave Khafra Side Exit",
+        switchTo: "overworld",
+        flyTo: { x: 79, y: 3355, zoom: 5 }, 
+        coordinates: { x: 162, y: 3597 },
+        image: "images/markers/Elemental_Cave_Khafra_Side_Exit.png",
+        lore: "Exit to Elemental Cave Khafra Side.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "underground",
+      type: "underworld_ladder",
+      tooltip: "Elemental Cave Khafra Side Exit",
+      region: "Western Isles",
+      place: "Ruhura",
+      details: {
+        title: "Elemental Cave Khafra Side Exit",
+        switchTo: "overworld",
+        flyTo: { x: 314, y: 3782, zoom: 5 }, 
+        coordinates: { x: 57, y: 3707 },
+        image: "images/markers/Elemental_Cave_Khafra_Side_Exit.png",
+        lore: "Exit to Elemental Cave Khafra Side.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // City: Khafra Undergrounds
+
+    // Region: Breakwater Undergrounds
+    
+
+    // Region: Broken Finger Undergrounds
   ],
 };

@@ -1738,7 +1738,7 @@ export const mapLabels = {
       },
     },
 
-    // Places of Interest - Region: Western Isles 5022
+    // Places of Interest - Region: Western Isles 
     
     {
       name: "Minion's of Talazar's Stronghold",
@@ -2675,7 +2675,7 @@ export const mapLabels = {
       region: "Sands of Creation",
       details: {
         title: "Lupinsix's Lair",
-        coordinates: { x: 792, y: 3837 },
+        coordinates: { x: 792, y: 3842 },
         image: "",
         lore: "More information about Lupinsix's Lair is coming soon.",
         information: "",
@@ -2753,6 +2753,51 @@ export const mapLabels = {
         coordinates: { x: 113, y: 3468 },
         image: "",
         lore: "More information about Dragon Lair is coming soon.",
+        information: "",
+        bonus: "",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      name: "Sandwurm Valley",
+      fontSize: 20,
+      region: "Sands of Creation",
+      details: {
+        title: "Sandwurm Valley",
+        coordinates: { x: 182, y: 3625 },
+        image: "",
+        lore: "More information about Sandwurm Valley is coming soon.",
+        information: "",
+        bonus: "",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      name: "New Dragon Coast", // Name found online.
+      fontSize: 20,
+      region: "Sands of Creation",
+      details: {
+        title: "New Dragon Coast",
+        coordinates: { x: 51, y: 3514 },
+        image: "",
+        lore: "More information about New Dragon Coast is coming soon.",
+        information: "",
+        bonus: "",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      name: "Umbral Landing", // Just gave it a name for now. I will try to find an actual name later or a better fitting name.
+      fontSize: 20,
+      region: "Sands of Creation",
+      details: {
+        title: "Umbral Landing",
+        coordinates: { x: 56, y: 3724 },
+        image: "",
+        lore: "More information about Umbral Landing is coming soon.",
         information: "",
         bonus: "",
         npcs: [],

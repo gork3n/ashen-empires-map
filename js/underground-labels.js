@@ -1,5 +1,24 @@
 // Define all underground map labels organized by category
 export const mapLabels = {
+  upperstairs: [
+    // Region: Sands of Creation Upperstairs
+    {
+      name: "Hariab's House",
+      fontSize: 15,
+      region: "Sands of Creation",
+      details: {
+        title: "Hariab's House",
+        coordinates: { x: 407, y: 4015 },
+        image: "",
+        lore: "More information about Hariab's House is coming soon.",
+        information: "",
+        bonus: "",
+        npcs: [],
+        links: [{ text: "", url: "" }],
+      },
+    },
+
+  ],
   cities: [
     // Island: Valinor Island Cities
     // Region: Valinor Cities
@@ -48,6 +67,7 @@ export const mapLabels = {
 
   ],
   dungeons: [
+    // Region: Highlands Dungeons
     {
       name: "Minotaur Maze",
       fontSize: 30,
@@ -63,6 +83,25 @@ export const mapLabels = {
         links: [],
       },
     },
+    // Region: Sands of Creation Dungeons
+    // Island: Ruhura Dungeons
+    {
+      name: "Mukarramma Dungeon",
+      fontSize: 20,
+      region: "Sands of Creation",
+      details: {
+        title: "Mukarramma Dungeon",
+        coordinates: { x: 207, y: 3795 },
+        image: "",
+        lore: "More information about Mukarramma Dungeon is coming soon.",
+        information: "",
+        bonus: "",
+        npcs: [],
+        links: [],
+      },
+    },
+    // Island: Khafra Dungeons
+    
   ],
   crypts: [
     // Region: Krythan Crypts
@@ -150,6 +189,7 @@ export const mapLabels = {
         links: [],
       },
     },
+    // Region: Sands of Creation Crypts
 
 
   ],
@@ -234,6 +274,72 @@ export const mapLabels = {
         links: [],
       },
     },
+    // Region: Sands of Creation Caves
+    // Island: Ruhura Caves
+    {
+      name: "Elemental Cave Ruhura Side",
+      fontSize: 15,
+      region: "Sands of Creation",
+      details: {
+        title: "Elemental Cave Ruhura Side",
+        coordinates: { x: 371, y: 3660 },
+        image: "",
+        lore: "More information about Elemental Cave Ruhura Side is coming soon.",
+        information: "",
+        bonus: "",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      name: "Artonian Cave",
+      fontSize: 15,
+      region: "Sands of Creation",
+      details: {
+        title: "Artonian Cave",
+        coordinates: { x: 483, y: 3583 },
+        image: "",
+        lore: "More information about Artonian Cave is coming soon.",
+        information: "",
+        bonus: "",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      name: "Lupinsix's Lair",
+      fontSize: 20,
+      region: "Sands of Creation",
+      details: {
+        title: "Lupinsix's Lair",
+        coordinates: { x: 1452, y: 3867 },
+        image: "",
+        lore: "More information about Lupinsix's Lair is coming soon.",
+        information: "",
+        bonus: "",
+        npcs: [],
+        links: [],
+      },
+    },
+    
+    // Island: Khafra Caves
+    {
+      name: "Elemental Cave Khafra Side",
+      fontSize: 20,
+      region: "Sands of Creation",
+      details: {
+        title: "Elemental Cave Khafra Side",
+        coordinates: { x: 126, y: 3565 },
+        image: "",
+        lore: "More information about Elemental Cave Khafra Side is coming soon.",
+        information: "",
+        bonus: "",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    
   ],
   mines: [
     // Add underground mine labels here
@@ -324,7 +430,6 @@ export const mapLabels = {
     // Region: Black Swamp Basements
 
     // Region: Highlands Basements
-
     // Place: Emporium Abbey
     {
       name: "Emporium Abbey Basement",
@@ -349,6 +454,24 @@ export const mapLabels = {
     // Region: Heartwood Coast Basements
 
     // Region: Tundria Basements
+
+    // Region: Sands of Creation Basements
+    // City: Ruhura Basements
+    {
+      name: "Leather Shop Basement",
+      fontSize: 15,
+      region: "Sands of Creation",
+      details: {
+        title: "Leather Shop Basement",
+        coordinates: { x: 375, y: 4051 },
+        image: "images/underground/leather-shop-basement.png",
+        lore: "More information about Leather Shop Basement is coming soon.",
+        information: "",
+        bonus: "",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // Region: Breakwater Basements
 

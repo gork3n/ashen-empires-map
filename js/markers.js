@@ -1090,7 +1090,7 @@ export const mapMarkers = {
     },
 
     // Region: Sands of Creation Portals
-    // City: Ruhura Side Portals
+    // City: Ruhura Portals
     {
       category: "portals",
       type: "overworld_portal_lsp",
@@ -1122,7 +1122,7 @@ export const mapMarkers = {
       },
     },
 
-    // City: Khafra Side Portals
+    // City: Khafra Portals
 
     {
       category: "portals",
@@ -1157,14 +1157,14 @@ export const mapMarkers = {
     {
       category: "portals",
       type: "overworld_portal_lsp",
-      tooltip: "Portal to Khafra Side",
+      tooltip: "Portal to Khafra",
       region: "Sands of Creation",
       place: "Khafra", // Portals with similar look to lsp portal use the same icon
       details: {
-        title: "Portal to Khafra Side",
+        title: "Portal to Khafra",
         coordinates: { x: 215, y: 3385 },
         image: "images/markers/image_coming_soon.png",
-        lore: "More information about Portal to Khafra Side is coming soon.",
+        lore: "More information about Portal to Khafra is coming soon.",
         npcs: [],
         links: [],
       },
@@ -3148,6 +3148,34 @@ export const mapMarkers = {
       },
     },
 
+    // Region: Western Isles Innkeeper
+
+    // Region: Heartwood Coast Innkeeper
+
+    // Region: Tundria Innkeeper
+
+    // Region: Sands of Creation Innkeeper
+    // City: Ruhura Innkeeper
+    {
+      category: "npc",
+      type: "overworld_inn_keeper",
+      tooltip: "Ruhura Innkeeper",
+      region: "Sands of Creation",
+      place: "Ruhura",
+      details: {
+        title: "Ruhura Innkeeper",
+        coordinates: { x: 343, y: 4037 },
+        image: "images/markers/Ruhura_Innkeeper.png",
+        lore: "More information about Ruhura Innkeeper is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // Region: Breakwater Innkeeper
+
+    // Region: Broken Finger Innkeeper
+
     // Sub-Category Docks
     /* Valinor Island Docks */
     // No active docks on Valinor Island as of now
@@ -3879,7 +3907,7 @@ export const mapMarkers = {
     // No active docks on Werewolf Island as of now
 
     // Region: Sands of Creation Docks
-    // City: Ruhura Side Docks
+    // City: Ruhura Docks
     {
       category: "dock",
       type: "overworld_dock",
@@ -3888,7 +3916,7 @@ export const mapMarkers = {
       place: "Ruhura",
       details: {
         title: "Ruhura Dock",
-        coordinates: { x: 359, y: 4060 },
+        coordinates: { x: 360, y: 4062 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Ruhura Dock is coming soon.",
         npcs: [],
@@ -3905,7 +3933,7 @@ export const mapMarkers = {
       place: "Greater Dragon Island",
       details: {
         title: "Greater Dragon Island Dock",
-        coordinates: { x: 280, y: 3918 },
+        coordinates: { x: 280, y: 3919 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Greater Dragon Island Dock is coming soon.",
         npcs: [],
@@ -3913,7 +3941,7 @@ export const mapMarkers = {
       },
     },
 
-    // City: Khafra Side Docks
+    // City: Khafra Docks
     {
       category: "dock",
       type: "overworld_dock",
@@ -4785,9 +4813,9 @@ export const mapMarkers = {
     // Region: Western Isles Town Guardians
 
     // Region: Sands of Creation Region Town Guardians
-    // City: Ruhura Side Town Guardians
+    // City: Ruhura Town Guardians
 
-    // City: Khafra Side Town Guardians
+    // City: Khafra Town Guardians
 
     // Region: Breakwater Region Town Guardians
 
@@ -5067,6 +5095,21 @@ export const mapMarkers = {
     // City: Khafra Games of Chance
 
     // City: Ruhura Games of Chance
+    {
+      category: "npc",
+      type: "overworld_game_of_chance",
+      tooltip: "Moponi's Demon Eye Game (Wanders)",
+      region: "Sand of Creation",
+      place: "Ruhura",
+      details: {
+        title: "Moponi's Demon Eye Game",
+        coordinates: { x: 399, y: 4033 },
+        image: "images/markers/Moponi_Demon_Eye_Game.png",
+        lore: "More information about Moponi's Demon Eye Game is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // Regoin: Western Isles Games of Chance
     // City: Lopal Games of Chance
@@ -5766,7 +5809,29 @@ export const mapMarkers = {
 
     // Region: Tundria Bank
 
-    //
+    // Region: Sands of Creation Bank
+
+    // Region: Breakwater Bank
+    // City: Ruhura Bank
+    {
+      category: "npc",
+      type: "overworld_bank",
+      tooltip: "Bank",
+      region: "Sands of Creation",
+      place: "Ruhura",
+      details: {
+        title: "Bank",
+        coordinates: { x: 386, y: 4014 },
+        image: "images/markers/Ruhura_Bank.png",
+        lore: "More information about Bank is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // Region: Broken Finger Bank
+
+
     // Sub-Category Trainers
     // Island: Valinor Island Trainers
 
@@ -10797,6 +10862,262 @@ export const mapMarkers = {
     // City: Khafra Shops
 
     // City: Ruhura Shops
+    {
+      category: "npc",
+      type: "overworld_shop_farming",
+      tooltip: "Kolnix's Farming Shop",
+      region: "Sands of Creation",
+      place: "Ruhura",
+      details: {
+        title: "Kolnix's Farming Shop",
+        coordinates: { x: 415, y: 4036 },
+        image: "images/markers/Kolnix's_Farming_Shop.png",
+        lore: "More information about Kolnix's Farming Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_pub",
+      tooltip: "Sistri's Pub",
+      region: "Sands of Creation",
+      place: "Ruhura",
+      details: {
+        title: "Sistri's Pub",
+        coordinates: { x: 394, y: 4030 },
+        image: "images/markers/Sistri's_Pub.png",
+        lore: "More information about Sistri's Pub is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_pub",
+      tooltip: "Nxthei's Pub",
+      region: "Sands of Creation",
+      place: "Ruhura",
+      details: {
+        title: "Nxthei's Pub",
+        coordinates: { x: 393, y: 4030 },
+        image: "images/markers/Nxthei's_Pub.png",
+        lore: "More information about Nxthei's Pub is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_blacksmith",
+      tooltip: "Caldoax's Blacksmith Shop",
+      region: "Sands of Creation",
+      place: "Ruhura",
+      details: {
+        title: "Caldoax's Blacksmith Shop",
+        coordinates: { x: 383, y: 4038 },
+        image: "images/markers/Caldoax's_Blacksmith_Shop.png",
+        lore: "More information about Caldoax's Blacksmith Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_generic",
+      tooltip: "Blueprint Sales Shop",
+      region: "Sands of Creation",
+      place: "Ruhura",
+      details: {
+        title: "Blueprint Sales Shop",
+        coordinates: { x: 381, y: 4039 },
+        image: "images/markers/Ruhura_Blueprint_Sales_Shop.png",
+        lore: "More information about Blueprint Sales Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_generic",
+      tooltip: "Surveying and Tools Sales Shop",
+      region: "Sands of Creation",
+      place: "Ruhura",
+      details: {
+        title: "Surveying and Tools Sales Shop",
+        coordinates: { x: 381, y: 4041 },
+        image: "images/markers/Ruhura_Surveying_and_Tools_Sales_Shop.png",
+        lore: "More information about Surveying and Tools Sales Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_leather",
+      tooltip: "Rungi's Leatherworking Shop",
+      region: "Sands of Creation",
+      place: "Ruhura",
+      details: {
+        title: "Rungi's Leatherworking Shop",
+        coordinates: { x: 369, y: 4033 },
+        image: "images/markers/Rungi's_Leatherworking_Shop.png",
+        lore: "More information about Rungi's Leatherworking Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_pub",
+      tooltip: "Jorzkl's Pub",
+      region: "Sands of Creation",
+      place: "Ruhura",
+      details: {
+        title: "Jorzkl's Pub",
+        coordinates: { x: 342, y: 4038 },
+        image: "images/markers/Jorzkl's_Pub.png",
+        lore: "More information about Jorzkl's Pub is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_carpentry",
+      tooltip: "Misal's Carpentry Shop",
+      region: "Sands of Creation",
+      place: "Ruhura",
+      details: {
+        title: "Misal's Carpentry Shop",
+        coordinates: { x: 360, y: 4021 },
+        image: "images/markers/Misal's_Carpentry_Shop.png",
+        lore: "More information about Misal's Carpentry Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_jewelry",
+      tooltip: "Paila's Jewelry Shop",
+      region: "Sands of Creation",
+      place: "Ruhura",
+      details: {
+        title: "Paila's Jewelry Shop",
+        coordinates: { x: 351, y: 4017 },
+        image: "images/markers/Paila's_Jewelry_Shop.png",
+        lore: "More information about Paila's Jewelry Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_magic",
+      tooltip: "Hxyth's Magic Shop",
+      region: "Sands of Creation",
+      place: "Ruhura",
+      details: {
+        title: "Hxyth's Magic Shop",
+        coordinates: { x: 358, y: 4011 },
+        image: "images/markers/Hxyth's_Magic_Shop.png",
+        lore: "More information about Hxyth's Magic Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_magic",
+      tooltip: "Mekea's Magic Shop",
+      region: "Sands of Creation",
+      place: "Ruhura",
+      details: {
+        title: "Mekea's Magic Shop",
+        coordinates: { x: 357, y: 4012 },
+        image: "images/markers/Mekea's_Magic_Shop.png",
+        lore: "More information about Mekea's Magic Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_provisioner",
+      tooltip: "Jacksil's Provisioner Shop",
+      region: "Sands of Creation",
+      place: "Ruhura",
+      details: {
+        title: "Jacksil's Provisioner Shop",
+        coordinates: { x: 363, y: 3999 },
+        image: "images/markers/Jacksil's_Provisioner_Shop.png",
+        lore: "More information about Jacksil's Provisioner Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_jewelry",
+      tooltip: "Opinla's Jewelry Shop",
+      region: "Sands of Creation",
+      place: "Ruhura",
+      details: {
+        title: "Opinla's Jewelry Shop",
+        coordinates: { x: 368, y: 3986 },
+        image: "images/markers/Opinla's_Jewelry_Shop.png",
+        lore: "More information about Opinla's Jewelry Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_weaponry",
+      tooltip: "Lugnno's Weaponry Shop",
+      region: "Sands of Creation",
+      place: "Ruhura",
+      details: {
+        title: "Lugnno's Weaponry Shop",
+        coordinates: { x: 389, y: 3986 },
+        image: "images/markers/Lugnno's_Weaponry_Shop.png",
+        lore: "More information about Lugnno's Weaponry Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_armory",
+      tooltip: "Yzxthl's Armory Shop",
+      region: "Sands of Creation",
+      place: "Ruhura",
+      details: {
+        title: "Yzxthl's Armory Shop",
+        coordinates: { x: 392, y: 3986 },
+        image: "images/markers/Yzxthl's_Armory_Shop.png",
+        lore: "More information about Yzxthl's Armory is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // Region: Broken Finger Shops
     // City: Broken Finger Town Shops
@@ -11261,7 +11582,7 @@ export const mapMarkers = {
     
 
     // Region: Sands of Creation Spawns
-    // City: Ruhura Side Spawns
+    // City: Ruhura Spawns
     {
       category: "spawn",
       type: "overworld_spawn_good",
@@ -11277,7 +11598,22 @@ export const mapMarkers = {
         links: [],
       },
     },
-    // City: Khafra Side Spawns
+    {
+      category: "spawn",
+      type: "overworld_spawn_evil",
+      tooltip: "Evil Spawn Gate",
+      region: "Sands of Creation",
+      place: "Ruhura",
+      details: {
+        title: "Evil Spawn Gate",
+        coordinates: { x: 375, y: 4024 },
+        image: "images/markers/Ruhura_Evil_Spawn_Gate.png",
+        lore: "More information about Evil Spawn Gate is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    // City: Khafra Spawns
   ],
 
   undergrounds: [
@@ -13401,19 +13737,53 @@ export const mapMarkers = {
     
 
     // Region: Sands of Creation underground
-    // City: Ruhura Side underground
+    // Island: Ruhura underground
     {
       category: "undergrounds",
       type: "overworld_cave",
-      tooltip: "Ruhura Elemental Cave",
+      tooltip: "Sand Golem Crypt Entrance", // Near The GateKeeper
+      region: "Sands of Creation",
+      place: "Ruhura",
+      details: {
+        title: "Sand Golem Crypt",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
+        coordinates: { x: 839, y: 3924 },
+        image: "images/markers/Lupinsix's_Lair.png",
+        lore: "More information about Sand Golem Crypt is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "undergrounds",
+      type: "overworld_stairs",
+      tooltip: "Lupinsix's Lair Entrance", // Near The GateKeeper
+      region: "Sands of Creation",
+      place: "Ruhura",
+      details: {
+        title: "Lupinsix's Lair",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 1448, y: 3958 }, // The coordinates to center on after switching
+        coordinates: { x: 792, y: 3848 },
+        image: "images/markers/Lupinsix's_Lair.png",
+        lore: "More information about Lupinsix's Lair is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "undergrounds",
+      type: "overworld_ladder",
+      tooltip: "Ruhura Elemental Cave", // Near The GateKeeper
       region: "Sands of Creation",
       place: "Ruhura",
       details: {
         title: "Ruhura Elemental Cave",
         switchTo: "underground", // This will trigger the map switch
-        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
+        flyTo: { x: 382, y: 3675 }, // The coordinates to center on after switching
         coordinates: { x: 545, y: 3838 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Elemental_Cave.png",
         lore: "More information about Ruhura Elemental Cave is coming soon.",
         npcs: [],
         links: [],
@@ -13422,16 +13792,16 @@ export const mapMarkers = {
     {
       category: "undergrounds",
       type: "overworld_ladder",
-      tooltip: "Artonian Pass to Ruhura Side",
+      tooltip: "Artonian Pass to Ruhura",
       region: "Sands of Creation",
       place: "Ruhura",
       details: {
-        title: "Artonian Pass to Ruhura Side",
+        title: "Artonian Pass to Ruhura",
         switchTo: "underground", // This will trigger the map switch
-        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
+        flyTo: { x: 359, y: 3495 }, // The coordinates to center on after switching
         coordinates: { x: 308, y: 3909 },
         image: "images/markers/image_coming_soon.png",
-        lore: "More information about Artonian Pass to Ruhura Side is coming soon.",
+        lore: "More information about Artonian Pass to Ruhura is coming soon.",
         npcs: [],
         links: [],
       },
@@ -13445,7 +13815,7 @@ export const mapMarkers = {
       details: {
         title: "Artonian Pass to Greater Dragon Island",
         switchTo: "underground", // This will trigger the map switch
-        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
+        flyTo: { x: 376, y: 3415 }, // The coordinates to center on after switching
         coordinates: { x: 401, y: 3793 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Artonian Pass to Greater Dragon Island is coming soon.",
@@ -13455,16 +13825,16 @@ export const mapMarkers = {
     },
     {
       category: "undergrounds",
-      type: "overworld_cave",
-      tooltip: "Elemental Cave",
+      type: "overworld_ladder",
+      tooltip: "Elemental Cave", // Near Ruhura City
       region: "Sands of Creation",
       place: "Ruhura",
       details: {
         title: "Elemental Cave",
         switchTo: "underground", // This will trigger the map switch
-        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
+        flyTo: { x: 333, y: 3683 }, // The coordinates to center on after switching
         coordinates: { x: 454, y: 3718 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Elemental_Cave.png",
         lore: "More information about Elemental Cave is coming soon.",
         npcs: [],
         links: [],
@@ -13472,17 +13842,86 @@ export const mapMarkers = {
     },
     {
       category: "undergrounds",
-      type: "overworld_dungeon",
-      tooltip: "Mukarramma Dungeon",
+      type: "overworld_cave",
+      tooltip: "Artonian Cave Entrance", // Near Ruhura City x: 551, y: 3656
+      region: "Sands of Creation",
+      place: "Ruhura",
+      details: {
+        title: "Artonian Cave Entrance",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 471, y: 3655 }, // The coordinates to center on after switching
+        coordinates: { x: 490, y: 3652 },
+        image: "images/markers/Artonian_Cave_Entrance.png",
+        lore: "More information about Artonian Cave Entrance is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "undergrounds",
+      type: "overworld_ladder",
+      tooltip: "Artonian Fort Cave Entrance", // Near Ruhura City 
+      region: "Sands of Creation",
+      place: "Artonian Fort",
+      details: {
+        title: "Artonian Cave Entrance",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 519, y: 3671 }, // The coordinates to center on after switching
+        coordinates: { x: 551, y: 3676 },
+        image: "images/markers/Artonian_Fort_Cave_Entrance.png",
+        lore: "More information about Artonian Fort Cave Entrance is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "undergrounds",
+      type: "overworld_portal_lsp", // I might move this to the portals section later
+      tooltip: "Portal to Mukarramma Dungeon",
       region: "Sands of Creation",
       place: "Ruhura",
       details: {
         title: "Mukarramma Dungeon",
         switchTo: "underground", // This will trigger the map switch
-        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
+        flyTo: { x: 151, y: 3798 }, // The coordinates to center on after switching
         coordinates: { x: 950, y: 4006 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Portal_Mukarramma_Dungeon.png",
         lore: "More information about Mukarramma Dungeon is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "undergrounds",
+      type: "overworld_ladder", // I might move this to the portals section later
+      tooltip: "Elemental Cave Kharfa Side Trap Door (One Way)",
+      region: "Sands of Creation",
+      place: "Ruhura",
+      details: {
+        title: "Elemental Cave Kharfa Side Trap Door (One Way)",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 57, y: 3707, zoom: 6 }, // The coordinates to center on after switching
+        coordinates: { x: 81, y: 3470 },
+        image: "images/markers/Elemental_Cave_Kharfa_Side_Trap_Door.png",
+        lore: "More information about Elemental Cave Kharfa Side Trap Door (One Way) is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    // City: Ruhura underground
+    {
+      category: "undergrounds",
+      type: "overworld_stairs",
+      tooltip: "Leather Shop Basement",
+      region: "Sands of Creation",
+      place: "Ruhura",
+      details: {
+        title: "Leather Shop Basement",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 370, y: 4038, zoom: 7 }, // The coordinates to center on after switching
+        coordinates: { x: 370, y: 4036 },
+        image: "images/markers/leather-shop-basement.png",
+        lore: "More information about Leather Shop Basement is coming soon.",
         npcs: [],
         links: [],
       },
@@ -13507,17 +13946,17 @@ export const mapMarkers = {
       },
     },
 
-    // City: Khafra Side underground
+    // City: Khafra underground
     {
       category: "undergrounds",
-      type: "overworld_cave",
+      type: "overworld_ladder",
       tooltip: "Khafra Elemental Cave",
       region: "Sands of Creation",
       place: "Khafra",
       details: {
         title: "Khafra Elemental Cave",
         switchTo: "underground", // This will trigger the map switch
-        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
+        flyTo: { x: 162, y: 3597, zoom: 5 }, // The coordinates to center on after switching
         coordinates: { x: 79, y: 3355 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Khafra Elemental Cave is coming soon.",

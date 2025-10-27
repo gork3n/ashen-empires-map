@@ -276,7 +276,7 @@ function initializeMap() {
     // --- Set Initial Map View ---
     // Define the center of the map using in-game (4096x4096) coordinates.
     // This makes it easy to change the starting location.
-    const initialCenterGameCoords = { x: 263, y: 2648, }; // Default View is { x: 776, y: 668, } (Showing Lotor's Summer Palace) Centers LSP on smaller screens.
+    const initialCenterGameCoords = { x: 387, y: 4025, }; // Default View is { x: 776, y: 668, } (Showing Lotor's Summer Palace) Centers LSP on smaller screens.
 
     const mapSize = 32768;
     const scaleFactor = mapSize / 4096; // New scaling factor
@@ -294,12 +294,14 @@ function initializeMap() {
     overworldTileLayer = new TileLayer({
         source: new XYZ({
             attributions: '<span style="color: white;">Map tiles by Sir Chris via GDAL2Tiles</span>',
-            preload: 0,
+            preload: 0, // Keep lower-res tiles as placeholders for a smoother look
+            zDirection: -1, // Use tiles from lower zoom levels if higher ones are not available
+            maxZoom: 7, // Explicitly set the max native zoom level of the source tileset
             url: 'tiles/{z}/{x}/{y}.png',
             tileGrid: new TileGrid({
                 extent: [0, -32768, 32768, 0],
                 origin: [0, 0],
-                resolutions: [128, 64, 32, 16, 8, 4, 2, 1, 0.5, 0.25],
+                resolutions: [128, 64, 32, 16, 8, 4, 2, 1],
                 tileSize: [256, 256]
             })
         })
@@ -309,12 +311,14 @@ function initializeMap() {
         visible: false, // Initially hidden
         source: new XYZ({
             attributions: '<span style="color: white;">Map tiles by Sir Chris via GDAL2Tiles</span>',
-            preload: 0,
+            preload: 0, // Keep lower-res tiles as placeholders for a smoother look
+            zDirection: -1, // Use tiles from lower zoom levels if higher ones are not available
+            maxZoom: 7, // Explicitly set the max native zoom level of the source tileset
             url: 'underground/{z}/{x}/{y}.png', // Path to underground tiles
             tileGrid: new TileGrid({
                 extent: [0, -32768, 32768, 0],
                 origin: [0, 0],
-                resolutions: [128, 64, 32, 16, 8, 4, 2, 1, 0.5, 0.25],
+                resolutions: [128, 64, 32, 16, 8, 4, 2, 1],
                 tileSize: [256, 256]
             })
         })
@@ -329,7 +333,7 @@ function initializeMap() {
         view: new View({
             center: initialCenterOlCoords, // Use your calculated center
             resolution: 3, // Start at zoom level 4
-            resolutions: [128, 64, 32, 16, 8, 4, 2, 1, 0.5, 0.25], // Explicitly define resolutions
+            resolutions: [128, 64, 32, 16, 8, 4, 2, 1, 0.5, 0.25],
             constrainResolution: true, // Snap to defined zoom levels
         })
     });
