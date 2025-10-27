@@ -326,6 +326,21 @@ export const mapMarkers = {
     // City: Varg Portals
 
     // City: Hothbra Portals
+    {
+      category: "portals",
+      type: "overworld_portal_lsp",
+      tooltip: "Portal to Lotor's Summer Palace",
+      region: "Krythan",
+      place: "Hothbra",
+      details: {
+        title: "Portal to Lotor's Summer Palace",
+        coordinates: { x: 999, y: 1337 },
+        image: "images/portals/Lotors_Summer_Palace_Portal.png",
+        lore: "More information about Portal to Lotor's Summer Palace is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // City: Jeel Portals
 
@@ -837,7 +852,7 @@ export const mapMarkers = {
       place: "Whisperdale",
       details: {
         title: "Portal to Lotor's Summer Palace",
-        coordinates: { x: 472, y: 3480 },
+        coordinates: { x: 472, y: 3481 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Portal to Lotor's Summer Palace is coming soon.",
         npcs: [],
@@ -3171,6 +3186,22 @@ export const mapMarkers = {
         links: [],
       },
     },
+    // City: Khafra Innkeeper
+    {
+      category: "npc",
+      type: "overworld_inn_keeper",
+      tooltip: "Khafra Innkeeper",
+      region: "Sands of Creation",
+      place: "Khafra",
+      details: {
+        title: "Khafra Innkeeper",
+        coordinates: { x: 228, y: 2753 },
+        image: "images/markers/Khafra_Innkeeper.png",
+        lore: "More information about Khafra Innkeeper is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // Region: Breakwater Innkeeper
 
@@ -4599,6 +4630,21 @@ export const mapMarkers = {
     // City: Varg Town Guardians
 
     // City: Hothbra Town Guardians
+    {
+      category: "npc",
+      type: "overworld_town_guardian",
+      tooltip: "Town Guardian (Hothbra)",
+      region: "Darkwoods",
+      place: "Hothbra",
+      details: {
+        title: "Town Guardian",
+        coordinates: { x: 531, y: 1094 },
+        image: "images/markers/Hothbra_Town_Guardian.png",
+        lore: "The Town Guardian in Hothbra.",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // City: Jeel Town Guardians
     {
@@ -4816,6 +4862,7 @@ export const mapMarkers = {
     // City: Ruhura Town Guardians
 
     // City: Khafra Town Guardians
+    
 
     // Region: Breakwater Region Town Guardians
 
@@ -5340,6 +5387,21 @@ export const mapMarkers = {
     // City: Varg Bank
 
     // City: Hothbra Bank
+    {
+      category: "npc",
+      type: "overworld_bank",
+      tooltip: "Bank",
+      region: "Krythan",
+      place: "Hothbra",
+      details: {
+        title: "Bank",
+        coordinates: { x: 530, y: 1067 },
+        image: "images/markers/Hothbra_Bank.png",
+        lore: "More information about Hothbra Bank is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // City: Jeel Bank
     {
@@ -5823,6 +5885,22 @@ export const mapMarkers = {
         title: "Bank",
         coordinates: { x: 386, y: 4014 },
         image: "images/markers/Ruhura_Bank.png",
+        lore: "More information about Bank is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    // City: Khafra Bank
+    {
+      category: "npc",
+      type: "overworld_bank",
+      tooltip: "Bank",
+      region: "Sands of Creation",
+      place: "Khafra",
+      details: {
+        title: "Bank",
+        coordinates: { x: 237, y: 2809 },
+        image: "images/markers/Khafra_Bank.png",
         lore: "More information about Bank is coming soon.",
         npcs: [],
         links: [],
@@ -7385,6 +7463,102 @@ export const mapMarkers = {
     
 
     // City: Hothbra Shops
+    {
+      category: "npc",
+      type: "overworld_shop_magic",
+      tooltip: "Raegenhere's Magic Shop",
+      region: "Krythan",
+      place: "Hothbra",
+      details: {
+        title: "Raegenhere's Magic Shop",
+        coordinates: { x: 519, y: 1068 },
+        image: "images/markers/Raegenhere's_Magic_Shop.png",
+        lore: "More information about Raegenhere's Magic Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_pub",
+      tooltip: "Cudbert's Pub",
+      region: "Krythan",
+      place: "Hothbra",
+      details: {
+        title: "Cudbert's Pub",
+        coordinates: { x: 505, y: 1064 },
+        image: "images/markers/Cudberts_Pub.png",
+        lore: "More information about Cudbert's Pub is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_weaponry",
+      tooltip: "Darbin's Weaponry Shop",
+      region: "Krythan",
+      place: "Hothbra",
+      details: {
+        title: "Darbin's Weaponry Shop",
+        coordinates: { x: 506, y: 1095 },
+        image: "images/markers/Darbins_Weaponry_Shop.png",
+        lore: "More information about Darbin's Weaponry Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_blacksmith",
+      tooltip: "Darbinson's Blacksmith Shop",
+      region: "Krythan",
+      place: "Hothbra",
+      details: {
+        title: "Darbinson's Blacksmith Shop",
+        coordinates: { x: 510, y: 1093 },
+        image: "images/markers/Darbinsons_Blacksmith_Shop.png",
+        lore: "More information about Darbinson's Blacksmith Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_carpentry",
+      tooltip: "Kedecia's Carpentry Shop",
+      region: "Krythan",
+      place: "Hothbra",
+      details: {
+        title: "Kedecia's Carpentry Shop",
+        coordinates: { x: 516, y: 1086 },
+        image: "images/markers/Kedecias_Carpentry_Shop.png",
+        lore: "More information about Kedecia's Carpentry Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_provisioner",
+      tooltip: "Valetrem's Provisioner Shop",
+      region: "Krythan",
+      place: "Hothbra",
+      details: {
+        title: "Valetrem's Provisioner Shop",
+        coordinates: { x: 521, y: 1091 },
+        image: "images/markers/Valetrem_Provisioner_Shop.png",
+        lore: "More information about Valetrem's Provisioner Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // City: New Korelth Shops
     // It was toast, no shops here.
@@ -10860,6 +11034,214 @@ export const mapMarkers = {
 
     // Region: Sands of Creation Shops
     // City: Khafra Shops
+    {
+      category: "npc",
+      type: "overworld_shop_carpentry",
+      tooltip: "Aventi's Carpentry Shop",
+      region: "Sands of Creation",
+      place: "Khafra",
+      details: {
+        title: "Aventi's Carpentry Shop",
+        coordinates: { x: 282, y: 2787 },
+        image: "images/markers/Aventi's_Carpentry_Shop.png",
+        lore: "More information about Aventi's Carpentry Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_blacksmith",
+      tooltip: "Rabulo's Blacksmith Shop",
+      region: "Sands of Creation",
+      place: "Khafra",
+      details: {
+        title: "Rabulo's Blacksmith Shop",
+        coordinates: { x: 280, y: 2786 },
+        image: "images/markers/Rabulo's_Blacksmith_Shop.png",
+        lore: "More information about Rabulo's Blacksmith Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_jewelry",
+      tooltip: "Sohrab's Jewelry Shop",
+      region: "Sands of Creation",
+      place: "Khafra",
+      details: {
+        title: "Sohrab's Jewelry Shop",
+        coordinates: { x: 266, y: 2761 },
+        image: "images/markers/Sohrab's_Jewelry_Shop.png",
+        lore: "More information about Sohrab's Jewelry Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_pub",
+      tooltip: "Akhenaten's Pub",
+      region: "Sands of Creation",
+      place: "Khafra",
+      details: {
+        title: "Akhenaten's Pub",
+        coordinates: { x: 266, y: 2774 },
+        image: "images/markers/Akhenaten's_Pub.png",
+        lore: "More information about Akhenaten's Pub is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_pub",
+      tooltip: "Helthla's Pub",
+      region: "Sands of Creation",
+      place: "Khafra",
+      details: {
+        title: "Helthla's Pub",
+        coordinates: { x: 262, y: 2774 },
+        image: "images/markers/Helthla's_Pub.png",
+        lore: "More information about Helthla's Pub is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_farming",
+      tooltip: "Laska's Farming Shop",
+      region: "Sands of Creation",
+      place: "Khafra",
+      details: {
+        title: "Laska's Farming Shop",
+        coordinates: { x: 264, y: 2807 },
+        image: "images/markers/Laska's_Farming_Shop.png",
+        lore: "More information about Laska's Farming Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_leather",
+      tooltip: "RiaRuz's Leatherworking Shop",
+      region: "Sands of Creation",
+      place: "Khafra",
+      details: {
+        title: "RiaRuz's Leatherworking Shop",
+        coordinates: { x: 260, y: 2806 },
+        image: "images/markers/RiaRuz's_Leatherworking_Shop.png",
+        lore: "More information about RiaRuz's Leatherworking Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_jewelry",
+      tooltip: "Funsani's Jewelry Shop",
+      region: "Sands of Creation",
+      place: "Khafra",
+      details: {
+        title: "Funsani's Jewelry Shop",
+        coordinates: { x: 250, y: 2782 },
+        image: "images/markers/Funsani's_Jewelry_Shop.png",
+        lore: "More information about Funsani's Jewelry Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_weaponry",
+      tooltip: "Lisimba's Weaponry Shop",
+      region: "Sands of Creation",
+      place: "Khafra",
+      details: {
+        title: "Lisimba's Weaponry Shop",
+        coordinates: { x: 239, y: 2781 },
+        image: "images/markers/Lisimba's_Weaponry_Shop.png",
+        lore: "More information about Lisimba's Weaponry Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_magic",
+      tooltip: "Heqet's Magic Shop",
+      region: "Sands of Creation",
+      place: "Khafra",
+      details: {
+        title: "Heqet's Magic Shop",
+        coordinates: { x: 220, y: 2770 },
+        image: "images/markers/Heqet's_Magic_Shop.png",
+        lore: "More information about Heqet's Magic Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_shipyard",
+      tooltip: "Habid Hamal's Shipyard",
+      region: "Sands of Creation",
+      place: "Khafra",
+      details: {
+        title: "Habid Hamal's Shipyard",
+        coordinates: { x: 213, y: 2772 },
+        image: "images/markers/Habid_Hamal's_Shipyard.png",
+        lore: "More information about Habid Hamal's Shipyard is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_provisioner",
+      tooltip: "Habid Hamal's Provisioner",
+      region: "Sands of Creation",
+      place: "Khafra",
+      details: {
+        title: "Habid Hamal's Provisioner",
+        coordinates: { x: 211, y: 2805 },
+        image: "images/markers/Habid_Hamal's_Shipyard.png",
+        lore: "More information about Habid Hamal's Shipyard is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_provisioner",
+      tooltip: "Trobol's Provisioner",
+      region: "Sands of Creation",
+      place: "Khafra",
+      details: {
+        title: "Trobol's Provisioner",
+        coordinates: { x: 90, y: 2700 },
+        image: "images/markers/Trobol's_Provisioner.png",
+        lore: "More information about Trobol's Provisioner is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // City: Ruhura Shops
     {
@@ -11143,6 +11525,21 @@ export const mapMarkers = {
 
     // Island: Krythan Island Spawns
     // Region: Silvest Valley Spawns
+    {
+      category: "spawn",
+      type: "overworld_spawn_good",
+      tooltip: "Silvest Spawn Gate",
+      region: "Silvest Valley",
+      place: "Silvest Valley",
+      details: {
+        title: "Spawn Gate",
+        coordinates: { x: 951, y: 1321 },
+        image: "images/spawns/Silvest_Valley_Spawn_Gate.png",
+        lore: "More information about Silvest Valley Spawn Gate is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
     // City: Silvest Spawns
     {
       category: "spawn",
@@ -11213,6 +11610,21 @@ export const mapMarkers = {
       },
     },
     // City: Hothbra Spawns
+    {
+      category: "spawn",
+      type: "overworld_spawn_good",
+      tooltip: "Good Spawn Gate",
+      region: "Krythan",
+      place: "Hothbra",
+      details: {
+        title: "Good Spawn Gate",
+        coordinates: { x: 487, y: 1065 },
+        image: "images/markers/Hothbra_Spawn_Gate.png",
+        lore: "More information about Good Spawn Gate is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // City: Jeel Spawns
     {
@@ -11592,7 +12004,7 @@ export const mapMarkers = {
       details: {
         title: "Good Spawn Gate",
         coordinates: { x: 263, y: 3554 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Ruhura_Good_Spawn_Gate.png",
         lore: "More information about Good Spawn Gate is coming soon.",
         npcs: [],
         links: [],
@@ -11614,6 +12026,21 @@ export const mapMarkers = {
       },
     },
     // City: Khafra Spawns
+    {
+      category: "spawn",
+      type: "overworld_spawn_good",
+      tooltip: "Good Spawn Gate",
+      region: "Sands of Creation",
+      place: "Khafra",
+      details: {
+        title: "Good Spawn Gate",
+        coordinates: { x: 269, y: 2825 },
+        image: "images/markers/Khafra_Good_Spawn_Gate.png",
+        lore: "More information about Good Spawn Gate is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
   ],
 
   undergrounds: [
@@ -13960,6 +14387,40 @@ export const mapMarkers = {
         coordinates: { x: 79, y: 3355 },
         image: "images/markers/image_coming_soon.png",
         lore: "More information about Khafra Elemental Cave is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "undergrounds",
+      type: "overworld_stairs",
+      tooltip: "Sheikh Khalifa's Wine Cellar Entrance",
+      region: "Sands of Creation",
+      place: "Khafra",
+      details: {
+        title: "Sheikh Khalifa's Wine Cellar Entrance",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 293, y: 2857, zoom: 5 }, // The coordinates to center on after switching
+        coordinates: { x: 292, y: 2872 },
+        image: "images/markers/sheikh-khalifa-wine-cellar-entrance.png",
+        lore: "More information about Sheikh Khalifa's Wine Cellar Entrance is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "undergrounds",
+      type: "overworld_stairs",
+      tooltip: "Sheikh Khalifa's Wine Cellar Entrance",
+      region: "Sands of Creation",
+      place: "Khafra",
+      details: {
+        title: "Sheikh Khalifa's Wine Cellar Entrance",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 279, y: 2803, zoom: 5 }, // The coordinates to center on after switching
+        coordinates: { x: 284, y: 2825 },
+        image: "images/markers/sheikh-khalifa-wine-cellar-entrance.png",
+        lore: "More information about Sheikh Khalifa's Wine Cellar Entrance is coming soon.",
         npcs: [],
         links: [],
       },
