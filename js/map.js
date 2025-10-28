@@ -15,6 +15,7 @@ import TileGrid from 'ol/tilegrid/TileGrid.js';
 import { mapLabels } from './labels.js';
 import { mapLabels as undergroundMapLabels } from './underground-labels.js';
 import { mapMarkers, markerStyles } from './markers.js';
+import { mapMarkers as allMapMarkers } from './markers.js'; // Import with an alias
 import { undergroundMapMarkers, undergroundMarkerStyles } from './underground-markers.js';
 import { initializeFilterMenu } from './filter-menu.js';
 
@@ -32,6 +33,18 @@ let overworldTileLayer;
 let undergroundTileLayer;
 let currentMap = 'overworld'; // 'overworld' or 'underground'
 let flyoutMapInstance = null; // To hold the mini-map instance
+
+// Deep merge all marker data into one structure for easy searching by ID.
+// This prevents categories with the same name (e.g., 'undergrounds') from overwriting each other.
+const allMarkers = { ...allMapMarkers };
+for (const category in undergroundMapMarkers) {
+    if (allMarkers[category]) {
+        allMarkers[category] = allMarkers[category].concat(undergroundMapMarkers[category]);
+    } else {
+        allMarkers[category] = undergroundMapMarkers[category];
+    }
+}
+
 
 // Combine marker styles from both files into a single object for easy lookup
 Object.assign(markerStyles, undergroundMarkerStyles);
@@ -276,7 +289,7 @@ function initializeMap() {
     // --- Set Initial Map View ---
     // Define the center of the map using in-game (4096x4096) coordinates.
     // This makes it easy to change the starting location.
-    const initialCenterGameCoords = { x: 519, y: 1081, }; // Default View is { x: 776, y: 668, } (Showing Lotor's Summer Palace) Centers LSP on smaller screens.
+    const initialCenterGameCoords = { x: 783, y: 3873, }; // Default View is { x: 776, y: 668, } (Showing Lotor's Summer Palace) Centers LSP on smaller screens.
 
     const mapSize = 32768;
     const scaleFactor = mapSize / 4096; // New scaling factor
@@ -563,6 +576,22 @@ function switchMap(targetMap, flyToCoords = null) {
     if (flyToCoords) flyToLocation(flyToCoords);
 }
 
+/**
+ * Updates the active state of the overworld/underground toggle buttons.
+ * @param {boolean} isUnderground - True if the underground map is active.
+ */
+function updateToggleButtons(isUnderground) {
+    const overworldBtn = document.getElementById('toggle-overworld');
+    const undergroundBtn = document.getElementById('toggle-underground');
+
+    if (overworldBtn) {
+        overworldBtn.classList.toggle('active', !isUnderground);
+    }
+    if (undergroundBtn) {
+        undergroundBtn.classList.toggle('active', isUnderground);
+    }
+}
+
 
 /**
 
@@ -643,9 +672,12 @@ function populateAndShowFlyout(data, mainMapView) {
     const title = document.getElementById('info-flyout-title');
     const content = document.getElementById('info-flyout-content');
 
-    const isMapPreview = details.switchTo && details.flyTo;
+    // A map preview should only be shown if the marker switches to a DIFFERENT map.
+    const isMapPreview = details.switchTo && (details.flyTo || details.flyToId) && details.switchTo !== currentMap;
+
     // First, ensure any previous mini-map is destroyed to prevent memory leaks
     destroyFlyoutMap();
+
 
     title.textContent = details.title;
 
@@ -663,7 +695,7 @@ function populateAndShowFlyout(data, mainMapView) {
                 </div>
             </div>
         `;
-    } else if (details.image) {
+    } else if (details.image) { // Only show the static image if it's not a map preview marker
         imageHtml = `
             <div class="flyout-image-column">
                 <div class="info-flyout-image-container">
@@ -744,20 +776,39 @@ function populateAndShowFlyout(data, mainMapView) {
     content.innerHTML = finalHtml;
 
     // --- Mini-Map Initialization Logic ---
-    if (details.switchTo && details.flyTo) {
+    if (isMapPreview) { // Use the new condition here
         // Use requestAnimationFrame to ensure the DOM is updated and the flyout
         // is visible before we try to initialize the map inside it. This is the
         // most reliable way to handle this, as it's not dependent on CSS transitions.
         requestAnimationFrame(() => {
             // A second frame ensures even complex browser rendering is complete.
             requestAnimationFrame(() => {
-                initializeFlyoutMap(details.switchTo, details.flyTo, mainMapView);
+                // The flyToData for the mini-map is either the ID or the coordinate object.
+                const flyToData = details.flyToId || details.flyTo;
+                initializeFlyoutMap(details.switchTo, flyToData, mainMapView);
                 const goButton = document.getElementById('flyout-go-btn');
                 if (goButton) {
-                    goButton.addEventListener('click', () => {
-                        switchMap(details.switchTo, details.flyTo);
-                        hideInfoFlyout();
-                    });
+                    if (details.flyToId) {
+                        // New logic: Find marker by ID
+                        goButton.addEventListener('click', () => {
+                            const targetMarker = findMarkerById(details.flyToId);
+                            if (targetMarker) {
+                                // Use the coordinates from the found marker
+                                switchMap(details.switchTo, targetMarker.details.coordinates);
+                            } else {
+                                console.error(`FlyTo target marker with ID '${details.flyToId}' not found.`);
+                                // Fallback or just switch map without flying
+                                switchMap(details.switchTo);
+                            }
+                            hideInfoFlyout();
+                        });
+                    } else {
+                        // Original logic: Use hardcoded coordinates
+                        goButton.addEventListener('click', () => {
+                            switchMap(details.switchTo, details.flyTo);
+                            hideInfoFlyout();
+                        });
+                    }
                 }
             });
         });
@@ -787,16 +838,36 @@ function hideInfoFlyout() {
 }
 
 /**
+ * Finds a marker by its unique ID across all marker data files.
+ * @param {string} id - The unique ID of the marker to find.
+ * @returns {object|null} The marker object if found, otherwise null.
+ */
+function findMarkerById(id) {
+    // Iterate over each category in the combined marker data
+    for (const category in allMarkers) {
+        // Find the marker with the matching ID in the current category's array
+        const foundMarker = allMarkers[category].find(marker => marker.id === id);
+        if (foundMarker) {
+            return foundMarker;
+        }
+    }
+    return null; // Return null if no marker with the given ID is found
+}
+
+/**
  * Initializes a small, non-interactive map inside the flyout panel.
  * @param {string} targetMap - The map to display ('overworld' or 'underground').
  * @param {object} flyToCoords - The coordinates {x, y} to center the mini-map on.
  */
-function initializeFlyoutMap(targetMap, flyToCoords, mainMapView) {
+function initializeFlyoutMap(targetMap, flyToData, mainMapView) {
     // --- Pre-computation and Safety Checks ---
-    // Ensure flyToCoords is not null/undefined before proceeding.
-    if (!flyToCoords) {
-        console.error("initializeFlyoutMap called without flyToCoords.");
-        return; // Exit if there are no coordinates
+    console.log('[Mini-Map] Initializing...');
+    console.log(`[Mini-Map] Target Map: ${targetMap}`);
+    console.log('[Mini-Map] Received flyToData:', flyToData);
+
+    if (!flyToData) {
+        console.error("[Mini-Map] ERROR: flyToData is null or undefined. Aborting initialization.");
+        return;
     }
 
     const mapSize = 32768;
@@ -804,13 +875,31 @@ function initializeFlyoutMap(targetMap, flyToCoords, mainMapView) {
     const offset = scaleFactor / 2;
 
     // --- Determine Zoom Level ---
-    // The main map's resolutions are [128, 64, 32, 16, 8, 4, 2, 1].
-    // A higher zoom number means a lower resolution value.
+    let flyToCoords;
+    if (typeof flyToData === 'string') {
+        const targetMarker = findMarkerById(flyToData);
+        if (targetMarker) {
+            flyToCoords = targetMarker.details.coordinates;
+            console.log(`[Mini-Map] Found marker by ID '${flyToData}'. Using coordinates:`, flyToCoords);
+        } else {
+            console.error(`[Mini-Map] ERROR: Could not find marker with ID '${flyToData}'. Aborting.`);
+            return;
+        }
+    } else {
+        flyToCoords = flyToData;
+        console.log('[Mini-Map] Using provided coordinate object:', flyToCoords);
+    }
+
+    if (!flyToCoords || flyToCoords.x === undefined || flyToCoords.y === undefined) {
+        console.error("[Mini-Map] ERROR: Final coordinates are invalid. Aborting.", flyToCoords);
+        return;
+    }
 
     const olCoords = [
         flyToCoords.x * scaleFactor + offset,
         -(flyToCoords.y * scaleFactor) - offset
     ];
+    console.log('[Mini-Map] Calculated OpenLayers Coordinates:', olCoords);
 
     // --- 1. Get the Tile Layer ---
     // Get the SOURCE from the main map's layer to ensure we show the correct map (overworld/underground).
@@ -882,6 +971,7 @@ function initializeFlyoutMap(targetMap, flyToCoords, mainMapView) {
     const resolutions = map.getView().getResolutions();
     const targetZoom = flyToCoords.zoom !== undefined ? flyToCoords.zoom : 4;
     const initialResolution = resolutions[Math.max(0, Math.min(resolutions.length - 1, targetZoom))];
+    console.log(`[Mini-Map] Setting initial resolution to ${initialResolution} (Zoom level ~${targetZoom})`);
 
     const miniMapView = new View({
         center: olCoords,
@@ -896,6 +986,8 @@ function initializeFlyoutMap(targetMap, flyToCoords, mainMapView) {
         view: miniMapView,
         // By not specifying interactions or controls, OpenLayers will use the defaults, which include pan and zoom.
     });
+
+    console.log('[Mini-Map] Initialization complete.');
 }
 
 /**
@@ -1615,21 +1707,7 @@ function setupMarkerTooltips(map) {
     });
 }
 
-// Replace the MousePosition control code with this custom implementation
 
-// Remove this section:
-// const mousePositionControl = new ol.control.MousePosition({
-//     coordinateFormat: function(coord) {
-//         // Your formatting code here
-//         return 'X: ' + Math.round(coord[0]) + ' | Y: ' + Math.round(4096 - coord[1]); // Adjust Y if needed
-//     },
-//     projection: 'EPSG:3857', // Or whatever projection you're using
-//     className: 'custom-mouse-position'), // Keep using the sidebar's mouse-position div
-//     undefinedHTML: 'X: --- | Y: ---'
-// });
-//
-// // Add the control to the map
-// map.addControl(mousePositionControl);
 
 // And replace with this custom coordinate tracking:
 function initializeCoordinateDisplay() {

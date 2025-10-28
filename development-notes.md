@@ -96,10 +96,20 @@ This section describes the purpose of each file in the project, especially those
   3.  **Switching Logic**: The `switchMap(targetMap)` function is the central controller. It:
       - Toggles the visibility of the appropriate tile layers.
       - Iterates through the `markerLayers` and `undergroundMarkerLayers` objects, setting the visibility of all layers within them.
-      - Toggles the visibility of the filter menu sections (`#overworld-filters`, `#underground-filters`).
       - Updates the `currentMap` global variable.
       - Toggles the `.active` class on the UI buttons.
-
+   - **ID-Based Linking**: To improve maintainability, hardcoded `flyTo` coordinates have been replaced with a `flyToId` system.
+    - A `findMarkerById(id)` helper function searches a combined `allMarkers` object to locate a marker by its unique ID.
+    - The `allMarkers` object is created by deep-merging `mapMarkers` and `undergroundMapMarkers` to prevent category name collisions.
+    - The `switchMap` and `initializeFlyoutMap` functions now prioritize `flyToId`. They use the helper function to get the target marker's coordinates dynamically, ensuring that links between maps (e.g., dungeon entrances/exits) are always accurate even if a marker's position is updated.
+    - The info flyout logic checks that `details.switchTo !== currentMap` to ensure a mini-map preview only appears when linking to a *different* map.
+  - **ID Numbering Scheme**: A structured, 6-digit ID system (`M-T-RR-II`) is planned to give every marker a unique and meaningful ID.
+    - **`M` (Map):** The first digit identifies which map the marker is on (`1` for Overworld, `2` for Underground, `3` for Housing Realm).
+    - **`T` (Type):** The second digit defines the marker's function (`0` for standard markers, `1` for linked markers that use `flyToId`).
+    - **`RR` (Region):** The third and fourth digits are a two-digit code for the marker's geographical region (e.g., `07` for Highlands), with `00` reserved for maps without regions like the Housing Realm.
+    - **`II` (Instance):** The final two digits are a sequential number for the marker within its group, ensuring uniqueness. For linked markers, these are assigned in pairs (e.g., `...01` and `...02`) to maintain the connection.
+    - This system provides immense scalability and makes marker data self-documenting, which will be critical for managing the large number of markers planned for the project.
+      
 ### Responsive & Mobile-Optimized UI
 
 - **Code**: `css/map-styles.css`

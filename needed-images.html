@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashen Empires - Needed Images List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Alegreya Sans', sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        #image-list-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #1e1e1e;
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid #333;
+        }
+        h1 {
+            color: #F5D76E;
+            border-bottom: 2px solid #444;
+            padding-bottom: 10px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            background-color: #2a2a2a;
+            border: 1px solid #444;
+            margin-bottom: 15px;
+            padding: 15px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        li div { flex-grow: 1; }
+        li strong { color: #87CEEB; } /* Sky Blue */
+        li img { max-width: 150px; height: auto; vertical-align: middle; margin-left: 20px; border: 1px solid #444; border-radius: 4px; flex-shrink: 0; }
+        .missing-image { color: #ff6b6b; font-weight: bold; }
+        .image-path { color: #aaa; font-style: italic; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+    <div id="image-list-container">
+        <h1>Images Needed/Used in Map Data</h1>
+        <div id="image-list"></div>
+    </div>
+
+    <script type="module">
+        import { mapLabels } from '../js/labels.js';
+        import { mapLabels as undergroundMapLabels } from '../js/underground-labels.js';
+        import { mapMarkers } from '../js/markers.js';
+        import { undergroundMapMarkers } from '../js/underground-markers.js';
+
+        const allImages = [];
+
+        // Process labels.js
+        for (const category in mapLabels) {
+            mapLabels[category].forEach(label => {
+                if (label.details && label.details.image) {
+                    allImages.push({
+                        category: category,
+                        name: label.name, // Using label.name for labels
+                        place: label.region, // Using label.region for place for labels
+                        imagePath: label.details.image,
+                        sourceFile: 'labels.js'
+                    });
+                }
+            });
+        }
+
+        // Process underground-labels.js
+        for (const category in undergroundMapLabels) {
+            undergroundMapLabels[category].forEach(label => {
+                if (label.details && label.details.image) {
+                    allImages.push({
+                        category: category,
+                        name: label.name, // Using label.name for labels
+                        place: label.region, // Using label.region for place for labels
+                        imagePath: label.details.image,
+                        sourceFile: 'underground-labels.js'
+                    });
+                }
+            });
+        }
+
+        // Process markers.js
+        for (const category in mapMarkers) {
+            mapMarkers[category].forEach(marker => {
+                if (marker.details && marker.details.image) {
+                    allImages.push({
+                        category: category,
+                        name: marker.tooltip, // Using marker.tooltip for markers
+                        place: marker.place, // Using marker.place for place for markers
+                        imagePath: marker.details.image,
+                        sourceFile: 'markers.js'
+                    });
+                }
+            });
+        }
+
+        // Process underground-markers.js
+        for (const category in undergroundMapMarkers) {
+            undergroundMapMarkers[category].forEach(marker => {
+                if (marker.details && marker.details.image) {
+                    allImages.push({
+                        category: category,
+                        name: marker.tooltip, // Using marker.tooltip for markers
+                        place: marker.place, // Using marker.place for place for markers
+                        imagePath: marker.details.image,
+                        sourceFile: 'underground-markers.js'
+                    });
+                }
+            });
+        }
+
+        // Sort alphabetically by name
+        allImages.sort((a, b) => a.name.localeCompare(b.name));
+
+        const imageListDiv = document.getElementById('image-list-container');
+        const ul = document.createElement('ul');
+
+        if (allImages.length === 0) {
+            ul.innerHTML = '<li>No images found in the specified data files.</li>';
+        } else {
+            allImages.forEach(item => {
+                const li = document.createElement('li');
+                const imageTag = item.imagePath ? `<img src="${item.imagePath}" alt="${item.name}" title="${item.name}">` : '';
+                li.innerHTML = `
+                    <div>
+                        <strong>Category:</strong> ${item.category}<br>
+                        <strong>Name/Tooltip:</strong> ${item.name}<br>
+                        <strong>Place:</strong> ${item.place || 'N/A'}<br>
+                        <strong>Image Path:</strong> <span class="image-path">${item.imagePath || '<span class="missing-image">MISSING</span>'}</span><br>
+                        <strong>Source File:</strong> ${item.sourceFile}
+                    </div>
+                    ${imageTag}
+                `;
+                ul.appendChild(li);
+            });
+        }
+        imageListDiv.appendChild(ul);
+    </script>
+</body>
+</html>

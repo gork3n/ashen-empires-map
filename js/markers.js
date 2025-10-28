@@ -278,7 +278,7 @@ export const mapMarkers = {
       details: {
         title: "Portal to Lotor's Summer Palace",
         coordinates: { x: 439, y: 119 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Party_Island_to_LSP_Portal.png",
         lore: "More information about Portal to Lotor's Summer Palace is coming soon.",
         npcs: [],
         links: [],
@@ -287,7 +287,7 @@ export const mapMarkers = {
     //Done
 
     // Island: Valinor Island
-    // Region: Valinor Region Portals
+    // Region:  1 - Valinor Region Portals
     {
       category: "portals",
       type: "overworld_portal_lsp",
@@ -297,7 +297,7 @@ export const mapMarkers = {
       details: {
         title: "Portal to Leave Valinor",
         coordinates: { x: 775, y: 99 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Valinor_to_Leave_Valinor_Portal.png",
         lore: "More information about Portal to Leave Valinor is coming soon.",
         npcs: [],
         links: [],
@@ -312,7 +312,7 @@ export const mapMarkers = {
       details: {
         title: "Portal to Arena Viewing Area",
         coordinates: { x: 775, y: 167 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Valinor_to_Arena_Viewing_Area_Portal.png",
         lore: "More information about Portal to Arena Viewing Area is coming soon.",
         npcs: [],
         links: [],
@@ -320,9 +320,9 @@ export const mapMarkers = {
     },
     //Done
 
-    // Region: Silvest Valley Portals
+    // Region: 2 - Silvest Valley Portals
 
-    // Region: Krythan Portals
+    // Region: 3 - Krythan Portals
     // City: Varg Portals
 
     // City: Hothbra Portals
@@ -393,9 +393,9 @@ export const mapMarkers = {
 
     // City: Vrethpool Portals
 
-    // Region: Battle Plains Portals
+    // Region: 4 - Battle Plains Portals
 
-    // Region: Black Swamp Portals
+    // Region: 6 - Black Swamp Portals
     // City: Krog Portals
     {
       category: "portals",
@@ -414,7 +414,7 @@ export const mapMarkers = {
     },
 
     
-    // Region: Highlands Housing Realm Portal
+    // Region: 7 - Highlands Housing Realm Portal
     // City: Parian Housing Realm Portal
     {
       category: "portals",
@@ -432,7 +432,7 @@ export const mapMarkers = {
       },
     },
 
-    // Region: Western Isles Housing Realm Portal
+    // Region: 8 - Western Isles Housing Realm Portal
     // Island: Lotor's Summer Palace Housing Realm Portal
     {
       category: "portals",
@@ -611,7 +611,7 @@ export const mapMarkers = {
       details: {
         title: "Portal to Lotor's Summer Palace",
         coordinates: { x: 662, y: 731 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Real_Estate_Island_to_LSP_Portal.png",
         lore: "More information about Portal to Lotor's Summer Palace is coming soon.",
         npcs: [],
         links: [],
@@ -628,7 +628,7 @@ export const mapMarkers = {
       details: {
         title: "Portal to Ancient Site of Minos",
         coordinates: { x: 136, y: 247 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Minotaur_Island_to_Ancient_Site_of_Minos_Portal.png",
         lore: "More information about Portal to Ancient Site of Minos is coming soon.",
         npcs: [],
         links: [],
@@ -645,7 +645,7 @@ export const mapMarkers = {
       details: {
         title: "Portal to Battle Plains",
         coordinates: { x: 630, y: 2101 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Scorched_Island_to_Battle_Plains_Portal.png",
         lore: "More information about Portal to Battle Plains is coming soon.",
         npcs: [],
         links: [],
@@ -660,16 +660,14 @@ export const mapMarkers = {
       details: {
         title: "Portal to Hell",
         coordinates: { x: 719, y: 1963 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Scorched_Island_to_Hell_Portal.png",
         lore: "More information about Portal to Hell is coming soon.",
         npcs: [],
         links: [],
       },
     },
 
-    // Island: Krythan Island
-
-    // Region: Krythan Portals
+    // Region: 3 - Krythan Portals
     {
       category: "portals",
       type: "overworld_portal_blue",
@@ -679,7 +677,7 @@ export const mapMarkers = {
       details: {
         title: "Portal to Highlands West of Parian",
         coordinates: { x: 584, y: 1496 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Krythan_to_Highlands_West_of_Parian_Portal.png",
         lore: "More information about Portal to Highlands West of Parian is coming soon.",
         npcs: [],
         links: [],
@@ -694,7 +692,7 @@ export const mapMarkers = {
       details: {
         title: "Portal to Darkwoods North of Josody",
         coordinates: { x: 184, y: 1465 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Krythan_to_Darkwoods_North_of_Josody_Portal.png",
         lore: "More information about Portal to Darkwoods North of Josody is coming soon.",
         npcs: [],
         links: [],
@@ -709,7 +707,7 @@ export const mapMarkers = {
       details: {
         title: "Portal to Hell",
         coordinates: { x: 472, y: 1895 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Krythan_to_Hell_Portal.png",
         lore: "More information about Portal to Hell is coming soon.",
         npcs: [],
         links: [],
@@ -724,14 +722,14 @@ export const mapMarkers = {
       details: {
         title: "Portal to Scarab Island",
         coordinates: { x: 712, y: 1752 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Krythan_to_Scarab_Island_Portal.png",
         lore: "More information about Portal to Scarab Island is coming soon.",
         npcs: [],
         links: [],
       },
     },
 
-    // Region: Silvest Valley Portals
+    // Region: 2 - Silvest Valley Portals
 
     // Island: Scarab Island Portals
     {
@@ -743,7 +741,7 @@ export const mapMarkers = {
       details: {
         title: "Portal to Krythan Region",
         coordinates: { x: 472, y: 2183 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Scarab_Island_to_Krythan_Region_Portal.png",
         lore: "More information about Portal to Krythan Region is coming soon.",
         npcs: [],
         links: [],
@@ -751,9 +749,7 @@ export const mapMarkers = {
     },
     //Done   
 
-    /* Mainland Portals */
-
-    // Region: Darkwoods Portals
+    // Region: 4 - Darkwoods Portals
     {
       category: "portals",
       type: "overworld_portal_blue",
@@ -763,7 +759,7 @@ export const mapMarkers = {
       details: {
         title: "Portal to Krythan Island (West of New Korelth)",
         coordinates: { x: 1351, y: 2439 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Darkwoods_to_Krythan_Island_West_of_New_Korelth_Portal.png",
         lore: "More information about Portal to Krythan Island (West of New Korelth) is coming soon.",
         npcs: [],
         links: [],
@@ -778,7 +774,7 @@ export const mapMarkers = {
       details: {
         title: "Portal to House Realm",
         coordinates: { x: 1271, y: 2512 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Darkwoods_to_House_Realm_Portal.png",
         lore: "More information about Portal to House Realm is coming soon.",
         npcs: [],
         links: [],
@@ -793,7 +789,7 @@ export const mapMarkers = {
       details: {
         title: "Portal to Lotor's Summer Palace",
         coordinates: { x: 1254, y: 2518 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Darkwoods_to_LSP_Portal.png",
         lore: "More information about Portal to Lotor's Summer Palace is coming soon.",
         npcs: [],
         links: [],
@@ -808,7 +804,7 @@ export const mapMarkers = {
       details: {
         title: "Portal to Highlands (Southeast of Parian)",
         coordinates: { x: 808, y: 2838 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Darkwoods_to_Highlands_Southeast_of_Parian_Portal.png",
         lore: "More information about Portal to Highlands (Southeast of Parian) is coming soon.",
         npcs: [],
         links: [],
@@ -823,7 +819,7 @@ export const mapMarkers = {
       details: {
         title: "Portal to Mnemmon",
         coordinates: { x: 867, y: 3417 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Darkwoods_to_Mnemmon_Portal.png",
         lore: "More information about Portal to Mnemmon is coming soon.",
         npcs: [],
         links: [],
@@ -838,7 +834,7 @@ export const mapMarkers = {
       details: {
         title: "Portal to Mnemmon Gaol",
         coordinates: { x: 909, y: 3259 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Darkwoods_to_Mnemmon_Gaol_Portal.png",
         lore: "More information about Portal to Mnemmon Gaol is coming soon.",
         npcs: [],
         links: [],
@@ -853,14 +849,14 @@ export const mapMarkers = {
       details: {
         title: "Portal to Lotor's Summer Palace",
         coordinates: { x: 472, y: 3481 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Darkwoods_to_LSP_Portal.png",
         lore: "More information about Portal to Lotor's Summer Palace is coming soon.",
         npcs: [],
         links: [],
       },
     },
 
-    // Region: Battle Plains Portals
+    // Region: 4 - Battle Plains Portals
     {
       category: "portals",
       type: "overworld_portal_small",
@@ -870,7 +866,7 @@ export const mapMarkers = {
       details: {
         title: "Portal to Scorched Island",
         coordinates: { x: 1600, y: 3077 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Scorched_Island_to_Battle_Plains_Portal.png",
         lore: "More information about Portal to Scorched Island is coming soon.",
         npcs: [],
         links: [],
@@ -885,7 +881,7 @@ export const mapMarkers = {
       details: {
         title: "Portal to Proudblood Valley",
         coordinates: { x: 2263, y: 3705 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Scorched_Island_to_Proudblood_Valley_Portal.png",
         lore: "More information about Portal to Proudblood Valley is coming soon.",
         npcs: [],
         links: [],
@@ -900,14 +896,14 @@ export const mapMarkers = {
       details: {
         title: "Exit Proudblood Valley",
         coordinates: { x: 1963, y: 3651 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Exit_Proudblood_Valley_Portal.png",
         lore: "More information about Exit Proudblood Valley is coming soon.",
         npcs: [],
         links: [],
       },
     },
 
-    // Region: Black Swamp Portals
+    // Region: 6 - Black Swamp Portals
     {
       category: "portals",
       type: "overworld_portal_lsp",
@@ -917,14 +913,14 @@ export const mapMarkers = {
       details: {
         title: "Portal to Lotor's Summer Palace",
         coordinates: { x: 3110, y: 3686 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Black_Swamp_to_LSP_Portal.png",
         lore: "More information about Portal to Lotor's Summer Palace is coming soon.",
         npcs: [],
         links: [],
       },
     },
 
-    // Region: Highlands Portals   
+    // Region: 7 - Highlands Portals   
     {
       category: "portals",
       type: "overworld_portal_small",
@@ -949,7 +945,7 @@ export const mapMarkers = {
       details: {
         title: "Portal to Southern Highlands (Northeast of Grell)",
         coordinates: { x: 3335, y: 2808 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Highlands_to_Southern_Highlands_Northeast_of_Grell_Portal.png",
         lore: "More information about Portal to Southern Highlands (Northeast of Grell) is coming soon.",
         npcs: [],
         links: [],
@@ -964,7 +960,7 @@ export const mapMarkers = {
       details: {
         title: "Portal to Highlands (North of Parian)",
         coordinates: { x: 3081, y: 3548 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Highlands_to_Highlands_North_of_Parian_Portal.png",
         lore: "More information about Portal to Highlands (North of Parian) is coming soon.",
         npcs: [],
         links: [],
@@ -979,7 +975,7 @@ export const mapMarkers = {
       details: {
         title: "Portal to Darkwoods (East of Redwake)",
         coordinates: { x: 3768, y: 3239 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Darkwoods_to_Highlands_East_of_Redwake_Portal.png",
         lore: "More information about Portal to Darkwoods (East of Redwake) is coming soon.",
         npcs: [],
         links: [],
@@ -994,7 +990,7 @@ export const mapMarkers = {
       details: {
         title: "Portal to Krythan Island (West of New Korelth)",
         coordinates: { x: 3304, y: 3015 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Krythan_to_Scarab_Island_Portal.png",
         lore: "More information about Portal to Krythan Island (West of New Korelth) is coming soon.",
         npcs: [],
         links: [],
@@ -1010,14 +1006,14 @@ export const mapMarkers = {
       details: {
         title: "Portal to Lotor's Summer Palace",
         coordinates: { x: 3415, y: 2919 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Parian_to_LSP_Portal.png",
         lore: "More information about Portal to Lotor's Summer Palace is coming soon.",
         npcs: [],
         links: [],
       },
     },
 
-    // Region: Western Isles Portals
+    // Region: 8 - Western Isles Portals
 
     // Island: Lotor's Prison
     {
@@ -1046,7 +1042,7 @@ export const mapMarkers = {
       details: {
         title: "Portal to Scorched Island",
         coordinates: { x: 1051, y: 3288 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Scorched_Island_to_Battle_Plains_Portal.png",
         lore: "More information about Portal to Scorched Island is coming soon.",
         npcs: [],
         links: [],
@@ -1061,16 +1057,16 @@ export const mapMarkers = {
       details: {
         title: "Portal to Krythan Island",
         coordinates: { x: 1177, y: 3289 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Krythan_to_Scarab_Island_Portal.png",
         lore: "More information about Portal to Krythan Island is coming soon.",
         npcs: [],
         links: [],
       },
     },
 
-    // Region: Valley of Giants Portals
+    // Region: 9 - Valley of Giants Portals
 
-    // Region: Heartwood Coast Portals
+    // Region: 10 - Heartwood Coast Portals
     {
       category: "portals",
       type: "overworld_portal_lsp",
@@ -1080,14 +1076,14 @@ export const mapMarkers = {
       details: {
         title: "Portal to Lotor's Summer Palace",
         coordinates: { x: 2788, y: 2135 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Heartwood_Coast_to_LSP_Portal.png",
         lore: "More information about Portal to Lotor's Summer Palace is coming soon.",
         npcs: [],
         links: [],
       },
     },
 
-    // Region: Tundria Portals
+    // Region: 11 - Tundria Portals
     {
       category: "portals",
       type: "overworld_portal_lsp",
@@ -1097,14 +1093,14 @@ export const mapMarkers = {
       details: {
         title: "Portal to Lotor's Summer Palace",
         coordinates: { x: 1688, y: 152 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Northern_Frost_Giant_Island_to_LSP_Portal.png",
         lore: "More information about Portal to Northern Frost Giant Island is coming soon.",
         npcs: [],
         links: [],
       },
     },
 
-    // Region: Sands of Creation Portals
+    // Region: 12 - Sands of Creation Portals
     // City: Ruhura Portals
     {
       category: "portals",
@@ -1115,7 +1111,7 @@ export const mapMarkers = {
       details: {
         title: "Portal to Lotor's Summer Palace",
         coordinates: { x: 470, y: 4037 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Lotor's_Summer_Palace_to_Ruhura_Portal.png",
         lore: "More information about Portal to Lotor's Summer Palace is coming soon.",
         npcs: [],
         links: [],
@@ -1130,7 +1126,7 @@ export const mapMarkers = {
       details: {
         title: "Portal to Dragon Lair (Blue Dragons)",
         coordinates: { x: 112, y: 3476 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Portal_to_Dragon_Lair_(Blue_Dragons).png",
         lore: "More information about Portal to Dragon Lair (Blue Dragons) is coming soon.",
         npcs: [],
         links: [],
@@ -1148,7 +1144,7 @@ export const mapMarkers = {
       details: {
         title: "Portal to Lotor's Summer Palace",
         coordinates: { x: 200, y: 2856 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Lotor's_Summer_Palace_to_Khafra_Portal.png",
         lore: "More information about Portal to Lotor's Summer Palace is coming soon.",
         npcs: [],
         links: [],
@@ -1156,14 +1152,14 @@ export const mapMarkers = {
     },
     {
       category: "portals",
-      type: "overworld_portal_lsp",
+      type: "overworld_portal_lsp", // Portals with similar look to lsp portal use the same icon
       tooltip: "Portal to Artonian Island",
       region: "Sands of Creation",
-      place: "Khafra", // Portals with similar look to lsp portal use the same icon
+      place: "Khafra", 
       details: {
         title: "Portal to Artonian Island",
         coordinates: { x: 25, y: 3413 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Portal_to_Artonian_Island.png",
         lore: "More information about Portal to Artonian Island is coming soon.",
         npcs: [],
         links: [],
@@ -1171,27 +1167,27 @@ export const mapMarkers = {
     },
     {
       category: "portals",
-      type: "overworld_portal_lsp",
+      type: "overworld_portal_lsp", // Portals with similar look to lsp portal use the same icon
       tooltip: "Portal to Khafra",
       region: "Sands of Creation",
-      place: "Khafra", // Portals with similar look to lsp portal use the same icon
+      place: "Khafra",
       details: {
         title: "Portal to Khafra",
         coordinates: { x: 215, y: 3385 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Portal_to_Khafra.png",
         lore: "More information about Portal to Khafra is coming soon.",
         npcs: [],
         links: [],
       },
     },
 
-    // Region: Breakwater
+    // Region: 13 - Breakwater
 
-    // Region: Broken Finger
+    // Region: 14 - Broken Finger
 
     
 
-    // Whirlpool Portals
+    // Sub-category: Whirlpool Portals
     // Near Broken Finger
     {
       category: "portals",
@@ -1202,7 +1198,7 @@ export const mapMarkers = {
       details: {
         title: "Whirlpool to Obsidian Lake",
         coordinates: { x: 1468, y: 3713 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Exit_Proudblood_Valley_Portal.png",
         lore: "More information about Whirlpool to Obsidian Lake is coming soon.",
         npcs: [],
         links: [],
@@ -1217,7 +1213,7 @@ export const mapMarkers = {
       details: {
         title: "Whirlpool to Broken Lake",
         coordinates: { x: 1538, y: 3696 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Whirlpool_to_Broken_Lake.png",
         lore: "More information about Whirlpool to Broken Lake is coming soon.",
         npcs: [],
         links: [],
@@ -1232,7 +1228,7 @@ export const mapMarkers = {
       details: {
         title: "Whirlpool to Proudblood Sound",
         coordinates: { x: 1077, y: 3533 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Whirlpool_to_Proudblood_Sound.png",
         lore: "More information about Whirlpool to Proudblood Sound is coming soon.",
         npcs: [],
         links: [],
@@ -1249,7 +1245,7 @@ export const mapMarkers = {
       details: {
         title: "Whirlpool to Obsidian Lake",
         coordinates: { x: 2310, y: 3723 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Whirlpool_to_Obsidian_Lake.png",
         lore: "More information about Whirlpool to Obsidian Lake is coming soon.",
         npcs: [],
         links: [],
@@ -1264,7 +1260,7 @@ export const mapMarkers = {
       details: {
         title: "Whirlpool to Lotor's Prison",
         coordinates: { x: 2556, y: 3666 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Whirlpool_to_Lotor's_Prison.png",
         lore: "More information about Whirlpool to Lotor's Prison is coming soon.",
         npcs: [],
         links: [],
@@ -1281,7 +1277,7 @@ export const mapMarkers = {
       details: {
         title: "Whirlpool to Jeel Docks",
         coordinates: { x: 4000, y: 4000 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Whirlpool_to_Jeel_Docks.png",
         lore: "More information about Whirlpool to Jeel Docks is coming soon.",
         npcs: [],
         links: [],
@@ -1298,7 +1294,7 @@ export const mapMarkers = {
       details: {
         title: "Whirlpool to Silvest Bay",
         coordinates: { x: 4014, y: 2425 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Whirlpool_to_Silvest_Bay.png",
         lore: "More information about Whirlpool to Silvest Bay is coming soon.",
         npcs: [],
         links: [],
@@ -1315,7 +1311,7 @@ export const mapMarkers = {
       details: {
         title: "Whirlpool to Tundria East of Duremar",
         coordinates: { x: 30, y: 2227 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Whirlpool_to_Tundria_East_of_Duremar.png",
         lore: "More information about Whirlpool to Tundria East of Duremar is coming soon.",
         npcs: [],
         links: [],
@@ -1332,7 +1328,7 @@ export const mapMarkers = {
       details: {
         title: "Whirlpool to East Highlands of Death Tyrant Valley",
         coordinates: { x: 1242, y: 1548 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Whirlpool_to_East_Highlands_of_Death_Tyrant_Valley.png",
         lore: "More information about Whirlpool to East Highlands of Death Tyrant Valley is coming soon.",
         npcs: [],
         links: [],
@@ -1349,7 +1345,7 @@ export const mapMarkers = {
       details: {
         title: "Whirlpool to South of Test Island",
         coordinates: { x: 63, y: 847 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Whirlpool_to_South_of_Test_Island.png",
         lore: "More information about Whirlpool to South of Test Island is coming soon.",
         npcs: [],
         links: [],
@@ -1366,7 +1362,7 @@ export const mapMarkers = {
       details: {
         title: "Whirlpool to Chlera Bay",
         coordinates: { x: 1471, y: 631 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Whirlpool_to_Chlera_Bay.png",
         lore: "More information about Whirlpool to Chlera Bay is coming soon.",
         npcs: [],
         links: [],
@@ -1383,7 +1379,7 @@ export const mapMarkers = {
       details: {
         title: "Whirlpool to Scarab Island",
         coordinates: { x: 3998, y: 947 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Whirlpool_to_Scarab_Island.png",
         lore: "More information about Whirlpool to Scarab Island is coming soon.",
         npcs: [],
         links: [],
@@ -1394,8 +1390,7 @@ export const mapMarkers = {
   services_npcs: [
     // Sub-Category Quests NPCs
     // Quests that are not in a city will still have a place property value of the nearest city.
-    // Island: Valinor Island Quests
-    // Region: Valinor Quests
+    // Region:  1 - Valinor Quests
     {
       category: "npc",
       type: "overworld_quest",
@@ -1435,7 +1430,7 @@ export const mapMarkers = {
       details: {
         title: "Sandre (Wanders)",
         coordinates: { x: 769, y: 138 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Sandre_Wanders.png",
         lore: "More information about Sandre (Wanders) is coming soon.",
         npcs: [],
         links: [],
@@ -1450,7 +1445,7 @@ export const mapMarkers = {
       details: {
         title: "Kumba Northern (Wanders)",
         coordinates: { x: 758, y: 136 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Kumba_Northern_Wanders.png",
         lore: "More information about Kumba Northern (Wanders) is coming soon.",
         npcs: [],
         links: [],
@@ -1465,7 +1460,7 @@ export const mapMarkers = {
       details: {
         title: "Mary Locksley (Wanders)",
         coordinates: { x: 773, y: 145 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Mary_Locksley_Wanders.png",
         lore: "More information about Mary Locksley (Wanders) is coming soon.",
         npcs: [],
         links: [],
@@ -1480,7 +1475,7 @@ export const mapMarkers = {
       details: {
         title: "Davey Logan (Wanders)",
         coordinates: { x: 746, y: 144 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Davey_Logan_Wanders.png",
         lore: "More information about Davey Logan (Wanders) is coming soon.",
         npcs: [],
         links: [],
@@ -1495,7 +1490,7 @@ export const mapMarkers = {
       details: {
         title: "Imica (Wanders)",
         coordinates: { x: 743, y: 136 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Imica_Wanders.png",
         lore: "More information about Imica (Wanders) is coming soon.",
         npcs: [],
         links: [],
@@ -1510,7 +1505,7 @@ export const mapMarkers = {
       details: {
         title: "Timothy Jager (Wanders)",
         coordinates: { x: 733, y: 136 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Timothy_Jager_Wanders.png",
         lore: "More information about Timothy Jager (Wanders) is coming soon.",
         npcs: [],
         links: [],
@@ -1525,7 +1520,7 @@ export const mapMarkers = {
       details: {
         title: "Sandre (Wanders)",
         coordinates: { x: 749, y: 105 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Sandre_Wanders.png",
         lore: "More information about Sandre (Wanders) is coming soon.",
         npcs: [],
         links: [],
@@ -1540,7 +1535,7 @@ export const mapMarkers = {
       details: {
         title: "Hereward (Wanders)",
         coordinates: { x: 765, y: 144 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Hereward_Wanders.png",
         lore: "More information about Hereward (Wanders) is coming soon.",
         npcs: [],
         links: [],
@@ -1555,7 +1550,7 @@ export const mapMarkers = {
       details: {
         title: "Topacia (Wanders)",
         coordinates: { x: 771, y: 109 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Topacia_Wanders.png",
         lore: "More information about Topacia (Wanders) is coming soon.",
         npcs: [],
         links: [],
@@ -1570,7 +1565,7 @@ export const mapMarkers = {
       details: {
         title: "Alchemist Baki",
         coordinates: { x: 781, y: 115 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Alchemist_Baki.png",
         lore: "More information about Alchemist Baki is coming soon.",
         npcs: [],
         links: [],
@@ -1585,7 +1580,7 @@ export const mapMarkers = {
       details: {
         title: "Sarah Bent",
         coordinates: { x: 782, y: 120 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Sarah_Bent.png",
         lore: "More information about Sarah Bent is coming soon.",
         npcs: [],
         links: [],
@@ -1600,7 +1595,7 @@ export const mapMarkers = {
       details: {
         title: "Serina Wilcut",
         coordinates: { x: 782, y: 122 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Serina_Wilcut.png",
         lore: "More information about Serina Wilcut is coming soon.",
         npcs: [],
         links: [],
@@ -1615,7 +1610,7 @@ export const mapMarkers = {
       details: {
         title: "Knight Bastrop",
         coordinates: { x: 780, y: 124 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Knight_Bastrop.png",
         lore: "More information about Knight Bastrop is coming soon.",
         npcs: [],
         links: [],
@@ -1630,7 +1625,7 @@ export const mapMarkers = {
       details: {
         title: "Eustacius (Wanders)",
         coordinates: { x: 786, y: 126 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Eustacius_Wanders.png",
         lore: "More information about Eustacius (Wanders) is coming soon.",
         npcs: [],
         links: [],
@@ -1645,7 +1640,7 @@ export const mapMarkers = {
       details: {
         title: "Curtis Leabu (Wanders)",
         coordinates: { x: 787, y: 96 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Curtis_Leabu_Wanders.png",
         lore: "More information about Curtis Leabu (Wanders) is coming soon.",
         npcs: [],
         links: [],
@@ -1660,7 +1655,7 @@ export const mapMarkers = {
       details: {
         title: "Hasculf (Wanders)",
         coordinates: { x: 783, y: 94 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Hasculf_Wanders.png",
         lore: "More information about Hasculf (Wanders) is coming soon.",
         npcs: [],
         links: [],
@@ -1675,7 +1670,7 @@ export const mapMarkers = {
       details: {
         title: "A Young Maid (Wanders)",
         coordinates: { x: 795, y: 157 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/A_Young_Maid_Wanders.png",
         lore: "More information about A Young Maid (Wanders) is coming soon.",
         npcs: [],
         links: [],
@@ -1690,7 +1685,7 @@ export const mapMarkers = {
       details: {
         title: "Eastern Gate Lieutenant",
         coordinates: { x: 886, y: 137 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Eastern_Gate_Lieutenant.png",
         lore: "More information about Eastern Gate Lieutenant is coming soon.",
         npcs: [],
         links: [],
@@ -1705,7 +1700,7 @@ export const mapMarkers = {
       details: {
         title: "Roger Duncan",
         coordinates: { x: 647, y: 180 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Roger_Duncan.png",
         lore: "More information about Roger Duncan is coming soon.",
         npcs: [],
         links: [],
@@ -1720,156 +1715,14 @@ export const mapMarkers = {
       details: {
         title: "Paula Duncan",
         coordinates: { x: 647, y: 188 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Paula_Duncan.png",
         lore: "More information about Paula Duncan is coming soon.",
         npcs: [],
         links: [],
       },
     },
-    // City: Valinor Dynamic Quests - These change based on time of day - I may remove these later
-    // {
-    //   type: "dynamic_quests",
-    //   tooltip: "Thurstan (Wanders)",
-    //   region: "Valinor",
-    //   place: "Valinor",
-    //   details: {
-    //     title: "Thurstan (Dynamic quest)",
-    //     coordinates: { x: 722, y: 91 },
-    //     image: "images/markers/Thurstan_Dynamic_Quest.png",
-    //     lore: "More information about Thurstan (Wanders) is coming soon.",
-    //     npcs: [],
-    //     links: [],
-    //   },
-    // },
-    // {
-    //   type: "dynamic_quests",
-    //   tooltip: "Philipus (Wanders)",
-    //   region: "Valinor",
-    //   place: "Valinor",
-    //   details: {
-    //     title: "Philipus (Dynamic quest)",
-    //     coordinates: { x: 746, y: 101 },
-    //     image: "images/markers/Philipus_Dynamic_Quest.png",
-    //     lore: "More information about Philipus (Wanders) is coming soon.",
-    //     npcs: [],
-    //     links: [],
-    //   },
-    // },
-    // {
-    //   type: "dynamic_quests",
-    //   tooltip: "Alard (Wanders)",
-    //   region: "Valinor",
-    //   place: "Valinor",
-    //   details: {
-    //     title: "Alard (Dynamic quest)",
-    //     coordinates: { x: 737, y: 104 },
-    //     image: "images/markers/Alard_Dynamic_Quest.png",
-    //     lore: "More information about Alard (Wanders) is coming soon.",
-    //     npcs: [],
-    //     links: [],
-    //   },
-    // },
-    // {
-    //   type: "dynamic_quests",
-    //   tooltip: "Basilus (Wanders)",
-    //   region: "Valinor",
-    //   place: "Valinor",
-    //   details: {
-    //     title: "Basilus (Dynamic quest)",
-    //     coordinates: { x: 749, y: 142 },
-    //     image: "images/markers/Basilus_Dynamic_Quest.png",
-    //     lore: "More information about Basilus (Wanders) is coming soon.",
-    //     npcs: [],
-    //     links: [],
-    //   },
-    // },
-    // {
-    //   type: "dynamic_quests",
-    //   tooltip: "Ailward (Wanders)",
-    //   region: "Valinor",
-    //   place: "Valinor",
-    //   details: {
-    //     title: "Ailward (Dynamic quest)",
-    //     coordinates: { x: 735, y: 131 },
-    //     image: "images/markers/Ailward_Dynamic_Quest.png",
-    //     lore: "More information about Ailward (Wanders) is coming soon.",
-    //     npcs: [],
-    //     links: [],
-    //   },
-    // },
-    // {
-    //   type: "dynamic_quests",
-    //   tooltip: "Sperling (Wanders)",
-    //   region: "Valinor",
-    //   place: "Valinor",
-    //   details: {
-    //     title: "Sperling (Dynamic quest)",
-    //     coordinates: { x: 748, y: 133 },
-    //     image: "images/markers/Sperling_Dynamic_Quest.png",
-    //     lore: "More information about Sperling (Wanders) is coming soon.",
-    //     npcs: [],
-    //     links: [],
-    //   },
-    // },
-    // {
-    //   type: "dynamic_quests",
-    //   tooltip: "Wimund (Wanders)",
-    //   region: "Valinor",
-    //   place: "Valinor",
-    //   details: {
-    //     title: "Wimund (Dynamic quest)",
-    //     coordinates: { x: 731, y: 147 },
-    //     image: "images/markers/Wimund_Dynamic_Quest.png",
-    //     lore: "More information about Wimund (Wanders) is coming soon.",
-    //     npcs: [],
-    //     links: [],
-    //   },
-    // },
-    // {
-    //   type: "dynamic_quests",
-    //   tooltip: "Seman (Wanders)",
-    //   region: "Valinor",
-    //   place: "Valinor",
-    //   details: {
-    //     title: "Seman (Dynamic quest)",
-    //     coordinates: { x: 781, y: 101 },
-    //     image: "images/markers/Seman_Dynamic_Quest.png",
-    //     lore: "More information about Seman (Wanders) is coming soon.",
-    //     npcs: [],
-    //     links: [],
-    //   },
-    // },
-    // {
-    //   type: "dynamic_quests",
-    //   tooltip: "Wymare (Wanders)",
-    //   region: "Valinor",
-    //   place: "Valinor",
-    //   details: {
-    //     title: "Wymare (Dynamic quest)",
-    //     coordinates: { x: 723, y: 158 },
-    //     image: "images/markers/Wymare_Dynamic_Quest.png",
-    //     lore: "More information about Wymare (Wanders) is coming soon.",
-    //     npcs: [],
-    //     links: [],
-    //   },
-    // },
-    // {
-    //   type: "dynamic_quests",
-    //   tooltip: "Byota (Wanders)",
-    //   region: "Valinor",
-    //   place: "Valinor",
-    //   details: {
-    //     title: "Byota (Dynamic quest)",
-    //     coordinates: { x: 769, y: 92 },
-    //     image: "images/markers/Byota_Dynamic_Quest.png",
-    //     lore: "More information about Byota (Wanders) is coming soon.",
-    //     npcs: [],
-    //     links: [],
-    //   },
-    // },
-
-    // Island: Krythan Island Quests
-    // Region: Silvest Valley Quests
+    
+    // Region: 2 - Silvest Valley Quests
     // City: Silvest Quests
     
 
@@ -1877,7 +1730,7 @@ export const mapMarkers = {
 
     // City: Cliffside Quests
 
-    // Region: Krythan Quests
+    // Region: 3 - Krythan Quests
     // City: Varg Quests
 
     // City: Hothbra Quests
@@ -1962,10 +1815,8 @@ export const mapMarkers = {
         links: [{ text: "Ashen Empires Wiki (Mukk The Lumberjack)", url: "https://ashenempires.fandom.com/wiki/Mukk_The_Lumberjack" }],
       },
     },
-
-    // Mainland Quests
-
-    // Region: Darkwoods Quests
+    
+    // Region: 4 - Darkwoods Quests
     // City: Dunmarrow Quests
     {
       category: "npc",
@@ -2379,7 +2230,7 @@ export const mapMarkers = {
       },
     },
 
-    // Region: Battle Plains Quests
+    // Region: 5 - Battle Plains Quests
     // City: Chlera Quests
     {
       category: "npc",
@@ -2398,7 +2249,7 @@ export const mapMarkers = {
       },
     },
 
-    // Region: Black Swamp Quests
+    // Region: 6 - Black Swamp Quests
     {
       category: "npc",
       type: "overworld_quest",
@@ -2695,7 +2546,7 @@ export const mapMarkers = {
       },
     },
 
-    // Region: Highlands Quests
+    // Region: 7 - Highlands Quests
     // City: Parian Quests
     {
       category: "npc",
@@ -2881,7 +2732,7 @@ export const mapMarkers = {
 
     // City: Arda Quests
 
-    // City: Grell Quests - Located in -markers.js
+    // City: Grell Quests - Located in underground-markers.js
 
     // City: Ethera Palace Quests
     {
@@ -2930,7 +2781,7 @@ export const mapMarkers = {
       },
     },
 
-    // Region: Western Isles Quests
+    // Region: 8 - Western Isles Quests
 
     // Lotor's Summer Palace Quests
     {
@@ -2998,11 +2849,11 @@ export const mapMarkers = {
     // Add more quests NPCs as needed
 
     // Sub-Category Innkeepers
-    // Region: Valinor Innkeeper
+    // Region:  1 - Valinor Innkeeper
 
-    // Region: Silvest Valley Innkeeper    
+    // Region: 2 - Silvest Valley Innkeeper    
 
-    // Region: Krythan Innkeeper
+    // Region: 3 - Krythan Innkeeper
     // City: Varg Innkeeper
 
     // City: Hothbra Innkeeper
@@ -3058,7 +2909,7 @@ export const mapMarkers = {
       },
     },
 
-    // Region: Darkwoods Innkeeper
+    // Region: 4 - Darkwoods Innkeeper
     // City Silvest Innkeeper    
 
     // City: Josody Innkeeper
@@ -3105,10 +2956,7 @@ export const mapMarkers = {
     // City: Autumn Innkeeper
 
     // City: Whisperdale Innkeeper
-
-    // Region: Black Swamp Innkeeper
-
-    // Region: Battle Plains Innkeeper
+    // Region: 5 - Battle Plains Innkeeper
     // City: Chlera Innkeeper
     {
       category: "npc",
@@ -3126,8 +2974,9 @@ export const mapMarkers = {
       },
     },
 
+    // Region: 6 - Black Swamp Innkeeper
 
-    // Region: Highlands Innkeeper
+    // Region: 7 - Highlands Innkeeper
     // City: Parian Innkeeper
     {
       category: "npc",
@@ -3163,13 +3012,13 @@ export const mapMarkers = {
       },
     },
 
-    // Region: Western Isles Innkeeper
+    // Region: 8 - Western Isles Innkeeper
 
-    // Region: Heartwood Coast Innkeeper
+    // Region: 10 - Heartwood Coast Innkeeper
 
-    // Region: Tundria Innkeeper
+    // Region: 11 - Tundria Innkeeper
 
-    // Region: Sands of Creation Innkeeper
+    // Region: 12 - Sands of Creation Innkeeper
     // City: Ruhura Innkeeper
     {
       category: "npc",
@@ -3203,15 +3052,15 @@ export const mapMarkers = {
       },
     },
 
-    // Region: Breakwater Innkeeper
+    // Region: 13 - Breakwater Innkeeper
 
-    // Region: Broken Finger Innkeeper
+    // Region: 14 - Broken Finger Innkeeper
 
     // Sub-Category Docks
-    /* Valinor Island Docks */
+    // Region: 1 - Valinor Island Docks
     // No active docks on Valinor Island as of now
 
-    // Region: Krythan Island Docks
+    // Region: 2 - Silvest Valley Docks
     {
       category: "dock",
       type: "overworld_dock",
@@ -3221,98 +3070,8 @@ export const mapMarkers = {
       details: {
         title: "Silvest Northern Island Dock",
         coordinates: { x: 448, y: 601 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Silvest_Northern_Island_Dock.png",
         lore: "More information about Silvest Northern Island Dock is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      category: "dock",
-      type: "overworld_dock",
-      tooltip: "Jeel Dock",
-      region: "Krythan",
-      place: "Jeel",
-      details: {
-        title: "Jeel Dock",
-        coordinates: { x: 265, y: 822 },
-        image: "images/markers/image_coming_soon.png",
-        lore: "More information about Jeel Dock is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      category: "dock",
-      type: "overworld_dock",
-      tooltip: "Lotor's Castle Dock",
-      region: "Krythan",
-      place: "Lotor's Castle",
-      details: {
-        title: "Lotor's Castle Dock",
-        coordinates: { x: 211, y: 1128 },
-        image: "images/markers/image_coming_soon.png",
-        lore: "More information about Lotor's Castle Dock is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      category: "dock",
-      type: "overworld_dock",
-      tooltip: "New Korelth Dock",
-      region: "Krythan",
-      place: "New Korelth",
-      details: {
-        title: "New Korelth Dock",
-        coordinates: { x: 430, y: 1464 },
-        image: "images/markers/image_coming_soon.png",
-        lore: "More information about New Korelth Dock is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      category: "dock",
-      type: "overworld_dock",
-      tooltip: "Tallem'im House Dock",
-      region: "Krythan",
-      place: "Krythan Fields",
-      details: {
-        title: "Tallem'im House Dock",
-        coordinates: { x: 70, y: 1515 },
-        image: "images/markers/image_coming_soon.png",
-        lore: "More information about Tallem'im House Dock is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      category: "dock",
-      type: "overworld_dock",
-      tooltip: "Karzak Cove Dock",
-      region: "Krythan",
-      place: "Krythan Fields",
-      details: {
-        title: "Karzak Cove Dock",
-        coordinates: { x: 1408, y: 1097 },
-        image: "images/markers/image_coming_soon.png",
-        lore: "More information about Karzak Cove Dock is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      category: "dock",
-      type: "overworld_dock",
-      tooltip: "Karzak Cove Dock",
-      region: "Krythan",
-      place: "Krythan Fields",
-      details: {
-        title: "Karzak Cove Dock",
-        coordinates: { x: 1372, y: 1115 },
-        image: "images/markers/image_coming_soon.png",
-        lore: "More information about Karzak Cove Dock is coming soon.",
         npcs: [],
         links: [],
       },
@@ -3326,7 +3085,7 @@ export const mapMarkers = {
       details: {
         title: "Fort Eastwatch Dock",
         coordinates: { x: 1352, y: 1288 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Fort_Eastwatch_Dock.png",
         lore: "More information about Fort Eastwatch Dock is coming soon.",
         npcs: [],
         links: [],
@@ -3341,7 +3100,7 @@ export const mapMarkers = {
       details: {
         title: "Silvest Dock",
         coordinates: { x: 1133, y: 1472 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Silvest_Dock.png",
         lore: "More information about Silvest Dock is coming soon.",
         npcs: [],
         links: [],
@@ -3356,26 +3115,25 @@ export const mapMarkers = {
       details: {
         title: "Silvest Island Dock",
         coordinates: { x: 1097, y: 1515 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Silvest_Island_Dock.png",
         lore: "More information about Silvest Island Dock is coming soon.",
         npcs: [],
         links: [],
       },
     },
     //Done
-
-    // Lotor's Summer Palace Docks
+    // Region: 3 - Krythan Docks
     {
       category: "dock",
       type: "overworld_dock",
-      tooltip: "Palace Dock",
-      region: "Western Isles",
-      place: "Lotor's Summer Palace",
+      tooltip: "Jeel Dock",
+      region: "Krythan",
+      place: "Jeel",
       details: {
-        title: "Palace Dock",
-        coordinates: { x: 792, y: 582 },
-        image: "images/markers/image_coming_soon.png",
-        lore: "More information about Palace Dock is coming soon.",
+        title: "Jeel Dock",
+        coordinates: { x: 265, y: 822 },
+        image: "images/markers/Jeel_Dock.png",
+        lore: "More information about Jeel Dock is coming soon.",
         npcs: [],
         links: [],
       },
@@ -3383,28 +3141,80 @@ export const mapMarkers = {
     {
       category: "dock",
       type: "overworld_dock",
-      tooltip: "LSP Dock",
-      region: "Western Isles",
-      place: "Lotor's Summer Palace",
+      tooltip: "Lotor's Castle Dock",
+      region: "Krythan",
+      place: "Lotor's Castle",
       details: {
-        title: "LSP Dock",
-        coordinates: { x: 855, y: 726 },
-        image: "images/markers/image_coming_soon.png",
-        lore: "More information about LSP Dock is coming soon.",
+        title: "Lotor's Castle Dock",
+        coordinates: { x: 211, y: 1128 },
+        image: "images/markers/Lotor's_Castle_Dock.png",
+        lore: "More information about Lotor's Castle Dock is coming soon.",
         npcs: [],
         links: [],
       },
     },
-    //Done
+    {
+      category: "dock",
+      type: "overworld_dock",
+      tooltip: "New Korelth Dock",
+      region: "Krythan",
+      place: "New Korelth",
+      details: {
+        title: "New Korelth Dock",
+        coordinates: { x: 430, y: 1464 },
+        image: "images/markers/New_Korelth_Dock.png",
+        lore: "More information about New Korelth Dock is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "dock",
+      type: "overworld_dock",
+      tooltip: "Tallem'im House Dock",
+      region: "Krythan",
+      place: "Krythan Fields",
+      details: {
+        title: "Tallem'im House Dock",
+        coordinates: { x: 70, y: 1515 },
+        image: "images/markers/Tallemim_House_Dock.png",
+        lore: "More information about Tallem'im House Dock is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "dock",
+      type: "overworld_dock",
+      tooltip: "Karzak Cove Dock",
+      region: "Krythan",
+      place: "Krythan Fields",
+      details: {
+        title: "Karzak Cove Dock",
+        coordinates: { x: 1408, y: 1097 },
+        image: "images/markers/Karzak_Cove_Dock.png",
+        lore: "More information about Karzak Cove Dock is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "dock",
+      type: "overworld_dock",
+      tooltip: "Karzak Cove Dock",
+      region: "Krythan",
+      place: "Krythan Fields",
+      details: {
+        title: "Karzak Cove Dock",
+        coordinates: { x: 1372, y: 1115 },
+        image: "images/markers/Karzak_Cove_Dock.png",
+        lore: "More information about Karzak Cove Dock is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
 
-    // Minotaur Island Docks
-    // No active docks on Minotaur Island as of now
-
-    // Party Island Docks
-
-    /* Mainland Docks */
-
-    // Region: Darkwoods Docks
+    // Region: 4 - Darkwoods Docks
     {
       category: "dock",
       type: "overworld_dock",
@@ -3414,7 +3224,7 @@ export const mapMarkers = {
       details: {
         title: "Josody Dock",
         coordinates: { x: 1406, y: 2518 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Josody_Dock.png",
         lore: "More information about Josody Dock is coming soon.",
         npcs: [],
         links: [],
@@ -3429,7 +3239,7 @@ export const mapMarkers = {
       details: {
         title: "Redwake Dock",
         coordinates: { x: 403, y: 2868 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Redwake_Dock.png",
         lore: "More information about Redwake Dock is coming soon.",
         npcs: [],
         links: [],
@@ -3444,7 +3254,7 @@ export const mapMarkers = {
       details: {
         title: "Dragoon Dock",
         coordinates: { x: 403, y: 3221 }, 
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Dragoon_Dock.png",
         lore: "More information about Dragoon Dock is coming soon.",
         npcs: [],
         links: [],
@@ -3459,7 +3269,7 @@ export const mapMarkers = {
       details: {
         title: "Whisperdale Dock",
         coordinates: { x: 344, y: 3491 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Whisperdale_Dock.png",
         lore: "More information about Whisperdale Dock is coming soon.",
         npcs: [],
         links: [],
@@ -3474,7 +3284,7 @@ export const mapMarkers = {
       details: {
         title: "Darkfell Dock",
         coordinates: { x: 912, y: 3121 }, // This is the ruins next to Dunmarrow Dock but I'm not sure what it's called Question
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Darkfell_Dock.png",
         lore: "More information about Darkfell Dock is coming soon.",
         npcs: [],
         links: [],
@@ -3489,14 +3299,14 @@ export const mapMarkers = {
       details: {
         title: "Dunmarrow Dock",
         coordinates: { x: 1364, y: 3247 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Dunmarrow_Dock.png",
         lore: "More information about Dunmarrow Dock is coming soon.",
         npcs: [],
         links: [],
       },
     },
 
-    // Region: Battle Plains Docks
+    // Region: 5 - Battle Plains Docks
     {
       category: "dock",
       type: "overworld_dock",
@@ -3506,7 +3316,7 @@ export const mapMarkers = {
       details: {
         title: "Wandering Spirit Dock",
         coordinates: { x: 2010, y: 2633 }, // This is above Shadow Temple Entrance I'm not sure what the ruins are called Question
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Wandering_Spirit_Dock.png",
         lore: "More information about Wandering Spirit Dock is coming soon.",
         npcs: [],
         links: [],
@@ -3521,7 +3331,7 @@ export const mapMarkers = {
       details: {
         title: "Chlera Dock",
         coordinates: { x: 2488, y: 3641 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Chlera_Dock.png",
         lore: "More information about Chlera Dock is coming soon.",
         npcs: [],
         links: [],
@@ -3536,7 +3346,7 @@ export const mapMarkers = {
       details: {
         title: "Battle Plains Dock",
         coordinates: { x: 2599, y: 3508 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Battle_Plains_Dock.png",
         lore: "More information about Battle Plains Dock is coming soon.",
         npcs: [],
         links: [],
@@ -3551,14 +3361,14 @@ export const mapMarkers = {
       details: {
         title: "Maraket Dock",
         coordinates: { x: 3109, y: 4021 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Maraket_Dock.png",
         lore: "More information about Maraket Dock is coming soon.",
         npcs: [],
         links: [],
       },
     },
 
-    // Region: Black Swamp Docks
+    // Region: 6 - Black Swamp Docks
     {
       category: "dock",
       type: "overworld_dock",
@@ -3568,24 +3378,24 @@ export const mapMarkers = {
       details: {
         title: "Samad Dock",
         coordinates: { x: 2612, y: 3513 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Samad_Dock.png",
         lore: "More information about Samad Dock is coming soon.",
         npcs: [],
         links: [],
       },
     },
 
-    // Region: Highlands Docks
+    // Region: 7 - Highlands Docks
     {
       category: "dock",
       type: "overworld_dock",
       tooltip: "Ethera Palace Dock",
       region: "Highlands",
-      place: "Highlands",
+      place: "Ethera Palace",
       details: {
         title: "Ethera Palace Dock",
         coordinates: { x: 3597, y: 3705 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Ethera_Palace_Dock.png",
         lore: "More information about Ethera Palace Dock is coming soon.",
         npcs: [],
         links: [],
@@ -3596,11 +3406,11 @@ export const mapMarkers = {
       type: "overworld_dock",
       tooltip: "Ethera Mining Company Dock",
       region: "Highlands",
-      place: "Highlands",
+      place: "Ethera Mining Company",
       details: {
         title: "Ethera Mining Company Dock",
         coordinates: { x: 3613, y: 3645 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Ethera_Mining_Company_Dock.png",
         lore: "More information about Ethera Mining Company Dock is coming soon.",
         npcs: [],
         links: [],
@@ -3615,7 +3425,7 @@ export const mapMarkers = {
       details: {
         title: "Highlands East Dock - East of Parian",
         coordinates: { x: 3688, y: 3158 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Highlands_East_Dock.png",
         lore: "More information about Highlands East Dock - East of Parian is coming soon.",
         npcs: [],
         links: [],
@@ -3630,7 +3440,7 @@ export const mapMarkers = {
       details: {
         title: "Glamara McPlum's Dock",
         coordinates: { x: 3861, y: 2581 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Glamara_McPlums_Dock.png",
         lore: "More information about Glamara McPlum's Dock is coming soon.",
         npcs: [],
         links: [],
@@ -3645,14 +3455,14 @@ export const mapMarkers = {
       details: {
         title: "North Highlands Dock",
         coordinates: { x: 3541, y: 1582 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/North_Highlands_Dock.png",
         lore: "More information about North Highlands Dock is coming soon.",
         npcs: [],
         links: [],
       },
     },
 
-    // Region: Western Isles Docks
+    // Region: 8 - Western Isles Docks
     {
       category: "dock",
       type: "overworld_dock",
@@ -3662,17 +3472,49 @@ export const mapMarkers = {
       details: {
         title: "Ettin Island Dock",
         coordinates: { x: 1706, y: 1836 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Ettin_Island_Dock.png",
         lore: "More information about Ettin Island Dock is coming soon.",
         npcs: [],
         links: [],
       },
     },
+    // Island: Lotor's Summer Palace Docks
+    {
+      category: "dock",
+      type: "overworld_dock",
+      tooltip: "Palace Dock",
+      region: "Western Isles",
+      place: "Lotor's Summer Palace",
+      details: {
+        title: "Palace Dock",
+        coordinates: { x: 792, y: 582 },
+        image: "images/markers/Lotors_Summer_Palace_Dock.png",
+        lore: "More information about Palace Dock is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "dock",
+      type: "overworld_dock",
+      tooltip: "LSP Dock",
+      region: "Western Isles",
+      place: "Lotor's Summer Palace",
+      details: {
+        title: "LSP Dock",
+        coordinates: { x: 855, y: 726 },
+        image: "images/markers/LSP_Dock.png",
+        lore: "More information about LSP Dock is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    //Done
 
-    // Region: Valley of Giants Docks
+    // Region: 9 - Valley of Giants Docks
     // No Docks here to see
 
-    // Region: Heartwood Coast Docks
+    // Region: 10 - Heartwood Coast Docks
     {
       category: "dock",
       type: "overworld_dock",
@@ -3682,7 +3524,7 @@ export const mapMarkers = {
       details: {
         title: "Valmond East Dock",
         coordinates: { x: 2591, y: 2183 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Valmond_East_Dock.png",
         lore: "More information about Valmond East Dock is coming soon.",
         npcs: [],
         links: [],
@@ -3697,7 +3539,7 @@ export const mapMarkers = {
       details: {
         title: "Valmond East Dock",
         coordinates: { x: 2591, y: 2195 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Valmond_East_Dock.png",
         lore: "More information about Valmond East Dock is coming soon.",
         npcs: [],
         links: [],
@@ -3712,7 +3554,7 @@ export const mapMarkers = {
       details: {
         title: "Valmond North Dock",
         coordinates: { x: 2654, y: 2116 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Valmond_North_Dock.png",
         lore: "More information about Valmond North Dock is coming soon.",
         npcs: [],
         links: [],
@@ -3727,7 +3569,7 @@ export const mapMarkers = {
       details: {
         title: "Valmond North Dock",
         coordinates: { x: 2662, y: 2130 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Valmond_North_Dock_2.png",
         lore: "More information about Valmond North Dock is coming soon.",
         npcs: [],
         links: [],
@@ -3742,7 +3584,7 @@ export const mapMarkers = {
       details: {
         title: "Valmond North Dock",
         coordinates: { x: 2677, y: 2130 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Valmond_North_Dock_3.png",
         lore: "More information about Valmond North Dock is coming soon.",
         npcs: [],
         links: [],
@@ -3757,7 +3599,7 @@ export const mapMarkers = {
       details: {
         title: "Teylan Dock",
         coordinates: { x: 2423, y: 1641 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Teylan_Dock.png",
         lore: "More information about Teylan Dock is coming soon.",
         npcs: [],
         links: [],
@@ -3772,14 +3614,14 @@ export const mapMarkers = {
       details: {
         title: "Heartwood North Dock (Northeast of Syldural)",
         coordinates: { x: 3513, y: 1570 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Heartwood_North_Dock.png",
         lore: "More information about Heartwood North Dock (Northeast of Syldural) is coming soon.",
         npcs: [],
         links: [],
       },
     },
 
-    // Region: Tundria Docks
+    // Region: 11 - Tundria Docks
     {
       category: "dock",
       type: "overworld_dock",
@@ -3789,7 +3631,7 @@ export const mapMarkers = {
       details: {
         title: "Duremar Dock",
         coordinates: { x: 3726, y: 953 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Duremar_Dock.png",
         lore: "More information about Duremar Dock is coming soon.",
         npcs: [],
         links: [],
@@ -3804,7 +3646,7 @@ export const mapMarkers = {
       details: {
         title: "Southeast Tundria Dock",
         coordinates: { x: 3621, y: 1331 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Southeast_Tundria_Dock.png",
         lore: "More information about Southeast Tundria Dock is coming soon.",
         npcs: [],
         links: [],
@@ -3819,7 +3661,7 @@ export const mapMarkers = {
       details: {
         title: "Bridge Dock",
         coordinates: { x: 2030, y: 1048 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Bridge_Dock.png",
         lore: "More information about Bridge Dock is coming soon.",
         npcs: [],
         links: [],
@@ -3834,7 +3676,7 @@ export const mapMarkers = {
       details: {
         title: "Maroven North Dock",
         coordinates: { x: 2030, y: 1240 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Maroven_North_Dock.png",
         lore: "More information about Maroven North Dock is coming soon.",
         npcs: [],
         links: [],
@@ -3849,7 +3691,7 @@ export const mapMarkers = {
       details: {
         title: "Maroven Dock",
         coordinates: { x: 1977, y: 1266 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Maroven_Dock.png",
         lore: "More information about Maroven Dock is coming soon.",
         npcs: [],
         links: [],
@@ -3864,7 +3706,7 @@ export const mapMarkers = {
       details: {
         title: "Maroven Dock",
         coordinates: { x: 1988, y: 1266 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Maroven_Dock.png",
         lore: "More information about Maroven Dock is coming soon.",
         npcs: [],
         links: [],
@@ -3879,7 +3721,7 @@ export const mapMarkers = {
       details: {
         title: "Maroven Dock",
         coordinates: { x: 1997, y: 1280 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Maroven_Dock.png",
         lore: "More information about Maroven Dock is coming soon.",
         npcs: [],
         links: [],
@@ -3892,9 +3734,9 @@ export const mapMarkers = {
       region: "Tundria",
       place: "Ruins of Osgarl",
       details: {
-        title: "Maroven Dock",
+        title: "Ruins of Osgarl Dock",
         coordinates: { x: 2500, y: 381 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Ruins_of_Osgarl_Dock.png",
         lore: "More information about Ruins of Osgarl Dock is coming soon.",
         npcs: [],
         links: [],
@@ -3907,10 +3749,10 @@ export const mapMarkers = {
       region: "Tundria",
       place: "Tundria Big Finger", // Temporary name until official name is known
       details: {
-        title: "Maroven Dock",
+        title: "Tundria Northern Dock",
         coordinates: { x: 1971, y: 390 },
-        image: "images/markers/image_coming_soon.png",
-        lore: "More information about Ruins of Osgarl Dock is coming soon.",
+        image: "images/markers/Tundria_Northern_Dock.png",
+        lore: "More information about Tundria Northern Dock is coming soon.",
         npcs: [],
         links: [],
       },
@@ -3926,7 +3768,7 @@ export const mapMarkers = {
       details: {
         title: "Lopal Dock",
         coordinates: { x: 344, y: 2270 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Lopal_Dock.png",
         lore: "More information about Lopal Dock is coming soon.",
         npcs: [],
         links: [],
@@ -3937,7 +3779,7 @@ export const mapMarkers = {
     // Werewolf Island Docks
     // No active docks on Werewolf Island as of now
 
-    // Region: Sands of Creation Docks
+    // Region: 12 - Sands of Creation Docks
     // City: Ruhura Docks
     {
       category: "dock",
@@ -3948,7 +3790,7 @@ export const mapMarkers = {
       details: {
         title: "Ruhura Dock",
         coordinates: { x: 360, y: 4062 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Ruhura_Dock.png",
         lore: "More information about Ruhura Dock is coming soon.",
         npcs: [],
         links: [],
@@ -3965,7 +3807,7 @@ export const mapMarkers = {
       details: {
         title: "Greater Dragon Island Dock",
         coordinates: { x: 280, y: 3919 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Greater_Dragon_Island_Dock.png",
         lore: "More information about Greater Dragon Island Dock is coming soon.",
         npcs: [],
         links: [],
@@ -3982,7 +3824,7 @@ export const mapMarkers = {
       details: {
         title: "Khafra Fishing Outpost Dock",
         coordinates: { x: 87, y: 2692 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Khafra_Fishing_Outpost_Dock.png",
         lore: "More information about Khafra Fishing Outpost Dock is coming soon.",
         npcs: [],
         links: [],
@@ -3997,15 +3839,15 @@ export const mapMarkers = {
       details: {
         title: "Khafra Dock",
         coordinates: { x: 211, y: 2752 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Khafra_Dock.png",
         lore: "More information about Khafra Dock is coming soon.",
         npcs: [],
         links: [],
       },
     },
 
-    // Region: Breakwater Region Docks
-    // New Town Island Docks
+    // Region: 13 - Breakwater Region Docks
+    // Island: New Town Docks
     {
       category: "dock",
       type: "overworld_dock",
@@ -4015,7 +3857,7 @@ export const mapMarkers = {
       details: {
         title: "New Town Dock",
         coordinates: { x: 1973, y: 1903 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/New_Town_Dock.png",
         lore: "More information about New Town Dock is coming soon.",
         npcs: [],
         links: [],
@@ -4030,7 +3872,7 @@ export const mapMarkers = {
       details: {
         title: "Undead Dwarven Dock",
         coordinates: { x: 1842, y: 1751 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Undead_Dwarven_Dock.png",
         lore: "More information about Undead Dwarven Dock is coming soon.",
         npcs: [],
         links: [],
@@ -4045,14 +3887,14 @@ export const mapMarkers = {
       details: {
         title: "Deadman Island Dock",
         coordinates: { x: 1796, y: 1707 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Deadman_Island_Dock.png",
         lore: "More information about Deadman Island Dock is coming soon.",
         npcs: [],
         links: [],
       },
     },
 
-    // Roycroft Island Docks
+    // Island: Roycroft Docks
     {
       category: "dock",
       type: "overworld_dock",
@@ -4062,7 +3904,7 @@ export const mapMarkers = {
       details: {
         title: "Roycroft North Dock",
         coordinates: { x: 2516, y: 2416 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Roycroft_North_Dock.png",
         lore: "More information about Roycroft North Dock is coming soon.",
         npcs: [],
         links: [],
@@ -4077,7 +3919,7 @@ export const mapMarkers = {
       details: {
         title: "Roycroft South Dock",
         coordinates: { x: 2450, y: 2517 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Roycroft_South_Dock.png",
         lore: "More information about Roycroft South Dock is coming soon.",
         npcs: [],
         links: [],
@@ -4092,7 +3934,7 @@ export const mapMarkers = {
       details: {
         title: "Roycroft South Dock",
         coordinates: { x: 2459, y: 2517 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Roycroft_South_Dock.png",
         lore: "More information about Roycroft South Dock is coming soon.",
         npcs: [],
         links: [],
@@ -4107,14 +3949,14 @@ export const mapMarkers = {
       details: {
         title: "Roycroft South Dock",
         coordinates: { x: 2468, y: 2517 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Roycroft_South_Dock.png",
         lore: "More information about Roycroft South Dock is coming soon.",
         npcs: [],
         links: [],
       },
     },
 
-    // New Royale Island Docks
+    // Island: New Royale Docks
     {
       category: "dock",
       type: "overworld_dock",
@@ -4124,7 +3966,7 @@ export const mapMarkers = {
       details: {
         title: "Pirate Raider's Dock",
         coordinates: { x: 1334, y: 1767 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Pirate_Raiders_Dock.png",
         lore: "More information about Pirate Raider's Dock is coming soon.",
         npcs: [],
         links: [],
@@ -4139,7 +3981,7 @@ export const mapMarkers = {
       details: {
         title: "New Royal North Dock",
         coordinates: { x: 1439, y: 1928 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/New_Royal_North_Dock.png",
         lore: "More information about New Royal North Dock is coming soon.",
         npcs: [],
         links: [],
@@ -4154,8 +3996,8 @@ export const mapMarkers = {
       details: {
         title: "New Royal South Dock",
         coordinates: { x: 1657, y: 2301 },
-        image: "images/markers/image_coming_soon.png",
-        lore: "More information about New Royal North Dock is coming soon.",
+        image: "images/markers/New_Royal_South_Dock.png",
+        lore: "More information about New Royal South Dock is coming soon.",
         npcs: [],
         links: [],
       },
@@ -4169,8 +4011,8 @@ export const mapMarkers = {
       details: {
         title: "New Royal Island South Dock",
         coordinates: { x: 1299, y: 2027 },
-        image: "images/markers/image_coming_soon.png",
-        lore: "More information about New Royal North Dock is coming soon.",
+        image: "images/markers/New_Royal_Island_South_Dock.png",
+        lore: "More information about New Royal Island South Dock is coming soon.",
         npcs: [],
         links: [],
       },
@@ -4184,14 +4026,14 @@ export const mapMarkers = {
       details: {
         title: "New Royal Island South Dock",
         coordinates: { x: 1058, y: 2074 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Crab_Island_Dock.png",
         lore: "More information about Crab Island Dock is coming soon.",
         npcs: [],
         links: [],
       },
     },
 
-    // Region: Broken Finger Region Docks
+    // Region: 14 - Broken Finger Region Docks
     {
       category: "dock",
       type: "overworld_dock",
@@ -4201,7 +4043,7 @@ export const mapMarkers = {
       details: {
         title: "Broken Finger Town Dock",
         coordinates: { x: 1147, y: 3770 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Broken_Finger_Town_Dock.png",
         lore: "More information about Broken Finger Town Dock is coming soon.",
         npcs: [],
         links: [],
@@ -4216,7 +4058,7 @@ export const mapMarkers = {
       details: {
         title: "Broken Finger Island Dock",
         coordinates: { x: 1427, y: 3836 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Broken_Finger_Island_Dock.png",
         lore: "More information about Broken Finger Island Dock is coming soon.",
         npcs: [],
         links: [],
@@ -4225,7 +4067,7 @@ export const mapMarkers = {
 
     // Sub-Category: Mage of Lotor NPCs
 
-    // Region: Silvest Valley Mage of Lotor NPCs
+    // Region: 2 - Silvest Valley Mage of Lotor NPCs
     // City: Silvest Mage of Lotor NPCs
     {
       category: "npc",
@@ -4243,9 +4085,9 @@ export const mapMarkers = {
       },
     },
 
-    // Region: Krythan Mage of Lotor NPCs
+    // Region: 3 - Krythan Mage of Lotor NPCs
 
-    // Region: Darkwoods Mage of Lotor NPCs
+    // Region: 4 - Darkwoods Mage of Lotor NPCs
     // City: Josody Mage of Lotor NPCs
 
     // City: Redwake Mage of Lotor NPCs
@@ -4282,9 +4124,9 @@ export const mapMarkers = {
       },
     },
 
-    // Region: Battle Plains Mage of Lotor NPCs
+    // Region: 5 - Battle Plains Mage of Lotor NPCs
 
-    // Region: Black Swamp Mage of Lotor NPCs
+    // Region: 6 - Black Swamp Mage of Lotor NPCs
     // City: Krog Mage of Lotor NPCs
     {
       category: "npc",
@@ -4305,7 +4147,7 @@ export const mapMarkers = {
 
 
     // Sub-Category Information
-    // Region: Valinor
+    // Region:  1 - Valinor
     // City: Valinor
     {
       category: "npc",
@@ -4325,12 +4167,12 @@ export const mapMarkers = {
 
     
 
-    // Region: Silvest Valley Information
+    // Region: 2 - Silvest Valley Information
     
 
-    // Region: Krythan Information
+    // Region: 3 - Krythan Information
 
-    // Region: Darkwoods Information
+    // Region: 4 - Darkwoods Information
     // City: Josody Information
 
     // City: Redwake Information
@@ -4368,9 +4210,9 @@ export const mapMarkers = {
       },
     },
 
-    // Region: Battle Plains Information
+    // Region: 5 - Battle Plains Information
 
-    // Region: Black Swamp Information
+    // Region: 6 - Black Swamp Information
     
     {
       category: "npc",
@@ -4388,21 +4230,21 @@ export const mapMarkers = {
       },
     },
 
-    // Region: Highlands Information
+    // Region: 7 - Highlands Information
 
-    // Region: Western Isles Information
+    // Region: 8 - Western Isles Information
 
-    // Region: Valley of Giants Information
+    // Region: 9 - Valley of Giants Information
 
-    // Region: Heartwood Coast Information
+    // Region: 10 - Heartwood Coast Information
 
-    // Region: Tundria Information
+    // Region: 11 - Tundria Information
 
-    // Region: Sands of Creation Information
+    // Region: 12 - Sands of Creation Information
 
-    // Region: Breakwater Information
+    // Region: 13 - Breakwater Information
 
-    // Region: Broken Finger Information
+    // Region: 14 - Broken Finger Information
 
     /*Lotor's Summer Palace Information*/
     {
@@ -4479,11 +4321,10 @@ export const mapMarkers = {
         links: [],
       },
     },
+    
+    // Region: 2 - Silvest Valley Information
 
-    // Region: Krythan Island Information
-    // Region: Silvest Valley Information
-
-    // Region: Krythan Information
+    // Region: 3 - Krythan Information
     // City: Vrethpool Information
     {
       category: "npc",
@@ -4494,7 +4335,7 @@ export const mapMarkers = {
       details: {
         title: "Grim Demonhunter",
         coordinates: { x: 648, y: 1710 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Grim_Demonhunter.png",
         lore: "More information about Grim Demonhunter is coming soon.",
         npcs: [],
         links: [],
@@ -4503,7 +4344,7 @@ export const mapMarkers = {
 
     // Mainland Information
 
-    // Region: Darkwoods Information
+    // Region: 4 - Darkwoods Information
     {
       category: "npc",
       type: "overworld_information_npc",
@@ -4513,40 +4354,39 @@ export const mapMarkers = {
       details: {
         title: "The Utopia Shard",
         coordinates: { x: 1193, y: 2904 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/The_Utopia_Shard.png",
         lore: "More information about The Utopia Shard is coming soon.",
         npcs: [],
         links: [],
       },
     },
 
-    // Region: Battle Plains Information
+    // Region: 5 - Battle Plains Information
 
-    // Region: Highlands Information
+    // Region: 6 - Black Swamp Information
 
-    // Region: Tundria Region Information
+    // Region: 7 - Highlands Information
 
-    // Region: Western Isles Information
+    // Region: 8 - Western Isles Information
 
-    // Region: Valley of Giants Information
+    // Region: 9 - Valley of Giants Information
 
-    // Region: Heartwood Coast Information
+    // Region: 10 - Heartwood Coast Information
 
-    // Region: Sands of Creation Region Information
+    // Region: 11 - Tundria Region Information
+
+    // Region: 12 - Sands of Creation Region Information
 
     // City: Khafra Information
 
     // City: Ruhura Information
 
-    // Region: Breakwater Region Information
+    // Region: 13 - Breakwater Region Information
 
-    // Region: Broken Finger Region Information
+    // Region: 14 - Broken Finger Region Information
 
     // Sub-Category Town Stewards
-    // Town Stewards
-
-    // Island: Krythan Island Town Stewards
-    // Region: Silvest Valley Town Stewards
+    // Region: 2 - Silvest Valley Town Stewards
     {
       category: "npc",
       type: "overworld_town_steward",
@@ -4562,10 +4402,10 @@ export const mapMarkers = {
         links: [],
       },
     },
-    // Region: Krythan Town Stewards
+    // Region: 3 - Krythan Town Stewards
 
     // Mainland Town Stewards
-    // Region: Darkwoods Town Stewards
+    // Region: 4 - Darkwoods Town Stewards
 
     {
       category: "npc",
@@ -4582,11 +4422,11 @@ export const mapMarkers = {
         links: [],
       },
     },
-    // Region: Battle Plains Town Stewards
+    // Region: 5 - Battle Plains Town Stewards
     // City: Chlera Town Stewards
     
 
-    // Region: Black Swamp Town Stewards
+    // Region: 6 - Black Swamp Town Stewards
     {
       category: "npc",
       type: "overworld_town_steward",
@@ -4596,36 +4436,35 @@ export const mapMarkers = {
       details: {
         title: "Town Steward (Krog)",
         coordinates: { x: 3099, y: 3756 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Krog_Town_Steward.png",
         lore: "The Town Steward of Krog offers a town bonus orb that grants Strength.",
         npcs: [],
         links: [],
       },
     },
 
-    // Region: Highlands Town Stewards
+    // Region: 7 - Highlands Town Stewards
 
-    // Region: Western Isles Town Stewards
+    // Region: 8 - Western Isles Town Stewards
 
-    // Region: Valley of Giants Town Stewards
+    // Region: 9 - Valley of Giants Town Stewards
 
-    // Region: Heartwood Coast Town Stewards
+    // Region: 10 - Heartwood Coast Town Stewards
 
-    // Region: Tundria Town Stewards
+    // Region: 11 - Tundria Town Stewards
 
-    // Region: Sands of Creation Town Stewards
+    // Region: 12 - Sands of Creation Town Stewards
 
-    // Region: Breakwater Town Stewards
+    // Region: 13 - Breakwater Town Stewards
 
-    // Region: Broken Finger Town Stewards
+    // Region: 14 - Broken Finger Town Stewards
 
     // Add more trainers
 
     // Sub-Category Town Guardians
-    // Island: Krythan Island Town Guardians
-    // Region: Silvest Valley Town Guardians
+    // Region: 2 - Silvest Valley Town Guardians
 
-    // Region: Krythan Town Guardians
+    // Region: 3 - Krythan Town Guardians
 
     // City: Varg Town Guardians
 
@@ -4683,7 +4522,7 @@ export const mapMarkers = {
     },
 
 
-    // Region: Darkwoods Town Guardians
+    // Region: 4 - Darkwoods Town Guardians
     // City: Josody Town Guardians
     {
       category: "npc",
@@ -4743,7 +4582,7 @@ export const mapMarkers = {
 
     // City: Whisperdale Town Guardians
 
-    // Region: Battle Plains Town Guardians
+    // Region: 5 - Battle Plains Town Guardians
     // City: Chlera Town Guardians
     {
       category: "npc",
@@ -4777,7 +4616,7 @@ export const mapMarkers = {
       },
     },
 
-    // Region: Black Swamp Town Guardians
+    // Region: 6 - Black Swamp Town Guardians
     // City: Dawat Town Guardians
     {
       category: "npc",
@@ -4795,7 +4634,26 @@ export const mapMarkers = {
       },
     },
 
-    // Region: Highlands Town Guardians
+    // City: Grell Town Guardians - This is located in the _markers.js
+
+    // City: Ethera Palace Town Guardians
+    {
+      category: "npc",
+      type: "overworld_town_guardian",
+      tooltip: "Town Guardian (Ethera Palace)",
+      region: "Highlands",
+      place: "Ethera Palace",
+      details: {
+        title: "Town Guardian",
+        coordinates: { x: 3553, y: 3651 },
+        image: "images/markers/Ethera_Palace_Town_Guardian.png",
+        lore: "The Town Guardian in Ethera Palace.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // Region: 7 - Highlands Town Guardians
     // City: Parian Town Guardians
     {
       category: "npc",
@@ -4829,50 +4687,28 @@ export const mapMarkers = {
       },
     },
 
-    // City: Grell Town Guardians - This is located in the _markers.js
+    // Region: 8 - Western Isles Town Guardians
 
-    // City: Ethera Palace Town Guardians
-    {
-      category: "npc",
-      type: "overworld_town_guardian",
-      tooltip: "Town Guardian (Ethera Palace)",
-      region: "Highlands",
-      place: "Ethera Palace",
-      details: {
-        title: "Town Guardian",
-        coordinates: { x: 3553, y: 3651 },
-        image: "images/markers/Ethera_Palace_Town_Guardian.png",
-        lore: "The Town Guardian in Ethera Palace.",
-        npcs: [],
-        links: [],
-      },
-    },
+    // Region: 9 - Valley of Giants Town Guardians
 
-    // Region: Battle Plains Town Guardians
+    // Region: 10 - Heartwood Coast Town Guardians
 
-    // Region: Black Swamp Town Guardians
+    // Region: 11 - Tundria Town Guardians
 
-    // Region: Heartwood Coast Town Guardians
-
-    // Region: Tundria Town Guardians
-
-    // Region: Western Isles Town Guardians
-
-    // Region: Sands of Creation Region Town Guardians
+    // Region: 12 - Sands of Creation Region Town Guardians
     // City: Ruhura Town Guardians
 
     // City: Khafra Town Guardians
     
 
-    // Region: Breakwater Region Town Guardians
+    // Region: 13 - Breakwater Region Town Guardians
 
-    // Region: Broken Finger Region Town Guardians
+    // Region: 14 - Broken Finger Region Town Guardians
 
     // Sub-Category Town Wizard of Insight
-    // Island: Krythan Island Town Wizard of Insight
-    // Region: Silvest Valley Town Wizard of Insight
+    // Region: 2 - Silvest Valley Town Wizard of Insight
     
-    // Region: Krythan Town Wizard of Insight
+    // Region: 3 - Krythan Town Wizard of Insight
     // City: Varg Town Wizard of Insight
 
     // City: Hothbra Town Wizard of Insight
@@ -4901,7 +4737,7 @@ export const mapMarkers = {
 
 
 
-    // Region: Darkwoods Town Wizard of Insight
+    // Region: 4 - Darkwoods Town Wizard of Insight
     // City: Josody Town Wizard of Insight
     {
       category: "npc",
@@ -4961,7 +4797,7 @@ export const mapMarkers = {
       },
     },
 
-    // Region: Battle Plains Town Wizard of Insight
+    // Region: 5 - Battle Plains Town Wizard of Insight
     // City: Chlera Town Wizard of Insight
     {
       category: "npc",
@@ -4995,7 +4831,7 @@ export const mapMarkers = {
       },
     },
 
-    // Region: Black Swamp Town Wizard of Insight
+    // Region: 6 - Black Swamp Town Wizard of Insight
     // City: Dawat Town Wizard of Insight
     {
       category: "npc",
@@ -5013,7 +4849,7 @@ export const mapMarkers = {
       },
     },
 
-    // Region: Highlands Town Wizard of Insight
+    // Region: 7 - Highlands Town Wizard of Insight
     // City: Parian Town Wizard of Insight
 
     // City: Arda Town Wizard of Insight
@@ -5072,14 +4908,13 @@ export const mapMarkers = {
       },
     },
 
-    // Island: Krythan Island Games of Chance
-    // Region: Silvest Valley Games of Chance
+    // Region: 2 - Silvest Valley Games of Chance
 
-    // Region: Krythan Games of Chance
+    // Region: 3 - Krythan Games of Chance
 
-    // Region: Darkwoods Games of Chance
+    // Region: 4 - Darkwoods Games of Chance
 
-    // Region: Battle Plains Games of Chance
+    // Region: 5 - Battle Plains Games of Chance
     // City: Chlera Games of Chance
     {
       category: "npc",
@@ -5097,9 +4932,9 @@ export const mapMarkers = {
       },
     },
 
-    // Region: Black Swamp Games of Chance
+    // Region: 6 - Black Swamp Games of Chance
 
-    // Region: Highlands Games of Chance
+    // Region: 7 - Highlands Games of Chance
     // City: Parian Games of Chance
     {
       category: "npc",
@@ -5132,13 +4967,13 @@ export const mapMarkers = {
       },
     },
 
-    // Region: Tundria Games of Chance
+    // Region: 11 - Tundria Games of Chance
 
-    // Region: Breakwater Games of Chance
+    // Region: 13 - Breakwater Games of Chance
 
-    // Region: Broken Finger Games of Chance
+    // Region: 14 - Broken Finger Games of Chance
 
-    // Region: Sands of Creation Games of Chance
+    // Region: 12 - Sands of Creation Games of Chance
     // City: Khafra Games of Chance
 
     // City: Ruhura Games of Chance
@@ -5169,7 +5004,7 @@ export const mapMarkers = {
       details: {
         title: "Lopal Demon Eye",
         coordinates: { x: 422, y: 2198 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Lopal_Demon_Eye.png",
         lore: "More information about Lopal Demon Eye is coming soon.",
         npcs: [],
         links: [],
@@ -5177,6 +5012,39 @@ export const mapMarkers = {
     },
 
     // Sub-Category Events
+    
+    // Region: 2 - Silvest Valley Events
+
+    // Region: 3 - Krythan Events
+
+    // Region: 4 - Darkwoods Events
+    
+    // Region: 5 - Battle Plains Events
+
+    // Region: 6 - Black Swamp Events
+
+    // Region: 7 - Highlands Events
+    // City: Parian Events
+    {
+      category: "npc",
+      type: "overworld_event_ticket",
+      tooltip: "Armsmaster (The Guantlet Challenge)",
+      region: "Western Isles",
+      place: "Lotor's Summer Palace",
+      details: {
+        title: "Armsmaster",
+        coordinates: { x: 3470, y: 3077 },
+        image: "images/markers/Armsmaster.png",
+        lore: "More information about Armsmaster is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    
+    // City: Grell Events
+    // Grell markers will be in underground-markers.js
+
+    // Region: 8 - Western Isles Events
     // Island: Lotor's Summer Palace
     {
       category: "npc",
@@ -5208,44 +5076,10 @@ export const mapMarkers = {
         links: [],
       },
     },
-
-    // Island: Krythan Island Events
-    // Region: Silvest Valley Events
-
-    // Region: Krythan Events
-
-    // Region: Darkwoods Events
     
-    // Region: Battle Plains Events
+    // Region: 10 - Heartwood Coast Events
 
-    // Region: Black Swamp Events
-
-    // Region: Highlands Events
-    // City: Parian Events
-    {
-      category: "npc",
-      type: "overworld_event_ticket",
-      tooltip: "Armsmaster (The Guantlet Challenge)",
-      region: "Western Isles",
-      place: "Lotor's Summer Palace",
-      details: {
-        title: "Armsmaster",
-        coordinates: { x: 3470, y: 3077 },
-        image: "images/markers/Armsmaster.png",
-        lore: "More information about Armsmaster is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    
-    // City: Grell Events
-    // Grell markers will be in underground-markers.js
-
-    // Region: Western Isles Events
-    
-    // Region: Heartwood Coast Events
-
-    // Region: Tundria Events
+    // Region: 11 - Tundria Events
 
  
 
@@ -5277,7 +5111,7 @@ export const mapMarkers = {
       details: {
         title: "Hell Rune Spire",
         coordinates: { x: 1032, y: 3482 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Hell_Rune_Spire.png",
         lore: "More information about Hell Rune Spire is coming soon.",
         npcs: [],
         links: [],
@@ -5292,10 +5126,10 @@ export const mapMarkers = {
       region: "Tundria",
       place: "Northwest Tundria",
       details: {
-        title: "Hammerfist Obelisk",
+        title: "Northwest Tundria Obelisk",
         coordinates: { x: 1638, y: 120 },
-        image: "images/markers/image_coming_soon.png",
-        lore: "More information about Hammerfist Obelisk is coming soon.",
+        image: "images/markers/Northwest_Tundria_Obelisk.png",
+        lore: "More information about Northwest Tundria Obelisk is coming soon.",
         npcs: [],
         links: [],
       },
@@ -5309,7 +5143,7 @@ export const mapMarkers = {
       details: {
         title: "Hammerfist Obelisk",
         coordinates: { x: 2959, y: 989 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Hammerfist_Obelisk.png",
         lore: "More information about Hammerfist Obelisk is coming soon.",
         npcs: [],
         links: [],
@@ -5324,7 +5158,7 @@ export const mapMarkers = {
       details: {
         title: "Hammerfist Obelisk",
         coordinates: { x: 2966, y: 648 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Tundria_Rune_Spire.png",
         lore: "More information about Tundria Rune Spire is coming soon.",
         npcs: [],
         links: [],
@@ -5333,6 +5167,7 @@ export const mapMarkers = {
 
 
     // Sub-Category Altar
+    // Region: 8 - Western Isles Altar
     {
       category: "altar",
       type: "overworld_altar",
@@ -5342,7 +5177,7 @@ export const mapMarkers = {
       details: {
         title: "Evil Altar",
         coordinates: { x: 1004, y: 3322 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Evil_Altar.png",
         lore: "More information about Evil Altar is coming soon.",
         npcs: [],
         links: [],
@@ -5360,8 +5195,8 @@ export const mapMarkers = {
       details: {
         title: "Bank",
         coordinates: { x: 743, y: 99 },
-        image: "images/markers/image_coming_soon.png",
-        lore: "More information about Bank is coming soon.",
+        image: "images/markers/Valinor_Island_Bank.png",
+        lore: "More information about Valinor Island Bank is coming soon.",
         npcs: [],
         links: [],
       },
@@ -5383,7 +5218,7 @@ export const mapMarkers = {
       },
     },
 
-    // Region: Krythan Island Bank
+    // Region: 3 - Krythan Island Bank
     // City: Varg Bank
 
     // City: Hothbra Bank
@@ -5439,7 +5274,7 @@ export const mapMarkers = {
       },
     },
 
-    // Region: Silvest Valley Bank
+    // Region: 2 - Silvest Valley Bank
     // City: Fort Eastwatch
     {
       category: "npc",
@@ -5489,8 +5324,8 @@ export const mapMarkers = {
       },
     },
 
-    // Region: Silvest Valley Bank
-    // Region: Krythan Bank
+    // Region: 2 - Silvest Valley Bank
+    // Region: 3 - Krythan Bank
     // City: Varg Bank
     {
       category: "npc",
@@ -5531,7 +5366,7 @@ export const mapMarkers = {
 
     //Mainland Bank
 
-    // Region: Darkwoods Bank
+    // Region: 4 - Darkwoods Bank
     // City: Josody Bank
     {
       category: "npc",
@@ -5667,7 +5502,7 @@ export const mapMarkers = {
       },
     },
 
-    // Region: Battle Plains Bank
+    // Region: 5 - Battle Plains Bank
     // City: Chlera Bank
     {
       category: "npc",
@@ -5765,7 +5600,7 @@ export const mapMarkers = {
       },
     },
 
-    // Region: Highlands Bank
+    // Region: 7 - Highlands Bank
     // City: Parian Bank
     {
       category: "npc",
@@ -5855,7 +5690,7 @@ export const mapMarkers = {
       details: {
         title: "Bank",
         coordinates: { x: 418, y: 2219 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Lopal_Bank.png",
         lore: "More information about Bank is coming soon.",
         npcs: [],
         links: [],
@@ -5863,17 +5698,17 @@ export const mapMarkers = {
     },
 
 
-    // Region: Western Isles Bank
+    // Region: 8 - Western Isles Bank
 
-    // Region: Valley of Giants Bank
+    // Region: 9 - Valley of Giants Bank
 
-    // Region: Heartwood Coast Bank
+    // Region: 10 - Heartwood Coast Bank
 
-    // Region: Tundria Bank
+    // Region: 11 - Tundria Bank
 
-    // Region: Sands of Creation Bank
+    // Region: 12 - Sands of Creation Bank
 
-    // Region: Breakwater Bank
+    // Region: 13 - Breakwater Bank
     // City: Ruhura Bank
     {
       category: "npc",
@@ -5907,7 +5742,7 @@ export const mapMarkers = {
       },
     },
 
-    // Region: Broken Finger Bank
+    // Region: 14 - Broken Finger Bank
 
 
     // Sub-Category Trainers
@@ -5922,7 +5757,7 @@ export const mapMarkers = {
       details: {
         title: "Cooking Trainers",
         coordinates: { x: 753, y: 104 },
-        image: "images/markers/Cooking_Trainer.png",
+        image: "images/markers/Valinor_Cooking_Trainer.png",
         lore: "More information about Cooking Trainers is coming soon.",
         npcs: [],
         links: [],
@@ -5937,7 +5772,7 @@ export const mapMarkers = {
       details: {
         title: "Visdel",
         coordinates: { x: 753, y: 106 },
-        image: "images/markers/Visdel_Trainer.png",
+        image: "images/markers/Valinor_Visdel_Trainer.png",
         lore: "More information about Visdel is coming soon.",
         npcs: [],
         links: [],
@@ -5952,7 +5787,7 @@ export const mapMarkers = {
       details: {
         title: "Leatherworking Trainer",
         coordinates: { x: 753, y: 108 },
-        image: "images/markers/Leatherworking_Trainer.png",
+        image: "images/markers/Valinor_Leatherworking_Trainer.png",
         lore: "More information about Leatherworking Trainer is coming soon.",
         npcs: [],
         links: [],
@@ -5967,7 +5802,7 @@ export const mapMarkers = {
       details: {
         title: "Dalembert",
         coordinates: { x: 753, y: 110 },
-        image: "images/markers/Dalembert_Trainer.png",
+        image: "images/markers/Valinor_Dalembert_Trainer.png",
         lore: "More information about Dalembert Trainer is coming soon.",
         npcs: [],
         links: [],
@@ -5982,7 +5817,7 @@ export const mapMarkers = {
       details: {
         title: "Blacksmith Trainer",
         coordinates: { x: 753, y: 112 },
-        image: "images/markers/Blacksmith_Trainer.png",
+        image: "images/markers/Valinor_Blacksmith_Trainer.png",
         lore: "More information about Blacksmith Trainer is coming soon.",
         npcs: [],
         links: [],
@@ -5997,7 +5832,7 @@ export const mapMarkers = {
       details: {
         title: "Zach Trainer",
         coordinates: { x: 753, y: 114 },
-        image: "images/markers/Zach_Trainer.png",
+        image: "images/markers/Valinor_Zach_Trainer.png",
         lore: "More information about Zach Trainer is coming soon.",
         npcs: [],
         links: [],
@@ -6012,7 +5847,7 @@ export const mapMarkers = {
       details: {
         title: "Carpentry Trainer",
         coordinates: { x: 753, y: 116 },
-        image: "images/markers/Carpentry_Trainer.png",
+        image: "images/markers/Valinor_Carpentry_Trainer.png",
         lore: "More information about Carpentry Trainer is coming soon.",
         npcs: [],
         links: [],
@@ -6027,7 +5862,7 @@ export const mapMarkers = {
       details: {
         title: "Aylesha Trainer",
         coordinates: { x: 753, y: 118 },
-        image: "images/markers/Aylesha_Trainer.png",
+        image: "images/markers/Valinor_Aylesha_Trainer.png",
         lore: "More information about Aylesha Trainer is coming soon.",
         npcs: [],
         links: [],
@@ -6042,7 +5877,7 @@ export const mapMarkers = {
       details: {
         title: "Thrown Weapons Trainers",
         coordinates: { x: 766, y: 103 },
-        image: "images/markers/Thrown_Weapons_Trainer.png",
+        image: "images/markers/Valinor_Thrown_Weapons_Trainer.png",
         lore: "More information about Thrown Weapons Trainers is coming soon.",
         npcs: [],
         links: [],
@@ -6057,7 +5892,7 @@ export const mapMarkers = {
       details: {
         title: "Large Blades Trainer",
         coordinates: { x: 766, y: 105 },
-        image: "images/markers/Large_Blades_Trainer.png",
+        image: "images/markers/Valinor_Large_Blades_Trainer.png",
         lore: "More information about Large Blades Trainer is coming soon.",
         npcs: [],
         links: [],
@@ -6072,7 +5907,7 @@ export const mapMarkers = {
       details: {
         title: "Small Blades Trainer",
         coordinates: { x: 766, y: 107 },
-        image: "images/markers/Small_Blades_Trainer.png",
+        image: "images/markers/Valinor_Small_Blades_Trainer.png",
         lore: "More information about Small Blades Trainer is coming soon.",
         npcs: [],
         links: [],
@@ -6087,7 +5922,7 @@ export const mapMarkers = {
       details: {
         title: "Archery Trainer",
         coordinates: { x: 766, y: 109 },
-        image: "images/markers/Archery_Trainer.png",
+        image: "images/markers/Valinor_Archery_Trainer.png",
         lore: "More information about Archery Trainer is coming soon.",
         npcs: [],
         links: [],
@@ -6102,7 +5937,7 @@ export const mapMarkers = {
       details: {
         title: "Crossbow Trainer",
         coordinates: { x: 766, y: 111 },
-        image: "images/markers/Crossbow_Trainer.png",
+        image: "images/markers/Valinor_Crossbow_Trainer.png",
         lore: "More information about Crossbow Trainer is coming soon.",
         npcs: [],
         links: [],
@@ -6117,7 +5952,7 @@ export const mapMarkers = {
       details: {
         title: "Axe Trainer",
         coordinates: { x: 766, y: 113 },
-        image: "images/markers/Axe_Trainer.png",
+        image: "images/markers/Valinor_Axe_Trainer.png",
         lore: "More information about Axe Trainer is coming soon.",
         npcs: [],
         links: [],
@@ -6132,7 +5967,7 @@ export const mapMarkers = {
       details: {
         title: "Polearms Trainer",
         coordinates: { x: 766, y: 115 },
-        image: "images/markers/Polearms_Trainer.png",
+        image: "images/markers/Valinor_Polearms_Trainer.png",
         lore: "More information about Polearms Trainer is coming soon.",
         npcs: [],
         links: [],
@@ -6147,7 +5982,7 @@ export const mapMarkers = {
       details: {
         title: "Blunt Weapon Trainer",
         coordinates: { x: 766, y: 117 },
-        image: "images/markers/Blunt_Weapon_Trainer.png",
+        image: "images/markers/Valinor_Blunt_Weapon_Trainer.png",
         lore: "More information about Blunt Weapon Trainer is coming soon.",
         npcs: [],
         links: [],
@@ -6162,7 +5997,7 @@ export const mapMarkers = {
       details: {
         title: "Warrior Apprentice",
         coordinates: { x: 760, y: 114 },
-        image: "images/markers/Warrior_Apprentice.png",
+        image: "images/markers/Valinor_Warrior_Apprentice.png",
         lore: "More information about Warrior Apprentice is coming soon.",
         npcs: [],
         links: [],
@@ -6177,7 +6012,7 @@ export const mapMarkers = {
       details: {
         title: "Leadership Trainers",
         coordinates: { x: 763, y: 121 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Valinor_Leadership_Trainer.png",
         lore: "More information about Leadership Trainers is coming soon.",
         npcs: [],
         links: [],
@@ -6192,7 +6027,7 @@ export const mapMarkers = {
       details: {
         title: "Tailoring Trainer",
         coordinates: { x: 736, y: 108 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Valinor_Tailoring_Trainer.png",
         lore: "More information about Tailoring Trainer is coming soon.",
         npcs: [],
         links: [],
@@ -6207,7 +6042,7 @@ export const mapMarkers = {
       details: {
         title: "Farming Trainer",
         coordinates: { x: 772, y: 114 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Valinor_Farming_Trainer.png",
         lore: "More information about Farming Trainer is coming soon.",
         npcs: [],
         links: [],
@@ -6222,7 +6057,7 @@ export const mapMarkers = {
       details: {
         title: "Ralnaka (Farming Information)",
         coordinates: { x: 769, y: 114 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Ralnaka_Farming_Information.png",
         lore: "More information about Ralnaka (Farming Information) is coming soon.",
         npcs: [],
         links: [],
@@ -6237,7 +6072,7 @@ export const mapMarkers = {
       details: {
         title: "Valinor Orb Reset",
         coordinates: { x: 717, y: 99 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Valinor_Orb_Reset.png",
         lore: "More information about Valinor Orb Reset is coming soon.",
         npcs: [],
         links: [],
@@ -6252,7 +6087,7 @@ export const mapMarkers = {
       details: {
         title: "Island Steward",
         coordinates: { x: 777, y: 102 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Valinor_Island_Steward.png",
         lore: "More information about Island Steward is coming soon.",
         npcs: [],
         links: [],
@@ -6274,9 +6109,9 @@ export const mapMarkers = {
       },
     },
 
-    // Region: Krythan Island Trainers
+    // Region: 3 - Krythan Island Trainers
 
-    // Region: Silvest Valley Trainers
+    // Region: 2 - Silvest Valley Trainers
 
     // City: Silvest Trainers
 
@@ -6284,7 +6119,7 @@ export const mapMarkers = {
 
     // City: Cliffside Trainers
 
-    // Region: Krythan Trainers
+    // Region: 3 - Krythan Trainers
     // City: Varg Trainers
 
     // City: Hothbra Trainers
@@ -6526,7 +6361,7 @@ export const mapMarkers = {
 
     // Mainlands Trainers
 
-    // Region: Darkwoods Trainers
+    // Region: 4 - Darkwoods Trainers
     // City: Redwake Trainers
     {
       category: "npc",
@@ -6576,20 +6411,20 @@ export const mapMarkers = {
       },
     },
 
-    // Region: Battle Plains Trainers
+    // Region: 5 - Battle Plains Trainers
 
-    // Region: Black Swamp Trainers
+    // Region: 6 - Black Swamp Trainers
 
-    // Region: Highlands Trainers
+    // Region: 7 - Highlands Trainers
     // City: Parian Trainers
     
 
 
-    // Region: Krythan Trainers
+    // Region: 3 - Krythan Trainers
 
-    // Region: Silvest Valley Trainers
+    // Region: 2 - Silvest Valley Trainers
 
-    // Region: Western Isles Trainers
+    // Region: 8 - Western Isles Trainers
 
     // Island: Scarab Island Trainers
     // City: Lopal Trainers
@@ -6602,7 +6437,7 @@ export const mapMarkers = {
       details: {
         title: "Carpentry Taskmaster",
         coordinates: { x: 405, y: 2197 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Scarab_Island_Carpentry_Taskmaster.png",
         lore: "More information about Carpentry Taskmaster is coming soon.",
         npcs: [],
         links: [],
@@ -6617,7 +6452,7 @@ export const mapMarkers = {
       details: {
         title: "Farming Taskmaster",
         coordinates: { x: 393, y: 2197 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Scarab_Island_Farming_Taskmaster.png",
         lore: "More information about Farming Taskmaster is coming soon.",
         npcs: [],
         links: [],
@@ -6632,7 +6467,7 @@ export const mapMarkers = {
       details: {
         title: "Tailoring Taskmaster",
         coordinates: { x: 408, y: 2211 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Scarab_Island_Tailoring_Taskmaster.png",
         lore: "More information about Tailoring Taskmaster is coming soon.",
         npcs: [],
         links: [],
@@ -6647,7 +6482,7 @@ export const mapMarkers = {
       details: {
         title: "Brewing Taskmaster",
         coordinates: { x: 401, y: 2226 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Scarab_Island_Brewing_Taskmaster.png",
         lore: "More information about Brewing Taskmaster is coming soon.",
         npcs: [],
         links: [],
@@ -6662,7 +6497,7 @@ export const mapMarkers = {
       details: {
         title: "Blacksmith Taskmaster",
         coordinates: { x: 378, y: 2214 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Scarab_Island_Blacksmith_Taskmaster.png",
         lore: "More information about Blacksmith Taskmaster is coming soon.",
         npcs: [],
         links: [],
@@ -6677,7 +6512,7 @@ export const mapMarkers = {
       details: {
         title: "Leatherworking Taskmaster",
         coordinates: { x: 360, y: 2208 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Scarab_Island_Leatherworking_Taskmaster.png",
         lore: "More information about Leatherworking Taskmaster is coming soon.",
         npcs: [],
         links: [],
@@ -6692,7 +6527,7 @@ export const mapMarkers = {
       details: {
         title: "Alchemy Taskmaster",
         coordinates: { x: 379, y: 2235 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Scarab_Island_Alchemy_Taskmaster.png",
         lore: "More information about Alchemy Taskmaster is coming soon.",
         npcs: [],
         links: [],
@@ -6712,7 +6547,7 @@ export const mapMarkers = {
       details: {
         title: "Dalgo's Tavern",
         coordinates: { x: 437, y: 86 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Dalgo's_Tavern.png",
         lore: "More information about Dalgo's Tavern is coming soon.",
         currency: "gold",
         npcs: [],
@@ -6721,7 +6556,7 @@ export const mapMarkers = {
     },
 
     // Island: Valinor Island Shops
-    // Region: Valinor
+    // Region:  1 - Valinor
     {
       category: "npc",
       type: "overworld_shop_pub",
@@ -6731,7 +6566,7 @@ export const mapMarkers = {
       details: {
         title: "Larodeth Lywelyn's Pub and Grub Tavern",
         coordinates: { x: 748, y: 115 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Larodeth_Lywelyns_Pub_and_Grub_Tavern.png",
         lore: "More information about Larodeth Lywelyn's Pub and Grub Tavern is coming soon.",
         currency: "gold",
         npcs: [],
@@ -6747,7 +6582,7 @@ export const mapMarkers = {
       details: {
         title: "Micheal Vonda's Weaponry Shop",
         coordinates: { x: 737, y: 119 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Micheal_Vondas_Weaponry_Shop.png",
         lore: "More information about Micheal Vonda's Weaponry Shop is coming soon.",
         currency: "gold",
         npcs: [],
@@ -6763,7 +6598,7 @@ export const mapMarkers = {
       details: {
         title: "Thomas Blackstone's Armory Shop",
         coordinates: { x: 732, y: 124 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Thomas_Blackstones_Armory_Shop.png",
         lore: "More information about Thomas Blackstone's Armory Shop is coming soon.",
         currency: "gold",
         npcs: [],
@@ -6779,7 +6614,7 @@ export const mapMarkers = {
       details: {
         title: "Whiliam Rosen's Provisioner Shop",
         coordinates: { x: 734, y: 115 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Whiliam_Rosens_Provisioner_Shop.png",
         lore: "More information about Whiliam Rosen's Provisioner Shop is coming soon.",
         currency: "gold",
         npcs: [],
@@ -6795,7 +6630,7 @@ export const mapMarkers = {
       details: {
         title: "Leon Elias's Provisioner Shop",
         coordinates: { x: 771, y: 119 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Leon_Eliass_Provisioner_Shop.png",
         lore: "More information about Leon Elias's Provisioner Shop is coming soon.",
         currency: "gold",
         npcs: [],
@@ -6811,7 +6646,7 @@ export const mapMarkers = {
       details: {
         title: "Cladius Zamilus's Magic Shop",
         coordinates: { x: 783, y: 114 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Cladius_Zamiluss_Magic_Shop.png",
         lore: "More information about Cladius Zamilus's Magic Shop is coming soon.",
         currency: "gold",
         npcs: [],
@@ -6827,7 +6662,7 @@ export const mapMarkers = {
       details: {
         title: "Linus Houson's Carpentry Store",
         coordinates: { x: 750, y: 150 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Linus_Housons_Carpentry_Store.png",
         lore: "More information about Linus Houson's Carpentry Store is coming soon.",
         currency: "gold",
         npcs: [],
@@ -6843,7 +6678,7 @@ export const mapMarkers = {
       details: {
         title: "Kerry Thomas' Blacksmith Shop ",
         coordinates: { x: 750, y: 151 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Kerry_Thomass_Blacksmith_Shop.png",
         lore: "More information about Kerry Thomas' Blacksmith Shop  is coming soon.",
         currency: "gold",
         npcs: [],
@@ -6859,7 +6694,7 @@ export const mapMarkers = {
       details: {
         title: "Tina Florence's Leather Shop",
         coordinates: { x: 750, y: 152 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Tina_Florence_Leather_Shop.png",
         lore: "More information about Tina Florence's Leather Shop is coming soon.",
         currency: "gold",
         npcs: [],
@@ -6868,11 +6703,7 @@ export const mapMarkers = {
     },
     //Done
 
-    
-
-    
-    // Island: Krythan Island Shops
-    // Region: Silvest Valley Shops
+    // Region: 2 - Silvest Valley Shops
     // City: Cliffside Shops
     {
       category: "npc",
@@ -7152,7 +6983,7 @@ export const mapMarkers = {
       },
     },
 
-    // Region: Krythan Shops
+    // Region: 3 - Krythan Shops
     // City: Jeel Shops
     {
       category: "npc",
@@ -7729,7 +7560,7 @@ export const mapMarkers = {
 
     // Mainland Shops
 
-    // Region: Darkwoods Shops
+    // Region: 4 - Darkwoods Shops
     // City: Josody Shops
     {
       category: "npc",
@@ -8914,7 +8745,7 @@ export const mapMarkers = {
       },
     },
 
-    // Region: Battle Plains Shops
+    // Region: 5 - Battle Plains Shops
     // City: Chlera Shops
     {
       category: "npc",
@@ -9206,7 +9037,7 @@ export const mapMarkers = {
       },
     },
 
-    // Region: Black Swamp Shops
+    // Region: 6 - Black Swamp Shops
     // City: Krog Shops
     {
       category: "npc",
@@ -9821,7 +9652,7 @@ export const mapMarkers = {
       },
     },
 
-    // Region: Highlands Shops
+    // Region: 7 - Highlands Shops
     // City: Parian Shops
     {
       category: "npc",
@@ -10504,9 +10335,9 @@ export const mapMarkers = {
       },
     },
 
-    // Region: Black Swamp Shops
+    // Region: 6 - Black Swamp Shops
     
-    // Region: Western Isles Shops
+    // Region: 8 - Western Isles Shops
     // Island: Lotor's Summer Palace Shops
     {
       category: "npc",
@@ -10824,7 +10655,7 @@ export const mapMarkers = {
       details: {
         title: "Ricbert's Carpentry Shop",
         coordinates: { x: 405, y: 2192 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Ricbert_Carpentry_Shop.png",
         lore: "More information about Ricbert's Carpentry Shop is coming soon.",
         currency: "gold",
         npcs: [],
@@ -10840,7 +10671,7 @@ export const mapMarkers = {
       details: {
         title: "Berctuald's Farming Shop",
         coordinates: { x: 398, y: 2194 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Berctuald_Farming_Shop.png",
         lore: "More information about Berctuald's Farming Shop is coming soon.",
         currency: "gold",
         npcs: [],
@@ -10872,7 +10703,7 @@ export const mapMarkers = {
       details: {
         title: "Osric's Pub",
         coordinates: { x: 402, y: 2219 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Osrics_Pub.png",
         lore: "More information about Osric's Pub is coming soon.",
         currency: "gold",
         npcs: [],
@@ -10888,7 +10719,7 @@ export const mapMarkers = {
       details: {
         title: "Wulfhere's Provisioner Shop",
         coordinates: { x: 384, y: 2219 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Wulfheres_Provisioner_Shop.png",
         lore: "More information about Wulfhere's Provisioner Shop is coming soon.",
         currency: "gold",
         npcs: [],
@@ -10904,7 +10735,7 @@ export const mapMarkers = {
       details: {
         title: "Killjoy's Weaponry Shop",
         coordinates: { x: 370, y: 2219 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Killjoys_Weaponry_Shop.png",
         lore: "More information about Killjoy's Weaponry Shop is coming soon.",
         currency: "gold",
         npcs: [],
@@ -10920,7 +10751,7 @@ export const mapMarkers = {
       details: {
         title: "Harkyn's Armory Shop",
         coordinates: { x: 374, y: 2215 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Harkyns_Armory_Shop.png",
         lore: "More information about Harkyn's Armory Shop is coming soon.",
         currency: "gold",
         npcs: [],
@@ -10936,7 +10767,7 @@ export const mapMarkers = {
       details: {
         title: "Aldulf's Magic Shop",
         coordinates: { x: 379, y: 2236 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Aldulfs_Magic_Shop.png",
         lore: "More information about Aldulf's Magic Shop is coming soon.",
         currency: "gold",
         npcs: [],
@@ -11025,14 +10856,14 @@ export const mapMarkers = {
       },
     },
 
-    // Region: Valley of Giants Shops
+    // Region: 9 - Valley of Giants Shops
     // No shops in Valley of Giants
 
-    // Region: Heartwood Coast Shops
+    // Region: 10 - Heartwood Coast Shops
 
-    // Region: Tundria Shops
+    // Region: 11 - Tundria Shops
 
-    // Region: Sands of Creation Shops
+    // Region: 12 - Sands of Creation Shops
     // City: Khafra Shops
     {
       category: "npc",
@@ -11501,7 +11332,7 @@ export const mapMarkers = {
       },
     },
 
-    // Region: Broken Finger Shops
+    // Region: 14 - Broken Finger Shops
     // City: Broken Finger Town Shops
   ],
 
@@ -11516,15 +11347,14 @@ export const mapMarkers = {
       details: {
         title: "Spawn Gate",
         coordinates: { x: 778, y: 140 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Valinor_Spawn_Gate.png",
         lore: "More information about Spawn Gate is coming soon.",
         npcs: [],
         links: [],
       },
     },
-
-    // Island: Krythan Island Spawns
-    // Region: Silvest Valley Spawns
+    
+    // Region: 2 - Silvest Valley Spawns
     {
       category: "spawn",
       type: "overworld_spawn_good",
@@ -11577,7 +11407,7 @@ export const mapMarkers = {
       },
     },
 
-    // Region: Krythan Spawns
+    // Region: 3 - Krythan Spawns
     // City: Varg Spawns
     {
       category: "spawn",
@@ -11603,7 +11433,7 @@ export const mapMarkers = {
       details: {
         title: "Evil Spawn Gate",
         coordinates: { x: 776, y: 872 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Krythan_Fields_Evil_Spawn_Gate.png",
         lore: "More information about Evil Spawn Gate is coming soon.",
         npcs: [],
         links: [],
@@ -11693,7 +11523,7 @@ export const mapMarkers = {
     },
     
 
-    // Region: Darkwoods Spawns
+    // Region: 4 - Darkwoods Spawns
     {
       category: "spawn",
       type: "overworld_spawn_evil",
@@ -11800,7 +11630,7 @@ export const mapMarkers = {
       },
     },
 
-    // Region: Battle Plains Spawns
+    // Region: 5 - Battle Plains Spawns
     // City: Chlera Spawns
     {
       category: "spawn",
@@ -11834,7 +11664,7 @@ export const mapMarkers = {
       },
     },
 
-    // Region: Black Swamp Spawns
+    // Region: 6 - Black Swamp Spawns
     {
       category: "spawn",
       type: "overworld_spawn_good",
@@ -11919,7 +11749,7 @@ export const mapMarkers = {
     },
 
 
-    // Region: Highlands Spawns
+    // Region: 7 - Highlands Spawns
     // City: Parian Spawns
     {
       category: "spawn",
@@ -11957,7 +11787,7 @@ export const mapMarkers = {
       },
     },
 
-    // Region: Western Isles Spawns
+    // Region: 8 - Western Isles Spawns
     {
       category: "spawn",
       type: "overworld_spawn_evil",
@@ -11967,7 +11797,7 @@ export const mapMarkers = {
       details: {
         title: "Evil Spawn Gate",
         coordinates: { x: 3799, y: 2647 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Eastern_Highlands_Evil_Spawn_Gate.png",
         lore: "More information about Evil Spawn Gate is coming soon.",
         npcs: [],
         links: [],
@@ -11984,7 +11814,7 @@ export const mapMarkers = {
       details: {
         title: "Good Spawn Gate",
         coordinates: { x: 439, y: 2025 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Scarab_Island_Good_Spawn_Gate.png",
         lore: "More information about Good Spawn Gate is coming soon.",
         npcs: [],
         links: [],
@@ -11993,7 +11823,7 @@ export const mapMarkers = {
 
     
 
-    // Region: Sands of Creation Spawns
+    // Region: 12 - Sands of Creation Spawns
     // City: Ruhura Spawns
     {
       category: "spawn",
@@ -12045,7 +11875,7 @@ export const mapMarkers = {
 
   undergrounds: [
     // Island: Valinor Island underground
-    // Region: Valinor underground
+    // Region:  1 - Valinor underground
     {
       category: "undergrounds",
       type: "overworld_dungeon",
@@ -12057,7 +11887,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 608, y: 358 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Frumps_Lair.png",
         lore: "More information about Frump's Lair is coming soon.",
         npcs: [],
         links: [],
@@ -12074,7 +11904,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 874, y: 310 }, //I need to verify this location
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Bonesnarls_Lair.png",
         lore: "More information about Bonesnarl's Lair is coming soon.",
         npcs: [],
         links: [],
@@ -12194,7 +12024,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 763, y: 118 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Stairs_to_Mage_Trainers.png",
         lore: "More information about Stairs to Mage Trainers is coming soon.",
         npcs: [],
         links: [],
@@ -12203,7 +12033,7 @@ export const mapMarkers = {
 
     
 
-    // Region: Krythan Island underground
+    // Region: 3 - Krythan Island underground
     // City: Varg underground
 
     // City: Hothbra underground
@@ -12282,7 +12112,7 @@ export const mapMarkers = {
 
     // City: Vrethpool underground
 
-    // Region: Silvest Valley underground
+    // Region: 2 - Silvest Valley underground
     {
       category: "undergrounds",
       type: "overworld_stairs",
@@ -12294,8 +12124,8 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 871, y: 1392 },
-        image: "images/markers/image_coming_soon.png",
-        lore: "More information about Cultist Lair's  is coming soon.",
+        image: "images/markers/Cultist_Lair_Crypt.png",
+        lore: "More information about Cultist Lair's Crypt is coming soon.",
         npcs: [],
         links: [],
       },
@@ -12311,7 +12141,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 966, y: 1347 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Snake_Pit.png",
         lore: "More information about Snake Pit is coming soon.",
         npcs: [],
         links: [],
@@ -12329,7 +12159,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 1097, y: 1183 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Cliffside_Mines.png",
         lore: "More information about Cliffside Mines is coming soon.",
         npcs: [],
         links: [],
@@ -12346,7 +12176,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 1123, y: 1362 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Provisioners_Basement.png",
         lore: "More information about Provisioner's Basement is coming soon.",
         npcs: [],
         links: [],
@@ -12363,7 +12193,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 1304, y: 1112 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Galens_Hideout.png",
         lore: "More information about Galen's Hideout is coming soon.",
         npcs: [
           {
@@ -12384,7 +12214,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 1126, y: 1155 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Sozals_Cave.png",
         lore: "More information about Sozal's Cave is coming soon.",
         npcs: [
           {
@@ -12405,8 +12235,8 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 1378, y: 1106 },
-        image: "images/markers/image_coming_soon.png",
-        lore: "More information about Kozak Cove's  is coming soon.",
+        image: "images/markers/Kozak_Coves.png",
+        lore: "More information about Kozak Cove's is coming soon.",
         npcs: [],
         links: [],
       },
@@ -12422,7 +12252,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 1162, y: 1176 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/North_Sozals_Cave.png",
         lore: "More information about Sozal's Cave is coming soon.",
         npcs: [],
         links: [],
@@ -12439,7 +12269,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 1292, y: 1122 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Silvest_Cave.png",
         lore: "More information about Sozal's Cave is coming soon.",
         npcs: [],
         links: [],
@@ -12448,7 +12278,7 @@ export const mapMarkers = {
 
   
 
-    // Region: Krythan s
+    // Region: 3 - Krythan s
     {
       category: "undergrounds",
       type: "overworld_snake",
@@ -12460,7 +12290,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 906, y: 1030 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Krythan_Crypt.png",
         lore: "More information about Krythan Crypt is coming soon.",
         npcs: [],
         links: [],
@@ -12477,7 +12307,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 509, y: 583 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Gideons_Trapdoor.png",
         lore: "More information about Gideon's Trapdoor is coming soon.",
         npcs: [],
         links: [],
@@ -12494,8 +12324,8 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 509, y: 608 },
-        image: "images/markers/image_coming_soon.png",
-        lore: "More information about Mirthik's  is coming soon.",
+        image: "images/markers/Mirthiks_Passage.png",
+        lore: "More information about Mirthik's Passage is coming soon.",
         npcs: [],
         links: [],
       },
@@ -12503,16 +12333,16 @@ export const mapMarkers = {
     {
       category: "undergrounds",
       type: "overworld_ladder",
-      tooltip: "Mirthik's ",
+      tooltip: "Mirthik's Passage Entrance",
       region: "Krythan",
       place: "Monk Island",
       details: {
-        title: "Mirthik's ",
+        title: "Mirthik's Passage Entrance",
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 504, y: 643 },
-        image: "images/markers/image_coming_soon.png",
-        lore: "More information about Mirthik's Trapdoor is coming soon.",
+        image: "images/markers/Mirthiks_Passage_Entrance.png",
+        lore: "More information about Mirthik's Passage Entrance is coming soon.",
         npcs: [],
         links: [],
       },
@@ -12528,7 +12358,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 326, y: 741 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Krythan_Fields_Snake_pit.png",
         lore: "More information about Snake pit is coming soon.",
         npcs: [],
         links: [],
@@ -12545,7 +12375,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 819, y: 1043 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Holendars_Mansion_Basement.png",
         lore: "More information about Holendar's Mansion Basement is coming soon.",
         npcs: [],
         links: [],
@@ -12562,7 +12392,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 780, y: 862 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Trap_Door_to_LSP.png",
         lore: "More information about Trap Door to LSP is coming soon.",
         npcs: [],
         links: [],
@@ -12579,7 +12409,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 790, y: 917 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Ladder_to_LSP_Sewer.png",
         lore: "More information about Ladder to LSP Sewer (Away from evil spawn gate) is coming soon.",
         npcs: [],
         links: [],
@@ -12596,7 +12426,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 793, y: 1575 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Orc_Fort_Tunnels.png",
         lore: "More information about Orc Fort Tunnels is coming soon.",
         npcs: [],
         links: [],
@@ -12613,7 +12443,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 754, y: 1539 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Orc_Fort_Tunnels.png",
         lore: "More information about Orc Fort Tunnels is coming soon.",
         npcs: [],
         links: [],
@@ -12630,7 +12460,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 362, y: 1464 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Talazarian_Dungeon.png",
         lore: "More information about Talazarian Dungeon is coming soon.",
         npcs: [],
         links: [],
@@ -12647,7 +12477,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 146, y: 1615 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Krythan_Swamp_Backdoor.png",
         lore: "More information about Ladder to Krythan Swamp Backdoor is coming soon.",
         npcs: [],
         links: [],
@@ -12664,7 +12494,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 120, y: 1641 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Krythan_Swamp_Backdoor.png",
         lore: "More information about Ladder to Krythan Swamp Backdoor is coming soon.",
         npcs: [],
         links: [],
@@ -12683,7 +12513,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 272, y: 2201 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Lopal_Crypt.png",
         lore: "More information about Lopal Crypt is coming soon.",
         npcs: [],
         links: [],
@@ -12700,7 +12530,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 343, y: 2136 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Scarab_Island_Mine.png",
         lore: "More information about Scarab Island Mine is coming soon.",
         npcs: [],
         links: [],
@@ -12717,7 +12547,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 407, y: 2231 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Lopal_Catacombs.png",
         lore: "More information about Lopal Catacombs is coming soon.",
         npcs: [],
         links: [],
@@ -12787,7 +12617,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 466, y: 2631 }, // The coordinates to center on after switching
         coordinates: { x: 297, y: 2617 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Lycanth_Crypt.png",
         lore: "More information about Lycanth Crypt is coming soon.",
         npcs: [],
         links: [],
@@ -12796,7 +12626,7 @@ export const mapMarkers = {
 
     /* Mainland underground */
 
-    // Region: Darkwoods underground
+    // Region: 4 - Darkwoods underground
     {
       category: "undergrounds",
       type: "overworld_spider",
@@ -12808,7 +12638,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 1463, y: 2675 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Shadow_Spider_Cave.png",
         lore: "More information about Shadow Spider Cave is coming soon.",
         npcs: [],
         links: [],
@@ -12825,7 +12655,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 1654, y: 2678 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Swamp_Beast_Cave.png",
         lore: "More information about Swamp Beast Cave is coming soon.",
         npcs: [],
         links: [],
@@ -12842,7 +12672,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 1572, y: 2657 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Swamp_Beast_Cave.png",
         lore: "More information about Swamp Beast Cave is coming soon.",
         npcs: [],
         links: [],
@@ -12876,7 +12706,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 839, y: 3271, zoom: 6 }, // The coordinates to center on after switching
         coordinates: { x: 839, y: 3271 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Darkwoods_Ant_Mound.png",
         lore: "More information about Ant Mound is coming soon.",
         npcs: [],
         links: [],
@@ -12893,7 +12723,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 852, y: 3355, zoom: 6 }, // The coordinates to center on after switching
         coordinates: { x: 759, y: 3322 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Darkwoods_Termigon_Pit.png",
         lore: "More information about Termigon Pit is coming soon.",
         npcs: [],
         links: [],
@@ -12910,7 +12740,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 792, y: 3330, zoom: 7 }, // The coordinates to center on after switching
         coordinates: { x: 799, y: 3335 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Darkwoods_Triddle_Mine.png",
         lore: "More information about Triddle Mine is coming soon.",
         npcs: [],
         links: [],
@@ -12927,7 +12757,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 473, y: 3431 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Whisperdale_Snake_Pit.png",
         lore: "More information about Whisperdale Snake Pit is coming soon.",
         npcs: [],
         links: [],
@@ -12944,7 +12774,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 1271, y: 3031 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Dunmarrow_Fire_Ant_Pit.png",
         lore: "More information about Dunmarrow Fire Ant Pit is coming soon.",
         npcs: [],
         links: [],
@@ -12961,7 +12791,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 1431, y: 3046 }, // The coordinates to center on after switching
         coordinates: { x: 1430, y: 3045 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/McKelsky_Crypt.png",
         lore: "More information about McKelsky Crypt is coming soon.",
         npcs: [],
         links: [],
@@ -12978,7 +12808,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 482, y: 3506 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Marsh_Dungeon.png",
         lore: "More information about Marsh Dungeon is coming soon.",
         npcs: [],
         links: [],
@@ -12995,7 +12825,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 712, y: 3125, zoom: 5 }, // The coordinates to center on after switching
         coordinates: { x: 633, y: 3187 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Cathedral_of_Joyous_Afterlife_North_Entrance.png",
         lore: "More information about Cathedral of Joyous Afterlife (North Entrance) is coming soon.",
         npcs: [],
         links: [],
@@ -13012,7 +12842,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 647, y: 3144, zoom: 5 }, // The coordinates to center on after switching
         coordinates: { x: 628, y: 3198 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Cathedral_of_Joyous_Afterlife_North_Entrance.png",
         lore: "More information about Cathedral of Joyous Afterlife (North Entrance) is coming soon.",
         npcs: [],
         links: [],
@@ -13029,7 +12859,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 680, y: 3319, zoom: 5 }, // The coordinates to center on after switching
         coordinates: { x: 680, y: 3319 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Cathedral_of_Joyous_Afterlife_South_Entrance.png",
         lore: "More information about Cathedral of Joyous Afterlife (South Entrance) is coming soon.",
         npcs: [],
         links: [],
@@ -13066,14 +12896,14 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 423, y: 3431, zoom: 7 }, // The coordinates to center on after switching
         coordinates: { x: 423, y: 3430 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Whisperdale_Library_Basement.png",
         lore: "More information about Whisperdale Library Basement is coming soon.",
         npcs: [],
         links: [],
       },
     },
 
-    // Region: Highlands underground
+    // Region: 7 - Highlands underground
     // Place: Vel Dran underground
     {
       category: "undergrounds",
@@ -13156,7 +12986,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 3561, y: 1927 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Cave_Closed.png",
         lore: "More information about Cave (CLOSED) is coming soon.",
         npcs: [],
         links: [],
@@ -13179,7 +13009,7 @@ export const mapMarkers = {
         links: [],
       },
     },
-    // Region: Valley of Giants 
+    // Region: 9 - Valley of Giants 
     {
       category: "undergrounds",
       type: "overworld_dungeon",
@@ -13244,7 +13074,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 3450, y: 3038 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/West_Parian_Tunnels_West_Entrance.png",
         lore: "More information about West Entrance to Parian Tunnels is coming soon.",
         npcs: [],
         links: [],
@@ -13261,7 +13091,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 3507, y: 3028 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/East_Parian_Tunnels_East_Entrance.png",
         lore: "More information about East Entrance to Parian Tunnels is coming soon.",
         npcs: [],
         links: [],
@@ -13318,7 +13148,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 3335, y: 3595 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Grell_Tunnels.png",
         lore: "More information about Grell Tunnels is coming soon.",
         npcs: [],
         links: [],
@@ -13335,7 +13165,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2709, y: 2887 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Badlands_Entrance.png",
         lore: "More information about Badlands Entrance is coming soon.",
         npcs: [],
         links: [],
@@ -13396,7 +13226,7 @@ export const mapMarkers = {
     },
 
 
-    // Region: Darkwoods underground
+    // Region: 4 - Darkwoods underground
     // Necropolis underground
     {
       category: "undergrounds",
@@ -13454,7 +13284,7 @@ export const mapMarkers = {
       },
     },
 
-    // Region: Battle Plains underground
+    // Region: 5 - Battle Plains underground
     
     {
       category: "undergrounds",
@@ -13467,7 +13297,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2888, y: 2882 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Badlands_Cave.png",
         lore: "More information about Badlands Cave is coming soon.",
         npcs: [],
         links: [],
@@ -13485,7 +13315,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2290, y: 2779 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Badlands_Cave.png",
         lore: "More information about Badlands Cave is coming soon.",
         npcs: [],
         links: [],
@@ -13502,7 +13332,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2009, y: 2675 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Deep_Shadow_Temple.png",
         lore: "More information about Deep Shadow Temple is coming soon.",
         npcs: [],
         links: [],
@@ -13537,7 +13367,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 2359, y: 3571, zoom: 5 }, // The coordinates to center on after switching
         coordinates: { x: 2330, y: 3620 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Chlera_Catacombs.png",
         lore: "More information about Chlera Catacombs is coming soon.",
         npcs: [],
         links: [],
@@ -13572,14 +13402,14 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 2119, y: 3138, zoom: 5 }, // The coordinates to center on after switching
         coordinates: { x: 2136, y: 3155 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Desprail_Cave.png",
         lore: "More information about Desprail Cave is coming soon.",
         npcs: [],
         links: [],
       },
     },
 
-    // Region: Black Swamp underground
+    // Region: 6 - Black Swamp underground
     {
       category: "undergrounds",
       type: "overworld_snake",
@@ -13591,7 +13421,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 3272, y: 3990 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Maraket_Snake_Pit_Entrance.png",
         lore: "More information about Maraket Snake Pit is coming soon.",
         npcs: [],
         links: [],
@@ -13609,7 +13439,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2823, y: 3623 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Krog_Sewer_Entrance.png",
         lore: "More information about Krog Sewer is coming soon.",
         npcs: [],
         links: [],
@@ -13627,7 +13457,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2792, y: 3833 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Drakkan_Crypt_Entrance.png",
         lore: "More information about Drakkan Crypt is coming soon.",
         npcs: [],
         links: [],
@@ -13645,7 +13475,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 3244, y: 3834 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Waste_Tunnels_Entrance.png",
         lore: "More information about Waste Tunnels is coming soon.",
         npcs: [],
         links: [],
@@ -13663,7 +13493,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 3095, y: 3865 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Ant_Hill_Entrance.png",
         lore: "More information about Ant Hill is coming soon.",
         npcs: [],
         links: [],
@@ -13680,7 +13510,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 3130, y: 3660 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Scorpion_Pit_Entrance.png",
         lore: "More information about Scorpion is coming soon.",
         npcs: [],
         links: [],
@@ -13732,7 +13562,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 3079, y: 3516 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Valekars_Fortress_Dungeon_Entrance.png",
         lore: "More information about Valekar's Fortress Dungeon is coming soon.",
         npcs: [],
         links: [],
@@ -13750,7 +13580,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 3154, y: 3737 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Sogrun_Mine_Entrance.png",
         lore: "More information about Sogrun Mine is coming soon.",
         npcs: [],
         links: [],
@@ -13767,16 +13597,16 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 3018, y: 3814 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Krog_Sewer_Entrance.png",
         lore: "More information about Krog Sewer is coming soon.",
         npcs: [],
         links: [],
       },
     },
 
-    // Region: Highlands underground
+    // Region: 7 - Highlands underground
 
-    // Region: Western Isles underground
+    // Region: 8 - Western Isles underground
 
      // Island: Hell underground
     {
@@ -13790,7 +13620,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 1208, y: 3348 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Lotorian_Dungeon.png",
         lore: "More information about Lotorian Dungeon is coming soon.",
         npcs: [],
         links: [],
@@ -13807,7 +13637,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 1126, y: 3393 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/The_Den_of_Baylor.png",
         lore: "More information about The Den of Baylor is coming soon.",
         npcs: [],
         links: [],
@@ -13824,7 +13654,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 1307, y: 3385 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Horned_One_Cave.png",
         lore: "More information about Horned One Cave is coming soon.",
         npcs: [],
         links: [],
@@ -13843,7 +13673,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 764, y: 752 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/LSP_Sewer_Entrance.png",
         lore: "More information about Sewer Entrance is coming soon.",
         npcs: [],
         links: [],
@@ -13860,7 +13690,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 798, y: 705 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Leather_and_Armory_Shop_Basement.png",
         lore: "More information about Leather and Armory Shop Basement is coming soon.",
         npcs: [],
         links: [],
@@ -13877,15 +13707,15 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2110, y: 2765 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Shadow_Temple_South_Entrance.png",
         lore: "More information about Shadow Temple South Entrance is coming soon.",
         npcs: [],
         links: [],
       },
     },
-    // Region: Valley of Giants underground
+    // Region: 9 - Valley of Giants underground
 
-    // Region: Heartwood Coast underground
+    // Region: 10 - Heartwood Coast underground
     {
       category: "undergrounds",
       type: "overworld_crypt",
@@ -13897,7 +13727,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 3079, y: 1607 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Gnobol_Mauseleum_Crypt.png",
         lore: "More information about Gnobol Mauseleum Crypt is coming soon.",
         npcs: [],
         links: [],
@@ -13906,7 +13736,7 @@ export const mapMarkers = {
     {
       category: "undergrounds",
       type: "overworld_cave",
-      tooltip: "Syldural",
+      tooltip: "Syldural Cave Entrance",
       region: "Heartwood Coast",
       place: "Syldural Cave",
       details: {
@@ -13914,7 +13744,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 3273, y: 1633 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Syldural_Cave_Entrance.png",
         lore: "More information about Syldural is coming soon.",
         npcs: [],
         links: [],
@@ -13948,14 +13778,14 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 3192, y: 1881 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Valmond_Skeleton_Pit.png",
         lore: "More information about Valmond Skeleton Pit is coming soon.",
         npcs: [],
         links: [],
       },
     },
 
-    // Region: Tundria Region underground
+    // Region: 11 - Tundria Region underground
     {
       category: "undergrounds",
       type: "overworld_cave",
@@ -13967,7 +13797,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2305, y: 1368 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Icebanes_Cavern_Entrance.png",
         lore: "More information about Icebane's Cavern Entrance is coming soon.",
         npcs: [],
         links: [],
@@ -13984,7 +13814,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2041, y: 1393 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Maroven_Crypt.png",
         lore: "More information about Maroven Crypt is coming soon.",
         npcs: [],
         links: [],
@@ -14001,7 +13831,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 1991, y: 1209 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Maroven_Crypt.png",
         lore: "More information about Maroven Crypt is coming soon.",
         npcs: [],
         links: [],
@@ -14018,7 +13848,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2777, y: 599 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Hammerfist_Mine_Entrance.png",
         lore: "More information about Hammerfist Mine Entrance is coming soon.",
         npcs: [],
         links: [],
@@ -14035,7 +13865,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2873, y: 964 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Web_Spinner_Spider_Cave.png",
         lore: "More information about Web Spinner Spider Cave is coming soon.",
         npcs: [],
         links: [],
@@ -14052,7 +13882,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 3525, y: 1264 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Duremar_Tomb.png",
         lore: "More information about Duremar Tomb is coming soon.",
         npcs: [],
         links: [],
@@ -14069,7 +13899,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 3784, y: 986 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Unknown_Crypt.png",
         lore: "More information about Unknown Crypt is coming soon.",
         npcs: [],
         links: [],
@@ -14086,7 +13916,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2551, y: 439 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Friedas_Dungeon.png",
         lore: "More information about Frieda's Dungeon is coming soon.",
         npcs: [],
         links: [],
@@ -14103,42 +13933,42 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2888, y: 426 },
-        image: "images/markers/image_coming_soon.png",
-        lore: "More information about Artraxis Dungeon is coming soon. Note: This coordinate is off by a few pixels from the actual dungeon entrance. x:2888, y:423 is correct.",
+        image: "images/markers/Artraxis_Dungeon.png",
+        lore: "More information about Artraxis Dungeon is coming soon.",
         npcs: [],
         links: [],
       },
     },
     {
       category: "undergrounds",
-      type: "overworld_dungeon",
-      tooltip: "Darok the Banished's Jail",
+      type: "overworld_ladder",
+      tooltip: "Darok the Banished's Jail (South Entrance)",
       region: "Tundria",
-      place: "Tundria",
+      place: "Artraxis Dungeon",
       details: {
-        title: "Artraxis Dungeon",
+        title: "Darok the Banished's Jail (South Entrance)",
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2920, y: 409 },
-        image: "images/markers/image_coming_soon.png",
-        lore: "More information about Artraxis Dungeon is coming soon.",
+        image: "images/markers/Darok_the_Banisheds_Jail_South_Entrance.png",
+        lore: "More information about Darok the Banished's Jail is coming soon.",
         npcs: [],
         links: [],
       },
     },
     {
       category: "undergrounds",
-      type: "overworld_dungeon",
-      tooltip: "Darok the Banished's Jail",
+      type: "overworld_ladder",
+      tooltip: "Darok the Banished's Jail (North Entrance)",
       region: "Tundria",
-      place: "Tundria",
+      place: "Artraxis Dungeon",
       details: {
-        title: "Artraxis Dungeon",
+        title: "Darok the Banished's Jail (North Entrance)",
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2896, y: 443 },
-        image: "images/markers/image_coming_soon.png",
-        lore: "More information about Artraxis Dungeon is coming soon.",
+        image: "images/markers/Darok_the_Banisheds_Jail_North_Entrance.png",
+        lore: "More information about Darok the Banished's Jail is coming soon.",
         npcs: [],
         links: [],
       },
@@ -14148,13 +13978,13 @@ export const mapMarkers = {
       type: "overworld_dungeon",
       tooltip: "Trapdoor to Hammerfist Mine",
       region: "Tundria",
-      place: "Tundria Northeast Coast",
+      place: "Artraxis Dungeon",
       details: {
-        title: "Artraxis Dungeon",
+        title: "Trapdoor to Hammerfist Mine",
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2838, y: 613 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Trapdoor_to_Hammerfist_Mine.png",
         lore: "More information about Trapdoor to Hammerfist Mine is coming soon.",
         npcs: [],
         links: [],
@@ -14163,7 +13993,7 @@ export const mapMarkers = {
 
     
 
-    // Region: Sands of Creation underground
+    // Region: 12 - Sands of Creation underground
     // Island: Ruhura underground
     {
       category: "undergrounds",
@@ -14186,12 +14016,13 @@ export const mapMarkers = {
       category: "undergrounds",
       type: "overworld_stairs",
       tooltip: "Lupinsix's Lair Entrance", // Near The GateKeeper
+      id: "001",
       region: "Sands of Creation",
       place: "Ruhura",
       details: {
         title: "Lupinsix's Lair",
         switchTo: "underground", // This will trigger the map switch
-        flyTo: { x: 1448, y: 3958 }, // The coordinates to center on after switching
+        flyToId: "002", // The ID of the target marker in underground-markers.js
         coordinates: { x: 792, y: 3848 },
         image: "images/markers/Lupinsix's_Lair.png",
         lore: "More information about Lupinsix's Lair is coming soon.",
@@ -14219,15 +14050,15 @@ export const mapMarkers = {
     {
       category: "undergrounds",
       type: "overworld_ladder",
-      tooltip: "Artonian Pass to Ruhura",
+      tooltip: "Artonian Pass Entrance (Ruhura Side)",
       region: "Sands of Creation",
       place: "Ruhura",
       details: {
-        title: "Artonian Pass to Ruhura",
+        title: "Artonian Pass Entrance (Ruhura Side)",
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 359, y: 3495 }, // The coordinates to center on after switching
         coordinates: { x: 308, y: 3909 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Artonian_Pass_Entrance_Ruhura_Side.png",
         lore: "More information about Artonian Pass to Ruhura is coming soon.",
         npcs: [],
         links: [],
@@ -14236,15 +14067,15 @@ export const mapMarkers = {
     {
       category: "undergrounds",
       type: "overworld_ladder",
-      tooltip: "Artonian Pass to Greater Dragon Island",
+      tooltip: "Artonian Pass Entrance (Greater Dragon Island Side)",
       region: "Sands of Creation",
       place: "Ruhura",
       details: {
-        title: "Artonian Pass to Greater Dragon Island",
+        title: "Artonian Pass Entrance (Greater Dragon Island Side)",
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 376, y: 3415 }, // The coordinates to center on after switching
         coordinates: { x: 401, y: 3793 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Artonian_Pass_Entrance_Greater_Dragon_Island_Side.png",
         lore: "More information about Artonian Pass to Greater Dragon Island is coming soon.",
         npcs: [],
         links: [],
@@ -14366,7 +14197,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 301, y: 3773 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Greater_Dragon_Island_Cave.png",
         lore: "More information about Greater Dragon Island Cave is coming soon.",
         npcs: [],
         links: [],
@@ -14385,7 +14216,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 162, y: 3597, zoom: 5 }, // The coordinates to center on after switching
         coordinates: { x: 79, y: 3355 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Khafra_Elemental_Cave.png",
         lore: "More information about Khafra Elemental Cave is coming soon.",
         npcs: [],
         links: [],
@@ -14426,7 +14257,7 @@ export const mapMarkers = {
       },
     },
 
-    // Region: Breakwater underground
+    // Region: 13 - Breakwater underground
     // City: New Town Island underground
     {
       category: "undergrounds",
@@ -14439,7 +14270,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 1945, y: 1696 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Darkwings_Lair_Entrance.png",
         lore: "More information about Darkwing's Lair Entrance is coming soon.",
         npcs: [],
         links: [],
@@ -14456,7 +14287,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2039, y: 1833 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Cyclops_and_Lion_Cave.png",
         lore: "More information about Cyclops and Lion Cave is coming soon.",
         npcs: [],
         links: [],
@@ -14473,7 +14304,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2175, y: 1518 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Zules_Cave_Entrance.png",
         lore: "More information about Zule's Cave Entrance is coming soon.",
         npcs: [],
         links: [],
@@ -14492,7 +14323,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2216, y: 2261 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Son_of_Scalos_Hideout.png",
         lore: "More information about Son of Scalo's Hideout is coming soon.",
         npcs: [],
         links: [],
@@ -14509,7 +14340,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2459, y: 2358 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Warehouse_Basement.png",
         lore: "More information about Warehouse Basement is coming soon.",
         npcs: [],
         links: [],
@@ -14526,7 +14357,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2311, y: 2199 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Pass_to_Northern_Roycroft_Island.png",
         lore: "More information about  Pass to Northern Roycroft Island is coming soon.",
         npcs: [],
         links: [],
@@ -14543,7 +14374,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 2311, y: 2185 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Pass_to_Southern_Roycroft_Island.png",
         lore: "More information about  Pass to Southern Roycroft Island is coming soon.",
         npcs: [],
         links: [],
@@ -14552,7 +14383,7 @@ export const mapMarkers = {
 
     // City: New Royale Island underground
 
-    // Region: Broken Finger underground
+    // Region: 14 - Broken Finger underground
     {
       category: "undergrounds",
       type: "overworld_dungeon",
@@ -14564,7 +14395,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 1144, y: 3659 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Broken_Finger_Dungeon.png",
         lore: "More information about Broken Finger Dungeon is coming soon.",
         npcs: [],
         links: [],
@@ -14581,7 +14412,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 1293, y: 3715 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Trap_Door_to_Gulley_Portal.png",
         lore: "More information about Trap Door to Gulley Portal  is coming soon.",
         npcs: [],
         links: [],
@@ -14598,7 +14429,7 @@ export const mapMarkers = {
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 1213, y: 3558 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Entrance_to_Horned_Ones_Cave.png",
         lore: "More information about Entrance to Horned Ones Cave is coming soon.",
         npcs: [],
         links: [],

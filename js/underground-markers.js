@@ -235,29 +235,29 @@ export const undergroundMapMarkers = {
 
   ],
   shops: [
-    // Region: Valinor Shops
+    // Region: 1 - Valinor Shops
 
-    // Region: Silvest Valley Shops
+    // Region: 2 - Silvest Valley Shops
 
-    // Region: Krythan Shops
+    // Region: 3 - Krythan Shops
 
-    // Region: Darkwoods Shops
+    // Region: 4 - Darkwoods Shops
 
-    // Region: Battle Plains Shops
+    // Region: 5 - Battle Plains Shops
 
-    // Region: Black Swamp Shops
+    // Region: 6 - Black Swamp Shops
 
-    // Region: Highlands Shops
+    // Region: 7 - Highlands Shops
 
-    // Region: Western Isles Shops
+    // Region: 8 - Western Isles Shops
 
-    // Region: Valley of Giants Shops
+    // Region: 9 - Valley of Giants Shops
 
-    // Region: Heartwood Coast Shops
+    // Region: 10 - Heartwood Coast Shops
 
-    // Region: Tundria Shops
+    // Region: 11 - Tundria Shops
 
-    // Region: Sands of Creation Shops
+    // Region: 12 - Sands of Creation Shops
     // City: Ruhura Shops
     {
       category: "npc",
@@ -276,12 +276,12 @@ export const undergroundMapMarkers = {
       },
     },
 
-    // Region: Breakwater Shops
+    // Region: 13 - Breakwater Shops
 
-    // Region: Broken Finger Shops
+    // Region: 14 - Broken Finger Shops
   ],
   services_npcs: [
-    // Region: Highlands Undergrounds
+    // Region: 7 - Highlands Undergrounds
     // Grell Tunnels
     {
       category: "npc",
@@ -292,7 +292,7 @@ export const undergroundMapMarkers = {
       details: {
         title: "Grell Innkeeper",
         coordinates: { x: 2860, y: 3481 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Grell_Innkeeper.png",
         lore: "An innkeeper deep within the Grell tunnels.",
         npcs: [],
         links: [],
@@ -307,7 +307,7 @@ export const undergroundMapMarkers = {
       details: {
         title: "Town Guardian",
         coordinates: { x: 2860, y: 3460 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Grell_Town_Guardian.png",
         lore: "The Town Guardian in Grell.",
         npcs: [],
         links: [],
@@ -322,7 +322,7 @@ export const undergroundMapMarkers = {
       details: {
         title: "Town Wizard of Insight",
         coordinates: { x: 2860, y: 3465 },
-        image: "images/markers/image_coming_soon.png",
+        image: "images/markers/Grell_Town_Wizard_of_Insight.png",
         lore: "The Town Wizard of Insight in Grell.",
         npcs: [],
         links: [],
@@ -349,9 +349,9 @@ export const undergroundMapMarkers = {
     
   ],
   undergrounds: [
-    // Region: Valinor Undergrounds
+    // Region: 1 - Valinor Undergrounds
 
-    // Region: Silvest Valley Undergrounds
+    // Region:  2 - Silvest Valley Undergrounds
 
     // Region: Krythan Undergrounds
     {
@@ -389,7 +389,7 @@ export const undergroundMapMarkers = {
       },
     },
 
-    // Region: Darkwoods Undergrounds
+    // Region: 4 - Darkwoods Undergrounds
     
     {
       category: "underground",
@@ -921,7 +921,7 @@ export const undergroundMapMarkers = {
       },
     },
 
-    // Place Necropolis underground
+    // Place: Necropolis underground
     {
       category: "underground",
       type: "underworld_ladder",
@@ -1097,9 +1097,9 @@ export const undergroundMapMarkers = {
       },
     },
 
-    // Region: Black Swamp Undergrounds
+    
 
-    // Region: Battle Plains Undergrounds
+    // Region: 5 - Battle Plains Undergrounds
     // City: Chlera Undergrounds
     {
       category: "underground",
@@ -1154,8 +1154,10 @@ export const undergroundMapMarkers = {
       },
     },
 
+    // Region: 6 - Black Swamp Undergrounds
 
-    // Region: Highlands Undergrounds
+
+    // Region: 7 - Highlands Undergrounds
     // Place: Minotaur Maze underground
     {
       category: "underground",
@@ -1245,7 +1247,7 @@ export const undergroundMapMarkers = {
         links: [],
       },
     },
-    // Region: Western Isles Undergrounds
+    // Region: 8 - Western Isles Undergrounds
     // Island: Werewolf Island Undergrounds
     {
       category: "underground",
@@ -1435,17 +1437,17 @@ export const undergroundMapMarkers = {
       },
     },
 
-    // Region: Highlands Undergrounds
+    // Region: 7 - Highlands Undergrounds
 
-    // Region: Western Isles Undergrounds
+    // Region: 8 - Western Isles Undergrounds
 
-    // Region: Valley of Giants Undergrounds
+    // Region: 9 - Valley of Giants Undergrounds
 
-    // Region: Heartwood Coast Undergrounds
+    // Region: 10 - Heartwood Coast Undergrounds
 
-    // Region: Tundria Undergrounds
+    // Region: 11 - Tundria Undergrounds
 
-    // Region: Sands of Creation Undergrounds
+    // Region: 12 - Sands of Creation Undergrounds
     // Island: Ruhura Undergrounds
     {
       category: "underground",
@@ -1569,13 +1571,14 @@ export const undergroundMapMarkers = {
     {
       category: "underground",
       type: "underworld_ladder",
+      id: "002", // Unique ID for this marker
       tooltip: "Lupinsix's Lair Exit",
       region: "Sands of Creation",
       place: "Ruhura Island",
       details: {
         title: "Lupinsix's Lair Exit",
         switchTo: "overworld",
-        flyTo: { x: 792, y: 3848, zoom: 5 }, 
+        flyToId: "001", // The ID of the target marker in markers.js
         coordinates: { x: 1448, y: 3958 },
         image: "images/markers/Lupinsix's_Lair_Exit.png",
         lore: "Exit to Lupinsix's Lair.",
@@ -1640,9 +1643,9 @@ export const undergroundMapMarkers = {
 
     // City: Khafra Undergrounds
 
-    // Region: Breakwater Undergrounds
+    // Region: 13 - Breakwater Undergrounds
     
 
-    // Region: Broken Finger Undergrounds
+    // Region: 14 - Broken Finger Undergrounds
   ],
 };
