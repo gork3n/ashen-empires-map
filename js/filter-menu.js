@@ -1,4 +1,4 @@
-let mapMarkers, undergroundMapMarkers, markerStyles, markerLayers, labelLayers, undergroundMarkerLayers, undergroundLabelLayers, createUIMarkerIcon;
+let mapMarkers, underworldMapMarkers, markerStyles, markerLayers, labelLayers, undergroundMarkerLayers, undergroundLabelLayers, createUIMarkerIcon;
 
 /**
  * A mapping from internal marker type IDs to human-readable display names for the filter menu.
@@ -90,7 +90,7 @@ const markerTypeNames = {
  * Initialize filter menu functionality. This is the main entry point for this module.
  * @param {object} data - The data object from map.js.
  * @param {object} data.mapMarkers - The marker data.
- * @param {object} data.undergroundMapMarkers - The underground marker data.
+ * @param {object} data.underworldMapMarkers - The underground marker data.
  * @param {object} data.markerStyles - The marker style definitions.
  * @param {object} data.markerLayers - The marker layer references.
  * @param {object} data.labelLayers - The label layer references.
@@ -100,7 +100,7 @@ const markerTypeNames = {
 export function initializeFilterMenu(data) {
     // Receive data directly from the function call
     mapMarkers = data.mapMarkers;
-    undergroundMapMarkers = data.undergroundMapMarkers;
+    underworldMapMarkers = data.underworldMapMarkers;
     markerStyles = data.markerStyles;
     markerLayers = data.markerLayers;
     labelLayers = data.labelLayers;
@@ -493,7 +493,7 @@ function createMarkerToggleButtons() {
  */
 function createUndergroundMarkerToggleButtons() {
     const container = document.getElementById('underworld-marker-toggles');
-    if (!container || typeof undergroundMapMarkers === 'undefined') {
+    if (!container || typeof underworldMapMarkers === 'undefined') {
         return;
     }
 
@@ -526,7 +526,7 @@ function createUndergroundMarkerToggleButtons() {
         mainText.textContent = category.name;
         mainButton.appendChild(mainText);
 
-        const isCategoryEmpty = !undergroundMapMarkers[category.id] || undergroundMapMarkers[category.id].length === 0;
+        const isCategoryEmpty = !underworldMapMarkers[category.id] || underworldMapMarkers[category.id].length === 0;
         if (isCategoryEmpty) {
             mainButton.disabled = true;
             mainButton.classList.replace('active', 'inactive');
@@ -535,7 +535,7 @@ function createUndergroundMarkerToggleButtons() {
         const subtypeContainer = document.createElement('div');
         subtypeContainer.className = 'marker-subtype-container';
 
-        const categoryData = undergroundMapMarkers[category.id];
+        const categoryData = underworldMapMarkers[category.id];
 
         if (!categoryData) {
             mainButton.disabled = true;

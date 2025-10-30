@@ -84,11 +84,11 @@ This project is built using **OpenLayers**, chosen for its superior handling of 
   - **Labels & UI Icons**: Text labels and icons in the filter menu are rendered to a canvas with custom fonts, gradients, and backgrounds. Label font size scales dynamically with the map's zoom level.
 - **Responsive UI Framework**: A mobile-first approach using CSS Flexbox, Grid, and media queries creates a fluid layout that adapts to any screen size. The UI is unified across desktop and mobile for a consistent experience.
 - **Performance Tuning**: The map is optimized for performance by using efficient label caching, disabling tile preloading to reduce memory usage, and hiding less important labels at far zoom levels.
-- **Coordinate System**: The map accurately translates between the 16384x16384 tile-based map and the 4096x4096 in-game coordinate system, ensuring all displayed coordinates are correct.
+- **Coordinate System**: The map accurately translates between the 32768x32768 tile-based map and the 4096x4096 in-game coordinate system, ensuring all displayed coordinates are correct.
 
 ## Map Coordinates
 
-The map itself is rendered from a 16384x16384 pixel tileset. However, the coordinate display and all location data are based on the original in-game coordinate system where:
+The map itself is rendered from a 32768x32768 pixel tileset. However, the coordinate display and all location data are based on the original in-game coordinate system where:
 
 - (0,0) is at the top-left corner
 - (4096,4096) is at the bottom-right corner
@@ -187,8 +187,8 @@ One of the best ways to contribute to this project is by adding or correcting th
 
 All data for the pop-up information panels is located in two files:
 
-- `js/markers.js`: Contains data for all icon-based markers (shops, quests, portals, etc.).
-- `js/labels.js`: Contains data for all text-based labels (cities, dungeons, landmarks, etc.).
+- `js/underworld-markers.js`: Contains data for all icon-based markers (shops, quests, portals, etc.).
+- `js/underworld-labels.js`: Contains data for all text-based labels (cities, dungeons, landmarks, etc.).
 
 To add or edit information, find the relevant entry in one of these files and modify its `details` object.
 

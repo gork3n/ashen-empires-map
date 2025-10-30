@@ -4,7 +4,7 @@
  * will be unique to the underground layer.
  */
 
-export const undergroundMarkerStyles = {
+export const underworldMarkerStyles = {
   // Portals
   underworld_portal_ancient: {
     icon: "icons/ancient-portal.svg",
@@ -139,7 +139,7 @@ export const undergroundMarkerStyles = {
  * will be unique to the underground layer.
  */
 
-export const undergroundMapMarkers = {
+export const underworldMapMarkers = {
   portals: [
     // Place: Crypts of Ryonkah Portal
     {
@@ -352,8 +352,60 @@ export const undergroundMapMarkers = {
     // Region: 1 - Valinor Undergrounds
 
     // Region:  2 - Silvest Valley Undergrounds
+    // City: Silvest Undergrounds
+    {
+      category: "underground",
+      type: "underworld_ladder",
+      tooltip: "Silvest Library Basement Exit",
+      region: "Krythan",
+      place: "Silvest Library",
+      details: {
+        title: "Silvest Library Basement Exit",
+        switchTo: "overworld",
+        flyTo: { x: 1149, y: 1362, zoom: 6 },        
+        coordinates: { x: 1150, y: 1365 },// The coordinates for the Ladder inside the Silvest Library underground area.
+        image: "images/markers/Silvest_Library_Basement_Exit.png",
+        lore: "Exit to Silvest Library above Silvest Library Basement.",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // Region: Krythan Undergrounds
+    {
+      category: "underground",
+      type: "underworld_ladder",
+      tooltip: "Holendar's Mansion Basement Exit",
+      region: "Krythan",
+      place: "Holendar's Mansion",
+      details: {
+        title: "Holendar's Mansion Basement Exit",
+        switchTo: "overworld",
+        flyTo: { x: 820, y: 1043, zoom: 6 },        
+        coordinates: { x: 823, y: 1047 },// The coordinates for the Ladder inside the Jeel Catacombs underground area.
+        image: "images/markers/Holendar_Mansion_Basement_Exit.png",
+        lore: "Exit to Holendar's Mansion above Holendar's Mansion Basement.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "underground",
+      type: "underworld_ladder",
+      tooltip: "Holendar's Mansion Basement Exit",
+      region: "Krythan",
+      place: "Holendar's Mansion",
+      details: {
+        title: "Holendar's Mansion Basement Exit",
+        switchTo: "overworld",
+        flyTo: { x: 875, y: 1062, zoom: 6 },        
+        coordinates: { x: 890, y: 1080 },// The coordinates for the Ladder inside the Jeel Catacombs underground area.
+        image: "images/markers/Holendar_Mansion_Basement_Exit.png",
+        lore: "Exit to Holendar's Mansion above Holendar's Mansion Basement.",
+        npcs: [],
+        links: [],
+      },
+    },
     {
       category: "underground",
       type: "underworld_ladder",
@@ -367,6 +419,23 @@ export const undergroundMapMarkers = {
         coordinates: { x: 293, y: 833 },// The coordinates for the Ladder inside the Jeel Catacombs underground area.
         image: "images/markers/Jeel_Catacombs_Ladder_Exit.png",
         lore: "Exit to Jeel above Jeel Catacombs.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "underground",
+      type: "underworld_ladder",
+      tooltip: "Book 2 Temple Exit",
+      region: "Krythan",
+      place: "Hothbra",
+      details: {
+        title: "Book 2 Temple Exit",
+        switchTo: "overworld",
+        flyTo: { x: 520, y: 1064, zoom: 6 },        
+        coordinates: { x: 520, y: 1064 },
+        image: "images/markers/Book_2_Temple_Exit.png",
+        lore: "Exit to Hothbra above Book 2 Temple.",
         npcs: [],
         links: [],
       },

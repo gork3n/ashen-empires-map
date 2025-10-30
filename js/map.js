@@ -13,10 +13,10 @@ import TileGrid from 'ol/tilegrid/TileGrid.js';
 
 // Import local data modules
 import { mapLabels } from './labels.js';
-import { mapLabels as undergroundMapLabels } from './underground-labels.js';
+import { underworldMapLabels } from './underworld-labels.js';
 import { mapMarkers, markerStyles } from './markers.js';
 import { mapMarkers as allMapMarkers } from './markers.js'; // Import with an alias
-import { undergroundMapMarkers, undergroundMarkerStyles } from './underground-markers.js';
+import { underworldMapMarkers, underworldMarkerStyles } from './underworld-markers.js';
 import { initializeFilterMenu } from './filter-menu.js';
 
 // Global variables
@@ -37,17 +37,17 @@ let flyoutMapInstance = null; // To hold the mini-map instance
 // Deep merge all marker data into one structure for easy searching by ID.
 // This prevents categories with the same name (e.g., 'undergrounds') from overwriting each other.
 const allMarkers = { ...allMapMarkers };
-for (const category in undergroundMapMarkers) {
+for (const category in underworldMapMarkers) {
     if (allMarkers[category]) {
-        allMarkers[category] = allMarkers[category].concat(undergroundMapMarkers[category]);
+        allMarkers[category] = allMarkers[category].concat(underworldMapMarkers[category]);
     } else {
-        allMarkers[category] = undergroundMapMarkers[category];
+        allMarkers[category] = underworldMapMarkers[category];
     }
 }
 
 
 // Combine marker styles from both files into a single object for easy lookup
-Object.assign(markerStyles, undergroundMarkerStyles);
+Object.assign(markerStyles, underworldMarkerStyles);
 
 // Define custom styles for different label categories
 const labelStyles = {
@@ -192,6 +192,23 @@ const labelStyles = {
             stroke: 'rgba(128, 128, 128, 0.5)',
             padding: [2, 6] // [Y, X]
         }
+    },
+    underground_generic: {
+        // Consistent style for most underground labels
+        useGradient: false,
+        useBackground: true,
+        fillColor: '#FFFFFF',
+        strokeColor: '#000000',
+        strokeWidth: 2,
+        fontFamily: '"Alegreya Sans", sans-serif',
+        fontWeight: 600,
+        fontStyle: 'normal',
+        fontSize: 18, // A good base size
+        backgroundStyle: {
+            fill: 'rgba(0, 0, 0, 0.7)',
+            stroke: 'rgba(128, 128, 128, 0.5)',
+            padding: [2, 6] // [Y, X]
+        }
     }
 };
 
@@ -238,7 +255,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // and pass the necessary data directly.
             initializeFilterMenu({
                 mapMarkers: mapMarkers,
-                undergroundMapMarkers: undergroundMapMarkers,
+                undergroundMapMarkers: underworldMapMarkers,
                 markerStyles: markerStyles,
                 markerLayers: markerLayers,
                 labelLayers: labelLayers,
@@ -289,7 +306,7 @@ function initializeMap() {
     // --- Set Initial Map View ---
     // Define the center of the map using in-game (4096x4096) coordinates.
     // This makes it easy to change the starting location.
-    const initialCenterGameCoords = { x: 783, y: 3873, }; // Default View is { x: 776, y: 668, } (Showing Lotor's Summer Palace) Centers LSP on smaller screens.
+    const initialCenterGameCoords = { x: 875, y: 1148, }; // Default View is { x: 776, y: 668, } (Showing Lotor's Summer Palace) Centers LSP on smaller screens.
 
     const mapSize = 32768;
     const scaleFactor = mapSize / 4096; // New scaling factor
@@ -374,7 +391,7 @@ function initializeMap() {
     addMapMarkers(map);
 
     // Add underground markers (they will be hidden by default)
-    addUndergroundMapMarkers(map);
+    addUnderworldMapMarkers(map);
     
     // Add labels to the map after markers so they appear on top
     addMapLabels(map);
@@ -1369,19 +1386,19 @@ function addMapMarkers(map) {
 }
 
 /**
- * Add underground map markers by category.
- * This function mirrors `addMapMarkers` but for the underground data.
+ * Add underworld map markers by category.
+ * This function mirrors `addMapMarkers` but for the underworld data.
  * @param {Map} map - The OpenLayers map
  */
-function addUndergroundMapMarkers(map) {
-    const categories = Object.keys(undergroundMapMarkers); // e.g., ['portals', 'shops', 'services_npcs', ...]
+function addUnderworldMapMarkers(map) {
+    const categories = Object.keys(underworldMapMarkers); // e.g., ['portals', 'shops', 'services_npcs', ...]
 
     categories.forEach(category => {
         const markerSource = new VectorSource(); // A source for each category
 
         const markerLayer = new VectorLayer({
             source: markerSource,
-            title: `underground_${category}_markers`,
+            title: `underworld_${category}_markers`,
             visible: false, // All underground layers are initially hidden
             style: function(feature, resolution) {
                 const type = feature.get('type');
@@ -1401,9 +1418,9 @@ function addUndergroundMapMarkers(map) {
         undergroundMarkerLayers[category] = markerLayer; 
         map.addLayer(markerLayer);
 
-        // The markers for this category are in undergroundMapMarkers[category]
-        if (undergroundMapMarkers[category] && undergroundMapMarkers[category].length) {
-            undergroundMapMarkers[category].forEach(marker => {
+        // The markers for this category are in underworldMapMarkers[category]
+        if (underworldMapMarkers[category] && underworldMapMarkers[category].length) {
+            underworldMapMarkers[category].forEach(marker => {
                 addMarkerFeature(
                     markerSource,
                     marker.details.coordinates.x,
@@ -1561,7 +1578,7 @@ function addMapLabels(map) {
  * @param {Map} map - The OpenLayers map object
  */
 function addUndergroundMapLabels(map) {
-    const categories = Object.keys(undergroundMapLabels);
+    const categories = Object.keys(underworldMapLabels);
 
     categories.forEach(category => {
         const labelSource = new VectorSource();
@@ -1573,14 +1590,16 @@ function addUndergroundMapLabels(map) {
             renderBuffer: 100,
             style: function(feature, resolution) {
                 const text = feature.get('name');
-                const category = feature.get('category');
+                const featureCategory = feature.get('category');
                 const baseFontSize = feature.get('baseFontSize');
 
                 if (!baseFontSize) return null;
 
                 const scaleFactor = Math.pow(2 / resolution, 0.415);
                 const newFontSize = Math.max(8, Math.round(baseFontSize * scaleFactor));
-
+                
+                // Use 'cities' style for cities, otherwise use the generic underground style.
+                const category = featureCategory === 'cities' ? 'cities' : 'underground_generic';
                 return createLabelImageStyle(text, category, newFontSize);
             }
         };
@@ -1589,8 +1608,8 @@ function addUndergroundMapLabels(map) {
         undergroundLabelLayers[category] = labelLayer;
         map.addLayer(labelLayer);
 
-        if (undergroundMapLabels[category] && undergroundMapLabels[category].length) {
-            undergroundMapLabels[category].forEach((label) => {
+        if (underworldMapLabels[category] && underworldMapLabels[category].length) {
+            underworldMapLabels[category].forEach((label) => {
                 const coords = label.details.coordinates;
 
                 if (Array.isArray(coords)) {

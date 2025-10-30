@@ -41,8 +41,8 @@ This section describes the purpose of each file in the project, especially those
 ### JavaScript
 
 - **`js/map.js`**: The core of the application. It initializes the OpenLayers map, manages all layers, handles user interactions, and controls major UI components like the info flyout.
-- **`js/labels.js` & `js/underground-labels.js`**: Data files that export arrays of label objects for the overworld and underground maps, respectively. Each object contains coordinates, text, font size, and category.
-- **`js/markers.js` & `js/underground-markers.js`**: Data files for marker data. They export marker objects grouped by category (e.g., `portals`, `shops`) and a `markerStyles` object that defines the icon and color for each marker type.
+- **`js/labels.js` & `js/underworld-labels.js`**: Data files that export arrays of label objects for the overworld and underground maps, respectively. Each object contains coordinates, text, font size, and category.
+- **`js/markers.js` & `js/underworld-markers.js`**: Data files for marker data. They export marker objects grouped by category (e.g., `portals`, `shops`) and a `markerStyles` object that defines the icon and color for each marker type.
 - **`js/filter-menu.js`** (Not provided, but inferred): This module is responsible for dynamically building the filter menu UI, handling its state (open/closed), and dispatching custom events (e.g., `toggle-label-category`) when a user interacts with the toggles. `map.js` listens for these events to update layer visibility.
 - **`js/tips.js`** (Not provided, but inferred): This module manages the "Quick Tips" bar and the associated tips modal, handling the display logic and user interaction.
 
@@ -92,7 +92,7 @@ This section describes the purpose of each file in the project, especially those
 - **Code**: `js/map.js` (functions: `initializeMap`, `switchMap`, `setupMapToggleButtons`)
 - **Explanation**:
   1.  **Tile Layers**: `initializeMap()` creates two `TileLayer` instances: `overworldTileLayer` and `undergroundTileLayer`. The underground layer is created with `visible: false`.
-  2.  **Data Layers**: Separate functions (`addMapMarkers`, `addUndergroundMapMarkers`, etc.) create the vector layers for each map. Underground layers are also set to `visible: false` initially.
+  2.  **Data Layers**: Separate functions (`addMapMarkers`, `addUnderworldMapMarkers`, etc.) create the vector layers for each map. Underground layers are also set to `visible: false` initially.
   3.  **Switching Logic**: The `switchMap(targetMap)` function is the central controller. It:
       - Toggles the visibility of the appropriate tile layers.
       - Iterates through the `markerLayers` and `undergroundMarkerLayers` objects, setting the visibility of all layers within them.
@@ -100,7 +100,7 @@ This section describes the purpose of each file in the project, especially those
       - Toggles the `.active` class on the UI buttons.
    - **ID-Based Linking**: To improve maintainability, hardcoded `flyTo` coordinates have been replaced with a `flyToId` system.
     - A `findMarkerById(id)` helper function searches a combined `allMarkers` object to locate a marker by its unique ID.
-    - The `allMarkers` object is created by deep-merging `mapMarkers` and `undergroundMapMarkers` to prevent category name collisions.
+    - The `allMarkers` object is created by deep-merging `mapMarkers` and `underworldMapMarkers` to prevent category name collisions.
     - The `switchMap` and `initializeFlyoutMap` functions now prioritize `flyToId`. They use the helper function to get the target marker's coordinates dynamically, ensuring that links between maps (e.g., dungeon entrances/exits) are always accurate even if a marker's position is updated.
     - The info flyout logic checks that `details.switchTo !== currentMap` to ensure a mini-map preview only appears when linking to a *different* map.
   - **ID Numbering Scheme**: A structured, 6-digit ID system (`M-T-RR-II`) is planned to give every marker a unique and meaningful ID.

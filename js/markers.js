@@ -12034,9 +12034,27 @@ export const mapMarkers = {
     
 
     // Region: 3 - Krythan Island underground
+    
     // City: Varg underground
 
     // City: Hothbra underground
+    {
+      category: "undergrounds",
+      type: "overworld_ladder",
+      tooltip: "Book 2 Temple Entrance",
+      region: "Krythan",
+      place: "Hothbra",
+      details: {
+        title: "Book 2 Temple Entrance",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 520, y: 1064 }, // The coordinates to center on after switching
+        coordinates: { x: 520, y: 1064 },
+        image: "images/markers/Book_2_Temple_Entrance.png",
+        lore: "More information about Book 2 Temple Entrance is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // City: Jeel underground
     {
@@ -12059,16 +12077,16 @@ export const mapMarkers = {
     {
       category: "undergrounds",
       type: "overworld_ladder",
-      tooltip: "Krythan Crypt Entrance",
+      tooltip: "Crypt of Kargoth Entrance",
       region: "Krythan",
-      place: "Krythan Crypt",
+      place: "Crypt of Kargoth",
       details: {
-        title: "Krythan Crypt",
+        title: "Crypt of Kargoth",
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 436, y: 852 }, // The coordinates to center on after switching
         coordinates: { x: 436, y: 852 },
-        image: "images/markers/Krythan_Crypt.png",
-        lore: "More information about Krythan Crypt is coming soon.",
+        image: "images/markers/Crypt_of_Kargoth.png",
+        lore: "More information about Crypt of Kargoth is coming soon.",
         npcs: [],
         links: [],
       },
@@ -12184,6 +12202,23 @@ export const mapMarkers = {
     },
     {
       category: "undergrounds",
+      type: "overworld_stairs",
+      tooltip: "Silvest Library Basement Entrance",
+      region: "Silvest Valley",
+      place: "Silvest",
+      details: {
+        title: "Silvest Library Basement Entrance",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 1150, y: 1365, zoom: 6 }, // The coordinates to center on after switching
+        coordinates: { x: 1149, y: 1362 },
+        image: "images/markers/Silvest_Library_Basement_Entrance.png",
+        lore: "More information about Silvest Library Basement Entrance is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "undergrounds",
       type: "overworld_cave",
       tooltip: "Galen's Hideout",
       region: "Silvest Valley",
@@ -12278,10 +12313,10 @@ export const mapMarkers = {
 
   
 
-    // Region: 3 - Krythan s
+    // Region: 3 - Krythan Underground
     {
       category: "undergrounds",
-      type: "overworld_snake",
+      type: "overworld_ladder",
       tooltip: "Krythan Crypt",
       region: "Krythan",
       place: "Krythan Cemetary",
@@ -12289,7 +12324,7 @@ export const mapMarkers = {
         title: "Krythan Crypt",
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
-        coordinates: { x: 906, y: 1030 },
+        coordinates: { x: 905, y: 1029 },
         image: "images/markers/Krythan_Crypt.png",
         lore: "More information about Krythan Crypt is coming soon.",
         npcs: [],
@@ -12367,14 +12402,14 @@ export const mapMarkers = {
     {
       category: "undergrounds",
       type: "overworld_ladder",
-      tooltip: "Holendar's Mansion Basement",
+      tooltip: "Holendar's Mansion Basement Entrance",
       region: "Krythan",
       place: "Krythan Fields",
       details: {
-        title: "Holendar's Mansion Basement",
+        title: "Holendar's Mansion Basement Entrance",
         switchTo: "underground", // This will trigger the map switch
-        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
-        coordinates: { x: 819, y: 1043 },
+        flyTo: { x: 823, y: 1047, zoom: 6 }, // The coordinates to center on after switching
+        coordinates: { x: 820, y: 1043 },
         image: "images/markers/Holendars_Mansion_Basement.png",
         lore: "More information about Holendar's Mansion Basement is coming soon.",
         npcs: [],

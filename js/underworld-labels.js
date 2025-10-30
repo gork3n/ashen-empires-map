@@ -1,5 +1,5 @@
 // Define all underground map labels organized by category
-export const mapLabels = {
+export const underworldMapLabels = {
   upperstairs: [
     // Region: Sands of Creation Upperstairs
     {
@@ -38,7 +38,7 @@ export const mapLabels = {
     // Region: Highlands Cities
     {
       name: "Grell",
-      fontSize: 30,
+      fontSize: 20,
       region: "Highlands",
       details: {
         title: "Grell",
@@ -70,7 +70,7 @@ export const mapLabels = {
     // Region: Highlands Dungeons
     {
       name: "Minotaur Maze",
-      fontSize: 30,
+      fontSize: 20,
       region: "Highlands",
       details: {
         title: "Minotaur Maze",
@@ -107,7 +107,7 @@ export const mapLabels = {
     // Region: Krythan Crypts
     {
       name: "Krythan Crypt",
-      fontSize: 30,
+      fontSize: 20,
       region: "Krythan",
       details: {
         title: "Krythan Crypt",
@@ -123,7 +123,7 @@ export const mapLabels = {
     // Region: Darkwoods Crypts
     {
       name: "Cathedral\nof\nJoyous Afterlife",
-      fontSize: 30,
+      fontSize: 20,
       region: "Darkwoods",
       details: {
         title: "Cathedral of Joyous Afterlife",
@@ -138,7 +138,7 @@ export const mapLabels = {
     },
     {
       name: "Crypts of Ryonkah",
-      fontSize: 30,
+      fontSize: 20,
       region: "Darkwoods",
       details: {
         title: "Crypts of Ryonkah",
@@ -153,7 +153,7 @@ export const mapLabels = {
     },
     {
       name: "McKelsky Crypt",
-      fontSize: 30,
+      fontSize: 20,
       region: "Darkwoods",
       details: {
         title: "McKelsky Crypt",
@@ -176,7 +176,7 @@ export const mapLabels = {
     // Place: Lycanth Crypt
     {
       name: "Crypts of Ryonkah",
-      fontSize: 30,
+      fontSize: 20,
       region: "Western Isles",
       details: {
         title: "Lycanth Crypt",
@@ -198,7 +198,7 @@ export const mapLabels = {
     // Place: Vel Dran Cave
     {
       name: "Vel Dran Cave",
-      fontSize: 30,
+      fontSize: 20,
       region: "Highlands",
       details: {
         title: "Vel Dran Cave",
@@ -216,7 +216,7 @@ export const mapLabels = {
     // Place: Spore Cave
     {
       name: "Spore Cave",
-      fontSize: 30,
+      fontSize: 20,
       region: "Highlands",
       details: {
         title: "Spore Cave",
@@ -231,7 +231,7 @@ export const mapLabels = {
     },
     {
       name: "Spore Cave Level 2",
-      fontSize: 30,
+      fontSize: 20,
       region: "Highlands",
       details: {
         title: "Spore Cave Level 2",
@@ -246,7 +246,7 @@ export const mapLabels = {
     },
     {
       name: "Spore Cave Level 3",
-      fontSize: 30,
+      fontSize: 20,
       region: "Highlands",
       details: {
         title: "Spore Cave Level 3",
@@ -261,7 +261,7 @@ export const mapLabels = {
     },
     {
       name: "Spore Cave Level 4",
-      fontSize: 30,
+      fontSize: 20,
       region: "Highlands",
       details: {
         title: "Spore Cave Level 4",
@@ -358,7 +358,7 @@ export const mapLabels = {
     // Region: Highlands Mines
     {
       name: "Ethera Palace Mine",
-      fontSize: 30,
+      fontSize: 20,
       region: "Highlands",
       details: {
         title: "Ethera Palace Mine",
@@ -373,7 +373,7 @@ export const mapLabels = {
     },
     {
       name: "Ethera Palace Mine (Level 2)",
-      fontSize: 30,
+      fontSize: 20,
       region: "Highlands",
       details: {
         title: "Ethera Palace Mine (Level 2)",
@@ -433,7 +433,7 @@ export const mapLabels = {
     // Place: Emporium Abbey
     {
       name: "Emporium Abbey Basement",
-      fontSize: 30,
+      fontSize: 20,
       region: "Highlands",
       details: {
         title: "Emporium Abbey Basement",
@@ -485,7 +485,7 @@ export const mapLabels = {
     // Region: Krythan Catacombs
     {
       name: "Jeel Catacombs",
-      fontSize: 30,
+      fontSize: 20,
       region: "Krythan",
       details: {
         title: "Jeel Catacombs",
@@ -506,7 +506,7 @@ export const mapLabels = {
     // City: Chlera Catacombs
     {
       name: "Chlera Catacombs",
-      fontSize: 30,
+      fontSize: 20,
       region: "Battle Plains",
       details: {
         title: "Chlera Catacombs",

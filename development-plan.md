@@ -22,24 +22,50 @@ This section is migrated from the main README to consolidate all planning detail
   - ✅ **Underground Map Layer**: A separate tile layer for the underground map has been integrated, with a UI to toggle between it and the overworld.
   - 🚧 **Underground Markers & Labels**: The filter menu is now context-aware for the underground map. Data for underground-specific markers and labels is currently being added, while work on overworld markers and labels continues.
   - 🚧 **ID-Based Marker Linking**: Replaced hardcoded `flyTo` coordinates with a `flyToId` system. This allows markers (like dungeon entrances and exits) to be dynamically linked. If a marker's location is updated, all links to it are automatically corrected, improving data integrity and maintainability.
-    - **ID Numbering Scheme**: A structured, 6-digit ID system is planned to ensure organization, prevent collisions, and support all map layers. The format is `M-T-RR-II`:
+    - **ID Numbering Scheme**: A structured, 8-digit ID system is planned to ensure organization, prevent collisions, and support all map layers. The format is `M-CC-TT-III`:
       - **`M` (Map - 1st digit):** Identifies which map the marker physically exists on.
-        - `1`xxxxx: **Overworld** (`markers.js`)
-        - `2`xxxxx: **Underground** (`underground-markers.js`)
-        - `3`xxxxx: **Housing Realm** (future `housing-markers.js`)
-      - **`T` (Type - 2nd digit):** Defines the marker's primary function.
-        - x`0`xxxx: **Standard Marker** (Not a link, e.g., a shop, quest NPC).
-        - x`1`xxxx: **Linked Marker** (Uses `flyToId` to connect to another marker).
-      - **`RR` (Region Code - 3rd and 4th digits):** A two-digit code to group markers by geographical region. This allows for up to 99 regions.
-        - `00`: Reserved for maps without regions, such as the **Housing Realm**.
-        - `01`: Valinor
-        - `02`: Krythan
-        - `03`: Silvest Valley
-        - `04`: Darkwoods
-        - `...` (and so on for all other regions).
-      - **`II` (Instance ID - 5th and 6th digits):** A sequential, two-digit number for each unique marker within its Map, Type, and Region group.
-        - This provides 99 unique IDs per group.
-        - For linked markers, pairs will use sequential numbers (e.g., Entrance `111101`, Exit `211102`).
+        - `1`xxxxxxx: **Overworld** (`markers.js`, `labels.js`)
+        - `2`xxxxxxx: **Underground** (`underground-markers.js`, `underground-labels.js`)
+        - `3`xxxxxxx: **Housing Realm** (future)
+      - **`CC` (Category - 2nd & 3rd digits):** A two-digit code for the marker's broad category.
+        - `01`: **Portals & Teleportation**
+        - `02`: **Entrances & Exits** (Stairs, caves, basements)
+        - `03`: **Services** (Shops, Banks, etc.)
+        - `04`: **NPCs** (Quest givers, key characters)
+        - `05`: **Creatures & Spawns**
+        - `06`: **Locations of Interest** (Docks, landmarks)
+        - `07`: **Labels** (For text-based map labels)
+      - **`TT` (Type - 4th & 5th digits):** A two-digit code for the marker's specific type. This allows for highly granular classification.
+        - *Examples for Category `02` (Entrances):*
+          - `01`: Dungeon Entrance (Overworld -> Underground, linked)
+          - `02`: Dungeon Exit (Underground -> Overworld, linked)
+          - `03`: Cave
+          - `04`: Basement
+        - *Examples for Category `05` (Creatures):*
+          - `01`: Boss (Zule, Darkwing, etc.)
+          - `02`: Animal
+          - `03`: Demon
+          - `04`: Dragon
+          - `05`: Elemental
+          Fungoid
+          Giant
+          Goblin
+          Humanoid
+          Insect
+          Kobold
+          Minotaur
+          Sea Creature
+          Undead
+          Vermin
+          Werewolf
+          Wyvern
+        - *Examples for Category `07` (Labels):*
+          - `01`: City Label
+          - `02`: Dungeon Label
+          - `03`: Landmark Label
+      - **`III` (Instance ID - 6th, 7th, and 8th digits):** A sequential, **three-digit** number for each unique marker within its group.
+        - This provides 999 unique IDs per group, offering much greater scalability.
+        - For linked markers, pairs will use sequential numbers (e.g., Entrance `10201001`, Exit `20202002`).
   - ⬜ **Housing Realm Map**: A dedicated map layer for the Housing Realm, with its own labels and markers. This is a long-term goal pending the creation of the map tiles (stitching, upscaling, and tiling).
 - ✅ **Responsive & Mobile-Optimized UI**
   - 🚧 Fluid layout for all screen sizes.
@@ -65,8 +91,8 @@ This section is migrated from the main README to consolidate all planning detail
 
         ```javascript
         // Example 1: Standard Marker (A Shop)
-        {
-            id: "100701", // M-T-RR-II: 1-0-07-01 (Overworld, Standard, Highlands, Instance 01)
+        { // M-CC-TT-III: 1-03-01-001 (Overworld, Service, Blacksmith, Instance 001)
+            id: "10301001",
             type: 'overworld_shop_blacksmith',
             tooltip: "Hemos' Blacksmith Shop",
             region: 'Highlands',
@@ -84,8 +110,8 @@ This section is migrated from the main README to consolidate all planning detail
         }
 
         // Example 2: Linked Marker (A Dungeon Entrance)
-        {
-            id: "111101", // M-T-RR-II: 1-1-11-01 (Overworld, Linked, Sands of Creation, Instance 01)
+        { // M-CC-TT-III: 1-02-01-001 (Overworld, Entrance, Dungeon Entrance, Instance 001)
+            id: "10201001",
             type: 'overworld_stairs',
             tooltip: "Lupinsix's Lair Entrance",
             region: 'Sands of Creation',
@@ -93,7 +119,7 @@ This section is migrated from the main README to consolidate all planning detail
             details: {
                 title: "Lupinsix's Lair",
                 switchTo: "underground",
-                flyToId: "211102", // Points to the corresponding exit marker on the underground map
+                flyToId: "20202002", // Points to the corresponding exit marker on the underground map
                 coordinates: { x: 792, y: 3848 }
             }
         }
