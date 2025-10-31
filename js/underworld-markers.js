@@ -132,6 +132,10 @@ export const underworldMarkerStyles = {
     icon: "icons/hole.svg",
     color: "#d36517ff", // SaddleBrown
   },
+  underworld_mine: {
+    icon: "icons/mine.svg",
+    color: "#d36517ff", // SaddleBrown
+  },
 };
 /**
  * This file contains the marker data specifically for the underground map.
@@ -355,7 +359,7 @@ export const underworldMapMarkers = {
     // City: Silvest Undergrounds
     {
       category: "underground",
-      type: "underworld_ladder",
+      type: "underworld_stairs",
       tooltip: "Silvest Library Basement Exit",
       region: "Krythan",
       place: "Silvest Library",
@@ -366,6 +370,193 @@ export const underworldMapMarkers = {
         coordinates: { x: 1150, y: 1365 },// The coordinates for the Ladder inside the Silvest Library underground area.
         image: "images/markers/Silvest_Library_Basement_Exit.png",
         lore: "Exit to Silvest Library above Silvest Library Basement.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "underground",
+      type: "underworld_cave",
+      tooltip: "Coenred's Provisioner Shop Basement Exit",
+      region: "Krythan",
+      place: "Coenred's Provisioner Shop",
+      details: {
+        title: "Coenred's Provisioner Shop Basement Exit",
+        switchTo: "overworld",
+        flyTo: { x: 1149, y: 1362, zoom: 6 },        
+        coordinates: { x: 1132, y: 1363 },// The coordinates for the Ladder inside the Coenred's Provisioner Shop underground area.
+        image: "images/markers/Coenred_Provisioner_Shop_Basement_Exit.png",
+        lore: "Exit to Coenred's Provisioner Shop above Coenred's Provisioner Shop Basement.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "underground",
+      type: "underworld_mine",
+      tooltip: "Silvest Mines Exit",
+      region: "Krythan",
+      place: "Silvest Mines",
+      details: {
+        title: "Silvest Mines Exit",
+        switchTo: "overworld",
+        flyTo: { x: 1015, y: 1110, zoom: 6 },        
+        coordinates: { x: 1007, y: 1107 },// The coordinates for the Ladder inside the Silvest Mines underground area.
+        image: "images/markers/Silvest_Mines_Exit.png",
+        lore: "Exit to Silvest Mines above Silvest Mines Exit.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "underground",
+      type: "underworld_ladder",
+      tooltip: "Kobold Castle Entrance",
+      region: "Krythan",
+      place: "Kobold Castle",
+      details: {
+        title: "Kobold Castle Entrance",
+        switchTo: "overworld",
+        flyTo: { x: 1292, y: 1122, zoom: 6 },        
+        coordinates: { x: 1292, y: 1122 },// The coordinates for the Ladder inside the Kobold Castle underground area.
+        image: "images/markers/Kobold_Castle_Entrance.png",
+        lore: "Exit to Kobold Castle above Kobold Castle Entrance.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "underground",
+      type: "underworld_ladder",
+      tooltip: "Silvest Mines Exit",
+      region: "Krythan",
+      place: "Karzak Cove",
+      details: {
+        title: "Silvest Mines Exit",
+        switchTo: "overworld",
+        flyTo: { x: 1378, y: 1106, zoom: 6 },        
+        coordinates: { x: 1368, y: 1093 },// The coordinates for the Ladder inside the Kobold Castle underground area.
+        image: "images/markers/Karzak_Cove_Silvest_Mine_Exit.png",
+        lore: "Exit to Karzak Cove above Silvest Mines.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "underground",
+      type: "underworld_cave",
+      tooltip: "Dalvon Mines Exit",
+      region: "Krythan",
+      place: "Karzak Cove",
+      details: {
+        title: "Dalvon Mines Exit",
+        switchTo: "overworld",
+        flyTo: { x: 1441, y: 1398, zoom: 6 },        
+        coordinates: { x: 1432, y: 1399 },// The coordinates for the Ladder inside the Kobold Castle underground area.
+        image: "images/markers/Karzak_Cove_Dalvon_Mine_Exit.png",
+        lore: "Exit to Karzak Cove above Dalvon Mines.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "underground",
+      type: "underworld_cave",
+      tooltip: "Galen's Hideout Exit",
+      region: "Krythan",
+      place: "Galen's Hideout",
+      details: {
+        title: "Galen's Hideout Exit",
+        switchTo: "underground",
+        flyTo: { x: 1304, y: 1112, zoom: 6 },        
+        coordinates: { x: 870, y: 82 },// The coordinates for the Ladder inside the Kobold Castle underground area.
+        image: "images/markers/Galens_Hideout_Exit.png",
+        lore: "Exit to Galen's Hideout from Dalvon Mines.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "underground",
+      type: "underworld_ladder",
+      tooltip: "Dalvon Mines Level 2 Entrance",
+      region: "Krythan",
+      place: "Dalvon Mines",
+      details: {
+        title: "Dalvon Mines Level 2 Entrance",
+        switchTo: "underground",
+        flyTo: { x: 1462, y: 1607, zoom: 6 },        
+        coordinates: { x: 1444, y: 1475 },// The coordinates for the Ladder inside the Kobold Castle underground area.
+        image: "images/markers/Karzak_Cove_Dalvon_Mine_Level_2_Entrance.png",
+        lore: "Entrance to Dalvon Mines Level 2 from Dalvon Mines.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "underground",
+      type: "underworld_ladder",
+      tooltip: "Dalvon Mines Level 2 Exit",
+      region: "Krythan",
+      place: "Dalvon Mines",
+      details: {
+        title: "Dalvon Mines Level 2 Exit",
+        switchTo: "underground",
+        flyTo: { x: 1444, y: 1475, zoom: 6 },        
+        coordinates: { x: 1462, y: 1607 },// The coordinates for the Ladder inside the Kobold Castle underground area.
+        image: "images/markers/Karzak_Cove_Dalvon_Mine_Level_2_Exit.png",
+        lore: "Exit to Dalvon Mines Level 2 from Dalvon Mines.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "underground",
+      type: "underworld_ladder",
+      tooltip: "Dalvon Mines Level 2 Entrance",
+      region: "Krythan",
+      place: "Dalvon Mines",
+      details: {
+        title: "Dalvon Mines Level 2 Entrance",
+        switchTo: "underground",
+        flyTo: { x: 1470, y: 1607, zoom: 6 },        
+        coordinates: { x: 1452, y: 1475 },// The coordinates for the Ladder inside the Kobold Castle underground area.
+        image: "images/markers/Karzak_Cove_Dalvon_Mine_Level_2_Entrance.png",
+        lore: "Entrance to Dalvon Mines Level 2 from Dalvon Mines.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "underground",
+      type: "underworld_ladder",
+      tooltip: "Dalvon Mines Level 2 Entrance",
+      region: "Krythan",
+      place: "Dalvon Mines",
+      details: {
+        title: "Dalvon Mines Level 2 Entrance",
+        switchTo: "underground",
+        flyTo: { x: 1470, y: 1607, zoom: 6 },        
+        coordinates: { x: 1452, y: 1475 },// The coordinates for the Ladder inside the Kobold Castle underground area.
+        image: "images/markers/Karzak_Cove_Dalvon_Mine_Level_2_Entrance.png",
+        lore: "Entrance to Dalvon Mines Level 2 from Dalvon Mines.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "underground",
+      type: "underworld_ladder",
+      tooltip: "Dalvon Mines Level 2 Exit",
+      region: "Krythan",
+      place: "Dalvon Mines",
+      details: {
+        title: "Dalvon Mines Level 2 Exit",
+        switchTo: "underground",
+        flyTo: { x: 1470, y: 1607, zoom: 6 },        
+        coordinates: { x: 1470, y: 1607 },// The coordinates for the Ladder inside the Kobold Castle underground area.
+        image: "images/markers/Karzak_Cove_Dalvon_Mine_Level_2_Exit.png",
+        lore: "Exit to Dalvon Mines Level 2 from Dalvon Mines.",
         npcs: [],
         links: [],
       },
@@ -453,6 +644,91 @@ export const underworldMapMarkers = {
         coordinates: { x: 435, y: 851 },// The coordinates for the Ladder inside the Jeel Catacombs underground area.
         image: "images/markers/Krythan_Crypt_Ladder_Exit.png",
         lore: "Exit to Krythan above Krythan Crypt.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "underground",
+      type: "underworld_ladder",
+      tooltip: "Krythan Crypt Exit",
+      region: "Krythan",
+      place: "Krythan Crypt",
+      details: {
+        title: "Krythan Crypt Exit",
+        switchTo: "overworld",
+        flyTo: { x: 906, y: 1028 },
+        coordinates: { x: 919, y: 1031 },// The coordinates for the Ladder inside the Jeel Catacombs underground area.
+        image: "images/markers/Krythan_Crypt_Ladder_Exit.png",
+        lore: "Exit to Krythan above Krythan Crypt.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "underground",
+      type: "underworld_ladder",
+      tooltip: "Krythan Crypt Level 2 Entrance",
+      region: "Krythan",
+      place: "Krythan Crypt",
+      details: {
+        title: "Krythan Crypt Level 2 Entrance",
+        switchTo: "underground",
+        flyTo: { x: 983, y: 1061 },
+        coordinates: { x: 908, y: 1016 },// The coordinates for the Ladder inside the Jeel Catacombs underground area.
+        image: "images/markers/Krythan_Crypt_Ladder_Entrance.png",
+        lore: "Exit to Krythan above Krythan Crypt.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "underground",
+      type: "underworld_ladder",
+      tooltip: "Krythan Crypt Level 2 Exit",
+      region: "Krythan",
+      place: "Krythan Crypt",
+      details: {
+        title: "Krythan Crypt Level 2 Exit",
+        switchTo: "underground",
+        flyTo: { x: 908, y: 1016 },
+        coordinates: { x: 983, y: 1061 },// The coordinates for the Ladder inside the Jeel Catacombs underground area.
+        image: "images/markers/Krythan_Crypt_Ladder_Level_2_Exit.png",
+        lore: "Exit to Krythan above Krythan Crypt.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "underground",
+      type: "underworld_ladder",
+      tooltip: "Krythan Crypt Level 3 Exit",
+      region: "Krythan",
+      place: "Krythan Crypt",
+      details: {
+        title: "Krythan Crypt Level 3 Exit",
+        switchTo: "underground",
+        flyTo: { x: 978, y: 1095 },
+        coordinates: { x: 1049, y: 1095 },// The coordinates for the Ladder inside the Jeel Catacombs underground area.
+        image: "images/markers/Krythan_Crypt_Ladder_Level_3_Entrance.png",
+        lore: "Exit to Krythan above Krythan Crypt.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "underground",
+      type: "underworld_ladder",
+      tooltip: "Krythan Crypt Level 3 Entrance",
+      region: "Krythan",
+      place: "Krythan Crypt",
+      details: {
+        title: "Krythan Crypt Level 3 Entrance",
+        switchTo: "underground",
+        flyTo: { x: 1049, y: 1095 },
+        coordinates: { x: 978, y: 1095 },// The coordinates for the Ladder inside the Jeel Catacombs underground area.
+        image: "images/markers/Krythan_Crypt_Ladder_Level_3_Entrance.png",
+        lore: "Entrance to Krythan Crypt Level 3.",
         npcs: [],
         links: [],
       },
@@ -1321,11 +1597,11 @@ export const underworldMapMarkers = {
     {
       category: "underground",
       type: "underworld_ladder",
-      tooltip: "Werewolf Island Tunnels Exit",
+      tooltip: "Werewolf Island Pass Exit",
       region: "Western Isles",
       place: "Werewolf Island",
       details: {
-        title: "Werewolf Island Tunnels Exit",
+        title: "Werewolf Island Pass Exit",
         switchTo: "overworld",
         flyTo: { x: 462, y: 2552, zoom: 5 },
         coordinates: { x: 477, y: 2631 },
@@ -1338,11 +1614,11 @@ export const underworldMapMarkers = {
     {
       category: "underground",
       type: "underworld_ladder",
-      tooltip: "Werewolf Island Tunnels Exit",
+      tooltip: "Werewolf Island Pass Exit",
       region: "Western Isles",
       place: "Werewolf Island",
       details: {
-        title: "Werewolf Island Tunnels Exit",
+        title: "Werewolf Island Pass Exit",
         switchTo: "overworld",
         flyTo: { x: 450, y: 2552, zoom: 5 },
         coordinates: { x: 466, y: 2631 },

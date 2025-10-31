@@ -196,19 +196,14 @@ const labelStyles = {
     underground_generic: {
         // Consistent style for most underground labels
         useGradient: false,
-        useBackground: true,
+        useBackground: false, // No background for generic labels
         fillColor: '#FFFFFF',
-        strokeColor: '#000000',
-        strokeWidth: 2,
+        strokeColor: 'transparent', // No border/outline
+        strokeWidth: 0,
         fontFamily: '"Alegreya Sans", sans-serif',
         fontWeight: 600,
         fontStyle: 'normal',
-        fontSize: 18, // A good base size
-        backgroundStyle: {
-            fill: 'rgba(0, 0, 0, 0.7)',
-            stroke: 'rgba(128, 128, 128, 0.5)',
-            padding: [2, 6] // [Y, X]
-        }
+        fontSize: 18 // A good base size
     }
 };
 
@@ -689,8 +684,8 @@ function populateAndShowFlyout(data, mainMapView) {
     const title = document.getElementById('info-flyout-title');
     const content = document.getElementById('info-flyout-content');
 
-    // A map preview should only be shown if the marker switches to a DIFFERENT map.
-    const isMapPreview = details.switchTo && (details.flyTo || details.flyToId) && details.switchTo !== currentMap;
+    // A map preview should be shown for any marker that has switching/flying capabilities.
+    const isMapPreview = details.switchTo && (details.flyTo || details.flyToId);
 
     // First, ensure any previous mini-map is destroyed to prevent memory leaks
     destroyFlyoutMap();
@@ -753,7 +748,7 @@ function populateAndShowFlyout(data, mainMapView) {
     if (details.npcs && details.npcs.length > 0) {
         textHtml += '<h4>Key NPCs / Locations</h4><ul>';
         details.npcs.forEach(npc => {
-            textHtml += `<li><strong>${npc.name}:</strong> ${npc.info}</li>`;
+            textHtml += `<li>${npc.name}</li>`;
         });
         textHtml += '</ul>';
     }

@@ -321,26 +321,31 @@ export const mapMarkers = {
     //Done
 
     // Region: 2 - Silvest Valley Portals
+    // City: Silvest Portals
+    {
+      category: "portals",
+      type: "overworld_portal_lsp",
+      tooltip: "Portal to Lotor's Summer Palace",
+      region: "Silvest Valley",
+      place: "Silvest",
+      details: {
+        title: "Portal to Lotor's Summer Palace",
+        switchTo: "overworld",
+        flyTo: { x: 810, y: 643, zoom: 6 },
+        coordinates: { x: 999, y: 1337 },
+        image: "images/portals/Lotors_Summer_Palace_Portal.png",
+        lore: "More information about Portal to Lotor's Summer Palace is coming soon.",
+        quests: [],
+        npcs: [],
+        links: [],
+      },
+    },
 
     // Region: 3 - Krythan Portals
     // City: Varg Portals
 
     // City: Hothbra Portals
-    {
-      category: "portals",
-      type: "overworld_portal_lsp",
-      tooltip: "Portal to Lotor's Summer Palace",
-      region: "Krythan",
-      place: "Hothbra",
-      details: {
-        title: "Portal to Lotor's Summer Palace",
-        coordinates: { x: 999, y: 1337 },
-        image: "images/portals/Lotors_Summer_Palace_Portal.png",
-        lore: "More information about Portal to Lotor's Summer Palace is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
+    
 
     // City: Jeel Portals
 
@@ -12133,6 +12138,23 @@ export const mapMarkers = {
     // Region: 2 - Silvest Valley underground
     {
       category: "undergrounds",
+      type: "overworld_mine",
+      tooltip: "Silvest Mines Entrance",
+      region: "Silvest Valley",
+      place: "Silvest Mines",
+      details: {
+        title: "Silvest Mines Entrance",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 1007, y: 1107 }, // The coordinates to center on after switching
+        coordinates: { x: 1015, y: 1110 },
+        image: "images/markers/Silvest_Mines_Entrance.png",
+        lore: "More information about Silvest Mines Entrance is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "undergrounds",
       type: "overworld_stairs",
       tooltip: "Cultist Lair Crypt",
       region: "Silvest Valley",
@@ -12186,16 +12208,16 @@ export const mapMarkers = {
     {
       category: "undergrounds",
       type: "overworld_stairs",
-      tooltip: "Provisioner's Basement",
+      tooltip: "Coenred's Provisioner Shop Basement Entrance",
       region: "Silvest Valley",
       place: "Silvest",
       details: {
-        title: "Provisioner's Basement",
+        title: "Coenred's Provisioner Shop Basement",
         switchTo: "underground", // This will trigger the map switch
-        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
-        coordinates: { x: 1123, y: 1362 },
-        image: "images/markers/Provisioners_Basement.png",
-        lore: "More information about Provisioner's Basement is coming soon.",
+        flyTo: { x: 1132, y: 1363, zoom: 6 }, // The coordinates to center on after switching
+        coordinates: { x: 1123, y: 1361 },
+        image: "images/markers/Coenreds_Provisioner_Shop_Basement_Entrance.png",
+        lore: "More information about Coenred's Provisioner Shop Basement is coming soon.",
         npcs: [],
         links: [],
       },
@@ -12226,14 +12248,12 @@ export const mapMarkers = {
       details: {
         title: "Provisioner's Basement",
         switchTo: "underground", // This will trigger the map switch
-        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
+        flyTo: { x: 870, y: 82, zoom: 6 }, // The coordinates to center on after switching
         coordinates: { x: 1304, y: 1112 },
         image: "images/markers/Galens_Hideout.png",
         lore: "More information about Galen's Hideout is coming soon.",
         npcs: [
-          {
-          name: "Galen"
-          },
+          { name: "Galen", info: "" },
         ],
         links: [],
       },
@@ -12241,16 +12261,16 @@ export const mapMarkers = {
     {
       category: "undergrounds",
       type: "overworld_cave",
-      tooltip: "Sozal's Cave",
+      tooltip: "Sozal's Cave North Entrance",
       region: "Silvest Valley",
       place: "Sozal's Cave",
       details: {
-        title: "Provisioner's Basement",
+        title: "Sozal's Cave North Entrance",
         switchTo: "underground", // This will trigger the map switch
         flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
         coordinates: { x: 1126, y: 1155 },
-        image: "images/markers/Sozals_Cave.png",
-        lore: "More information about Sozal's Cave is coming soon.",
+        image: "images/markers/Sozals_Cave_North_Entrance.png",
+        lore: "More information about Sozal's Cave North Entrance is coming soon.",
         npcs: [
           {
           name: "Sozal (At the entrance)"
@@ -12261,17 +12281,17 @@ export const mapMarkers = {
     },
     {
       category: "undergrounds",
-      type: "overworld_cave",
-      tooltip: "Kozak Cove's ",
+      type: "overworld_ladder",
+      tooltip: "Silves Mines Entrance",
       region: "Silvest Valley",
       place: "Kozak Cove",
       details: {
-        title: "Kozak Cove's ",
+        title: "Silves Mines Entrance",
         switchTo: "underground", // This will trigger the map switch
-        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
+        flyTo: { x: 1368, y: 1093 }, // The coordinates to center on after switching
         coordinates: { x: 1378, y: 1106 },
-        image: "images/markers/Kozak_Coves.png",
-        lore: "More information about Kozak Cove's is coming soon.",
+        image: "images/markers/Silves_Mines_Entrance.png",
+        lore: "More information about Silves Mines Entrance is coming soon.",
         npcs: [],
         links: [],
       },
@@ -12296,16 +12316,33 @@ export const mapMarkers = {
     {
       category: "undergrounds",
       type: "overworld_ladder",
-      tooltip: "Entrance to Silvest Mine",
+      tooltip: "Silvest Mine Entrance",
       region: "Silvest Valley",
       place: "Kobold Castle",
       details: {
-        title: "Sozal's Cave",
+        title: "Kobold Castle Entrance",
         switchTo: "underground", // This will trigger the map switch
-        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
+        flyTo: { x: 1292, y: 1122 }, // The coordinates to center on after switching
         coordinates: { x: 1292, y: 1122 },
-        image: "images/markers/Silvest_Cave.png",
-        lore: "More information about Sozal's Cave is coming soon.",
+        image: "images/markers/Kobold_Castle_Entrance.png",
+        lore: "More information about Kobold Castle Entrance is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "undergrounds",
+      type: "overworld_cave",
+      tooltip: "Dalvon Mines Entrance",
+      region: "Silvest Valley",
+      place: "Valley of the Dead",
+      details: {
+        title: "Dalvon Mines Entrance",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 1432, y: 1399 }, // The coordinates to center on after switching
+        coordinates: { x: 1441, y: 1398 },
+        image: "images/markers/Dalvon_Mines_Entrance.png",
+        lore: "More information about Dalvon Mines Entrance is coming soon.",
         npcs: [],
         links: [],
       },
@@ -12323,8 +12360,8 @@ export const mapMarkers = {
       details: {
         title: "Krythan Crypt",
         switchTo: "underground", // This will trigger the map switch
-        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
-        coordinates: { x: 905, y: 1029 },
+        flyTo: { x: 919, y: 1031 }, // The coordinates to center on after switching
+        coordinates: { x: 906, y: 1028 },
         image: "images/markers/Krythan_Crypt.png",
         lore: "More information about Krythan Crypt is coming soon.",
         npcs: [],
@@ -12412,6 +12449,23 @@ export const mapMarkers = {
         coordinates: { x: 820, y: 1043 },
         image: "images/markers/Holendars_Mansion_Basement.png",
         lore: "More information about Holendar's Mansion Basement is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "undergrounds",
+      type: "overworld_ladder",
+      tooltip: "Holendar's Mansion Basement Escape Entrance",
+      region: "Krythan",
+      place: "Krythan Fields",
+      details: {
+        title: "Holendar's Mansion Basement Escape Entrance",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 890, y: 1080, zoom: 6 }, // The coordinates to center on after switching
+        coordinates: { x: 875, y: 1062 },
+        image: "images/markers/Holendars_Mansion_Basement_Escape.png",
+        lore: "More information about Holendar's Mansion Basement Escape is coming soon.",
         npcs: [],
         links: [],
       },

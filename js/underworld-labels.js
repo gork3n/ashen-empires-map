@@ -104,14 +104,31 @@ export const underworldMapLabels = {
     
   ],
   crypts: [
+    // Region: Silvest Valley Crypts
+
     // Region: Krythan Crypts
+    {
+      name: "Crypth of Kargoth",
+      fontSize: 20,
+      region: "Krythan",
+      details: {
+        title: "Crypt of Kargoth",
+        coordinates: { x: 435, y: 847 },
+        image: "",
+        lore: "More information about Crypt of Kargoth is coming soon.",
+        information: "",
+        bonus: "",
+        npcs: [],
+        links: [],
+      },
+    },
     {
       name: "Krythan Crypt",
       fontSize: 20,
       region: "Krythan",
       details: {
         title: "Krythan Crypt",
-        coordinates: { x: 435, y: 847 },
+        coordinates: { x: 950, y: 957 },
         image: "",
         lore: "More information about Krythan Crypt is coming soon.",
         information: "",
@@ -120,6 +137,8 @@ export const underworldMapLabels = {
         links: [],
       },
     },
+    
+    
     // Region: Darkwoods Crypts
     {
       name: "Cathedral\nof\nJoyous Afterlife",
@@ -194,6 +213,22 @@ export const underworldMapLabels = {
 
   ],
   caves: [
+    // Region: Silvest Valley Caves
+    {
+      name: "Galen's Hideout",
+      fontSize: 20,
+      region: "Silvest Valley",
+      details: {
+        title: "Galen's Hideout",
+        coordinates: { x: 863, y: 74 },
+        image: "",
+        lore: "More information about Galen's Hideout is coming soon.",
+        information: "",
+        bonus: "",
+        npcs: [],
+        links: [],
+      },
+    },
     // Region: Highlands Caves
     // Place: Vel Dran Cave
     {
@@ -216,7 +251,7 @@ export const underworldMapLabels = {
     // Place: Spore Cave
     {
       name: "Spore Cave",
-      fontSize: 20,
+      fontSize: 30,
       region: "Highlands",
       details: {
         title: "Spore Cave",
@@ -231,7 +266,7 @@ export const underworldMapLabels = {
     },
     {
       name: "Spore Cave Level 2",
-      fontSize: 20,
+      fontSize: 30,
       region: "Highlands",
       details: {
         title: "Spore Cave Level 2",
@@ -246,7 +281,7 @@ export const underworldMapLabels = {
     },
     {
       name: "Spore Cave Level 3",
-      fontSize: 20,
+      fontSize: 30,
       region: "Highlands",
       details: {
         title: "Spore Cave Level 3",
@@ -261,7 +296,7 @@ export const underworldMapLabels = {
     },
     {
       name: "Spore Cave Level 4",
-      fontSize: 20,
+      fontSize: 30,
       region: "Highlands",
       details: {
         title: "Spore Cave Level 4",
@@ -346,6 +381,51 @@ export const underworldMapLabels = {
     // Region: Valinor Mines
 
     // Region: Silvest Valley Mines
+    {
+      name: "Silvest Mine",
+      fontSize: 30,
+      region: "Silvest Valley",
+      details: {
+        title: "Silvest Mines",
+        coordinates: { x: 1157, y: 1130 },
+        image: "",
+        lore: "More information about Silvest Mine is coming soon.",
+        information: "",
+        bonus: "",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      name: "Dalvon Mines",
+      fontSize: 25,
+      region: "Silvest Valley",
+      details: {
+        title: "Dalvon Mines",
+        coordinates: { x: 1426, y: 1385 },
+        image: "",
+        lore: "More information about Dalvon Mines is coming soon.",
+        information: "",
+        bonus: "",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      name: "Dalvon Mines Level 2",
+      fontSize: 25,
+      region: "Silvest Valley",
+      details: {
+        title: "Dalvon Mines Level 2",
+        coordinates: { x: 1460, y: 1546 },
+        image: "",
+        lore: "More information about Dalvon Mines Level 2 is coming soon.",
+        information: "",
+        bonus: "",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // Region: Krythan Mines
 
@@ -404,8 +484,54 @@ export const underworldMapLabels = {
     // Region: Valinor Basements
 
     // Region: Silvest Valley Basements
+    {
+      name: "Silvest Library Basement",
+      fontSize: 15,
+      region: "Silvest Valley",
+      details: {
+        title: "Silvest Library Basement",
+        coordinates: { x: 1145, y: 1341 },
+        image: "",
+        lore: "More information about Silvest Library Basement is coming soon.",
+        information: "",
+        bonus: "",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      name: "Coenred's Provisioner\n Shop Basement",
+      fontSize: 15,
+      region: "Silvest Valley",
+      details: {
+        title: "Coenred's Provisioner Shop Basement",
+        coordinates: { x: 1127, y: 1358 },
+        image: "",
+        lore: "More information about Coenred's Provisioner Shop Basement is coming soon.",
+        information: "",
+        bonus: "",
+        npcs: [],
+        links: [],
+      },
+    },
+    
 
     // Region: Krythan Basements
+    {
+      name: "Holendar's Mansion Basement",
+      fontSize: 20,
+      region: "Krythan",
+      details: {
+        title: "Holendar's Mansion Basement",
+        coordinates: { x: 853, y: 1011 },
+        image: "",
+        lore: "More information about Holendar's Mansion Basement is coming soon.",
+        information: "",
+        bonus: "",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // Region: Darkwoods Basements
     // City: Whisperdale Basements
@@ -589,15 +715,15 @@ export const underworldMapLabels = {
     },
     // Region: Western Isles Tunnels
     {
-      name: "Werewolf Island Tunnel",
+      name: "Werewolf Island Pass Exit",
       fontSize: 25,
       region: "Western Isles",
       details: {
-        title: "Werewolf Island Tunnel",
+        title: "Werewolf Island Pass Exit",
         coordinates: { x: 472, y: 2628 },
         image: "",
-        lore: "More information about Werewolf Island Pass Tunnel is coming soon.",
-        information: "Werewolf Island Pass Tunnel is located beneath the Western Isles.",
+        lore: "More information about Werewolf Island Pass Exit is coming soon.",
+        information: "Werewolf Island Pass Exit is located beneath the Western Isles.",
         bonus: "",
         npcs: [],
         links: [],

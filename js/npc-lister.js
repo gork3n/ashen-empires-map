@@ -81,7 +81,7 @@ function renderNpcListToHtml(regionsData, containerId) {
       html += `<h3 class="location-title">${place.name}</h3>`;
       html += `<ul>`;
       sortedNpcs.forEach((npc) => {
-        html += `<li><strong>${npc.name}</strong>${npc.info ? `: ${npc.info}` : ""}</li>`;
+        html += `<li>${npc.name}</li>`;
       });
       html += `</ul></div>`;
     });
