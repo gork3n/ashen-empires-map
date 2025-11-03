@@ -2,13 +2,13 @@
 export const mapLabels = {
   landmarks: [
     // Add landmark labels here
-    // Valinor Island Landmarks
+    // Region: 1 - Valinor Island Landmarks
 
-    // Krythan Island Landmarks
+    // Region: 2 - Silvest Valley Landmarks
     {
       name: "Valley of the Dead",
       fontSize: 30,
-      region: "Krythan",
+      region: "Silvest Valley",
       details: {
         title: "Valley of the Dead",
         coordinates: { x: 1373, y: 1434 },
@@ -21,11 +21,14 @@ export const mapLabels = {
       },
     },
 
+    // Region: 3 - Krythan Island Landmarks
+    
+
     // Mainlands Landmarks
 
-    // Darkwoods Region Landmarks
+    // Region: 4 - Darkwoods Region Landmarks
 
-    // Battle Plains Region Landmarks
+    // Region: 5 - Battle Plains Region Landmarks
     {
       name: "Proudblood Valley",
       fontSize: 30,
@@ -42,9 +45,9 @@ export const mapLabels = {
       },
     },
 
-    // Black Swamp Region Landmarks
+    // Region: 6 - Black Swamp Region Landmarks
 
-    // Highlands Region Landmarks
+    // Region: 7 - Highlands Region Landmarks
     {
       name: "Death Tyrant Valley",
       fontSize: 35,
@@ -106,7 +109,7 @@ export const mapLabels = {
       },
     },
 
-    // Badlands Region Landmarks
+    // Region: 7 - Badlands Region Landmarks
     {
       name: "Badlands",
       fontSize: 35,
@@ -122,20 +125,24 @@ export const mapLabels = {
         links: [],
       },
     },
+    // Region: 8 - Western Isles Region Landmarks
 
-    // Heartwood Coast Region Landmarks
+    // Region: 9 - Sands of Creation Region Landmarks
 
-    // Tundria Region Landmarks
+    // Region: 10 - Heartwood Coast Region Landmarks
 
-    // Breakwater Region Landmarks
+    // Region: 11 - Tundria Region Landmarks
 
-    // Western Isles Region Landmarks
+    // Region: 12 - Ashen Waste Region Landmarks
 
-    // Broken Finger Region Landmarks
+    // Region: 13 - Breakwater Region Landmarks
+
+    
+
+    // Region: 14 - Broken Finger Region Landmarks
   ],
   cities: [
-    /* Valinor Island Cities */
-    // Valinor Region Cities
+    // Region: 1 - Valinor Region Cities
     {
       name: "Valinor",
       fontSize: 24,
@@ -166,8 +173,8 @@ export const mapLabels = {
       },
     },
 
-    // Non-Expansion Cities
-    // Krythan Region Cities
+    // Region: 3 - Non-Expansion Cities
+    // Region: 3 - Krythan Region Cities
     {
       name: "Jeel",
       fontSize: 30,
@@ -258,7 +265,7 @@ export const mapLabels = {
         links: [{ text: "Ashen Empires Wiki (Non-Expansion Quests)", url: "https://ashenempires.fandom.com/wiki/Non-Expansion_Quests#Lotor's_Castle" }],
       },
     },
-    // Silvest Valley Region Cities
+    // Region: 2 - Silvest Valley Region Cities
     {
       name: "Cliffside",
       fontSize: 30,
@@ -306,7 +313,7 @@ export const mapLabels = {
     },
     // Mainland Cities
 
-    // Darkwoods Region Cities
+    // Region: 4 - Darkwoods Region Cities
     {
       name: "Redwake",
       fontSize: 30,
@@ -413,7 +420,7 @@ export const mapLabels = {
       },
     },
 
-    // Highlands Region Cities
+    // Region: 7 - Highlands Region Cities
     {
       name: "Grell",
       fontSize: 30,
@@ -487,7 +494,7 @@ export const mapLabels = {
       },
     },
 
-    // Battle Plains Region Cities
+    // Region: 5 - Battle Plains Region Cities
     {
       name: "Desprail",
       fontSize: 30,
@@ -534,7 +541,7 @@ export const mapLabels = {
       },
     },
 
-    // Black Swamp Region Cities
+    // Region: 6 - Black Swamp Region Cities
     {
       name: "Samad",
       fontSize: 30,
@@ -597,7 +604,7 @@ export const mapLabels = {
     },
 
 
-    
+
 
     // Region: Tundria
     {
@@ -755,7 +762,7 @@ export const mapLabels = {
       },
     },
 
-    // Region: Breakwater
+    // Region: 13 - Breakwater
     {
       name: "Roycroft",
       fontSize: 35,
@@ -802,7 +809,7 @@ export const mapLabels = {
       },
     },
 
-    // Region: Broken Finger Cities
+    // Region: 14 - Broken Finger Cities
     {
       name: "Broken Finger Town",
       fontSize: 20,
@@ -821,7 +828,7 @@ export const mapLabels = {
   ],
 
   islands: [
-    //Individual Islands 
+    //Individual Islands
     {
       name: "GM Island",
       fontSize: 30,
@@ -979,7 +986,7 @@ export const mapLabels = {
       },
     },
     // Western Isles Region
-    
+
     // Werewolf Island Cities
     {
       name: "Lycanth",
@@ -1270,7 +1277,7 @@ export const mapLabels = {
       },
     },
 
-    // Sands of Creation Islands Technically might be Ruhura Island and Khafra Island, but this might be redundant.
+    // Region: 12 - Sands of Creation Islands Technically might be Ruhura Island and Khafra Island, but this might be redundant.
   ],
 
   dungeons: [
@@ -1315,10 +1322,10 @@ export const mapLabels = {
   caves: [
     // Caves and Mines Here
 
-    // Region: Valinor
+    // Region: 1 - Valinor
 
     // Krythan Island Caves
-    // Region: Krythan
+    // Region: 3 - Krythan
     {
       name: "Minion Cave",
       fontSize: 20,
@@ -1364,7 +1371,7 @@ export const mapLabels = {
         links: [],
       },
     },
-    // Region: Silvest Valley
+    // Region: 2 - Silvest Valley
     {
       name: "Silvest Mines",
       fontSize: 20,
@@ -1429,10 +1436,10 @@ export const mapLabels = {
 
     /* Mainland Caves */
 
-    // Region: Darkwoods Caves
-    // Region: Battle Plains
+    // Region: 4 - Darkwoods Caves
+    // Region: 5 - Battle Plains
 
-    // Region: Black Swamp
+    // Region: 6 - Black Swamp
     {
       name: "Ivogur's Mine",
       fontSize: 20,
@@ -1448,23 +1455,23 @@ export const mapLabels = {
         links: [],
       },
     },
-    // Region: Valley of Giants
+    // Region: 9 - Valley of Giants
 
-    // Heartwood Coast Caves
+    // Region: 10 - Heartwood Coast Caves
 
-    // Tundria Caves
+    // Region: 11 - Tundria Caves
 
-    // Breakwater Caves
+    // Region: 13 - Breakwater Caves
 
-    // Western Isles Caves
+    // Region: 8 - Western Isles Caves
 
-    // Broken Finger Caves
+    // Region: 14 - Broken Finger Caves
   ],
 
   interests: [
     // Places of Interest Here
 
-    // Place of Interest - Region: Valinor
+    // Place of Interest - Region: 1 - Valinor
     {
       name: "Duncan's Cottage",
       fontSize: 20,
@@ -1556,7 +1563,7 @@ export const mapLabels = {
       },
     },
 
-    // Places of Interest - Region: Krythan
+    // Places of Interest - Region: 3 - Krythan
     {
       name: "Gideon Cottage",
       fontSize: 20,
@@ -1753,8 +1760,8 @@ export const mapLabels = {
       },
     },
 
-    // Places of Interest - Region: Western Isles 
-    
+    // Places of Interest - Region: 8 - Western Isles 
+
     {
       name: "Minion's of Talazar's Stronghold",
       fontSize: 20,
@@ -1772,7 +1779,7 @@ export const mapLabels = {
     },
 
     /* Mainland Places of Interest */
-    // Darkwoods Places of Interest
+    // Region: 4 - Darkwoods Places of Interest
     {
       name: "Josody Theif Fort",
       fontSize: 18,
@@ -1969,7 +1976,7 @@ export const mapLabels = {
       },
     },
 
-    // Battle Plains Places of Interest
+    // Region: 5 - Battle Plains Places of Interest
     {
       name: "Wasp Hive",
       fontSize: 20,
@@ -1986,7 +1993,7 @@ export const mapLabels = {
       },
     },
 
-    // Black Swamp Places of Interest
+    // Region: 6 - Black Swamp Places of Interest
     {
       name: "Drakkan",
       fontSize: 20,
@@ -2123,7 +2130,7 @@ export const mapLabels = {
       },
     },
 
-    // Highlands Places of Interest
+    // Region: 7 - Highlands Places of Interest
     {
       name: "Emporium Abbey",
       fontSize: 20,
@@ -2275,9 +2282,9 @@ export const mapLabels = {
       },
     },
 
-    // Valley of Giants Places of Interest
+    // Region: 9 - Valley of Giants Places of Interest
 
-    // Heartwood Coast Places of Interest
+    // Region: 10 - Heartwood Coast Places of Interest
     {
       name: "Infiltrator Camp",
       fontSize: 20,
@@ -2369,7 +2376,7 @@ export const mapLabels = {
       },
     },
 
-    // Tundria Places of Interest
+    // Region: 11 - Tundria Places of Interest
     {
       name: "Orc Raider Camp",
       fontSize: 20,
@@ -2536,7 +2543,7 @@ export const mapLabels = {
       },
     },
 
-    // Breakwater Places of Interest
+    // Region: 13 - Breakwater Places of Interest
     // New Royale Island Places of Interest
     {
       name: "Pirate Raider's Camp",
@@ -2633,11 +2640,11 @@ export const mapLabels = {
       },
     },
 
-    // Places of Interest - Region: Western Isles
+    // Places of Interest - Region: 8 - Western Isles
     {
       name: "Talazar's Castle",
       fontSize: 25,
-      region: "Western Isles",
+      region: "Hell",
       details: {
         title: "Talazar's Castle",
         coordinates: { x: 1103, y: 3291 },
@@ -2650,10 +2657,10 @@ export const mapLabels = {
       },
     },
 
-    // Places of Interest - Region: Broken Figer
+    // Places of Interest - Region: 14 - Broken Figer
 
-    // Places of Interest - Region: Sands of Creation
-    // Places of Interest - Ruhura 
+    // Places of Interest - Region: 12 - Sands of Creation
+    // Places of Interest - Ruhura
     {
       name: "Ruhura Outpost",
       fontSize: 20,
@@ -2821,7 +2828,7 @@ export const mapLabels = {
     },
     // Done
 
-    // Khafra
+    // Region: 12 - Khafra
     {
       name: "Khafra Fishing Outpost",
       fontSize: 20,
@@ -2916,7 +2923,7 @@ export const mapLabels = {
   ],
 
   waterBodies: [
-    //Valinor Island Water Bodies
+    //Region: 1 - Valinor Island Water Bodies
     {
       name: "Gut Rot Swamp",
       fontSize: 20,
@@ -2933,9 +2940,9 @@ export const mapLabels = {
       },
     },
 
-    // Krythan Island Water Bodies
+    // Region: 3 - Krythan Island Water Bodies
 
-    // Silvest Valley Region Water Bodies
+    // Region: 2 - Silvest Valley Region Water Bodies
     {
       name: "Lake Silvest",
       fontSize: 20,
@@ -2967,7 +2974,7 @@ export const mapLabels = {
       },
     },
 
-    // Bodies of Water - Region: Krythan
+    // Bodies of Water - Region: 3 - Krythan
     {
       name: "Queen's Lake",
       fontSize: 25,

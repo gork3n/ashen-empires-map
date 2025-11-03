@@ -1989,6 +1989,28 @@ export const underworldMapMarkers = {
     // City: Khafra Undergrounds
 
     // Region: 13 - Breakwater Undergrounds
+    // City: Roycroft Undergrounds
+
+    // City: New Town Undergrounds
+    {
+      category: "underground",
+      type: "underworld_ladder",
+      tooltip: "Cyclops and Lion Cave Exit",
+      region: "Western Isles",
+      place: "Ruhura",
+      details: {
+        title: "Cyclops and Lion Cave Exit",
+        switchTo: "overworld",
+        flyTo: { x: 2039, y: 1833, zoom: 5 }, 
+        coordinates: { x: 2128, y: 1700 },
+        image: "images/markers/Cyclops_and_Lion_Cave_Exit.png",
+        lore: "Exit to Cyclops and Lion Cave.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // City: New Royale Undergrounds
     
 
     // Region: 14 - Broken Finger Undergrounds

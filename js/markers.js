@@ -398,62 +398,342 @@ export const mapMarkers = {
 
     // City: Vrethpool Portals
 
-    // Region: 4 - Battle Plains Portals
+    // Region: 3 - Krythan Portals
+    {
+      category: "portals",
+      type: "overworld_portal_blue",
+      tooltip: "Portal to Highlands West of Parian",
+      region: "Krythan",
+      place: "Krythan Fields",
+      details: {
+        title: "Portal to Highlands West of Parian",
+        coordinates: { x: 584, y: 1496 },
+        image: "images/markers/Krythan_to_Highlands_West_of_Parian_Portal.png",
+        lore: "More information about Portal to Highlands West of Parian is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "portals",
+      type: "overworld_portal_blue",
+      tooltip: "Portal to Darkwoods North of Josody",
+      region: "Krythan",
+      place: "Krythan Fields",
+      details: {
+        title: "Portal to Darkwoods North of Josody",
+        coordinates: { x: 184, y: 1465 },
+        image: "images/markers/Krythan_to_Darkwoods_North_of_Josody_Portal.png",
+        lore: "More information about Portal to Darkwoods North of Josody is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "portals",
+      type: "overworld_portal_small",
+      tooltip: "Portal to Hell",
+      region: "Krythan",
+      place: "Krythan Fields",
+      details: {
+        title: "Portal to Hell",
+        coordinates: { x: 472, y: 1895 },
+        image: "images/markers/Krythan_to_Hell_Portal.png",
+        lore: "More information about Portal to Hell is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "portals",
+      type: "overworld_portal_small",
+      tooltip: "Portal to Scarab Island",
+      region: "Krythan",
+      place: "Krythan Fields",
+      details: {
+        title: "Portal to Scarab Island",
+        coordinates: { x: 712, y: 1752 },
+        image: "images/markers/Krythan_to_Scarab_Island_Portal.png",
+        lore: "More information about Portal to Scarab Island is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // Region: 2 - Silvest Valley Portals
+
+    // Island: Scarab Island Portals
+    {
+      category: "portals",
+      type: "overworld_portal_small",
+      tooltip: "Portal to Krythan Region",
+      region: "Western Isles",
+      place: "Scarab Island",
+      details: {
+        title: "Portal to Krythan Region",
+        coordinates: { x: 472, y: 2183 },
+        image: "images/markers/Scarab_Island_to_Krythan_Region_Portal.png",
+        lore: "More information about Portal to Krythan Region is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    //Done   
+
+    // Region: 4 - Darkwoods Portals
+    {
+      category: "portals",
+      type: "overworld_portal_blue",
+      tooltip: "Portal to Krythan Island (West of New Korelth)",
+      region: "Darkwoods",
+      place: "Darkwoods",
+      details: {
+        title: "Portal to Krythan Island (West of New Korelth)",
+        coordinates: { x: 1351, y: 2439 },
+        image: "images/markers/Darkwoods_to_Krythan_Island_West_of_New_Korelth_Portal.png",
+        lore: "More information about Portal to Krythan Island (West of New Korelth) is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    
+    {
+      category: "portals",
+      type: "overworld_portal_lsp",
+      tooltip: "Portal to Lotor's Summer Palace",
+      region: "Darkwoods",
+      place: "Josody",
+      details: {
+        title: "Portal to Lotor's Summer Palace",
+        coordinates: { x: 1254, y: 2518 },
+        image: "images/markers/Darkwoods_to_LSP_Portal.png",
+        lore: "More information about Portal to Lotor's Summer Palace is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "portals",
+      type: "overworld_portal_blue",
+      tooltip: "Portal to Highlands (Southeast of Parian)",
+      region: "Darkwoods",
+      place: "Darkwoods",
+      details: {
+        title: "Portal to Highlands (Southeast of Parian)",
+        coordinates: { x: 808, y: 2838 },
+        image: "images/markers/Darkwoods_to_Highlands_Southeast_of_Parian_Portal.png",
+        lore: "More information about Portal to Highlands (Southeast of Parian) is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "portals",
+      type: "overworld_portal_small",
+      tooltip: "Portal to Mnemmon",
+      region: "Darkwoods",
+      place: "Mnemmon Gaol",
+      details: {
+        title: "Portal to Mnemmon",
+        coordinates: { x: 867, y: 3417 },
+        image: "images/markers/Darkwoods_to_Mnemmon_Portal.png",
+        lore: "More information about Portal to Mnemmon is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "portals",
+      type: "overworld_portal_small",
+      tooltip: "Portal to Mnemmon Gaol",
+      region: "Darkwoods",
+      place: "Mnemmon",
+      details: {
+        title: "Portal to Mnemmon Gaol",
+        coordinates: { x: 909, y: 3259 },
+        image: "images/markers/Darkwoods_to_Mnemmon_Gaol_Portal.png",
+        lore: "More information about Portal to Mnemmon Gaol is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "portals",
+      type: "overworld_portal_lsp",
+      tooltip: "Portal to Lotor's Summer Palace",
+      region: "Darkwoods",
+      place: "Whisperdale",
+      details: {
+        title: "Portal to Lotor's Summer Palace",
+        coordinates: { x: 472, y: 3481 },
+        image: "images/markers/Darkwoods_to_LSP_Portal.png",
+        lore: "More information about Portal to Lotor's Summer Palace is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // Region: 5 - Battle Plains Portals
+    {
+      category: "portals",
+      type: "overworld_portal_small",
+      tooltip: "Portal to Scorched Island",
+      region: "Battle Plains",
+      place: "Battle Plains",
+      details: {
+        title: "Portal to Scorched Island",
+        coordinates: { x: 1600, y: 3077 },
+        image: "images/markers/Scorched_Island_to_Battle_Plains_Portal.png",
+        lore: "More information about Portal to Scorched Island is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "portals",
+      type: "overworld_portal_lsp",
+      tooltip: "Portal to Proudblood Valley",
+      region: "Battle Plains",
+      place: "Battle Plains",
+      details: {
+        title: "Portal to Proudblood Valley",
+        coordinates: { x: 2263, y: 3705 },
+        image: "images/markers/Scorched_Island_to_Proudblood_Valley_Portal.png",
+        lore: "More information about Portal to Proudblood Valley is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "portals",
+      type: "overworld_portal_small",
+      tooltip: "Exit Proudblood Valley",
+      region: "Battle Plains",
+      place: "Proudblood Valley",
+      details: {
+        title: "Exit Proudblood Valley",
+        coordinates: { x: 1963, y: 3651 },
+        image: "images/markers/Exit_Proudblood_Valley_Portal.png",
+        lore: "More information about Exit Proudblood Valley is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // Region: 6 - Black Swamp Portals
     // City: Krog Portals
+    
     {
       category: "portals",
-      type: "overworld_portal_housing",
-      tooltip: "Portal to Housing Realm",
+      type: "overworld_portal_lsp",
+      tooltip: "Portal to Lotor's Summer Palace",
       region: "Black Swamp",
       place: "Krog",
       details: {
-        title: "Portal to Housing Realm",
-        coordinates: { x: 3122, y: 3730 },
-        image: "images/portals/Krog_Housing_Realm_Portal.png",
-        lore: "More information about Portal to Housing Realm is coming soon.",
+        title: "Portal to Lotor's Summer Palace",
+        coordinates: { x: 3110, y: 3686 },
+        image: "images/markers/Black_Swamp_to_LSP_Portal.png",
+        lore: "More information about Portal to Lotor's Summer Palace is coming soon.",
         npcs: [],
         links: [],
       },
     },
 
-    
-    // Region: 7 - Highlands Housing Realm Portal
-    // City: Parian Housing Realm Portal
+    // Region: 7 - Highlands Portals   
     {
       category: "portals",
-      type: "overworld_portal_housing",
-      tooltip: "Portal to Housing Realm",
+      type: "overworld_portal_small",
+      tooltip: "Portal to Minotaur Island",
+      region: "Highlands",
+      place: "Ancient Site of Minos",
+      details: {
+        title: "Portal to Minotaur Island",
+        coordinates: { x: 2935, y: 3191 },
+        image: "images/markers/Minotaur_Island_Portal.png",
+        lore: "More information about Portal to Minotaur Island is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    }, 
+    {
+      category: "portals",
+      type: "overworld_portal_small",
+      tooltip: "Portal to Southern Highlands (Northeast of Grell)",
+      region: "Highlands",
+      place: "Highlands",
+      details: {
+        title: "Portal to Southern Highlands (Northeast of Grell)",
+        coordinates: { x: 3335, y: 2808 },
+        image: "images/markers/Highlands_to_Southern_Highlands_Northeast_of_Grell_Portal.png",
+        lore: "More information about Portal to Southern Highlands (Northeast of Grell) is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "portals",
+      type: "overworld_portal_small",
+      tooltip: "Portal to Highlands (North of Parian)",
+      region: "Highlands",
+      place: "Highlands",
+      details: {
+        title: "Portal to Highlands (North of Parian)",
+        coordinates: { x: 3081, y: 3548 },
+        image: "images/markers/Highlands_to_Highlands_North_of_Parian_Portal.png",
+        lore: "More information about Portal to Highlands (North of Parian) is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "portals",
+      type: "overworld_portal_blue",
+      tooltip: "Portal to Darkwoods (East of Redwake)",
+      region: "Highlands",
+      place: "Highlands",
+      details: {
+        title: "Portal to Darkwoods (East of Redwake)",
+        coordinates: { x: 3768, y: 3239 },
+        image: "images/markers/Darkwoods_to_Highlands_East_of_Redwake_Portal.png",
+        lore: "More information about Portal to Darkwoods (East of Redwake) is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "portals",
+      type: "overworld_portal_blue",
+      tooltip: "Portal to Krythan Island (West of New Korelth)",
+      region: "Highlands",
+      place: "Highlands",
+      details: {
+        title: "Portal to Krythan Island (West of New Korelth)",
+        coordinates: { x: 3304, y: 3015 },
+        image: "images/markers/Krythan_to_Scarab_Island_Portal.png",
+        lore: "More information about Portal to Krythan Island (West of New Korelth) is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    // City: Parian Portals
+    {
+      category: "portals",
+      type: "overworld_portal_lsp",
+      tooltip: "Portal to Lotor's Summer Palace",
       region: "Highlands",
       place: "Parian",
       details: {
-        title: "Portal to Housing Realm",
-        coordinates: { x: 3465, y: 3133 },
-        image: "images/portals/Parian_Housing_Realm_Portal.png",
-        lore: "More information about Portal to Housing Realm is coming soon.",
+        title: "Portal to Lotor's Summer Palace",
+        coordinates: { x: 3415, y: 2919 },
+        image: "images/markers/Parian_to_LSP_Portal.png",
+        lore: "More information about Portal to Lotor's Summer Palace is coming soon.",
         npcs: [],
         links: [],
       },
     },
-
-    // Region: 8 - Western Isles Housing Realm Portal
-    // Island: Lotor's Summer Palace Housing Realm Portal
-    {
-      category: "portals",
-      type: "overworld_portal_housing",
-      tooltip: "Portal to Housing Realm",
-      region: "Western Isles",
-      place: "Lotor's Summer Palace",
-      details: {
-        title: "Portal to Housing Realm",
-        coordinates: { x: 769, y: 614 },
-        image: "images/portals/LSP_Housing_Realm_Portal.png",
-        lore: "More information about Portal to Housing Realm is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
+        
+    
+    // Region: 8 - Western Isles Portals
     {
       category: "portals",
       type: "overworld_portal_small",
@@ -672,354 +952,6 @@ export const mapMarkers = {
       },
     },
 
-    // Region: 3 - Krythan Portals
-    {
-      category: "portals",
-      type: "overworld_portal_blue",
-      tooltip: "Portal to Highlands West of Parian",
-      region: "Krythan",
-      place: "Krythan Fields",
-      details: {
-        title: "Portal to Highlands West of Parian",
-        coordinates: { x: 584, y: 1496 },
-        image: "images/markers/Krythan_to_Highlands_West_of_Parian_Portal.png",
-        lore: "More information about Portal to Highlands West of Parian is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      category: "portals",
-      type: "overworld_portal_blue",
-      tooltip: "Portal to Darkwoods North of Josody",
-      region: "Krythan",
-      place: "Krythan Fields",
-      details: {
-        title: "Portal to Darkwoods North of Josody",
-        coordinates: { x: 184, y: 1465 },
-        image: "images/markers/Krythan_to_Darkwoods_North_of_Josody_Portal.png",
-        lore: "More information about Portal to Darkwoods North of Josody is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      category: "portals",
-      type: "overworld_portal_small",
-      tooltip: "Portal to Hell",
-      region: "Krythan",
-      place: "Krythan Fields",
-      details: {
-        title: "Portal to Hell",
-        coordinates: { x: 472, y: 1895 },
-        image: "images/markers/Krythan_to_Hell_Portal.png",
-        lore: "More information about Portal to Hell is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      category: "portals",
-      type: "overworld_portal_small",
-      tooltip: "Portal to Scarab Island",
-      region: "Krythan",
-      place: "Krythan Fields",
-      details: {
-        title: "Portal to Scarab Island",
-        coordinates: { x: 712, y: 1752 },
-        image: "images/markers/Krythan_to_Scarab_Island_Portal.png",
-        lore: "More information about Portal to Scarab Island is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-
-    // Region: 2 - Silvest Valley Portals
-
-    // Island: Scarab Island Portals
-    {
-      category: "portals",
-      type: "overworld_portal_small",
-      tooltip: "Portal to Krythan Region",
-      region: "Western Isles",
-      place: "Scarab Island",
-      details: {
-        title: "Portal to Krythan Region",
-        coordinates: { x: 472, y: 2183 },
-        image: "images/markers/Scarab_Island_to_Krythan_Region_Portal.png",
-        lore: "More information about Portal to Krythan Region is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    //Done   
-
-    // Region: 4 - Darkwoods Portals
-    {
-      category: "portals",
-      type: "overworld_portal_blue",
-      tooltip: "Portal to Krythan Island (West of New Korelth)",
-      region: "Darkwoods",
-      place: "Darkwoods",
-      details: {
-        title: "Portal to Krythan Island (West of New Korelth)",
-        coordinates: { x: 1351, y: 2439 },
-        image: "images/markers/Darkwoods_to_Krythan_Island_West_of_New_Korelth_Portal.png",
-        lore: "More information about Portal to Krythan Island (West of New Korelth) is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      category: "portals",
-      type: "overworld_portal_housing",
-      tooltip: "Portal to House Realm",
-      region: "Darkwoods",
-      place: "Darkwoods",
-      details: {
-        title: "Portal to House Realm",
-        coordinates: { x: 1271, y: 2512 },
-        image: "images/markers/Darkwoods_to_House_Realm_Portal.png",
-        lore: "More information about Portal to House Realm is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      category: "portals",
-      type: "overworld_portal_lsp",
-      tooltip: "Portal to Lotor's Summer Palace",
-      region: "Darkwoods",
-      place: "Josody",
-      details: {
-        title: "Portal to Lotor's Summer Palace",
-        coordinates: { x: 1254, y: 2518 },
-        image: "images/markers/Darkwoods_to_LSP_Portal.png",
-        lore: "More information about Portal to Lotor's Summer Palace is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      category: "portals",
-      type: "overworld_portal_blue",
-      tooltip: "Portal to Highlands (Southeast of Parian)",
-      region: "Darkwoods",
-      place: "Darkwoods",
-      details: {
-        title: "Portal to Highlands (Southeast of Parian)",
-        coordinates: { x: 808, y: 2838 },
-        image: "images/markers/Darkwoods_to_Highlands_Southeast_of_Parian_Portal.png",
-        lore: "More information about Portal to Highlands (Southeast of Parian) is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      category: "portals",
-      type: "overworld_portal_small",
-      tooltip: "Portal to Mnemmon",
-      region: "Darkwoods",
-      place: "Mnemmon Gaol",
-      details: {
-        title: "Portal to Mnemmon",
-        coordinates: { x: 867, y: 3417 },
-        image: "images/markers/Darkwoods_to_Mnemmon_Portal.png",
-        lore: "More information about Portal to Mnemmon is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      category: "portals",
-      type: "overworld_portal_small",
-      tooltip: "Portal to Mnemmon Gaol",
-      region: "Darkwoods",
-      place: "Mnemmon",
-      details: {
-        title: "Portal to Mnemmon Gaol",
-        coordinates: { x: 909, y: 3259 },
-        image: "images/markers/Darkwoods_to_Mnemmon_Gaol_Portal.png",
-        lore: "More information about Portal to Mnemmon Gaol is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      category: "portals",
-      type: "overworld_portal_lsp",
-      tooltip: "Portal to Lotor's Summer Palace",
-      region: "Darkwoods",
-      place: "Whisperdale",
-      details: {
-        title: "Portal to Lotor's Summer Palace",
-        coordinates: { x: 472, y: 3481 },
-        image: "images/markers/Darkwoods_to_LSP_Portal.png",
-        lore: "More information about Portal to Lotor's Summer Palace is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-
-    // Region: 4 - Battle Plains Portals
-    {
-      category: "portals",
-      type: "overworld_portal_small",
-      tooltip: "Portal to Scorched Island",
-      region: "Battle Plains",
-      place: "Battle Plains",
-      details: {
-        title: "Portal to Scorched Island",
-        coordinates: { x: 1600, y: 3077 },
-        image: "images/markers/Scorched_Island_to_Battle_Plains_Portal.png",
-        lore: "More information about Portal to Scorched Island is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      category: "portals",
-      type: "overworld_portal_lsp",
-      tooltip: "Portal to Proudblood Valley",
-      region: "Battle Plains",
-      place: "Battle Plains",
-      details: {
-        title: "Portal to Proudblood Valley",
-        coordinates: { x: 2263, y: 3705 },
-        image: "images/markers/Scorched_Island_to_Proudblood_Valley_Portal.png",
-        lore: "More information about Portal to Proudblood Valley is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      category: "portals",
-      type: "overworld_portal_small",
-      tooltip: "Exit Proudblood Valley",
-      region: "Battle Plains",
-      place: "Proudblood Valley",
-      details: {
-        title: "Exit Proudblood Valley",
-        coordinates: { x: 1963, y: 3651 },
-        image: "images/markers/Exit_Proudblood_Valley_Portal.png",
-        lore: "More information about Exit Proudblood Valley is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-
-    // Region: 6 - Black Swamp Portals
-    {
-      category: "portals",
-      type: "overworld_portal_lsp",
-      tooltip: "Portal to Lotor's Summer Palace",
-      region: "Black Swamp",
-      place: "Krog",
-      details: {
-        title: "Portal to Lotor's Summer Palace",
-        coordinates: { x: 3110, y: 3686 },
-        image: "images/markers/Black_Swamp_to_LSP_Portal.png",
-        lore: "More information about Portal to Lotor's Summer Palace is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-
-    // Region: 7 - Highlands Portals   
-    {
-      category: "portals",
-      type: "overworld_portal_small",
-      tooltip: "Portal to Minotaur Island",
-      region: "Highlands",
-      place: "Ancient Site of Minos",
-      details: {
-        title: "Portal to Minotaur Island",
-        coordinates: { x: 2935, y: 3191 },
-        image: "images/markers/Minotaur_Island_Portal.png",
-        lore: "More information about Portal to Minotaur Island is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    }, 
-    {
-      category: "portals",
-      type: "overworld_portal_small",
-      tooltip: "Portal to Southern Highlands (Northeast of Grell)",
-      region: "Highlands",
-      place: "Highlands",
-      details: {
-        title: "Portal to Southern Highlands (Northeast of Grell)",
-        coordinates: { x: 3335, y: 2808 },
-        image: "images/markers/Highlands_to_Southern_Highlands_Northeast_of_Grell_Portal.png",
-        lore: "More information about Portal to Southern Highlands (Northeast of Grell) is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      category: "portals",
-      type: "overworld_portal_small",
-      tooltip: "Portal to Highlands (North of Parian)",
-      region: "Highlands",
-      place: "Highlands",
-      details: {
-        title: "Portal to Highlands (North of Parian)",
-        coordinates: { x: 3081, y: 3548 },
-        image: "images/markers/Highlands_to_Highlands_North_of_Parian_Portal.png",
-        lore: "More information about Portal to Highlands (North of Parian) is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      category: "portals",
-      type: "overworld_portal_blue",
-      tooltip: "Portal to Darkwoods (East of Redwake)",
-      region: "Highlands",
-      place: "Highlands",
-      details: {
-        title: "Portal to Darkwoods (East of Redwake)",
-        coordinates: { x: 3768, y: 3239 },
-        image: "images/markers/Darkwoods_to_Highlands_East_of_Redwake_Portal.png",
-        lore: "More information about Portal to Darkwoods (East of Redwake) is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    {
-      category: "portals",
-      type: "overworld_portal_blue",
-      tooltip: "Portal to Krythan Island (West of New Korelth)",
-      region: "Highlands",
-      place: "Highlands",
-      details: {
-        title: "Portal to Krythan Island (West of New Korelth)",
-        coordinates: { x: 3304, y: 3015 },
-        image: "images/markers/Krythan_to_Scarab_Island_Portal.png",
-        lore: "More information about Portal to Krythan Island (West of New Korelth) is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-    // City: Parian Portals
-    {
-      category: "portals",
-      type: "overworld_portal_lsp",
-      tooltip: "Portal to Lotor's Summer Palace",
-      region: "Highlands",
-      place: "Parian",
-      details: {
-        title: "Portal to Lotor's Summer Palace",
-        coordinates: { x: 3415, y: 2919 },
-        image: "images/markers/Parian_to_LSP_Portal.png",
-        lore: "More information about Portal to Lotor's Summer Palace is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
-
-    // Region: 8 - Western Isles Portals
-
     // Island: Lotor's Prison
     {
       category: "portals",
@@ -1070,6 +1002,7 @@ export const mapMarkers = {
     },
 
     // Region: 9 - Valley of Giants Portals
+    // Technically the Third Book Temple is a portal but it is not like the other portals so it is not included here.
 
     // Region: 10 - Heartwood Coast Portals
     {
@@ -1190,7 +1123,100 @@ export const mapMarkers = {
 
     // Region: 14 - Broken Finger
 
-    
+
+
+    // Sub-category: Housing Realm Portals
+
+    // Region: 1 - Valinor Housing Realm Portal
+
+    // Region: 2 - Silvest Valley Housing Realm Portal
+
+    // Region: 3 - Krythan Housing Realm Portal
+
+    // Region: 4 - Darkwoods Housing Realm Portal
+    // City: Josody Housing Realm Portal
+    {
+      category: "portals",
+      type: "overworld_portal_housing",
+      tooltip: "Portal to House Realm",
+      region: "Darkwoods",
+      place: "Josody",
+      details: {
+        title: "Portal to House Realm",
+        coordinates: { x: 1271, y: 2512 },
+        image: "images/markers/Darkwoods_to_House_Realm_Portal.png",
+        lore: "More information about Portal to House Realm is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // Region: 5 - Battle Plains Housing Realm Portal
+
+    // Region: 6 - Black Swamp Housing Realm Portal
+    // City: Krog Housing Realm Portal
+    {
+      category: "portals",
+      type: "overworld_portal_housing",
+      tooltip: "Portal to Housing Realm",
+      region: "Black Swamp",
+      place: "Krog",
+      details: {
+        title: "Portal to Housing Realm",
+        coordinates: { x: 3122, y: 3730 },
+        image: "images/portals/Krog_Housing_Realm_Portal.png",
+        lore: "More information about Portal to Housing Realm is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // Region: 7 - Highlands Housing Realm Portal
+    // City: Parian Housing Realm Portal
+    {
+      category: "portals",
+      type: "overworld_portal_housing",
+      tooltip: "Portal to Housing Realm",
+      region: "Highlands",
+      place: "Parian",
+      details: {
+        title: "Portal to Housing Realm",
+        coordinates: { x: 3465, y: 3133 },
+        image: "images/portals/Parian_Housing_Realm_Portal.png",
+        lore: "More information about Portal to Housing Realm is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // Region: 8 - Western Isles Housing Realm Portal
+    // Island: Lotor's Summer Palace Housing Realm Portal
+    {
+      category: "portals",
+      type: "overworld_portal_housing",
+      tooltip: "Portal to Housing Realm",
+      region: "Western Isles",
+      place: "Lotor's Summer Palace",
+      details: {
+        title: "Portal to Housing Realm",
+        coordinates: { x: 769, y: 614 },
+        image: "images/portals/LSP_Housing_Realm_Portal.png",
+        lore: "More information about Portal to Housing Realm is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // Region: 9 - Valley of Giants Housing Realm Portal
+
+    // Region: 10 - Heartwood Coast Housing Realm Portal
+
+    // Region: 11 - Tundria Housing Realm Portal
+
+    // Region: 12 - Sands of Creation Housing Realm Portal
+
+    // Region: 14 - Broken Finger Housing Realm Portal
+
 
     // Sub-category: Whirlpool Portals
     // Near Broken Finger
@@ -1199,7 +1225,7 @@ export const mapMarkers = {
       type: "overworld_portal_whirlpool",
       tooltip: "Whirlpool to Obsidian Lake",
       region: "Broken Finger",
-      place: "Obsidian Lake", // Lake name may change - in Obsidian Lake
+      place: "Obsidian Lake", 
       details: {
         title: "Whirlpool to Obsidian Lake",
         coordinates: { x: 1468, y: 3713 },
@@ -1214,7 +1240,7 @@ export const mapMarkers = {
       type: "overworld_portal_whirlpool",
       tooltip: "Whirlpool to Broken Lake",
       region: "Broken Finger",
-      place: "Obsidian Lake", // in Obsidian Lake
+      place: "Obsidian Lake", 
       details: {
         title: "Whirlpool to Broken Lake",
         coordinates: { x: 1538, y: 3696 },
@@ -1229,7 +1255,7 @@ export const mapMarkers = {
       type: "overworld_portal_whirlpool",
       tooltip: "Whirlpool to Proudblood Sound",
       region: "Broken Finger",
-      place: "Obsidian Lake", // Not sure about the name - in Obsidian Lake
+      place: "Obsidian Lake", 
       details: {
         title: "Whirlpool to Proudblood Sound",
         coordinates: { x: 1077, y: 3533 },
@@ -1245,8 +1271,8 @@ export const mapMarkers = {
       category: "portals",
       type: "overworld_portal_whirlpool",
       tooltip: "Whirlpool to Obsidian Lake",
-      region: "Battle Plains",
-      place: "Chlera Bay", // Near Chlera Dock
+      region: "Broken Finger",
+      place: "Proudblood Sound", 
       details: {
         title: "Whirlpool to Obsidian Lake",
         coordinates: { x: 2310, y: 3723 },
@@ -1261,7 +1287,7 @@ export const mapMarkers = {
       type: "overworld_portal_whirlpool",
       tooltip: "Whirlpool to Lotor's Prison",
       region: "Battle Plains",
-      place: "Chlera Bay", // Near Chlera Dock
+      place: "Chlera Bay", 
       details: {
         title: "Whirlpool to Lotor's Prison",
         coordinates: { x: 2556, y: 3666 },
@@ -3058,6 +3084,55 @@ export const mapMarkers = {
     },
 
     // Region: 13 - Breakwater Innkeeper
+    // City: Roycroft Innkeeper
+    {
+      category: "npc",
+      type: "overworld_inn_keeper",
+      tooltip: "Roycroft Innkeeper",
+      region: "Breakwater",
+      place: "Roycroft",
+      details: {
+        title: "Roycroft Innkeeper",
+        coordinates: { x: 2497, y: 2421 },
+        image: "images/markers/Roycroft_Innkeeper.png",
+        lore: "More information about Roycroft Innkeeper is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    // City: New Town Innkeeper
+    {
+      category: "npc",
+      type: "overworld_inn_keeper",
+      tooltip: "New Town Innkeeper",
+      region: "Breakwater",
+      place: "New Town",
+      details: {
+        title: "New Town Innkeeper",
+        coordinates: { x: 1958, y: 1951 },
+        image: "images/markers/New_Town_Innkeeper.png",
+        lore: "More information about New Town Innkeeper is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // City: New Royale Innkeeper
+    {
+      category: "npc",
+      type: "overworld_inn_keeper",
+      tooltip: "New Royale Innkeeper",
+      region: "Breakwater",
+      place: "New Royale",
+      details: {
+        title: "New Royale Innkeeper",
+        coordinates: { x: 1453, y: 2015 },
+        image: "images/markers/New_Royale_Innkeeper.png",
+        lore: "More information about New Royale Innkeeper is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
 
     // Region: 14 - Broken Finger Innkeeper
 
@@ -3476,7 +3551,7 @@ export const mapMarkers = {
       place: "Ettin Island",
       details: {
         title: "Ettin Island Dock",
-        coordinates: { x: 1706, y: 1836 },
+        coordinates: { x: 1707, y: 1837 },
         image: "images/markers/Ettin_Island_Dock.png",
         lore: "More information about Ettin Island Dock is coming soon.",
         npcs: [],
@@ -3861,7 +3936,22 @@ export const mapMarkers = {
       place: "New Town Island",
       details: {
         title: "New Town Dock",
-        coordinates: { x: 1973, y: 1903 },
+        coordinates: { x: 1974, y: 1904 },
+        image: "images/markers/New_Town_Dock.png",
+        lore: "More information about New Town Dock is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "dock",
+      type: "overworld_dock",
+      tooltip: "New Town Dock",
+      region: "Breakwater",
+      place: "New Town Island",
+      details: {
+        title: "New Town Dock",
+        coordinates: { x: 1974, y: 1909 },
         image: "images/markers/New_Town_Dock.png",
         lore: "More information about New Town Dock is coming soon.",
         npcs: [],
@@ -3876,7 +3966,7 @@ export const mapMarkers = {
       place: "New Town Island",
       details: {
         title: "Undead Dwarven Dock",
-        coordinates: { x: 1842, y: 1751 },
+        coordinates: { x: 1841, y: 1751 },
         image: "images/markers/Undead_Dwarven_Dock.png",
         lore: "More information about Undead Dwarven Dock is coming soon.",
         npcs: [],
@@ -4062,7 +4152,7 @@ export const mapMarkers = {
       place: "Broken Finger",
       details: {
         title: "Broken Finger Island Dock",
-        coordinates: { x: 1427, y: 3836 },
+        coordinates: { x: 1427, y: 3837 },
         image: "images/markers/Broken_Finger_Island_Dock.png",
         lore: "More information about Broken Finger Island Dock is coming soon.",
         npcs: [],
@@ -4463,8 +4553,6 @@ export const mapMarkers = {
     // Region: 13 - Breakwater Town Stewards
 
     // Region: 14 - Broken Finger Town Stewards
-
-    // Add more trainers
 
     // Sub-Category Town Guardians
     // Region: 2 - Silvest Valley Town Guardians
@@ -5712,8 +5800,6 @@ export const mapMarkers = {
     // Region: 11 - Tundria Bank
 
     // Region: 12 - Sands of Creation Bank
-
-    // Region: 13 - Breakwater Bank
     // City: Ruhura Bank
     {
       category: "npc",
@@ -5746,6 +5832,42 @@ export const mapMarkers = {
         links: [],
       },
     },
+
+    // Region: 13 - Breakwater Bank
+    // City: Roycroft Bank
+    {
+      category: "npc",
+      type: "overworld_bank",
+      tooltip: "Bank",
+      region: "Breakwater",
+      place: "Roycroft",
+      details: {
+        title: "Bank",
+        coordinates: { x: 2460, y: 2438 },
+        image: "images/markers/Roycroft_Bank.png",
+        lore: "More information about Roycroft Bank is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    // City: New Town Bank
+    {
+      category: "npc",
+      type: "overworld_bank",
+      tooltip: "Bank",
+      region: "Breakwater",
+      place: "Roycroft",
+      details: {
+        title: "Bank",
+        coordinates: { x: 1923, y: 1944 },
+        image: "images/markers/Roycroft_Bank.png",
+        lore: "More information about Roycroft Bank is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // City: New Royale Bank
 
     // Region: 14 - Broken Finger Bank
 
@@ -6422,12 +6544,6 @@ export const mapMarkers = {
 
     // Region: 7 - Highlands Trainers
     // City: Parian Trainers
-    
-
-
-    // Region: 3 - Krythan Trainers
-
-    // Region: 2 - Silvest Valley Trainers
 
     // Region: 8 - Western Isles Trainers
 
@@ -6538,6 +6654,51 @@ export const mapMarkers = {
         links: [],
       },
     },
+    // Region: 9 - Valley of Giants Trainers
+
+    // Region: 10 - Heartwood Coast Trainers
+
+    // Region: 11 - Tundria Trainers
+
+    // Region: 12 - Sands of Creation Trainers
+
+    // Region: 13 - Breakwater Trainers
+    // City: Roycroft Trainers
+    {
+      category: "npc",
+      type: "overworld_trainer",
+      tooltip: "Dransik Trading Mercenary",
+      region: "Breakwater",
+      place: "Roycroft",
+      details: {
+        title: "Dransik Trading Mercenary",
+        coordinates: { x: 2477, y: 2439 },
+        image: "images/markers/Roycroft_Dransik_Trading_Mercenary.png",
+        lore: "More information about Dransik Trading Mercenary is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    // City: New Town Trainers
+    {
+      category: "npc",
+      type: "overworld_trainer",
+      tooltip: "Dransik Trading Mercenary",
+      region: "Breakwater",
+      place: "Roycroft",
+      details: {
+        title: "Dransik Trading Mercenary",
+        coordinates: { x: 1898, y: 1950 },
+        image: "images/markers/Roycroft_Dransik_Trading_Mercenary.png",
+        lore: "More information about Dransik Trading Mercenary is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // City: New Royale Trainers
+
+    // Region: 14 - Broken Finger Trainers
 
   ],
 
@@ -6559,6 +6720,7 @@ export const mapMarkers = {
         links: [],
       },
     },
+    
 
     // Island: Valinor Island Shops
     // Region:  1 - Valinor
@@ -7650,14 +7812,14 @@ export const mapMarkers = {
     {
       category: "npc",
       type: "overworld_shop_weaponry",
-      tooltip: "Shyvly's Weapon Shop",
+      tooltip: "Shyvly's Weaponry Shop",
       region: "Darkwoods",
       place: "Josody",
       details: {
-        title: "Shyvly's Weapon Shop",
+        title: "Shyvly's Weaponry Shop",
         coordinates: { x: 1367, y: 2529 },
         image: "images/markers/Shyvlys_Weapon_Shop.png",
-        lore: "More information about Shyvly's Weapon Shop is coming soon.",
+        lore: "More information about Shyvly's Weaponry Shop is coming soon.",
         currency: "gold",
         npcs: [],
         links: [],
@@ -7666,14 +7828,14 @@ export const mapMarkers = {
     {
       category: "npc",
       type: "overworld_shop_weaponry",
-      tooltip: "Malivar's Weapon Shop",
+      tooltip: "Malivar's Weaponry Shop",
       region: "Darkwoods",
       place: "Josody",
       details: {
-        title: "Malivar's Weapon Shop",
+        title: "Malivar's Weaponry Shop",
         coordinates: { x: 1368, y: 2529 },
         image: "images/markers/Malivars_Weapon_Shop.png",
-        lore: "More information about Malivar's Weapon Shop is coming soon.",
+        lore: "More information about Malivar's Weaponry Shop is coming soon.",
         currency: "gold",
         npcs: [],
         links: [],
@@ -9434,14 +9596,14 @@ export const mapMarkers = {
     {
       category: "npc",
       type: "overworld_shop_weaponry",
-      tooltip: "Rakgol's Weapon Shop",
+      tooltip: "Rakgol's Weaponry Shop",
       region: "Black Swamp",
       place: "Samad",
       details: {
-        title: "Rakgol's Weapon Shop",
+        title: "Rakgol's Weaponry Shop",
         coordinates: { x: 2666, y: 3514 },
         image: "images/markers/Rakgol_Weapon_Shop.png",
-        lore: "More information about Rakgol's Weapon Shop is coming soon.",
+        lore: "More information about Rakgol's Weaponry Shop is coming soon.",
         currency: "gold",
         npcs: [],
         links: [],
@@ -11337,6 +11499,588 @@ export const mapMarkers = {
       },
     },
 
+    // Region 13 - Breakwater Shops
+    // City: Roycroft Shops
+    {
+      category: "npc",
+      type: "overworld_shop_generic",
+      tooltip: "Emit Palpos' Housing Shop",
+      region: "Breakwater",
+      place: "Roycroft",
+      details: {
+        title: "Emit Palpos' Housing Shop",
+        coordinates: { x: 2392, y: 2387 },
+        image: "images/markers/Emit_Palpos'_Housing_Shop.png",
+        lore: "More information about Emit Palpos' Housing Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_generic",
+      tooltip: "Philonias Targon's Planet Shop",
+      region: "Breakwater",
+      place: "Roycroft",
+      details: {
+        title: "Philonias Targon's Planet Shop",
+        coordinates: { x: 2390, y: 2387 },
+        image: "images/markers/Philonias_Targon's_Planet_Shop.png",
+        lore: "More information about Philonias Targon's Planet Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_generic",
+      tooltip: "Finnias McGrup's Survey and Tools Shop",
+      region: "Breakwater",
+      place: "Roycroft",
+      details: {
+        title: "Finnias McGrup's Survey and Tools Shop",
+        coordinates: { x: 2388, y: 2389 },
+        image: "images/markers/Finnias_McGrup's_Survey_and_Tools_Shop.png",
+        lore: "More information about Finnias McGrup's Survey and Tools Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_armory",
+      tooltip: "Kali Jenkins' Armory Shop",
+      region: "Breakwater",
+      place: "Roycroft",
+      details: {
+        title: "Kali Jenkins' Armory Shop",
+        coordinates: { x: 2411, y: 2387 },
+        image: "images/markers/Kali_Jenkins'_Armory_Shop.png",
+        lore: "More information about Kali Jenkins' Armory Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_blacksmith",
+      tooltip: "Bella Hudsal's Blacksmith Shop",
+      region: "Breakwater",
+      place: "Roycroft",
+      details: {
+        title: "Bella Hudsal's Blacksmith Shop",
+        coordinates: { x: 2425, y: 2370 },
+        image: "images/markers/Bella_Hudsal's_Blacksmith_Shop.png",
+        lore: "More information about Bella Hudsal's Blacksmith Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_weaponry",
+      tooltip: "Weaponsmith Marklor's Weaponry Shop",
+      region: "Breakwater",
+      place: "Roycroft",
+      details: {
+        title: "Weaponsmith Marklor's Weaponry Shop",
+        coordinates: { x: 2434, y: 2370 },
+        image: "images/markers/Weaponsmith_Marklor's_Weaponry_Shop.png",
+        lore: "More information about Weaponsmith Marklor's Weaponry Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_armory",
+      tooltip: "Tonel Paltown's Armory Shop",
+      region: "Breakwater",
+      place: "Roycroft",
+      details: {
+        title: "Tonel Paltown's Armory Shop",
+        coordinates: { x: 2442, y: 2370 },
+        image: "images/markers/Tonel_Paltown's_Armory_Shop.png",
+        lore: "More information about Tonel Paltown's Armory Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_provisioner",
+      tooltip: "Pierre St Croix's Provisioner Shop",
+      region: "Breakwater",
+      place: "Roycroft",
+      details: {
+        title: "Pierre St Croix's Provisioner Shop",
+        coordinates: { x: 2457, y: 2370 },
+        image: "images/markers/Pierre_St_Croix's_Provisioner_Shop.png",
+        lore: "More information about Pierre St Croix's Provisioner Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_provisioner",
+      tooltip: "Nelle St Croix's Provisioner Shop",
+      region: "Breakwater",
+      place: "Roycroft",
+      details: {
+        title: "Nelle St Croix's Provisioner Shop",
+        coordinates: { x: 2455, y: 2370 },
+        image: "images/markers/Nelle_St_Croix's_Provisioner_Shop.png",
+        lore: "More information about Nelle St Croix's Provisioner Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_runecrafting",
+      tooltip: "Rin Flacol's Runecrafting Shop",
+      region: "Breakwater",
+      place: "Roycroft",
+      details: {
+        title: "Rin Flacol's Runecrafting Shop",
+        coordinates: { x: 2468, y: 2373 },
+        image: "images/markers/Rin_Flacol's_Runecrafting_Shop.png",
+        lore: "More information about Rin Flacol's Runecrafting Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_weaponry",
+      tooltip: "Ralpe Argos' Weaponry Shop",
+      region: "Breakwater",
+      place: "Roycroft",
+      details: {
+        title: "Ralpe Argos' Weaponry Shop",
+        coordinates: { x: 2488, y: 2372 },
+        image: "images/markers/Ralpe_Argos'_Weaponry_Shop.png",
+        lore: "More information about Ralpe Argos' Weaponry Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_leather",
+      tooltip: "Nokael Yarnsparl's Leatherworking Shop",
+      region: "Breakwater",
+      place: "Roycroft",
+      details: {
+        title: "Nokael Yarnsparl's Leatherworking Shop",
+        coordinates: { x: 2491, y: 2384 },
+        image: "images/markers/Nokael_Yarnsparl's_Leatherworking_Shop.png",
+        lore: "More information about Nokael Yarnsparl's Leatherworking Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_leather",
+      tooltip: "Krysta Inge's Provisioner Shop",
+      region: "Breakwater",
+      place: "Roycroft",
+      details: {
+        title: "Krysta Inge's Provisioner Shop",
+        coordinates: { x: 2498, y: 2398 },
+        image: "images/markers/Krysta_Inge's_Provisioner_Shop.png",
+        lore: "More information about Krysta Inge's Provisioner Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_carpentry",
+      tooltip: "Gregor Motopolis' Carpentry Shop",
+      region: "Breakwater",
+      place: "Roycroft",
+      details: {
+        title: "Gregor Motopolis' Carpentry Shop",
+        coordinates: { x: 2500, y: 2408 },
+        image: "images/markers/Gregor_Motopolis'_Carpentry_Shop.png",
+        lore: "More information about Gregor Motopolis' Carpentry Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_jewelry",
+      tooltip: "Lauralee Jones' Jewelry Shop",
+      region: "Breakwater",
+      place: "Roycroft",
+      details: {
+        title: "Lauralee Jones' Jewelry Shop",
+        coordinates: { x: 2477, y: 2419 },
+        image: "images/markers/Lauralee_Jones'_Jewelry_Shop.png",
+        lore: "More information about Lauralee Jones' Jewelry Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_farming",
+      tooltip: "Franklin Rose's Farming Shop",
+      region: "Breakwater",
+      place: "Roycroft",
+      details: {
+        title: "Franklin Rose's Farming Shop",
+        coordinates: { x: 2432, y: 2434 },
+        image: "images/markers/Franklin_Rose's_Farming_Shop.png",
+        lore: "More information about Franklin Rose's Farming Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_carpentry",
+      tooltip: "Albert Pile's Carpentry Shop",
+      region: "Breakwater",
+      place: "Roycroft",
+      details: {
+        title: "Albert Pile's Carpentry Shop",
+        coordinates: { x: 2419, y: 2404 },
+        image: "images/markers/Albert_Pile's_Carpentry_Shop.png",
+        lore: "More information about Albert Pile's Carpentry Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_pub",
+      tooltip: "Earl McJovin's Pub",
+      region: "Breakwater",
+      place: "Roycroft",
+      details: {
+        title: "Earl McJovin's Pub",
+        coordinates: { x: 2422, y: 2435 },
+        image: "images/markers/Earl_McJovin's_Pub.png",
+        lore: "More information about Earl McJovin's Pub is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_pub",
+      tooltip: "Waitress Sara Klemp",
+      region: "Breakwater",
+      place: "Roycroft",
+      details: {
+        title: "Waitress Sara Klemp",
+        coordinates: { x: 2411, y: 2437 },
+        image: "images/markers/Waitress_Sara_Klemp.png",
+        lore: "More information about Waitress Sara Klemp is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_jewelry",
+      tooltip: "Jules Locksley's Jewelry Shop",
+      region: "Breakwater",
+      place: "Roycroft",
+      details: {
+        title: "Jules Locksley's Jewelry Shop",
+        coordinates: { x: 2423, y: 2452 },
+        image: "images/markers/Jules_Locksley's_Jewelry_Shop.png",
+        lore: "More information about Jules Locksley's Jewelry Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_magic",
+      tooltip: "Elzar the Potion Maker's Magic Shop",
+      region: "Breakwater",
+      place: "Roycroft",
+      details: {
+        title: "Elzar the Potion Maker's Magic Shop",
+        coordinates: { x: 2479, y: 2450 },
+        image: "images/markers/Elzar_the_Potion_Maker's_Magic_Shop.png",
+        lore: "More information about Elzar the Potion Maker's Magic Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_pub",
+      tooltip: "Kap Silvesto's Pub",
+      region: "Breakwater",
+      place: "Roycroft",
+      details: {
+        title: "Kap Silvesto's Pub",
+        coordinates: { x: 2507, y: 2435 },
+        image: "images/markers/Kap_Silvesto's_Pub.png",
+        lore: "More information about Kap Silvesto's Pub is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_pub",
+      tooltip: "Waitress Tara Silvesto",
+      region: "Breakwater",
+      place: "Roycroft",
+      details: {
+        title: "Waitress Tara Silvesto",
+        coordinates: { x: 2501, y: 2442 },
+        image: "images/markers/Waitress_Tara_Silvesto.png",
+        lore: "More information about Waitress Tara Silvesto is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_shipyard",
+      tooltip: "Ship Builder Loutai R'Tari",
+      region: "Breakwater",
+      place: "Roycroft",
+      details: {
+        title: "Ship Builder Loutai R'Tari",
+        coordinates: { x: 2467, y: 2476 },
+        image: "images/markers/Ship_Builder_Loutai_R'Tari.png",
+        lore: "More information about Ship Builder Loutai R'Tari is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_shipyard",
+      tooltip: "Rumple Rogers' Shipyard",
+      region: "Breakwater",
+      place: "Roycroft",
+      details: {
+        title: "Rumple Rogers' Shipyard",
+        coordinates: { x: 2442, y: 2501 },
+        image: "images/markers/Rumple_Rogers'_Shipyard.png",
+        lore: "More information about Rumple Rogers' Shipyard is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    // City: New Town Shops
+    {
+      category: "npc",
+      type: "overworld_shop_shipyard",
+      tooltip: "Tom Edgar's Shipyard",
+      region: "Breakwater",
+      place: "New Town",
+      details: {
+        title: "Tom Edgar's Shipyard",
+        coordinates: { x: 1959, y: 1909 },
+        image: "images/markers/Tom_Edgar's_Shipyard.png",
+        lore: "More information about Tom Edgar's Shipyard is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_armory",
+      tooltip: "Kal Offen's Armory Shop",
+      region: "Breakwater",
+      place: "New Town",
+      details: {
+        title: "Kal Offen's Armory Shop",
+        coordinates: { x: 1946, y: 1929 },
+        image: "images/markers/Kal_Offen's_Armory_Shop.png",
+        lore: "More information about Kal Offen's Armory Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_weaponry",
+      tooltip: "Stout Guerny's Weaponry Shop",
+      region: "Breakwater",
+      place: "New Town",
+      details: {
+        title: "Stout Guerny's Weaponry Shop",
+        coordinates: { x: 1938, y: 1921 },
+        image: "images/markers/Stout_Guerny's_Weaponry_Shop.png",
+        lore: "More information about Stout Guerny's Weaponry Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_jewelry",
+      tooltip: "Kerrig's Jewelry Shop",
+      region: "Breakwater",
+      place: "New Town",
+      details: {
+        title: "Kerrig's Jewelry Shop",
+        coordinates: { x: 1910, y: 1920 },
+        image: "images/markers/Kerrig's_Jewelry_Shop.png",
+        lore: "More information about Kerrig's Jewelry Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_provisioner",
+      tooltip: "Osiris the Provisioner Shop",
+      region: "Breakwater",
+      place: "New Town",
+      details: {
+        title: "Osiris the Provisioner Shop",
+        coordinates: { x: 1914, y: 1920 },
+        image: "images/markers/Osiris_the_Provisioner_Shop.png",
+        lore: "More information about Osiris the Provisioner Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_carpentry",
+      tooltip: "Morris Dayson's Carpentry Shop",
+      region: "Breakwater",
+      place: "New Town",
+      details: {
+        title: "Morris Dayson's Carpentry Shop",
+        coordinates: { x: 1946, y: 1950 },
+        image: "images/markers/Morris_Dayson's_Carpentry_Shop.png",
+        lore: "More information about Morris Dayson's Carpentry Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_pub",
+      tooltip: "Molly McTavish's Pub",
+      region: "Breakwater",
+      place: "New Town",
+      details: {
+        title: "Molly McTavish's Pub",
+        coordinates: { x: 1982, y: 1969 },
+        image: "images/markers/Molly_McTavish's_Pub.png",
+        lore: "More information about Molly McTavish's Pub is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_pub",
+      tooltip: "Herman McTavish's Pub",
+      region: "Breakwater",
+      place: "New Town",
+      details: {
+        title: "Herman McTavish's Pub",
+        coordinates: { x: 1979, y: 1961 },
+        image: "images/markers/Herman_McTavish's_Pub.png",
+        lore: "More information about Herman McTavish's Pub is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_farming",
+      tooltip: "Farmer Jacobs' Farming Shop",
+      region: "Breakwater",
+      place: "New Town",
+      details: {
+        title: "Farmer Jacobs' Farming Shop",
+        coordinates: { x: 1984, y: 1943 },
+        image: "images/markers/Farmer_Jacobs'_Farming_Shop.png",
+        lore: "More information about Farmer Jacobs' Farming Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_blacksmith",
+      tooltip: "Carolanna Hawkins' Blacksmith Shop",
+      region: "Breakwater",
+      place: "New Town",
+      details: {
+        title: "Carolanna Hawkins' Blacksmith Shop",
+        coordinates: { x: 2012, y: 1926 },
+        image: "images/markers/Carolanna_Hawkins'_Blacksmith_Shop.png",
+        lore: "More information about Carolanna Hawkins' Blacksmith Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_magic",
+      tooltip: "Artis Gilmon's Magic Shop",
+      region: "Breakwater",
+      place: "New Town",
+      details: {
+        title: "Artis Gilmon's Magic Shop",
+        coordinates: { x: 2021, y: 1947 },
+        image: "images/markers/Artis_Gilmon's_Magic_Shop.png",
+        lore: "More information about Artis Gilmon's Magic Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // City: New Royale Shops
+
     // Region: 14 - Broken Finger Shops
     // City: Broken Finger Town Shops
   ],
@@ -11876,6 +12620,43 @@ export const mapMarkers = {
         links: [],
       },
     },
+    // Region: 13 - Breakwater Spawns
+    // City: Roycroft Spawns
+    {
+      category: "spawn",
+      type: "overworld_spawn_good",
+      tooltip: "Good Spawn Gate",
+      region: "Breakwater",
+      place: "Roycroft",
+      details: {
+        title: "Good Spawn Gate",
+        coordinates: { x: 2427, y: 2505 },
+        image: "images/markers/Roycroft_Good_Spawn_Gate.png",
+        lore: "More information about Good Spawn Gate is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    // City: New Town Spawns
+    {
+      category: "spawn",
+      type: "overworld_spawn_good",
+      tooltip: "Good Spawn Gate",
+      region: "Breakwater",
+      place: "New Town",
+      details: {
+        title: "Good Spawn Gate",
+        coordinates: { x: 1899, y: 1926 },
+        image: "images/markers/New_Town_Good_Spawn_Gate.png",
+        lore: "More information about Good Spawn Gate is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // City: New Royale Spawns
+
+    // Region: 14 - Broken Finger Spawns
   ],
 
   undergrounds: [
@@ -14374,7 +15155,7 @@ export const mapMarkers = {
       details: {
         title: "Cyclops and Lion Cave",
         switchTo: "underground", // This will trigger the map switch
-        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
+        flyTo: { x: 2128, y: 1700, zoom: 5 }, // The coordinates to center on after switching
         coordinates: { x: 2039, y: 1833 },
         image: "images/markers/Cyclops_and_Lion_Cave.png",
         lore: "More information about Cyclops and Lion Cave is coming soon.",
@@ -14470,7 +15251,9 @@ export const mapMarkers = {
       },
     },
 
-    // City: New Royale Island underground
+    // City: New Town underground
+
+    // City: New Royale underground
 
     // Region: 14 - Broken Finger underground
     {
