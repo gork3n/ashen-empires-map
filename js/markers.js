@@ -3046,8 +3046,52 @@ export const mapMarkers = {
     // Region: 8 - Western Isles Innkeeper
 
     // Region: 10 - Heartwood Coast Innkeeper
+    // City: Valmond Innkeeper
+    {
+      category: "npc",
+      type: "overworld_inn_keeper",
+      tooltip: "Innkeeper Elros",
+      region: "Highlands",
+      place: "Valmond",
+      details: {
+        title: "Innkeeper Elros",
+        coordinates: { x: 2682, y: 2186 },
+        image: "images/markers/Innkeeper_Elros.png",
+        lore: "More information about Innkeeper Elros is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_inn_keeper",
+      tooltip: "Innkeeper Felice",
+      region: "Highlands",
+      place: "Valmond",
+      details: {
+        title: "Innkeeper Felice",
+        coordinates: { x: 2614, y: 2133 },
+        image: "images/markers/Innkeeper_Felice.png",
+        lore: "More information about Innkeeper Felice is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // City: Teylon Innkeeper
+
+    // City: Syldural Innkeeper
 
     // Region: 11 - Tundria Innkeeper
+    // City: Farstead Innkeeper
+
+    // City: Hammerfist Innkeeper
+
+    // City: Duremar Innkeeper
+
+    // City: Ringhaven Innkeeper
+
+    // City: Maroven Innkeeper
 
     // Region: 12 - Sands of Creation Innkeeper
     // City: Ruhura Innkeeper
@@ -3603,7 +3647,7 @@ export const mapMarkers = {
       place: "Valmond",
       details: {
         title: "Valmond East Dock",
-        coordinates: { x: 2591, y: 2183 },
+        coordinates: { x: 2592, y: 2180 },
         image: "images/markers/Valmond_East_Dock.png",
         lore: "More information about Valmond East Dock is coming soon.",
         npcs: [],
@@ -3618,7 +3662,7 @@ export const mapMarkers = {
       place: "Valmond",
       details: {
         title: "Valmond East Dock",
-        coordinates: { x: 2591, y: 2195 },
+        coordinates: { x: 2592, y: 2192 },
         image: "images/markers/Valmond_East_Dock.png",
         lore: "More information about Valmond East Dock is coming soon.",
         npcs: [],
@@ -3633,7 +3677,7 @@ export const mapMarkers = {
       place: "Valmond",
       details: {
         title: "Valmond North Dock",
-        coordinates: { x: 2654, y: 2116 },
+        coordinates: { x: 2655, y: 2117 },
         image: "images/markers/Valmond_North_Dock.png",
         lore: "More information about Valmond North Dock is coming soon.",
         npcs: [],
@@ -3648,7 +3692,7 @@ export const mapMarkers = {
       place: "Valmond",
       details: {
         title: "Valmond North Dock",
-        coordinates: { x: 2662, y: 2130 },
+        coordinates: { x: 2662, y: 2128 },
         image: "images/markers/Valmond_North_Dock_2.png",
         lore: "More information about Valmond North Dock is coming soon.",
         npcs: [],
@@ -3663,7 +3707,7 @@ export const mapMarkers = {
       place: "Valmond",
       details: {
         title: "Valmond North Dock",
-        coordinates: { x: 2677, y: 2130 },
+        coordinates: { x: 2678, y: 2128 },
         image: "images/markers/Valmond_North_Dock_3.png",
         lore: "More information about Valmond North Dock is coming soon.",
         npcs: [],
@@ -3673,14 +3717,14 @@ export const mapMarkers = {
     {
       category: "dock",
       type: "overworld_dock",
-      tooltip: "Teylan Dock",
+      tooltip: "Teylon Dock",
       region: "Heartwood Coast",
-      place: "Teylan",
+      place: "Teylon",
       details: {
-        title: "Teylan Dock",
+        title: "Teylon Dock",
         coordinates: { x: 2423, y: 1641 },
-        image: "images/markers/Teylan_Dock.png",
-        lore: "More information about Teylan Dock is coming soon.",
+        image: "images/markers/Teylon_Dock.png",
+        lore: "More information about Teylon Dock is coming soon.",
         npcs: [],
         links: [],
       },
@@ -5796,8 +5840,52 @@ export const mapMarkers = {
     // Region: 9 - Valley of Giants Bank
 
     // Region: 10 - Heartwood Coast Bank
+    // City: Valmond Bank
+    {
+      category: "npc",
+      type: "overworld_bank",
+      tooltip: "Bank",
+      region: "Heartwood Coast",
+      place: "Valmond",
+      details: {
+        title: "Bank",
+        coordinates: { x: 2713, y: 2203 },
+        image: "images/markers/Lopal_Bank.png",
+        lore: "More information about Bank is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_bank",
+      tooltip: "Bank",
+      region: "Heartwood Coast",
+      place: "Valmond",
+      details: {
+        title: "Bank",
+        coordinates: { x: 2639, y: 2170 },
+        image: "images/markers/Lopal_Bank.png",
+        lore: "More information about Bank is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // City: Teylon Bank
+
+    // City: Syldural Bank
 
     // Region: 11 - Tundria Bank
+    // City: Farstead Bank
+
+    // City: Hammerfist Bank
+
+    // City: Duremar Bank
+
+    // City: Ringhaven Bank
+
+    // City: Maroven Bank
 
     // Region: 12 - Sands of Creation Bank
     // City: Ruhura Bank
@@ -11027,8 +11115,343 @@ export const mapMarkers = {
     // No shops in Valley of Giants
 
     // Region: 10 - Heartwood Coast Shops
+    // City: Valmond Shops
+    {
+      category: "npc",
+      type: "overworld_shop_weaponry",
+      tooltip: "Vanoch's Weaponry Shop",
+      region: "Hearwood Coast",
+      place: "Valmond",
+      details: {
+        title: "Vanoch's Weaponry Shop",
+        coordinates: { x: 2751, y: 2199 },
+        image: "images/markers/Vanoch's_Weaponry_Shop.png",
+        lore: "More information about Vanoch's Weaponry Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_magic",
+      tooltip: "Athosian's Magic Shop",
+      region: "Hearwood Coast",
+      place: "Valmond",
+      details: {
+        title: "Athosian's Magic Shop",
+        coordinates: { x: 2733, y: 2198 },
+        image: "images/markers/Athosian's_Magic_Shop.png",
+        lore: "More information about Athosian's Magic Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_jewelry",
+      tooltip: "Ninothen's Jewelry Shop",
+      region: "Hearwood Coast",
+      place: "Valmond",
+      details: {
+        title: "Ninothen's Jewelry Shop",
+        coordinates: { x: 2753, y: 2213 },
+        image: "images/markers/Ninothen's_Jewelry_Shop.png",
+        lore: "More information about Ninothen's Jewelry Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_carpentry",
+      tooltip: "Medain's Carpentry Shop",
+      region: "Hearwood Coast",
+      place: "Valmond",
+      details: {
+        title: "Medain's Carpentry Shop",
+        coordinates: { x: 2738, y: 2219 },
+        image: "images/markers/Medain's_Carpentry_Shop.png",
+        lore: "More information about Medain's Carpentry Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_leather",
+      tooltip: "Senoch's Leatherworking Shop",
+      region: "Hearwood Coast",
+      place: "Valmond",
+      details: {
+        title: "Senoch's Leatherworking Shop",
+        coordinates: { x: 2748, y: 2226 },
+        image: "images/markers/Senoch's_Leatherworking_Shop.png",
+        lore: "More information about Senoch's Leatherworking Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_provisioner",
+      tooltip: "Imdy's Provisioner Shop",
+      region: "Hearwood Coast",
+      place: "Valmond",
+      details: {
+        title: "Imdy's Provisioner Shop",
+        coordinates: { x: 2747, y: 2235 },
+        image: "images/markers/Imdy's_Provisioner_Shop.png",
+        lore: "More information about Imdy's Provisioner Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_farming",
+      tooltip: "Krista's Farming Shop",
+      region: "Hearwood Coast",
+      place: "Valmond",
+      details: {
+        title: "Krista's Farming Shop",
+        coordinates: { x: 2691, y: 2224 },
+        image: "images/markers/Krista's_Farming_Shop.png",
+        lore: "More information about Krista's Farming Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_farming",
+      tooltip: "Warthien's Farming Shop",
+      region: "Hearwood Coast",
+      place: "Valmond",
+      details: {
+        title: "Warthien's Farming Shop",
+        coordinates: { x: 2725, y: 2182 },
+        image: "images/markers/Warthien's_Farming_Shop.png",
+        lore: "More information about Warthien's Farming Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_blacksmith",
+      tooltip: "Hevee's Blacksmith Shop",
+      region: "Hearwood Coast",
+      place: "Valmond",
+      details: {
+        title: "Hevee's Blacksmith Shop",
+        coordinates: { x: 2716, y: 2184 },
+        image: "images/markers/Hevee's_Blacksmith_Shop.png",
+        lore: "More information about Hevee's Blacksmith Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_armory",
+      tooltip: "Yeros' Armory Shop",
+      region: "Hearwood Coast",
+      place: "Valmond",
+      details: {
+        title: "Yeros' Armory Shop",
+        coordinates: { x: 2710, y: 2181 },
+        image: "images/markers/Yeros'_Armory_Shop.png",
+        lore: "More information about Yeros' Armory Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_provisioner",
+      tooltip: "Tenweth's Provisioner Shop",
+      region: "Hearwood Coast",
+      place: "Valmond",
+      details: {
+        title: "Tenweth's Provisioner Shop",
+        coordinates: { x: 2696, y: 2182 },
+        image: "images/markers/Tenweth's_Provisioner_Shop.png",
+        lore: "More information about Tenweth's Provisioner Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_provisioner",
+      tooltip: "Conbar's Pub",
+      region: "Hearwood Coast",
+      place: "Valmond",
+      details: {
+        title: "Conbar's Pub",
+        coordinates: { x: 2681, y: 2163 },
+        image: "images/markers/Conbar's_Pub.png",
+        lore: "More information about Conbar's Pub is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_provisioner",
+      tooltip: "Adaria Ustir's Farming Shop",
+      region: "Hearwood Coast",
+      place: "Valmond",
+      details: {
+        title: "Adaria Ustir's Farming Shop",
+        coordinates: { x: 2659, y: 2168 },
+        image: "images/markers/Adaria_Ustir's_Farming_Shop.png",
+        lore: "More information about Adaria Ustir's Farming Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_weaponry",
+      tooltip: "Khadik's Weaponry Shop",
+      region: "Hearwood Coast",
+      place: "Valmond",
+      details: {
+        title: "Khadik's Weaponry Shop",
+        coordinates: { x: 2653, y: 2167 },
+        image: "images/markers/Khadik's_Weaponry_Shop.png",
+        lore: "More information about Khadik's Weaponry Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_magic",
+      tooltip: "Thular's Magic Shop",
+      region: "Hearwood Coast",
+      place: "Valmond",
+      details: {
+        title: "Thular's Magic Shop",
+        coordinates: { x: 2637, y: 2155 },
+        image: "images/markers/Thular's_Magic_Shop.png",
+        lore: "More information about Thular's Magic Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_provisioner",
+      tooltip: "Rorik's Provisioner Shop",
+      region: "Hearwood Coast",
+      place: "Valmond",
+      details: {
+        title: "Rorik's Provisioner Shop",
+        coordinates: { x: 2629, y: 2139 },
+        image: "images/markers/Rorik's_Provisioner_Shop.png",
+        lore: "More information about Rorik's Provisioner Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_pub",
+      tooltip: "Isun's Pub",
+      region: "Hearwood Coast",
+      place: "Valmond",
+      details: {
+        title: "Isun's Pub",
+        coordinates: { x: 2615, y: 2130 },
+        image: "images/markers/Isun's_Pub.png",
+        lore: "More information about Isun's Pub is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_weaponry",
+      tooltip: "Fallana's Weaponry Shop",
+      region: "Hearwood Coast",
+      place: "Valmond",
+      details: {
+        title: "Fallana's Weaponry Shop",
+        coordinates: { x: 2630, y: 2123 },
+        image: "images/markers/Fallana's_Weaponry_Shop.png",
+        lore: "More information about Fallana's Weaponry Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_blacksmith",
+      tooltip: "Talnur's Blacksmith Shop",
+      region: "Hearwood Coast",
+      place: "Valmond",
+      details: {
+        title: "Talnur's Blacksmith Shop",
+        coordinates: { x: 2622, y: 2167 },
+        image: "images/markers/Talnur's_Blacksmith_Shop.png",
+        lore: "More information about Talnur's Blacksmith Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "npc",
+      type: "overworld_shop_shipyard",
+      tooltip: "Gordon McDowl's Shipyard Shop",
+      region: "Hearwood Coast",
+      place: "Valmond",
+      details: {
+        title: "Gordon McDowl's Shipyard Shop",
+        coordinates: { x: 2627, y: 2185 },
+        image: "images/markers/Gordon_McDowl's_Shipyard_Shop.png",
+        lore: "More information about Gordon McDowl's Shipyard Shop is coming soon.",
+        currency: "gold",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // City: Teylon Shops
+
+    // City: Syldrual Shops
+    // Can be found in the underworld-markers.js file
 
     // Region: 11 - Tundria Shops
+    // City: Farstead Shops
+
+    // City: Hammerfist Shops
+    
+    // City: Duremar Shops
+
+    // City: Maroven Shops
+
+    // City: Ringhaven Shops
 
     // Region: 12 - Sands of Creation Shops
     // City: Khafra Shops
@@ -12570,7 +12993,39 @@ export const mapMarkers = {
       },
     },
 
-    
+    // Region: 10 - Heartwood Coast Spawns
+    // City: Valmond Spawns
+    {
+      category: "spawn",
+      type: "overworld_spawn_good",
+      tooltip: "Good Spawn Gate",
+      region: "Heartwood Coast",
+      place: "Valmond",
+      details: {
+        title: "Good Spawn Gate",
+        coordinates: { x: 2693, y: 2201 },
+        image: "images/markers/Valmond_Good_Spawn_Gate.png",
+        lore: "More information about Good Spawn Gate is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // City: Teylon Spawns
+
+    // City: Sydrual Spawns
+
+    // Region: 11 - Tundria Spawns
+    // City: Farstead Spawns
+
+    // City: Hammerfist Spawns
+
+    // City: Duremar Spawns
+
+    // City: Ringhaven Spawns
+
+    // City: Maroven Spawns
+
 
     // Region: 12 - Sands of Creation Spawns
     // City: Ruhura Spawns

@@ -897,7 +897,7 @@ export const mapLabels = {
     },
     {
       name: "Lotor's Summer Palace",
-      fontSize: 30,
+      fontSize: 45,
       region: "Western Isles",
       details: {
         title: "Lotor's Summer Palace",
@@ -942,7 +942,7 @@ export const mapLabels = {
     },
     {
       name: "Guild Arena Island",
-      fontSize: 30,
+      fontSize: 35,
       region: "Western Isles",
       details: {
         title: "Guild Arena Island",
@@ -957,7 +957,7 @@ export const mapLabels = {
     },
     {
       name: "Valinor Island",
-      fontSize: 35,
+      fontSize: 45,
       region: "Valinor",
       details: {
         title: "Valinor Island",
@@ -972,7 +972,7 @@ export const mapLabels = {
     },
     {
       name: "Krythan Island",
-      fontSize: 35,
+      fontSize: 45,
       region: "Krythan Island",
       details: {
         title: "Krythan Island",
@@ -1050,7 +1050,7 @@ export const mapLabels = {
     },
     {
       name: "Hell",
-      fontSize: 45,
+      fontSize: 50,
       region: "Western Isles",
       details: {
         title: "Hell",
@@ -1081,7 +1081,7 @@ export const mapLabels = {
     },
     {
       name: "Scarab Island",
-      fontSize: 35,
+      fontSize: 45,
       region: "Western Isles",
       details: {
         title: "Scarab Island",
@@ -1096,11 +1096,11 @@ export const mapLabels = {
     },
     {
       name: "Werewolf Island",
-      fontSize: 35,
+      fontSize: 45,
       region: "Western Isles",
       details: {
         title: "Werewolf Island",
-        coordinates: { x: 462, y: 2494 },
+        coordinates: { x: 463, y: 2501 },
         image: "",
         lore: "More information about Werewolf Island is coming soon.",
         information: "",
@@ -1157,7 +1157,7 @@ export const mapLabels = {
     
     {
       name: "PvP Island",
-      fontSize: 30,
+      fontSize: 50,
       region: "Western Isles",
       details: {
         title: "PvP Island",
@@ -1187,11 +1187,11 @@ export const mapLabels = {
     },
     {
       name: "Northern Frost Giant Island",
-      fontSize: 30,
+      fontSize: 40,
       region: "Tundria",
       details: {
         title: "Northern Frost Giant Island",
-        coordinates: { x: 3330, y: 253 },
+        coordinates: { x: 3335, y: 255 },
         image: "",
         lore: "More information about Northern Frost Giant Island is coming soon.",
         information: "",
@@ -1277,7 +1277,7 @@ export const mapLabels = {
       },
     },
 
-    // Region: 12 - Sands of Creation Islands Technically might be Ruhura Island and Khafra Island, but this might be redundant.
+    // Region: 12 - Sands of Creation Islands 
   ],
 
   dungeons: [
@@ -1764,7 +1764,7 @@ export const mapLabels = {
 
     {
       name: "Minion's of Talazar's Stronghold",
-      fontSize: 20,
+      fontSize: 18,
       region: "Hell",
       details: {
         title: "Minion's of Talazar's Stronghold",
