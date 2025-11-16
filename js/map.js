@@ -2,13 +2,12 @@ import Map from 'ol/Map.js';
 import View from 'ol/View.js';
 import Feature from 'ol/Feature.js';
 import Overlay from 'ol/Overlay.js';
-import { Point } from 'ol/geom.js';
-import TileLayer from 'ol/layer/Tile.js';
-import VectorLayer from 'ol/layer/Vector.js';
+import { Point, LineString } from 'ol/geom.js';
+import {Tile as TileLayer, Vector as VectorLayer} from 'ol/layer.js';
 import XYZ from 'ol/source/XYZ.js';
 import VectorSource from 'ol/source/Vector.js'; 
-import { DoubleClickZoom } from 'ol/interaction.js';
-import { Style, Icon } from 'ol/style.js';
+import { DoubleClickZoom, defaults as defaultInteractions } from 'ol/interaction.js';
+import { Style, Icon, Stroke } from 'ol/style.js';
 import TileGrid from 'ol/tilegrid/TileGrid.js';
 
 // Import local data modules
@@ -17,6 +16,7 @@ import { underworldMapLabels } from './underworld-labels.js';
 import { mapMarkers, markerStyles } from './markers.js';
 import { mapMarkers as allMapMarkers } from './markers.js'; // Import with an alias
 import { underworldMapMarkers, underworldMarkerStyles } from './underworld-markers.js';
+import { devSettings } from './settings.js';
 import { initializeFilterMenu } from './filter-menu.js';
 
 // Global variables
@@ -433,6 +433,14 @@ function initializeMap() {
     // Set up the map toggle buttons in the footer
     setupMapToggleButtons();
 
+    // --- Development Tools ---
+    // If dev tools are enabled in settings, add the grid and crosshair.
+    if (devSettings.showDevGrid) {
+        addDevGrid(map);
+    }
+    if (devSettings.showDevCrosshair) {
+        addDevCrosshair(map);
+    }
 
     // --- Custom Interaction Handling (Tap, Double Tap, Click, Ctrl+Click) ---
 
@@ -451,6 +459,103 @@ function initializeMap() {
     map.on('dblclick', function(evt) {
         // This function is now empty to prevent any double-click actions on features.
         // The customDoubleClickZoom interaction will still handle zooming on the map background.
+    });
+}
+
+/**
+ * Adds a development grid overlay to the map.
+ * The grid lines correspond to the 8x8 pixel grid at the highest zoom level.
+ * @param {Map} map - The OpenLayers map instance.
+ */
+function addDevGrid(map) {
+    const gridSource = new VectorSource();
+    const mapSize = 32768;
+    const interval = 8; // We want a line every 8 pixels
+
+    // Create vertical lines
+    for (let i = 0; i <= mapSize; i += interval) {
+        const line = new Feature({
+            geometry: new LineString([[i, 0], [i, -mapSize]])
+        });
+        gridSource.addFeature(line);
+    }
+
+    // Create horizontal lines
+    for (let i = 0; i <= mapSize; i += interval) {
+        const line = new Feature({
+            geometry: new LineString([[0, -i], [mapSize, -i]])
+        });
+        gridSource.addFeature(line);
+    }
+
+    const gridLayer = new VectorLayer({
+        source: gridSource,
+        strokeStyle: new Stroke({
+            color: devSettings.devGridColor, // Use color from settings
+            width: 1,
+        }),
+        style: new Style({
+            stroke: new Stroke({
+                color: devSettings.devGridColor, // Use color from settings
+                width: 1
+            })
+        })
+    });
+
+    // Insert the grid layer right above the tile layers but below markers
+    const layers = map.getLayers();
+    layers.insertAt(2, gridLayer); // Insert at index 2 (after overworld and underground tile layers)
+}
+
+/**
+ * Adds a fixed red crosshair to the center of the map for development.
+ * @param {Map} map - The OpenLayers map instance.
+ */
+function addDevCrosshair(map) {
+    const mapViewport = map.getViewport();
+    if (!mapViewport) return;
+
+    // Create vertical line
+    const vLine = document.createElement('div');
+    vLine.style.position = 'absolute';
+    vLine.style.top = '0';
+    vLine.style.width = '1px';
+    vLine.style.height = '100%';
+    vLine.style.backgroundColor = devSettings.devCrosshairColor; // Use color from settings
+    vLine.style.pointerEvents = 'none';
+    vLine.style.zIndex = '1001';
+    vLine.style.display = 'none'; // Initially hidden
+
+    // Create horizontal line
+    const hLine = document.createElement('div');
+    hLine.style.position = 'absolute';
+    hLine.style.left = '0';
+    hLine.style.height = '1px';
+    hLine.style.width = '100%';
+    hLine.style.backgroundColor = devSettings.devCrosshairColor; // Use color from settings
+    hLine.style.pointerEvents = 'none';
+    hLine.style.zIndex = '1001';
+    hLine.style.display = 'none'; // Initially hidden
+
+    mapViewport.appendChild(vLine);
+    mapViewport.appendChild(hLine);
+
+    // Show and position the crosshair when the mouse moves over the map
+    map.on('pointermove', function(evt) {
+        if (evt.dragging) {
+            return;
+        }
+        const pixel = map.getEventPixel(evt.originalEvent);
+        vLine.style.left = `${pixel[0]}px`;
+        hLine.style.top = `${pixel[1]}px`;
+        vLine.style.display = 'block';
+        hLine.style.display = 'block';
+    });
+
+    // Hide the crosshair when the mouse leaves the map viewport
+    mapViewport.addEventListener('mouseout', () => {
+        vLine.style.display = 'none';
+        hLine.style.display = 'none';
     });
 }
 

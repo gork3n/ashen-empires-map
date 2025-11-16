@@ -1,6 +1,6 @@
 # Ashen Empires Interactive Map
 
-> **Note:** This map is currently under active development. You may see temporary features like a red crosshair used for testing and coordinate verification. These will be removed in a future update.
+> **Note:** This map is under active development. It includes developer tools like a grid overlay and a mouse-following crosshair for testing and coordinate verification. These can be configured or disabled in `js/settings.js`.
 
 An interactive map for Ashen Empires with pixel-perfect coordinates and multiple viewing options, built with OpenLayers.
 
@@ -47,6 +47,10 @@ The map is designed to be easily configurable. Here are the key files and settin
   - **File**: `js/map.js`
   - **Variable**: `initialCenterGameCoords`
   - **Settings**: Change the `x` and `y` values to set the default location the map centers on when it first loads.
+
+- **Development Tools**:
+  - **File**: `js/settings.js`
+  - **Settings**: Toggle `showDevGrid` and `showDevCrosshair` to enable or disable the grid and mouse-following crosshair. You can also customize their appearance by changing the `devGridColor` and `devCrosshairColor` values.
 
 ## Features
 
@@ -186,9 +190,8 @@ One of the best ways to contribute to this project is by adding or correcting th
 ### How to Add or Edit Information
 
 All data for the pop-up information panels is located in two files:
-
-- `js/underworld-markers.js`: Contains data for all icon-based markers (shops, quests, portals, etc.).
-- `js/underworld-labels.js`: Contains data for all text-based labels (cities, dungeons, landmarks, etc.).
+- `js/markers.js` & `js/underworld-markers.js`: Contains data for all icon-based markers (shops, quests, portals, etc.). Markers are grouped by region, which are numbered to match the in-game quest log (e.g., `// 1. Krythan`, `// 2. Tundria`).
+- `js/labels.js` & `js/underworld-labels.js`: Contains data for all text-based labels (cities, dungeons, landmarks, etc.).
 
 To add or edit information, find the relevant entry in one of these files and modify its `details` object.
 
@@ -198,6 +201,8 @@ The `details` object holds all the information displayed in the flyout panel. He
 
 ```javascript
 {
+    "region": "Krythan",
+    "place": "Valinor",
     // ... other marker properties like type, tooltip, etc.
     "details": {
         "title": "O'riles Weapon Shop",
@@ -217,6 +222,8 @@ The `details` object holds all the information displayed in the flyout panel. He
 
 **Breakdown of `details` properties:**
 
+- `region` (string): The major geographical area (e.g., "Krythan", "Tundria").
+- `place` (string): The specific named location (e.g., "Valinor", "Kylian's Lair").
 - `title` (string): The main title shown at the top of the flyout panel.
 - `coordinates` (object): The in-game `{x, y}` coordinates. This is displayed near the top.
 - `image` (string, optional): The path to an image that will be displayed. The path is relative to the project's root directory (e.g., `images/locations/valinor.png`).

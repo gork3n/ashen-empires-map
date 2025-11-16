@@ -139,7 +139,10 @@ This section is migrated from the main README to consolidate all planning detail
   - ⬜ Implement a search bar to find locations, NPCs, and markers.
   - ⬜ Feature an auto-complete list as the user types.
   - ⬜ Require user to select an item from the list to perform the search.
-  - ⬜ Include alias data for colloquial/common names to improve searchability (e.g., searching "LSP" finds "Lotor's Summer Palace").
+  - ⬜ Include alias data for colloquial/common names to improve searchability (e.g., searching "LSP" finds "Lotor's Summer Palace").  
+- 🚧 **Developer Tools**
+  - ✅ Added a toggleable grid overlay and mouse-following crosshair for coordinate verification.
+  - ✅ Added configuration options in `js/settings.js` to control visibility and colors for developer tools.
 - ⬜ **Monster Data Layer**
   - ⬜ Mark general spawn areas for creatures using polygons, not individual spawn points.
   - ⬜ This feature is inspired by the in-game "Hunter Book" and is meant to guide players to the general vicinity of a creature. Players can then use in-game functionality to pinpoint exact locations.

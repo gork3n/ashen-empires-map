@@ -208,6 +208,24 @@ export const underworldMapLabels = {
         links: [],
       },
     },
+    // Region: Heartwood Coast Crypts
+    {
+      name: "Valmond Crypt",
+      fontSize: 20,
+      region: "Heartwood Coast",
+      details: {
+        title: "Valmond Crypt",
+        coordinates: { x: 2744, y: 1979 },
+        image: "",
+        lore: "The Valmond Crypt is a large dungeon in the Heartwood Coast.",
+        information: "",
+        bonus: "",
+        npcs: [],
+        links: [],
+      },
+    },
+
+
     // Region: Sands of Creation Crypts
 
 
@@ -309,6 +327,8 @@ export const underworldMapLabels = {
         links: [],
       },
     },
+    // Region: Heartwood Coast Caves
+
     // Region: Sands of Creation Caves
     // Island: Ruhura Caves
     {
@@ -729,6 +749,29 @@ export const underworldMapLabels = {
         links: [],
       },
     },
+    // Region: Heartwood Coast Tunnels
+    // City: Valmond Tunnels
+    {
+      name: "Valmond Tunnels",
+      fontSize: 25,
+      region: "Western Isles",
+      details: {
+        title: "Valmond Tunnels",
+        coordinates: { x: 2674, y: 2205 },
+        image: "",
+        lore: "More information about Valmond Tunnels is coming soon.",
+        information: "Valmond Tunnels is located beneath the Western Isles.",
+        bonus: "",
+        npcs: [],
+        links: [],
+      },
+    },
+
+    // Region: Tundria Tunnels
+
+    // Region: Breakwater Tunnels
+
+    // Region: Brokenfinger Tunnels
   ],
   grottos: [
     // Add underground grotto labels here

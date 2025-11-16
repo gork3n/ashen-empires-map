@@ -3677,7 +3677,7 @@ export const mapMarkers = {
       place: "Valmond",
       details: {
         title: "Valmond North Dock",
-        coordinates: { x: 2655, y: 2117 },
+        coordinates: { x: 2655, y: 2113 },
         image: "images/markers/Valmond_North_Dock.png",
         lore: "More information about Valmond North Dock is coming soon.",
         npcs: [],
@@ -15057,24 +15057,7 @@ export const mapMarkers = {
         npcs: [],
         links: [],
       },
-    },
-    {
-      category: "undergrounds",
-      type: "overworld_cave",
-      tooltip: "Syldural Cave Entrance",
-      region: "Heartwood Coast",
-      place: "Syldural Cave",
-      details: {
-        title: "Syldural",
-        switchTo: "underground", // This will trigger the map switch
-        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
-        coordinates: { x: 3273, y: 1633 },
-        image: "images/markers/Syldural_Cave_Entrance.png",
-        lore: "More information about Syldural is coming soon.",
-        npcs: [],
-        links: [],
-      },
-    },
+    },    
     {
       category: "undergrounds",
       type: "overworld_cave",
@@ -15105,6 +15088,233 @@ export const mapMarkers = {
         coordinates: { x: 3192, y: 1881 },
         image: "images/markers/Valmond_Skeleton_Pit.png",
         lore: "More information about Valmond Skeleton Pit is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    // City: Valmond underground
+    {
+      category: "undergrounds",
+      type: "overworld_ladder",
+      tooltip: "South Carpentry Cellar Entrance",
+      region: "Heartwood Coast",
+      place: "Valmond",
+      details: {
+        title: "South Carpentry Cellar Entrance",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 2739, y: 2212, zoom: 5 }, // The coordinates to center on after switching
+        coordinates: { x: 2739, y: 2212 },
+        image: "images/markers/South_Carpentry_Cellars_Entrance.png",
+        lore: "More information about South Carpentry Cellar Entrance is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "undergrounds",
+      type: "overworld_ladder",
+      tooltip: "North East Wall Cellar Entrance",
+      region: "Heartwood Coast",
+      place: "Valmond",
+      details: {
+        title: "North East Wall Cellar Entrance",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 2758, y: 2188 }, // The coordinates to center on after switching
+        coordinates: { x: 2758, y: 2188 },
+        image: "images/markers/1_North_East_Wall_Cellars_Entrance.png",
+        lore: "More information about North East Wall Cellar Entrance is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "undergrounds",
+      type: "overworld_ladder",
+      tooltip: "North East Wall Cellar Entrance",
+      region: "Heartwood Coast",
+      place: "Valmond",
+      details: {
+        title: "North East Wall Cellar Entrance",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 2758, y: 2178 }, // The coordinates to center on after switching
+        coordinates: { x: 2758, y: 2178 },
+        image: "images/markers/2_North_East_Wall_Cellars_Entrance.png",
+        lore: "More information about North East Wall Cellar Entrance is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "undergrounds",
+      type: "overworld_ladder",
+      tooltip: "North East Wall Cellar Entrance",
+      region: "Heartwood Coast",
+      place: "Valmond",
+      details: {
+        title: "North East Wall Cellar Entrance",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 2758, y: 2150 }, // The coordinates to center on after switching
+        coordinates: { x: 2758, y: 2150 },
+        image: "images/markers/3_North_East_Wall_Cellars_Entrance.png",
+        lore: "More information about North East Wall Cellar Entrance is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "undergrounds",
+      type: "overworld_ladder",
+      tooltip: "South East Wall Cellar Entrance",
+      region: "Heartwood Coast",
+      place: "Valmond",
+      details: {
+        title: "South East Wall Cellar Entrance",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 2748, y: 2249 }, // The coordinates to center on after switching
+        coordinates: { x: 2748, y: 2249 },
+        image: "images/markers/1_South_East_Wall_Cellars_Entrance.png",
+        lore: "More information about South East Wall Cellar Entrance is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "undergrounds",
+      type: "overworld_ladder",
+      tooltip: "South East Wall Cellar Entrance",
+      region: "Heartwood Coast",
+      place: "Valmond",
+      details: {
+        title: "South East Wall Cellar Entrance",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 2738, y: 2249 }, // The coordinates to center on after switching
+        coordinates: { x: 2738, y: 2249 },
+        image: "images/markers/2_South_East_Wall_Cellars_Entrance.png",
+        lore: "More information about South East Wall Cellar Entrance is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "undergrounds",
+      type: "overworld_ladder",
+      tooltip: "South West Wall Cellar Entrance",
+      region: "Heartwood Coast",
+      place: "Valmond",
+      details: {
+        title: "South West Wall Cellar Entrance",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 2689, y: 2251 }, // The coordinates to center on after switching
+        coordinates: { x: 2689, y: 2251 },
+        image: "images/markers/3_South_West_Wall_Cellars_Entrance.png",
+        lore: "More information about South West Wall Cellar Entrance is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "undergrounds",
+      type: "overworld_ladder",
+      tooltip: "Temple of Isos Cellar Entrance",
+      region: "Heartwood Coast",
+      place: "Valmond",
+      details: {
+        title: "Temple of Isos Cellar Entrance",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 2710, y: 2227 }, // The coordinates to center on after switching
+        coordinates: { x: 2722, y: 2220 },
+        image: "images/markers/Temple_of_Isos_Cellars_Entrance.png",
+        lore: "More information about Temple of Isos Cellar Entrance is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "undergrounds",
+      type: "overworld_ladder",
+      tooltip: "South West Outpost Cellar Entrance",
+      region: "Heartwood Coast",
+      place: "Valmond",
+      details: {
+        title: "South West Outpost Cellar Entrance",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 2614, y: 2213 }, // The coordinates to center on after switching
+        coordinates: { x: 2614, y: 2214 },
+        image: "images/markers/South_West_Outpost_Cellars_Entrance.png",
+        lore: "More information about South West Outpost Cellar Entrance is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "undergrounds",
+      type: "overworld_stairs",
+      tooltip: "Magic Shop Cellar Entrance",
+      region: "Heartwood Coast",
+      place: "Valmond",
+      details: {
+        title: "Magic Shop Cellar Entrance",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 2727, y: 2199 }, // The coordinates to center on after switching
+        coordinates: { x: 2738, y: 2203 },
+        image: "images/markers/Magic_Shop_Cellars_Entrance.png",
+        lore: "More information about Magic Shop Cellar Entrance is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "undergrounds",
+      type: "overworld_ladder",
+      tooltip: "Pub Basement Entrance",
+      region: "Heartwood Coast",
+      place: "Valmond",
+      details: {
+        title: "Pub Basement Entrance",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 2677, y: 2167 }, // The coordinates to center on after switching
+        coordinates: { x: 2675, y: 2162 },
+        image: "images/markers/Pub_Basement_Entrance.png",
+        lore: "More information about Pub Basement Entrance is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    {
+      category: "undergrounds",
+      type: "overworld_stairs",
+      tooltip: "Valmond Crypt Entrance",
+      region: "Heartwood Coast",
+      place: "Valmond",
+      details: {
+        title: "Valmond Crypt Entrance",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 2774, y: 2019 }, // The coordinates to center on after switching 
+        coordinates: { x: 2764, y: 2042 },
+        image: "images/markers/Valmond_Crypt_Entrance.png",
+        lore: "More information about Valmond Crypt Entrance is coming soon.",
+        npcs: [],
+        links: [],
+      },
+    },
+    
+
+    // City: Telyon underground
+
+    // City: Syldural underground
+    {
+      category: "undergrounds",
+      type: "overworld_cave",
+      tooltip: "Syldural Cave Entrance",
+      region: "Heartwood Coast",
+      place: "Syldural Cave",
+      details: {
+        title: "Syldural",
+        switchTo: "underground", // This will trigger the map switch
+        flyTo: { x: 0, y: 0 }, // The coordinates to center on after switching
+        coordinates: { x: 3273, y: 1633 },
+        image: "images/markers/Syldural_Cave_Entrance.png",
+        lore: "More information about Syldural is coming soon.",
         npcs: [],
         links: [],
       },
