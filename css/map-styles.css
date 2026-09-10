@@ -997,7 +997,7 @@ input:checked + .slider:before {
 /* --- Desktop and Tablet Styles --- */
 @media (min-width: 769px) {
     :root {
-        --filter-aside-width: 380px;
+        --filter-aside-width: 437px;
     }
 
     #container {
