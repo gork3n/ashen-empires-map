@@ -648,24 +648,24 @@ function switchMap(targetMap, flyToCoords = null) {
     overworldTileLayer.setVisible(!isSwitchingToUnderground);
     undergroundTileLayer.setVisible(isSwitchingToUnderground);
 
-    // Toggle overworld marker layers
-    Object.values(markerLayers).forEach(layer => {
-        layer.setVisible(!isSwitchingToUnderground);
+    // Toggle overworld marker layers while preserving filter button state.
+    Object.entries(markerLayers).forEach(([category, layer]) => {
+        layer.setVisible(!isSwitchingToUnderground && isFilterCategoryActive('#marker-toggles', category));
     });
 
-    // Toggle underground marker layers
-    Object.values(undergroundMarkerLayers).forEach(layer => {
-        layer.setVisible(isSwitchingToUnderground);
+    // Toggle underground marker layers while preserving filter button state.
+    Object.entries(undergroundMarkerLayers).forEach(([category, layer]) => {
+        layer.setVisible(isSwitchingToUnderground && isFilterCategoryActive('#underworld-marker-toggles', category));
     });
 
-    // Toggle label layers (assuming labels are for overworld only for now)
-    Object.values(labelLayers).forEach(layer => {
-        layer.setVisible(!isSwitchingToUnderground);
+    // Toggle overworld label layers while preserving filter button state.
+    Object.entries(labelLayers).forEach(([category, layer]) => {
+        layer.setVisible(!isSwitchingToUnderground && isFilterCategoryActive('#label-toggles', category));
     });
 
-    // Toggle underground label layers
-    Object.values(undergroundLabelLayers).forEach(layer => {
-        layer.setVisible(isSwitchingToUnderground);
+    // Toggle underground label layers while preserving filter button state.
+    Object.entries(undergroundLabelLayers).forEach(([category, layer]) => {
+        layer.setVisible(isSwitchingToUnderground && isFilterCategoryActive('#underground-label-toggles-grid', category));
     });
 
     // --- Update Filter Menu UI ---
@@ -691,6 +691,11 @@ function switchMap(targetMap, flyToCoords = null) {
 
     // If flyToCoords are provided, animate the view to the new center
     if (flyToCoords) flyToLocation(flyToCoords);
+}
+
+function isFilterCategoryActive(containerSelector, category) {
+    const button = document.querySelector(`${containerSelector} .toggle-btn[data-category="${category}"]`);
+    return !button || button.classList.contains('active');
 }
 
 /**
@@ -1323,7 +1328,7 @@ function createMarkerStyle(markerType) {
 function createUIMarkerIcon(markerType) {
     const cacheKey = `ui-marker-v1-${markerType}`;
     if (styleCache[cacheKey]) {
-        return styleCache[cacheKey];
+        return cloneCanvas(styleCache[cacheKey]);
     }
 
     const styleProps = markerStyles[markerType] || {
@@ -1374,7 +1379,15 @@ function createUIMarkerIcon(markerType) {
 
     // --- 5. Cache and return the canvas itself ---
     styleCache[cacheKey] = finalCanvas;
-    return finalCanvas;
+    return cloneCanvas(finalCanvas);
+}
+
+function cloneCanvas(sourceCanvas) {
+    const clone = document.createElement('canvas');
+    clone.width = sourceCanvas.width;
+    clone.height = sourceCanvas.height;
+    clone.getContext('2d').drawImage(sourceCanvas, 0, 0);
+    return clone;
 }
 
 /**
@@ -1788,7 +1801,7 @@ function setupMarkerTooltips(map) {
         if (feature.get('tooltip')) {
             const markerTooltipText = feature.get('tooltip');
             const markerType = feature.get('type');
-            const style = markerStyles[markerType] || { icon: 'icons/information.svg', color: '#FF0000' };
+            const style = markerStyles[markerType] || { icon: 'icons/info.svg', color: '#FF0000' };
             
             markerTooltipElement.innerHTML = `
                 <div class="tooltip-icon">

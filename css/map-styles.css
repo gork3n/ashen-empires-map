@@ -459,7 +459,7 @@ input:checked + .slider:before {
 }
 
 #label-toggles .toggle-btn.active,
-#underground-label-toggles .toggle-btn.active,
+#underground-label-toggles-grid .toggle-btn.active,
 #monster-toggles .toggle-btn.active {
     border-left-color: transparent;
     border-bottom-color: #F5D76E;

@@ -149,10 +149,10 @@ export function initializeFilterMenu(data) {
  */
 function setupMasterToggleButtons() {
     // Show All Labels button
-    setupMasterToggle('show-all-labels', '#label-toggles .toggle-btn', updateShowAllLabelsState);
-    setupMasterToggle('show-all-underworld-labels', '#underworld-label-toggles .toggle-btn', updateShowAllUnderworldLabelsState);
-    setupMasterToggle('show-all-markers', '#marker-toggles .toggle-btn', updateShowAllMarkersState);
-    setupMasterToggle('show-all-underworld-markers', '#underworld-marker-toggles .toggle-btn', updateShowAllUnderworldMarkersState);
+    setupMasterToggle('show-all-labels', '#label-toggles .toggle-btn', updateShowAllLabelsState, 'toggle-label-category');
+    setupMasterToggle('show-all-underground-labels', '#underground-label-toggles-grid .toggle-btn', updateShowAllUnderworldLabelsState, 'toggle-underground-label-category');
+    setupMasterToggle('show-all-markers', '#marker-toggles .toggle-btn', updateShowAllMarkersState, 'toggle-marker-category');
+    setupMasterToggle('show-all-underworld-markers', '#underworld-marker-toggles .toggle-btn', updateShowAllUnderworldMarkersState, 'toggle-marker-category', true);
 }
 
 /**
@@ -160,7 +160,7 @@ function setupMasterToggleButtons() {
  * @param {string} masterButtonId - The ID of the master "Show All" button.
  * @param {string} childButtonSelector - The CSS selector for the child toggle buttons.
  */
-function setupMasterToggle(masterButtonId, childButtonSelector, updateFunction) {
+function setupMasterToggle(masterButtonId, childButtonSelector, updateFunction, eventName, isUnderground = false) {
     const masterButton = document.getElementById(masterButtonId);
     const childButtons = document.querySelectorAll(childButtonSelector);
     if (!masterButton) return;
@@ -182,12 +182,12 @@ function setupMasterToggle(masterButtonId, childButtonSelector, updateFunction) 
                 button.classList.toggle('active', newState);
                 button.classList.toggle('inactive', !newState);
 
-                // Manually dispatch the event to avoid re-triggering master update logic
-                const eventName = button.closest('#underworld-label-toggles') ? 'toggle-underground-label-category' : 'toggle-label-category';
+                // Manually dispatch the correct event to avoid re-triggering master update logic.
                 document.dispatchEvent(new CustomEvent(eventName, {
                     detail: {
                         category: button.dataset.category,
-                        visible: newState
+                        visible: newState,
+                        isUnderground
                     }
                 }));
             }
@@ -643,8 +643,8 @@ function updateShowAllLabelsState() {
  * Update "Show All Underworld Labels" button state.
  */
 function updateShowAllUnderworldLabelsState() {
-    const allButtons = document.querySelectorAll('#underworld-label-toggles .toggle-btn');
-    const showAllButton = document.getElementById('show-all-underworld-labels');
+    const allButtons = document.querySelectorAll('#underground-label-toggles-grid .toggle-btn');
+    const showAllButton = document.getElementById('show-all-underground-labels');
     if (!showAllButton) return;
 
     const allActive = Array.from(allButtons).every(button => button.disabled || button.classList.contains('active'));
