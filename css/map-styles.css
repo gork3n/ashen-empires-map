@@ -405,7 +405,7 @@ input:checked + .slider:before {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(90px, 1fr)); /* Responsive grid */
     gap: 8px; /* Reduced gap for more space */
-    justify-items: center;
+    justify-items: stretch;
     padding-top: 10px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -414,7 +414,9 @@ input:checked + .slider:before {
 #underground-marker-toggles .marker-subtype-btn {
     flex-direction: column;
     height: 90px; /* Adjusted height */
-    width: 90px; /* Adjusted width to fit grid */
+    width: 100%; /* Fill the grid cell like label buttons */
+    min-width: 0;
+    box-sizing: border-box;
     justify-content: center;
     align-items: center; 
     padding: 5px;
@@ -1040,6 +1042,12 @@ input:checked + .slider:before {
     .filter-menu-content-inner {
         width: 100%;
         margin: 0;
+    }
+
+    /* Make marker subtype buttons use the same full-width grid behavior as labels. */
+    .marker-subtype-container,
+    #underground-marker-toggles .marker-subtype-container {
+        grid-template-columns: repeat(3, 1fr);
     }
 
     /* Use a compact 3-column grid inside the narrower aside. */
