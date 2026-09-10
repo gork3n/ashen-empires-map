@@ -13,3 +13,19 @@ self-notes.md
 .geminiignore
 .map-health-cache/
 scratch/
+local-private/
+
+# Local assistant/development scratch files. Keep public docs in README.md and docs/.
+.aiexclude
+ai-prompt.md
+.ai-prompt.md
+*.prompt.md
+.geminiignore
+self-notes.md
+development-notes.md
+development-plan.md
+feature-mini-map-summary.md
+js/coordinate-system-logic.md
+coordinate-system-logic.md
+filter-troubleshooting.md
+MIGRATION_GUIDE.md
