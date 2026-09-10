@@ -68,6 +68,7 @@ html, body {
     display: flex;
     flex-direction: column;
     position: fixed;
+    box-sizing: border-box;
     top: 0;
     left: 0;
     width: 100%;
@@ -125,6 +126,7 @@ html, body {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.75); /* Same transparency as the header */
     overflow-y: scroll; /* Always show scrollbar to prevent layout shift */
+    overflow-x: hidden;
     box-sizing: border-box; /* Include padding in the element's total width */
     padding-right: 10px; /* Create space for the scrollbar */
 }
@@ -132,6 +134,7 @@ html, body {
 .filter-menu-content-inner {
     /* Padding is now on the parent, just add the base padding here */
     padding: 15px; /* Symmetrical padding */
+    box-sizing: border-box;
 }
 
 .filter-menu-section {
@@ -994,51 +997,55 @@ input:checked + .slider:before {
 /* --- Desktop and Tablet Styles --- */
 @media (min-width: 769px) {
     :root {
-        --fab-width: 56px;
-        --fab-right-offset: 20px;
-        --fab-gap: 20px; /* The desired space between the menu and the FABs */
+        --filter-aside-width: 380px;
     }
 
-    /* On desktop, transform the filter menu into a right-side panel */
+    #container {
+        width: calc(100% - var(--filter-aside-width));
+        margin-left: var(--filter-aside-width);
+    }
+
+    .page-footer {
+        left: var(--filter-aside-width);
+        width: calc(100% - var(--filter-aside-width));
+    }
+
+    /* On desktop, make filters a persistent left aside instead of a slide-out panel. */
     .filter-menu {
-        left: auto; /* Unset the left position */
-        right: 0; /* Anchor to the right */
-        width: 450px; /* Increased width for 4-column marker grid */
+        left: 0;
+        right: auto;
+        width: var(--filter-aside-width);
         height: 100%;
-        transform: translateX(100%); /* Start off-screen to the right */
-        transition: transform 0.4s ease-in-out;
-        box-shadow: -5px 0 15px rgba(0,0,0,0.3); /* Add a shadow for depth */
-    }
-
-    .filter-menu-content {
-        background-color: transparent; /* The parent already has the background */
-    }
-    /* On desktop, center the inner content, not the whole panel */
-    .filter-menu-content-inner {
-        width: 100%;
-        max-width: 550px; /* Max width for the content area */
-        margin: 0 auto; /* Center the inner container */
+        transform: none;
+        transition: none;
+        box-shadow: 5px 0 18px rgba(0, 0, 0, 0.45);
+        border-right: 1px solid rgba(245, 215, 110, 0.24);
+        background-color: rgba(0, 0, 0, 0.82);
     }
 
     .filter-menu.open {
-        /* When open, slide it into view from the right, leaving space for the FABs */
-        transform: translateX(0);
-        right: calc(var(--fab-width) + var(--fab-right-offset) + var(--fab-gap));
+        transform: none;
     }
 
-    /* Increase marker sub-type button width on desktop */
-   
+    .filter-menu-toggle,
+    #mobile-filters-btn,
+    .desktop-filters-btn {
+        display: none;
+    }
 
-    /* Use a 4-column grid for labels on desktop */
+    .filter-menu-content {
+        background-color: transparent;
+    }
+
+    .filter-menu-content-inner {
+        width: 100%;
+        margin: 0;
+    }
+
+    /* Use a compact 3-column grid inside the narrower aside. */
     #label-toggles,
     #underground-label-toggles-grid {
-        grid-template-columns: repeat(4, 1fr); /* 4 columns on desktop */
-    }
-    
-
-    /* Add a dedicated desktop button */
-    .desktop-filters-btn {
-        display: flex; /* Show the desktop button */
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
