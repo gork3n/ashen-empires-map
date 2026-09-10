@@ -54,6 +54,13 @@ The audit generates:
 Recommended workflow: run the audit, pick one small region or connector batch, fix it, rerun the
 audit, then commit the improved report with the data changes.
 
+## Source Data Policy
+
+This map aims to be pixel-perfect. External fan sites, including AE Database, can be used for
+general information, names, discovery leads, and backlog triage, but their map coordinates should
+not be treated as final marker positions unless Ender verifies them in-game or against the current
+map tiles. See `docs/source-data-policy.md`.
+
 - **Marker Size & Appearance**:
   - **File**: `js/map.js`
   - **Function**: `createMarkerStyle()`
