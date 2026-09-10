@@ -33,6 +33,27 @@ An interactive map for Ashen Empires with pixel-perfect coordinates and multiple
 
 The map is designed to be easily configurable. Here are the key files and settings you can adjust:
 
+## Map Health Audit
+
+This project contains a lot of hand-authored marker, label, connector, and image data. To keep the
+remaining work manageable, run the map health audit before starting a cleanup or data-entry batch:
+
+```bash
+node scripts/map-health.mjs
+```
+
+The audit generates:
+
+- `reports/map-health.json` - machine-readable counts and samples.
+- `reports/map-health.md` - human-readable summary and next queues.
+- `reports/missing-images.csv` - marker/label image backlog.
+- `reports/placeholder-details.csv` - incomplete lore/info backlog.
+- `reports/connector-coordinate-links.csv` - coordinate-based links to migrate to IDs.
+- `reports/connector-zero-targets.csv` - connectors still pointing at `{ x: 0, y: 0 }`.
+
+Recommended workflow: run the audit, pick one small region or connector batch, fix it, rerun the
+audit, then commit the improved report with the data changes.
+
 - **Marker Size & Appearance**:
   - **File**: `js/map.js`
   - **Function**: `createMarkerStyle()`

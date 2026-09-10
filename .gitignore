@@ -11,3 +11,4 @@ archive-tiles/*/
 troubleshooting-archive/
 self-notes.md
 .geminiignore
+.map-health-cache/
